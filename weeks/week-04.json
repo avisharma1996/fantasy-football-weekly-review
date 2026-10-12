@@ -18,16 +18,19 @@
         {
           "name": "Bijan Robinson",
           "pos": "RB",
+          "rank": "RB3",
           "pts": 98.4
         },
         {
           "name": "Joe Burrow",
           "pos": "QB",
+          "rank": "QB10",
           "pts": 79.64
         },
         {
           "name": "D'Andre Swift",
           "pos": "RB",
+          "rank": "RB12",
           "pts": 58.5
         }
       ]
@@ -45,16 +48,19 @@
         {
           "name": "Chuba Hubbard",
           "pos": "RB",
+          "rank": "RB8",
           "pts": 74.0
         },
         {
           "name": "James Cook",
           "pos": "RB",
+          "rank": "RB11",
           "pts": 63.5
         },
         {
           "name": "Tetairoa McMillan",
           "pos": "WR",
+          "rank": "WR7",
           "pts": 61.5
         }
       ]
@@ -72,16 +78,19 @@
         {
           "name": "Jaxon Smith-Njigba",
           "pos": "WR",
+          "rank": "WR1",
           "pts": 100.66
         },
         {
           "name": "Jalen Hurts",
           "pos": "QB",
+          "rank": "QB11",
           "pts": 70.02
         },
         {
           "name": "Jeremiyah Love",
           "pos": "RB",
+          "rank": "RB19",
           "pts": 43.4
         }
       ]
@@ -99,16 +108,19 @@
         {
           "name": "Patrick Mahomes",
           "pos": "QB",
+          "rank": "QB6",
           "pts": 85.58
         },
         {
           "name": "Jonathan Taylor",
           "pos": "RB",
+          "rank": "RB5",
           "pts": 81.2
         },
         {
           "name": "Christian Watson",
           "pos": "WR",
+          "rank": "WR5",
           "pts": 67.1
         }
       ]
@@ -126,16 +138,19 @@
         {
           "name": "Josh Allen",
           "pos": "QB",
+          "rank": "QB1",
           "pts": 114.96
         },
         {
           "name": "Amon-Ra St. Brown",
           "pos": "WR",
+          "rank": "WR3",
           "pts": 75.8
         },
         {
           "name": "Ashton Jeanty",
           "pos": "RB",
+          "rank": "RB10",
           "pts": 64.4
         }
       ]
@@ -153,16 +168,19 @@
         {
           "name": "Brock Purdy",
           "pos": "QB",
+          "rank": "QB2",
           "pts": 101.48
         },
         {
           "name": "Derrick Henry",
           "pos": "RB",
+          "rank": "RB4",
           "pts": 87.3
         },
         {
           "name": "Christian McCaffrey",
           "pos": "RB",
+          "rank": "RB9",
           "pts": 66.0
         }
       ]
@@ -180,16 +198,19 @@
         {
           "name": "Justin Herbert",
           "pos": "QB",
+          "rank": "QB23",
           "pts": 49.44
         },
         {
           "name": "Parker Washington",
           "pos": "WR",
+          "rank": "WR21",
           "pts": 43.1
         },
         {
           "name": "Isaiah Likely",
           "pos": "TE",
+          "rank": "TE6",
           "pts": 42.0
         }
       ]
@@ -207,16 +228,19 @@
         {
           "name": "CeeDee Lamb",
           "pos": "WR",
+          "rank": "WR2",
           "pts": 93.7
         },
         {
           "name": "Dak Prescott",
           "pos": "QB",
+          "rank": "QB8",
           "pts": 82.2
         },
         {
           "name": "Garrett Wilson",
           "pos": "WR",
+          "rank": "WR10",
           "pts": 51.0
         }
       ]
@@ -234,16 +258,19 @@
         {
           "name": "Javonte Williams",
           "pos": "RB",
+          "rank": "RB7",
           "pts": 74.3
         },
         {
           "name": "Zay Flowers",
           "pos": "WR",
+          "rank": "WR9",
           "pts": 58.2
         },
         {
           "name": "Justin Jefferson",
           "pos": "WR",
+          "rank": "WR26",
           "pts": 38.4
         }
       ]
@@ -261,16 +288,19 @@
         {
           "name": "Jahmyr Gibbs",
           "pos": "RB",
+          "rank": "RB1",
           "pts": 105.0
         },
         {
           "name": "Davante Adams",
           "pos": "WR",
+          "rank": "WR6",
           "pts": 62.0
         },
         {
           "name": "Trey McBride",
           "pos": "TE",
+          "rank": "TE2",
           "pts": 52.7
         }
       ]
@@ -288,16 +318,19 @@
         {
           "name": "Lamar Jackson",
           "pos": "QB",
+          "rank": "QB9",
           "pts": 80.08
         },
         {
           "name": "Kyren Williams",
           "pos": "RB",
+          "rank": "RB6",
           "pts": 79.2
         },
         {
           "name": "Ja'Marr Chase",
           "pos": "WR",
+          "rank": "WR12",
           "pts": 49.7
         }
       ]
@@ -315,16 +348,19 @@
         {
           "name": "Kenneth Walker",
           "pos": "RB",
+          "rank": "RB2",
           "pts": 104.1
         },
         {
           "name": "Chris Olave",
           "pos": "WR",
+          "rank": "WR4",
           "pts": 72.6
         },
         {
           "name": "Bucky Irving",
           "pos": "RB",
+          "rank": "RB23",
           "pts": 40.7
         }
       ]

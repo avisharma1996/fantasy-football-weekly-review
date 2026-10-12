@@ -55,8 +55,8 @@ def setup(username):
     print(f"Saved '{league['name']}' to config.json")
 
 
-def player_names(ids):
-    """Map player ids to display names. Sleeper's player list is large, so keep a slim local copy."""
+def load_players(ids):
+    """Map every player id to name and position. Sleeper's player list is large, so keep a slim local copy."""
     names = json.loads(PLAYERS.read_text(encoding="utf-8")) if PLAYERS.exists() else {}
     stale = not PLAYERS.exists() or time.time() - PLAYERS.stat().st_mtime > 7 * 86400
     if stale or any(i not in names for i in ids):
@@ -70,7 +70,23 @@ def player_names(ids):
                               "pos": p.get("position") or ""}
         PLAYERS.parent.mkdir(exist_ok=True)
         PLAYERS.write_text(json.dumps(names), encoding="utf-8")
-    return {i: names.get(i, {"name": i, "pos": ""}) for i in ids}
+    return names
+
+
+def position_ranks(season, week, scoring, players):
+    """Rank every NFL player at his position by season fantasy points (league scoring) through `week`."""
+    totals = {}
+    for w in range(1, week + 1):
+        for pid, stats in get(f"/stats/nfl/regular/{season}/{w}").items():
+            pts = sum(stats[k] * v for k, v in scoring.items() if isinstance(stats.get(k), (int, float)))
+            totals[pid] = totals.get(pid, 0) + pts
+    by_pos = {}
+    for pid, pts in totals.items():
+        pos = players.get(pid, {}).get("pos")
+        if pos and pts > 0:
+            by_pos.setdefault(pos, []).append((pts, pid))
+    return {pid: f"{pos}{i}" for pos, ranked in by_pos.items()
+            for i, (_, pid) in enumerate(sorted(ranked, reverse=True), 1)}
 
 
 def avatar_url(user):
@@ -133,7 +149,8 @@ def fetch_week(league_id, week):
                     record(t, pts[me], pts[opp])
 
     top = {rid: sorted(totals.items(), key=lambda kv: -kv[1])[:3] for rid, totals in starter_pts.items()}
-    names = player_names({pid for players in top.values() for pid, _ in players})
+    players = load_players({pid for picks in top.values() for pid, _ in picks})
+    ranks = position_ranks(league["season"], week, league.get("scoring_settings") or {}, players)
     for rid, t in teams.items():
         t["pf"] = round(t["pf"], 2)
         streak = ""
@@ -143,7 +160,8 @@ def fetch_week(league_id, week):
             streak = res + str(int(streak[1:] or 0) + 1)
         t["streak"] = streak
         del t["results"]
-        t["top"] = [{**names[pid], "pts": round(p, 2)} for pid, p in top[rid]]
+        t["top"] = [{**players.get(pid, {"name": pid, "pos": ""}), "rank": ranks.get(pid, ""), "pts": round(p, 2)}
+                    for pid, p in top[rid]]
 
     return {
         "league": league["name"],
@@ -203,7 +221,7 @@ def new_week(week):
     ]
     for i, rid in enumerate(prev or standings_order(data), 1):
         t = teams[rid]
-        top = ", ".join(f"{p['name']} {p['pts']:.1f}" for p in t["top"])
+        top = ", ".join(f"{p['name']} ({p.get('rank') or p['pos']}) {p['pts']:.1f}" for p in t["top"])
         lines += [f"{i}. {t['name']}", f"// {rec(t)}, {t['pf']:.2f} PF, streak {t['streak'] or '-'} | {top}", "", ""]
     txt.write_text("\n".join(lines), encoding="utf-8")
     print(f"Created {txt.relative_to(ROOT)}. Open it and set your rankings.")
@@ -281,7 +299,8 @@ def render_week(data, content, prev_rank, all_weeks):
             d = prev_rank.index(rid) + 1 - i
             move = (f'<span class="mv up">▲{d}</span>' if d > 0 else
                     f'<span class="mv down">▼{-d}</span>' if d < 0 else '<span class="mv same">–</span>')
-        top = "".join(f'<li><span class="pos">{e(p["pos"])}</span>{e(p["name"])}<span class="pp">{p["pts"]:.1f}</span></li>'
+        top = "".join(f'<li><span class="pos">{e(p.get("rank") or p["pos"])}</span>{e(p["name"])}'
+                      f'<span class="pp">{p["pts"]:.1f}</span></li>'
                       for p in t["top"])
         rows.append(f"""
   <li class="rank">
@@ -329,7 +348,7 @@ PAGE = """<!doctype html>
 <header>{logo}<div><div class="kicker">{league} · {season} · Week {week}</div><h1>{title}</h1></div></header>
 <nav>{nav}</nav>
 <ol class="ranks">{rows}</ol>
-<footer>{note}Top performers are season points scored as a starter for that team. Stats from Sleeper. Rankings are the commissioner's own.</footer>
+<footer>{note}Top performers are season points scored as a starter for that team; QB1, RB3, etc. is the player's season rank at his position across the NFL. Stats from Sleeper. Rankings are the commissioner's own.</footer>
 </div></body></html>
 """
 
