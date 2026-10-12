@@ -1,10 +1,12 @@
 """Fantasy football power rankings: pull Sleeper data, set your rankings, build a web page.
 
 Usage:
-  py ffr.py setup <sleeper-username>   Pick your league and save it to config.json
-  py ffr.py new <week>                 Fetch data through that week and create weeks/week-NN.txt to fill in
+  py ffr.py setup <sleeper-username>   Pick this season's league and save it to config.json (once per year)
+  py ffr.py new <week> [season]        Fetch data through that week and create weeks/<season>/week-NN.txt
   py ffr.py new <first>-<last>         Same, for a range of weeks (e.g. new 1-4 to backfill)
-  py ffr.py build                      Turn every week file into the website in docs/
+  py ffr.py build                      Turn every season's week files into the website in docs/
+
+The season defaults to the newest one in config.json.
 """
 
 import html
@@ -31,10 +33,11 @@ def get(path):
         return json.load(r)
 
 
-def load_config():
+def load_seasons():
+    """{season: league_id}. Sleeper gives each season's league its own id."""
     if not CONFIG.exists():
         sys.exit("No config.json yet. Run: py ffr.py setup <your-sleeper-username>")
-    return json.loads(CONFIG.read_text(encoding="utf-8"))
+    return json.loads(CONFIG.read_text(encoding="utf-8"))["seasons"]
 
 
 def setup(username):
@@ -51,8 +54,10 @@ def setup(username):
     if len(leagues) > 1:
         choice = int(input("Which league? ").strip().lstrip("﻿") or 1)
     league = leagues[choice - 1]
-    CONFIG.write_text(json.dumps({"league_id": league["league_id"]}, indent=2) + "\n", encoding="utf-8")
-    print(f"Saved '{league['name']}' to config.json")
+    seasons = load_seasons() if CONFIG.exists() else {}
+    seasons[season] = league["league_id"]
+    CONFIG.write_text(json.dumps({"seasons": dict(sorted(seasons.items()))}, indent=2) + "\n", encoding="utf-8")
+    print(f"Saved '{league['name']}' as the {season} league in config.json")
 
 
 def load_players(ids):
@@ -184,8 +189,13 @@ def record(t, mine, theirs):
 
 # ---------------------------------------------------------------- week files
 
-def week_paths(week):
-    return WEEKS / f"week-{week:02d}.txt", WEEKS / f"week-{week:02d}.json"
+def week_paths(season, week):
+    return WEEKS / season / f"week-{week:02d}.txt", WEEKS / season / f"week-{week:02d}.json"
+
+
+def weeks_written(season):
+    return sorted(int(p.stem[5:]) for p in (WEEKS / season).glob("week-*.txt")
+                  if week_paths(season, int(p.stem[5:]))[1].exists())
 
 
 def rec(t):
@@ -196,12 +206,15 @@ def standings_order(data):
     return sorted(data["teams"], key=lambda r: (-data["teams"][r]["wins"], -data["teams"][r]["pf"]))
 
 
-def new_week(week):
-    cfg = load_config()
-    WEEKS.mkdir(exist_ok=True)
-    txt, js = week_paths(week)
-    print(f"Fetching week {week} from Sleeper...")
-    data = fetch_week(cfg["league_id"], week)
+def new_week(week, season=None):
+    seasons = load_seasons()
+    season = season or max(seasons)
+    if season not in seasons:
+        sys.exit(f"No {season} league in config.json. Seasons set up: {', '.join(seasons)}")
+    (WEEKS / season).mkdir(parents=True, exist_ok=True)
+    txt, js = week_paths(season, week)
+    print(f"Fetching {season} week {week} from Sleeper...")
+    data = fetch_week(seasons[season], week)
     js.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Saved stats to {js.relative_to(ROOT)}")
     if txt.exists():
@@ -209,7 +222,7 @@ def new_week(week):
         return
 
     teams = data["teams"]
-    prev = previous_ranking(week)
+    prev = previous_ranking(season, week)
     lines = [
         "// Lines starting with // are notes for you and won't show on the page.",
         "// Reorder the team lines into your ranking. The numbers don't matter; order does.",
@@ -262,9 +275,9 @@ def parse_week(txt, data):
     return out
 
 
-def previous_ranking(week):
+def previous_ranking(season, week):
     for w in range(week - 1, 0, -1):
-        txt, js = week_paths(w)
+        txt, js = week_paths(season, w)
         if txt.exists() and js.exists():
             return [rid for rid, _ in parse_week(txt, json.loads(js.read_text(encoding="utf-8")))["rankings"]]
     return None
@@ -289,8 +302,9 @@ def avatar(t):
     return f'<span class="av ph">{html.escape(t["name"][:1].upper())}</span>'
 
 
-def render_week(data, content, prev_rank, all_weeks):
-    teams, week, e = data["teams"], data["week"], html.escape
+def render_week(data, content, prev_rank, all_weeks, latest_week, base):
+    """`latest_week` maps each built season to its newest week; `base` is the path back to the site root."""
+    teams, week, season, e = data["teams"], data["week"], str(data["season"]), html.escape
     rows = []
     for i, (rid, blurb) in enumerate(content["rankings"], 1):
         t = teams[rid]
@@ -313,28 +327,39 @@ def render_week(data, content, prev_rank, all_weeks):
     </div>
   </li>""")
 
-    nav = "".join(f'<a href="week-{w:02d}.html"{" class=cur" if w == week else ""}>Wk {w}</a>' for w in all_weeks)
+    nav = "".join(f'<a href="{base}{season}/week-{w:02d}.html"{" class=cur" if w == week else ""}>Wk {w}</a>'
+                  for w in all_weeks)
+    years = "".join(f'<a href="{base}{s}/week-{latest_week[s]:02d}.html"{" class=cur" if s == season else ""}>{s}</a>'
+                    for s in sorted(latest_week, reverse=True))
     logo = f'<img class="logo" src="{e(data["league_avatar"])}" alt="">' if data.get("league_avatar") else ""
     note = "Records include a game against the league median each week. " if data.get("median_game") else ""
-    return PAGE.format(title=e(content["title"]), league=e(data["league"]), season=e(str(data["season"])),
-                       week=week, logo=logo, nav=nav, rows="".join(rows), note=note, css=CSS)
+    return PAGE.format(title=e(content["title"]), league=e(data["league"]), season=e(season),
+                       week=week, logo=logo, nav=nav, years=years, rows="".join(rows), note=note, css=CSS)
 
 
 def build():
-    weeks = sorted(int(p.stem[5:]) for p in WEEKS.glob("week-*.txt") if week_paths(int(p.stem[5:]))[1].exists())
-    if not weeks:
+    seasons = sorted(d.name for d in WEEKS.iterdir() if d.is_dir() and weeks_written(d.name)) if WEEKS.exists() else []
+    if not seasons:
         sys.exit("No weeks yet. Run: py ffr.py new <week>")
-    SITE.mkdir(exist_ok=True)
-    prev_rank, page = None, None
-    for w in weeks:
-        txt, js = week_paths(w)
-        data = json.loads(js.read_text(encoding="utf-8"))
-        content = parse_week(txt, data)
-        page = render_week(data, content, prev_rank, weeks)
-        (SITE / f"week-{w:02d}.html").write_text(page, encoding="utf-8")
-        prev_rank = [r for r, _ in content["rankings"]]
-    (SITE / "index.html").write_text(page, encoding="utf-8")
-    print(f"Built {len(weeks)} week(s) into docs/. Open docs/index.html to preview.")
+    latest_week = {s: weeks_written(s)[-1] for s in seasons}
+    for s in seasons:
+        weeks = weeks_written(s)
+        (SITE / s).mkdir(parents=True, exist_ok=True)
+        prev_rank = None
+        for w in weeks:
+            txt, js = week_paths(s, w)
+            data = json.loads(js.read_text(encoding="utf-8"))
+            content = parse_week(txt, data)
+            page = render_week(data, content, prev_rank, weeks, latest_week, "../")
+            (SITE / s / f"week-{w:02d}.html").write_text(page, encoding="utf-8")
+            if w == weeks[-1]:
+                (SITE / s / "index.html").write_text(page, encoding="utf-8")
+                if s == seasons[-1]:
+                    root = render_week(data, content, prev_rank, weeks, latest_week, "")
+                    (SITE / "index.html").write_text(root, encoding="utf-8")
+            prev_rank = [r for r, _ in content["rankings"]]
+        print(f"Built {s}: {len(weeks)} week(s)")
+    print("Open docs/index.html to preview.")
 
 
 PAGE = """<!doctype html>
@@ -344,12 +369,14 @@ PAGE = """<!doctype html>
 <meta property="og:title" content="{title} · {league}">
 <meta property="og:description" content="Week {week} power rankings">
 <style>{css}</style></head>
-<body><div class="wrap">
+<body><div class="layout">
+<aside class="seasons"><div class="seasons-lbl">Season</div><div class="seasons-list">{years}</div></aside>
+<main class="wrap">
 <header>{logo}<div><div class="kicker">{league} · {season} · Week {week}</div><h1>{title}</h1></div></header>
 <nav>{nav}</nav>
 <ol class="ranks">{rows}</ol>
-<footer>{note}Top performers are season points scored as a starter for that team; QB1, RB3, etc. is the player's season rank at his position across the NFL. Stats from Sleeper. Rankings are the commissioner's own.</footer>
-</div></body></html>
+<footer>{note}Top performers are season points scored as a starter for that team; QB1, RB3, etc. is the player's season rank at his position across the NFL through that week. Stats from Sleeper. Rankings are the commissioner's own.</footer>
+</main></div></body></html>
 """
 
 CSS = """
@@ -357,7 +384,23 @@ CSS = """
 @media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.wrap{max-width:780px;margin:0 auto;padding:32px 16px 64px}
+.layout{display:flex;max-width:1000px;margin:0 auto}
+.seasons{flex:none;width:150px;padding:40px 16px 0;position:sticky;top:0;align-self:flex-start}
+.seasons-lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px 10px}
+.seasons-list{display:flex;flex-direction:column;gap:2px}
+.seasons a{padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
+.seasons a:hover{background:var(--chip);color:var(--ink)}
+.seasons a.cur{background:var(--card);color:var(--ink);box-shadow:inset 3px 0 0 var(--ink),0 0 0 1px var(--line)}
+.wrap{flex:1;min-width:0;max-width:780px;padding:32px 16px 64px}
+@media (max-width:760px){
+  .layout{display:block}
+  .seasons{position:static;width:auto;padding:16px 16px 0;display:flex;align-items:center;gap:10px}
+  .seasons-lbl{margin:0}
+  .seasons-list{flex-direction:row;flex-wrap:wrap;gap:6px}
+  .seasons a{padding:4px 12px}
+  .seasons a.cur{box-shadow:inset 0 -2px 0 var(--ink),0 0 0 1px var(--line)}
+  .wrap{padding-top:16px}
+}
 header{display:flex;gap:16px;align-items:center}
 .logo{width:64px;height:64px;border-radius:14px}
 .kicker{color:var(--muted);font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
@@ -388,9 +431,9 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     if len(args) == 2 and args[0] == "setup":
         setup(args[1])
-    elif len(args) == 2 and args[0] == "new" and (m := re.fullmatch(r"(\d+)(?:-(\d+))?", args[1])):
+    elif len(args) in (2, 3) and args[0] == "new" and (m := re.fullmatch(r"(\d+)(?:-(\d+))?", args[1])):
         for w in range(int(m.group(1)), int(m.group(2) or m.group(1)) + 1):
-            new_week(w)
+            new_week(w, args[2] if len(args) == 3 else None)
     elif args == ["build"]:
         build()
     else:

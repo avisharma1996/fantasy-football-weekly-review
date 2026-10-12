@@ -9,7 +9,23 @@
 @media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.wrap{max-width:780px;margin:0 auto;padding:32px 16px 64px}
+.layout{display:flex;max-width:1000px;margin:0 auto}
+.seasons{flex:none;width:150px;padding:40px 16px 0;position:sticky;top:0;align-self:flex-start}
+.seasons-lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px 10px}
+.seasons-list{display:flex;flex-direction:column;gap:2px}
+.seasons a{padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
+.seasons a:hover{background:var(--chip);color:var(--ink)}
+.seasons a.cur{background:var(--card);color:var(--ink);box-shadow:inset 3px 0 0 var(--ink),0 0 0 1px var(--line)}
+.wrap{flex:1;min-width:0;max-width:780px;padding:32px 16px 64px}
+@media (max-width:760px){
+  .layout{display:block}
+  .seasons{position:static;width:auto;padding:16px 16px 0;display:flex;align-items:center;gap:10px}
+  .seasons-lbl{margin:0}
+  .seasons-list{flex-direction:row;flex-wrap:wrap;gap:6px}
+  .seasons a{padding:4px 12px}
+  .seasons a.cur{box-shadow:inset 0 -2px 0 var(--ink),0 0 0 1px var(--line)}
+  .wrap{padding-top:16px}
+}
 header{display:flex;gap:16px;align-items:center}
 .logo{width:64px;height:64px;border-radius:14px}
 .kicker{color:var(--muted);font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
@@ -34,9 +50,11 @@ nav a.cur{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .top .pp{font-variant-numeric:tabular-nums;color:var(--muted)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 </style></head>
-<body><div class="wrap">
+<body><div class="layout">
+<aside class="seasons"><div class="seasons-lbl">Season</div><div class="seasons-list"><a href="../2026/week-04.html" class=cur>2026</a></div></aside>
+<main class="wrap">
 <header><img class="logo" src="https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f" alt=""><div><div class="kicker">Red Vines · 2026 · Week 4</div><h1>Week 4 Power Rankings</h1></div></header>
-<nav><a href="week-01.html">Wk 1</a><a href="week-02.html">Wk 2</a><a href="week-03.html">Wk 3</a><a href="week-04.html" class=cur>Wk 4</a></nav>
+<nav><a href="../2026/week-01.html">Wk 1</a><a href="../2026/week-02.html">Wk 2</a><a href="../2026/week-03.html">Wk 3</a><a href="../2026/week-04.html" class=cur>Wk 4</a></nav>
 <ol class="ranks">
   <li class="rank">
     <div class="rank-num">1<span class="mv up">▲1</span></div>
@@ -146,5 +164,5 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">QB23</span>Justin Herbert<span class="pp">49.4</span></li><li><span class="pos">WR21</span>Parker Washington<span class="pp">43.1</span></li><li><span class="pos">TE6</span>Isaiah Likely<span class="pp">42.0</span></li></ul>
     </div>
   </li></ol>
-<footer>Records include a game against the league median each week. Top performers are season points scored as a starter for that team; QB1, RB3, etc. is the player's season rank at his position across the NFL. Stats from Sleeper. Rankings are the commissioner's own.</footer>
-</div></body></html>
+<footer>Records include a game against the league median each week. Top performers are season points scored as a starter for that team; QB1, RB3, etc. is the player's season rank at his position across the NFL through that week. Stats from Sleeper. Rankings are the commissioner's own.</footer>
+</main></div></body></html>
