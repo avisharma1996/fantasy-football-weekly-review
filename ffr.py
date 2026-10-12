@@ -230,6 +230,8 @@ def new_week(week, season=None):
         "// Starting order is " + ("last week's ranking." if prev else "the standings."),
         "",
         f"TITLE: Week {week} Power Rankings",
+        "// Optional intro: type it here, above the first team.",
+        "",
         "",
     ]
     for i, rid in enumerate(prev or standings_order(data), 1):
@@ -241,14 +243,16 @@ def new_week(week, season=None):
 
 
 def parse_week(txt, data):
-    """Read a week file into {title, rankings: [(roster_id, blurb)]}."""
-    out = {"title": f"Week {data['week']} Power Rankings", "rankings": []}
+    """Read a week file into {title, intro, rankings: [(roster_id, blurb)]}. Text above the first team is the intro."""
+    out = {"title": f"Week {data['week']} Power Rankings", "intro": "", "rankings": []}
     by_name = {t["name"].strip().lower(): rid for rid, t in data["teams"].items()}
     current, buf = None, []
 
     def flush():
         if current:
             out["rankings"].append((current, "\n".join(buf).strip()))
+        else:
+            out["intro"] = "\n".join(buf).strip()
         buf.clear()
 
     for line in txt.read_text(encoding="utf-8-sig").splitlines():
@@ -262,7 +266,7 @@ def parse_week(txt, data):
                 sys.exit(f"{txt.name}: '{m.group(1)}' isn't a team name. Teams: "
                          + ", ".join(t["name"] for t in data["teams"].values()))
             current = by_name[m.group(1).lower()]
-        elif current:
+        else:
             buf.append(line)
     flush()
 
@@ -333,8 +337,9 @@ def render_week(data, content, prev_rank, all_weeks, latest_week, base):
                     for s in sorted(latest_week, reverse=True))
     logo = f'<img class="logo" src="{e(data["league_avatar"])}" alt="">' if data.get("league_avatar") else ""
     note = "Records include a game against the league median each week. " if data.get("median_game") else ""
-    return PAGE.format(title=e(content["title"]), league=e(data["league"]), season=e(season),
-                       week=week, logo=logo, nav=nav, years=years, rows="".join(rows), note=note, css=CSS)
+    intro = f'<section class="intro">{fmt(content["intro"])}</section>' if content["intro"] else ""
+    return PAGE.format(title=e(content["title"]), league=e(data["league"]), season=e(season), week=week,
+                       logo=logo, nav=nav, years=years, intro=intro, rows="".join(rows), note=note, css=CSS)
 
 
 def build():
@@ -374,6 +379,7 @@ PAGE = """<!doctype html>
 <main class="wrap">
 <header>{logo}<div><div class="kicker">{league} · {season} · Week {week}</div><h1>{title}</h1></div></header>
 <nav>{nav}</nav>
+{intro}
 <ol class="ranks">{rows}</ol>
 <footer>{note}Top performers are season points scored as a starter for that team; QB1, RB3, etc. is the player's season rank at his position across the NFL through that week. Stats from Sleeper. Rankings are the commissioner's own.</footer>
 </main></div></body></html>
@@ -409,6 +415,7 @@ h2{margin:0;font-size:1.1rem}
 nav{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 28px}
 nav a{padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);text-decoration:none;font-size:.85rem}
 nav a.cur{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.intro{font-size:1.05rem;margin:-8px 0 24px}.intro p{margin:0 0 .7em}
 .ranks{list-style:none;padding:0;margin:0;display:grid;gap:12px}
 .rank{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
 .rank-num{font-size:1.9rem;font-weight:800;min-width:2.2ch;line-height:1.1;display:flex;flex-direction:column;align-items:center}
