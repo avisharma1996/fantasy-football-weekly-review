@@ -1,0 +1,54 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is the standings.
+
+TITLE: Week 1 Power Rankings
+
+1. Amver Alert🚨
+// 2-0, 172.46 PF, streak W1 | Josh Allen 35.7, Jalen Coker 29.8, Ashton Jeanty 29.7
+
+
+2. Shivxn
+// 2-0, 159.46 PF, streak W1 | Kenneth Walker 32.6, Chris Olave 23.2, DJ Moore 18.5
+
+
+3. Justin Beer Loyalist
+// 2-0, 138.06 PF, streak W1 | Caleb Williams 37.3, Jahmyr Gibbs 31.1, Trey McBride 20.0
+
+
+4. superdiddy
+// 2-0, 142.20 PF, streak W1 | Justin Jefferson 27.2, Jaxson Dart 26.6, Zay Flowers 23.5
+
+
+5. 6 7
+// 1-1, 135.80 PF, streak L1 | Derrick Henry 34.8, Brock Purdy 22.1, Ladd McConkey 16.7
+
+
+6. Braelon Allen
+// 1-1, 132.46 PF, streak L1 | Christian Watson 29.7, Jonathan Taylor 23.6, Patrick Mahomes 22.7
+
+
+7. Baltimore Avians
+// 1-1, 119.76 PF, streak W1 | D'Andre Swift 31.9, Bijan Robinson 27.3, Nico Collins 17.7
+
+
+8. NShah19
+// 0-2, 110.66 PF, streak L1 | Lamar Jackson 25.0, Dallas Goedert 21.7, Kyren Williams 14.0
+
+
+9. Karans Sportsbook
+// 1-1, 101.02 PF, streak W1 | Chuba Hubbard 22.2, Juwan Johnson 12.9, Drake Maye 12.8
+
+
+10. yrkpapi
+// 0-2, 106.16 PF, streak L1 | David Montgomery 27.4, Isaiah Likely 23.8, Parker Washington 16.8
+
+
+11. Ankitty
+// 0-2, 97.82 PF, streak L1 | Jalen Hurts 24.7, Jaxon Smith-Njigba 22.2, Jeremiyah Love 12.0
+
+
+12. I’m Whipped by Bezos
+// 0-2, 93.90 PF, streak L1 | Pittsburgh Steelers D/ST 20.0, Chase Brown 16.3, Dak Prescott 15.4
+

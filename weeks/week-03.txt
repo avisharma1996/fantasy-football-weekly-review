@@ -1,0 +1,54 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 3 Power Rankings
+
+1. Amver Alert🚨
+// 5-1, 404.54 PF, streak W3 | Josh Allen 95.4, Amon-Ra St. Brown 64.3, Ashton Jeanty 48.8
+
+
+2. Justin Beer Loyalist
+// 5-1, 379.68 PF, streak L1 | Jahmyr Gibbs 89.3, Davante Adams 56.8, Trey McBride 46.1
+
+
+3. Karans Sportsbook
+// 5-1, 347.38 PF, streak W3 | Chuba Hubbard 48.6, James Cook 48.2, George Kittle 39.2
+
+
+4. 6 7
+// 4-2, 368.56 PF, streak L1 | Brock Purdy 81.9, Derrick Henry 72.4, Christian McCaffrey 51.5
+
+
+5. Shivxn
+// 3-3, 375.68 PF, streak L1 | Kenneth Walker 73.7, Chris Olave 57.0, Dalton Kincaid 37.3
+
+
+6. Baltimore Avians
+// 3-3, 355.22 PF, streak W1 | Bijan Robinson 71.2, Joe Burrow 53.9, D'Andre Swift 52.1
+
+
+7. Braelon Allen
+// 3-3, 368.58 PF, streak L1 | Patrick Mahomes 68.6, Christian Watson 60.9, Jonathan Taylor 59.0
+
+
+8. Ankitty
+// 2-4, 353.86 PF, streak W1 | Jaxon Smith-Njigba 90.6, Jalen Hurts 56.5, Jeremiyah Love 37.4
+
+
+9. NShah19
+// 2-4, 342.50 PF, streak W1 | Lamar Jackson 61.2, Kyren Williams 47.5, Ja'Marr Chase 45.5
+
+
+10. I’m Whipped by Bezos
+// 2-4, 329.90 PF, streak W1 | Dak Prescott 64.1, CeeDee Lamb 60.9, Garrett Wilson 46.8
+
+
+11. superdiddy
+// 2-4, 295.08 PF, streak L2 | Javonte Williams 45.5, Justin Jefferson 38.4, Zay Flowers 36.4
+
+
+12. yrkpapi
+// 0-6, 267.78 PF, streak L3 | Parker Washington 41.6, Justin Herbert 37.9, David Montgomery 36.6
+

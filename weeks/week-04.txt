@@ -1,0 +1,54 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 4 Power Rankings
+
+1. Justin Beer Loyalist
+// 7-1, 527.02 PF, streak W1 | Jahmyr Gibbs 105.0, Davante Adams 62.0, Trey McBride 52.7
+
+
+2. Karans Sportsbook
+// 7-1, 521.94 PF, streak W4 | Chuba Hubbard 74.0, James Cook 63.5, Tetairoa McMillan 61.5
+
+
+3. Amver Alert🚨
+// 6-2, 538.76 PF, streak L1 | Josh Allen 115.0, Amon-Ra St. Brown 75.8, Ashton Jeanty 64.4
+
+
+4. Baltimore Avians
+// 5-3, 505.84 PF, streak W2 | Bijan Robinson 98.4, Joe Burrow 79.6, D'Andre Swift 58.5
+
+
+5. Shivxn
+// 4-4, 500.66 PF, streak W1 | Kenneth Walker 104.1, Chris Olave 72.6, Bucky Irving 40.7
+
+
+6. I’m Whipped by Bezos
+// 4-4, 463.10 PF, streak W2 | CeeDee Lamb 93.7, Dak Prescott 82.2, Garrett Wilson 51.0
+
+
+7. 6 7
+// 4-4, 465.88 PF, streak L2 | Brock Purdy 101.5, Derrick Henry 87.3, Christian McCaffrey 66.0
+
+
+8. NShah19
+// 3-5, 457.28 PF, streak W2 | Lamar Jackson 80.1, Kyren Williams 79.2, Ja'Marr Chase 49.7
+
+
+9. superdiddy
+// 3-5, 424.20 PF, streak L3 | Javonte Williams 74.3, Zay Flowers 58.2, Justin Jefferson 38.4
+
+
+10. Braelon Allen
+// 3-5, 446.28 PF, streak L2 | Patrick Mahomes 85.6, Jonathan Taylor 81.2, Christian Watson 67.1
+
+
+11. Ankitty
+// 2-6, 434.98 PF, streak L1 | Jaxon Smith-Njigba 100.7, Jalen Hurts 70.0, Jeremiyah Love 43.4
+
+
+12. yrkpapi
+// 0-8, 344.34 PF, streak L4 | Justin Herbert 49.4, Parker Washington 43.1, Isaiah Likely 42.0
+
