@@ -41,7 +41,7 @@ def get(path):
     req = urllib.request.Request(API + path, headers={"User-Agent": "ffr-weekly-review"})
     with urllib.request.urlopen(req, timeout=60) as r:
         data = json.load(r)
-    if "/matchups/" in path or path.startswith("/stats/"):
+    if "/matchups/" in path or "/transactions/" in path or path.startswith("/stats/"):
         _seen[path] = data
     return data
 
@@ -205,6 +205,33 @@ def fetch_week(league_id, week):
     }
 
 
+def fetch_faab(league_id):
+    """Every winning waiver claim this season, with the competing bids it beat, plus FAAB traded between teams."""
+    league = get(f"/league/{league_id}")
+    claims, lost, trades = [], {}, []
+    for w in range(0, 19):
+        for t in get(f"/league/{league_id}/transactions/{w}") or []:
+            if t["status"] == "complete":
+                trades += [{"week": t["leg"], "from": str(x["sender"]), "to": str(x["receiver"]), "amount": x["amount"]}
+                           for x in t.get("waiver_budget") or []]
+            if t.get("type") != "waiver" or not t.get("adds"):
+                continue
+            bid, rid = (t.get("settings") or {}).get("waiver_bid", 0), str(t["roster_ids"][0])
+            for pid in t["adds"]:
+                if t["status"] == "complete":
+                    claims.append({"week": t["leg"], "player": pid, "roster": rid, "bid": bid, "at": t["status_updated"]})
+                # Other failures (e.g. a full roster) weren't real competing bids.
+                elif "claimed by another owner" in ((t.get("metadata") or {}).get("notes") or ""):
+                    lost.setdefault((t["leg"], pid), []).append({"roster": rid, "bid": bid})
+    players = load_players({c["player"] for c in claims})
+    for c in claims:
+        p = players.get(c["player"], {"name": c["player"], "pos": ""})
+        c["name"], c["pos"] = p["name"], p["pos"]
+        c["outbid"] = sorted(lost.get((c["week"], c["player"]), []), key=lambda o: -o["bid"])
+    claims.sort(key=lambda c: (c["week"], -c["bid"], c["at"]))
+    return {"budget": (league.get("settings") or {}).get("waiver_budget") or 100, "claims": claims, "trades": trades}
+
+
 def record(t, mine, theirs):
     if mine > theirs:
         t["wins"] += 1
@@ -244,6 +271,8 @@ def new_week(week, season=None):
     data = fetch_week(seasons[season], week)
     js.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Saved stats to {js.relative_to(ROOT)}")
+    faab = WEEKS / season / "faab.json"
+    faab.write_text(json.dumps(fetch_faab(seasons[season]), indent=1, ensure_ascii=False), encoding="utf-8")
     if txt.exists():
         print(f"{txt.relative_to(ROOT)} already exists. Kept your rankings and refreshed only the stats.")
         return
@@ -347,7 +376,31 @@ def avatar(t):
     return f'<span class="av ph">{html.escape(t["name"][:1].upper())}</span>'
 
 
-def render_week(data, content, prev_rank, all_weeks, latest_week, base):
+def sidebar(season, base, latest_week, faab_seasons, faab_page=False):
+    """Power rankings by season, plus league links."""
+    years = "".join(f'<a href="{base}{s}/week-{latest_week[s]:02d}.html"'
+                    f'{" class=cur" if s == season and not faab_page else ""}>{s}</a>'
+                    for s in sorted(latest_week, reverse=True))
+    league = f'<a href="{html.escape(RULE_BOOK_URL)}" target="_blank" rel="noopener">Rule Book ↗</a>'
+    if season in faab_seasons:
+        league += f'<a href="{base}{season}/faab.html"{" class=cur" if faab_page else ""}>FAAB Tracker</a>'
+    return (f'<div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list">{years}</div></div>'
+            f'<div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list">{league}</div></div>')
+
+
+def week_nav(season, weeks, base, current=None):
+    return "".join(f'<a href="{base}{season}/week-{w:02d}.html"{" class=cur" if w == current else ""}>Wk {w}</a>'
+                   for w in weeks)
+
+
+def page(data, base, side, nav, kicker, heading, body, footer, description):
+    e = html.escape
+    logo = f'<img class="logo" src="{e(data["league_avatar"])}" alt="">' if data.get("league_avatar") else ""
+    return PAGE.format(site_name=e(SITE_NAME), description=e(description), side=side, logo=logo, kicker=kicker,
+                       heading=heading, nav=nav, body=body, footer=footer, css=CSS)
+
+
+def render_week(data, content, prev_rank, all_weeks, latest_week, faab_seasons, base):
     """`latest_week` maps each built season to its newest week; `base` is the path back to the site root."""
     teams, week, season, e = data["teams"], data["week"], str(data["season"]), html.escape
     rows = []
@@ -374,16 +427,66 @@ def render_week(data, content, prev_rank, all_weeks, latest_week, base):
     </div>
   </li>""")
 
-    nav = "".join(f'<a href="{base}{season}/week-{w:02d}.html"{" class=cur" if w == week else ""}>Wk {w}</a>'
-                  for w in all_weeks)
-    years = "".join(f'<a href="{base}{s}/week-{latest_week[s]:02d}.html"{" class=cur" if s == season else ""}>{s}</a>'
-                    for s in sorted(latest_week, reverse=True))
-    logo = f'<img class="logo" src="{e(data["league_avatar"])}" alt="">' if data.get("league_avatar") else ""
     note = "Records include a game against the league median each week. " if data.get("median_game") else ""
     intro = f'<section class="intro">{fmt(content["intro"], base)}</section>' if content["intro"] else ""
-    return PAGE.format(title=e(content["title"]), league=e(data["league"]), season=e(season), week=week,
-                       site_name=e(SITE_NAME), rule_book=e(RULE_BOOK_URL), logo=logo, nav=nav, years=years, intro=intro, rows="".join(rows),
-                       note=note, css=CSS)
+    footer = (f"{note}Top performers are points scored as a starter for that team: overall is the season through that "
+              "week, weekly is that week alone. QB1, RB3, etc. is the player's rank at his position across the NFL over "
+              "the same span. Stats from Sleeper. Rankings are the commissioner's own.")
+    return page(data, base, sidebar(season, base, latest_week, faab_seasons), week_nav(season, all_weeks, base, week),
+                f"{e(data['league'])} · {e(season)} · Week {week}", e(content["title"]),
+                f'{intro}<ol class="ranks">{"".join(rows)}</ol>', footer, f"{season} Week {week} power rankings")
+
+
+def render_faab(faab, data, all_weeks, latest_week, faab_seasons):
+    """Budget table and bid log for one season. `data` is the season's latest week, for team names and avatars."""
+    teams, season, e, base = data["teams"], str(data["season"]), html.escape, "../"
+    budget, claims, trades = faab["budget"], faab["claims"], faab.get("trades", [])
+    name = lambda rid: teams.get(rid, {}).get("name", f"Team {rid}")
+    money = lambda n: f"${n:,}"
+    spent = {rid: sum(c["bid"] for c in claims if c["roster"] == rid) for rid in teams}
+    traded = {rid: sum(x["amount"] for x in trades if x["to"] == rid) - sum(x["amount"] for x in trades if x["from"] == rid)
+              for rid in teams}
+
+    table = []
+    for rid in sorted(teams, key=lambda r: (-spent[r], name(r).lower())):
+        mine = [c for c in claims if c["roster"] == rid]
+        left = max(budget + traded[rid] - spent[rid], 0)
+        big = max(mine, key=lambda c: (c["bid"], -c["week"]), default=None)
+        big_txt = f'{e(big["name"])}, {money(big["bid"])}, Wk {big["week"]}' if big and big["bid"] else "–"
+        tr = traded[rid]
+        tr_txt = f'<span class="up">+{money(tr)}</span>' if tr > 0 else f'<span class="down">−{money(-tr)}</span>' if tr < 0 else "–"
+        table.append(f"""<tr><td class="tn"><span class="who">{avatar(teams[rid])}<span>{e(name(rid))}</span></span></td>
+      <td>{money(spent[rid])}</td>{f"<td>{tr_txt}</td>" if trades else ""}
+      <td><div class="left"><span>{money(left)}</span><span class="bar"><span style="width:{min(100, 100 * left / budget):.0f}%"></span></span></div></td>
+      <td>{len(mine)}</td><td class="tn">{big_txt}</td></tr>""")
+
+    log = []
+    for w in sorted({c["week"] for c in claims} | {x["week"] for x in trades}, reverse=True):
+        items = [f"""<li class="trade"><span class="amt">{money(x['amount'])}</span>
+        <div><b>{e(name(x['from']))}</b> sent {money(x['amount'])} FAAB to <b>{e(name(x['to']))}</b> in a trade</div></li>"""
+                 for x in trades if x["week"] == w]
+        for c in (c for c in claims if c["week"] == w):
+            beat = ""
+            if c["outbid"]:
+                others = ", ".join(f'{e(name(o["roster"]))}’s {money(o["bid"])}' for o in c["outbid"])
+                margin = c["bid"] - c["outbid"][0]["bid"]
+                beat = (f'<div class="beat">outbidding {others} · '
+                        + (f'by {money(margin)}' if margin > 0 else 'won the tiebreaker') + '</div>')
+            items.append(f"""<li{' class="zero"' if not c['bid'] else ''}><span class="amt">{money(c['bid'])}</span>
+        <div><b>{e(name(c['roster']))}</b> won <b>{e(c['name'])}</b> <span class="pos">{e(c['pos'])}</span>{beat}</div></li>""")
+        log.append(f'<h3>{f"Week {w}" if w else "Preseason"}</h3><ul class="bids">{"".join(items)}</ul>')
+
+    body = f"""<section><h2 class="sec">Budget</h2><div class="tbl"><table>
+  <thead><tr><th class="tn">Team</th><th>Spent</th>{"<th>Traded</th>" if trades else ""}<th>Remaining</th><th>Claims won</th><th class="tn">Biggest buy</th></tr></thead>
+  <tbody>{"".join(table)}</tbody></table></div></section>
+<section><h2 class="sec">Bid log</h2>{"".join(log) or "<p>No waiver claims yet.</p>"}</section>"""
+    footer = (f"Each team starts with {money(budget)} of FAAB; remaining includes FAAB traded between teams. Winning "
+              "waiver claims from Sleeper, newest week first. “Outbidding” lists the other teams that bid on the same "
+              "player that week.")
+    seasons_nav = "".join(f'<a href="{base}{s}/faab.html"{" class=cur" if s == season else ""}>{s}</a>'
+                          for s in sorted(faab_seasons, reverse=True))
+    return page(data, base, sidebar(season, base, latest_week, faab_seasons, faab_page=True), seasons_nav,
+                f"{e(data['league'])} · {e(season)}", "FAAB Tracker", body, footer, f"{season} FAAB spending")
 
 
 def build():
@@ -391,6 +494,7 @@ def build():
     if not seasons:
         sys.exit("No weeks yet. Run: py ffr.py new <week>")
     latest_week = {s: weeks_written(s)[-1] for s in seasons}
+    faab_seasons = {s for s in seasons if (WEEKS / s / "faab.json").exists()}
     if IMAGES.exists():
         shutil.copytree(IMAGES, SITE / "images", dirs_exist_ok=True)
     for s in seasons:
@@ -401,15 +505,19 @@ def build():
             txt, js = week_paths(s, w)
             data = json.loads(js.read_text(encoding="utf-8"))
             content = parse_week(txt, data)
-            page = render_week(data, content, prev_rank, weeks, latest_week, "../")
-            (SITE / s / f"week-{w:02d}.html").write_text(page, encoding="utf-8")
+            out = render_week(data, content, prev_rank, weeks, latest_week, faab_seasons, "../")
+            (SITE / s / f"week-{w:02d}.html").write_text(out, encoding="utf-8")
             if w == weeks[-1]:
-                (SITE / s / "index.html").write_text(page, encoding="utf-8")
+                (SITE / s / "index.html").write_text(out, encoding="utf-8")
                 if s == seasons[-1]:
-                    root = render_week(data, content, prev_rank, weeks, latest_week, "")
+                    root = render_week(data, content, prev_rank, weeks, latest_week, faab_seasons, "")
                     (SITE / "index.html").write_text(root, encoding="utf-8")
             prev_rank = [r for r, _ in content["rankings"]]
-        print(f"Built {s}: {len(weeks)} week(s)")
+        if s in faab_seasons:
+            faab = json.loads((WEEKS / s / "faab.json").read_text(encoding="utf-8"))
+            (SITE / s / "faab.html").write_text(render_faab(faab, data, weeks, latest_week, faab_seasons),
+                                                encoding="utf-8")
+        print(f"Built {s}: {len(weeks)} week(s)" + (" + FAAB" if s in faab_seasons else ""))
     print("Open docs/index.html to preview.")
 
 
@@ -419,19 +527,15 @@ PAGE = """<!doctype html>
 <title>{site_name}</title>
 <meta property="og:title" content="{site_name}">
 <meta property="og:site_name" content="{site_name}">
-<meta property="og:description" content="{season} Week {week} power rankings">
+<meta property="og:description" content="{description}">
 <style>{css}</style></head>
 <body><div class="layout">
-<aside class="seasons">
-<div class="side-group"><div class="seasons-lbl">Season</div><div class="seasons-list">{years}</div></div>
-<div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="{rule_book}" target="_blank" rel="noopener">Rule Book ↗</a></div></div>
-</aside>
+<aside class="seasons">{side}</aside>
 <main class="wrap">
-<header>{logo}<div><div class="kicker">{league} · {season} · Week {week}</div><h1>{title}</h1></div></header>
+<header>{logo}<div><div class="kicker">{kicker}</div><h1>{heading}</h1></div></header>
 <nav>{nav}</nav>
-{intro}
-<ol class="ranks">{rows}</ol>
-<footer>{note}Top performers are points scored as a starter for that team: overall is the season through that week, weekly is that week alone. QB1, RB3, etc. is the player's rank at his position across the NFL over the same span. Stats from Sleeper. Rankings are the commissioner's own.</footer>
+{body}
+<footer>{footer}</footer>
 </main></div></body></html>
 """
 
@@ -487,6 +591,26 @@ video.pic{max-height:360px}
 @media (max-width:560px){.tops{grid-template-columns:1fr;gap:4px}.tops .top{margin-bottom:6px}}
 .top .pos{color:var(--muted);font-size:.7rem;font-weight:700}
 .top .pp{font-variant-numeric:tabular-nums;color:var(--muted)}
+.sec{font-size:1.2rem;margin:8px 0 12px}
+section+section .sec{margin-top:36px}
+.tbl{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px}
+table{border-collapse:collapse;width:100%;font-size:.92rem;font-variant-numeric:tabular-nums}
+th,td{padding:10px 14px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:0}
+th{color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em}
+.tn{text-align:left}
+.who{display:flex;align-items:center;gap:10px;font-weight:600}.who .av{width:28px;height:28px;font-size:.75rem}
+.left{display:flex;align-items:center;gap:10px;justify-content:flex-end}
+.bar{width:90px;height:8px;border-radius:99px;background:var(--chip);overflow:hidden}
+.bar span{display:block;height:100%;background:var(--up);border-radius:99px}
+h3{font-size:.95rem;margin:22px 0 8px;color:var(--muted)}
+.bids{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.bids li{display:flex;gap:14px;align-items:baseline;padding:10px 16px;border-bottom:1px solid var(--line)}
+.bids li:last-child{border-bottom:0}
+.bids .amt{flex:none;min-width:3.2em;text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
+.bids .zero .amt{color:var(--muted);font-weight:600}
+.bids .pos{color:var(--muted);font-size:.72rem;font-weight:700}
+.bids .beat{color:var(--muted);font-size:.85rem}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 """
 

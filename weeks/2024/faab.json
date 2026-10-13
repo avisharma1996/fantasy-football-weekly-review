@@ -1,0 +1,2477 @@
+{
+ "budget": 100,
+ "claims": [
+  {
+   "week": 1,
+   "player": "6806",
+   "roster": "5",
+   "bid": 91,
+   "at": 1726038388500,
+   "name": "J.K. Dobbins",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 30
+    },
+    {
+     "roster": "6",
+     "bid": 23
+    },
+    {
+     "roster": "10",
+     "bid": 10
+    },
+    {
+     "roster": "4",
+     "bid": 3
+    },
+    {
+     "roster": "2",
+     "bid": 2
+    },
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 1,
+   "player": "11584",
+   "roster": "1",
+   "bid": 20,
+   "at": 1726038388500,
+   "name": "Bucky Irving",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 1,
+   "player": "8131",
+   "roster": "9",
+   "bid": 20,
+   "at": 1726038388500,
+   "name": "Isaiah Likely",
+   "pos": "TE",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 11
+    },
+    {
+     "roster": "2",
+     "bid": 2
+    },
+    {
+     "roster": "7",
+     "bid": 2
+    },
+    {
+     "roster": "9",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 1,
+   "player": "8148",
+   "roster": "7",
+   "bid": 15,
+   "at": 1725574555459,
+   "name": "Jameson Williams",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 1,
+   "player": "3286",
+   "roster": "1",
+   "bid": 15,
+   "at": 1726038388500,
+   "name": "Demarcus Robinson",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 1,
+   "player": "5185",
+   "roster": "6",
+   "bid": 3,
+   "at": 1726038388500,
+   "name": "Allen Lazard",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 1,
+   "player": "LAC",
+   "roster": "5",
+   "bid": 2,
+   "at": 1726038388500,
+   "name": "Los Angeles Chargers D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 1
+    }
+   ]
+  },
+  {
+   "week": 1,
+   "player": "1945",
+   "roster": "8",
+   "bid": 1,
+   "at": 1726038388500,
+   "name": "Chris Boswell",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 1,
+   "player": "6130",
+   "roster": "7",
+   "bid": 0,
+   "at": 1725344758952,
+   "name": "Devin Singletary",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 1,
+   "player": "11637",
+   "roster": "9",
+   "bid": 0,
+   "at": 1725491750223,
+   "name": "Keon Coleman",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 1,
+   "player": "6768",
+   "roster": "2",
+   "bid": 0,
+   "at": 1726038388500,
+   "name": "Tua Tagovailoa",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "9754",
+   "roster": "10",
+   "bid": 35,
+   "at": 1726643184652,
+   "name": "Quentin Johnston",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "2",
+     "bid": 20
+    },
+    {
+     "roster": "8",
+     "bid": 16
+    },
+    {
+     "roster": "6",
+     "bid": 9
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "player": "5937",
+   "roster": "8",
+   "bid": 21,
+   "at": 1726643184652,
+   "name": "Diontae Johnson",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 2
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "player": "8676",
+   "roster": "1",
+   "bid": 17,
+   "at": 1726643184652,
+   "name": "Rashid Shaheed",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "8",
+     "bid": 16
+    },
+    {
+     "roster": "8",
+     "bid": 16
+    },
+    {
+     "roster": "6",
+     "bid": 5
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "player": "11582",
+   "roster": "4",
+   "bid": 11,
+   "at": 1726643184652,
+   "name": "Carson Steele",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 10
+    },
+    {
+     "roster": "3",
+     "bid": 10
+    },
+    {
+     "roster": "8",
+     "bid": 6
+    },
+    {
+     "roster": "1",
+     "bid": 5
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "player": "7049",
+   "roster": "2",
+   "bid": 10,
+   "at": 1726643184652,
+   "name": "Jauan Jennings",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "9756",
+   "roster": "6",
+   "bid": 9,
+   "at": 1726643184652,
+   "name": "Jordan Addison",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "11576",
+   "roster": "4",
+   "bid": 7,
+   "at": 1726643184652,
+   "name": "Braelon Allen",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 3
+    },
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "player": "6770",
+   "roster": "9",
+   "bid": 6,
+   "at": 1726121194188,
+   "name": "Joe Burrow",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "8142",
+   "roster": "6",
+   "bid": 6,
+   "at": 1726643184652,
+   "name": "Alec Pierce",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 5
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "player": "4033",
+   "roster": "2",
+   "bid": 5,
+   "at": 1726121194188,
+   "name": "David Njoku",
+   "pos": "TE",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "player": "4171",
+   "roster": "10",
+   "bid": 5,
+   "at": 1726643184652,
+   "name": "Josh Reynolds",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "6130",
+   "roster": "1",
+   "bid": 1,
+   "at": 1726360592899,
+   "name": "Devin Singletary",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "5001",
+   "roster": "7",
+   "bid": 0,
+   "at": 1726277784177,
+   "name": "Dalton Schultz",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "GB",
+   "roster": "1",
+   "bid": 0,
+   "at": 1726643184652,
+   "name": "Green Bay Packers D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "TB",
+   "roster": "7",
+   "bid": 0,
+   "at": 1726643184652,
+   "name": "Tampa Bay Buccaneers D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "1373",
+   "roster": "2",
+   "bid": 0,
+   "at": 1726643184652,
+   "name": "Geno Smith",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "7594",
+   "roster": "10",
+   "bid": 0,
+   "at": 1726643184652,
+   "name": "Chuba Hubbard",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "4066",
+   "roster": "2",
+   "bid": 0,
+   "at": 1726643184652,
+   "name": "Evan Engram",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "7049",
+   "roster": "9",
+   "bid": 19,
+   "at": 1727247955591,
+   "name": "Jauan Jennings",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 12
+    },
+    {
+     "roster": "1",
+     "bid": 8
+    },
+    {
+     "roster": "2",
+     "bid": 8
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "player": "10226",
+   "roster": "7",
+   "bid": 10,
+   "at": 1727247955591,
+   "name": "Andrei Iosivas",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "player": "8126",
+   "roster": "1",
+   "bid": 6,
+   "at": 1727247955591,
+   "name": "Wan'Dale Robinson",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 2
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "player": "11620",
+   "roster": "2",
+   "bid": 5,
+   "at": 1726791375507,
+   "name": "Rome Odunze",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "4943",
+   "roster": "7",
+   "bid": 5,
+   "at": 1727247955591,
+   "name": "Sam Darnold",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "7090",
+   "roster": "7",
+   "bid": 5,
+   "at": 1727247955591,
+   "name": "Darnell Mooney",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 4
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "player": "6826",
+   "roster": "5",
+   "bid": 3,
+   "at": 1727247955591,
+   "name": "Cole Kmet",
+   "pos": "TE",
+   "outbid": [
+    {
+     "roster": "9",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "player": "8110",
+   "roster": "8",
+   "bid": 2,
+   "at": 1726725989688,
+   "name": "Jake Ferguson",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "KC",
+   "roster": "8",
+   "bid": 2,
+   "at": 1727247955591,
+   "name": "Kansas City Chiefs D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 2
+    },
+    {
+     "roster": "5",
+     "bid": 0
+    },
+    {
+     "roster": "2",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "player": "7021",
+   "roster": "8",
+   "bid": 1,
+   "at": 1727247955591,
+   "name": "Rico Dowdle",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "MIN",
+   "roster": "8",
+   "bid": 1,
+   "at": 1727247955591,
+   "name": "Minnesota Vikings D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "player": "6960",
+   "roster": "7",
+   "bid": 0,
+   "at": 1726725989688,
+   "name": "Tyler Johnson",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "11626",
+   "roster": "7",
+   "bid": 0,
+   "at": 1726758992454,
+   "name": "Xavier Legette",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "11638",
+   "roster": "6",
+   "bid": 0,
+   "at": 1727247955591,
+   "name": "Ricky Pearsall",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "HOU",
+   "roster": "5",
+   "bid": 0,
+   "at": 1727247955591,
+   "name": "Houston Texans D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "9480",
+   "roster": "9",
+   "bid": 0,
+   "at": 1727247955591,
+   "name": "Brenton Strange",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "5133",
+   "roster": "7",
+   "bid": 0,
+   "at": 1727247955591,
+   "name": "Tyler Conklin",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "7593",
+   "roster": "6",
+   "bid": 18,
+   "at": 1727852778366,
+   "name": "Trey Sermon",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "9486",
+   "roster": "3",
+   "bid": 10,
+   "at": 1727852778366,
+   "name": "Dontayvion Wicks",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "3",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "player": "1339",
+   "roster": "7",
+   "bid": 10,
+   "at": 1727852778366,
+   "name": "Zach Ertz",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "7591",
+   "roster": "3",
+   "bid": 8,
+   "at": 1727852778366,
+   "name": "Justin Fields",
+   "pos": "QB",
+   "outbid": [
+    {
+     "roster": "5",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "player": "5987",
+   "roster": "8",
+   "bid": 7,
+   "at": 1727852778366,
+   "name": "Alexander Mattison",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "9225",
+   "roster": "6",
+   "bid": 6,
+   "at": 1727852778366,
+   "name": "Tank Bigsby",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "8",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "player": "DEN",
+   "roster": "1",
+   "bid": 3,
+   "at": 1727852778366,
+   "name": "Denver Broncos D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "9484",
+   "roster": "5",
+   "bid": 2,
+   "at": 1727852778366,
+   "name": "Tucker Kraft",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "6783",
+   "roster": "10",
+   "bid": 0,
+   "at": 1727414769636,
+   "name": "Jerry Jeudy",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "8142",
+   "roster": "9",
+   "bid": 0,
+   "at": 1727497580194,
+   "name": "Alec Pierce",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "9500",
+   "roster": "7",
+   "bid": 0,
+   "at": 1727852778366,
+   "name": "Josh Downs",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "3678",
+   "roster": "7",
+   "bid": 0,
+   "at": 1727852778366,
+   "name": "Wil Lutz",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "7588",
+   "roster": "9",
+   "bid": 0,
+   "at": 1727852778366,
+   "name": "Javonte Williams",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "SEA",
+   "roster": "9",
+   "bid": 0,
+   "at": 1727852778366,
+   "name": "Seattle Seahawks D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "player": "5844",
+   "roster": "2",
+   "bid": 0,
+   "at": 1727852778366,
+   "name": "T.J. Hockenson",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "9225",
+   "roster": "8",
+   "bid": 22,
+   "at": 1728457554340,
+   "name": "Tank Bigsby",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 20
+    },
+    {
+     "roster": "1",
+     "bid": 10
+    },
+    {
+     "roster": "9",
+     "bid": 5
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "player": "9224",
+   "roster": "6",
+   "bid": 18,
+   "at": 1728457554340,
+   "name": "Chase Brown",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 17
+    },
+    {
+     "roster": "8",
+     "bid": 6
+    },
+    {
+     "roster": "8",
+     "bid": 6
+    },
+    {
+     "roster": "2",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "player": "5947",
+   "roster": "10",
+   "bid": 15,
+   "at": 1728457554340,
+   "name": "Jakobi Meyers",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 6
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "player": "HOU",
+   "roster": "8",
+   "bid": 6,
+   "at": 1728457554340,
+   "name": "Houston Texans D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "player": "4981",
+   "roster": "1",
+   "bid": 0,
+   "at": 1728335767985,
+   "name": "Calvin Ridley",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "5133",
+   "roster": "7",
+   "bid": 0,
+   "at": 1728457554340,
+   "name": "Tyler Conklin",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "4195",
+   "roster": "7",
+   "bid": 0,
+   "at": 1728457554340,
+   "name": "Jake Elliott",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "11949",
+   "roster": "2",
+   "bid": 0,
+   "at": 1728457554340,
+   "name": "Brayden Narveson",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "7611",
+   "roster": "1",
+   "bid": 17,
+   "at": 1728803139516,
+   "name": "Rhamondre Stevenson",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "2749",
+   "roster": "10",
+   "bid": 13,
+   "at": 1729062358992,
+   "name": "Raheem Mostert",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "8",
+     "bid": 7
+    },
+    {
+     "roster": "6",
+     "bid": 3
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "player": "5185",
+   "roster": "2",
+   "bid": 10,
+   "at": 1729062358992,
+   "name": "Allen Lazard",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "9506",
+   "roster": "3",
+   "bid": 10,
+   "at": 1729062358992,
+   "name": "Sean Tucker",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 10
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "player": "4227",
+   "roster": "2",
+   "bid": 10,
+   "at": 1729062358992,
+   "name": "Harrison Butker",
+   "pos": "K",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 5
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "player": "2374",
+   "roster": "10",
+   "bid": 3,
+   "at": 1729062358992,
+   "name": "Tyler Lockett",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "8117",
+   "roster": "1",
+   "bid": 0,
+   "at": 1728814539975,
+   "name": "Jalen Tolbert",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "3214",
+   "roster": "7",
+   "bid": 0,
+   "at": 1729062358992,
+   "name": "Hunter Henry",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "GB",
+   "roster": "7",
+   "bid": 0,
+   "at": 1729062358992,
+   "name": "Green Bay Packers D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "player": "4040",
+   "roster": "6",
+   "bid": 0,
+   "at": 1729062358992,
+   "name": "JuJu Smith-Schuster",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "player": "8167",
+   "roster": "6",
+   "bid": 0,
+   "at": 1729062358992,
+   "name": "Christian Watson",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "player": "6938",
+   "roster": "1",
+   "bid": 0,
+   "at": 1729062358992,
+   "name": "Cam Akers",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "NO",
+   "roster": "9",
+   "bid": 0,
+   "at": 1729062358992,
+   "name": "New Orleans Saints D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "5045",
+   "roster": "9",
+   "bid": 0,
+   "at": 1729062358992,
+   "name": "Courtland Sutton",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "player": "LAR",
+   "roster": "2",
+   "bid": 0,
+   "at": 1729062358992,
+   "name": "Los Angeles Rams D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "8137",
+   "roster": "4",
+   "bid": 26,
+   "at": 1729667196040,
+   "name": "George Pickens",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 18
+    },
+    {
+     "roster": "10",
+     "bid": 15
+    },
+    {
+     "roster": "8",
+     "bid": 11
+    },
+    {
+     "roster": "7",
+     "bid": 8
+    },
+    {
+     "roster": "6",
+     "bid": 5
+    },
+    {
+     "roster": "2",
+     "bid": 0
+    },
+    {
+     "roster": "5",
+     "bid": 0
+    },
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "9506",
+   "roster": "7",
+   "bid": 17,
+   "at": 1729402594737,
+   "name": "Sean Tucker",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "7049",
+   "roster": "8",
+   "bid": 17,
+   "at": 1729667196040,
+   "name": "Jauan Jennings",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 13
+    },
+    {
+     "roster": "9",
+     "bid": 6
+    },
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "8134",
+   "roster": "7",
+   "bid": 13,
+   "at": 1729207577341,
+   "name": "Khalil Shakir",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "8136",
+   "roster": "8",
+   "bid": 9,
+   "at": 1729667196040,
+   "name": "Rachaad White",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 6
+    },
+    {
+     "roster": "8",
+     "bid": 3
+    },
+    {
+     "roster": "10",
+     "bid": 3
+    },
+    {
+     "roster": "6",
+     "bid": 2
+    },
+    {
+     "roster": "9",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "11637",
+   "roster": "7",
+   "bid": 7,
+   "at": 1729667196040,
+   "name": "Keon Coleman",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "8134",
+   "roster": "10",
+   "bid": 6,
+   "at": 1729667196040,
+   "name": "Khalil Shakir",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "1234",
+   "roster": "3",
+   "bid": 5,
+   "at": 1729667196040,
+   "name": "Russell Wilson",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "KC",
+   "roster": "9",
+   "bid": 5,
+   "at": 1729667196040,
+   "name": "Kansas City Chiefs D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "2",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "8111",
+   "roster": "1",
+   "bid": 3,
+   "at": 1729667196040,
+   "name": "Cade Otton",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "11560",
+   "roster": "6",
+   "bid": 2,
+   "at": 1729667196040,
+   "name": "Caleb Williams",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "8121",
+   "roster": "1",
+   "bid": 2,
+   "at": 1729667196040,
+   "name": "Romeo Doubs",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "8137",
+   "roster": "8",
+   "bid": 1,
+   "at": 1729145171070,
+   "name": "George Pickens",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 18
+    },
+    {
+     "roster": "10",
+     "bid": 15
+    },
+    {
+     "roster": "8",
+     "bid": 11
+    },
+    {
+     "roster": "7",
+     "bid": 8
+    },
+    {
+     "roster": "6",
+     "bid": 5
+    },
+    {
+     "roster": "2",
+     "bid": 0
+    },
+    {
+     "roster": "5",
+     "bid": 0
+    },
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "SEA",
+   "roster": "10",
+   "bid": 1,
+   "at": 1729667196040,
+   "name": "Seattle Seahawks D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "3678",
+   "roster": "10",
+   "bid": 1,
+   "at": 1729667196040,
+   "name": "Wil Lutz",
+   "pos": "K",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "CHI",
+   "roster": "9",
+   "bid": 0,
+   "at": 1729473342176,
+   "name": "Chicago Bears D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "11618",
+   "roster": "6",
+   "bid": 0,
+   "at": 1729667196040,
+   "name": "Jalen McMillan",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "LAC",
+   "roster": "5",
+   "bid": 0,
+   "at": 1729667196040,
+   "name": "Los Angeles Chargers D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "5095",
+   "roster": "7",
+   "bid": 0,
+   "at": 1729667196040,
+   "name": "Daniel Carlson",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "9500",
+   "roster": "6",
+   "bid": 23,
+   "at": 1730271953359,
+   "name": "Josh Downs",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 16
+    },
+    {
+     "roster": "2",
+     "bid": 5
+    },
+    {
+     "roster": "7",
+     "bid": 2
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "player": "4981",
+   "roster": "9",
+   "bid": 20,
+   "at": 1730271953359,
+   "name": "Calvin Ridley",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 5
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "player": "10444",
+   "roster": "3",
+   "bid": 12,
+   "at": 1730271953359,
+   "name": "Cedric Tillman",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 9
+    },
+    {
+     "roster": "1",
+     "bid": 8
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "player": "5947",
+   "roster": "2",
+   "bid": 5,
+   "at": 1729750551956,
+   "name": "Jakobi Meyers",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "8",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "player": "7596",
+   "roster": "10",
+   "bid": 2,
+   "at": 1730271953359,
+   "name": "Elijah Moore",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "PHI",
+   "roster": "4",
+   "bid": 1,
+   "at": 1730271953359,
+   "name": "Philadelphia Eagles D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "player": "DET",
+   "roster": "10",
+   "bid": 1,
+   "at": 1730271953359,
+   "name": "Detroit Lions D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "8126",
+   "roster": "1",
+   "bid": 0,
+   "at": 1730150783645,
+   "name": "Wan'Dale Robinson",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "7042",
+   "roster": "8",
+   "bid": 0,
+   "at": 1730271953359,
+   "name": "Tyler Bass",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "421",
+   "roster": "10",
+   "bid": 0,
+   "at": 1730271953359,
+   "name": "Matthew Stafford",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "4663",
+   "roster": "6",
+   "bid": 0,
+   "at": 1730271953359,
+   "name": "Austin Ekeler",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "4195",
+   "roster": "7",
+   "bid": 0,
+   "at": 1730271953359,
+   "name": "Jake Elliott",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "9484",
+   "roster": "9",
+   "bid": 0,
+   "at": 1730271953359,
+   "name": "Tucker Kraft",
+   "pos": "TE",
+   "outbid": [
+    {
+     "roster": "8",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "player": "9495",
+   "roster": "7",
+   "bid": 0,
+   "at": 1730271953359,
+   "name": "Rakim Jarrett",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "2309",
+   "roster": "6",
+   "bid": 21,
+   "at": 1730880352241,
+   "name": "Amari Cooper",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 10
+    },
+    {
+     "roster": "8",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "player": "1945",
+   "roster": "7",
+   "bid": 7,
+   "at": 1730739389764,
+   "name": "Chris Boswell",
+   "pos": "K",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "player": "6783",
+   "roster": "10",
+   "bid": 7,
+   "at": 1730880352241,
+   "name": "Jerry Jeudy",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 4
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "player": "4993",
+   "roster": "2",
+   "bid": 5,
+   "at": 1730880352241,
+   "name": "Mike Gesicki",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "9501",
+   "roster": "1",
+   "bid": 4,
+   "at": 1730880352241,
+   "name": "DeMario Douglas",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "player": "LAR",
+   "roster": "1",
+   "bid": 3,
+   "at": 1730880352241,
+   "name": "Los Angeles Rams D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "10937",
+   "roster": "8",
+   "bid": 0,
+   "at": 1730880352241,
+   "name": "Jake Moody",
+   "pos": "K",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "player": "11058",
+   "roster": "6",
+   "bid": 0,
+   "at": 1730880352241,
+   "name": "Blake Grupe",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "CHI",
+   "roster": "2",
+   "bid": 0,
+   "at": 1730880352241,
+   "name": "Chicago Bears D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "NYG",
+   "roster": "7",
+   "bid": 0,
+   "at": 1730880352241,
+   "name": "New York Giants D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "8131",
+   "roster": "7",
+   "bid": 0,
+   "at": 1730880352241,
+   "name": "Isaiah Likely",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 10,
+   "player": "5086",
+   "roster": "1",
+   "bid": 9,
+   "at": 1731485179735,
+   "name": "Marquez Valdes-Scantling",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 10,
+   "player": "HOU",
+   "roster": "4",
+   "bid": 2,
+   "at": 1731485179735,
+   "name": "Houston Texans D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "2",
+     "bid": 2
+    },
+    {
+     "roster": "9",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "player": "11618",
+   "roster": "8",
+   "bid": 0,
+   "at": 1730963170648,
+   "name": "Jalen McMillan",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 10,
+   "player": "11579",
+   "roster": "8",
+   "bid": 0,
+   "at": 1731485179735,
+   "name": "Audric Estime",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 10,
+   "player": "5119",
+   "roster": "9",
+   "bid": 0,
+   "at": 1731485179735,
+   "name": "Jason Sanders",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 10,
+   "player": "6804",
+   "roster": "10",
+   "bid": 0,
+   "at": 1731485179735,
+   "name": "Jordan Love",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 10,
+   "player": "7042",
+   "roster": "10",
+   "bid": 0,
+   "at": 1731485179735,
+   "name": "Tyler Bass",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "5086",
+   "roster": "10",
+   "bid": 16,
+   "at": 1732089989159,
+   "name": "Marquez Valdes-Scantling",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "player": "8126",
+   "roster": "5",
+   "bid": 2,
+   "at": 1732089989159,
+   "name": "Wan'Dale Robinson",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "9484",
+   "roster": "8",
+   "bid": 1,
+   "at": 1731567984646,
+   "name": "Tucker Kraft",
+   "pos": "TE",
+   "outbid": [
+    {
+     "roster": "5",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "player": "4663",
+   "roster": "10",
+   "bid": 0,
+   "at": 1731618961518,
+   "name": "Austin Ekeler",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "6768",
+   "roster": "1",
+   "bid": 0,
+   "at": 1732089989159,
+   "name": "Tua Tagovailoa",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "PHI",
+   "roster": "8",
+   "bid": 0,
+   "at": 1732089989159,
+   "name": "Philadelphia Eagles D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "7496",
+   "roster": "8",
+   "bid": 0,
+   "at": 1732089989159,
+   "name": "Nick Westbrook-Ikhine",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "6650",
+   "roster": "10",
+   "bid": 0,
+   "at": 1732089989159,
+   "name": "Chase McLaughlin",
+   "pos": "K",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "player": "TB",
+   "roster": "6",
+   "bid": 0,
+   "at": 1732089989159,
+   "name": "Tampa Bay Buccaneers D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "ARI",
+   "roster": "7",
+   "bid": 0,
+   "at": 1732089989159,
+   "name": "Arizona Cardinals D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "1339",
+   "roster": "8",
+   "bid": 0,
+   "at": 1732089989159,
+   "name": "Zach Ertz",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "4663",
+   "roster": "9",
+   "bid": 10,
+   "at": 1732721797000,
+   "name": "Austin Ekeler",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "DAL",
+   "roster": "2",
+   "bid": 0,
+   "at": 1732694796121,
+   "name": "Dallas Cowboys D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "9756",
+   "roster": "1",
+   "bid": 0,
+   "at": 1732694796121,
+   "name": "Jordan Addison",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "SEA",
+   "roster": "7",
+   "bid": 0,
+   "at": 1732694796121,
+   "name": "Seattle Seahawks D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 13,
+   "player": "11651",
+   "roster": "4",
+   "bid": 20,
+   "at": 1733299554934,
+   "name": "Isaac Guerendo",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "9",
+     "bid": 19
+    },
+    {
+     "roster": "5",
+     "bid": 10
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "player": "1689",
+   "roster": "5",
+   "bid": 7,
+   "at": 1733299554934,
+   "name": "Adam Thielen",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "player": "6768",
+   "roster": "2",
+   "bid": 5,
+   "at": 1733299554934,
+   "name": "Tua Tagovailoa",
+   "pos": "QB",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "player": "10219",
+   "roster": "9",
+   "bid": 0,
+   "at": 1733299554934,
+   "name": "Chris Rodriguez",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 13,
+   "player": "BUF",
+   "roster": "7",
+   "bid": 0,
+   "at": 1733299554934,
+   "name": "Buffalo Bills D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 13,
+   "player": "8670",
+   "roster": "6",
+   "bid": 0,
+   "at": 1733299554934,
+   "name": "Parker Romo",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 13,
+   "player": "4195",
+   "roster": "4",
+   "bid": 0,
+   "at": 1733299554934,
+   "name": "Jake Elliott",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 13,
+   "player": "7596",
+   "roster": "1",
+   "bid": 0,
+   "at": 1733299554934,
+   "name": "Elijah Moore",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 13,
+   "player": "12185",
+   "roster": "9",
+   "bid": 0,
+   "at": 1733299554934,
+   "name": "Spencer Shrader",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 13,
+   "player": "MIA",
+   "roster": "2",
+   "bid": 0,
+   "at": 1733299554934,
+   "name": "Miami Dolphins D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 14,
+   "player": "6963",
+   "roster": "4",
+   "bid": 27,
+   "at": 1733904353175,
+   "name": "Patrick Taylor",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "9",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "player": "5248",
+   "roster": "3",
+   "bid": 20,
+   "at": 1733390762212,
+   "name": "Gus Edwards",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 14,
+   "player": "11571",
+   "roster": "9",
+   "bid": 19,
+   "at": 1733904353175,
+   "name": "Isaiah Davis",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 10
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "player": "9225",
+   "roster": "10",
+   "bid": 10,
+   "at": 1733904353175,
+   "name": "Tank Bigsby",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "player": "BAL",
+   "roster": "2",
+   "bid": 8,
+   "at": 1733904353175,
+   "name": "Baltimore Ravens D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "player": "8220",
+   "roster": "1",
+   "bid": 0,
+   "at": 1733904353175,
+   "name": "Sincere McCormick",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "player": "WAS",
+   "roster": "6",
+   "bid": 0,
+   "at": 1733904353175,
+   "name": "Washington Commanders D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 14,
+   "player": "3678",
+   "roster": "6",
+   "bid": 0,
+   "at": 1733904353175,
+   "name": "Wil Lutz",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 14,
+   "player": "ATL",
+   "roster": "10",
+   "bid": 0,
+   "at": 1733904353175,
+   "name": "Atlanta Falcons D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 14,
+   "player": "4227",
+   "roster": "9",
+   "bid": 0,
+   "at": 1733904353175,
+   "name": "Harrison Butker",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 15,
+   "player": "DET",
+   "roster": "2",
+   "bid": 16,
+   "at": 1734509171054,
+   "name": "Detroit Lions D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 15,
+   "player": "ARI",
+   "roster": "3",
+   "bid": 5,
+   "at": 1733987774743,
+   "name": "Arizona Cardinals D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "player": "8143",
+   "roster": "9",
+   "bid": 1,
+   "at": 1734509171054,
+   "name": "Jerome Ford",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "player": "11624",
+   "roster": "1",
+   "bid": 0,
+   "at": 1734111982779,
+   "name": "Xavier Worthy",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 15,
+   "player": "9757",
+   "roster": "1",
+   "bid": 0,
+   "at": 1734509171054,
+   "name": "Kendre Miller",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 15,
+   "player": "4227",
+   "roster": "9",
+   "bid": 0,
+   "at": 1734509171054,
+   "name": "Harrison Butker",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 15,
+   "player": "11618",
+   "roster": "1",
+   "bid": 0,
+   "at": 1734509171054,
+   "name": "Jalen McMillan",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 15,
+   "player": "IND",
+   "roster": "5",
+   "bid": 0,
+   "at": 1734509171054,
+   "name": "Indianapolis Colts D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 15,
+   "player": "7543",
+   "roster": "1",
+   "bid": 0,
+   "at": 1734509171054,
+   "name": "Travis Etienne",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "player": "5937",
+   "roster": "8",
+   "bid": 7,
+   "at": 1735113963625,
+   "name": "Diontae Johnson",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 16,
+   "player": "9229",
+   "roster": "5",
+   "bid": 3,
+   "at": 1735113963625,
+   "name": "Anthony Richardson",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 16,
+   "player": "LV",
+   "roster": "4",
+   "bid": 0,
+   "at": 1734591987212,
+   "name": "Las Vegas Raiders D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 16,
+   "player": "4035",
+   "roster": "2",
+   "bid": 0,
+   "at": 1734911789912,
+   "name": "Alvin Kamara",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 16,
+   "player": "9508",
+   "roster": "1",
+   "bid": 0,
+   "at": 1735113963625,
+   "name": "Tyjae Spears",
+   "pos": "RB",
+   "outbid": []
+  }
+ ],
+ "trades": [
+  {
+   "week": 3,
+   "from": "7",
+   "to": "5",
+   "amount": 10
+  },
+  {
+   "week": 5,
+   "from": "6",
+   "to": "10",
+   "amount": 15
+  },
+  {
+   "week": 9,
+   "from": "2",
+   "to": "6",
+   "amount": 21
+  }
+ ]
+}
