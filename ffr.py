@@ -433,14 +433,14 @@ CSS = """
 @media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.layout{display:flex;max-width:1000px;margin:0 auto}
+.layout{display:flex;max-width:1160px;margin:0 auto}
 .seasons{flex:none;width:150px;padding:40px 16px 0;position:sticky;top:0;align-self:flex-start}
 .seasons-lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px 10px}
 .seasons-list{display:flex;flex-direction:column;gap:2px}
 .seasons a{padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
 .seasons a:hover{background:var(--chip);color:var(--ink)}
 .seasons a.cur{background:var(--card);color:var(--ink);box-shadow:inset 3px 0 0 var(--ink),0 0 0 1px var(--line)}
-.wrap{flex:1;min-width:0;max-width:780px;padding:32px 16px 64px}
+.wrap{flex:1;min-width:0;max-width:1000px;padding:32px 16px 64px}
 @media (max-width:760px){
   .layout{display:block}
   .seasons{position:static;width:auto;padding:16px 16px 0;display:flex;align-items:center;gap:10px}
