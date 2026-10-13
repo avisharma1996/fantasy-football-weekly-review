@@ -25,6 +25,13 @@
         "name": "Tory Horton",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 53.85,
+        "bye": 0.15,
+        "semis": 24.48,
+        "final": 8.07,
+        "champ": 2.52
+      },
       "luck": -1.11,
       "streak": "W1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 13.3,
         "name": "Quentin Johnston",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 88.62,
+        "bye": 2.77,
+        "semis": 46.65,
+        "final": 15.47,
+        "champ": 5.33
       },
       "luck": 0.22,
       "streak": "W1",
@@ -151,6 +165,13 @@
         "name": "Bo Nix",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 29.55,
+        "bye": 0.0,
+        "semis": 12.32,
+        "final": 3.8,
+        "champ": 1.23
+      },
       "luck": -0.44,
       "streak": "L2",
       "top": [
@@ -214,6 +235,13 @@
         "name": "Houston Texans D/ST",
         "pos": "DEF"
       },
+      "odds": {
+        "playoffs": 51.92,
+        "bye": 0.17,
+        "semis": 23.23,
+        "final": 7.4,
+        "champ": 2.73
+      },
       "luck": -0.22,
       "streak": "W1",
       "top": [
@@ -273,6 +301,13 @@
       "bench": 118.14,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 90.15,
+        "semis": 96.45,
+        "final": 61.12,
+        "champ": 29.95
+      },
       "luck": 0.44,
       "streak": "W4",
       "top": [
@@ -335,6 +370,13 @@
         "pts": 14.1,
         "name": "RJ Harvey",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 21.52,
+        "bye": 0.0,
+        "semis": 9.65,
+        "final": 2.9,
+        "champ": 0.82
       },
       "luck": 0.33,
       "streak": "L4",
@@ -399,6 +441,13 @@
         "name": "Drake London",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 48.85,
+        "bye": 0.1,
+        "semis": 24.48,
+        "final": 8.8,
+        "champ": 3.9
+      },
       "luck": -1.22,
       "streak": "L1",
       "top": [
@@ -461,6 +510,13 @@
         "pts": 4.6,
         "name": "Jacory Croskey-Merritt",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 6.65,
+        "bye": 0.0,
+        "semis": 2.3,
+        "final": 0.55,
+        "champ": 0.17
       },
       "luck": 1.11,
       "streak": "W2",
@@ -525,6 +581,13 @@
         "name": "Dalton Kincaid",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 99.97,
+        "bye": 86.1,
+        "semis": 96.42,
+        "final": 67.38,
+        "champ": 42.42
+      },
       "luck": -0.33,
       "streak": "L1",
       "top": [
@@ -587,6 +650,13 @@
         "pts": 11.0,
         "name": "Will Reichard",
         "pos": "K"
+      },
+      "odds": {
+        "playoffs": 99.05,
+        "bye": 20.55,
+        "semis": 64.03,
+        "final": 24.5,
+        "champ": 10.93
       },
       "luck": 1.22,
       "streak": "L1",

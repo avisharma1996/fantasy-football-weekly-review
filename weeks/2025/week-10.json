@@ -21,6 +21,13 @@
       "bench": 109.4,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 42.3,
+        "bye": 0.0,
+        "semis": 18.77,
+        "final": 5.88,
+        "champ": 1.85
+      },
       "luck": -1.56,
       "streak": "L1",
       "top": [
@@ -83,6 +90,13 @@
         "pts": 17.7,
         "name": "Tyler Allgeier",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 89.03,
+        "bye": 1.07,
+        "semis": 43.3,
+        "final": 13.55,
+        "champ": 4.47
       },
       "luck": 1.0,
       "streak": "W2",
@@ -147,6 +161,13 @@
         "name": "Jerry Jeudy",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 63.62,
+        "bye": 0.12,
+        "semis": 30.12,
+        "final": 9.4,
+        "champ": 3.35
+      },
       "luck": -0.33,
       "streak": "W1",
       "top": [
@@ -209,6 +230,13 @@
         "pts": 14.8,
         "name": "Dalton Schultz",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 27.8,
+        "bye": 0.0,
+        "semis": 10.93,
+        "final": 2.83,
+        "champ": 0.93
       },
       "luck": -0.22,
       "streak": "L1",
@@ -273,6 +301,13 @@
         "name": "Jakobi Meyers",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 93.08,
+        "semis": 97.83,
+        "final": 64.9,
+        "champ": 33.9
+      },
       "luck": 0.44,
       "streak": "W5",
       "top": [
@@ -332,6 +367,13 @@
       "bench": 101.78,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 48.5,
+        "bye": 0.03,
+        "semis": 22.45,
+        "final": 7.62,
+        "champ": 2.8
+      },
       "luck": 0.67,
       "streak": "W1",
       "top": [
@@ -394,6 +436,13 @@
         "pts": 17.3,
         "name": "Kimani Vidal",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 26.38,
+        "bye": 0.0,
+        "semis": 11.82,
+        "final": 4.2,
+        "champ": 1.55
       },
       "luck": -1.56,
       "streak": "L2",
@@ -458,6 +507,13 @@
         "name": "Parker Washington",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 2.38,
+        "bye": 0.0,
+        "semis": 0.8,
+        "final": 0.3,
+        "champ": 0.12
+      },
       "luck": 1.0,
       "streak": "L1",
       "top": [
@@ -521,6 +577,13 @@
         "name": "Aaron Jones",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 68.9,
+        "semis": 91.25,
+        "final": 61.65,
+        "champ": 38.3
+      },
       "luck": -0.89,
       "streak": "L2",
       "top": [
@@ -583,6 +646,13 @@
         "pts": 26.9,
         "name": "Matthew Stafford",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 36.8,
+        "semis": 72.72,
+        "final": 29.68,
+        "champ": 12.72
       },
       "luck": 1.44,
       "streak": "W1",

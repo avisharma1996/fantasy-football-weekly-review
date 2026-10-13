@@ -25,6 +25,13 @@
         "name": "Zach Charbonnet",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 36.9,
+        "bye": 1.48,
+        "semis": 16.68,
+        "final": 6.05,
+        "champ": 2.12
+      },
       "luck": -1.11,
       "streak": "L1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 18.2,
         "name": "Kareem Hunt",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 77.72,
+        "bye": 12.5,
+        "semis": 42.83,
+        "final": 18.07,
+        "champ": 8.4
       },
       "luck": -0.11,
       "streak": "W1",
@@ -151,6 +165,13 @@
         "name": "Bo Nix",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 42.95,
+        "bye": 2.25,
+        "semis": 18.9,
+        "final": 7.45,
+        "champ": 3.05
+      },
       "luck": -0.11,
       "streak": "L1",
       "top": [
@@ -210,6 +231,13 @@
       "bench": 112.0,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 3.33,
+        "bye": 0.03,
+        "semis": 1.05,
+        "final": 0.38,
+        "champ": 0.12
+      },
       "luck": 0.67,
       "streak": "W1",
       "top": [
@@ -272,6 +300,13 @@
         "pts": 20.0,
         "name": "Jaylen Waddle",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 94.97,
+        "bye": 39.05,
+        "semis": 71.75,
+        "final": 37.92,
+        "champ": 19.73
       },
       "luck": -0.11,
       "streak": "L1",
@@ -336,6 +371,13 @@
         "name": "RJ Harvey",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 82.08,
+        "bye": 15.35,
+        "semis": 49.45,
+        "final": 23.23,
+        "champ": 10.68
+      },
       "luck": 1.44,
       "streak": "W3",
       "top": [
@@ -398,6 +440,13 @@
         "pts": 20.12,
         "name": "Jared Goff",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 44.55,
+        "bye": 2.58,
+        "semis": 21.95,
+        "final": 9.85,
+        "champ": 4.3
       },
       "luck": -1.33,
       "streak": "L4",
@@ -462,6 +511,13 @@
         "name": "Jacory Croskey-Merritt",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 20.85,
+        "bye": 0.57,
+        "semis": 9.5,
+        "final": 3.9,
+        "champ": 1.32
+      },
       "luck": 0.11,
       "streak": "L2",
       "top": [
@@ -525,6 +581,13 @@
         "name": "Stefon Diggs",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 98.08,
+        "bye": 61.17,
+        "semis": 84.88,
+        "final": 51.12,
+        "champ": 31.27
+      },
       "luck": -0.33,
       "streak": "W1",
       "top": [
@@ -584,6 +647,13 @@
       "bench": 100.1,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 98.58,
+        "bye": 65.03,
+        "semis": 83.03,
+        "final": 42.02,
+        "champ": 19.0
+      },
       "luck": 0.89,
       "streak": "W3",
       "top": [

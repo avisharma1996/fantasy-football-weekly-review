@@ -25,6 +25,13 @@
         "name": "Tank Dell",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 91.08,
+        "bye": 11.12,
+        "semis": 52.75,
+        "final": 23.45,
+        "champ": 10.32
+      },
       "luck": -1.44,
       "streak": "W1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 14.5,
         "name": "Jakobi Meyers",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 1.93,
+        "bye": 0.0,
+        "semis": 0.82,
+        "final": 0.4,
+        "champ": 0.17
       },
       "luck": -2.67,
       "streak": "L1",
@@ -151,6 +165,13 @@
         "name": "Cedric Tillman",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 85.12,
+        "bye": 4.92,
+        "semis": 43.9,
+        "final": 19.07,
+        "champ": 8.28
+      },
       "luck": 3.22,
       "streak": "L1",
       "top": [
@@ -210,6 +231,13 @@
       "bench": 114.4,
       "bench_week": 0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
+      },
       "luck": 0.0,
       "streak": "L4",
       "top": [
@@ -272,6 +300,13 @@
         "pts": 13.8,
         "name": "Jayden Reed",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 99.97,
+        "bye": 96.92,
+        "semis": 98.97,
+        "final": 63.52,
+        "champ": 39.42
       },
       "luck": -1.0,
       "streak": "W3",
@@ -336,6 +371,13 @@
         "name": "Austin Ekeler",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 22.98,
+        "bye": 0.15,
+        "semis": 9.65,
+        "final": 3.85,
+        "champ": 1.65
+      },
       "luck": 0.44,
       "streak": "L1",
       "top": [
@@ -395,6 +437,13 @@
       "bench": 85.26,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 98.75,
+        "bye": 45.08,
+        "semis": 72.1,
+        "final": 32.73,
+        "champ": 13.5
+      },
       "luck": 1.89,
       "streak": "W2",
       "top": [
@@ -457,6 +506,13 @@
         "pts": 2.2,
         "name": "Tank Bigsby",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 96.6,
+        "bye": 26.23,
+        "semis": 64.08,
+        "final": 32.1,
+        "champ": 15.47
       },
       "luck": -0.22,
       "streak": "W1",
@@ -521,6 +577,13 @@
         "name": "Joe Burrow",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 93.2,
+        "bye": 15.57,
+        "semis": 53.1,
+        "final": 23.1,
+        "champ": 10.45
+      },
       "luck": 0.67,
       "streak": "W1",
       "top": [
@@ -583,6 +646,13 @@
         "pts": 13.6,
         "name": "Jordan Addison",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 10.38,
+        "bye": 0.0,
+        "semis": 4.62,
+        "final": 1.77,
+        "champ": 0.72
       },
       "luck": -0.89,
       "streak": "L2",

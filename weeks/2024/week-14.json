@@ -21,6 +21,13 @@
       "bench": 208.3,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 0.0,
+        "semis": 60.38,
+        "final": 30.5,
+        "champ": 13.1
+      },
       "luck": -1.78,
       "streak": "W3",
       "top": [
@@ -83,6 +90,13 @@
         "pts": 18.2,
         "name": "Rome Odunze",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
       },
       "luck": -1.56,
       "streak": "W4",
@@ -147,6 +161,13 @@
         "name": "Russell Wilson",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
+      },
       "luck": 2.89,
       "streak": "L6",
       "top": [
@@ -209,6 +230,13 @@
         "pts": 4.9,
         "name": "Xavier Legette",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
       },
       "luck": 0.56,
       "streak": "W4",
@@ -273,6 +301,13 @@
         "name": "Adam Thielen",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 100.0,
+        "semis": 100.0,
+        "final": 69.53,
+        "champ": 45.9
+      },
       "luck": -1.56,
       "streak": "L1",
       "top": [
@@ -335,6 +370,13 @@
         "pts": 16.4,
         "name": "Jaylen Waddle",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 0.0,
+        "semis": 39.62,
+        "final": 16.35,
+        "champ": 5.22
       },
       "luck": -0.44,
       "streak": "W1",
@@ -399,6 +441,13 @@
         "name": "Sam Darnold",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 100.0,
+        "semis": 100.0,
+        "final": 53.15,
+        "champ": 21.7
+      },
       "luck": 0.56,
       "streak": "L1",
       "top": [
@@ -462,6 +511,13 @@
         "name": "Rachaad White",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 0.0,
+        "semis": 51.08,
+        "final": 15.6,
+        "champ": 7.3
+      },
       "luck": 1.0,
       "streak": "W1",
       "top": [
@@ -521,6 +577,13 @@
       "bench": 214.52,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 0.0,
+        "semis": 48.92,
+        "final": 14.88,
+        "champ": 6.78
+      },
       "luck": 1.44,
       "streak": "L2",
       "top": [
@@ -583,6 +646,13 @@
         "pts": 14.9,
         "name": "Jerry Jeudy",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
       },
       "luck": -1.11,
       "streak": "L4",

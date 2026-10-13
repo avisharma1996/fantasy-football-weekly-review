@@ -25,6 +25,13 @@
         "name": "Calvin Ridley",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 56.98,
+        "bye": 5.03,
+        "semis": 28.8,
+        "final": 10.93,
+        "champ": 5.15
+      },
       "luck": -0.11,
       "streak": "L1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 7.9,
         "name": "Najee Harris",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 31.7,
+        "bye": 1.35,
+        "semis": 15.2,
+        "final": 5.55,
+        "champ": 2.33
       },
       "luck": -0.56,
       "streak": "L2",
@@ -151,6 +165,13 @@
         "name": "Dallas Goedert",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 31.85,
+        "bye": 1.15,
+        "semis": 12.8,
+        "final": 4.2,
+        "champ": 1.45
+      },
       "luck": 0.44,
       "streak": "L1",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 17.7,
         "name": "Jaxon Smith-Njigba",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 17.68,
+        "bye": 0.57,
+        "semis": 7.47,
+        "final": 2.08,
+        "champ": 0.65
       },
       "luck": 0.56,
       "streak": "W1",
@@ -277,6 +305,13 @@
         "name": "J.K. Dobbins",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 99.28,
+        "bye": 80.83,
+        "semis": 92.67,
+        "final": 58.73,
+        "champ": 33.75
+      },
       "luck": 0.33,
       "streak": "W2",
       "top": [
@@ -340,6 +375,13 @@
         "name": "Chris Godwin",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 76.83,
+        "bye": 11.93,
+        "semis": 46.65,
+        "final": 19.93,
+        "champ": 9.15
+      },
       "luck": 0.0,
       "streak": "L1",
       "top": [
@@ -399,6 +441,13 @@
       "bench": 32.5,
       "bench_week": 0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 98.55,
+        "bye": 67.62,
+        "semis": 86.53,
+        "final": 50.77,
+        "champ": 25.73
+      },
       "luck": 0.33,
       "streak": "W2",
       "top": [
@@ -458,6 +507,13 @@
       "bench": 18.0,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 89.35,
+        "bye": 24.4,
+        "semis": 63.23,
+        "final": 31.32,
+        "champ": 15.93
+      },
       "luck": -0.33,
       "streak": "W1",
       "top": [
@@ -521,6 +577,13 @@
         "name": "Gus Edwards",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 55.65,
+        "bye": 4.45,
+        "semis": 26.75,
+        "final": 9.82,
+        "champ": 3.5
+      },
       "luck": 0.0,
       "streak": "W1",
       "top": [
@@ -583,6 +646,13 @@
         "pts": 14.3,
         "name": "Brock Bowers",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 42.15,
+        "bye": 2.67,
+        "semis": 19.9,
+        "final": 6.67,
+        "champ": 2.38
       },
       "luck": -0.67,
       "streak": "L2",

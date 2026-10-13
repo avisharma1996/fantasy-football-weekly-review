@@ -2,6 +2,14 @@
 
 A weekly power rankings site for a Sleeper league, live at https://redvinesfantasyfootball.com. Team names, records, and each team's top 3 performers come from Sleeper automatically; the ranking order (and optional blurbs) are the commissioner's.
 
+## What's on the site
+
+Everything except the ranking order, blurbs and pictures is pulled from Sleeper automatically.
+
+- **Weekly rankings:** record, PF, streak, all-play record, luck, bench points left, playoff and title odds, and top performers (season and week) for each team. Each week also has a playoff odds table, a rankings-over-time chart, and weekly and season awards.
+- **League pages (per season):** FAAB Tracker (budget, bid log and waiver ROI), Trade Grades and Draft Report Card.
+- **League History (all seasons):** Record Book (champions, all-time standings, records) and Head-to-Head.
+
 ## Every week
 
 1. `py ffr.py new 5` pulls data through week 5 and creates `weeks/2026/week-05.txt`.

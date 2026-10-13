@@ -25,6 +25,13 @@
         "name": "Alec Pierce",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 42.15,
+        "bye": 0.0,
+        "semis": 21.48,
+        "final": 7.78,
+        "champ": 3.05
+      },
       "luck": -1.44,
       "streak": "W1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 24.26,
         "name": "Marcus Mariota",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 0.0,
+        "semis": 45.77,
+        "final": 13.3,
+        "champ": 4.7
       },
       "luck": 1.56,
       "streak": "L1",
@@ -151,6 +165,13 @@
         "name": "Zach Ertz",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 62.17,
+        "bye": 0.0,
+        "semis": 30.62,
+        "final": 9.78,
+        "champ": 3.83
+      },
       "luck": -0.11,
       "streak": "W2",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 9.9,
         "name": "Marvin Harrison",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 25.6,
+        "bye": 0.0,
+        "semis": 12.7,
+        "final": 3.8,
+        "champ": 1.07
       },
       "luck": -0.33,
       "streak": "W2",
@@ -277,6 +305,13 @@
         "name": "Jakobi Meyers",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 100.0,
+        "semis": 100.0,
+        "final": 66.55,
+        "champ": 35.85
+      },
       "luck": 0.11,
       "streak": "L1",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 19.1,
         "name": "Terry McLaurin",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 76.83,
+        "bye": 0.0,
+        "semis": 42.65,
+        "final": 14.68,
+        "champ": 6.22
       },
       "luck": 1.67,
       "streak": "W4",
@@ -403,6 +445,13 @@
         "name": "Kareem Hunt",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
+      },
       "luck": -2.44,
       "streak": "L5",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 11.9,
         "name": "Jauan Jennings",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
       },
       "luck": 1.0,
       "streak": "L4",
@@ -529,6 +585,13 @@
         "name": "Michael Wilson",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 100.0,
+        "semis": 100.0,
+        "final": 69.1,
+        "champ": 39.6
+      },
       "luck": -0.78,
       "streak": "W1",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 14.46,
         "name": "Baker Mayfield",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 93.25,
+        "bye": 0.0,
+        "semis": 46.77,
+        "final": 15.03,
+        "champ": 5.67
       },
       "luck": 0.78,
       "streak": "L3",

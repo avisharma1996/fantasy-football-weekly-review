@@ -25,6 +25,13 @@
         "name": "Isaiah Davis",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 33.1,
+        "bye": 0.1,
+        "semis": 14.57,
+        "final": 4.6,
+        "champ": 1.48
+      },
       "luck": -1.33,
       "streak": "L2",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 17.8,
         "name": "Khalil Shakir",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 72.65,
+        "bye": 0.72,
+        "semis": 34.58,
+        "final": 9.75,
+        "champ": 3.75
       },
       "luck": -0.11,
       "streak": "L2",
@@ -151,6 +165,13 @@
         "name": "Drake Maye",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 59.77,
+        "bye": 0.28,
+        "semis": 27.62,
+        "final": 9.22,
+        "champ": 2.83
+      },
       "luck": -0.44,
       "streak": "L1",
       "top": [
@@ -210,6 +231,13 @@
       "bench": 116.5,
       "bench_week": 0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 27.57,
+        "bye": 0.03,
+        "semis": 11.05,
+        "final": 2.8,
+        "champ": 0.68
+      },
       "luck": -0.33,
       "streak": "L1",
       "top": [
@@ -272,6 +300,13 @@
         "pts": 5.8,
         "name": "Tony Pollard",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 66.85,
+        "semis": 88.3,
+        "final": 51.15,
+        "champ": 22.7
       },
       "luck": 0.44,
       "streak": "W3",
@@ -336,6 +371,13 @@
         "name": "RJ Harvey",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 35.35,
+        "bye": 0.03,
+        "semis": 15.5,
+        "final": 4.47,
+        "champ": 1.6
+      },
       "luck": 0.78,
       "streak": "L3",
       "top": [
@@ -398,6 +440,13 @@
         "pts": 28.3,
         "name": "Jordan Love",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 68.72,
+        "bye": 0.35,
+        "semis": 34.92,
+        "final": 11.3,
+        "champ": 4.42
       },
       "luck": -0.89,
       "streak": "W2",
@@ -462,6 +511,13 @@
         "name": "Kayshon Boutte",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 3.2,
+        "bye": 0.0,
+        "semis": 1.07,
+        "final": 0.25,
+        "champ": 0.07
+      },
       "luck": 0.67,
       "streak": "W1",
       "top": [
@@ -525,6 +581,13 @@
         "name": "Zay Flowers",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 92.7,
+        "semis": 98.28,
+        "final": 72.47,
+        "champ": 49.75
+      },
       "luck": -0.11,
       "streak": "W4",
       "top": [
@@ -587,6 +650,13 @@
         "pts": 7.2,
         "name": "Elic Ayomanor",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 99.62,
+        "bye": 38.95,
+        "semis": 74.1,
+        "final": 33.98,
+        "champ": 12.72
       },
       "luck": 1.33,
       "streak": "W1",

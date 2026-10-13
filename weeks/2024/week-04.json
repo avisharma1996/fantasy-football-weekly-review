@@ -25,6 +25,13 @@
         "name": "Ladd McConkey",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 57.3,
+        "bye": 4.65,
+        "semis": 27.7,
+        "final": 11.38,
+        "champ": 4.9
+      },
       "luck": -0.22,
       "streak": "L1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 14.8,
         "name": "Xavier Worthy",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 17.65,
+        "bye": 0.25,
+        "semis": 7.85,
+        "final": 3.33,
+        "champ": 1.25
       },
       "luck": -1.44,
       "streak": "L4",
@@ -151,6 +165,13 @@
         "name": "Christian Kirk",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 88.83,
+        "bye": 22.55,
+        "semis": 57.15,
+        "final": 27.38,
+        "champ": 14.07
+      },
       "luck": 1.0,
       "streak": "W2",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 9.1,
         "name": "Jaxon Smith-Njigba",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 1.02,
+        "bye": 0.0,
+        "semis": 0.28,
+        "final": 0.12,
+        "champ": 0.03
       },
       "luck": 0.44,
       "streak": "L2",
@@ -277,6 +305,13 @@
         "name": "Brian Thomas",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 95.58,
+        "bye": 45.55,
+        "semis": 76.38,
+        "final": 41.75,
+        "champ": 22.55
+      },
       "luck": -0.78,
       "streak": "L2",
       "top": [
@@ -336,6 +371,13 @@
       "bench": 62.2,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 96.47,
+        "bye": 46.4,
+        "semis": 74.5,
+        "final": 38.8,
+        "champ": 20.0
+      },
       "luck": 0.44,
       "streak": "W2",
       "top": [
@@ -398,6 +440,13 @@
         "pts": 21.5,
         "name": "Sam Darnold",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 82.15,
+        "bye": 16.52,
+        "semis": 45.85,
+        "final": 18.52,
+        "champ": 7.83
       },
       "luck": 0.78,
       "streak": "W1",
@@ -462,6 +511,13 @@
         "name": "Rico Dowdle",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 98.33,
+        "bye": 61.45,
+        "semis": 84.1,
+        "final": 49.12,
+        "champ": 26.35
+      },
       "luck": 0.11,
       "streak": "W3",
       "top": [
@@ -525,6 +581,13 @@
         "name": "Joe Burrow",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 25.88,
+        "bye": 1.25,
+        "semis": 10.7,
+        "final": 3.88,
+        "champ": 1.32
+      },
       "luck": 0.22,
       "streak": "L1",
       "top": [
@@ -587,6 +650,13 @@
         "pts": 31.16,
         "name": "Jordan Love",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 36.8,
+        "bye": 1.38,
+        "semis": 15.5,
+        "final": 5.72,
+        "champ": 1.7
       },
       "luck": -0.56,
       "streak": "W1",

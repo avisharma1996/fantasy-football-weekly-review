@@ -25,6 +25,13 @@
         "name": "Tank Dell",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 91.6,
+        "bye": 32.05,
+        "semis": 66.33,
+        "final": 32.58,
+        "champ": 15.55
+      },
       "luck": -0.11,
       "streak": "W1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 20.4,
         "name": "Rome Odunze",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 41.42,
+        "bye": 1.9,
+        "semis": 19.75,
+        "final": 7.7,
+        "champ": 3.1
       },
       "luck": -1.11,
       "streak": "L3",
@@ -151,6 +165,13 @@
         "name": "Dallas Goedert",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 43.73,
+        "bye": 2.45,
+        "semis": 19.07,
+        "final": 6.35,
+        "champ": 2.58
+      },
       "luck": 1.0,
       "streak": "W1",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 10.0,
         "name": "Pittsburgh Steelers D/ST",
         "pos": "DEF"
+      },
+      "odds": {
+        "playoffs": 6.3,
+        "bye": 0.07,
+        "semis": 2.2,
+        "final": 0.6,
+        "champ": 0.12
       },
       "luck": 0.44,
       "streak": "L1",
@@ -277,6 +305,13 @@
         "name": "Tyjae Spears",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 99.62,
+        "bye": 84.4,
+        "semis": 94.6,
+        "final": 60.75,
+        "champ": 37.95
+      },
       "luck": -0.56,
       "streak": "L1",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 28.06,
         "name": "Jayden Daniels",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 89.12,
+        "bye": 23.4,
+        "semis": 58.85,
+        "final": 26.98,
+        "champ": 12.1
       },
       "luck": 0.33,
       "streak": "W1",
@@ -403,6 +445,13 @@
         "name": "Derek Carr",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 71.35,
+        "bye": 8.82,
+        "semis": 35.83,
+        "final": 14.6,
+        "champ": 5.4
+      },
       "luck": 0.33,
       "streak": "L1",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 22.2,
         "name": "Diontae Johnson",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 95.28,
+        "bye": 43.88,
+        "semis": 75.45,
+        "final": 40.15,
+        "champ": 19.43
       },
       "luck": -0.11,
       "streak": "W2",
@@ -529,6 +585,13 @@
         "name": "Joe Burrow",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 42.8,
+        "bye": 2.55,
+        "semis": 19.43,
+        "final": 7.05,
+        "champ": 2.7
+      },
       "luck": 0.67,
       "streak": "W2",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 25.4,
         "name": "Chuba Hubbard",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 18.77,
+        "bye": 0.47,
+        "semis": 8.5,
+        "final": 3.25,
+        "champ": 1.07
       },
       "luck": -0.89,
       "streak": "L3",

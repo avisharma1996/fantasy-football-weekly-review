@@ -6,8 +6,8 @@
 <meta property="og:site_name" content="Red Vines Fantasy Football">
 <meta property="og:description" content="2026 Week 4 power rankings">
 <style>
-:root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;color-scheme:dark}}
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;--hl:#2a78d6;--trend:#c4c1b9;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .layout{display:flex;max-width:1180px;margin:0 auto}
@@ -65,7 +65,8 @@ th,td{padding:10px 14px;text-align:right;white-space:nowrap;border-bottom:1px so
 tbody tr:last-child td{border-bottom:0}
 th{color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em}
 .tn{text-align:left}
-.who{display:flex;align-items:center;gap:10px;font-weight:600}.who .av{width:28px;height:28px;font-size:.75rem}
+td.wrap{white-space:normal;min-width:180px}
+.who{display:inline-flex;vertical-align:middle;align-items:center;gap:10px;font-weight:600}.who .av{width:28px;height:28px;font-size:.75rem}
 .left{display:flex;align-items:center;gap:10px;justify-content:flex-end}
 .bar{width:90px;height:8px;border-radius:99px;background:var(--chip);overflow:hidden}
 .bar span{display:block;height:100%;background:var(--up);border-radius:99px}
@@ -100,10 +101,43 @@ section+section .sec,.ranks+section .sec{margin-top:36px}
 .h2h .even{color:var(--muted)}
 .h2h .none,.h2h .self{color:var(--line)}
 .h2h .self{background:var(--chip)}
+.hint{color:var(--muted);font-size:.85rem;margin:8px 0}
+.flag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-left:6px}
+.odds td.zero{color:var(--muted)}
+.gain{color:var(--muted);font-size:.85rem;margin-left:4px}
+.chart{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 8px}
+.bump{display:block;width:100%;height:auto;overflow:visible}
+.bump .ax{fill:var(--muted);font-size:12px}
+.bump .gl{stroke:var(--line);stroke-width:1}
+.bump .ln{fill:none;stroke:var(--trend);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.bump .hit{fill:none;stroke:transparent;stroke-width:14;pointer-events:stroke}
+.bump circle{fill:var(--trend);stroke:var(--card);stroke-width:2;opacity:0}
+.bump .nm{fill:var(--muted);font-size:13px}
+.bump .series{cursor:pointer;outline:none}
+.bump.has-on .series:not(.on){opacity:.3}
+.bump .series.on .ln{stroke:var(--hl);stroke-width:3}
+.bump .series.on circle{fill:var(--hl);opacity:1}
+.bump .series.on .nm{fill:var(--ink);font-weight:700}
+.tip{position:absolute;transform:translate(-50%,-100%);background:var(--ink);color:var(--bg);font-size:.8rem;padding:4px 8px;border-radius:6px;pointer-events:none;white-space:nowrap}
+.tview{margin-top:10px}.tview summary{cursor:pointer;color:var(--muted);font-size:.85rem}.tview .tbl{margin-top:8px}
+.deal{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.deal .when{color:var(--muted);font-size:.8rem;font-weight:600;margin-bottom:8px}
+.deal .sides{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.deal .side{border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.deal .side.lead{border-color:var(--up);box-shadow:inset 3px 0 0 var(--up)}
+.deal .side .lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin:8px 0 4px}
+.got{list-style:none;padding:0;margin:0;font-size:.9rem}
+.got li{display:flex;gap:8px;align-items:baseline;padding:2px 0}
+.got .pos{color:var(--muted);font-size:.7rem;font-weight:700;min-width:2.2em}
+.got .pp{margin-left:auto;font-variant-numeric:tabular-nums}
+.got .note{color:var(--muted)}
+.deal .tot{margin-top:8px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.deal .verdict{margin-top:10px;font-size:.92rem}
+.amt.up{color:var(--up)}.amt.down{color:var(--down)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 </style></head>
 <body><div class="layout">
-<aside class="seasons"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-05.html" class=cur>2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html">2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2026/faab.html">FAAB Tracker</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a></div></div></aside>
+<aside class="seasons"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-05.html" class=cur>2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html">2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2026/faab.html">FAAB Tracker</a><a href="../2026/trades.html">Trade Grades</a><a href="../2026/draft.html">Draft Report Card</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a></div></div></aside>
 <main class="wrap">
 <header><img class="logo" src="https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f" alt=""><div><div class="kicker">Red Vines · 2026 · Week 4</div><h1>Week 4 Power Rankings</h1></div></header>
 <nav><a href="../2026/week-01.html">Wk 1</a><a href="../2026/week-02.html">Wk 2</a><a href="../2026/week-03.html">Wk 3</a><a href="../2026/week-04.html" class=cur>Wk 4</a><a href="../2026/week-05.html">Wk 5</a></nav>
@@ -113,7 +147,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"><div><h2>Justin Beer Loyalist</h2>
         <div class="meta"><b>7-1</b> · 527.02 PF · W1</div>
-        <div class="meta">All-play 32-12 · Luck <span class="">+0.1</span> · 1.6 pts left on bench</div></div></div>
+        <div class="meta">All-play 32-12 · Luck <span class="">+0.1</span> · 1.6 pts left on bench · Playoffs 97% · Title 22%</div></div></div>
       <div class="blurb"><p>Justin Beer winning everywhere but on the Chargers it seems like</p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB1</span>Jahmyr Gibbs<span class="pp">105.0</span></li><li><span class="pos">WR6</span>Davante Adams<span class="pp">62.0</span></li><li><span class="pos">TE2</span>Trey McBride<span class="pp">52.7</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB10</span>Alvin Kamara<span class="pp">20.3</span></li><li><span class="pos">WR10</span>Malik Nabers<span class="pp">20.2</span></li><li><span class="pos">RB11</span>Quinshon Judkins<span class="pp">18.6</span></li></ul></div>
     </div>
@@ -123,7 +157,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><div><h2>Karans Sportsbook</h2>
         <div class="meta"><b>7-1</b> · 521.94 PF · W4</div>
-        <div class="meta">All-play 30-14 · Luck <span class="up">+1.3</span> · 17.8 pts left on bench</div></div></div>
+        <div class="meta">All-play 30-14 · Luck <span class="up">+1.3</span> · 17.8 pts left on bench · Playoffs 96% · Title 21%</div></div></div>
       <div class="blurb"><p>Karans Sportsbook putting the entire betting market on notice</p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB8</span>Chuba Hubbard<span class="pp">74.0</span></li><li><span class="pos">RB11</span>James Cook<span class="pp">63.5</span></li><li><span class="pos">WR7</span>Tetairoa McMillan<span class="pp">61.5</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR1</span>Tetairoa McMillan<span class="pp">38.2</span></li><li><span class="pos">RB7</span>Chuba Hubbard<span class="pp">25.4</span></li><li><span class="pos">QB6</span>Bryce Young<span class="pp">21.5</span></li></ul></div>
     </div>
@@ -133,7 +167,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><div><h2>Amver Alert🚨</h2>
         <div class="meta"><b>6-2</b> · 538.76 PF · L1</div>
-        <div class="meta">All-play 32-12 · Luck <span class="">+0.1</span> · 0.4 pts left on bench</div></div></div>
+        <div class="meta">All-play 32-12 · Luck <span class="">+0.1</span> · 0.4 pts left on bench · Playoffs 96% · Title 24%</div></div></div>
       <div class="blurb"><p>The dominance looks to be faltering</p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB1</span>Josh Allen<span class="pp">115.0</span></li><li><span class="pos">WR3</span>Amon-Ra St. Brown<span class="pp">75.8</span></li><li><span class="pos">RB10</span>Ashton Jeanty<span class="pp">64.4</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB4</span>Kyle Monangai<span class="pp">27.5</span></li><li><span class="pos">QB10</span>Josh Allen<span class="pp">19.5</span></li><li><span class="pos">RB15</span>Ashton Jeanty<span class="pp">15.6</span></li></ul></div>
     </div>
@@ -143,7 +177,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg" alt="" loading="lazy"><div><h2>Baltimore Avians</h2>
         <div class="meta"><b>5-3</b> · 505.84 PF · W2</div>
-        <div class="meta">All-play 27-17 · Luck <span class="up">+0.6</span> · 10.7 pts left on bench</div></div></div>
+        <div class="meta">All-play 27-17 · Luck <span class="up">+0.6</span> · 10.7 pts left on bench · Playoffs 82% · Title 12%</div></div></div>
       <div class="blurb"><p>One of the more shocking turnarounds of the season so far but most know this bird&#x27;s ascendant will come crashing down soon enough</p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB3</span>Bijan Robinson<span class="pp">98.4</span></li><li><span class="pos">QB10</span>Joe Burrow<span class="pp">79.6</span></li><li><span class="pos">RB12</span>D&#x27;Andre Swift<span class="pp">58.5</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR3</span>Nico Collins<span class="pp">27.3</span></li><li><span class="pos">RB5</span>Bijan Robinson<span class="pp">27.2</span></li><li><span class="pos">QB2</span>Joe Burrow<span class="pp">25.7</span></li></ul></div>
     </div>
@@ -153,7 +187,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/avatars/thumbs/d55d1f7075eda01948318de4af616075" alt="" loading="lazy"><div><h2>Shivxn</h2>
         <div class="meta"><b>4-4</b> · 500.66 PF · W1</div>
-        <div class="meta">All-play 24-20 · Luck <span class="up">+0.8</span> · 30.5 pts left on bench</div></div></div>
+        <div class="meta">All-play 24-20 · Luck <span class="up">+0.8</span> · 30.5 pts left on bench · Playoffs 68% · Title 9%</div></div></div>
       <div class="blurb"><p>The uncs continue to try their best but doesn&#x27;t seem like Shivxn is going anywhere anytime soon</p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB2</span>Kenneth Walker<span class="pp">104.1</span></li><li><span class="pos">WR4</span>Chris Olave<span class="pp">72.6</span></li><li><span class="pos">RB23</span>Bucky Irving<span class="pp">40.7</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB2</span>Kenneth Walker<span class="pp">30.4</span></li><li><span class="pos">WR5</span>Puka Nacua<span class="pp">23.2</span></li><li><span class="pos">QB5</span>C.J. Stroud<span class="pp">23.1</span></li></ul></div>
     </div>
@@ -163,7 +197,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/1e1f1094e8d4b98b25130a8d3c0cf063.jpg" alt="" loading="lazy"><div><h2>I’m Whipped by Bezos</h2>
         <div class="meta"><b>4-4</b> · 463.10 PF · W2</div>
-        <div class="meta">All-play 20-24 · Luck <span class="">+0.2</span> · 4.9 pts left on bench</div></div></div>
+        <div class="meta">All-play 20-24 · Luck <span class="">+0.2</span> · 4.9 pts left on bench · Playoffs 43% · Title 4%</div></div></div>
       <div class="blurb"><p>Looks like Jeff made some calls because this turnaround has come faster than Prime&#x27;s 2 hour shipping</p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR2</span>CeeDee Lamb<span class="pp">93.7</span></li><li><span class="pos">QB8</span>Dak Prescott<span class="pp">82.2</span></li><li><span class="pos">WR10</span>Garrett Wilson<span class="pp">51.0</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR2</span>CeeDee Lamb<span class="pp">32.8</span></li><li><span class="pos">WR8</span>Romeo Doubs<span class="pp">20.8</span></li><li><span class="pos">TE2</span>Sam LaPorta<span class="pp">18.4</span></li></ul></div>
     </div>
@@ -173,7 +207,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><div><h2>6 7</h2>
         <div class="meta"><b>4-4</b> · 465.88 PF · L2</div>
-        <div class="meta">All-play 22-22 · Luck <span class="down">-1.0</span> · 20.0 pts left on bench</div></div></div>
+        <div class="meta">All-play 22-22 · Luck <span class="down">-1.0</span> · 20.0 pts left on bench · Playoffs 46% · Title 4%</div></div></div>
       <div class="blurb"><p><img class="pic" src="../images/six-seven.gif" alt="" loading="lazy"></p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB2</span>Brock Purdy<span class="pp">101.5</span></li><li><span class="pos">RB4</span>Derrick Henry<span class="pp">87.3</span></li><li><span class="pos">RB9</span>Christian McCaffrey<span class="pp">66.0</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">QB9</span>Brock Purdy<span class="pp">19.6</span></li><li><span class="pos">RB17</span>Derrick Henry<span class="pp">14.9</span></li><li><span class="pos">RB19</span>Christian McCaffrey<span class="pp">14.5</span></li></ul></div>
     </div>
@@ -183,7 +217,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/avatars/thumbs/4fb394f49d806fbad75dd79ecc68f525" alt="" loading="lazy"><div><h2>NShah19</h2>
         <div class="meta"><b>3-5</b> · 457.28 PF · W2</div>
-        <div class="meta">All-play 20-24 · Luck <span class="">+0.2</span> · 13.1 pts left on bench</div></div></div>
+        <div class="meta">All-play 20-24 · Luck <span class="">+0.2</span> · 13.1 pts left on bench · Playoffs 27% · Title 2%</div></div></div>
       <div class="blurb"><p>Lamar letting down his team once again</p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB9</span>Lamar Jackson<span class="pp">80.1</span></li><li><span class="pos">RB6</span>Kyren Williams<span class="pp">79.2</span></li><li><span class="pos">WR12</span>Ja&#x27;Marr Chase<span class="pp">49.7</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB1</span>Kyren Williams<span class="pp">31.7</span></li><li><span class="pos">QB11</span>Lamar Jackson<span class="pp">18.9</span></li><li><span class="pos">RB13</span>Rhamondre Stevenson<span class="pp">16.9</span></li></ul></div>
     </div>
@@ -193,7 +227,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><div><h2>superdiddy</h2>
         <div class="meta"><b>3-5</b> · 424.20 PF · L3</div>
-        <div class="meta">All-play 16-28 · Luck <span class="">-0.5</span> · 12.3 pts left on bench</div></div></div>
+        <div class="meta">All-play 16-28 · Luck <span class="">-0.5</span> · 12.3 pts left on bench · Playoffs 12% · Title <1%</div></div></div>
       <div class="blurb"><p>Former champ not giving up just yet</p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB7</span>Javonte Williams<span class="pp">74.3</span></li><li><span class="pos">WR9</span>Zay Flowers<span class="pp">58.2</span></li><li><span class="pos">WR26</span>Justin Jefferson<span class="pp">38.4</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB3</span>Javonte Williams<span class="pp">28.8</span></li><li><span class="pos">WR6</span>Zay Flowers<span class="pp">21.8</span></li><li><span class="pos">WR11</span>Carnell Tate<span class="pp">17.0</span></li></ul></div>
     </div>
@@ -203,7 +237,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><div><h2>Braelon Allen</h2>
         <div class="meta"><b>3-5</b> · 446.28 PF · L2</div>
-        <div class="meta">All-play 20-24 · Luck <span class="down">-0.8</span> · 33.9 pts left on bench</div></div></div>
+        <div class="meta">All-play 20-24 · Luck <span class="down">-0.8</span> · 33.9 pts left on bench · Playoffs 22% · Title 1%</div></div></div>
       <div class="blurb"><p>Braelon Allen redemption arc 2026 Week 2-Week 2 will be remembered (not by many but it will be remembered)</p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB6</span>Patrick Mahomes<span class="pp">85.6</span></li><li><span class="pos">RB5</span>Jonathan Taylor<span class="pp">81.2</span></li><li><span class="pos">WR5</span>Christian Watson<span class="pp">67.1</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB9</span>Jonathan Taylor<span class="pp">22.2</span></li><li><span class="pos">QB13</span>Patrick Mahomes<span class="pp">17.0</span></li><li><span class="pos">TE9</span>Mark Andrews<span class="pp">11.2</span></li></ul></div>
     </div>
@@ -213,7 +247,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg" alt="" loading="lazy"><div><h2>Ankitty</h2>
         <div class="meta"><b>2-6</b> · 434.98 PF · L1</div>
-        <div class="meta">All-play 17-27 · Luck <span class="down">-0.6</span> · 28.2 pts left on bench</div></div></div>
+        <div class="meta">All-play 17-27 · Luck <span class="down">-0.6</span> · 28.2 pts left on bench · Playoffs 11% · Title <1%</div></div></div>
       <div class="blurb"><p><img class="pic" src="../images/jsn.jpg" alt="" loading="lazy"></p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR1</span>Jaxon Smith-Njigba<span class="pp">100.7</span></li><li><span class="pos">QB11</span>Jalen Hurts<span class="pp">70.0</span></li><li><span class="pos">RB19</span>Jeremiyah Love<span class="pp">43.4</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">TE3</span>Brock Bowers<span class="pp">17.6</span></li><li><span class="pos">QB20</span>Jalen Hurts<span class="pp">13.5</span></li><li><span class="pos">WR22</span>Rome Odunze<span class="pp">12.4</span></li></ul></div>
     </div>
@@ -223,10 +257,41 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><div><h2>yrkpapi</h2>
         <div class="meta"><b>0-8</b> · 344.34 PF · L4</div>
-        <div class="meta">All-play 4-40 · Luck <span class="">-0.4</span> · 13.4 pts left on bench</div></div></div>
+        <div class="meta">All-play 4-40 · Luck <span class="">-0.4</span> · 13.4 pts left on bench · Playoffs <1% · Title 0%</div></div></div>
       <div class="blurb"><p><img class="pic" src="../images/salute.png" alt="" loading="lazy"> <img class="pic" src="../images/salute.png" alt="" loading="lazy"> <img class="pic" src="../images/salute.png" alt="" loading="lazy"></p></div>
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB23</span>Justin Herbert<span class="pp">49.4</span></li><li><span class="pos">WR21</span>Parker Washington<span class="pp">43.1</span></li><li><span class="pos">TE6</span>Isaiah Likely<span class="pp">42.0</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB12</span>Ollie Gordon<span class="pp">17.0</span></li><li><span class="pos">QB27</span>Justin Herbert<span class="pp">11.6</span></li><li><span class="pos">TE13</span>Isaiah Likely<span class="pp">10.1</span></li></ul></div>
     </div>
-  </li></ol><section><h2 class="sec">Week 4 Awards</h2><div class="awards"><div class="award"><div class="lbl">Top score</div><div class="who">Karans Sportsbook</div><div class="val">174.56 pts</div></div><div class="award"><div class="lbl">Basement</div><div class="who">yrkpapi</div><div class="val">76.56 pts</div></div><div class="award"><div class="lbl">Biggest blowout</div><div class="who">Karans Sportsbook over yrkpapi</div><div class="val">by 98.00</div></div><div class="award"><div class="lbl">Closest game</div><div class="who">I’m Whipped by Bezos over superdiddy</div><div class="val">by 4.08</div></div><div class="award"><div class="lbl">Unluckiest loss</div><div class="who">Amver Alert🚨</div><div class="val">134.22 pts and still lost</div></div><div class="award"><div class="lbl">Luckiest win</div><div class="who">NShah19</div><div class="val">won with 114.78 pts</div></div><div class="award"><div class="lbl">Benchwarmer</div><div class="who">Braelon Allen</div><div class="val">33.9 pts left on the bench (Brian Robinson scored 25.2)</div></div></div></section><section><h2 class="sec">Season So Far</h2><div class="awards"><div class="award"><div class="lbl">Luckiest team</div><div class="who">Karans Sportsbook</div><div class="val">+1.3 wins vs. expected</div></div><div class="award"><div class="lbl">Unluckiest team</div><div class="who">6 7</div><div class="val">-1.0 wins vs. expected</div></div><div class="award"><div class="lbl">Lineup genius</div><div class="who">I’m Whipped by Bezos</div><div class="val">only 37.7 pts left on the bench</div></div><div class="award"><div class="lbl">Lineup disaster</div><div class="who">Baltimore Avians</div><div class="val">82.4 pts left on the bench</div></div></div></section>
+  </li></ol><section><h2 class="sec">Playoff Odds</h2><div class="tbl"><table class="odds">
+  <thead><tr><th class="tn">Team</th><th>Record</th><th>Champion</th><th>Final</th><th>Semifinals</th><th>Bye</th><th>Playoffs</th></tr></thead><tbody><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><span>Amver Alert🚨</span></span></td><td>6-2</td><td class="">24%</td><td class="">45%</td><td class="">78%</td><td class="">53%</td><td class="">96%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"><span>Justin Beer Loyalist</span></span></td><td>7-1</td><td class="">22%</td><td class="">43%</td><td class="">80%</td><td class="">59%</td><td class="">97%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><span>Karans Sportsbook</span></span></td><td>7-1</td><td class="">21%</td><td class="">40%</td><td class="">76%</td><td class="">50%</td><td class="">96%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg" alt="" loading="lazy"><span>Baltimore Avians</span></span></td><td>5-3</td><td class="">12%</td><td class="">26%</td><td class="">53%</td><td class="">19%</td><td class="">82%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/d55d1f7075eda01948318de4af616075" alt="" loading="lazy"><span>Shivxn</span></span></td><td>4-4</td><td class="">9%</td><td class="">18%</td><td class="">39%</td><td class="">10%</td><td class="">68%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><span>6 7</span></span></td><td>4-4</td><td class="">4%</td><td class="">9%</td><td class="">22%</td><td class="">4%</td><td class="">46%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/1e1f1094e8d4b98b25130a8d3c0cf063.jpg" alt="" loading="lazy"><span>I’m Whipped by Bezos</span></span></td><td>4-4</td><td class="">4%</td><td class="">8%</td><td class="">20%</td><td class="">3%</td><td class="">43%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/4fb394f49d806fbad75dd79ecc68f525" alt="" loading="lazy"><span>NShah19</span></span></td><td>3-5</td><td class="">2%</td><td class="">5%</td><td class="">12%</td><td class="">1%</td><td class="">27%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><span>Braelon Allen</span></span></td><td>3-5</td><td class="">1%</td><td class="">4%</td><td class="">10%</td><td class=""><1%</td><td class="">22%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg" alt="" loading="lazy"><span>Ankitty</span></span></td><td>2-6</td><td class=""><1%</td><td class="">1%</td><td class="">4%</td><td class=""><1%</td><td class="">11%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><span>superdiddy</span></span></td><td>3-5</td><td class=""><1%</td><td class="">1%</td><td class="">4%</td><td class=""><1%</td><td class="">12%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi</span></span></td><td>0-8</td><td class="zero">0%</td><td class="zero">0%</td><td class=""><1%</td><td class="zero">0%</td><td class=""><1%</td></tr></tbody></table></div>
+<p class="hint">Chance of reaching each round, from 4,000 simulations of the rest of the regular season and the playoffs.
+Each team's future scores are drawn around its scoring average so far.</p></section><section class="trend"><h2 class="sec">Rankings Over Time</h2>
+<p class="hint">Hover or tap a team to follow its line.</p>
+<div class="chart"><svg class="bump" viewBox="0 0 960 392" role="img" aria-label="Power ranking of each team by week"><text class="ax" x="30" y="22" text-anchor="end">1</text><text class="ax" x="30" y="52" text-anchor="end">2</text><text class="ax" x="30" y="82" text-anchor="end">3</text><text class="ax" x="30" y="112" text-anchor="end">4</text><text class="ax" x="30" y="142" text-anchor="end">5</text><text class="ax" x="30" y="172" text-anchor="end">6</text><text class="ax" x="30" y="202" text-anchor="end">7</text><text class="ax" x="30" y="232" text-anchor="end">8</text><text class="ax" x="30" y="262" text-anchor="end">9</text><text class="ax" x="30" y="292" text-anchor="end">10</text><text class="ax" x="30" y="322" text-anchor="end">11</text><text class="ax" x="30" y="352" text-anchor="end">12</text><line class="gl" x1="44.0" x2="44.0" y1="10" y2="356"/><text class="ax" x="44.0" y="378" text-anchor="middle">Wk 1</text><line class="gl" x1="279.3" x2="279.3" y1="10" y2="356"/><text class="ax" x="279.3" y="378" text-anchor="middle">Wk 2</text><line class="gl" x1="514.7" x2="514.7" y1="10" y2="356"/><text class="ax" x="514.7" y="378" text-anchor="middle">Wk 3</text><line class="gl" x1="750.0" x2="750.0" y1="10" y2="356"/><text class="ax" x="750.0" y="378" text-anchor="middle">Wk 4</text><g class="series" tabindex="0"><polyline class="hit" points="44.0,198 279.3,228 514.7,168 750.0,108"/><polyline class="ln" points="44.0,198 279.3,228 514.7,168 750.0,108"/><circle cx="44.0" cy="198" r="4" data-tip="Baltimore Avians · Wk 1: #7"/><circle cx="279.3" cy="228" r="4" data-tip="Baltimore Avians · Wk 2: #8"/><circle cx="514.7" cy="168" r="4" data-tip="Baltimore Avians · Wk 3: #6"/><circle cx="750.0" cy="108" r="4" data-tip="Baltimore Avians · Wk 4: #4"/><text class="nm" x="762.0" y="112">Baltimore Avians</text></g><g class="series" tabindex="0"><polyline class="hit" points="44.0,258 279.3,168 514.7,78 750.0,48"/><polyline class="ln" points="44.0,258 279.3,168 514.7,78 750.0,48"/><circle cx="44.0" cy="258" r="4" data-tip="Karans Sportsbook · Wk 1: #9"/><circle cx="279.3" cy="168" r="4" data-tip="Karans Sportsbook · Wk 2: #6"/><circle cx="514.7" cy="78" r="4" data-tip="Karans Sportsbook · Wk 3: #3"/><circle cx="750.0" cy="48" r="4" data-tip="Karans Sportsbook · Wk 4: #2"/><text class="nm" x="762.0" y="52">Karans Sportsbook</text></g><g class="series" tabindex="0"><polyline class="hit" points="44.0,318 279.3,318 514.7,228 750.0,318"/><polyline class="ln" points="44.0,318 279.3,318 514.7,228 750.0,318"/><circle cx="44.0" cy="318" r="4" data-tip="Ankitty · Wk 1: #11"/><circle cx="279.3" cy="318" r="4" data-tip="Ankitty · Wk 2: #11"/><circle cx="514.7" cy="228" r="4" data-tip="Ankitty · Wk 3: #8"/><circle cx="750.0" cy="318" r="4" data-tip="Ankitty · Wk 4: #11"/><text class="nm" x="762.0" y="322">Ankitty</text></g><g class="series" tabindex="0"><polyline class="hit" points="44.0,168 279.3,78 514.7,198 750.0,288"/><polyline class="ln" points="44.0,168 279.3,78 514.7,198 750.0,288"/><circle cx="44.0" cy="168" r="4" data-tip="Braelon Allen · Wk 1: #6"/><circle cx="279.3" cy="78" r="4" data-tip="Braelon Allen · Wk 2: #3"/><circle cx="514.7" cy="198" r="4" data-tip="Braelon Allen · Wk 3: #7"/><circle cx="750.0" cy="288" r="4" data-tip="Braelon Allen · Wk 4: #10"/><text class="nm" x="762.0" y="292">Braelon Allen</text></g><g class="series" tabindex="0"><polyline class="hit" points="44.0,18 279.3,18 514.7,18 750.0,78"/><polyline class="ln" points="44.0,18 279.3,18 514.7,18 750.0,78"/><circle cx="44.0" cy="18" r="4" data-tip="Amver Alert🚨 · Wk 1: #1"/><circle cx="279.3" cy="18" r="4" data-tip="Amver Alert🚨 · Wk 2: #1"/><circle cx="514.7" cy="18" r="4" data-tip="Amver Alert🚨 · Wk 3: #1"/><circle cx="750.0" cy="78" r="4" data-tip="Amver Alert🚨 · Wk 4: #3"/><text class="nm" x="762.0" y="82">Amver Alert🚨</text></g><g class="series" tabindex="0"><polyline class="hit" points="44.0,138 279.3,138 514.7,108 750.0,198"/><polyline class="ln" points="44.0,138 279.3,138 514.7,108 750.0,198"/><circle cx="44.0" cy="138" r="4" data-tip="6 7 · Wk 1: #5"/><circle cx="279.3" cy="138" r="4" data-tip="6 7 · Wk 2: #5"/><circle cx="514.7" cy="108" r="4" data-tip="6 7 · Wk 3: #4"/><circle cx="750.0" cy="198" r="4" data-tip="6 7 · Wk 4: #7"/><text class="nm" x="762.0" y="202">6 7</text></g><g class="series" tabindex="0"><polyline class="hit" points="44.0,288 279.3,348 514.7,348 750.0,348"/><polyline class="ln" points="44.0,288 279.3,348 514.7,348 750.0,348"/><circle cx="44.0" cy="288" r="4" data-tip="yrkpapi · Wk 1: #10"/><circle cx="279.3" cy="348" r="4" data-tip="yrkpapi · Wk 2: #12"/><circle cx="514.7" cy="348" r="4" data-tip="yrkpapi · Wk 3: #12"/><circle cx="750.0" cy="348" r="4" data-tip="yrkpapi · Wk 4: #12"/><text class="nm" x="762.0" y="352">yrkpapi</text></g><g class="series" tabindex="0"><polyline class="hit" points="44.0,348 279.3,198 514.7,288 750.0,168"/><polyline class="ln" points="44.0,348 279.3,198 514.7,288 750.0,168"/><circle cx="44.0" cy="348" r="4" data-tip="I’m Whipped by Bezos · Wk 1: #12"/><circle cx="279.3" cy="198" r="4" data-tip="I’m Whipped by Bezos · Wk 2: #7"/><circle cx="514.7" cy="288" r="4" data-tip="I’m Whipped by Bezos · Wk 3: #10"/><circle cx="750.0" cy="168" r="4" data-tip="I’m Whipped by Bezos · Wk 4: #6"/><text class="nm" x="762.0" y="172">I’m Whipped by Bezos</text></g><g class="series" tabindex="0"><polyline class="hit" points="44.0,108 279.3,288 514.7,318 750.0,258"/><polyline class="ln" points="44.0,108 279.3,288 514.7,318 750.0,258"/><circle cx="44.0" cy="108" r="4" data-tip="superdiddy · Wk 1: #4"/><circle cx="279.3" cy="288" r="4" data-tip="superdiddy · Wk 2: #10"/><circle cx="514.7" cy="318" r="4" data-tip="superdiddy · Wk 3: #11"/><circle cx="750.0" cy="258" r="4" data-tip="superdiddy · Wk 4: #9"/><text class="nm" x="762.0" y="262">superdiddy</text></g><g class="series" tabindex="0"><polyline class="hit" points="44.0,78 279.3,48 514.7,48 750.0,18"/><polyline class="ln" points="44.0,78 279.3,48 514.7,48 750.0,18"/><circle cx="44.0" cy="78" r="4" data-tip="Justin Beer Loyalist · Wk 1: #3"/><circle cx="279.3" cy="48" r="4" data-tip="Justin Beer Loyalist · Wk 2: #2"/><circle cx="514.7" cy="48" r="4" data-tip="Justin Beer Loyalist · Wk 3: #2"/><circle cx="750.0" cy="18" r="4" data-tip="Justin Beer Loyalist · Wk 4: #1"/><text class="nm" x="762.0" y="22">Justin Beer Loyalist</text></g><g class="series" tabindex="0"><polyline class="hit" points="44.0,228 279.3,258 514.7,258 750.0,228"/><polyline class="ln" points="44.0,228 279.3,258 514.7,258 750.0,228"/><circle cx="44.0" cy="228" r="4" data-tip="NShah19 · Wk 1: #8"/><circle cx="279.3" cy="258" r="4" data-tip="NShah19 · Wk 2: #9"/><circle cx="514.7" cy="258" r="4" data-tip="NShah19 · Wk 3: #9"/><circle cx="750.0" cy="228" r="4" data-tip="NShah19 · Wk 4: #8"/><text class="nm" x="762.0" y="232">NShah19</text></g><g class="series" tabindex="0"><polyline class="hit" points="44.0,48 279.3,108 514.7,138 750.0,138"/><polyline class="ln" points="44.0,48 279.3,108 514.7,138 750.0,138"/><circle cx="44.0" cy="48" r="4" data-tip="Shivxn · Wk 1: #2"/><circle cx="279.3" cy="108" r="4" data-tip="Shivxn · Wk 2: #4"/><circle cx="514.7" cy="138" r="4" data-tip="Shivxn · Wk 3: #5"/><circle cx="750.0" cy="138" r="4" data-tip="Shivxn · Wk 4: #5"/><text class="nm" x="762.0" y="142">Shivxn</text></g></svg>
+<div class="tip" hidden></div></div>
+<details class="tview"><summary>Show as table</summary><div class="tbl"><table><thead><tr><th class="tn">Team</th><th>Wk 1</th><th>Wk 2</th><th>Wk 3</th><th>Wk 4</th></tr></thead>
+<tbody><tr><td class="tn">Justin Beer Loyalist</td><td>3</td><td>2</td><td>2</td><td>1</td></tr><tr><td class="tn">Karans Sportsbook</td><td>9</td><td>6</td><td>3</td><td>2</td></tr><tr><td class="tn">Amver Alert🚨</td><td>1</td><td>1</td><td>1</td><td>3</td></tr><tr><td class="tn">Baltimore Avians</td><td>7</td><td>8</td><td>6</td><td>4</td></tr><tr><td class="tn">Shivxn</td><td>2</td><td>4</td><td>5</td><td>5</td></tr><tr><td class="tn">I’m Whipped by Bezos</td><td>12</td><td>7</td><td>10</td><td>6</td></tr><tr><td class="tn">6 7</td><td>5</td><td>5</td><td>4</td><td>7</td></tr><tr><td class="tn">NShah19</td><td>8</td><td>9</td><td>9</td><td>8</td></tr><tr><td class="tn">superdiddy</td><td>4</td><td>10</td><td>11</td><td>9</td></tr><tr><td class="tn">Braelon Allen</td><td>6</td><td>3</td><td>7</td><td>10</td></tr><tr><td class="tn">Ankitty</td><td>11</td><td>11</td><td>8</td><td>11</td></tr><tr><td class="tn">yrkpapi</td><td>10</td><td>12</td><td>12</td><td>12</td></tr></tbody></table></div></details></section>
+<script>
+document.querySelectorAll('.chart').forEach(function (chart) {
+  var svg = chart.querySelector('svg'), tip = chart.querySelector('.tip'), pinned = null;
+  function focus(g) {
+    svg.querySelectorAll('.series').forEach(function (s) { s.classList.toggle('on', s === g); });
+    svg.classList.toggle('has-on', !!g);
+    if (g) g.parentNode.appendChild(g);
+  }
+  svg.querySelectorAll('.series').forEach(function (g) {
+    g.addEventListener('mouseenter', function () { if (!pinned) focus(g); });
+    g.addEventListener('click', function () { pinned = pinned === g ? null : g; focus(pinned || g); });
+    g.addEventListener('focus', function () { focus(g); });
+  });
+  svg.addEventListener('mouseleave', function () { if (!pinned) focus(null); tip.hidden = true; });
+  svg.addEventListener('mousemove', function (ev) {
+    var c = ev.target.closest('circle');
+    if (!c || !c.parentNode.classList.contains('on')) { tip.hidden = true; return; }
+    var r = chart.getBoundingClientRect(), b = c.getBoundingClientRect();
+    tip.textContent = c.dataset.tip; tip.hidden = false;
+    tip.style.left = (b.left - r.left + b.width / 2) + 'px'; tip.style.top = (b.top - r.top - 8) + 'px';
+  });
+});
+</script><section><h2 class="sec">Week 4 Awards</h2><div class="awards"><div class="award"><div class="lbl">Top score</div><div class="who">Karans Sportsbook</div><div class="val">174.56 pts</div></div><div class="award"><div class="lbl">Basement</div><div class="who">yrkpapi</div><div class="val">76.56 pts</div></div><div class="award"><div class="lbl">Biggest blowout</div><div class="who">Karans Sportsbook over yrkpapi</div><div class="val">by 98.00</div></div><div class="award"><div class="lbl">Closest game</div><div class="who">I’m Whipped by Bezos over superdiddy</div><div class="val">by 4.08</div></div><div class="award"><div class="lbl">Unluckiest loss</div><div class="who">Amver Alert🚨</div><div class="val">134.22 pts and still lost</div></div><div class="award"><div class="lbl">Luckiest win</div><div class="who">NShah19</div><div class="val">won with 114.78 pts</div></div><div class="award"><div class="lbl">Benchwarmer</div><div class="who">Braelon Allen</div><div class="val">33.9 pts left on the bench (Brian Robinson scored 25.2)</div></div></div></section><section><h2 class="sec">Season So Far</h2><div class="awards"><div class="award"><div class="lbl">Luckiest team</div><div class="who">Karans Sportsbook</div><div class="val">+1.3 wins vs. expected</div></div><div class="award"><div class="lbl">Unluckiest team</div><div class="who">6 7</div><div class="val">-1.0 wins vs. expected</div></div><div class="award"><div class="lbl">Lineup genius</div><div class="who">I’m Whipped by Bezos</div><div class="val">only 37.7 pts left on the bench</div></div><div class="award"><div class="lbl">Lineup disaster</div><div class="who">Baltimore Avians</div><div class="val">82.4 pts left on the bench</div></div></div></section>
 <footer>Records include a game against the league median each week. All-play is the record a team would have playing every other team every week. Luck is actual head-to-head wins minus the wins that all-play scoring would expect. Bench is how many more points the best possible lineup would have scored. Top performers are points scored as a starter for that team: overall is the season through that week, weekly is that week alone. QB1, RB3, etc. is the player's rank at his position across the NFL over the same span. Stats from Sleeper. Rankings are the commissioner's own.</footer>
 </main></div></body></html>

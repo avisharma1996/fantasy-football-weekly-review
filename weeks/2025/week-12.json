@@ -25,6 +25,13 @@
         "name": "Brenton Strange",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 33.8,
+        "bye": 0.0,
+        "semis": 16.05,
+        "final": 5.28,
+        "champ": 1.98
+      },
       "luck": -1.67,
       "streak": "L1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 5.4,
         "name": "Tyler Allgeier",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 17.35,
+        "semis": 58.92,
+        "final": 19.8,
+        "champ": 6.65
       },
       "luck": 1.67,
       "streak": "W4",
@@ -151,6 +165,13 @@
         "name": "Jordan Mason",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 58.48,
+        "bye": 0.0,
+        "semis": 27.12,
+        "final": 8.57,
+        "champ": 2.95
+      },
       "luck": -0.44,
       "streak": "W1",
       "top": [
@@ -214,6 +235,13 @@
         "name": "DJ Moore",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 15.53,
+        "bye": 0.0,
+        "semis": 6.3,
+        "final": 1.6,
+        "champ": 0.65
+      },
       "luck": -0.33,
       "streak": "W1",
       "top": [
@@ -273,6 +301,13 @@
       "bench": 132.52,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 100.0,
+        "semis": 100.0,
+        "final": 66.12,
+        "champ": 36.12
+      },
       "luck": 0.67,
       "streak": "W7",
       "top": [
@@ -335,6 +370,13 @@
         "pts": 10.8,
         "name": "Kyle Monangai",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 92.6,
+        "bye": 0.05,
+        "semis": 47.8,
+        "final": 18.0,
+        "champ": 8.18
       },
       "luck": 1.0,
       "streak": "W3",
@@ -399,6 +441,13 @@
         "name": "Kareem Hunt",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 0.25,
+        "bye": 0.0,
+        "semis": 0.15,
+        "final": 0.05,
+        "champ": 0.03
+      },
       "luck": -2.22,
       "streak": "L4",
       "top": [
@@ -461,6 +510,13 @@
         "pts": 12.6,
         "name": "Jauan Jennings",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
       },
       "luck": 1.0,
       "streak": "L3",
@@ -525,6 +581,13 @@
         "name": "Michael Pittman",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 76.28,
+        "semis": 92.33,
+        "final": 63.23,
+        "champ": 37.33
+      },
       "luck": -0.89,
       "streak": "L1",
       "top": [
@@ -587,6 +650,13 @@
         "pts": 15.6,
         "name": "Parker Washington",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 99.35,
+        "bye": 6.33,
+        "semis": 51.33,
+        "final": 17.35,
+        "champ": 6.12
       },
       "luck": 1.22,
       "streak": "L2",

@@ -25,6 +25,13 @@
         "name": "Michael Pittman",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 99.72,
+        "bye": 5.62,
+        "semis": 56.6,
+        "final": 22.93,
+        "champ": 10.4
+      },
       "luck": -2.11,
       "streak": "W1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 17.1,
         "name": "Jakobi Meyers",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 7.88,
+        "bye": 0.0,
+        "semis": 3.98,
+        "final": 1.77,
+        "champ": 0.75
       },
       "luck": -2.44,
       "streak": "W2",
@@ -151,6 +165,13 @@
         "name": "Jaylen Warren",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 21.3,
+        "bye": 0.0,
+        "semis": 8.72,
+        "final": 3.77,
+        "champ": 1.23
+      },
       "luck": 2.89,
       "streak": "L4",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 23.4,
         "name": "DJ Moore",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 2.85,
+        "bye": 0.0,
+        "semis": 1.07,
+        "final": 0.3,
+        "champ": 0.07
       },
       "luck": -0.33,
       "streak": "W2",
@@ -277,6 +305,13 @@
         "name": "Washington Commanders D/ST",
         "pos": "DEF"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 100.0,
+        "semis": 100.0,
+        "final": 66.97,
+        "champ": 46.48
+      },
       "luck": -1.0,
       "streak": "L1",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 24.4,
         "name": "Jaylen Waddle",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 67.15,
+        "bye": 0.0,
+        "semis": 29.1,
+        "final": 12.88,
+        "champ": 3.95
       },
       "luck": -0.33,
       "streak": "L2",
@@ -403,6 +445,13 @@
         "name": "Sam Darnold",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 53.6,
+        "semis": 78.3,
+        "final": 37.58,
+        "champ": 14.62
+      },
       "luck": 1.33,
       "streak": "W1",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 12.0,
         "name": "Philadelphia Eagles D/ST",
         "pos": "DEF"
+      },
+      "odds": {
+        "playoffs": 99.97,
+        "bye": 11.57,
+        "semis": 56.23,
+        "final": 23.0,
+        "champ": 9.7
       },
       "luck": 0.67,
       "streak": "L1",
@@ -529,6 +585,13 @@
         "name": "Ameer Abdullah",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 29.2,
+        "semis": 65.38,
+        "final": 30.43,
+        "champ": 12.72
+      },
       "luck": 2.11,
       "streak": "W4",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 8.0,
         "name": "D'Andre Swift",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 1.12,
+        "bye": 0.0,
+        "semis": 0.62,
+        "final": 0.38,
+        "champ": 0.07
       },
       "luck": -0.78,
       "streak": "L2",

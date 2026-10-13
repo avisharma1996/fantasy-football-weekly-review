@@ -7,6 +7,7 @@
    "roster": "5",
    "bid": 91,
    "at": 1726038388500,
+   "pts": 108.6,
    "name": "J.K. Dobbins",
    "pos": "RB",
    "outbid": [
@@ -42,6 +43,7 @@
    "roster": "1",
    "bid": 20,
    "at": 1726038388500,
+   "pts": 107.7,
    "name": "Bucky Irving",
    "pos": "RB",
    "outbid": []
@@ -52,6 +54,7 @@
    "roster": "9",
    "bid": 20,
    "at": 1726038388500,
+   "pts": 0,
    "name": "Isaiah Likely",
    "pos": "TE",
    "outbid": [
@@ -79,6 +82,7 @@
    "roster": "7",
    "bid": 15,
    "at": 1725574555459,
+   "pts": 60.0,
    "name": "Jameson Williams",
    "pos": "WR",
    "outbid": []
@@ -89,6 +93,7 @@
    "roster": "1",
    "bid": 15,
    "at": 1726038388500,
+   "pts": 0,
    "name": "Demarcus Robinson",
    "pos": "WR",
    "outbid": []
@@ -99,6 +104,7 @@
    "roster": "6",
    "bid": 3,
    "at": 1726038388500,
+   "pts": 0,
    "name": "Allen Lazard",
    "pos": "WR",
    "outbid": []
@@ -109,6 +115,7 @@
    "roster": "5",
    "bid": 2,
    "at": 1726038388500,
+   "pts": 66.0,
    "name": "Los Angeles Chargers D/ST",
    "pos": "DEF",
    "outbid": [
@@ -124,6 +131,7 @@
    "roster": "8",
    "bid": 1,
    "at": 1726038388500,
+   "pts": 75.0,
    "name": "Chris Boswell",
    "pos": "K",
    "outbid": []
@@ -134,6 +142,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1725344758952,
+   "pts": 7.2,
    "name": "Devin Singletary",
    "pos": "RB",
    "outbid": []
@@ -144,6 +153,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1725491750223,
+   "pts": 0,
    "name": "Keon Coleman",
    "pos": "WR",
    "outbid": [
@@ -159,6 +169,7 @@
    "roster": "2",
    "bid": 0,
    "at": 1726038388500,
+   "pts": 38.88,
    "name": "Tua Tagovailoa",
    "pos": "QB",
    "outbid": []
@@ -169,6 +180,7 @@
    "roster": "10",
    "bid": 35,
    "at": 1726643184652,
+   "pts": 11.8,
    "name": "Quentin Johnston",
    "pos": "WR",
    "outbid": [
@@ -196,6 +208,7 @@
    "roster": "8",
    "bid": 21,
    "at": 1726643184652,
+   "pts": 41.2,
    "name": "Diontae Johnson",
    "pos": "WR",
    "outbid": [
@@ -211,6 +224,7 @@
    "roster": "1",
    "bid": 17,
    "at": 1726643184652,
+   "pts": 11.7,
    "name": "Rashid Shaheed",
    "pos": "WR",
    "outbid": [
@@ -234,6 +248,7 @@
    "roster": "4",
    "bid": 11,
    "at": 1726643184652,
+   "pts": 7.0,
    "name": "Carson Steele",
    "pos": "RB",
    "outbid": [
@@ -261,6 +276,7 @@
    "roster": "2",
    "bid": 10,
    "at": 1726643184652,
+   "pts": 0,
    "name": "Jauan Jennings",
    "pos": "WR",
    "outbid": []
@@ -271,6 +287,7 @@
    "roster": "6",
    "bid": 9,
    "at": 1726643184652,
+   "pts": 21.4,
    "name": "Jordan Addison",
    "pos": "WR",
    "outbid": []
@@ -281,6 +298,7 @@
    "roster": "4",
    "bid": 7,
    "at": 1726643184652,
+   "pts": 23.2,
    "name": "Braelon Allen",
    "pos": "RB",
    "outbid": [
@@ -300,6 +318,7 @@
    "roster": "9",
    "bid": 6,
    "at": 1726121194188,
+   "pts": 157.96,
    "name": "Joe Burrow",
    "pos": "QB",
    "outbid": []
@@ -310,6 +329,7 @@
    "roster": "6",
    "bid": 6,
    "at": 1726643184652,
+   "pts": 0,
    "name": "Alec Pierce",
    "pos": "WR",
    "outbid": [
@@ -325,6 +345,7 @@
    "roster": "2",
    "bid": 5,
    "at": 1726121194188,
+   "pts": 99.5,
    "name": "David Njoku",
    "pos": "TE",
    "outbid": [
@@ -340,6 +361,7 @@
    "roster": "10",
    "bid": 5,
    "at": 1726643184652,
+   "pts": 0,
    "name": "Josh Reynolds",
    "pos": "WR",
    "outbid": []
@@ -350,6 +372,7 @@
    "roster": "1",
    "bid": 1,
    "at": 1726360592899,
+   "pts": 35.1,
    "name": "Devin Singletary",
    "pos": "RB",
    "outbid": []
@@ -360,6 +383,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1726277784177,
+   "pts": 8.8,
    "name": "Dalton Schultz",
    "pos": "TE",
    "outbid": []
@@ -370,6 +394,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1726643184652,
+   "pts": 22.0,
    "name": "Green Bay Packers D/ST",
    "pos": "DEF",
    "outbid": []
@@ -380,6 +405,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1726643184652,
+   "pts": 3.0,
    "name": "Tampa Bay Buccaneers D/ST",
    "pos": "DEF",
    "outbid": []
@@ -390,6 +416,7 @@
    "roster": "2",
    "bid": 0,
    "at": 1726643184652,
+   "pts": 99.86,
    "name": "Geno Smith",
    "pos": "QB",
    "outbid": []
@@ -400,6 +427,7 @@
    "roster": "10",
    "bid": 0,
    "at": 1726643184652,
+   "pts": 183.7,
    "name": "Chuba Hubbard",
    "pos": "RB",
    "outbid": []
@@ -410,6 +438,7 @@
    "roster": "2",
    "bid": 0,
    "at": 1726643184652,
+   "pts": 0,
    "name": "Evan Engram",
    "pos": "TE",
    "outbid": []
@@ -420,6 +449,7 @@
    "roster": "9",
    "bid": 19,
    "at": 1727247955591,
+   "pts": 12.1,
    "name": "Jauan Jennings",
    "pos": "WR",
    "outbid": [
@@ -443,6 +473,7 @@
    "roster": "7",
    "bid": 10,
    "at": 1727247955591,
+   "pts": 0,
    "name": "Andrei Iosivas",
    "pos": "WR",
    "outbid": [
@@ -458,6 +489,7 @@
    "roster": "1",
    "bid": 6,
    "at": 1727247955591,
+   "pts": 20.5,
    "name": "Wan'Dale Robinson",
    "pos": "WR",
    "outbid": [
@@ -473,6 +505,7 @@
    "roster": "2",
    "bid": 5,
    "at": 1726791375507,
+   "pts": 11.5,
    "name": "Rome Odunze",
    "pos": "WR",
    "outbid": []
@@ -483,6 +516,7 @@
    "roster": "7",
    "bid": 5,
    "at": 1727247955591,
+   "pts": 72.28,
    "name": "Sam Darnold",
    "pos": "QB",
    "outbid": []
@@ -493,6 +527,7 @@
    "roster": "7",
    "bid": 5,
    "at": 1727247955591,
+   "pts": 128.8,
    "name": "Darnell Mooney",
    "pos": "WR",
    "outbid": [
@@ -508,6 +543,7 @@
    "roster": "5",
    "bid": 3,
    "at": 1727247955591,
+   "pts": 4.9,
    "name": "Cole Kmet",
    "pos": "TE",
    "outbid": [
@@ -523,6 +559,7 @@
    "roster": "8",
    "bid": 2,
    "at": 1726725989688,
+   "pts": 51.8,
    "name": "Jake Ferguson",
    "pos": "TE",
    "outbid": []
@@ -533,6 +570,7 @@
    "roster": "8",
    "bid": 2,
    "at": 1727247955591,
+   "pts": 6.0,
    "name": "Kansas City Chiefs D/ST",
    "pos": "DEF",
    "outbid": [
@@ -556,6 +594,7 @@
    "roster": "8",
    "bid": 1,
    "at": 1727247955591,
+   "pts": 105.2,
    "name": "Rico Dowdle",
    "pos": "RB",
    "outbid": []
@@ -566,6 +605,7 @@
    "roster": "8",
    "bid": 1,
    "at": 1727247955591,
+   "pts": 88.0,
    "name": "Minnesota Vikings D/ST",
    "pos": "DEF",
    "outbid": [
@@ -585,6 +625,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1726725989688,
+   "pts": 0,
    "name": "Tyler Johnson",
    "pos": "WR",
    "outbid": []
@@ -595,6 +636,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1726758992454,
+   "pts": 0,
    "name": "Xavier Legette",
    "pos": "WR",
    "outbid": []
@@ -605,6 +647,7 @@
    "roster": "6",
    "bid": 0,
    "at": 1727247955591,
+   "pts": 0,
    "name": "Ricky Pearsall",
    "pos": "WR",
    "outbid": []
@@ -615,6 +658,7 @@
    "roster": "5",
    "bid": 0,
    "at": 1727247955591,
+   "pts": 2.0,
    "name": "Houston Texans D/ST",
    "pos": "DEF",
    "outbid": []
@@ -625,6 +669,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1727247955591,
+   "pts": 1.2,
    "name": "Brenton Strange",
    "pos": "TE",
    "outbid": []
@@ -635,6 +680,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1727247955591,
+   "pts": 3.7,
    "name": "Tyler Conklin",
    "pos": "TE",
    "outbid": []
@@ -645,6 +691,7 @@
    "roster": "6",
    "bid": 18,
    "at": 1727852778366,
+   "pts": 23.6,
    "name": "Trey Sermon",
    "pos": "RB",
    "outbid": []
@@ -655,6 +702,7 @@
    "roster": "3",
    "bid": 10,
    "at": 1727852778366,
+   "pts": 4.4,
    "name": "Dontayvion Wicks",
    "pos": "WR",
    "outbid": [
@@ -670,6 +718,7 @@
    "roster": "7",
    "bid": 10,
    "at": 1727852778366,
+   "pts": 2.0,
    "name": "Zach Ertz",
    "pos": "TE",
    "outbid": []
@@ -680,6 +729,7 @@
    "roster": "3",
    "bid": 8,
    "at": 1727852778366,
+   "pts": 39.64,
    "name": "Justin Fields",
    "pos": "QB",
    "outbid": [
@@ -695,6 +745,7 @@
    "roster": "8",
    "bid": 7,
    "at": 1727852778366,
+   "pts": 0,
    "name": "Alexander Mattison",
    "pos": "RB",
    "outbid": []
@@ -705,6 +756,7 @@
    "roster": "6",
    "bid": 6,
    "at": 1727852778366,
+   "pts": 0,
    "name": "Tank Bigsby",
    "pos": "RB",
    "outbid": [
@@ -720,6 +772,7 @@
    "roster": "1",
    "bid": 3,
    "at": 1727852778366,
+   "pts": 115.0,
    "name": "Denver Broncos D/ST",
    "pos": "DEF",
    "outbid": []
@@ -730,6 +783,7 @@
    "roster": "5",
    "bid": 2,
    "at": 1727852778366,
+   "pts": 22.8,
    "name": "Tucker Kraft",
    "pos": "TE",
    "outbid": []
@@ -740,6 +794,7 @@
    "roster": "10",
    "bid": 0,
    "at": 1727414769636,
+   "pts": 46.2,
    "name": "Jerry Jeudy",
    "pos": "WR",
    "outbid": []
@@ -750,6 +805,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1727497580194,
+   "pts": 0,
    "name": "Alec Pierce",
    "pos": "WR",
    "outbid": []
@@ -760,6 +816,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1727852778366,
+   "pts": 27.4,
    "name": "Josh Downs",
    "pos": "WR",
    "outbid": []
@@ -770,6 +827,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1727852778366,
+   "pts": 13.0,
    "name": "Wil Lutz",
    "pos": "K",
    "outbid": []
@@ -780,6 +838,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1727852778366,
+   "pts": 61.8,
    "name": "Javonte Williams",
    "pos": "RB",
    "outbid": []
@@ -790,6 +849,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1727852778366,
+   "pts": 14.0,
    "name": "Seattle Seahawks D/ST",
    "pos": "DEF",
    "outbid": [
@@ -805,6 +865,7 @@
    "roster": "2",
    "bid": 0,
    "at": 1727852778366,
+   "pts": 0,
    "name": "T.J. Hockenson",
    "pos": "TE",
    "outbid": []
@@ -815,6 +876,7 @@
    "roster": "8",
    "bid": 22,
    "at": 1728457554340,
+   "pts": 23.8,
    "name": "Tank Bigsby",
    "pos": "RB",
    "outbid": [
@@ -838,6 +900,7 @@
    "roster": "6",
    "bid": 18,
    "at": 1728457554340,
+   "pts": 19.7,
    "name": "Chase Brown",
    "pos": "RB",
    "outbid": [
@@ -865,6 +928,7 @@
    "roster": "10",
    "bid": 15,
    "at": 1728457554340,
+   "pts": 0,
    "name": "Jakobi Meyers",
    "pos": "WR",
    "outbid": [
@@ -880,6 +944,7 @@
    "roster": "8",
    "bid": 6,
    "at": 1728457554340,
+   "pts": 15.0,
    "name": "Houston Texans D/ST",
    "pos": "DEF",
    "outbid": [
@@ -895,6 +960,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1728335767985,
+   "pts": 0,
    "name": "Calvin Ridley",
    "pos": "WR",
    "outbid": []
@@ -905,6 +971,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1728457554340,
+   "pts": 0,
    "name": "Tyler Conklin",
    "pos": "TE",
    "outbid": []
@@ -915,6 +982,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1728457554340,
+   "pts": 17.0,
    "name": "Jake Elliott",
    "pos": "K",
    "outbid": []
@@ -925,6 +993,7 @@
    "roster": "2",
    "bid": 0,
    "at": 1728457554340,
+   "pts": 10.0,
    "name": "Brayden Narveson",
    "pos": "K",
    "outbid": []
@@ -935,6 +1004,7 @@
    "roster": "1",
    "bid": 17,
    "at": 1728803139516,
+   "pts": 54.8,
    "name": "Rhamondre Stevenson",
    "pos": "RB",
    "outbid": []
@@ -945,6 +1015,7 @@
    "roster": "10",
    "bid": 13,
    "at": 1729062358992,
+   "pts": 10.6,
    "name": "Raheem Mostert",
    "pos": "RB",
    "outbid": [
@@ -964,6 +1035,7 @@
    "roster": "2",
    "bid": 10,
    "at": 1729062358992,
+   "pts": 0,
    "name": "Allen Lazard",
    "pos": "WR",
    "outbid": []
@@ -974,6 +1046,7 @@
    "roster": "3",
    "bid": 10,
    "at": 1729062358992,
+   "pts": 0,
    "name": "Sean Tucker",
    "pos": "RB",
    "outbid": [
@@ -993,6 +1066,7 @@
    "roster": "2",
    "bid": 10,
    "at": 1729062358992,
+   "pts": 31.0,
    "name": "Harrison Butker",
    "pos": "K",
    "outbid": [
@@ -1008,6 +1082,7 @@
    "roster": "10",
    "bid": 3,
    "at": 1729062358992,
+   "pts": 0,
    "name": "Tyler Lockett",
    "pos": "WR",
    "outbid": []
@@ -1018,6 +1093,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1728814539975,
+   "pts": 6.3,
    "name": "Jalen Tolbert",
    "pos": "WR",
    "outbid": []
@@ -1028,6 +1104,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1729062358992,
+   "pts": 20.2,
    "name": "Hunter Henry",
    "pos": "TE",
    "outbid": []
@@ -1038,6 +1115,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1729062358992,
+   "pts": 10.0,
    "name": "Green Bay Packers D/ST",
    "pos": "DEF",
    "outbid": [
@@ -1053,6 +1131,7 @@
    "roster": "6",
    "bid": 0,
    "at": 1729062358992,
+   "pts": 0,
    "name": "JuJu Smith-Schuster",
    "pos": "WR",
    "outbid": [
@@ -1068,6 +1147,7 @@
    "roster": "6",
    "bid": 0,
    "at": 1729062358992,
+   "pts": 0,
    "name": "Christian Watson",
    "pos": "WR",
    "outbid": [
@@ -1083,6 +1163,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1729062358992,
+   "pts": 0,
    "name": "Cam Akers",
    "pos": "RB",
    "outbid": []
@@ -1093,6 +1174,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1729062358992,
+   "pts": 3.0,
    "name": "New Orleans Saints D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1103,6 +1185,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1729062358992,
+   "pts": 71.1,
    "name": "Courtland Sutton",
    "pos": "WR",
    "outbid": [
@@ -1122,6 +1205,7 @@
    "roster": "2",
    "bid": 0,
    "at": 1729062358992,
+   "pts": 0,
    "name": "Los Angeles Rams D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1132,6 +1216,7 @@
    "roster": "4",
    "bid": 26,
    "at": 1729667196040,
+   "pts": 62.0,
    "name": "George Pickens",
    "pos": "WR",
    "outbid": [
@@ -1175,6 +1260,7 @@
    "roster": "7",
    "bid": 17,
    "at": 1729402594737,
+   "pts": 0,
    "name": "Sean Tucker",
    "pos": "RB",
    "outbid": []
@@ -1185,6 +1271,7 @@
    "roster": "8",
    "bid": 17,
    "at": 1729667196040,
+   "pts": 92.4,
    "name": "Jauan Jennings",
    "pos": "WR",
    "outbid": [
@@ -1208,6 +1295,7 @@
    "roster": "7",
    "bid": 13,
    "at": 1729207577341,
+   "pts": 0,
    "name": "Khalil Shakir",
    "pos": "WR",
    "outbid": [
@@ -1227,6 +1315,7 @@
    "roster": "8",
    "bid": 9,
    "at": 1729667196040,
+   "pts": 75.9,
    "name": "Rachaad White",
    "pos": "RB",
    "outbid": [
@@ -1258,6 +1347,7 @@
    "roster": "7",
    "bid": 7,
    "at": 1729667196040,
+   "pts": 0,
    "name": "Keon Coleman",
    "pos": "WR",
    "outbid": [
@@ -1273,6 +1363,7 @@
    "roster": "10",
    "bid": 6,
    "at": 1729667196040,
+   "pts": 74.5,
    "name": "Khalil Shakir",
    "pos": "WR",
    "outbid": [
@@ -1292,6 +1383,7 @@
    "roster": "3",
    "bid": 5,
    "at": 1729667196040,
+   "pts": 0,
    "name": "Russell Wilson",
    "pos": "QB",
    "outbid": []
@@ -1302,6 +1394,7 @@
    "roster": "9",
    "bid": 5,
    "at": 1729667196040,
+   "pts": 77.0,
    "name": "Kansas City Chiefs D/ST",
    "pos": "DEF",
    "outbid": [
@@ -1317,6 +1410,7 @@
    "roster": "1",
    "bid": 3,
    "at": 1729667196040,
+   "pts": 64.3,
    "name": "Cade Otton",
    "pos": "TE",
    "outbid": []
@@ -1327,6 +1421,7 @@
    "roster": "6",
    "bid": 2,
    "at": 1729667196040,
+   "pts": 14.06,
    "name": "Caleb Williams",
    "pos": "QB",
    "outbid": []
@@ -1337,6 +1432,7 @@
    "roster": "1",
    "bid": 2,
    "at": 1729667196040,
+   "pts": 8.7,
    "name": "Romeo Doubs",
    "pos": "WR",
    "outbid": []
@@ -1347,6 +1443,7 @@
    "roster": "8",
    "bid": 1,
    "at": 1729145171070,
+   "pts": 0,
    "name": "George Pickens",
    "pos": "WR",
    "outbid": [
@@ -1390,6 +1487,7 @@
    "roster": "10",
    "bid": 1,
    "at": 1729667196040,
+   "pts": 2.0,
    "name": "Seattle Seahawks D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1400,6 +1498,7 @@
    "roster": "10",
    "bid": 1,
    "at": 1729667196040,
+   "pts": 8.0,
    "name": "Wil Lutz",
    "pos": "K",
    "outbid": [
@@ -1415,6 +1514,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1729473342176,
+   "pts": 0,
    "name": "Chicago Bears D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1425,6 +1525,7 @@
    "roster": "6",
    "bid": 0,
    "at": 1729667196040,
+   "pts": 0,
    "name": "Jalen McMillan",
    "pos": "WR",
    "outbid": []
@@ -1435,6 +1536,7 @@
    "roster": "5",
    "bid": 0,
    "at": 1729667196040,
+   "pts": 50.0,
    "name": "Los Angeles Chargers D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1445,6 +1547,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1729667196040,
+   "pts": 0,
    "name": "Daniel Carlson",
    "pos": "K",
    "outbid": []
@@ -1455,6 +1558,7 @@
    "roster": "6",
    "bid": 23,
    "at": 1730271953359,
+   "pts": 0,
    "name": "Josh Downs",
    "pos": "WR",
    "outbid": [
@@ -1478,6 +1582,7 @@
    "roster": "9",
    "bid": 20,
    "at": 1730271953359,
+   "pts": 61.7,
    "name": "Calvin Ridley",
    "pos": "WR",
    "outbid": [
@@ -1493,6 +1598,7 @@
    "roster": "3",
    "bid": 12,
    "at": 1730271953359,
+   "pts": 1.8,
    "name": "Cedric Tillman",
    "pos": "WR",
    "outbid": [
@@ -1512,6 +1618,7 @@
    "roster": "2",
    "bid": 5,
    "at": 1729750551956,
+   "pts": 39.6,
    "name": "Jakobi Meyers",
    "pos": "WR",
    "outbid": [
@@ -1527,6 +1634,7 @@
    "roster": "10",
    "bid": 2,
    "at": 1730271953359,
+   "pts": 0,
    "name": "Elijah Moore",
    "pos": "WR",
    "outbid": []
@@ -1537,6 +1645,7 @@
    "roster": "4",
    "bid": 1,
    "at": 1730271953359,
+   "pts": 32.0,
    "name": "Philadelphia Eagles D/ST",
    "pos": "DEF",
    "outbid": [
@@ -1552,6 +1661,7 @@
    "roster": "10",
    "bid": 1,
    "at": 1730271953359,
+   "pts": 44.0,
    "name": "Detroit Lions D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1562,6 +1672,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1730150783645,
+   "pts": 0,
    "name": "Wan'Dale Robinson",
    "pos": "WR",
    "outbid": []
@@ -1572,6 +1683,7 @@
    "roster": "8",
    "bid": 0,
    "at": 1730271953359,
+   "pts": 14.0,
    "name": "Tyler Bass",
    "pos": "K",
    "outbid": []
@@ -1582,6 +1694,7 @@
    "roster": "10",
    "bid": 0,
    "at": 1730271953359,
+   "pts": 29.64,
    "name": "Matthew Stafford",
    "pos": "QB",
    "outbid": []
@@ -1592,6 +1705,7 @@
    "roster": "6",
    "bid": 0,
    "at": 1730271953359,
+   "pts": 0,
    "name": "Austin Ekeler",
    "pos": "RB",
    "outbid": []
@@ -1602,6 +1716,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1730271953359,
+   "pts": 4.0,
    "name": "Jake Elliott",
    "pos": "K",
    "outbid": []
@@ -1612,6 +1727,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1730271953359,
+   "pts": 0,
    "name": "Tucker Kraft",
    "pos": "TE",
    "outbid": [
@@ -1627,6 +1743,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1730271953359,
+   "pts": 0,
    "name": "Rakim Jarrett",
    "pos": "WR",
    "outbid": []
@@ -1637,6 +1754,7 @@
    "roster": "6",
    "bid": 21,
    "at": 1730880352241,
+   "pts": 6.5,
    "name": "Amari Cooper",
    "pos": "WR",
    "outbid": [
@@ -1656,6 +1774,7 @@
    "roster": "7",
    "bid": 7,
    "at": 1730739389764,
+   "pts": 80.0,
    "name": "Chris Boswell",
    "pos": "K",
    "outbid": [
@@ -1675,6 +1794,7 @@
    "roster": "10",
    "bid": 7,
    "at": 1730880352241,
+   "pts": 46.2,
    "name": "Jerry Jeudy",
    "pos": "WR",
    "outbid": [
@@ -1690,6 +1810,7 @@
    "roster": "2",
    "bid": 5,
    "at": 1730880352241,
+   "pts": 5.0,
    "name": "Mike Gesicki",
    "pos": "TE",
    "outbid": []
@@ -1700,6 +1821,7 @@
    "roster": "1",
    "bid": 4,
    "at": 1730880352241,
+   "pts": 0,
    "name": "DeMario Douglas",
    "pos": "WR",
    "outbid": [
@@ -1715,6 +1837,7 @@
    "roster": "1",
    "bid": 3,
    "at": 1730880352241,
+   "pts": 8.0,
    "name": "Los Angeles Rams D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1725,6 +1848,7 @@
    "roster": "8",
    "bid": 0,
    "at": 1730880352241,
+   "pts": 14.0,
    "name": "Jake Moody",
    "pos": "K",
    "outbid": [
@@ -1740,6 +1864,7 @@
    "roster": "6",
    "bid": 0,
    "at": 1730880352241,
+   "pts": 13.0,
    "name": "Blake Grupe",
    "pos": "K",
    "outbid": []
@@ -1750,6 +1875,7 @@
    "roster": "2",
    "bid": 0,
    "at": 1730880352241,
+   "pts": 4.0,
    "name": "Chicago Bears D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1760,6 +1886,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1730880352241,
+   "pts": 5.0,
    "name": "New York Giants D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1770,6 +1897,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1730880352241,
+   "pts": 0,
    "name": "Isaiah Likely",
    "pos": "TE",
    "outbid": []
@@ -1780,6 +1908,7 @@
    "roster": "1",
    "bid": 9,
    "at": 1731485179735,
+   "pts": 0,
    "name": "Marquez Valdes-Scantling",
    "pos": "WR",
    "outbid": []
@@ -1790,6 +1919,7 @@
    "roster": "4",
    "bid": 2,
    "at": 1731485179735,
+   "pts": 59.0,
    "name": "Houston Texans D/ST",
    "pos": "DEF",
    "outbid": [
@@ -1809,6 +1939,7 @@
    "roster": "8",
    "bid": 0,
    "at": 1730963170648,
+   "pts": 0,
    "name": "Jalen McMillan",
    "pos": "WR",
    "outbid": []
@@ -1819,6 +1950,7 @@
    "roster": "8",
    "bid": 0,
    "at": 1731485179735,
+   "pts": 0,
    "name": "Audric Estime",
    "pos": "RB",
    "outbid": []
@@ -1829,6 +1961,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1731485179735,
+   "pts": 11.0,
    "name": "Jason Sanders",
    "pos": "K",
    "outbid": []
@@ -1839,6 +1972,7 @@
    "roster": "10",
    "bid": 0,
    "at": 1731485179735,
+   "pts": 58.98,
    "name": "Jordan Love",
    "pos": "QB",
    "outbid": []
@@ -1849,6 +1983,7 @@
    "roster": "10",
    "bid": 0,
    "at": 1731485179735,
+   "pts": 5.0,
    "name": "Tyler Bass",
    "pos": "K",
    "outbid": []
@@ -1859,6 +1994,7 @@
    "roster": "10",
    "bid": 16,
    "at": 1732089989159,
+   "pts": 0,
    "name": "Marquez Valdes-Scantling",
    "pos": "WR",
    "outbid": [
@@ -1874,6 +2010,7 @@
    "roster": "5",
    "bid": 2,
    "at": 1732089989159,
+   "pts": 7.2,
    "name": "Wan'Dale Robinson",
    "pos": "WR",
    "outbid": []
@@ -1884,6 +2021,7 @@
    "roster": "8",
    "bid": 1,
    "at": 1731567984646,
+   "pts": 25.9,
    "name": "Tucker Kraft",
    "pos": "TE",
    "outbid": [
@@ -1899,6 +2037,7 @@
    "roster": "10",
    "bid": 0,
    "at": 1731618961518,
+   "pts": 3.4,
    "name": "Austin Ekeler",
    "pos": "RB",
    "outbid": []
@@ -1909,6 +2048,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1732089989159,
+   "pts": 0,
    "name": "Tua Tagovailoa",
    "pos": "QB",
    "outbid": []
@@ -1919,6 +2059,7 @@
    "roster": "8",
    "bid": 0,
    "at": 1732089989159,
+   "pts": 0,
    "name": "Philadelphia Eagles D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1929,6 +2070,7 @@
    "roster": "8",
    "bid": 0,
    "at": 1732089989159,
+   "pts": 0,
    "name": "Nick Westbrook-Ikhine",
    "pos": "WR",
    "outbid": []
@@ -1939,6 +2081,7 @@
    "roster": "10",
    "bid": 0,
    "at": 1732089989159,
+   "pts": 61.0,
    "name": "Chase McLaughlin",
    "pos": "K",
    "outbid": [
@@ -1954,6 +2097,7 @@
    "roster": "6",
    "bid": 0,
    "at": 1732089989159,
+   "pts": 42.0,
    "name": "Tampa Bay Buccaneers D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1964,6 +2108,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1732089989159,
+   "pts": 12.0,
    "name": "Arizona Cardinals D/ST",
    "pos": "DEF",
    "outbid": []
@@ -1974,6 +2119,7 @@
    "roster": "8",
    "bid": 0,
    "at": 1732089989159,
+   "pts": 27.3,
    "name": "Zach Ertz",
    "pos": "TE",
    "outbid": []
@@ -1984,6 +2130,7 @@
    "roster": "9",
    "bid": 10,
    "at": 1732721797000,
+   "pts": 0,
    "name": "Austin Ekeler",
    "pos": "RB",
    "outbid": []
@@ -1994,6 +2141,7 @@
    "roster": "2",
    "bid": 0,
    "at": 1732694796121,
+   "pts": 19.0,
    "name": "Dallas Cowboys D/ST",
    "pos": "DEF",
    "outbid": []
@@ -2004,6 +2152,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1732694796121,
+   "pts": 73.0,
    "name": "Jordan Addison",
    "pos": "WR",
    "outbid": []
@@ -2014,6 +2163,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1732694796121,
+   "pts": 26.0,
    "name": "Seattle Seahawks D/ST",
    "pos": "DEF",
    "outbid": []
@@ -2024,6 +2174,7 @@
    "roster": "4",
    "bid": 20,
    "at": 1733299554934,
+   "pts": 35.3,
    "name": "Isaac Guerendo",
    "pos": "RB",
    "outbid": [
@@ -2047,6 +2198,7 @@
    "roster": "5",
    "bid": 7,
    "at": 1733299554934,
+   "pts": 20.4,
    "name": "Adam Thielen",
    "pos": "WR",
    "outbid": [
@@ -2062,6 +2214,7 @@
    "roster": "2",
    "bid": 5,
    "at": 1733299554934,
+   "pts": 30.38,
    "name": "Tua Tagovailoa",
    "pos": "QB",
    "outbid": [
@@ -2077,6 +2230,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1733299554934,
+   "pts": 0,
    "name": "Chris Rodriguez",
    "pos": "RB",
    "outbid": []
@@ -2087,6 +2241,7 @@
    "roster": "7",
    "bid": 0,
    "at": 1733299554934,
+   "pts": 30.0,
    "name": "Buffalo Bills D/ST",
    "pos": "DEF",
    "outbid": []
@@ -2097,6 +2252,7 @@
    "roster": "6",
    "bid": 0,
    "at": 1733299554934,
+   "pts": 0,
    "name": "Parker Romo",
    "pos": "K",
    "outbid": []
@@ -2107,6 +2263,7 @@
    "roster": "4",
    "bid": 0,
    "at": 1733299554934,
+   "pts": 1.0,
    "name": "Jake Elliott",
    "pos": "K",
    "outbid": []
@@ -2117,6 +2274,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1733299554934,
+   "pts": 0,
    "name": "Elijah Moore",
    "pos": "WR",
    "outbid": []
@@ -2127,6 +2285,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1733299554934,
+   "pts": 0,
    "name": "Spencer Shrader",
    "pos": "K",
    "outbid": []
@@ -2137,6 +2296,7 @@
    "roster": "2",
    "bid": 0,
    "at": 1733299554934,
+   "pts": 3.0,
    "name": "Miami Dolphins D/ST",
    "pos": "DEF",
    "outbid": []
@@ -2147,6 +2307,7 @@
    "roster": "4",
    "bid": 27,
    "at": 1733904353175,
+   "pts": 3.0,
    "name": "Patrick Taylor",
    "pos": "RB",
    "outbid": [
@@ -2170,6 +2331,7 @@
    "roster": "3",
    "bid": 20,
    "at": 1733390762212,
+   "pts": 9.6,
    "name": "Gus Edwards",
    "pos": "RB",
    "outbid": []
@@ -2180,6 +2342,7 @@
    "roster": "9",
    "bid": 19,
    "at": 1733904353175,
+   "pts": 0,
    "name": "Isaiah Davis",
    "pos": "RB",
    "outbid": [
@@ -2203,6 +2366,7 @@
    "roster": "10",
    "bid": 10,
    "at": 1733904353175,
+   "pts": 0,
    "name": "Tank Bigsby",
    "pos": "RB",
    "outbid": [
@@ -2222,6 +2386,7 @@
    "roster": "2",
    "bid": 8,
    "at": 1733904353175,
+   "pts": 6.0,
    "name": "Baltimore Ravens D/ST",
    "pos": "DEF",
    "outbid": [
@@ -2237,6 +2402,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1733904353175,
+   "pts": 0,
    "name": "Sincere McCormick",
    "pos": "RB",
    "outbid": [
@@ -2252,6 +2418,7 @@
    "roster": "6",
    "bid": 0,
    "at": 1733904353175,
+   "pts": 6.0,
    "name": "Washington Commanders D/ST",
    "pos": "DEF",
    "outbid": []
@@ -2262,6 +2429,7 @@
    "roster": "6",
    "bid": 0,
    "at": 1733904353175,
+   "pts": 26.0,
    "name": "Wil Lutz",
    "pos": "K",
    "outbid": []
@@ -2272,6 +2440,7 @@
    "roster": "10",
    "bid": 0,
    "at": 1733904353175,
+   "pts": 53.0,
    "name": "Atlanta Falcons D/ST",
    "pos": "DEF",
    "outbid": []
@@ -2282,6 +2451,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1733904353175,
+   "pts": 10.0,
    "name": "Harrison Butker",
    "pos": "K",
    "outbid": []
@@ -2292,6 +2462,7 @@
    "roster": "2",
    "bid": 16,
    "at": 1734509171054,
+   "pts": 15.0,
    "name": "Detroit Lions D/ST",
    "pos": "DEF",
    "outbid": []
@@ -2302,6 +2473,7 @@
    "roster": "3",
    "bid": 5,
    "at": 1733987774743,
+   "pts": 9.0,
    "name": "Arizona Cardinals D/ST",
    "pos": "DEF",
    "outbid": [
@@ -2317,6 +2489,7 @@
    "roster": "9",
    "bid": 1,
    "at": 1734509171054,
+   "pts": 23.8,
    "name": "Jerome Ford",
    "pos": "RB",
    "outbid": [
@@ -2340,6 +2513,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1734111982779,
+   "pts": 0,
    "name": "Xavier Worthy",
    "pos": "WR",
    "outbid": []
@@ -2350,6 +2524,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1734509171054,
+   "pts": 0,
    "name": "Kendre Miller",
    "pos": "RB",
    "outbid": []
@@ -2360,6 +2535,7 @@
    "roster": "9",
    "bid": 0,
    "at": 1734509171054,
+   "pts": 10.0,
    "name": "Harrison Butker",
    "pos": "K",
    "outbid": []
@@ -2370,6 +2546,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1734509171054,
+   "pts": 0,
    "name": "Jalen McMillan",
    "pos": "WR",
    "outbid": []
@@ -2380,6 +2557,7 @@
    "roster": "5",
    "bid": 0,
    "at": 1734509171054,
+   "pts": 0,
    "name": "Indianapolis Colts D/ST",
    "pos": "DEF",
    "outbid": []
@@ -2390,6 +2568,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1734509171054,
+   "pts": 0,
    "name": "Travis Etienne",
    "pos": "RB",
    "outbid": [
@@ -2409,6 +2588,7 @@
    "roster": "8",
    "bid": 7,
    "at": 1735113963625,
+   "pts": 0,
    "name": "Diontae Johnson",
    "pos": "WR",
    "outbid": []
@@ -2419,6 +2599,7 @@
    "roster": "5",
    "bid": 3,
    "at": 1735113963625,
+   "pts": 0,
    "name": "Anthony Richardson",
    "pos": "QB",
    "outbid": []
@@ -2429,6 +2610,7 @@
    "roster": "4",
    "bid": 0,
    "at": 1734591987212,
+   "pts": 22.0,
    "name": "Las Vegas Raiders D/ST",
    "pos": "DEF",
    "outbid": []
@@ -2439,6 +2621,7 @@
    "roster": "2",
    "bid": 0,
    "at": 1734911789912,
+   "pts": 0,
    "name": "Alvin Kamara",
    "pos": "RB",
    "outbid": []
@@ -2449,6 +2632,7 @@
    "roster": "1",
    "bid": 0,
    "at": 1735113963625,
+   "pts": 0,
    "name": "Tyjae Spears",
    "pos": "RB",
    "outbid": []

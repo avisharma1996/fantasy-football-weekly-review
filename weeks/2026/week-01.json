@@ -25,6 +25,13 @@
         "name": "Jared Goff",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 41.75,
+        "bye": 5.2,
+        "semis": 20.77,
+        "final": 8.5,
+        "champ": 3.27
+      },
       "luck": 0.55,
       "streak": "W1",
       "top": [
@@ -84,6 +91,13 @@
       "bench": 0.0,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 20.35,
+        "bye": 1.15,
+        "semis": 9.0,
+        "final": 3.05,
+        "champ": 0.7
+      },
       "luck": 0.82,
       "streak": "W1",
       "top": [
@@ -146,6 +160,13 @@
         "pts": 1.0,
         "name": "Makai Lemon",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 11.55,
+        "bye": 0.82,
+        "semis": 5.2,
+        "final": 1.9,
+        "champ": 0.82
       },
       "luck": -0.09,
       "streak": "L1",
@@ -210,6 +231,13 @@
         "name": "Kenyon Sadiq",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 61.2,
+        "bye": 12.5,
+        "semis": 34.88,
+        "final": 14.4,
+        "champ": 6.47
+      },
       "luck": -0.55,
       "streak": "L1",
       "top": [
@@ -273,6 +301,13 @@
         "name": "Kyle Monangai",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 96.47,
+        "bye": 66.2,
+        "semis": 85.67,
+        "final": 51.75,
+        "champ": 30.05
+      },
       "luck": 0.0,
       "streak": "W1",
       "top": [
@@ -332,6 +367,13 @@
       "bench": 0.0,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 65.3,
+        "bye": 13.78,
+        "semis": 39.27,
+        "final": 17.65,
+        "champ": 7.58
+      },
       "luck": -0.64,
       "streak": "L1",
       "top": [
@@ -394,6 +436,13 @@
         "pts": 8.3,
         "name": "David Njoku",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 19.98,
+        "bye": 1.02,
+        "semis": 8.82,
+        "final": 3.7,
+        "champ": 1.35
       },
       "luck": -0.27,
       "streak": "L1",
@@ -458,6 +507,13 @@
         "name": "Dontayvion Wicks",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 9.22,
+        "bye": 0.33,
+        "semis": 3.0,
+        "final": 0.93,
+        "champ": 0.28
+      },
       "luck": 0.0,
       "streak": "L1",
       "top": [
@@ -520,6 +576,13 @@
         "pts": 6.2,
         "name": "Michael Mayer",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 81.5,
+        "bye": 25.4,
+        "semis": 55.12,
+        "final": 26.4,
+        "champ": 12.62
       },
       "luck": 0.18,
       "streak": "W1",
@@ -584,6 +647,13 @@
         "name": "Aaron Jones",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 77.45,
+        "bye": 22.57,
+        "semis": 51.85,
+        "final": 24.62,
+        "champ": 11.9
+      },
       "luck": 0.27,
       "streak": "W1",
       "top": [
@@ -647,6 +717,13 @@
         "name": "Stefon Diggs",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 22.98,
+        "bye": 1.82,
+        "semis": 11.2,
+        "final": 4.17,
+        "champ": 1.55
+      },
       "luck": -0.36,
       "streak": "L1",
       "top": [
@@ -709,6 +786,13 @@
         "pts": 15.0,
         "name": "Deebo Samuel",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 92.25,
+        "bye": 49.2,
+        "semis": 75.2,
+        "final": 42.92,
+        "champ": 23.4
       },
       "luck": 0.09,
       "streak": "W1",

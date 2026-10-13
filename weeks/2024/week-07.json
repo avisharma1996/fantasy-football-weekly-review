@@ -25,6 +25,13 @@
         "name": "Bucky Irving",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 74.65,
+        "bye": 5.47,
+        "semis": 39.55,
+        "final": 16.32,
+        "champ": 7.58
+      },
       "luck": -1.11,
       "streak": "W1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 16.2,
         "name": "Najee Harris",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 2.55,
+        "bye": 0.0,
+        "semis": 1.02,
+        "final": 0.4,
+        "champ": 0.15
       },
       "luck": -2.56,
       "streak": "L7",
@@ -151,6 +165,13 @@
         "name": "Christian Kirk",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 93.6,
+        "bye": 23.62,
+        "semis": 59.88,
+        "final": 27.6,
+        "champ": 12.07
+      },
       "luck": 2.56,
       "streak": "W5",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 9.7,
         "name": "Nick Chubb",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 0.8,
+        "bye": 0.0,
+        "semis": 0.25,
+        "final": 0.03,
+        "champ": 0.0
       },
       "luck": 0.33,
       "streak": "L2",
@@ -277,6 +305,13 @@
         "name": "Kyler Murray",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 99.72,
+        "bye": 85.2,
+        "semis": 95.12,
+        "final": 61.0,
+        "champ": 38.1
+      },
       "luck": -1.33,
       "streak": "W1",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 2.4,
         "name": "DeMario Douglas",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 24.65,
+        "bye": 0.45,
+        "semis": 9.78,
+        "final": 3.65,
+        "champ": 1.38
       },
       "luck": 0.33,
       "streak": "L3",
@@ -403,6 +445,13 @@
         "name": "Sean Tucker",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 92.78,
+        "bye": 24.6,
+        "semis": 57.27,
+        "final": 23.75,
+        "champ": 8.62
+      },
       "luck": 1.22,
       "streak": "L1",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 5.5,
         "name": "Zack Moss",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 98.5,
+        "bye": 54.02,
+        "semis": 81.28,
+        "final": 46.2,
+        "champ": 24.3
       },
       "luck": -0.67,
       "streak": "L1",
@@ -529,6 +585,13 @@
         "name": "Mark Andrews",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 72.72,
+        "bye": 5.53,
+        "semis": 37.1,
+        "final": 14.28,
+        "champ": 5.45
+      },
       "luck": 1.33,
       "streak": "W3",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 18.8,
         "name": "Jordan Love",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 40.02,
+        "bye": 1.1,
+        "semis": 18.75,
+        "final": 6.78,
+        "champ": 2.35
       },
       "luck": -0.11,
       "streak": "W2",

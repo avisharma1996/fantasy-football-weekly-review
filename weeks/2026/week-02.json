@@ -25,6 +25,13 @@
         "name": "Denzel Boston",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 26.0,
+        "bye": 1.23,
+        "semis": 12.0,
+        "final": 4.6,
+        "champ": 1.48
+      },
       "luck": 0.36,
       "streak": "L1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 11.0,
         "name": "Xavier Worthy",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 45.45,
+        "bye": 4.55,
+        "semis": 21.98,
+        "final": 7.72,
+        "champ": 2.85
       },
       "luck": 1.09,
       "streak": "W2",
@@ -151,6 +165,13 @@
         "name": "Jonah Coleman",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 9.68,
+        "bye": 0.17,
+        "semis": 3.65,
+        "final": 1.07,
+        "champ": 0.47
+      },
       "luck": -0.36,
       "streak": "L2",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 10.8,
         "name": "Tank Bigsby",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 86.83,
+        "bye": 28.2,
+        "semis": 60.83,
+        "final": 30.43,
+        "champ": 13.75
       },
       "luck": -0.45,
       "streak": "W1",
@@ -277,6 +305,13 @@
         "name": "Rachaad White",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 99.53,
+        "bye": 86.65,
+        "semis": 95.7,
+        "final": 62.38,
+        "champ": 40.15
+      },
       "luck": 0.0,
       "streak": "W2",
       "top": [
@@ -340,6 +375,13 @@
         "name": "Terrance Ferguson",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 77.85,
+        "bye": 15.7,
+        "semis": 46.98,
+        "final": 20.95,
+        "champ": 8.75
+      },
       "luck": -0.18,
       "streak": "W1",
       "top": [
@@ -399,6 +441,13 @@
       "bench": 9.1,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 3.42,
+        "bye": 0.03,
+        "semis": 1.1,
+        "final": 0.38,
+        "champ": 0.1
+      },
       "luck": -0.36,
       "streak": "L2",
       "top": [
@@ -461,6 +510,13 @@
         "pts": 10.0,
         "name": "Pittsburgh Steelers D/ST",
         "pos": "DEF"
+      },
+      "odds": {
+        "playoffs": 28.3,
+        "bye": 1.75,
+        "semis": 13.32,
+        "final": 4.58,
+        "champ": 1.85
       },
       "luck": -0.82,
       "streak": "L2",
@@ -525,6 +581,13 @@
         "name": "Malik Willis",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 26.82,
+        "bye": 1.48,
+        "semis": 11.68,
+        "final": 4.15,
+        "champ": 1.4
+      },
       "luck": 0.18,
       "streak": "L1",
       "top": [
@@ -587,6 +650,13 @@
         "pts": 22.38,
         "name": "Tyler Shough",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 87.12,
+        "bye": 27.75,
+        "semis": 59.4,
+        "final": 26.35,
+        "champ": 11.15
       },
       "luck": 0.64,
       "streak": "W2",
@@ -651,6 +721,13 @@
         "name": "Dalton Schultz",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 19.85,
+        "bye": 0.88,
+        "semis": 9.1,
+        "final": 3.48,
+        "champ": 1.45
+      },
       "luck": -0.82,
       "streak": "L2",
       "top": [
@@ -713,6 +790,13 @@
         "pts": 4.4,
         "name": "T.J. Hockenson",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 89.15,
+        "bye": 31.62,
+        "semis": 64.28,
+        "final": 33.92,
+        "champ": 16.6
       },
       "luck": 0.73,
       "streak": "W2",

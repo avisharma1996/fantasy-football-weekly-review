@@ -25,6 +25,13 @@
         "name": "Zonovan Knight",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 74.1,
+        "bye": 6.0,
+        "semis": 38.35,
+        "final": 16.1,
+        "champ": 6.45
+      },
       "luck": -1.0,
       "streak": "W1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 10.3,
         "name": "Tyler Allgeier",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 87.67,
+        "bye": 15.28,
+        "semis": 49.15,
+        "final": 20.73,
+        "champ": 8.22
       },
       "luck": 0.33,
       "streak": "W2",
@@ -151,6 +165,13 @@
         "name": "Marquise Brown",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 32.4,
+        "bye": 0.78,
+        "semis": 13.38,
+        "final": 4.28,
+        "champ": 1.77
+      },
       "luck": -0.33,
       "streak": "L2",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 6.7,
         "name": "DJ Moore",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 5.1,
+        "bye": 0.0,
+        "semis": 1.8,
+        "final": 0.55,
+        "champ": 0.2
       },
       "luck": 0.0,
       "streak": "L1",
@@ -277,6 +305,13 @@
         "name": "Tyjae Spears",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 99.22,
+        "bye": 59.5,
+        "semis": 85.1,
+        "final": 50.48,
+        "champ": 29.88
+      },
       "luck": -0.11,
       "streak": "W1",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 9.8,
         "name": "Luke McCaffrey",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 67.78,
+        "bye": 3.48,
+        "semis": 33.7,
+        "final": 13.72,
+        "champ": 5.67
       },
       "luck": 1.33,
       "streak": "L1",
@@ -403,6 +445,13 @@
         "name": "Kimani Vidal",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 30.52,
+        "bye": 0.38,
+        "semis": 13.97,
+        "final": 5.62,
+        "champ": 2.38
+      },
       "luck": -1.67,
       "streak": "L5",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 4.6,
         "name": "Mark Andrews",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 5.47,
+        "bye": 0.03,
+        "semis": 1.82,
+        "final": 0.72,
+        "champ": 0.2
       },
       "luck": 0.11,
       "streak": "L3",
@@ -529,6 +585,13 @@
         "name": "Jake Tonges",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 98.85,
+        "bye": 60.92,
+        "semis": 85.17,
+        "final": 49.33,
+        "champ": 28.05
+      },
       "luck": -0.11,
       "streak": "W2",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 21.5,
         "name": "Dallas Goedert",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 98.88,
+        "bye": 53.65,
+        "semis": 77.55,
+        "final": 38.48,
+        "champ": 17.18
       },
       "luck": 1.44,
       "streak": "W4",

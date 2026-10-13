@@ -25,6 +25,13 @@
         "name": "Sam LaPorta",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 0.0,
+        "semis": 56.08,
+        "final": 22.82,
+        "champ": 11.07
+      },
       "luck": -1.78,
       "streak": "W2",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 12.7,
         "name": "Jakobi Meyers",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 38.58,
+        "bye": 0.0,
+        "semis": 18.25,
+        "final": 8.32,
+        "champ": 2.55
       },
       "luck": -2.22,
       "streak": "W3",
@@ -151,6 +165,13 @@
         "name": "Russell Wilson",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 16.98,
+        "bye": 0.0,
+        "semis": 6.17,
+        "final": 2.5,
+        "champ": 0.72
+      },
       "luck": 2.89,
       "streak": "L5",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 17.0,
         "name": "Pittsburgh Steelers D/ST",
         "pos": "DEF"
+      },
+      "odds": {
+        "playoffs": 0.2,
+        "bye": 0.0,
+        "semis": 0.07,
+        "final": 0.0,
+        "champ": 0.0
       },
       "luck": 0.22,
       "streak": "W3",
@@ -277,6 +305,13 @@
         "name": "Los Angeles Chargers D/ST",
         "pos": "DEF"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 100.0,
+        "semis": 100.0,
+        "final": 67.53,
+        "champ": 46.02
+      },
       "luck": -1.0,
       "streak": "W1",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 14.5,
         "name": "Marvin Harrison",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 44.25,
+        "bye": 0.0,
+        "semis": 18.68,
+        "final": 8.55,
+        "champ": 3.05
       },
       "luck": -0.67,
       "streak": "L3",
@@ -403,6 +445,13 @@
         "name": "Sam Darnold",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 87.22,
+        "semis": 94.55,
+        "final": 49.58,
+        "champ": 19.85
+      },
       "luck": 1.44,
       "streak": "W2",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 19.6,
         "name": "Nick Westbrook-Ikhine",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 0.0,
+        "semis": 47.92,
+        "final": 16.07,
+        "champ": 7.03
       },
       "luck": 0.44,
       "streak": "L2",
@@ -529,6 +585,13 @@
         "name": "Joe Burrow",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 12.78,
+        "semis": 58.27,
+        "final": 24.62,
+        "champ": 9.7
+      },
       "luck": 1.56,
       "streak": "L1",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 36.0,
         "name": "Jerry Jeudy",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
       },
       "luck": -0.89,
       "streak": "L3",

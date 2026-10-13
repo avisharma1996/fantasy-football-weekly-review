@@ -25,6 +25,13 @@
         "name": "Zach Charbonnet",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 28.55,
+        "bye": 1.27,
+        "semis": 11.78,
+        "final": 4.3,
+        "champ": 1.68
+      },
       "luck": -0.44,
       "streak": "W1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 15.4,
         "name": "Khalil Shakir",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 51.48,
+        "bye": 4.7,
+        "semis": 23.65,
+        "final": 9.35,
+        "champ": 3.83
       },
       "luck": -0.33,
       "streak": "L2",
@@ -151,6 +165,13 @@
         "name": "Bo Nix",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 82.97,
+        "bye": 17.98,
+        "semis": 52.83,
+        "final": 24.27,
+        "champ": 10.3
+      },
       "luck": -0.11,
       "streak": "W1",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 17.1,
         "name": "Deebo Samuel",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 4.6,
+        "bye": 0.0,
+        "semis": 1.55,
+        "final": 0.47,
+        "champ": 0.17
       },
       "luck": -0.22,
       "streak": "L2",
@@ -277,6 +305,13 @@
         "name": "Brock Purdy",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 98.88,
+        "bye": 71.7,
+        "semis": 89.25,
+        "final": 52.92,
+        "champ": 29.98
+      },
       "luck": 0.11,
       "streak": "W3",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 30.96,
         "name": "Dak Prescott",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 51.5,
+        "bye": 5.25,
+        "semis": 24.43,
+        "final": 9.82,
+        "champ": 3.85
       },
       "luck": 1.33,
       "streak": "W2",
@@ -403,6 +445,13 @@
         "name": "Hunter Henry",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 62.65,
+        "bye": 7.22,
+        "semis": 34.5,
+        "final": 15.22,
+        "champ": 7.17
+      },
       "luck": -1.0,
       "streak": "L3",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 25.9,
         "name": "Woody Marks",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 30.62,
+        "bye": 1.52,
+        "semis": 13.28,
+        "final": 5.25,
+        "champ": 2.15
       },
       "luck": 0.56,
       "streak": "L1",
@@ -529,6 +585,13 @@
         "name": "Jordan Love",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 92.42,
+        "bye": 36.73,
+        "semis": 71.6,
+        "final": 39.15,
+        "champ": 22.38
+      },
       "luck": -0.33,
       "streak": "L1",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 27.4,
         "name": "Matthew Stafford",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 96.33,
+        "bye": 53.62,
+        "semis": 77.15,
+        "final": 39.23,
+        "champ": 18.5
       },
       "luck": 0.44,
       "streak": "W2",

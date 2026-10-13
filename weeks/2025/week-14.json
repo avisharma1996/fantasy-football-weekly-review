@@ -25,6 +25,13 @@
         "name": "Kimani Vidal",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 0.0,
+        "semis": 47.65,
+        "final": 16.38,
+        "champ": 6.95
+      },
       "luck": -1.11,
       "streak": "W2",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 14.7,
         "name": "Rashid Shaheed",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 0.0,
+        "semis": 45.7,
+        "final": 14.07,
+        "champ": 5.0
       },
       "luck": 1.11,
       "streak": "L2",
@@ -151,6 +165,13 @@
         "name": "Jerry Jeudy",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 0.0,
+        "semis": 54.3,
+        "final": 18.05,
+        "champ": 7.08
+      },
       "luck": 0.33,
       "streak": "W3",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 19.36,
         "name": "Trevor Lawrence",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
       },
       "luck": -0.56,
       "streak": "L1",
@@ -277,6 +305,13 @@
         "name": "Tony Pollard",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 100.0,
+        "semis": 100.0,
+        "final": 67.88,
+        "champ": 36.92
+      },
       "luck": 0.22,
       "streak": "W1",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 25.6,
         "name": "Blake Corum",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
       },
       "luck": 1.33,
       "streak": "L1",
@@ -403,6 +445,13 @@
         "name": "Justin Herbert",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
+      },
       "luck": -3.22,
       "streak": "L6",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 11.0,
         "name": "Jacksonville Jaguars D/ST",
         "pos": "DEF"
+      },
+      "odds": {
+        "playoffs": 0.0,
+        "bye": 0.0,
+        "semis": 0.0,
+        "final": 0.0,
+        "champ": 0.0
       },
       "luck": 1.0,
       "streak": "L5",
@@ -529,6 +585,13 @@
         "name": "Zay Flowers",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 100.0,
+        "semis": 100.0,
+        "final": 65.03,
+        "champ": 36.33
+      },
       "luck": 0.11,
       "streak": "W2",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 5.4,
         "name": "John Metchie",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 0.0,
+        "semis": 52.35,
+        "final": 18.6,
+        "champ": 7.72
       },
       "luck": 0.78,
       "streak": "W1",

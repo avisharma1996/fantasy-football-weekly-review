@@ -25,6 +25,13 @@
         "name": "Zach Charbonnet",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 65.65,
+        "bye": 12.32,
+        "semis": 39.15,
+        "final": 18.15,
+        "champ": 7.75
+      },
       "luck": -0.56,
       "streak": "L1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 9.4,
         "name": "Khalil Shakir",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 86.78,
+        "bye": 34.62,
+        "semis": 62.73,
+        "final": 31.45,
+        "champ": 14.15
       },
       "luck": 0.11,
       "streak": "W1",
@@ -151,6 +165,13 @@
         "name": "Drake Maye",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 8.3,
+        "bye": 0.3,
+        "semis": 3.25,
+        "final": 0.97,
+        "champ": 0.28
+      },
       "luck": 0.0,
       "streak": "L1",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 29.52,
         "name": "Justin Fields",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 50.38,
+        "bye": 6.53,
+        "semis": 26.62,
+        "final": 11.15,
+        "champ": 4.83
       },
       "luck": -0.44,
       "streak": "L1",
@@ -277,6 +305,13 @@
         "name": "Brock Purdy",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 37.45,
+        "bye": 3.5,
+        "semis": 18.4,
+        "final": 7.3,
+        "champ": 3.02
+      },
       "luck": -0.22,
       "streak": "L1",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 7.4,
         "name": "RJ Harvey",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 79.5,
+        "bye": 23.85,
+        "semis": 53.15,
+        "final": 23.32,
+        "champ": 10.4
       },
       "luck": 0.33,
       "streak": "W1",
@@ -403,6 +445,13 @@
         "name": "J.J. McCarthy",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 99.12,
+        "bye": 82.65,
+        "semis": 93.9,
+        "final": 61.98,
+        "champ": 40.23
+      },
       "luck": 0.0,
       "streak": "W1",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 21.2,
         "name": "Keon Coleman",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 56.35,
+        "bye": 8.43,
+        "semis": 31.23,
+        "final": 13.8,
+        "champ": 5.92
       },
       "luck": 0.67,
       "streak": "W1",
@@ -529,6 +585,13 @@
         "name": "Zay Flowers",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 35.98,
+        "bye": 2.98,
+        "semis": 17.05,
+        "final": 6.33,
+        "champ": 2.42
+      },
       "luck": -0.11,
       "streak": "L1",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 27.92,
         "name": "Justin Herbert",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 80.5,
+        "bye": 24.82,
+        "semis": 54.52,
+        "final": 25.55,
+        "champ": 11.0
       },
       "luck": 0.22,
       "streak": "W1",

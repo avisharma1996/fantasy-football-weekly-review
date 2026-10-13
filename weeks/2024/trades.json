@@ -1,0 +1,396 @@
+[
+ {
+  "week": 1,
+  "at": 1725378152184,
+  "sides": [
+   {
+    "roster": "3",
+    "players": [
+     {
+      "player": "4950",
+      "pts": 17.3,
+      "name": "Christian Kirk",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 17.3
+   },
+   {
+    "roster": "7",
+    "players": [
+     {
+      "player": "7670",
+      "pts": 0,
+      "name": "Joshua Palmer",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   }
+  ]
+ },
+ {
+  "week": 1,
+  "at": 1726001779585,
+  "sides": [
+   {
+    "roster": "1",
+    "players": [
+     {
+      "player": "4981",
+      "pts": 3.4,
+      "name": "Calvin Ridley",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 3.4
+   },
+   {
+    "roster": "10",
+    "players": [
+     {
+      "player": "8137",
+      "pts": 29.0,
+      "name": "George Pickens",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 29.0
+   }
+  ]
+ },
+ {
+  "week": 3,
+  "at": 1726710820485,
+  "sides": [
+   {
+    "roster": "5",
+    "players": [
+     {
+      "player": "7547",
+      "pts": 227.78,
+      "name": "Amon-Ra St. Brown",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 10,
+    "total": 227.78
+   },
+   {
+    "roster": "7",
+    "players": [
+     {
+      "player": "7569",
+      "pts": 126.1,
+      "name": "Nico Collins",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 126.1
+   }
+  ]
+ },
+ {
+  "week": 3,
+  "at": 1726710843497,
+  "sides": [
+   {
+    "roster": "1",
+    "players": [
+     {
+      "player": "9502",
+      "pts": 51.8,
+      "name": "Tank Dell",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 51.8
+   },
+   {
+    "roster": "2",
+    "players": [
+     {
+      "player": "8134",
+      "pts": 27.3,
+      "name": "Khalil Shakir",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 27.3
+   }
+  ]
+ },
+ {
+  "week": 3,
+  "at": 1726717874403,
+  "sides": [
+   {
+    "roster": "6",
+    "players": [
+     {
+      "player": "4171",
+      "pts": 0,
+      "name": "Josh Reynolds",
+      "pos": "WR"
+     },
+     {
+      "player": "6797",
+      "pts": 0,
+      "name": "Justin Herbert",
+      "pos": "QB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   },
+   {
+    "roster": "10",
+    "players": [
+     {
+      "player": "6804",
+      "pts": 65.72,
+      "name": "Jordan Love",
+      "pos": "QB"
+     },
+     {
+      "player": "8142",
+      "pts": 0,
+      "name": "Alec Pierce",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 65.72
+   }
+  ]
+ },
+ {
+  "week": 3,
+  "at": 1726718326398,
+  "sides": [
+   {
+    "roster": "2",
+    "players": [
+     {
+      "player": "6797",
+      "pts": 136.82,
+      "name": "Justin Herbert",
+      "pos": "QB"
+     },
+     {
+      "player": "8143",
+      "pts": 26.9,
+      "name": "Jerome Ford",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 163.72
+   },
+   {
+    "roster": "6",
+    "players": [
+     {
+      "player": "5872",
+      "pts": 47.2,
+      "name": "Deebo Samuel",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 47.2
+   }
+  ]
+ },
+ {
+  "week": 4,
+  "at": 1727816946314,
+  "sides": [
+   {
+    "roster": "4",
+    "players": [
+     {
+      "player": "4098",
+      "pts": 90.0,
+      "name": "Kareem Hunt",
+      "pos": "RB"
+     },
+     {
+      "player": "8154",
+      "pts": 88.2,
+      "name": "Brian Robinson",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 178.2
+   },
+   {
+    "roster": "7",
+    "players": [
+     {
+      "player": "5892",
+      "pts": 138.72,
+      "name": "David Montgomery",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 138.72
+   }
+  ]
+ },
+ {
+  "week": 5,
+  "at": 1727985426607,
+  "sides": [
+   {
+    "roster": "6",
+    "players": [
+     {
+      "player": "9226",
+      "pts": 185.6,
+      "name": "De'Von Achane",
+      "pos": "RB"
+     },
+     {
+      "player": "9754",
+      "pts": 0,
+      "name": "Quentin Johnston",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 185.6
+   },
+   {
+    "roster": "10",
+    "players": [
+     {
+      "player": "4037",
+      "pts": 49.1,
+      "name": "Chris Godwin",
+      "pos": "WR"
+     },
+     {
+      "player": "9225",
+      "pts": 0,
+      "name": "Tank Bigsby",
+      "pos": "RB"
+     },
+     {
+      "player": "9756",
+      "pts": 12.0,
+      "name": "Jordan Addison",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 15,
+    "total": 61.1
+   }
+  ]
+ },
+ {
+  "week": 5,
+  "at": 1728095753399,
+  "sides": [
+   {
+    "roster": "1",
+    "players": [
+     {
+      "player": "9997",
+      "pts": 137.9,
+      "name": "Zay Flowers",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 137.9
+   },
+   {
+    "roster": "8",
+    "players": [
+     {
+      "player": "8676",
+      "pts": 0,
+      "name": "Rashid Shaheed",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   }
+  ]
+ },
+ {
+  "week": 9,
+  "at": 1730650292383,
+  "sides": [
+   {
+    "roster": "2",
+    "players": [
+     {
+      "player": "9224",
+      "pts": 146.0,
+      "name": "Chase Brown",
+      "pos": "RB"
+     },
+     {
+      "player": "9500",
+      "pts": 13.2,
+      "name": "Josh Downs",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 159.2
+   },
+   {
+    "roster": "6",
+    "players": [
+     {
+      "player": "5844",
+      "pts": 48.7,
+      "name": "T.J. Hockenson",
+      "pos": "TE"
+     },
+     {
+      "player": "7528",
+      "pts": 69.1,
+      "name": "Najee Harris",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 21,
+    "total": 117.8
+   }
+  ]
+ }
+]

@@ -6,8 +6,8 @@
 <meta property="og:site_name" content="Red Vines Fantasy Football">
 <meta property="og:description" content="2024 Week 1 power rankings">
 <style>
-:root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;color-scheme:dark}}
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;--hl:#2a78d6;--trend:#c4c1b9;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .layout{display:flex;max-width:1180px;margin:0 auto}
@@ -65,7 +65,8 @@ th,td{padding:10px 14px;text-align:right;white-space:nowrap;border-bottom:1px so
 tbody tr:last-child td{border-bottom:0}
 th{color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em}
 .tn{text-align:left}
-.who{display:flex;align-items:center;gap:10px;font-weight:600}.who .av{width:28px;height:28px;font-size:.75rem}
+td.wrap{white-space:normal;min-width:180px}
+.who{display:inline-flex;vertical-align:middle;align-items:center;gap:10px;font-weight:600}.who .av{width:28px;height:28px;font-size:.75rem}
 .left{display:flex;align-items:center;gap:10px;justify-content:flex-end}
 .bar{width:90px;height:8px;border-radius:99px;background:var(--chip);overflow:hidden}
 .bar span{display:block;height:100%;background:var(--up);border-radius:99px}
@@ -100,10 +101,43 @@ section+section .sec,.ranks+section .sec{margin-top:36px}
 .h2h .even{color:var(--muted)}
 .h2h .none,.h2h .self{color:var(--line)}
 .h2h .self{background:var(--chip)}
+.hint{color:var(--muted);font-size:.85rem;margin:8px 0}
+.flag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-left:6px}
+.odds td.zero{color:var(--muted)}
+.gain{color:var(--muted);font-size:.85rem;margin-left:4px}
+.chart{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 8px}
+.bump{display:block;width:100%;height:auto;overflow:visible}
+.bump .ax{fill:var(--muted);font-size:12px}
+.bump .gl{stroke:var(--line);stroke-width:1}
+.bump .ln{fill:none;stroke:var(--trend);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.bump .hit{fill:none;stroke:transparent;stroke-width:14;pointer-events:stroke}
+.bump circle{fill:var(--trend);stroke:var(--card);stroke-width:2;opacity:0}
+.bump .nm{fill:var(--muted);font-size:13px}
+.bump .series{cursor:pointer;outline:none}
+.bump.has-on .series:not(.on){opacity:.3}
+.bump .series.on .ln{stroke:var(--hl);stroke-width:3}
+.bump .series.on circle{fill:var(--hl);opacity:1}
+.bump .series.on .nm{fill:var(--ink);font-weight:700}
+.tip{position:absolute;transform:translate(-50%,-100%);background:var(--ink);color:var(--bg);font-size:.8rem;padding:4px 8px;border-radius:6px;pointer-events:none;white-space:nowrap}
+.tview{margin-top:10px}.tview summary{cursor:pointer;color:var(--muted);font-size:.85rem}.tview .tbl{margin-top:8px}
+.deal{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.deal .when{color:var(--muted);font-size:.8rem;font-weight:600;margin-bottom:8px}
+.deal .sides{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.deal .side{border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.deal .side.lead{border-color:var(--up);box-shadow:inset 3px 0 0 var(--up)}
+.deal .side .lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin:8px 0 4px}
+.got{list-style:none;padding:0;margin:0;font-size:.9rem}
+.got li{display:flex;gap:8px;align-items:baseline;padding:2px 0}
+.got .pos{color:var(--muted);font-size:.7rem;font-weight:700;min-width:2.2em}
+.got .pp{margin-left:auto;font-variant-numeric:tabular-nums}
+.got .note{color:var(--muted)}
+.deal .tot{margin-top:8px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.deal .verdict{margin-top:10px;font-size:.92rem}
+.amt.up{color:var(--up)}.amt.down{color:var(--down)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 </style></head>
 <body><div class="layout">
-<aside class="seasons"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-05.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html" class=cur>2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2024/faab.html">FAAB Tracker</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a></div></div></aside>
+<aside class="seasons"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-05.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html" class=cur>2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2024/faab.html">FAAB Tracker</a><a href="../2024/trades.html">Trade Grades</a><a href="../2024/draft.html">Draft Report Card</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a></div></div></aside>
 <main class="wrap">
 <header><img class="logo" src="https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f" alt=""><div><div class="kicker">Red Vines · 2024 · Week 1</div><h1>Week 1 Power Rankings</h1></div></header>
 <nav><a href="../2024/week-01.html" class=cur>Wk 1</a><a href="../2024/week-02.html">Wk 2</a><a href="../2024/week-03.html">Wk 3</a><a href="../2024/week-04.html">Wk 4</a><a href="../2024/week-05.html">Wk 5</a><a href="../2024/week-06.html">Wk 6</a><a href="../2024/week-07.html">Wk 7</a><a href="../2024/week-08.html">Wk 8</a><a href="../2024/week-09.html">Wk 9</a><a href="../2024/week-10.html">Wk 10</a><a href="../2024/week-11.html">Wk 11</a><a href="../2024/week-12.html">Wk 12</a><a href="../2024/week-13.html">Wk 13</a><a href="../2024/week-14.html">Wk 14</a></nav>
@@ -113,7 +147,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/881b4fa23c1e0a38f87f10a15e2251f2.jpg" alt="" loading="lazy"><div><h2>Ducky Irving</h2>
         <div class="meta"><b>2-0</b> · 135.48 PF · W1</div>
-        <div class="meta">All-play 9-0 · Luck <span class="">+0.0</span> · 15.4 pts left on bench</div></div></div>
+        <div class="meta">All-play 9-0 · Luck <span class="">+0.0</span> · 15.4 pts left on bench · Playoffs 96% · Title 26%</div></div></div>
       
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB1</span>Josh Allen<span class="pp">31.2</span></li><li><span class="pos">DEF1</span>Chicago Bears D/ST<span class="pp">25.0</span></li><li><span class="pos">RB9</span>Aaron Jones<span class="pp">17.9</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">QB1</span>Josh Allen<span class="pp">31.2</span></li><li><span class="pos">DEF1</span>Chicago Bears D/ST<span class="pp">25.0</span></li><li><span class="pos">RB9</span>Aaron Jones<span class="pp">17.9</span></li></ul></div>
     </div>
@@ -123,7 +157,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><div><h2>Amver Alert🚨</h2>
         <div class="meta"><b>2-0</b> · 134.38 PF · W1</div>
-        <div class="meta">All-play 8-1 · Luck <span class="">+0.1</span> · 32.5 pts left on bench</div></div></div>
+        <div class="meta">All-play 8-1 · Luck <span class="">+0.1</span> · 32.5 pts left on bench · Playoffs 96% · Title 24%</div></div></div>
       
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB2</span>Joe Mixon<span class="pp">25.3</span></li><li><span class="pos">K4</span>Brandon Aubrey<span class="pp">21.0</span></li><li><span class="pos">DEF4</span>New Orleans Saints D/ST<span class="pp">15.0</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB2</span>Joe Mixon<span class="pp">25.3</span></li><li><span class="pos">K4</span>Brandon Aubrey<span class="pp">21.0</span></li><li><span class="pos">DEF4</span>New Orleans Saints D/ST<span class="pp">15.0</span></li></ul></div>
     </div>
@@ -133,7 +167,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><div><h2>yrkpapi</h2>
         <div class="meta"><b>2-0</b> · 122.18 PF · W1</div>
-        <div class="meta">All-play 7-2 · Luck <span class="">+0.2</span> · 32.5 pts left on bench</div></div></div>
+        <div class="meta">All-play 7-2 · Luck <span class="">+0.2</span> · 32.5 pts left on bench · Playoffs 84% · Title 13%</div></div></div>
       
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB4</span>Anthony Richardson<span class="pp">27.1</span></li><li><span class="pos">K2</span>Jake Moody<span class="pp">26.0</span></li><li><span class="pos">RB7</span>Alvin Kamara<span class="pp">19.5</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">QB4</span>Anthony Richardson<span class="pp">27.1</span></li><li><span class="pos">K2</span>Jake Moody<span class="pp">26.0</span></li><li><span class="pos">RB7</span>Alvin Kamara<span class="pp">19.5</span></li></ul></div>
     </div>
@@ -143,7 +177,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/43b7fcba29e5b6bae3600185cb229986.jpg" alt="" loading="lazy"><div><h2>Ankitty</h2>
         <div class="meta"><b>2-0</b> · 119.16 PF · W1</div>
-        <div class="meta">All-play 5-4 · Luck <span class="">+0.4</span> · 16.1 pts left on bench</div></div></div>
+        <div class="meta">All-play 5-4 · Luck <span class="">+0.4</span> · 16.1 pts left on bench · Playoffs 80% · Title 11%</div></div></div>
       
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR4</span>Tyreek Hill<span class="pp">22.5</span></li><li><span class="pos">WR10</span>Stefon Diggs<span class="pp">18.9</span></li><li><span class="pos">RB8</span>Kenneth Walker<span class="pp">17.9</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR4</span>Tyreek Hill<span class="pp">22.5</span></li><li><span class="pos">WR10</span>Stefon Diggs<span class="pp">18.9</span></li><li><span class="pos">RB8</span>Kenneth Walker<span class="pp">17.9</span></li></ul></div>
     </div>
@@ -153,7 +187,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><div><h2>superdiddy</h2>
         <div class="meta"><b>1-1</b> · 122.12 PF · L1</div>
-        <div class="meta">All-play 6-3 · Luck <span class="down">-0.7</span> · 8.8 pts left on bench</div></div></div>
+        <div class="meta">All-play 6-3 · Luck <span class="down">-0.7</span> · 8.8 pts left on bench · Playoffs 79% · Title 11%</div></div></div>
       
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB1</span>Saquon Barkley<span class="pp">32.2</span></li><li><span class="pos">WR6</span>Mike Evans<span class="pp">20.6</span></li><li><span class="pos">QB10</span>Jalen Hurts<span class="pp">18.4</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB1</span>Saquon Barkley<span class="pp">32.2</span></li><li><span class="pos">WR6</span>Mike Evans<span class="pp">20.6</span></li><li><span class="pos">QB10</span>Jalen Hurts<span class="pp">18.4</span></li></ul></div>
     </div>
@@ -163,7 +197,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><div><h2>WE DID NOT DO IT</h2>
         <div class="meta"><b>1-1</b> · 117.10 PF · W1</div>
-        <div class="meta">All-play 4-5 · Luck <span class="up">+0.6</span> · 28.2 pts left on bench</div></div></div>
+        <div class="meta">All-play 4-5 · Luck <span class="up">+0.6</span> · 28.2 pts left on bench · Playoffs 69% · Title 8%</div></div></div>
       
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR2</span>Cooper Kupp<span class="pp">25.0</span></li><li><span class="pos">RB10</span>James Conner<span class="pp">17.8</span></li><li><span class="pos">QB11</span>Jordan Love<span class="pp">17.4</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR2</span>Cooper Kupp<span class="pp">25.0</span></li><li><span class="pos">RB10</span>James Conner<span class="pp">17.8</span></li><li><span class="pos">QB11</span>Jordan Love<span class="pp">17.4</span></li></ul></div>
     </div>
@@ -173,7 +207,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/c01bc166669b9a82696745d962741855.jpg" alt="" loading="lazy"><div><h2>Not Last Place == W</h2>
         <div class="meta"><b>0-2</b> · 106.42 PF · L1</div>
-        <div class="meta">All-play 3-6 · Luck <span class="">-0.3</span> · 18.0 pts left on bench</div></div></div>
+        <div class="meta">All-play 3-6 · Luck <span class="">-0.3</span> · 18.0 pts left on bench · Playoffs 33% · Title 3%</div></div></div>
       
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB5</span>Lamar Jackson<span class="pp">25.1</span></li><li><span class="pos">RB17</span>Isiah Pacheco<span class="pp">14.8</span></li><li><span class="pos">WR15</span>Justin Jefferson<span class="pp">13.9</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">QB5</span>Lamar Jackson<span class="pp">25.1</span></li><li><span class="pos">RB17</span>Isiah Pacheco<span class="pp">14.8</span></li><li><span class="pos">WR15</span>Justin Jefferson<span class="pp">13.9</span></li></ul></div>
     </div>
@@ -183,7 +217,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><div><h2>Braelon Allen</h2>
         <div class="meta"><b>0-2</b> · 103.94 PF · L1</div>
-        <div class="meta">All-play 2-7 · Luck <span class="">-0.2</span> · 7.7 pts left on bench</div></div></div>
+        <div class="meta">All-play 2-7 · Luck <span class="">-0.2</span> · 7.7 pts left on bench · Playoffs 28% · Title 2%</div></div></div>
       
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB5</span>Rhamondre Stevenson<span class="pp">20.1</span></li><li><span class="pos">K5</span>Ka&#x27;imi Fairbairn<span class="pp">17.0</span></li><li><span class="pos">RB15</span>David Montgomery<span class="pp">15.8</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB5</span>Rhamondre Stevenson<span class="pp">20.1</span></li><li><span class="pos">K5</span>Ka&#x27;imi Fairbairn<span class="pp">17.0</span></li><li><span class="pos">RB15</span>David Montgomery<span class="pp">15.8</span></li></ul></div>
     </div>
@@ -193,7 +227,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><div><h2>Karans Fraud-book</h2>
         <div class="meta"><b>0-2</b> · 101.36 PF · L1</div>
-        <div class="meta">All-play 1-8 · Luck <span class="">-0.1</span> · 17.2 pts left on bench</div></div></div>
+        <div class="meta">All-play 1-8 · Luck <span class="">-0.1</span> · 17.2 pts left on bench · Playoffs 25% · Title 2%</div></div></div>
       
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR7</span>A.J. Brown<span class="pp">20.4</span></li><li><span class="pos">WR12</span>Deebo Samuel<span class="pp">16.2</span></li><li><span class="pos">RB16</span>Jahmyr Gibbs<span class="pp">15.4</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR7</span>A.J. Brown<span class="pp">20.4</span></li><li><span class="pos">WR12</span>Deebo Samuel<span class="pp">16.2</span></li><li><span class="pos">RB16</span>Jahmyr Gibbs<span class="pp">15.4</span></li></ul></div>
     </div>
@@ -203,10 +237,13 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
     <div class="rank-body">
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/8c3c0f4de8052276c77518f04d8c421d.jpg" alt="" loading="lazy"><div><h2>... Sanak al-Gaib!</h2>
         <div class="meta"><b>0-2</b> · 90.86 PF · L1</div>
-        <div class="meta">All-play 0-9 · Luck <span class="">+0.0</span> · 6.3 pts left on bench</div></div></div>
+        <div class="meta">All-play 0-9 · Luck <span class="">+0.0</span> · 6.3 pts left on bench · Playoffs 10% · Title <1%</div></div></div>
       
       <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB6</span>De&#x27;Von Achane<span class="pp">19.5</span></li><li><span class="pos">QB8</span>C.J. Stroud<span class="pp">18.7</span></li><li><span class="pos">RB20</span>Rachaad White<span class="pp">13.6</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB6</span>De&#x27;Von Achane<span class="pp">19.5</span></li><li><span class="pos">QB8</span>C.J. Stroud<span class="pp">18.7</span></li><li><span class="pos">RB20</span>Rachaad White<span class="pp">13.6</span></li></ul></div>
     </div>
-  </li></ol><section><h2 class="sec">Week 1 Awards</h2><div class="awards"><div class="award"><div class="lbl">Top score</div><div class="who">Ducky Irving</div><div class="val">135.48 pts</div></div><div class="award"><div class="lbl">Basement</div><div class="who">... Sanak al-Gaib!</div><div class="val">90.86 pts</div></div><div class="award"><div class="lbl">Biggest blowout</div><div class="who">Amver Alert🚨 over Braelon Allen</div><div class="val">by 30.44</div></div><div class="award"><div class="lbl">Closest game</div><div class="who">Ducky Irving over superdiddy</div><div class="val">by 13.36</div></div><div class="award"><div class="lbl">Unluckiest loss</div><div class="who">superdiddy</div><div class="val">122.12 pts and still lost</div></div><div class="award"><div class="lbl">Luckiest win</div><div class="who">WE DID NOT DO IT</div><div class="val">won with 117.10 pts</div></div><div class="award"><div class="lbl">Benchwarmer</div><div class="who">Amver Alert🚨</div><div class="val">32.5 pts left on the bench (Jayden Reed scored 31.1)</div></div></div></section><section><h2 class="sec">Season So Far</h2><div class="awards"><div class="award"><div class="lbl">Luckiest team</div><div class="who">WE DID NOT DO IT</div><div class="val">+0.6 wins vs. expected</div></div><div class="award"><div class="lbl">Unluckiest team</div><div class="who">superdiddy</div><div class="val">-0.7 wins vs. expected</div></div><div class="award"><div class="lbl">Lineup genius</div><div class="who">... Sanak al-Gaib!</div><div class="val">only 6.3 pts left on the bench</div></div><div class="award"><div class="lbl">Lineup disaster</div><div class="who">yrkpapi</div><div class="val">32.5 pts left on the bench</div></div></div></section>
+  </li></ol><section><h2 class="sec">Playoff Odds</h2><div class="tbl"><table class="odds">
+  <thead><tr><th class="tn">Team</th><th>Record</th><th>Champion</th><th>Final</th><th>Semifinals</th><th>Bye</th><th>Playoffs</th></tr></thead><tbody><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/881b4fa23c1e0a38f87f10a15e2251f2.jpg" alt="" loading="lazy"><span>Ducky Irving</span></span></td><td>2-0</td><td class="">26%</td><td class="">46%</td><td class="">81%</td><td class="">58%</td><td class="">96%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><span>Amver Alert🚨</span></span></td><td>2-0</td><td class="">24%</td><td class="">45%</td><td class="">80%</td><td class="">56%</td><td class="">96%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi</span></span></td><td>2-0</td><td class="">13%</td><td class="">27%</td><td class="">56%</td><td class="">26%</td><td class="">84%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/43b7fcba29e5b6bae3600185cb229986.jpg" alt="" loading="lazy"><span>Ankitty</span></span></td><td>2-0</td><td class="">11%</td><td class="">24%</td><td class="">51%</td><td class="">22%</td><td class="">80%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><span>superdiddy</span></span></td><td>1-1</td><td class="">11%</td><td class="">23%</td><td class="">50%</td><td class="">19%</td><td class="">79%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><span>WE DID NOT DO IT</span></span></td><td>1-1</td><td class="">8%</td><td class="">18%</td><td class="">40%</td><td class="">13%</td><td class="">69%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/c01bc166669b9a82696745d962741855.jpg" alt="" loading="lazy"><span>Not Last Place == W</span></span></td><td>0-2</td><td class="">3%</td><td class="">6%</td><td class="">15%</td><td class="">3%</td><td class="">33%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><span>Braelon Allen</span></span></td><td>0-2</td><td class="">2%</td><td class="">4%</td><td class="">12%</td><td class="">1%</td><td class="">28%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><span>Karans Fraud-book</span></span></td><td>0-2</td><td class="">2%</td><td class="">4%</td><td class="">11%</td><td class="">1%</td><td class="">25%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/8c3c0f4de8052276c77518f04d8c421d.jpg" alt="" loading="lazy"><span>... Sanak al-Gaib!</span></span></td><td>0-2</td><td class=""><1%</td><td class="">1%</td><td class="">4%</td><td class=""><1%</td><td class="">10%</td></tr></tbody></table></div>
+<p class="hint">Chance of reaching each round, from 4,000 simulations of the rest of the regular season and the playoffs.
+Each team's future scores are drawn around its scoring average so far.</p></section><section><h2 class="sec">Week 1 Awards</h2><div class="awards"><div class="award"><div class="lbl">Top score</div><div class="who">Ducky Irving</div><div class="val">135.48 pts</div></div><div class="award"><div class="lbl">Basement</div><div class="who">... Sanak al-Gaib!</div><div class="val">90.86 pts</div></div><div class="award"><div class="lbl">Biggest blowout</div><div class="who">Amver Alert🚨 over Braelon Allen</div><div class="val">by 30.44</div></div><div class="award"><div class="lbl">Closest game</div><div class="who">Ducky Irving over superdiddy</div><div class="val">by 13.36</div></div><div class="award"><div class="lbl">Unluckiest loss</div><div class="who">superdiddy</div><div class="val">122.12 pts and still lost</div></div><div class="award"><div class="lbl">Luckiest win</div><div class="who">WE DID NOT DO IT</div><div class="val">won with 117.10 pts</div></div><div class="award"><div class="lbl">Benchwarmer</div><div class="who">Amver Alert🚨</div><div class="val">32.5 pts left on the bench (Jayden Reed scored 31.1)</div></div></div></section><section><h2 class="sec">Season So Far</h2><div class="awards"><div class="award"><div class="lbl">Luckiest team</div><div class="who">WE DID NOT DO IT</div><div class="val">+0.6 wins vs. expected</div></div><div class="award"><div class="lbl">Unluckiest team</div><div class="who">superdiddy</div><div class="val">-0.7 wins vs. expected</div></div><div class="award"><div class="lbl">Lineup genius</div><div class="who">... Sanak al-Gaib!</div><div class="val">only 6.3 pts left on the bench</div></div><div class="award"><div class="lbl">Lineup disaster</div><div class="who">yrkpapi</div><div class="val">32.5 pts left on the bench</div></div></div></section>
 <footer>Records include a game against the league median each week. All-play is the record a team would have playing every other team every week. Luck is actual head-to-head wins minus the wins that all-play scoring would expect. Bench is how many more points the best possible lineup would have scored. Top performers are points scored as a starter for that team: overall is the season through that week, weekly is that week alone. QB1, RB3, etc. is the player's rank at his position across the NFL over the same span. Stats from Sleeper. Rankings are the commissioner's own.</footer>
 </main></div></body></html>

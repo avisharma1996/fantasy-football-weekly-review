@@ -25,6 +25,13 @@
         "name": "Ladd McConkey",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 95.8,
+        "bye": 58.12,
+        "semis": 81.03,
+        "final": 45.98,
+        "champ": 25.8
+      },
       "luck": 0.0,
       "streak": "W1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 19.8,
         "name": "Xavier Worthy",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 24.93,
+        "bye": 1.43,
+        "semis": 10.85,
+        "final": 4.17,
+        "champ": 1.8
       },
       "luck": -0.11,
       "streak": "L1",
@@ -151,6 +165,13 @@
         "name": "Tony Pollard",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 80.25,
+        "bye": 22.1,
+        "semis": 51.23,
+        "final": 24.32,
+        "champ": 11.25
+      },
       "luck": 0.44,
       "streak": "W1",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 7.0,
         "name": "Romeo Doubs",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 27.65,
+        "bye": 1.43,
+        "semis": 12.0,
+        "final": 4.5,
+        "champ": 1.8
       },
       "luck": -0.22,
       "streak": "L1",
@@ -277,6 +305,13 @@
         "name": "Jayden Reed",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 95.75,
+        "bye": 55.67,
+        "semis": 79.92,
+        "final": 44.7,
+        "champ": 23.8
+      },
       "luck": 0.11,
       "streak": "W1",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 28.16,
         "name": "Jayden Daniels",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 69.12,
+        "bye": 12.68,
+        "semis": 39.73,
+        "final": 18.48,
+        "champ": 8.05
       },
       "luck": 0.56,
       "streak": "W1",
@@ -403,6 +445,13 @@
         "name": "Jameson Williams",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 84.38,
+        "bye": 26.25,
+        "semis": 56.08,
+        "final": 27.1,
+        "champ": 13.2
+      },
       "luck": 0.22,
       "streak": "W1",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 21.7,
         "name": "Jordan Mason",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 33.02,
+        "bye": 2.7,
+        "semis": 15.2,
+        "final": 6.1,
+        "champ": 2.7
       },
       "luck": -0.33,
       "streak": "L1",
@@ -529,6 +585,13 @@
         "name": "Keon Coleman",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 79.03,
+        "bye": 19.38,
+        "semis": 49.92,
+        "final": 23.27,
+        "champ": 11.15
+      },
       "luck": -0.67,
       "streak": "L1",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 8.8,
         "name": "Brock Bowers",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 10.07,
+        "bye": 0.25,
+        "semis": 4.05,
+        "final": 1.38,
+        "champ": 0.45
       },
       "luck": 0.0,
       "streak": "L1",

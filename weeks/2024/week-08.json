@@ -25,6 +25,13 @@
         "name": "Rhamondre Stevenson",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 73.95,
+        "bye": 7.53,
+        "semis": 41.55,
+        "final": 18.8,
+        "champ": 8.4
+      },
       "luck": -1.67,
       "streak": "L1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 26.1,
         "name": "Ladd McConkey",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 5.5,
+        "bye": 0.03,
+        "semis": 1.98,
+        "final": 0.75,
+        "champ": 0.35
       },
       "luck": -2.33,
       "streak": "W1",
@@ -151,6 +165,13 @@
         "name": "Christian Kirk",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 91.42,
+        "bye": 26.52,
+        "semis": 59.77,
+        "final": 27.23,
+        "champ": 12.03
+      },
       "luck": 3.33,
       "streak": "W6",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 14.6,
         "name": "Puka Nacua",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 0.07,
+        "bye": 0.0,
+        "semis": 0.05,
+        "final": 0.0,
+        "champ": 0.0
       },
       "luck": 0.22,
       "streak": "L3",
@@ -277,6 +305,13 @@
         "name": "Tyrone Tracy",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 95.12,
+        "semis": 98.28,
+        "final": 65.72,
+        "champ": 42.7
+      },
       "luck": -1.33,
       "streak": "W2",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 10.6,
         "name": "Deebo Samuel",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 47.27,
+        "bye": 2.88,
+        "semis": 21.9,
+        "final": 8.15,
+        "champ": 3.15
       },
       "luck": 0.44,
       "streak": "W1",
@@ -403,6 +445,13 @@
         "name": "Baker Mayfield",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 94.05,
+        "bye": 33.9,
+        "semis": 62.5,
+        "final": 27.27,
+        "champ": 10.28
+      },
       "luck": 1.78,
       "streak": "W1",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 9.6,
         "name": "Tank Bigsby",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 90.03,
+        "bye": 23.95,
+        "semis": 62.0,
+        "final": 30.9,
+        "champ": 14.68
       },
       "luck": -0.67,
       "streak": "L2",
@@ -529,6 +585,13 @@
         "name": "Mark Andrews",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 74.35,
+        "bye": 9.57,
+        "semis": 40.88,
+        "final": 16.57,
+        "champ": 6.5
+      },
       "luck": 0.67,
       "streak": "L1",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 15.5,
         "name": "Raheem Mostert",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 23.35,
+        "bye": 0.5,
+        "semis": 11.1,
+        "final": 4.6,
+        "champ": 1.93
       },
       "luck": -0.44,
       "streak": "L1",

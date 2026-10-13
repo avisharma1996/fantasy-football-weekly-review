@@ -1,0 +1,70 @@
+[
+ {
+  "week": 1,
+  "at": 1788840001214,
+  "sides": [
+   {
+    "roster": "6",
+    "players": [
+     {
+      "player": "12514",
+      "pts": 28.6,
+      "name": "Emeka Egbuka",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 28.6
+   },
+   {
+    "roster": "7",
+    "players": [
+     {
+      "player": "9487",
+      "pts": 70.5,
+      "name": "Parker Washington",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 70.5
+   }
+  ]
+ },
+ {
+  "week": 5,
+  "at": 1791487181634,
+  "sides": [
+   {
+    "roster": "7",
+    "players": [
+     {
+      "player": "11637",
+      "pts": 0,
+      "name": "Keon Coleman",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   },
+   {
+    "roster": "10",
+    "players": [
+     {
+      "player": "12509",
+      "pts": 0,
+      "name": "Tre' Harris",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   }
+  ]
+ }
+]

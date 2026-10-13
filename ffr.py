@@ -11,8 +11,10 @@ The season defaults to the newest one in config.json.
 
 import html
 import json
+import random
 import re
 import shutil
+import statistics
 import sys
 import time
 import urllib.request
@@ -176,7 +178,7 @@ def fetch_week(league_id, week):
         starter_pts[r["roster_id"]] = {}
         week_pts[r["roster_id"]] = {}
 
-    this_week = []
+    this_week, scores = [], {r: [] for r in teams}
     for w in range(1, week + 1):
         entries = get(f"/league/{league_id}/matchups/{w}")
         pts = {e["roster_id"]: float(e.get("custom_points") or e.get("points") or 0) for e in entries}
@@ -202,6 +204,7 @@ def fetch_week(league_id, week):
 
         if regular and len(pts) > 1:
             for rid, p in pts.items():
+                scores[rid].append(p)
                 beat = sum(p > q for o, q in pts.items() if o != rid)
                 tied = sum(p == q for o, q in pts.items() if o != rid)
                 t = teams[rid]
@@ -229,6 +232,18 @@ def fetch_week(league_id, week):
                     t["h2h_wins"] += 1 if pts[me] > pts[opp] else 0.5 if pts[me] == pts[opp] else 0
             if w == week:
                 this_week.append({"a": str(a), "a_pts": round(pts[a], 2), "b": str(b), "b_pts": round(pts[b], 2)})
+
+    if week < playoff_start:
+        remaining = []
+        for w in range(week + 1, playoff_start):
+            pairs = {}
+            for e in get(f"/league/{league_id}/matchups/{w}") or []:
+                if e.get("matchup_id"):
+                    pairs.setdefault(e["matchup_id"], []).append(e["roster_id"])
+            remaining.append([tuple(p) for p in pairs.values() if len(p) == 2])
+        odds = playoff_odds(league, teams, scores, remaining, seed=int(league["season"]) * 100 + week)
+        for rid, o in odds.items():
+            teams[rid]["odds"] = o
 
     top3 = lambda pts: sorted(pts.items(), key=lambda kv: -kv[1])[:3]
     top = {rid: top3(totals) for rid, totals in starter_pts.items()}
@@ -317,12 +332,148 @@ def fetch_faab(league_id):
                 elif "claimed by another owner" in ((t.get("metadata") or {}).get("notes") or ""):
                     lost.setdefault((t["leg"], pid), []).append({"roster": rid, "bid": bid})
     players = load_players({c["player"] for c in claims})
+    started = started_points(league_id)
     for c in claims:
+        c["pts"] = points_after(started, c["roster"], c["player"], c["week"])
         p = players.get(c["player"], {"name": c["player"], "pos": ""})
         c["name"], c["pos"] = p["name"], p["pos"]
         c["outbid"] = sorted(lost.get((c["week"], c["player"]), []), key=lambda o: -o["bid"])
     claims.sort(key=lambda c: (c["week"], -c["bid"], c["at"]))
     return {"budget": (league.get("settings") or {}).get("waiver_budget") or 100, "claims": claims, "trades": trades}
+
+
+def started_points(league_id):
+    """{(roster_id, player_id): {week: points}} for every player in a starting lineup, all scored weeks."""
+    league = get(f"/league/{league_id}")
+    last = min((league.get("settings") or {}).get("last_scored_leg") or 0, 18)
+    out = {}
+    for w in range(1, last + 1):
+        for e in get(f"/league/{league_id}/matchups/{w}") or []:
+            for pid, p in zip(e.get("starters") or [], e.get("starters_points") or []):
+                if pid and pid != "0":
+                    out.setdefault((str(e["roster_id"]), pid), {})[w] = p or 0
+    return out
+
+
+def points_after(started, rid, pid, week):
+    """Points a player scored in `rid`'s starting lineup from `week` on."""
+    return round(sum(p for w, p in started.get((rid, pid), {}).items() if w >= week), 2)
+
+
+def fetch_trades(league_id):
+    """Every completed trade, with what each side received and how much those players scored for them afterward."""
+    started = started_points(league_id)
+    trades, ids = [], set()
+    for w in range(0, 19):
+        for t in get(f"/league/{league_id}/transactions/{w}") or []:
+            if t.get("type") != "trade" or t["status"] != "complete":
+                continue
+            sides = []
+            for rid in map(str, t["roster_ids"]):
+                got = [pid for pid, r in (t.get("adds") or {}).items() if str(r) == rid]
+                ids.update(got)
+                sides.append({
+                    "roster": rid,
+                    "players": [{"player": pid, "pts": points_after(started, rid, pid, t["leg"])} for pid in got],
+                    "picks": [{"season": p["season"], "round": p["round"], "from": str(p["roster_id"])}
+                              for p in t.get("draft_picks") or [] if str(p["owner_id"]) == rid],
+                    "faab": sum(x["amount"] for x in t.get("waiver_budget") or [] if str(x["receiver"]) == rid),
+                })
+            trades.append({"week": t["leg"], "at": t["status_updated"], "sides": sides})
+    players = load_players(ids)
+    for t in trades:
+        for s in t["sides"]:
+            for p in s["players"]:
+                info = players.get(p["player"], {"name": p["player"], "pos": ""})
+                p["name"], p["pos"] = info["name"], info["pos"]
+            s["total"] = round(sum(p["pts"] for p in s["players"]), 2)
+    return sorted(trades, key=lambda t: t["at"])
+
+
+def fetch_draft(league_id):
+    """Each draft pick's season finish at his position compared with where he went at that position."""
+    league = get(f"/league/{league_id}")
+    settings = league.get("settings") or {}
+    drafts = [d for d in get(f"/league/{league_id}/drafts") or [] if d.get("status") == "complete"]
+    if not drafts:
+        return None
+    picks = sorted(get(f"/draft/{drafts[0]['draft_id']}/picks") or [], key=lambda p: p["pick_no"])
+    last = min((settings.get("playoff_week_start") or 15) - 1, settings.get("last_scored_leg") or 0)
+    scoring = league.get("scoring_settings") or {}
+    totals = {}
+    for w in range(1, last + 1):
+        for pid, stats in get(f"/stats/nfl/regular/{league['season']}/{w}").items():
+            totals[pid] = totals.get(pid, 0) + sum(stats[k] * v for k, v in scoring.items()
+                                                   if isinstance(stats.get(k), (int, float)))
+    players = load_players({p["player_id"] for p in picks})
+    pos_of = lambda pid: players.get(pid, {}).get("pos") or ""
+    by_pos = {}
+    for pid, pts in totals.items():
+        if pts > 0 and pos_of(pid):
+            by_pos.setdefault(pos_of(pid), []).append((pts, pid))
+    finish = {pid: i for ranked in by_pos.values() for i, (_, pid) in enumerate(sorted(ranked, reverse=True), 1)}
+    taken, out = {}, []
+    for p in picks:
+        pid, pos = p["player_id"], pos_of(p["player_id"])
+        taken[pos] = taken.get(pos, 0) + 1
+        # Someone who never scored finishes behind everyone who did.
+        fin = finish.get(pid, len(by_pos.get(pos, [])) + 1)
+        out.append({"round": p["round"], "pick": p["pick_no"], "roster": str(p["roster_id"]), "owner": p.get("picked_by"),
+                    "name": players.get(pid, {}).get("name", pid), "pos": pos, "pts": round(totals.get(pid, 0), 2),
+                    "drafted": taken[pos], "finish": fin, "value": taken[pos] - fin, "keeper": bool(p.get("is_keeper"))})
+    return {"through_week": last, "complete": league.get("status") == "complete", "picks": out}
+
+
+def playoff_odds(league, teams, scores, remaining, sims=4000, seed=0):
+    """Simulate the rest of the regular season and the bracket. `scores` maps roster id to its weekly scores so far;
+    `remaining` is a list of weeks, each a list of (a, b) pairings. Returns {roster_id: {round: % of sims reached}}
+    for playoffs, bye, semis, final and champ."""
+    settings = league.get("settings") or {}
+    n_playoff = settings.get("playoff_teams") or 6
+    median_game = settings.get("league_average_match") == 1
+    played = [s for v in scores.values() for s in v]
+    if len(played) < 2 or n_playoff not in (4, 6, 8):
+        return {}
+    avg, sd = statistics.mean(played), statistics.pstdev(played) or 1
+    # Shrink each team toward the league average early in the season.
+    mean = {r: (sum(v) + 3 * avg) / (len(v) + 3) for r, v in scores.items()}
+    rng = random.Random(seed)
+    reached = {r: dict.fromkeys(("playoffs", "bye", "semis", "final", "champ"), 0) for r in teams}
+
+    def game(a, b):
+        return a if rng.gauss(mean[a], sd) >= rng.gauss(mean[b], sd) else b
+
+    for _ in range(sims):
+        wins = {r: teams[r]["wins"] + teams[r]["ties"] / 2 for r in teams}
+        pf = {r: teams[r]["pf"] for r in teams}
+        for pairs in remaining:
+            week = {r: rng.gauss(mean[r], sd) for r in teams}
+            for a, b in pairs:
+                wins[a if week[a] > week[b] else b] += 1
+            for r in teams:
+                pf[r] += week[r]
+            if median_game:
+                for r in sorted(week, key=week.get, reverse=True)[:len(week) // 2]:
+                    wins[r] += 1
+        s = sorted(teams, key=lambda r: (-wins[r], -pf[r]))[:n_playoff]
+        for r in s:
+            reached[r]["playoffs"] += 1
+        # Brackets aren't reseeded: 1 meets the 4/5 winner, 2 meets the 3/6 winner.
+        if n_playoff == 4:
+            semis = s
+        elif n_playoff == 6:
+            for r in s[:2]:
+                reached[r]["bye"] += 1
+            semis = [s[0], game(s[3], s[4]), s[1], game(s[2], s[5])]
+        else:
+            semis = [game(s[0], s[7]), game(s[3], s[4]), game(s[1], s[6]), game(s[2], s[5])]
+        final = [game(semis[0], semis[1]), game(semis[2], semis[3])]
+        for r in semis:
+            reached[r]["semis"] += 1
+        for r in final:
+            reached[r]["final"] += 1
+        reached[game(*final)]["champ"] += 1
+    return {r: {k: round(100 * v / sims, 2) for k, v in counts.items()} for r, counts in reached.items()}
 
 
 def record(t, mine, theirs):
@@ -367,6 +518,9 @@ def new_week(week, season=None):
     faab = WEEKS / season / "faab.json"
     faab.write_text(json.dumps(fetch_faab(seasons[season]), indent=1, ensure_ascii=False), encoding="utf-8")
     HISTORY.write_text(json.dumps(fetch_history(seasons), indent=1, ensure_ascii=False), encoding="utf-8")
+    for name, fetch in (("trades", fetch_trades), ("draft", fetch_draft)):
+        (WEEKS / season / f"{name}.json").write_text(json.dumps(fetch(seasons[season]), indent=1, ensure_ascii=False),
+                                                     encoding="utf-8")
     if txt.exists():
         print(f"{txt.relative_to(ROOT)} already exists. Kept your rankings and refreshed only the stats.")
         return
@@ -477,8 +631,10 @@ def sidebar(season, base, site, current=None):
                     f'{s}</a>' for s in sorted(lw, reverse=True))
     link = lambda href, label, key: f'<a href="{href}"{" class=cur" if current == key else ""}>{label}</a>'
     league = f'<a href="{html.escape(RULE_BOOK_URL)}" target="_blank" rel="noopener">Rule Book ↗</a>'
-    if season in site["faab_seasons"]:
-        league += link(f"{base}{season}/faab.html", "FAAB Tracker", "faab")
+    for key, label, have in (("faab", "FAAB Tracker", "faab_seasons"), ("trades", "Trade Grades", "trade_seasons"),
+                             ("draft", "Draft Report Card", "draft_seasons")):
+        if season in site.get(have, ()):
+            league += link(f"{base}{season}/{key}.html", label, key)
     groups = [("Power Rankings", years), ("League", league)]
     if site["history"]:
         groups.append(("League History", link(f"{base}history/records.html", "Record Book", "records")
@@ -544,7 +700,7 @@ def awards(data):
     return out
 
 
-def render_week(data, content, prev_rank, all_weeks, site, base):
+def render_week(data, content, prev_rank, all_weeks, site, base, rank_history=()):
     """`site` describes what's been built (seasons, FAAB, history); `base` is the path back to the site root."""
     teams, week, season, e = data["teams"], data["week"], str(data["season"]), html.escape
     rows = []
@@ -568,6 +724,8 @@ def render_week(data, content, prev_rank, all_weeks, site, base):
             extra.append(f'Luck <span class="{cls}">{t["luck"]:+.1f}</span>')
         if "bench_week" in t:
             extra.append(f"{t['bench_week']:.1f} pts left on bench")
+        if t.get("odds"):
+            extra.append(f"Playoffs {pct(t['odds']['playoffs'])} · Title {pct(t['odds']['champ'])}")
         rows.append(f"""
   <li class="rank">
     <div class="rank-num">{i}{move}</div>
@@ -589,9 +747,207 @@ def render_week(data, content, prev_rank, all_weeks, site, base):
               "at his position across the NFL over the same span. Stats from Sleeper. Rankings are the commissioner's own.")
     return page(data, base, sidebar(season, base, site), week_nav(season, all_weeks, base, week),
                 f"{e(data['league'])} · {e(season)} · Week {week}", e(content["title"]),
-                f'{intro}<ol class="ranks">{"".join(rows)}</ol>{awards(data)}', footer,
+                f'{intro}<ol class="ranks">{"".join(rows)}</ol>{odds_table(data)}{rank_chart(rank_history, teams)}{awards(data)}', footer,
                 f"{season} Week {week} power rankings")
 
+
+def rank_chart(history, teams):
+    """Bump chart of power rankings by week. All lines are neutral; hovering or tapping a team highlights it."""
+    if len(history) < 2:
+        return ""
+    e, n, weeks = html.escape, len(teams), [w for w, _ in history]
+    left, right, top, row = 44, 210, 18, 30
+    width, height = 960, top + (n - 1) * row + 44
+    step = (width - left - right) / (len(weeks) - 1)
+    x = lambda i: left + i * step
+    y = lambda rank: top + (rank - 1) * row
+    grid = "".join(f'<text class="ax" x="{left - 14}" y="{y(r) + 4}" text-anchor="end">{r}</text>' for r in range(1, n + 1))
+    grid += "".join(f'<line class="gl" x1="{x(i):.1f}" x2="{x(i):.1f}" y1="{top - 8}" y2="{y(n) + 8}"/>'
+                    f'<text class="ax" x="{x(i):.1f}" y="{y(n) + 30}" text-anchor="middle">Wk {w}</text>'
+                    for i, w in enumerate(weeks))
+    series = []
+    for rid, t in teams.items():
+        ranks = [(i, order.index(rid) + 1) for i, (_, order) in enumerate(history) if rid in order]
+        if not ranks:
+            continue
+        pts = " ".join(f"{x(i):.1f},{y(r)}" for i, r in ranks)
+        dots = "".join(f'<circle cx="{x(i):.1f}" cy="{y(r)}" r="4" data-tip="{e(t["name"])} · Wk {weeks[i]}: #{r}"/>'
+                       for i, r in ranks)
+        li, lr = ranks[-1]
+        series.append(f'<g class="series" tabindex="0"><polyline class="hit" points="{pts}"/>'
+                      f'<polyline class="ln" points="{pts}"/>{dots}'
+                      f'<text class="nm" x="{x(li) + 12:.1f}" y="{y(lr) + 4}">{e(t["name"])}</text></g>')
+    table_head = "".join(f"<th>Wk {w}</th>" for w in weeks)
+    table_rows = "".join(
+        f'<tr><td class="tn">{e(t["name"])}</td>'
+        + "".join(f"<td>{order.index(rid) + 1 if rid in order else '–'}</td>" for _, order in history) + "</tr>"
+        for rid, t in sorted(teams.items(), key=lambda kv: history[-1][1].index(kv[0]) if kv[0] in history[-1][1] else 99))
+    return f"""<section class="trend"><h2 class="sec">Rankings Over Time</h2>
+<p class="hint">Hover or tap a team to follow its line.</p>
+<div class="chart"><svg class="bump" viewBox="0 0 {width} {height}" role="img" aria-label="Power ranking of each team by week">{grid}{"".join(series)}</svg>
+<div class="tip" hidden></div></div>
+<details class="tview"><summary>Show as table</summary><div class="tbl"><table><thead><tr><th class="tn">Team</th>{table_head}</tr></thead>
+<tbody>{table_rows}</tbody></table></div></details></section>
+<script>
+document.querySelectorAll('.chart').forEach(function (chart) {{
+  var svg = chart.querySelector('svg'), tip = chart.querySelector('.tip'), pinned = null;
+  function focus(g) {{
+    svg.querySelectorAll('.series').forEach(function (s) {{ s.classList.toggle('on', s === g); }});
+    svg.classList.toggle('has-on', !!g);
+    if (g) g.parentNode.appendChild(g);
+  }}
+  svg.querySelectorAll('.series').forEach(function (g) {{
+    g.addEventListener('mouseenter', function () {{ if (!pinned) focus(g); }});
+    g.addEventListener('click', function () {{ pinned = pinned === g ? null : g; focus(pinned || g); }});
+    g.addEventListener('focus', function () {{ focus(g); }});
+  }});
+  svg.addEventListener('mouseleave', function () {{ if (!pinned) focus(null); tip.hidden = true; }});
+  svg.addEventListener('mousemove', function (ev) {{
+    var c = ev.target.closest('circle');
+    if (!c || !c.parentNode.classList.contains('on')) {{ tip.hidden = true; return; }}
+    var r = chart.getBoundingClientRect(), b = c.getBoundingClientRect();
+    tip.textContent = c.dataset.tip; tip.hidden = false;
+    tip.style.left = (b.left - r.left + b.width / 2) + 'px'; tip.style.top = (b.top - r.top - 8) + 'px';
+  }});
+}});
+</script>"""
+
+
+def team_label(teams, rid):
+    t = teams.get(rid, {"name": f"Team {rid}"})
+    return f'<span class="who">{avatar(t) if "avatar" in t else ""}<span>{html.escape(t["name"])}</span></span>'
+
+
+def render_trades(trades, data, site):
+    teams, season, e, base = data["teams"], str(data["season"]), html.escape, "../"
+    cards = []
+    for t in reversed(trades):
+        best = max(t["sides"], key=lambda s: s["total"])
+        sides = []
+        for s in t["sides"]:
+            items = "".join(f'<li><span class="pos">{e(p["pos"])}</span>{e(p["name"])}<span class="pp">{p["pts"]:.1f}</span></li>'
+                            for p in s["players"])
+            items += "".join(f'<li class="note">{p["season"]} round {p["round"]} pick'
+                             + (f' (from {e(teams.get(p["from"], {}).get("name", "?"))})' if p["from"] != s["roster"] else "")
+                             + "</li>" for p in s["picks"])
+            if s["faab"]:
+                items += f'<li class="note">${s["faab"]} FAAB</li>'
+            win = s is best and best["total"] > 0 and len(t["sides"]) > 1
+            sides.append(f'<div class="side{" lead" if win else ""}">{team_label(teams, s["roster"])}'
+                         f'<div class="lbl">Received</div><ul class="got">{items or "<li class=note>Nothing</li>"}</ul>'
+                         f'<div class="tot">{s["total"]:.1f} pts</div></div>')
+        others = sorted((s["total"] for s in t["sides"] if s is not best), reverse=True)
+        if best["total"] <= 0:
+            verdict = "No points scored yet by anyone involved"
+        else:
+            verdict = (f'<b>{e(teams.get(best["roster"], {}).get("name", "?"))}</b> '
+                       f'{"is winning" if not site.get("complete", {}).get(season) else "won"} '
+                       f'by {best["total"] - (others[0] if others else 0):.1f} pts')
+        cards.append(f'<article class="deal"><div class="when">Week {t["week"]}</div>'
+                     f'<div class="sides">{"".join(sides)}</div><div class="verdict">{verdict}</div></article>')
+    body = "".join(cards) or "<p>No trades yet this season.</p>"
+    footer = ("Points are what each player scored in the receiving team's starting lineup after the trade. Draft picks "
+              "and FAAB are listed but not scored.")
+    nav = "".join(f'<a href="{base}{s}/trades.html"{" class=cur" if s == season else ""}>{s}</a>'
+                  for s in sorted(site["trade_seasons"], reverse=True))
+    return page(data, base, sidebar(season, base, site, "trades"), nav, f"{e(data['league'])} · {e(season)}",
+                "Trade Grades", body, footer, f"{season} trade grades")
+
+
+DRAFT_CAP = 25  # a 13th-round pick finishing 40 spots high shouldn't outweigh everything else
+
+
+def draft_grade(picks):
+    vals = [max(-DRAFT_CAP, min(DRAFT_CAP, p["value"])) for p in picks]
+    return sum(vals) / len(vals) if vals else 0
+
+
+def render_draft(draft, data, site, all_drafts, managers):
+    teams, season, e, base = data["teams"], str(data["season"]), html.escape, "../"
+    picks = [p for p in draft["picks"] if not p["keeper"]]
+    tname = lambda rid: e(teams.get(rid, {}).get("name", f"Team {rid}"))
+    move = lambda p: f'{p["pos"]}{p["drafted"]} → {p["pos"]}{p["finish"]}'
+    line = lambda p: (f'<li><span class="amt {"up" if p["value"] > 0 else "down" if p["value"] < 0 else ""}">'
+                      f'{p["value"]:+d}</span><div><b>{e(p["name"])}</b> <span class="pos">{e(p["pos"])}</span> · {tname(p["roster"])}'
+                      f'<div class="beat">Round {p["round"]}, pick {p["pick"]} · drafted {move(p)} · {p["pts"]:.1f} pts</div></div></li>')
+    steals = sorted(picks, key=lambda p: (-p["value"], p["pick"]))[:8]
+    busts = sorted((p for p in picks if p["round"] <= 5), key=lambda p: (p["value"], p["pick"]))[:8]
+
+    rounds = []
+    for r in sorted({p["round"] for p in picks}):
+        rp = [p for p in picks if p["round"] == r]
+        b, w = max(rp, key=lambda p: p["value"]), min(rp, key=lambda p: p["value"])
+        cell = lambda p: f'{e(p["name"])} <small>{tname(p["roster"])} · {move(p)}</small>'
+        rounds.append(f'<tr><td>{r}</td><td class="tn">{cell(b)}</td><td class="tn">{cell(w)}</td></tr>')
+
+    grades = []
+    for rid in sorted(teams, key=lambda r: -draft_grade([p for p in picks if p["roster"] == r])):
+        mine = [p for p in picks if p["roster"] == rid]
+        if not mine:
+            continue
+        top = max(mine, key=lambda p: p["value"])
+        grades.append(f'<tr><td class="tn">{team_label(teams, rid)}</td><td>{draft_grade(mine):+.1f}</td>'
+                      f'<td>{sum(p["pts"] for p in mine):,.0f}</td><td class="tn">{e(top["name"])} <small>{move(top)}</small></td></tr>')
+
+    alltime = ""
+    if len(all_drafts) > 1:
+        by_owner = {}
+        for d in all_drafts.values():
+            for p in d["picks"]:
+                if p["owner"] and not p["keeper"]:
+                    by_owner.setdefault(p["owner"], []).append(p)
+        rows = "".join(
+            f'<tr><td class="tn">{team_label({"m": managers[o]}, "m") if o in managers else e(o)}</td>'
+            f'<td>{len({s for s, d in all_drafts.items() if any(p["owner"] == o for p in d["picks"])})}</td>'
+            f'<td>{draft_grade(ps):+.1f}</td></tr>'
+            for o, ps in sorted(by_owner.items(), key=lambda kv: -draft_grade(kv[1])))
+        alltime = f"""<section><h2 class="sec">Best Drafters, All Seasons</h2><div class="tbl"><table>
+  <thead><tr><th class="tn">Manager</th><th>Drafts</th><th>Avg value per pick</th></tr></thead><tbody>{rows}</tbody></table></div></section>"""
+
+    span = "the full regular season" if draft["complete"] else f"weeks 1–{draft['through_week']}"
+    body = f"""<section><h2 class="sec">Draft Grades</h2><div class="tbl"><table>
+  <thead><tr><th class="tn">Team</th><th>Avg value per pick</th><th>Points from picks</th><th class="tn">Best pick</th></tr></thead>
+  <tbody>{"".join(grades)}</tbody></table></div></section>
+<section><div class="records">
+  <div><h3>Biggest steals</h3><ul class="bids">{"".join(line(p) for p in steals)}</ul></div>
+  <div><h3>Biggest busts (rounds 1–5)</h3><ul class="bids">{"".join(line(p) for p in busts)}</ul></div>
+</div></section>
+<section><h2 class="sec">Round by Round</h2><div class="tbl"><table>
+  <thead><tr><th>Round</th><th class="tn">Best pick</th><th class="tn">Worst pick</th></tr></thead><tbody>{"".join(rounds)}</tbody></table></div></section>
+{alltime}"""
+    footer = (f"Value compares where a player was drafted at his position (RB5 = the fifth running back taken) with "
+              f"where he finished at that position across the NFL in league scoring, over {span}. +10 means he finished "
+              f"10 spots better than drafted. Grades average each pick's value, capped at ±{DRAFT_CAP}.")
+    nav = "".join(f'<a href="{base}{s}/draft.html"{" class=cur" if s == season else ""}>{s}</a>'
+                  for s in sorted(site["draft_seasons"], reverse=True))
+    return page(data, base, sidebar(season, base, site, "draft"), nav, f"{e(data['league'])} · {e(season)}",
+                "Draft Report Card", body, footer, f"{season} draft report card")
+
+
+def pct(v):
+    return "<1%" if 0 < v < 1 else ">99%" if 99 < v < 100 else f"{v:.0f}%"
+
+
+def odds_table(data):
+    """Postseason chances by round, in the style of playoffstatus.com."""
+    teams, e = data["teams"], html.escape
+    odds = {r: t["odds"] for r, t in teams.items() if t.get("odds")}
+    if not odds:
+        return ""
+    cols = [("champ", "Champion"), ("final", "Final"), ("semis", "Semifinals"), ("bye", "Bye"), ("playoffs", "Playoffs")]
+    cols = [c for c in cols if c[0] != "bye" or any(o["bye"] for o in odds.values())]
+    rows = []
+    for rid in sorted(odds, key=lambda r: tuple(-odds[r][k] for k, _ in cols)):
+        o, t = odds[rid], teams[rid]
+        mark = (' <span class="flag up">clinched</span>' if o["playoffs"] == 100 else
+                ' <span class="flag down">eliminated</span>' if o["playoffs"] == 0 else "")
+        cells = "".join(f'<td class="{"zero" if not o[k] else ""}">{pct(o[k])}</td>' for k, _ in cols)
+        rows.append(f'<tr><td class="tn">{team_label(teams, rid)}{mark}</td><td>{rec(t)}</td>{cells}</tr>')
+    head = "".join(f"<th>{label}</th>" for _, label in cols)
+    return f"""<section><h2 class="sec">Playoff Odds</h2><div class="tbl"><table class="odds">
+  <thead><tr><th class="tn">Team</th><th>Record</th>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>
+<p class="hint">Chance of reaching each round, from 4,000 simulations of the rest of the regular season and the playoffs.
+Each team's future scores are drawn around its scoring average so far.</p></section>"""
 
 def history_totals(hist):
     """All-time regular-season record per manager, and head-to-head records between each pair."""
@@ -746,10 +1102,12 @@ def render_faab(faab, data, site):
         big_txt = f'{e(big["name"])}, {money(big["bid"])}, Wk {big["week"]}' if big and big["bid"] else "–"
         tr = traded[rid]
         tr_txt = f'<span class="up">+{money(tr)}</span>' if tr > 0 else f'<span class="down">−{money(-tr)}</span>' if tr < 0 else "–"
+        gained = sum(c.get("pts", 0) for c in mine)
+        per = f"{gained / spent[rid]:.1f}" if spent[rid] else "–"
         table.append(f"""<tr><td class="tn"><span class="who">{avatar(teams[rid])}<span>{e(name(rid))}</span></span></td>
       <td>{money(spent[rid])}</td>{f"<td>{tr_txt}</td>" if trades else ""}
       <td><div class="left"><span>{money(left)}</span><span class="bar"><span style="width:{min(100, 100 * left / budget):.0f}%"></span></span></div></td>
-      <td>{len(mine)}</td><td class="tn">{big_txt}</td></tr>""")
+      <td>{len(mine)}</td><td>{gained:.1f}</td><td>{per}</td><td class="tn wrap">{big_txt}</td></tr>""")
 
     log = []
     for w in sorted({c["week"] for c in claims} | {x["week"] for x in trades}, reverse=True):
@@ -764,14 +1122,30 @@ def render_faab(faab, data, site):
                 beat = (f'<div class="beat">outbidding {others} · '
                         + (f'by {money(margin)}' if margin > 0 else 'won the tiebreaker') + '</div>')
             items.append(f"""<li{' class="zero"' if not c['bid'] else ''}><span class="amt">{money(c['bid'])}</span>
-        <div><b>{e(name(c['roster']))}</b> won <b>{e(c['name'])}</b> <span class="pos">{e(c['pos'])}</span>{beat}</div></li>""")
+        <div><b>{e(name(c['roster']))}</b> won <b>{e(c['name'])}</b> <span class="pos">{e(c['pos'])}</span>
+        <span class="gain">→ {c.get('pts', 0):.1f} pts</span>{beat}</div></li>""")
         log.append(f'<h3>{f"Week {w}" if w else "Preseason"}</h3><ul class="bids">{"".join(items)}</ul>')
 
     body = f"""<section><h2 class="sec">Budget</h2><div class="tbl"><table>
-  <thead><tr><th class="tn">Team</th><th>Spent</th>{"<th>Traded</th>" if trades else ""}<th>Remaining</th><th>Claims won</th><th class="tn">Biggest buy</th></tr></thead>
+  <thead><tr><th class="tn">Team</th><th>Spent</th>{"<th>Traded</th>" if trades else ""}<th>Remaining</th><th>Claims won</th><th>Pickup pts</th><th>Pts per $</th><th class="tn">Biggest buy</th></tr></thead>
   <tbody>{"".join(table)}</tbody></table></div></section>
+<!--ROI-->
 <section><h2 class="sec">Bid log</h2>{"".join(log) or "<p>No waiver claims yet.</p>"}</section>"""
-    footer = (f"Each team starts with {money(budget)} of FAAB; remaining includes FAAB traded between teams. Winning "
+    roi_line = lambda c, val: (f'<li><span class="amt">{val}</span><div><b>{e(c["name"])}</b> <span class="pos">{e(c["pos"])}</span>'
+                               f' · {e(name(c["roster"]))}<div class="beat">{money(c["bid"])} in Wk {c["week"]} → '
+                               f'{c.get("pts", 0):.1f} pts started</div></div></li>')
+    paid = [c for c in claims if c["bid"] >= 1]
+    values = sorted(paid, key=lambda c: -c.get("pts", 0) / c["bid"])[:5]
+    busts = sorted((c for c in claims if c["bid"] >= 10), key=lambda c: c.get("pts", 0) / c["bid"])[:5]
+    free = sorted((c for c in claims if c["bid"] <= 1), key=lambda c: -c.get("pts", 0))[:5]
+    roi = "" if not claims else f"""<section><h2 class="sec">Waiver ROI</h2><div class="records">
+  <div><h3>Best value (pts per $)</h3><ul class="bids">{"".join(roi_line(c, f'{c.get("pts", 0) / c["bid"]:.1f}') for c in values)}</ul></div>
+  <div><h3>Biggest busts ($10+)</h3><ul class="bids">{"".join(roi_line(c, f'{c.get("pts", 0) / c["bid"]:.1f}') for c in busts) or "<li><div>None yet</div></li>"}</ul></div>
+  <div><h3>Best $0–$1 pickups</h3><ul class="bids">{"".join(roi_line(c, f'{c.get("pts", 0):.0f}') for c in free)}</ul></div>
+</div></section>"""
+    body = body.replace("<!--ROI-->", roi)
+    footer = (f"Pickup pts are what claimed players scored in that team's starting lineup after the claim. "
+              f"Each team starts with {money(budget)} of FAAB; remaining includes FAAB traded between teams. Winning "
               "waiver claims from Sleeper, newest week first. “Outbidding” lists the other teams that bid on the same "
               "player that week.")
     seasons_nav = "".join(f'<a href="{base}{s}/faab.html"{" class=cur" if s == season else ""}>{s}</a>'
@@ -780,39 +1154,52 @@ def render_faab(faab, data, site):
                 f"{e(data['league'])} · {e(season)}", "FAAB Tracker", body, footer, f"{season} FAAB spending")
 
 
+def read_json(path):
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+
+
 def build():
     seasons = sorted(d.name for d in WEEKS.iterdir() if d.is_dir() and weeks_written(d.name)) if WEEKS.exists() else []
     if not seasons:
         sys.exit("No weeks yet. Run: py ffr.py new <week>")
+    extras = {s: {k: read_json(WEEKS / s / f"{k}.json") for k in ("faab", "trades", "draft")} for s in seasons}
+    hist = read_json(HISTORY)
     site = {"latest_week": {s: weeks_written(s)[-1] for s in seasons},
-            "faab_seasons": {s for s in seasons if (WEEKS / s / "faab.json").exists()},
-            "history": HISTORY.exists()}
-    faab_seasons = site["faab_seasons"]
+            "history": hist is not None,
+            "complete": {f["season"]: True for f in (hist or {}).get("finishes", [])},
+            "faab_seasons": {s for s in seasons if extras[s]["faab"]},
+            "trade_seasons": {s for s in seasons if extras[s]["trades"] is not None},
+            "draft_seasons": {s for s in seasons if extras[s]["draft"]}}
     if IMAGES.exists():
         shutil.copytree(IMAGES, SITE / "images", dirs_exist_ok=True)
     for s in seasons:
         weeks = weeks_written(s)
         (SITE / s).mkdir(parents=True, exist_ok=True)
-        prev_rank = None
+        prev_rank, history = None, []
         for w in weeks:
             txt, js = week_paths(s, w)
             data = json.loads(js.read_text(encoding="utf-8"))
             content = parse_week(txt, data)
-            out = render_week(data, content, prev_rank, weeks, site, "../")
+            history.append((w, [r for r, _ in content["rankings"]]))
+            out = render_week(data, content, prev_rank, weeks, site, "../", history)
             (SITE / s / f"week-{w:02d}.html").write_text(out, encoding="utf-8")
             if w == weeks[-1]:
                 (SITE / s / "index.html").write_text(out, encoding="utf-8")
                 if s == seasons[-1]:
-                    root = render_week(data, content, prev_rank, weeks, site, "")
+                    root = render_week(data, content, prev_rank, weeks, site, "", history)
                     (SITE / "index.html").write_text(root, encoding="utf-8")
-            prev_rank = [r for r, _ in content["rankings"]]
-        if s in faab_seasons:
-            faab = json.loads((WEEKS / s / "faab.json").read_text(encoding="utf-8"))
-            (SITE / s / "faab.html").write_text(render_faab(faab, data, site),
-                                                encoding="utf-8")
-        print(f"Built {s}: {len(weeks)} week(s)" + (" + FAAB" if s in faab_seasons else ""))
-    if site["history"]:
-        hist = json.loads(HISTORY.read_text(encoding="utf-8"))
+            prev_rank = history[-1][1]
+        x = extras[s]
+        if x["faab"]:
+            (SITE / s / "faab.html").write_text(render_faab(x["faab"], data, site), encoding="utf-8")
+        if x["trades"] is not None:
+            (SITE / s / "trades.html").write_text(render_trades(x["trades"], data, site), encoding="utf-8")
+        if x["draft"]:
+            drafts = {k: v["draft"] for k, v in extras.items() if v["draft"]}
+            (SITE / s / "draft.html").write_text(
+                render_draft(x["draft"], data, site, drafts, (hist or {}).get("managers", {})), encoding="utf-8")
+        print(f"Built {s}: {len(weeks)} week(s) + " + ", ".join(k for k, v in x.items() if v is not None))
+    if hist:
         (SITE / "history").mkdir(exist_ok=True)
         (SITE / "history" / "records.html").write_text(render_records(hist, data, site), encoding="utf-8")
         (SITE / "history" / "h2h.html").write_text(render_h2h(hist, data, site), encoding="utf-8")
@@ -839,8 +1226,8 @@ PAGE = """<!doctype html>
 """
 
 CSS = """
-:root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;color-scheme:dark}}
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;--hl:#2a78d6;--trend:#c4c1b9;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .layout{display:flex;max-width:1180px;margin:0 auto}
@@ -898,7 +1285,8 @@ th,td{padding:10px 14px;text-align:right;white-space:nowrap;border-bottom:1px so
 tbody tr:last-child td{border-bottom:0}
 th{color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em}
 .tn{text-align:left}
-.who{display:flex;align-items:center;gap:10px;font-weight:600}.who .av{width:28px;height:28px;font-size:.75rem}
+td.wrap{white-space:normal;min-width:180px}
+.who{display:inline-flex;vertical-align:middle;align-items:center;gap:10px;font-weight:600}.who .av{width:28px;height:28px;font-size:.75rem}
 .left{display:flex;align-items:center;gap:10px;justify-content:flex-end}
 .bar{width:90px;height:8px;border-radius:99px;background:var(--chip);overflow:hidden}
 .bar span{display:block;height:100%;background:var(--up);border-radius:99px}
@@ -933,6 +1321,39 @@ section+section .sec,.ranks+section .sec{margin-top:36px}
 .h2h .even{color:var(--muted)}
 .h2h .none,.h2h .self{color:var(--line)}
 .h2h .self{background:var(--chip)}
+.hint{color:var(--muted);font-size:.85rem;margin:8px 0}
+.flag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-left:6px}
+.odds td.zero{color:var(--muted)}
+.gain{color:var(--muted);font-size:.85rem;margin-left:4px}
+.chart{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 8px}
+.bump{display:block;width:100%;height:auto;overflow:visible}
+.bump .ax{fill:var(--muted);font-size:12px}
+.bump .gl{stroke:var(--line);stroke-width:1}
+.bump .ln{fill:none;stroke:var(--trend);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.bump .hit{fill:none;stroke:transparent;stroke-width:14;pointer-events:stroke}
+.bump circle{fill:var(--trend);stroke:var(--card);stroke-width:2;opacity:0}
+.bump .nm{fill:var(--muted);font-size:13px}
+.bump .series{cursor:pointer;outline:none}
+.bump.has-on .series:not(.on){opacity:.3}
+.bump .series.on .ln{stroke:var(--hl);stroke-width:3}
+.bump .series.on circle{fill:var(--hl);opacity:1}
+.bump .series.on .nm{fill:var(--ink);font-weight:700}
+.tip{position:absolute;transform:translate(-50%,-100%);background:var(--ink);color:var(--bg);font-size:.8rem;padding:4px 8px;border-radius:6px;pointer-events:none;white-space:nowrap}
+.tview{margin-top:10px}.tview summary{cursor:pointer;color:var(--muted);font-size:.85rem}.tview .tbl{margin-top:8px}
+.deal{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.deal .when{color:var(--muted);font-size:.8rem;font-weight:600;margin-bottom:8px}
+.deal .sides{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.deal .side{border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.deal .side.lead{border-color:var(--up);box-shadow:inset 3px 0 0 var(--up)}
+.deal .side .lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin:8px 0 4px}
+.got{list-style:none;padding:0;margin:0;font-size:.9rem}
+.got li{display:flex;gap:8px;align-items:baseline;padding:2px 0}
+.got .pos{color:var(--muted);font-size:.7rem;font-weight:700;min-width:2.2em}
+.got .pp{margin-left:auto;font-variant-numeric:tabular-nums}
+.got .note{color:var(--muted)}
+.deal .tot{margin-top:8px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.deal .verdict{margin-top:10px;font-size:.92rem}
+.amt.up{color:var(--up)}.amt.down{color:var(--down)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 """
 

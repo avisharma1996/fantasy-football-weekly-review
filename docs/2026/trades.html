@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Red Vines Fantasy Football</title>
+<meta property="og:title" content="Red Vines Fantasy Football">
+<meta property="og:site_name" content="Red Vines Fantasy Football">
+<meta property="og:description" content="2026 trade grades">
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;--hl:#2a78d6;--trend:#c4c1b9;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.layout{display:flex;max-width:1180px;margin:0 auto}
+.seasons{flex:none;width:172px;padding:40px 16px 0;position:sticky;top:0;align-self:flex-start}
+.side-group+.side-group{margin-top:28px}
+.seasons-lbl{color:var(--muted);font-size:.85rem;font-weight:600;margin:0 0 6px 10px}
+.seasons-list{display:flex;flex-direction:column;gap:2px}
+.seasons a{white-space:nowrap;padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
+.seasons a:hover{background:var(--chip);color:var(--ink)}
+.seasons a.cur{background:var(--card);color:var(--ink);box-shadow:inset 3px 0 0 var(--ink),0 0 0 1px var(--line)}
+.wrap{flex:1;min-width:0;max-width:1000px;padding:32px 16px 64px}
+@media (max-width:760px){
+  .layout{display:block}
+  .seasons{position:static;width:auto;padding:16px 16px 0;display:flex;flex-wrap:wrap;gap:10px 24px}
+  .side-group{display:flex;align-items:center;gap:10px}
+  .side-group+.side-group{margin-top:0}
+  .seasons-lbl{margin:0}
+  .seasons-list{flex-direction:row;flex-wrap:wrap;gap:6px}
+  .seasons a{padding:4px 12px}
+  .seasons a.cur{box-shadow:inset 0 -2px 0 var(--ink),0 0 0 1px var(--line)}
+  .wrap{padding-top:16px}
+}
+header{display:flex;gap:16px;align-items:center}
+.logo{width:64px;height:64px;border-radius:14px}
+.kicker{color:var(--muted);font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
+h1{margin:.1em 0 0;font-size:clamp(1.7rem,5vw,2.4rem);line-height:1.15}
+h2{margin:0;font-size:1.1rem}
+nav{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 28px}
+nav a{padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);text-decoration:none;font-size:.85rem}
+nav a.cur{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.intro{font-size:1.05rem;margin:-8px 0 24px}.intro p{margin:0 0 .7em}
+.ranks{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.rank{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.rank-num{font-size:1.9rem;font-weight:800;min-width:2.2ch;line-height:1.1;display:flex;flex-direction:column;align-items:center}
+.mv{font-size:.72rem;font-weight:700;margin-top:4px}.up{color:var(--up)}.down{color:var(--down)}.same{color:var(--muted)}
+.rank-body{flex:1;min-width:0}
+.team{display:flex;gap:12px;align-items:center}
+.meta{color:var(--muted);font-size:.88rem}.meta b{color:var(--ink)}
+.av{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;background:var(--line);display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:var(--muted)}
+.pic{display:block;max-width:100%;max-height:260px;height:auto;border-radius:8px;margin:6px 0}
+video.pic{max-height:360px}
+.blurb{margin-top:10px}.blurb p{margin:.5em 0 0}.blurb p:first-child{margin-top:0}
+.tops{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;align-items:center;margin-top:12px}
+.tops .lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.top{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.85rem}
+.top li{background:var(--chip);border-radius:8px;padding:3px 9px;display:flex;gap:6px;align-items:baseline}
+@media (max-width:560px){.tops{grid-template-columns:1fr;gap:4px}.tops .top{margin-bottom:6px}}
+.top .pos{color:var(--muted);font-size:.7rem;font-weight:700}
+.top .pp{font-variant-numeric:tabular-nums;color:var(--muted)}
+.sec{font-size:1.2rem;margin:8px 0 12px}
+section+section .sec{margin-top:36px}
+.tbl{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px}
+table{border-collapse:collapse;width:100%;font-size:.92rem;font-variant-numeric:tabular-nums}
+th,td{padding:10px 14px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:0}
+th{color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em}
+.tn{text-align:left}
+td.wrap{white-space:normal;min-width:180px}
+.who{display:inline-flex;vertical-align:middle;align-items:center;gap:10px;font-weight:600}.who .av{width:28px;height:28px;font-size:.75rem}
+.left{display:flex;align-items:center;gap:10px;justify-content:flex-end}
+.bar{width:90px;height:8px;border-radius:99px;background:var(--chip);overflow:hidden}
+.bar span{display:block;height:100%;background:var(--up);border-radius:99px}
+h3{font-size:.95rem;margin:22px 0 8px;color:var(--muted)}
+.bids{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.bids li{display:flex;gap:14px;align-items:baseline;padding:10px 16px;border-bottom:1px solid var(--line)}
+.bids li:last-child{border-bottom:0}
+.bids .amt{flex:none;min-width:3.2em;text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
+.bids .zero .amt{color:var(--muted);font-weight:600}
+.bids .pos{color:var(--muted);font-size:.72rem;font-weight:700}
+.bids .beat{color:var(--muted);font-size:.85rem}
+.awards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.award{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.award .lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.award .who{font-weight:700;margin-top:2px}
+.award .val{color:var(--muted);font-size:.88rem}
+section+section .sec,.ranks+section .sec{margin-top:36px}
+.who small,.tn small{display:block;color:var(--muted);font-weight:400;font-size:.75rem}
+.tn small{display:inline}
+.tn .who small{display:block}
+.records{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:4px 16px}
+.records h3{margin-top:14px}
+.records .amt{min-width:3.6em}
+.h2h td,.h2h th{padding:8px 10px;text-align:center}
+.h2h th.col{vertical-align:bottom}
+.h2h th.col .av{width:26px;height:26px;display:flex;margin:0 auto 4px;font-size:.7rem}
+.h2h th.col span{display:block;font-size:.7rem;text-transform:none;letter-spacing:0;max-width:72px;overflow:hidden;text-overflow:ellipsis}
+.h2h td.tn,.h2h th.tn{text-align:left}
+.h2h .tot{font-weight:700}
+.h2h .win{background:color-mix(in srgb,var(--up) 16%,transparent);color:var(--up);font-weight:600}
+.h2h .loss{background:color-mix(in srgb,var(--down) 13%,transparent);color:var(--down)}
+.h2h .even{color:var(--muted)}
+.h2h .none,.h2h .self{color:var(--line)}
+.h2h .self{background:var(--chip)}
+.hint{color:var(--muted);font-size:.85rem;margin:8px 0}
+.flag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-left:6px}
+.odds td.zero{color:var(--muted)}
+.gain{color:var(--muted);font-size:.85rem;margin-left:4px}
+.chart{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 8px}
+.bump{display:block;width:100%;height:auto;overflow:visible}
+.bump .ax{fill:var(--muted);font-size:12px}
+.bump .gl{stroke:var(--line);stroke-width:1}
+.bump .ln{fill:none;stroke:var(--trend);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.bump .hit{fill:none;stroke:transparent;stroke-width:14;pointer-events:stroke}
+.bump circle{fill:var(--trend);stroke:var(--card);stroke-width:2;opacity:0}
+.bump .nm{fill:var(--muted);font-size:13px}
+.bump .series{cursor:pointer;outline:none}
+.bump.has-on .series:not(.on){opacity:.3}
+.bump .series.on .ln{stroke:var(--hl);stroke-width:3}
+.bump .series.on circle{fill:var(--hl);opacity:1}
+.bump .series.on .nm{fill:var(--ink);font-weight:700}
+.tip{position:absolute;transform:translate(-50%,-100%);background:var(--ink);color:var(--bg);font-size:.8rem;padding:4px 8px;border-radius:6px;pointer-events:none;white-space:nowrap}
+.tview{margin-top:10px}.tview summary{cursor:pointer;color:var(--muted);font-size:.85rem}.tview .tbl{margin-top:8px}
+.deal{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.deal .when{color:var(--muted);font-size:.8rem;font-weight:600;margin-bottom:8px}
+.deal .sides{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.deal .side{border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.deal .side.lead{border-color:var(--up);box-shadow:inset 3px 0 0 var(--up)}
+.deal .side .lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;margin:8px 0 4px}
+.got{list-style:none;padding:0;margin:0;font-size:.9rem}
+.got li{display:flex;gap:8px;align-items:baseline;padding:2px 0}
+.got .pos{color:var(--muted);font-size:.7rem;font-weight:700;min-width:2.2em}
+.got .pp{margin-left:auto;font-variant-numeric:tabular-nums}
+.got .note{color:var(--muted)}
+.deal .tot{margin-top:8px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.deal .verdict{margin-top:10px;font-size:.92rem}
+.amt.up{color:var(--up)}.amt.down{color:var(--down)}
+footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
+</style></head>
+<body><div class="layout">
+<aside class="seasons"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-05.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html">2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2026/faab.html">FAAB Tracker</a><a href="../2026/trades.html" class=cur>Trade Grades</a><a href="../2026/draft.html">Draft Report Card</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a></div></div></aside>
+<main class="wrap">
+<header><img class="logo" src="https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f" alt=""><div><div class="kicker">Red Vines · 2026</div><h1>Trade Grades</h1></div></header>
+<nav><a href="../2026/trades.html" class=cur>2026</a><a href="../2025/trades.html">2025</a><a href="../2024/trades.html">2024</a></nav>
+<article class="deal"><div class="when">Week 5</div><div class="sides"><div class="side"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">WR</span>Keon Coleman<span class="pp">0.0</span></li></ul><div class="tot">0.0 pts</div></div><div class="side"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"><span>Justin Beer Loyalist</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">WR</span>Tre&#x27; Harris<span class="pp">0.0</span></li></ul><div class="tot">0.0 pts</div></div></div><div class="verdict">No points scored yet by anyone involved</div></article><article class="deal"><div class="when">Week 1</div><div class="sides"><div class="side"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><span>6 7</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">WR</span>Emeka Egbuka<span class="pp">28.6</span></li></ul><div class="tot">28.6 pts</div></div><div class="side lead"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">WR</span>Parker Washington<span class="pp">70.5</span></li></ul><div class="tot">70.5 pts</div></div></div><div class="verdict"><b>yrkpapi</b> is winning by 41.9 pts</div></article>
+<footer>Points are what each player scored in the receiving team's starting lineup after the trade. Draft picks and FAAB are listed but not scored.</footer>
+</main></div></body></html>

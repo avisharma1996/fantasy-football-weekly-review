@@ -25,6 +25,13 @@
         "name": "Michael Wilson",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 50.65,
+        "bye": 8.5,
+        "semis": 28.88,
+        "final": 13.65,
+        "champ": 6.3
+      },
       "luck": 0.45,
       "streak": "W1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 19.3,
         "name": "Juwan Johnson",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 67.53,
+        "bye": 16.6,
+        "semis": 40.48,
+        "final": 18.7,
+        "champ": 8.0
       },
       "luck": 1.27,
       "streak": "W3",
@@ -151,6 +165,13 @@
         "name": "Bo Nix",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 37.27,
+        "bye": 5.1,
+        "semis": 20.75,
+        "final": 8.78,
+        "champ": 3.75
+      },
       "luck": -0.36,
       "streak": "W1",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 22.9,
         "name": "Matthew Stafford",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 63.15,
+        "bye": 14.35,
+        "semis": 38.73,
+        "final": 17.95,
+        "champ": 8.2
       },
       "luck": -0.73,
       "streak": "L1",
@@ -277,6 +305,13 @@
         "name": "Trevor Lawrence",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 96.05,
+        "bye": 66.2,
+        "semis": 84.08,
+        "final": 49.02,
+        "champ": 29.15
+      },
       "luck": 0.82,
       "streak": "W3",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 20.6,
         "name": "Harold Fannin",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 73.35,
+        "bye": 22.0,
+        "semis": 48.7,
+        "final": 24.57,
+        "champ": 11.4
       },
       "luck": -0.73,
       "streak": "L1",
@@ -403,6 +445,13 @@
         "name": "Terry McLaurin",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 0.33,
+        "bye": 0.03,
+        "semis": 0.1,
+        "final": 0.03,
+        "champ": 0.0
+      },
       "luck": -0.36,
       "streak": "L3",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 8.6,
         "name": "Woody Marks",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 19.95,
+        "bye": 1.52,
+        "semis": 9.2,
+        "final": 3.83,
+        "champ": 1.62
       },
       "luck": -0.18,
       "streak": "W1",
@@ -529,6 +585,13 @@
         "name": "Sam Darnold",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 5.67,
+        "bye": 0.07,
+        "semis": 2.17,
+        "final": 0.68,
+        "champ": 0.25
+      },
       "luck": 0.09,
       "streak": "L2",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 6.3,
         "name": "Tre Tucker",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 89.08,
+        "bye": 43.73,
+        "semis": 68.6,
+        "final": 35.55,
+        "champ": 17.4
       },
       "luck": -0.09,
       "streak": "L1",
@@ -655,6 +725,13 @@
         "name": "DK Metcalf",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 28.32,
+        "bye": 2.8,
+        "semis": 13.62,
+        "final": 6.05,
+        "champ": 2.48
+      },
       "luck": -0.45,
       "streak": "W1",
       "top": [
@@ -717,6 +794,13 @@
         "pts": 12.28,
         "name": "Baker Mayfield",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 68.65,
+        "bye": 19.1,
+        "semis": 44.7,
+        "final": 21.2,
+        "champ": 11.45
       },
       "luck": 0.27,
       "streak": "L1",

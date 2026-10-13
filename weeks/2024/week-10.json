@@ -25,6 +25,13 @@
         "name": "Bucky Irving",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 78.08,
+        "bye": 3.52,
+        "semis": 41.1,
+        "final": 15.38,
+        "champ": 6.47
+      },
       "luck": -1.67,
       "streak": "L1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 10.7,
         "name": "Josh Downs",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 2.58,
+        "bye": 0.0,
+        "semis": 1.18,
+        "final": 0.5,
+        "champ": 0.12
       },
       "luck": -3.33,
       "streak": "L2",
@@ -151,6 +165,13 @@
         "name": "Russell Wilson",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 65.62,
+        "bye": 1.73,
+        "semis": 32.33,
+        "final": 11.78,
+        "champ": 4.75
+      },
       "luck": 3.22,
       "streak": "L2",
       "top": [
@@ -210,6 +231,13 @@
       "bench": 114.4,
       "bench_week": 0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 0.1,
+        "bye": 0.0,
+        "semis": 0.07,
+        "final": 0.0,
+        "champ": 0.0
+      },
       "luck": -0.89,
       "streak": "L5",
       "top": [
@@ -272,6 +300,13 @@
         "pts": 28.74,
         "name": "Kyler Murray",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 99.72,
+        "semis": 99.9,
+        "final": 71.4,
+        "champ": 50.9
       },
       "luck": -1.0,
       "streak": "W4",
@@ -336,6 +371,13 @@
         "name": "Austin Ekeler",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 53.25,
+        "bye": 0.93,
+        "semis": 24.75,
+        "final": 8.95,
+        "champ": 2.8
+      },
       "luck": 0.67,
       "streak": "W1",
       "top": [
@@ -398,6 +440,13 @@
         "pts": 15.3,
         "name": "Ricky Pearsall",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 96.9,
+        "bye": 23.07,
+        "semis": 59.15,
+        "final": 23.93,
+        "champ": 8.62
       },
       "luck": 1.78,
       "streak": "L1",
@@ -462,6 +511,13 @@
         "name": "Travis Etienne",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 99.2,
+        "bye": 52.4,
+        "semis": 78.9,
+        "final": 41.67,
+        "champ": 16.35
+      },
       "luck": 0.22,
       "streak": "W2",
       "top": [
@@ -525,6 +581,13 @@
         "name": "Joe Burrow",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 95.1,
+        "bye": 18.62,
+        "semis": 58.48,
+        "final": 24.95,
+        "champ": 9.45
+      },
       "luck": 1.22,
       "streak": "W2",
       "top": [
@@ -587,6 +650,13 @@
         "pts": 11.78,
         "name": "C.J. Stroud",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 9.18,
+        "bye": 0.0,
+        "semis": 4.15,
+        "final": 1.45,
+        "champ": 0.53
       },
       "luck": -0.22,
       "streak": "W1",

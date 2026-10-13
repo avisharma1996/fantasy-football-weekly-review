@@ -21,6 +21,13 @@
       "bench": 82.38,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 95.55,
+        "bye": 37.05,
+        "semis": 68.7,
+        "final": 35.1,
+        "champ": 17.62
+      },
       "luck": 0.64,
       "streak": "W3",
       "top": [
@@ -83,6 +90,13 @@
         "pts": 3.3,
         "name": "Rashid Shaheed",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 93.97,
+        "bye": 34.05,
+        "semis": 65.12,
+        "final": 30.9,
+        "champ": 14.35
       },
       "luck": 1.91,
       "streak": "W5",
@@ -147,6 +161,13 @@
         "name": "Emanuel Wilson",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 4.05,
+        "bye": 0.03,
+        "semis": 1.43,
+        "final": 0.35,
+        "champ": 0.15
+      },
       "luck": -0.73,
       "streak": "L2",
       "top": [
@@ -209,6 +230,13 @@
         "pts": 1.6,
         "name": "Brian Robinson",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 15.85,
+        "bye": 0.12,
+        "semis": 5.88,
+        "final": 2.33,
+        "champ": 0.9
       },
       "luck": -0.09,
       "streak": "W1",
@@ -273,6 +301,13 @@
         "name": "Washington Commanders D/ST",
         "pos": "DEF"
       },
+      "odds": {
+        "playoffs": 89.42,
+        "bye": 20.4,
+        "semis": 57.83,
+        "final": 28.98,
+        "champ": 14.07
+      },
       "luck": -0.36,
       "streak": "L2",
       "top": [
@@ -335,6 +370,13 @@
         "pts": 14.2,
         "name": "Emeka Egbuka",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 50.92,
+        "bye": 2.27,
+        "semis": 22.73,
+        "final": 9.07,
+        "champ": 3.6
       },
       "luck": -1.55,
       "streak": "L3",
@@ -399,6 +441,13 @@
         "name": "Xavier Hutchinson",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 0.57,
+        "bye": 0.0,
+        "semis": 0.15,
+        "final": 0.05,
+        "champ": 0.03
+      },
       "luck": -0.09,
       "streak": "W1",
       "top": [
@@ -461,6 +510,13 @@
         "pts": 20.0,
         "name": "San Francisco 49ers D/ST",
         "pos": "DEF"
+      },
+      "odds": {
+        "playoffs": 16.18,
+        "bye": 0.23,
+        "semis": 5.85,
+        "final": 2.17,
+        "champ": 0.68
       },
       "luck": 0.18,
       "streak": "L1",
@@ -525,6 +581,13 @@
         "name": "Jordan Love",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 4.72,
+        "bye": 0.05,
+        "semis": 1.77,
+        "final": 0.57,
+        "champ": 0.15
+      },
       "luck": -0.55,
       "streak": "L4",
       "top": [
@@ -587,6 +650,13 @@
         "pts": 14.7,
         "name": "Blake Corum",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 99.38,
+        "bye": 70.2,
+        "semis": 87.05,
+        "final": 46.15,
+        "champ": 24.27
       },
       "luck": 0.27,
       "streak": "W2",
@@ -651,6 +721,13 @@
         "name": "Khalil Shakir",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 34.67,
+        "bye": 1.3,
+        "semis": 14.85,
+        "final": 5.35,
+        "champ": 2.17
+      },
       "luck": -0.45,
       "streak": "L1",
       "top": [
@@ -710,6 +787,13 @@
       "bench": 55.9,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 94.7,
+        "bye": 34.3,
+        "semis": 68.65,
+        "final": 38.98,
+        "champ": 22.0
+      },
       "luck": 0.82,
       "streak": "W2",
       "top": [

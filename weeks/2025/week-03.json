@@ -25,6 +25,13 @@
         "name": "Quinshon Judkins",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 6.78,
+        "bye": 0.25,
+        "semis": 2.42,
+        "final": 0.85,
+        "champ": 0.2
+      },
       "luck": -0.56,
       "streak": "L3",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 21.9,
         "name": "Omarion Hampton",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 72.12,
+        "bye": 14.2,
+        "semis": 41.8,
+        "final": 17.93,
+        "champ": 7.6
       },
       "luck": 0.0,
       "streak": "L1",
@@ -151,6 +165,13 @@
         "name": "Marquise Brown",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 59.83,
+        "bye": 6.97,
+        "semis": 31.23,
+        "final": 12.68,
+        "champ": 5.45
+      },
       "luck": -0.33,
       "streak": "L1",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 13.7,
         "name": "Rome Odunze",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 20.38,
+        "bye": 0.78,
+        "semis": 9.53,
+        "final": 3.45,
+        "champ": 1.4
       },
       "luck": -0.22,
       "streak": "L1",
@@ -277,6 +305,13 @@
         "name": "Courtland Sutton",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 94.78,
+        "bye": 51.5,
+        "semis": 78.12,
+        "final": 44.27,
+        "champ": 21.93
+      },
       "luck": 0.11,
       "streak": "W2",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 8.1,
         "name": "Bhayshul Tuten",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 44.42,
+        "bye": 3.08,
+        "semis": 20.93,
+        "final": 8.12,
+        "champ": 3.5
       },
       "luck": 0.78,
       "streak": "W1",
@@ -403,6 +445,13 @@
         "name": "Justin Herbert",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 50.88,
+        "bye": 5.0,
+        "semis": 26.73,
+        "final": 10.78,
+        "champ": 4.38
+      },
       "luck": -0.44,
       "streak": "L2",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 16.0,
         "name": "DeVonta Smith",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 63.75,
+        "bye": 8.5,
+        "semis": 35.98,
+        "final": 14.07,
+        "champ": 5.62
       },
       "luck": 0.67,
       "streak": "W1",
@@ -529,6 +585,13 @@
         "name": "Michael Pittman",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 98.95,
+        "bye": 79.38,
+        "semis": 92.72,
+        "final": 60.83,
+        "champ": 38.8
+      },
       "luck": -0.11,
       "streak": "W2",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 16.0,
         "name": "Keenan Allen",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 88.12,
+        "bye": 30.35,
+        "semis": 60.55,
+        "final": 27.02,
+        "champ": 11.12
       },
       "luck": 0.11,
       "streak": "W1",

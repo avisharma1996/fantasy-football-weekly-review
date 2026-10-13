@@ -1,0 +1,464 @@
+[
+ {
+  "week": 1,
+  "at": 1755789275134,
+  "sides": [
+   {
+    "roster": "2",
+    "players": [
+     {
+      "player": "12507",
+      "pts": 97.8,
+      "name": "Omarion Hampton",
+      "pos": "RB"
+     },
+     {
+      "player": "8150",
+      "pts": 235.7,
+      "name": "Kyren Williams",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 333.5
+   },
+   {
+    "roster": "6",
+    "players": [
+     {
+      "player": "12489",
+      "pts": 91.9,
+      "name": "RJ Harvey",
+      "pos": "RB"
+     },
+     {
+      "player": "4034",
+      "pts": 356.9,
+      "name": "Christian McCaffrey",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 448.8
+   }
+  ]
+ },
+ {
+  "week": 2,
+  "at": 1757892549216,
+  "sides": [
+   {
+    "roster": "7",
+    "players": [
+     {
+      "player": "11559",
+      "pts": 0,
+      "name": "Michael Penix",
+      "pos": "QB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   },
+   {
+    "roster": "9",
+    "players": [
+     {
+      "player": "11565",
+      "pts": 0,
+      "name": "J.J. McCarthy",
+      "pos": "QB"
+     }
+    ],
+    "picks": [],
+    "faab": 15,
+    "total": 0
+   }
+  ]
+ },
+ {
+  "week": 2,
+  "at": 1757999358265,
+  "sides": [
+   {
+    "roster": "7",
+    "players": [
+     {
+      "player": "6797",
+      "pts": 166.98,
+      "name": "Justin Herbert",
+      "pos": "QB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 166.98
+   },
+   {
+    "roster": "10",
+    "players": [
+     {
+      "player": "5849",
+      "pts": 0,
+      "name": "Kyler Murray",
+      "pos": "QB"
+     },
+     {
+      "player": "6806",
+      "pts": 81.6,
+      "name": "J.K. Dobbins",
+      "pos": "RB"
+     },
+     {
+      "player": "8144",
+      "pts": 0,
+      "name": "Chris Olave",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 81.6
+   }
+  ]
+ },
+ {
+  "week": 3,
+  "at": 1758409753278,
+  "sides": [
+   {
+    "roster": "8",
+    "players": [
+     {
+      "player": "8144",
+      "pts": 10.7,
+      "name": "Chris Olave",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 10.7
+   },
+   {
+    "roster": "10",
+    "players": [
+     {
+      "player": "4033",
+      "pts": 0,
+      "name": "David Njoku",
+      "pos": "TE"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   }
+  ]
+ },
+ {
+  "week": 4,
+  "at": 1758785439986,
+  "sides": [
+   {
+    "roster": "8",
+    "players": [
+     {
+      "player": "3321",
+      "pts": 9.7,
+      "name": "Tyreek Hill",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 15,
+    "total": 9.7
+   },
+   {
+    "roster": "9",
+    "players": [
+     {
+      "player": "8144",
+      "pts": 191.0,
+      "name": "Chris Olave",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 191.0
+   }
+  ]
+ },
+ {
+  "week": 4,
+  "at": 1759117725693,
+  "sides": [
+   {
+    "roster": "7",
+    "players": [
+     {
+      "player": "8151",
+      "pts": 84.7,
+      "name": "Kenneth Walker",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 84.7
+   },
+   {
+    "roster": "9",
+    "players": [
+     {
+      "player": "3198",
+      "pts": 211.4,
+      "name": "Derrick Henry",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 211.4
+   }
+  ]
+ },
+ {
+  "week": 4,
+  "at": 1759208723071,
+  "sides": [
+   {
+    "roster": "4",
+    "players": [
+     {
+      "player": "12481",
+      "pts": 67.8,
+      "name": "Cam Skattebo",
+      "pos": "RB"
+     },
+     {
+      "player": "6786",
+      "pts": 132.3,
+      "name": "CeeDee Lamb",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 200.1
+   },
+   {
+    "roster": "6",
+    "players": [
+     {
+      "player": "11620",
+      "pts": 54.5,
+      "name": "Rome Odunze",
+      "pos": "WR"
+     },
+     {
+      "player": "5872",
+      "pts": 79.8,
+      "name": "Deebo Samuel",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 134.3
+   }
+  ]
+ },
+ {
+  "week": 4,
+  "at": 1759255317109,
+  "sides": [
+   {
+    "roster": "1",
+    "players": [
+     {
+      "player": "8126",
+      "pts": 5.7,
+      "name": "Wan'Dale Robinson",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 5.7
+   },
+   {
+    "roster": "10",
+    "players": [
+     {
+      "player": "10236",
+      "pts": 13.8,
+      "name": "Dalton Kincaid",
+      "pos": "TE"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 13.8
+   }
+  ]
+ },
+ {
+  "week": 4,
+  "at": 1759282841352,
+  "sides": [
+   {
+    "roster": "2",
+    "players": [
+     {
+      "player": "12501",
+      "pts": 0,
+      "name": "Matthew Golden",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   },
+   {
+    "roster": "9",
+    "players": [
+     {
+      "player": "4199",
+      "pts": 17.6,
+      "name": "Aaron Jones",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 17.6
+   }
+  ]
+ },
+ {
+  "week": 6,
+  "at": 1759972845582,
+  "sides": [
+   {
+    "roster": "1",
+    "players": [
+     {
+      "player": "12501",
+      "pts": 11.7,
+      "name": "Matthew Golden",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 11.7
+   },
+   {
+    "roster": "2",
+    "players": [
+     {
+      "player": "9753",
+      "pts": 76.1,
+      "name": "Zach Charbonnet",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 76.1
+   }
+  ]
+ },
+ {
+  "week": 11,
+  "at": 1763080257307,
+  "sides": [
+   {
+    "roster": "8",
+    "players": [
+     {
+      "player": "11589",
+      "pts": 0,
+      "name": "Trey Benson",
+      "pos": "RB"
+     },
+     {
+      "player": "5846",
+      "pts": 61.5,
+      "name": "DK Metcalf",
+      "pos": "WR"
+     },
+     {
+      "player": "9504",
+      "pts": 11.5,
+      "name": "Kayshon Boutte",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 73.0
+   },
+   {
+    "roster": "10",
+    "players": [
+     {
+      "player": "4035",
+      "pts": 2.5,
+      "name": "Alvin Kamara",
+      "pos": "RB"
+     },
+     {
+      "player": "9487",
+      "pts": 15.0,
+      "name": "Parker Washington",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 17.5
+   }
+  ]
+ },
+ {
+  "week": 11,
+  "at": 1763394704193,
+  "sides": [
+   {
+    "roster": "7",
+    "players": [
+     {
+      "player": "8126",
+      "pts": 63.7,
+      "name": "Wan'Dale Robinson",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 63.7
+   },
+   {
+    "roster": "9",
+    "players": [
+     {
+      "player": "8146",
+      "pts": 0,
+      "name": "Garrett Wilson",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 10,
+    "total": 0
+   }
+  ]
+ }
+]

@@ -25,6 +25,13 @@
         "name": "Tyjae Spears",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 68.17,
+        "bye": 0.0,
+        "semis": 32.95,
+        "final": 11.55,
+        "champ": 4.67
+      },
       "luck": -1.44,
       "streak": "W1",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 17.2,
         "name": "Devin Singletary",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 95.9,
+        "bye": 5.6,
+        "semis": 48.2,
+        "final": 15.7,
+        "champ": 5.67
       },
       "luck": 1.44,
       "streak": "W3",
@@ -151,6 +165,13 @@
         "name": "Jordan Mason",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 26.75,
+        "bye": 0.0,
+        "semis": 11.22,
+        "final": 3.45,
+        "champ": 1.38
+      },
       "luck": -0.56,
       "streak": "L1",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 16.02,
         "name": "Trevor Lawrence",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 24.85,
+        "bye": 0.0,
+        "semis": 10.4,
+        "final": 3.05,
+        "champ": 0.7
       },
       "luck": -0.89,
       "streak": "L2",
@@ -277,6 +305,13 @@
         "name": "Brock Purdy",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 99.35,
+        "semis": 99.8,
+        "final": 64.8,
+        "champ": 35.58
+      },
       "luck": 0.67,
       "streak": "W6",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 10.2,
         "name": "Kyle Monangai",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 74.92,
+        "bye": 0.03,
+        "semis": 36.62,
+        "final": 13.53,
+        "champ": 4.92
       },
       "luck": 0.67,
       "streak": "W2",
@@ -403,6 +445,13 @@
         "name": "Kenneth Walker",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 9.35,
+        "bye": 0.0,
+        "semis": 4.38,
+        "final": 1.35,
+        "champ": 0.47
+      },
       "luck": -1.89,
       "streak": "L3",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 12.7,
         "name": "Tre Tucker",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 0.2,
+        "bye": 0.0,
+        "semis": 0.03,
+        "final": 0.03,
+        "champ": 0.0
       },
       "luck": 1.0,
       "streak": "L2",
@@ -529,6 +585,13 @@
         "name": "Zay Flowers",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 99.97,
+        "bye": 74.65,
+        "semis": 92.7,
+        "final": 64.62,
+        "champ": 37.48
+      },
       "luck": -0.33,
       "streak": "W1",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 17.82,
         "name": "Baker Mayfield",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 99.88,
+        "bye": 20.38,
+        "semis": 63.7,
+        "final": 21.93,
+        "champ": 9.12
       },
       "luck": 1.33,
       "streak": "L1",

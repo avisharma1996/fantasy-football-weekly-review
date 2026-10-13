@@ -25,6 +25,13 @@
         "name": "Marquez Valdes-Scantling",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 91.92,
+        "bye": 3.3,
+        "semis": 50.9,
+        "final": 19.93,
+        "champ": 9.2
+      },
       "luck": -2.44,
       "streak": "L2",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 16.9,
         "name": "Josh Downs",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 8.82,
+        "bye": 0.0,
+        "semis": 4.38,
+        "final": 1.9,
+        "champ": 0.53
       },
       "luck": -3.0,
       "streak": "W1",
@@ -151,6 +165,13 @@
         "name": "Kenneth Walker",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 44.67,
+        "bye": 0.05,
+        "semis": 18.9,
+        "final": 7.1,
+        "champ": 2.45
+      },
       "luck": 3.22,
       "streak": "L3",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 10.2,
         "name": "DJ Moore",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 1.55,
+        "bye": 0.0,
+        "semis": 0.75,
+        "final": 0.35,
+        "champ": 0.15
       },
       "luck": -0.78,
       "streak": "W1",
@@ -277,6 +305,13 @@
         "name": "Brian Thomas",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 100.0,
+        "semis": 100.0,
+        "final": 69.6,
+        "champ": 50.23
+      },
       "luck": -1.0,
       "streak": "W5",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 4.7,
         "name": "Jaylen Waddle",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 47.3,
+        "bye": 0.07,
+        "semis": 20.3,
+        "final": 6.9,
+        "champ": 2.05
       },
       "luck": 0.44,
       "streak": "L1",
@@ -403,6 +445,13 @@
         "name": "Josh Jacobs",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 99.88,
+        "bye": 31.05,
+        "semis": 67.4,
+        "final": 30.25,
+        "champ": 11.28
+      },
       "luck": 1.22,
       "streak": "L2",
       "top": [
@@ -462,6 +511,13 @@
       "bench": 111.8,
       "bench_week": 0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 100.0,
+        "bye": 50.73,
+        "semis": 77.88,
+        "final": 40.75,
+        "champ": 15.3
+      },
       "luck": 0.89,
       "streak": "W3",
       "top": [
@@ -525,6 +581,13 @@
         "name": "Joe Burrow",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 98.58,
+        "bye": 14.8,
+        "semis": 55.92,
+        "final": 21.7,
+        "champ": 8.38
+      },
       "luck": 2.11,
       "streak": "W3",
       "top": [
@@ -587,6 +650,13 @@
         "pts": 23.2,
         "name": "Jerry Jeudy",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 7.28,
+        "bye": 0.0,
+        "semis": 3.58,
+        "final": 1.52,
+        "champ": 0.45
       },
       "luck": -0.67,
       "streak": "L1",

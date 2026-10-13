@@ -25,6 +25,13 @@
         "name": "Michael Pittman",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 49.8,
+        "bye": 3.85,
+        "semis": 26.73,
+        "final": 12.1,
+        "champ": 5.53
+      },
       "luck": -1.33,
       "streak": "L3",
       "top": [
@@ -84,6 +91,13 @@
       "bench": 46.1,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 2.17,
+        "bye": 0.0,
+        "semis": 0.93,
+        "final": 0.28,
+        "champ": 0.07
+      },
       "luck": -1.89,
       "streak": "L6",
       "top": [
@@ -147,6 +161,13 @@
         "name": "Keenan Allen",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 91.75,
+        "bye": 29.93,
+        "semis": 62.58,
+        "final": 30.48,
+        "champ": 14.47
+      },
       "luck": 2.0,
       "streak": "W4",
       "top": [
@@ -206,6 +227,13 @@
       "bench": 82.0,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 1.2,
+        "bye": 0.0,
+        "semis": 0.38,
+        "final": 0.07,
+        "champ": 0.05
+      },
       "luck": 0.67,
       "streak": "L1",
       "top": [
@@ -268,6 +296,13 @@
         "pts": 26.2,
         "name": "Joe Mixon",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 98.35,
+        "bye": 64.25,
+        "semis": 84.33,
+        "final": 50.38,
+        "champ": 29.9
       },
       "luck": -1.33,
       "streak": "L1",
@@ -332,6 +367,13 @@
         "name": "Zach Charbonnet",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 54.98,
+        "bye": 3.95,
+        "semis": 26.68,
+        "final": 11.05,
+        "champ": 4.0
+      },
       "luck": 0.33,
       "streak": "L2",
       "top": [
@@ -394,6 +436,13 @@
         "pts": 2.0,
         "name": "Tyler Conklin",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 96.47,
+        "bye": 50.7,
+        "semis": 73.03,
+        "final": 34.15,
+        "champ": 15.68
       },
       "luck": 1.44,
       "streak": "W3",
@@ -458,6 +507,13 @@
         "name": "Rico Dowdle",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 94.83,
+        "bye": 38.98,
+        "semis": 70.12,
+        "final": 36.95,
+        "champ": 19.23
+      },
       "luck": 0.22,
       "streak": "W1",
       "top": [
@@ -521,6 +577,13 @@
         "name": "Jalen Hurts",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 53.75,
+        "bye": 3.98,
+        "semis": 24.75,
+        "final": 10.75,
+        "champ": 5.0
+      },
       "luck": 0.89,
       "streak": "W2",
       "top": [
@@ -583,6 +646,13 @@
         "pts": 26.62,
         "name": "Jordan Love",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 56.7,
+        "bye": 4.38,
+        "semis": 30.5,
+        "final": 13.8,
+        "champ": 6.08
       },
       "luck": -1.0,
       "streak": "W1",

@@ -25,6 +25,13 @@
         "name": "Denzel Boston",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 82.33,
+        "bye": 18.77,
+        "semis": 53.02,
+        "final": 25.5,
+        "champ": 12.47
+      },
       "luck": 0.55,
       "streak": "W2",
       "top": [
@@ -87,6 +94,13 @@
         "pts": 27.16,
         "name": "Drake Maye",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 95.7,
+        "bye": 49.73,
+        "semis": 76.33,
+        "final": 39.92,
+        "champ": 20.7
       },
       "luck": 1.27,
       "streak": "W4",
@@ -151,6 +165,13 @@
         "name": "Emanuel Wilson",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 10.7,
+        "bye": 0.1,
+        "semis": 4.25,
+        "final": 1.18,
+        "champ": 0.5
+      },
       "luck": -0.55,
       "streak": "L1",
       "top": [
@@ -213,6 +234,13 @@
         "pts": 25.2,
         "name": "Brian Robinson",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 21.93,
+        "bye": 0.82,
+        "semis": 9.8,
+        "final": 3.73,
+        "champ": 1.18
       },
       "luck": -0.82,
       "streak": "L2",
@@ -277,6 +305,13 @@
         "name": "Tyler Allgeier",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 96.12,
+        "bye": 53.05,
+        "semis": 78.45,
+        "final": 44.52,
+        "champ": 23.77
+      },
       "luck": 0.09,
       "streak": "L1",
       "top": [
@@ -339,6 +374,13 @@
         "pts": 12.2,
         "name": "Malachi Fields",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 46.05,
+        "bye": 3.5,
+        "semis": 22.23,
+        "final": 9.18,
+        "champ": 3.8
       },
       "luck": -1.0,
       "streak": "L2",
@@ -403,6 +445,13 @@
         "name": "KC Concepcion",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 0.12,
+        "bye": 0.0,
+        "semis": 0.03,
+        "final": 0.0,
+        "champ": 0.0
+      },
       "luck": -0.36,
       "streak": "L4",
       "top": [
@@ -465,6 +514,13 @@
         "pts": 8.2,
         "name": "Woody Marks",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 42.65,
+        "bye": 3.02,
+        "semis": 20.48,
+        "final": 8.35,
+        "champ": 3.52
       },
       "luck": 0.18,
       "streak": "W2",
@@ -529,6 +585,13 @@
         "name": "Pat Freiermuth",
         "pos": "TE"
       },
+      "odds": {
+        "playoffs": 12.03,
+        "bye": 0.42,
+        "semis": 4.15,
+        "final": 1.23,
+        "champ": 0.47
+      },
       "luck": -0.45,
       "streak": "L3",
       "top": [
@@ -591,6 +654,13 @@
         "pts": 6.8,
         "name": "Mack Hollins",
         "pos": "WR"
+      },
+      "odds": {
+        "playoffs": 96.97,
+        "bye": 58.9,
+        "semis": 80.08,
+        "final": 43.35,
+        "champ": 22.48
       },
       "luck": 0.09,
       "streak": "W1",
@@ -655,6 +725,13 @@
         "name": "Jared Goff",
         "pos": "QB"
       },
+      "odds": {
+        "playoffs": 26.9,
+        "bye": 1.4,
+        "semis": 12.32,
+        "final": 4.75,
+        "champ": 1.68
+      },
       "luck": 0.18,
       "streak": "W2",
       "top": [
@@ -717,6 +794,13 @@
         "pts": 18.4,
         "name": "T.J. Hockenson",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 68.5,
+        "bye": 10.28,
+        "semis": 38.88,
+        "final": 18.3,
+        "champ": 9.43
       },
       "luck": 0.82,
       "streak": "W1",

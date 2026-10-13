@@ -25,6 +25,13 @@
         "name": "Tank Dell",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 42.7,
+        "bye": 1.88,
+        "semis": 19.27,
+        "final": 7.33,
+        "champ": 2.85
+      },
       "luck": -0.44,
       "streak": "L2",
       "top": [
@@ -84,6 +91,13 @@
       "bench": 46.1,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 7.25,
+        "bye": 0.0,
+        "semis": 2.95,
+        "final": 0.95,
+        "champ": 0.38
+      },
       "luck": -1.56,
       "streak": "L5",
       "top": [
@@ -146,6 +160,13 @@
         "pts": 18.38,
         "name": "Dak Prescott",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 87.53,
+        "bye": 19.88,
+        "semis": 56.33,
+        "final": 26.68,
+        "champ": 11.62
       },
       "luck": 1.67,
       "streak": "W3",
@@ -210,6 +231,13 @@
         "name": "Rhamondre Stevenson",
         "pos": "RB"
       },
+      "odds": {
+        "playoffs": 4.47,
+        "bye": 0.05,
+        "semis": 1.52,
+        "final": 0.4,
+        "champ": 0.17
+      },
       "luck": 0.67,
       "streak": "W1",
       "top": [
@@ -272,6 +300,13 @@
         "pts": 25.1,
         "name": "Kyler Murray",
         "pos": "QB"
+      },
+      "odds": {
+        "playoffs": 98.65,
+        "bye": 69.3,
+        "semis": 87.45,
+        "final": 53.3,
+        "champ": 31.93
       },
       "luck": -0.78,
       "streak": "W1",
@@ -336,6 +371,13 @@
         "name": "Jaylen Waddle",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 83.25,
+        "bye": 14.6,
+        "semis": 48.15,
+        "final": 20.95,
+        "champ": 9.65
+      },
       "luck": 0.44,
       "streak": "L1",
       "top": [
@@ -395,6 +437,13 @@
       "bench": 59.06,
       "bench_week": 0.0,
       "bench_miss": null,
+      "odds": {
+        "playoffs": 92.4,
+        "bye": 29.57,
+        "semis": 59.88,
+        "final": 25.25,
+        "champ": 10.47
+      },
       "luck": 1.22,
       "streak": "W2",
       "top": [
@@ -457,6 +506,13 @@
         "pts": 18.4,
         "name": "Rico Dowdle",
         "pos": "RB"
+      },
+      "odds": {
+        "playoffs": 98.03,
+        "bye": 59.7,
+        "semis": 83.12,
+        "final": 48.38,
+        "champ": 26.48
       },
       "luck": -0.56,
       "streak": "L1",
@@ -521,6 +577,13 @@
         "name": "Alec Pierce",
         "pos": "WR"
       },
+      "odds": {
+        "playoffs": 57.2,
+        "bye": 4.3,
+        "semis": 27.65,
+        "final": 10.82,
+        "champ": 4.33
+      },
       "luck": 0.33,
       "streak": "W1",
       "top": [
@@ -583,6 +646,13 @@
         "pts": 19.7,
         "name": "Brock Bowers",
         "pos": "TE"
+      },
+      "odds": {
+        "playoffs": 28.52,
+        "bye": 0.72,
+        "semis": 13.68,
+        "final": 5.95,
+        "champ": 2.12
       },
       "luck": -1.0,
       "streak": "L1",
