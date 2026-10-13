@@ -46,9 +46,11 @@ nav a.cur{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .pic{display:block;max-width:100%;max-height:260px;height:auto;border-radius:8px;margin:6px 0}
 video.pic{max-height:360px}
 .blurb{margin-top:10px}.blurb p{margin:.5em 0 0}.blurb p:first-child{margin-top:0}
-.top{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.85rem}
+.tops{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;align-items:center;margin-top:12px}
+.tops .lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.top{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.85rem}
 .top li{background:var(--chip);border-radius:8px;padding:3px 9px;display:flex;gap:6px;align-items:baseline}
-.top li.lbl{background:none;padding-left:0;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+@media (max-width:560px){.tops{grid-template-columns:1fr;gap:4px}.tops .top{margin-bottom:6px}}
 .top .pos{color:var(--muted);font-size:.7rem;font-weight:700}
 .top .pp{font-variant-numeric:tabular-nums;color:var(--muted)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
@@ -66,7 +68,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"><div><h2>Justin Beer Loyalist</h2>
         <div class="meta"><b>9-1</b> · 668.66 PF · W2</div></div></div>
       <div class="blurb"><p>Mr. Needlemouse is carrying Justin Beer in a way Mr. Harbaugh wishes he could</p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">RB1</span>Jahmyr Gibbs<span class="pp">140.2</span></li><li><span class="pos">WR5</span>Davante Adams<span class="pp">81.6</span></li><li><span class="pos">TE1</span>Trey McBride<span class="pp">69.8</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB1</span>Jahmyr Gibbs<span class="pp">140.2</span></li><li><span class="pos">WR5</span>Davante Adams<span class="pp">81.6</span></li><li><span class="pos">TE1</span>Trey McBride<span class="pp">69.8</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB1</span>Jahmyr Gibbs<span class="pp">35.2</span></li><li><span class="pos">WR4</span>Malik Nabers<span class="pp">23.6</span></li><li><span class="pos">WR10</span>Davante Adams<span class="pp">19.6</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -75,7 +77,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><div><h2>Karans Sportsbook</h2>
         <div class="meta"><b>8-2</b> · 635.90 PF · W5</div></div></div>
       <div class="blurb"><p>Polymarket has 20-1 odds on Karans Sportsbook taking home the championship 👀 (Disclaimer: This is just a joke do not actually bet on this)</p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">RB8</span>James Cook<span class="pp">85.8</span></li><li><span class="pos">RB11</span>Chuba Hubbard<span class="pp">74.0</span></li><li><span class="pos">K2</span>Will Reichard<span class="pp">68.0</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB8</span>James Cook<span class="pp">85.8</span></li><li><span class="pos">RB11</span>Chuba Hubbard<span class="pp">74.0</span></li><li><span class="pos">K2</span>Will Reichard<span class="pp">68.0</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">QB1</span>Drake Maye<span class="pp">39.5</span></li><li><span class="pos">RB4</span>James Cook<span class="pp">22.3</span></li><li><span class="pos">K4</span>Will Reichard<span class="pp">16.0</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -84,7 +86,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg" alt="" loading="lazy"><div><h2>Baltimore Avians</h2>
         <div class="meta"><b>7-3</b> · 658.72 PF · W3</div></div></div>
       <div class="blurb"><p>Jesse Minter you have changed the lives of millions</p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">RB2</span>Bijan Robinson<span class="pp">112.2</span></li><li><span class="pos">QB4</span>Joe Burrow<span class="pp">104.2</span></li><li><span class="pos">RB9</span>Jaylen Warren<span class="pp">83.5</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB2</span>Bijan Robinson<span class="pp">112.2</span></li><li><span class="pos">QB4</span>Joe Burrow<span class="pp">104.2</span></li><li><span class="pos">RB9</span>Jaylen Warren<span class="pp">83.5</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB2</span>Jaylen Warren<span class="pp">33.8</span></li><li><span class="pos">QB9</span>Joe Burrow<span class="pp">24.6</span></li><li><span class="pos">K2</span>Spencer Shrader<span class="pp">21.0</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -93,7 +95,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/avatars/thumbs/d55d1f7075eda01948318de4af616075" alt="" loading="lazy"><div><h2>Shivxn</h2>
         <div class="meta"><b>6-4</b> · 680.42 PF · W2</div></div></div>
       <div class="blurb"><p><img class="pic" src="images/kenneth-walker.png" alt="" loading="lazy"></p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">RB4</span>Kenneth Walker<span class="pp">104.1</span></li><li><span class="pos">WR6</span>Chris Olave<span class="pp">79.2</span></li><li><span class="pos">RB14</span>Bucky Irving<span class="pp">71.2</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB4</span>Kenneth Walker<span class="pp">104.1</span></li><li><span class="pos">WR6</span>Chris Olave<span class="pp">79.2</span></li><li><span class="pos">RB14</span>Bucky Irving<span class="pp">71.2</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">QB2</span>Jayden Daniels<span class="pp">32.3</span></li><li><span class="pos">RB3</span>Bucky Irving<span class="pp">30.5</span></li><li><span class="pos">WR2</span>Puka Nacua<span class="pp">29.2</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -102,7 +104,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><div><h2>Amver Alert🚨</h2>
         <div class="meta"><b>6-4</b> · 652.86 PF · L2</div></div></div>
       <div class="blurb"><p>The streets will remember the championship run for Amver from Week 1 - Week 3</p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">QB1</span>Josh Allen<span class="pp">146.5</span></li><li><span class="pos">WR4</span>Amon-Ra St. Brown<span class="pp">85.7</span></li><li><span class="pos">RB13</span>Ashton Jeanty<span class="pp">73.6</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB1</span>Josh Allen<span class="pp">146.5</span></li><li><span class="pos">WR4</span>Amon-Ra St. Brown<span class="pp">85.7</span></li><li><span class="pos">RB13</span>Ashton Jeanty<span class="pp">73.6</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">QB3</span>Josh Allen<span class="pp">31.5</span></li><li><span class="pos">TE4</span>Tyler Warren<span class="pp">17.9</span></li><li><span class="pos">WR11</span>Jameson Williams<span class="pp">17.7</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -111,7 +113,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><div><h2>6 7</h2>
         <div class="meta"><b>5-5</b> · 585.24 PF · L3</div></div></div>
       <div class="blurb"><p>Purdy might win MVP but sadly may not be enough to get past 6th or 7th in this league</p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">QB2</span>Brock Purdy<span class="pp">118.6</span></li><li><span class="pos">RB3</span>Derrick Henry<span class="pp">107.8</span></li><li><span class="pos">RB10</span>Christian McCaffrey<span class="pp">81.8</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB2</span>Brock Purdy<span class="pp">118.6</span></li><li><span class="pos">RB3</span>Derrick Henry<span class="pp">107.8</span></li><li><span class="pos">RB10</span>Christian McCaffrey<span class="pp">81.8</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR6</span>Mike Evans<span class="pp">22.8</span></li><li><span class="pos">RB5</span>Derrick Henry<span class="pp">20.5</span></li><li><span class="pos">RB6</span>Braelon Allen<span class="pp">18.1</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -120,7 +122,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/avatars/thumbs/4fb394f49d806fbad75dd79ecc68f525" alt="" loading="lazy"><div><h2>NShah19</h2>
         <div class="meta"><b>4-6</b> · 585.02 PF · L1</div></div></div>
       <div class="blurb"><p>Lamar letting down his team once again x2</p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">RB5</span>Kyren Williams<span class="pp">95.8</span></li><li><span class="pos">QB19</span>Lamar Jackson<span class="pp">80.1</span></li><li><span class="pos">WR10</span>Ja&#x27;Marr Chase<span class="pp">66.4</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB5</span>Kyren Williams<span class="pp">95.8</span></li><li><span class="pos">QB19</span>Lamar Jackson<span class="pp">80.1</span></li><li><span class="pos">WR10</span>Ja&#x27;Marr Chase<span class="pp">66.4</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">QB4</span>Jared Goff<span class="pp">28.9</span></li><li><span class="pos">WR13</span>Ja&#x27;Marr Chase<span class="pp">16.7</span></li><li><span class="pos">RB8</span>Kyren Williams<span class="pp">16.6</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -129,7 +131,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><div><h2>Braelon Allen</h2>
         <div class="meta"><b>4-6</b> · 544.90 PF · W1</div></div></div>
       <div class="blurb"><p>Braelon Allen&#x27;s redemption arc may be done and dusted but this Christian Watson resurgence might be even more impressive</p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">WR2</span>Christian Watson<span class="pp">96.4</span></li><li><span class="pos">RB6</span>Jonathan Taylor<span class="pp">90.9</span></li><li><span class="pos">QB16</span>Patrick Mahomes<span class="pp">85.6</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR2</span>Christian Watson<span class="pp">96.4</span></li><li><span class="pos">RB6</span>Jonathan Taylor<span class="pp">90.9</span></li><li><span class="pos">QB16</span>Patrick Mahomes<span class="pp">85.6</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR1</span>Christian Watson<span class="pp">29.3</span></li><li><span class="pos">QB5</span>Matthew Stafford<span class="pp">27.3</span></li><li><span class="pos">DEF9</span>Minnesota Vikings D/ST<span class="pp">11.0</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -138,7 +140,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/1e1f1094e8d4b98b25130a8d3c0cf063.jpg" alt="" loading="lazy"><div><h2>I’m Whipped by Bezos</h2>
         <div class="meta"><b>4-6</b> · 548.14 PF · L1</div></div></div>
       <div class="blurb"><p>And the whipping has returned sadly</p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">QB5</span>Dak Prescott<span class="pp">96.8</span></li><li><span class="pos">WR3</span>CeeDee Lamb<span class="pp">95.6</span></li><li><span class="pos">WR7</span>Garrett Wilson<span class="pp">70.9</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB5</span>Dak Prescott<span class="pp">96.8</span></li><li><span class="pos">WR3</span>CeeDee Lamb<span class="pp">95.6</span></li><li><span class="pos">WR7</span>Garrett Wilson<span class="pp">70.9</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR9</span>Garrett Wilson<span class="pp">19.9</span></li><li><span class="pos">TE5</span>Sam LaPorta<span class="pp">17.3</span></li><li><span class="pos">QB17</span>Dak Prescott<span class="pp">14.6</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -147,7 +149,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><div><h2>superdiddy</h2>
         <div class="meta"><b>3-7</b> · 517.50 PF · L4</div></div></div>
       <div class="blurb"><p>Yeah it might just be a lost cause sadly <img class="pic" src="images/salute.png" alt="" loading="lazy"></p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">RB7</span>Javonte Williams<span class="pp">87.5</span></li><li><span class="pos">WR9</span>Zay Flowers<span class="pp">68.8</span></li><li><span class="pos">WR20</span>Justin Jefferson<span class="pp">54.2</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB7</span>Javonte Williams<span class="pp">87.5</span></li><li><span class="pos">WR9</span>Zay Flowers<span class="pp">68.8</span></li><li><span class="pos">WR20</span>Justin Jefferson<span class="pp">54.2</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">K3</span>Ka&#x27;imi Fairbairn<span class="pp">17.0</span></li><li><span class="pos">WR15</span>Justin Jefferson<span class="pp">15.8</span></li><li><span class="pos">RB19</span>Javonte Williams<span class="pp">13.2</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -156,7 +158,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><div><h2>yrkpapi</h2>
         <div class="meta"><b>2-8</b> · 472.96 PF · W1</div></div></div>
       <div class="blurb"><p>Hold on now... 👀</p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">WR8</span>Parker Washington<span class="pp">70.5</span></li><li><span class="pos">TE2</span>Isaiah Likely<span class="pp">68.9</span></li><li><span class="pos">WR19</span>George Pickens<span class="pp">55.0</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR8</span>Parker Washington<span class="pp">70.5</span></li><li><span class="pos">TE2</span>Isaiah Likely<span class="pp">68.9</span></li><li><span class="pos">WR19</span>George Pickens<span class="pp">55.0</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR3</span>Parker Washington<span class="pp">27.4</span></li><li><span class="pos">TE1</span>Isaiah Likely<span class="pp">26.9</span></li><li><span class="pos">WR5</span>George Pickens<span class="pp">23.5</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -165,8 +167,8 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg" alt="" loading="lazy"><div><h2>Ankitty</h2>
         <div class="meta"><b>2-8</b> · 532.08 PF · L2</div></div></div>
       <div class="blurb"><p><video class="pic" src="images/jsn-catch.mp4" autoplay loop muted playsinline preload="metadata"></video></p></div>
-      <ul class="top"><li class="lbl">Top performers</li><li><span class="pos">WR1</span>Jaxon Smith-Njigba<span class="pp">121.0</span></li><li><span class="pos">QB17</span>Jalen Hurts<span class="pp">83.0</span></li><li><span class="pos">TE5</span>Brock Bowers<span class="pp">59.2</span></li></ul>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR1</span>Jaxon Smith-Njigba<span class="pp">121.0</span></li><li><span class="pos">QB17</span>Jalen Hurts<span class="pp">83.0</span></li><li><span class="pos">TE5</span>Brock Bowers<span class="pp">59.2</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR8</span>Jaxon Smith-Njigba<span class="pp">20.3</span></li><li><span class="pos">TE3</span>Brock Bowers<span class="pp">19.0</span></li><li><span class="pos">DEF6</span>Denver Broncos D/ST<span class="pp">15.0</span></li></ul></div>
     </div>
   </li></ol>
-<footer>Records include a game against the league median each week. Top performers are season points scored as a starter for that team; QB1, RB3, etc. is the player's season rank at his position across the NFL through that week. Stats from Sleeper. Rankings are the commissioner's own.</footer>
+<footer>Records include a game against the league median each week. Top performers are points scored as a starter for that team: overall is the season through that week, weekly is that week alone. QB1, RB3, etc. is the player's rank at his position across the NFL over the same span. Stats from Sleeper. Rankings are the commissioner's own.</footer>
 </main></div></body></html>

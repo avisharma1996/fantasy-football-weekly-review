@@ -33,6 +33,26 @@
           "rank": "RB16",
           "pts": 49.6
         }
+      ],
+      "top_week": [
+        {
+          "name": "Bijan Robinson",
+          "pos": "RB",
+          "rank": "RB5",
+          "pts": 26.1
+        },
+        {
+          "name": "Josh Allen",
+          "pos": "QB",
+          "rank": "QB7",
+          "pts": 25.86
+        },
+        {
+          "name": "Detroit Lions D/ST",
+          "pos": "DEF",
+          "rank": "DEF1",
+          "pts": 20.0
+        }
       ]
     },
     "2": {
@@ -62,6 +82,26 @@
           "pos": "WR",
           "rank": "WR19",
           "pts": 48.1
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Omarion Hampton",
+          "pos": "RB",
+          "rank": "RB7",
+          "pts": 25.0
+        },
+        {
+          "name": "Quentin Johnston",
+          "pos": "WR",
+          "rank": "WR7",
+          "pts": 19.8
+        },
+        {
+          "name": "Marcus Mariota",
+          "pos": "QB",
+          "rank": "QB17",
+          "pts": 17.24
         }
       ]
     },
@@ -93,6 +133,26 @@
           "rank": "WR12",
           "pts": 53.4
         }
+      ],
+      "top_week": [
+        {
+          "name": "Drake Maye",
+          "pos": "QB",
+          "rank": "QB8",
+          "pts": 23.22
+        },
+        {
+          "name": "Bucky Irving",
+          "pos": "RB",
+          "rank": "RB9",
+          "pts": 23.0
+        },
+        {
+          "name": "Jahmyr Gibbs",
+          "pos": "RB",
+          "rank": "RB15",
+          "pts": 16.7
+        }
       ]
     },
     "4": {
@@ -122,6 +182,26 @@
           "pos": "WR",
           "rank": "WR26",
           "pts": 40.8
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Patrick Mahomes",
+          "pos": "QB",
+          "rank": "QB3",
+          "pts": 27.3
+        },
+        {
+          "name": "Marvin Harrison",
+          "pos": "WR",
+          "rank": "WR14",
+          "pts": 15.6
+        },
+        {
+          "name": "Saquon Barkley",
+          "pos": "RB",
+          "rank": "RB17",
+          "pts": 15.4
         }
       ]
     },
@@ -153,6 +233,26 @@
           "rank": "RB8",
           "pts": 66.4
         }
+      ],
+      "top_week": [
+        {
+          "name": "George Pickens",
+          "pos": "WR",
+          "rank": "WR2",
+          "pts": 29.4
+        },
+        {
+          "name": "Amon-Ra St. Brown",
+          "pos": "WR",
+          "rank": "WR4",
+          "pts": 22.5
+        },
+        {
+          "name": "James Cook",
+          "pos": "RB",
+          "rank": "RB10",
+          "pts": 21.0
+        }
       ]
     },
     "6": {
@@ -182,6 +282,26 @@
           "pos": "DEF",
           "rank": "DEF8",
           "pts": 36.0
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Kenny Gainwell",
+          "pos": "RB",
+          "rank": "RB3",
+          "pts": 28.4
+        },
+        {
+          "name": "Christian McCaffrey",
+          "pos": "RB",
+          "rank": "RB8",
+          "pts": 23.1
+        },
+        {
+          "name": "Jake Ferguson",
+          "pos": "TE",
+          "rank": "TE5",
+          "pts": 13.5
         }
       ]
     },
@@ -213,6 +333,26 @@
           "rank": "K2",
           "pts": 50.0
         }
+      ],
+      "top_week": [
+        {
+          "name": "Drake London",
+          "pos": "WR",
+          "rank": "WR6",
+          "pts": 21.0
+        },
+        {
+          "name": "Travis Etienne",
+          "pos": "RB",
+          "rank": "RB12",
+          "pts": 19.0
+        },
+        {
+          "name": "Emeka Egbuka",
+          "pos": "WR",
+          "rank": "WR8",
+          "pts": 18.1
+        }
       ]
     },
     "8": {
@@ -242,6 +382,26 @@
           "pos": "WR",
           "rank": "WR16",
           "pts": 50.0
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Ashton Jeanty",
+          "pos": "RB",
+          "rank": "RB1",
+          "pts": 32.5
+        },
+        {
+          "name": "Justin Jefferson",
+          "pos": "WR",
+          "rank": "WR9",
+          "pts": 17.6
+        },
+        {
+          "name": "Lamar Jackson",
+          "pos": "QB",
+          "rank": "QB27",
+          "pts": 11.68
         }
       ]
     },
@@ -273,6 +433,26 @@
           "rank": "RB6",
           "pts": 68.6
         }
+      ],
+      "top_week": [
+        {
+          "name": "Jalen Hurts",
+          "pos": "QB",
+          "rank": "QB14",
+          "pts": 19.4
+        },
+        {
+          "name": "Javonte Williams",
+          "pos": "RB",
+          "rank": "RB14",
+          "pts": 17.5
+        },
+        {
+          "name": "Michael Pittman",
+          "pos": "WR",
+          "rank": "WR22",
+          "pts": 12.6
+        }
       ]
     },
     "10": {
@@ -302,6 +482,26 @@
           "pos": "QB",
           "rank": "QB8",
           "pts": 60.16
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Josh Jacobs",
+          "pos": "RB",
+          "rank": "RB2",
+          "pts": 29.7
+        },
+        {
+          "name": "Puka Nacua",
+          "pos": "WR",
+          "rank": "WR1",
+          "pts": 29.5
+        },
+        {
+          "name": "Baker Mayfield",
+          "pos": "QB",
+          "rank": "QB10",
+          "pts": 19.86
         }
       ]
     }

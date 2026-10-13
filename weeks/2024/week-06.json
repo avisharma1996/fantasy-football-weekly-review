@@ -33,6 +33,26 @@
           "rank": "RB10",
           "pts": 80.4
         }
+      ],
+      "top_week": [
+        {
+          "name": "Josh Allen",
+          "pos": "QB",
+          "rank": "QB5",
+          "pts": 24.4
+        },
+        {
+          "name": "Breece Hall",
+          "pos": "RB",
+          "rank": "RB8",
+          "pts": 19.4
+        },
+        {
+          "name": "Zay Flowers",
+          "pos": "WR",
+          "rank": "WR11",
+          "pts": 17.9
+        }
       ]
     },
     "2": {
@@ -62,6 +82,26 @@
           "pos": "WR",
           "rank": "WR12",
           "pts": 74.1
+        }
+      ],
+      "top_week": [
+        {
+          "name": "A.J. Brown",
+          "pos": "WR",
+          "rank": "WR3",
+          "pts": 20.6
+        },
+        {
+          "name": "Najee Harris",
+          "pos": "RB",
+          "rank": "RB10",
+          "pts": 19.2
+        },
+        {
+          "name": "Geno Smith",
+          "pos": "QB",
+          "rank": "QB19",
+          "pts": 14.48
         }
       ]
     },
@@ -93,6 +133,26 @@
           "rank": "RB12",
           "pts": 77.5
         }
+      ],
+      "top_week": [
+        {
+          "name": "Derrick Henry",
+          "pos": "RB",
+          "rank": "RB3",
+          "pts": 25.2
+        },
+        {
+          "name": "Justin Fields",
+          "pos": "QB",
+          "rank": "QB7",
+          "pts": 23.7
+        },
+        {
+          "name": "Kenneth Walker",
+          "pos": "RB",
+          "rank": "RB13",
+          "pts": 16.9
+        }
       ]
     },
     "4": {
@@ -122,6 +182,26 @@
           "pos": "WR",
           "rank": "WR22",
           "pts": 65.7
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Jared Goff",
+          "pos": "QB",
+          "rank": "QB4",
+          "pts": 25.1
+        },
+        {
+          "name": "Pittsburgh Steelers D/ST",
+          "pos": "DEF",
+          "rank": "DEF3",
+          "pts": 15.0
+        },
+        {
+          "name": "Ka'imi Fairbairn",
+          "pos": "K",
+          "rank": "K9",
+          "pts": 11.0
         }
       ]
     },
@@ -153,6 +233,26 @@
           "rank": "K1",
           "pts": 82.0
         }
+      ],
+      "top_week": [
+        {
+          "name": "Bijan Robinson",
+          "pos": "RB",
+          "rank": "RB4",
+          "pts": 24.0
+        },
+        {
+          "name": "Tyrone Tracy",
+          "pos": "RB",
+          "rank": "RB7",
+          "pts": 19.7
+        },
+        {
+          "name": "Trey McBride",
+          "pos": "TE",
+          "rank": "TE4",
+          "pts": 13.6
+        }
       ]
     },
     "6": {
@@ -182,6 +282,26 @@
           "pos": "RB",
           "rank": "RB18",
           "pts": 69.6
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Jayden Daniels",
+          "pos": "QB",
+          "rank": "QB11",
+          "pts": 20.96
+        },
+        {
+          "name": "Deebo Samuel",
+          "pos": "WR",
+          "rank": "WR6",
+          "pts": 19.2
+        },
+        {
+          "name": "Chase Brown",
+          "pos": "RB",
+          "rank": "RB19",
+          "pts": 13.4
         }
       ]
     },
@@ -213,6 +333,26 @@
           "rank": "WR4",
           "pts": 52.5
         }
+      ],
+      "top_week": [
+        {
+          "name": "Baker Mayfield",
+          "pos": "QB",
+          "rank": "QB2",
+          "pts": 28.9
+        },
+        {
+          "name": "David Montgomery",
+          "pos": "RB",
+          "rank": "RB5",
+          "pts": 20.5
+        },
+        {
+          "name": "Jameson Williams",
+          "pos": "WR",
+          "rank": "WR15",
+          "pts": 16.2
+        }
       ]
     },
     "8": {
@@ -242,6 +382,26 @@
           "pos": "WR",
           "rank": "WR16",
           "pts": 70.4
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Lamar Jackson",
+          "pos": "QB",
+          "rank": "QB12",
+          "pts": 19.92
+        },
+        {
+          "name": "Chris Boswell",
+          "pos": "K",
+          "rank": "K2",
+          "pts": 17.0
+        },
+        {
+          "name": "Diontae Johnson",
+          "pos": "WR",
+          "rank": "WR12",
+          "pts": 16.8
         }
       ]
     },
@@ -273,6 +433,26 @@
           "rank": "WR13",
           "pts": 73.5
         }
+      ],
+      "top_week": [
+        {
+          "name": "Garrett Wilson",
+          "pos": "WR",
+          "rank": "WR2",
+          "pts": 20.7
+        },
+        {
+          "name": "Terry McLaurin",
+          "pos": "WR",
+          "rank": "WR5",
+          "pts": 20.3
+        },
+        {
+          "name": "Joe Burrow",
+          "pos": "QB",
+          "rank": "QB13",
+          "pts": 19.82
+        }
       ]
     },
     "10": {
@@ -302,6 +482,26 @@
           "pos": "WR",
           "rank": "WR10",
           "pts": 76.4
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Chris Godwin",
+          "pos": "WR",
+          "rank": "WR1",
+          "pts": 30.0
+        },
+        {
+          "name": "George Kittle",
+          "pos": "TE",
+          "rank": "TE2",
+          "pts": 20.3
+        },
+        {
+          "name": "D'Andre Swift",
+          "pos": "RB",
+          "rank": "RB6",
+          "pts": 19.9
         }
       ]
     }

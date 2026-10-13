@@ -33,6 +33,26 @@
           "rank": "RB14",
           "pts": 78.3
         }
+      ],
+      "top_week": [
+        {
+          "name": "Josh Allen",
+          "pos": "QB",
+          "rank": "QB9",
+          "pts": 23.22
+        },
+        {
+          "name": "Rashee Rice",
+          "pos": "WR",
+          "rank": "WR2",
+          "pts": 21.0
+        },
+        {
+          "name": "Harold Fannin",
+          "pos": "TE",
+          "rank": "TE5",
+          "pts": 15.4
+        }
       ]
     },
     "2": {
@@ -62,6 +82,26 @@
           "pos": "QB",
           "rank": "QB24",
           "pts": 97.34
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Joe Flacco",
+          "pos": "QB",
+          "rank": "QB7",
+          "pts": 24.32
+        },
+        {
+          "name": "Buffalo Bills D/ST",
+          "pos": "DEF",
+          "rank": "DEF2",
+          "pts": 19.0
+        },
+        {
+          "name": "Oronde Gadsden",
+          "pos": "TE",
+          "rank": "TE4",
+          "pts": 16.2
         }
       ]
     },
@@ -93,6 +133,26 @@
           "rank": "RB11",
           "pts": 102.6
         }
+      ],
+      "top_week": [
+        {
+          "name": "Bo Nix",
+          "pos": "QB",
+          "rank": "QB6",
+          "pts": 24.78
+        },
+        {
+          "name": "Ladd McConkey",
+          "pos": "WR",
+          "rank": "WR6",
+          "pts": 17.8
+        },
+        {
+          "name": "D'Andre Swift",
+          "pos": "RB",
+          "rank": "RB15",
+          "pts": 14.1
+        }
       ]
     },
     "4": {
@@ -122,6 +182,26 @@
           "pos": "WR",
           "rank": "WR32",
           "pts": 72.0
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Saquon Barkley",
+          "pos": "RB",
+          "rank": "RB4",
+          "pts": 31.4
+        },
+        {
+          "name": "Patrick Mahomes",
+          "pos": "QB",
+          "rank": "QB5",
+          "pts": 24.96
+        },
+        {
+          "name": "CeeDee Lamb",
+          "pos": "WR",
+          "rank": "WR24",
+          "pts": 11.1
         }
       ]
     },
@@ -153,6 +233,26 @@
           "rank": "WR4",
           "pts": 121.7
         }
+      ],
+      "top_week": [
+        {
+          "name": "James Cook",
+          "pos": "RB",
+          "rank": "RB2",
+          "pts": 33.6
+        },
+        {
+          "name": "Jaylen Waddle",
+          "pos": "WR",
+          "rank": "WR4",
+          "pts": 18.4
+        },
+        {
+          "name": "De'Von Achane",
+          "pos": "RB",
+          "rank": "RB9",
+          "pts": 17.6
+        }
       ]
     },
     "6": {
@@ -182,6 +282,26 @@
           "pos": "RB",
           "rank": "RB20",
           "pts": 83.4
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Chase Brown",
+          "pos": "RB",
+          "rank": "RB5",
+          "pts": 24.0
+        },
+        {
+          "name": "Rome Odunze",
+          "pos": "WR",
+          "rank": "WR11",
+          "pts": 14.9
+        },
+        {
+          "name": "Ka'imi Fairbairn",
+          "pos": "K",
+          "rank": "K4",
+          "pts": 14.0
         }
       ]
     },
@@ -213,6 +333,26 @@
           "rank": "K1",
           "pts": 89.0
         }
+      ],
+      "top_week": [
+        {
+          "name": "Tampa Bay Buccaneers D/ST",
+          "pos": "DEF",
+          "rank": "DEF1",
+          "pts": 28.0
+        },
+        {
+          "name": "Justin Herbert",
+          "pos": "QB",
+          "rank": "QB3",
+          "pts": 26.28
+        },
+        {
+          "name": "Kimani Vidal",
+          "pos": "RB",
+          "rank": "RB7",
+          "pts": 19.2
+        }
       ]
     },
     "8": {
@@ -242,6 +382,26 @@
           "pos": "WR",
           "rank": "WR16",
           "pts": 87.1
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Daniel Jones",
+          "pos": "QB",
+          "rank": "QB10",
+          "pts": 23.18
+        },
+        {
+          "name": "Chase McLaughlin",
+          "pos": "K",
+          "rank": "K2",
+          "pts": 17.0
+        },
+        {
+          "name": "Woody Marks",
+          "pos": "RB",
+          "rank": "RB18",
+          "pts": 13.1
         }
       ]
     },
@@ -273,6 +433,26 @@
           "rank": "RB4",
           "pts": 136.6
         }
+      ],
+      "top_week": [
+        {
+          "name": "Jonathan Taylor",
+          "pos": "RB",
+          "rank": "RB1",
+          "pts": 36.4
+        },
+        {
+          "name": "Jalen Hurts",
+          "pos": "QB",
+          "rank": "QB4",
+          "pts": 25.36
+        },
+        {
+          "name": "Michael Pittman",
+          "pos": "WR",
+          "rank": "WR3",
+          "pts": 19.5
+        }
       ]
     },
     "10": {
@@ -302,6 +482,26 @@
           "pos": "WR",
           "rank": "WR5",
           "pts": 111.8
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Breece Hall",
+          "pos": "RB",
+          "rank": "RB3",
+          "pts": 31.86
+        },
+        {
+          "name": "Tucker Kraft",
+          "pos": "TE",
+          "rank": "TE1",
+          "pts": 29.8
+        },
+        {
+          "name": "Chris Boswell",
+          "pos": "K",
+          "rank": "K1",
+          "pts": 20.0
         }
       ]
     }

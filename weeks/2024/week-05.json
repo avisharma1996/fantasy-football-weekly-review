@@ -33,6 +33,26 @@
           "rank": "RB10",
           "pts": 70.2
         }
+      ],
+      "top_week": [
+        {
+          "name": "Denver Broncos D/ST",
+          "pos": "DEF",
+          "rank": "DEF3",
+          "pts": 16.0
+        },
+        {
+          "name": "Zay Flowers",
+          "pos": "WR",
+          "rank": "WR15",
+          "pts": 15.5
+        },
+        {
+          "name": "Kyren Williams",
+          "pos": "RB",
+          "rank": "RB11",
+          "pts": 15.0
+        }
       ]
     },
     "2": {
@@ -62,6 +82,26 @@
           "pos": "RB",
           "rank": "RB12",
           "pts": 65.6
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Geno Smith",
+          "pos": "QB",
+          "rank": "QB9",
+          "pts": 22.56
+        },
+        {
+          "name": "James Cook",
+          "pos": "RB",
+          "rank": "RB6",
+          "pts": 16.9
+        },
+        {
+          "name": "Chicago Bears D/ST",
+          "pos": "DEF",
+          "rank": "DEF4",
+          "pts": 16.0
         }
       ]
     },
@@ -93,6 +133,26 @@
           "rank": "WR10",
           "pts": 66.72
         }
+      ],
+      "top_week": [
+        {
+          "name": "Brandon Aiyuk",
+          "pos": "WR",
+          "rank": "WR11",
+          "pts": 18.7
+        },
+        {
+          "name": "Derrick Henry",
+          "pos": "RB",
+          "rank": "RB7",
+          "pts": 16.1
+        },
+        {
+          "name": "Justin Fields",
+          "pos": "QB",
+          "rank": "QB16",
+          "pts": 15.94
+        }
       ]
     },
     "4": {
@@ -122,6 +182,26 @@
           "pos": "WR",
           "rank": "WR16",
           "pts": 61.7
+        }
+      ],
+      "top_week": [
+        {
+          "name": "DJ Moore",
+          "pos": "WR",
+          "rank": "WR4",
+          "pts": 25.0
+        },
+        {
+          "name": "Kareem Hunt",
+          "pos": "RB",
+          "rank": "RB4",
+          "pts": 18.2
+        },
+        {
+          "name": "Ka'imi Fairbairn",
+          "pos": "K",
+          "rank": "K2",
+          "pts": 16.0
         }
       ]
     },
@@ -153,6 +233,26 @@
           "rank": "QB7",
           "pts": 68.48
         }
+      ],
+      "top_week": [
+        {
+          "name": "Ja'Marr Chase",
+          "pos": "WR",
+          "rank": "WR1",
+          "pts": 36.3
+        },
+        {
+          "name": "Tucker Kraft",
+          "pos": "TE",
+          "rank": "TE1",
+          "pts": 22.8
+        },
+        {
+          "name": "Brian Thomas",
+          "pos": "WR",
+          "rank": "WR9",
+          "pts": 20.7
+        }
       ]
     },
     "6": {
@@ -182,6 +282,26 @@
           "pos": "WR",
           "rank": "WR18",
           "pts": 60.4
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Jayden Daniels",
+          "pos": "QB",
+          "rank": "QB12",
+          "pts": 20.72
+        },
+        {
+          "name": "Chase McLaughlin",
+          "pos": "K",
+          "rank": "K1",
+          "pts": 16.0
+        },
+        {
+          "name": "Trey Sermon",
+          "pos": "RB",
+          "rank": "RB10",
+          "pts": 15.3
         }
       ]
     },
@@ -213,6 +333,26 @@
           "rank": "WR2",
           "pts": 52.5
         }
+      ],
+      "top_week": [
+        {
+          "name": "Darnell Mooney",
+          "pos": "WR",
+          "rank": "WR3",
+          "pts": 27.0
+        },
+        {
+          "name": "Baker Mayfield",
+          "pos": "QB",
+          "rank": "QB7",
+          "pts": 23.4
+        },
+        {
+          "name": "Josh Jacobs",
+          "pos": "RB",
+          "rank": "RB8",
+          "pts": 15.9
+        }
       ]
     },
     "8": {
@@ -242,6 +382,26 @@
           "pos": "WR",
           "rank": "WR12",
           "pts": 64.1
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Lamar Jackson",
+          "pos": "QB",
+          "rank": "QB3",
+          "pts": 33.42
+        },
+        {
+          "name": "Tee Higgins",
+          "pos": "WR",
+          "rank": "WR5",
+          "pts": 24.8
+        },
+        {
+          "name": "Minnesota Vikings D/ST",
+          "pos": "DEF",
+          "rank": "DEF2",
+          "pts": 17.0
         }
       ]
     },
@@ -273,6 +433,26 @@
           "rank": "WR9",
           "pts": 69.1
         }
+      ],
+      "top_week": [
+        {
+          "name": "Joe Burrow",
+          "pos": "QB",
+          "rank": "QB2",
+          "pts": 34.78
+        },
+        {
+          "name": "Garrett Wilson",
+          "pos": "WR",
+          "rank": "WR6",
+          "pts": 22.6
+        },
+        {
+          "name": "Mike Evans",
+          "pos": "WR",
+          "rank": "WR10",
+          "pts": 20.7
+        }
       ]
     },
     "10": {
@@ -302,6 +482,26 @@
           "pos": "WR",
           "rank": "WR13",
           "pts": 63.8
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Drake London",
+          "pos": "WR",
+          "rank": "WR2",
+          "pts": 27.4
+        },
+        {
+          "name": "D'Andre Swift",
+          "pos": "RB",
+          "rank": "RB2",
+          "pts": 19.0
+        },
+        {
+          "name": "C.J. Stroud",
+          "pos": "QB",
+          "rank": "QB15",
+          "pts": 16.94
         }
       ]
     }

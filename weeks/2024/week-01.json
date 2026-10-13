@@ -33,6 +33,26 @@
           "rank": "RB9",
           "pts": 17.9
         }
+      ],
+      "top_week": [
+        {
+          "name": "Josh Allen",
+          "pos": "QB",
+          "rank": "QB1",
+          "pts": 31.18
+        },
+        {
+          "name": "Chicago Bears D/ST",
+          "pos": "DEF",
+          "rank": "DEF1",
+          "pts": 25.0
+        },
+        {
+          "name": "Aaron Jones",
+          "pos": "RB",
+          "rank": "RB9",
+          "pts": 17.9
+        }
       ]
     },
     "2": {
@@ -45,6 +65,26 @@
       "pf": 101.36,
       "streak": "L1",
       "top": [
+        {
+          "name": "A.J. Brown",
+          "pos": "WR",
+          "rank": "WR7",
+          "pts": 20.4
+        },
+        {
+          "name": "Deebo Samuel",
+          "pos": "WR",
+          "rank": "WR12",
+          "pts": 16.2
+        },
+        {
+          "name": "Jahmyr Gibbs",
+          "pos": "RB",
+          "rank": "RB16",
+          "pts": 15.4
+        }
+      ],
+      "top_week": [
         {
           "name": "A.J. Brown",
           "pos": "WR",
@@ -93,6 +133,26 @@
           "rank": "RB8",
           "pts": 17.9
         }
+      ],
+      "top_week": [
+        {
+          "name": "Tyreek Hill",
+          "pos": "WR",
+          "rank": "WR4",
+          "pts": 22.5
+        },
+        {
+          "name": "Stefon Diggs",
+          "pos": "WR",
+          "rank": "WR10",
+          "pts": 18.9
+        },
+        {
+          "name": "Kenneth Walker",
+          "pos": "RB",
+          "rank": "RB8",
+          "pts": 17.9
+        }
       ]
     },
     "4": {
@@ -105,6 +165,26 @@
       "pf": 103.94,
       "streak": "L1",
       "top": [
+        {
+          "name": "Rhamondre Stevenson",
+          "pos": "RB",
+          "rank": "RB5",
+          "pts": 20.1
+        },
+        {
+          "name": "Ka'imi Fairbairn",
+          "pos": "K",
+          "rank": "K5",
+          "pts": 17.0
+        },
+        {
+          "name": "David Montgomery",
+          "pos": "RB",
+          "rank": "RB15",
+          "pts": 15.8
+        }
+      ],
+      "top_week": [
         {
           "name": "Rhamondre Stevenson",
           "pos": "RB",
@@ -153,6 +233,26 @@
           "rank": "DEF4",
           "pts": 15.0
         }
+      ],
+      "top_week": [
+        {
+          "name": "Joe Mixon",
+          "pos": "RB",
+          "rank": "RB2",
+          "pts": 25.3
+        },
+        {
+          "name": "Brandon Aubrey",
+          "pos": "K",
+          "rank": "K4",
+          "pts": 21.0
+        },
+        {
+          "name": "New Orleans Saints D/ST",
+          "pos": "DEF",
+          "rank": "DEF4",
+          "pts": 15.0
+        }
       ]
     },
     "6": {
@@ -165,6 +265,26 @@
       "pf": 117.1,
       "streak": "W1",
       "top": [
+        {
+          "name": "Cooper Kupp",
+          "pos": "WR",
+          "rank": "WR2",
+          "pts": 25.0
+        },
+        {
+          "name": "James Conner",
+          "pos": "RB",
+          "rank": "RB10",
+          "pts": 17.8
+        },
+        {
+          "name": "Jordan Love",
+          "pos": "QB",
+          "rank": "QB11",
+          "pts": 17.4
+        }
+      ],
+      "top_week": [
         {
           "name": "Cooper Kupp",
           "pos": "WR",
@@ -213,6 +333,26 @@
           "rank": "RB7",
           "pts": 19.5
         }
+      ],
+      "top_week": [
+        {
+          "name": "Anthony Richardson",
+          "pos": "QB",
+          "rank": "QB4",
+          "pts": 27.08
+        },
+        {
+          "name": "Jake Moody",
+          "pos": "K",
+          "rank": "K2",
+          "pts": 26.0
+        },
+        {
+          "name": "Alvin Kamara",
+          "pos": "RB",
+          "rank": "RB7",
+          "pts": 19.5
+        }
       ]
     },
     "8": {
@@ -225,6 +365,26 @@
       "pf": 106.42,
       "streak": "L1",
       "top": [
+        {
+          "name": "Lamar Jackson",
+          "pos": "QB",
+          "rank": "QB5",
+          "pts": 25.12
+        },
+        {
+          "name": "Isiah Pacheco",
+          "pos": "RB",
+          "rank": "RB17",
+          "pts": 14.8
+        },
+        {
+          "name": "Justin Jefferson",
+          "pos": "WR",
+          "rank": "WR15",
+          "pts": 13.9
+        }
+      ],
+      "top_week": [
         {
           "name": "Lamar Jackson",
           "pos": "QB",
@@ -273,6 +433,26 @@
           "rank": "QB10",
           "pts": 18.42
         }
+      ],
+      "top_week": [
+        {
+          "name": "Saquon Barkley",
+          "pos": "RB",
+          "rank": "RB1",
+          "pts": 32.2
+        },
+        {
+          "name": "Mike Evans",
+          "pos": "WR",
+          "rank": "WR6",
+          "pts": 20.6
+        },
+        {
+          "name": "Jalen Hurts",
+          "pos": "QB",
+          "rank": "QB10",
+          "pts": 18.42
+        }
       ]
     },
     "10": {
@@ -285,6 +465,26 @@
       "pf": 90.86,
       "streak": "L1",
       "top": [
+        {
+          "name": "De'Von Achane",
+          "pos": "RB",
+          "rank": "RB6",
+          "pts": 19.5
+        },
+        {
+          "name": "C.J. Stroud",
+          "pos": "QB",
+          "rank": "QB8",
+          "pts": 18.66
+        },
+        {
+          "name": "Rachaad White",
+          "pos": "RB",
+          "rank": "RB20",
+          "pts": 13.6
+        }
+      ],
+      "top_week": [
         {
           "name": "De'Von Achane",
           "pos": "RB",

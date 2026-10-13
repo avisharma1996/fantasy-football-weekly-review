@@ -33,6 +33,26 @@
           "rank": "RB7",
           "pts": 16.4
         }
+      ],
+      "top_week": [
+        {
+          "name": "Josh Allen",
+          "pos": "QB",
+          "rank": "QB1",
+          "pts": 38.76
+        },
+        {
+          "name": "Bijan Robinson",
+          "pos": "RB",
+          "rank": "RB2",
+          "pts": 21.4
+        },
+        {
+          "name": "Chuba Hubbard",
+          "pos": "RB",
+          "rank": "RB7",
+          "pts": 16.4
+        }
       ]
     },
     "2": {
@@ -45,6 +65,26 @@
       "pf": 117.52,
       "streak": "W1",
       "top": [
+        {
+          "name": "Jayden Daniels",
+          "pos": "QB",
+          "rank": "QB13",
+          "pts": 20.12
+        },
+        {
+          "name": "Jaxon Smith-Njigba",
+          "pos": "WR",
+          "rank": "WR13",
+          "pts": 14.9
+        },
+        {
+          "name": "Aaron Jones",
+          "pos": "RB",
+          "rank": "RB11",
+          "pts": 14.2
+        }
+      ],
+      "top_week": [
         {
           "name": "Jayden Daniels",
           "pos": "QB",
@@ -93,6 +133,26 @@
           "rank": "WR25",
           "pts": 10.4
         }
+      ],
+      "top_week": [
+        {
+          "name": "Bucky Irving",
+          "pos": "RB",
+          "rank": "RB19",
+          "pts": 12.5
+        },
+        {
+          "name": "George Kittle",
+          "pos": "TE",
+          "rank": "TE8",
+          "pts": 10.5
+        },
+        {
+          "name": "Ladd McConkey",
+          "pos": "WR",
+          "rank": "WR25",
+          "pts": 10.4
+        }
       ]
     },
     "4": {
@@ -105,6 +165,26 @@
       "pf": 105.62,
       "streak": "L1",
       "top": [
+        {
+          "name": "Patrick Mahomes",
+          "pos": "QB",
+          "rank": "QB6",
+          "pts": 26.02
+        },
+        {
+          "name": "Saquon Barkley",
+          "pos": "RB",
+          "rank": "RB8",
+          "pts": 16.4
+        },
+        {
+          "name": "Marvin Harrison",
+          "pos": "WR",
+          "rank": "WR10",
+          "pts": 15.6
+        }
+      ],
+      "top_week": [
         {
           "name": "Patrick Mahomes",
           "pos": "QB",
@@ -153,6 +233,26 @@
           "rank": "RB10",
           "pts": 15.0
         }
+      ],
+      "top_week": [
+        {
+          "name": "James Cook",
+          "pos": "RB",
+          "rank": "RB4",
+          "pts": 18.7
+        },
+        {
+          "name": "Courtland Sutton",
+          "pos": "WR",
+          "rank": "WR11",
+          "pts": 15.1
+        },
+        {
+          "name": "De'Von Achane",
+          "pos": "RB",
+          "rank": "RB10",
+          "pts": 15.0
+        }
       ]
     },
     "6": {
@@ -165,6 +265,26 @@
       "pf": 111.32,
       "streak": "W1",
       "top": [
+        {
+          "name": "Christian McCaffrey",
+          "pos": "RB",
+          "rank": "RB5",
+          "pts": 18.7
+        },
+        {
+          "name": "Denver Broncos D/ST",
+          "pos": "DEF",
+          "rank": "DEF1",
+          "pts": 16.0
+        },
+        {
+          "name": "CeeDee Lamb",
+          "pos": "WR",
+          "rank": "WR15",
+          "pts": 14.5
+        }
+      ],
+      "top_week": [
         {
           "name": "Christian McCaffrey",
           "pos": "RB",
@@ -213,6 +333,26 @@
           "rank": "WR6",
           "pts": 19.0
         }
+      ],
+      "top_week": [
+        {
+          "name": "Derrick Henry",
+          "pos": "RB",
+          "rank": "RB1",
+          "pts": 28.7
+        },
+        {
+          "name": "Emeka Egbuka",
+          "pos": "WR",
+          "rank": "WR3",
+          "pts": 21.6
+        },
+        {
+          "name": "Garrett Wilson",
+          "pos": "WR",
+          "rank": "WR6",
+          "pts": 19.0
+        }
       ]
     },
     "8": {
@@ -225,6 +365,26 @@
       "pf": 104.06,
       "streak": "W1",
       "top": [
+        {
+          "name": "Lamar Jackson",
+          "pos": "QB",
+          "rank": "QB4",
+          "pts": 29.36
+        },
+        {
+          "name": "Justin Jefferson",
+          "pos": "WR",
+          "rank": "WR19",
+          "pts": 12.8
+        },
+        {
+          "name": "Alvin Kamara",
+          "pos": "RB",
+          "rank": "RB18",
+          "pts": 12.7
+        }
+      ],
+      "top_week": [
         {
           "name": "Lamar Jackson",
           "pos": "QB",
@@ -273,6 +433,26 @@
           "rank": "TE3",
           "pts": 11.7
         }
+      ],
+      "top_week": [
+        {
+          "name": "Jalen Hurts",
+          "pos": "QB",
+          "rank": "QB8",
+          "pts": 24.28
+        },
+        {
+          "name": "Javonte Williams",
+          "pos": "RB",
+          "rank": "RB3",
+          "pts": 19.4
+        },
+        {
+          "name": "Travis Kelce",
+          "pos": "TE",
+          "rank": "TE3",
+          "pts": 11.7
+        }
       ]
     },
     "10": {
@@ -285,6 +465,26 @@
       "pf": 113.28,
       "streak": "W1",
       "top": [
+        {
+          "name": "Baker Mayfield",
+          "pos": "QB",
+          "rank": "QB12",
+          "pts": 22.58
+        },
+        {
+          "name": "Puka Nacua",
+          "pos": "WR",
+          "rank": "WR7",
+          "pts": 18.1
+        },
+        {
+          "name": "Breece Hall",
+          "pos": "RB",
+          "rank": "RB9",
+          "pts": 15.5
+        }
+      ],
+      "top_week": [
         {
           "name": "Baker Mayfield",
           "pos": "QB",

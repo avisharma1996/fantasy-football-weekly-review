@@ -90,19 +90,27 @@ def load_players(ids):
 
 
 def position_ranks(season, week, scoring, players):
-    """Rank every NFL player at his position by season fantasy points (league scoring) through `week`."""
-    totals = {}
+    """Rank every NFL player at his position by fantasy points (league scoring).
+
+    Returns (season ranks through `week`, ranks for `week` alone)."""
+    totals, this_week = {}, {}
     for w in range(1, week + 1):
         for pid, stats in get(f"/stats/nfl/regular/{season}/{w}").items():
             pts = sum(stats[k] * v for k, v in scoring.items() if isinstance(stats.get(k), (int, float)))
             totals[pid] = totals.get(pid, 0) + pts
-    by_pos = {}
-    for pid, pts in totals.items():
-        pos = players.get(pid, {}).get("pos")
-        if pos and pts > 0:
-            by_pos.setdefault(pos, []).append((pts, pid))
-    return {pid: f"{pos}{i}" for pos, ranked in by_pos.items()
-            for i, (_, pid) in enumerate(sorted(ranked, reverse=True), 1)}
+            if w == week:
+                this_week[pid] = pts
+
+    def rank(points):
+        by_pos = {}
+        for pid, pts in points.items():
+            pos = players.get(pid, {}).get("pos")
+            if pos and pts > 0:
+                by_pos.setdefault(pos, []).append((pts, pid))
+        return {pid: f"{pos}{i}" for pos, ranked in by_pos.items()
+                for i, (_, pid) in enumerate(sorted(ranked, reverse=True), 1)}
+
+    return rank(totals), rank(this_week)
 
 
 def avatar_url(user):
@@ -123,7 +131,7 @@ def fetch_week(league_id, week):
     playoff_start = settings.get("playoff_week_start") or 99
     median_game = settings.get("league_average_match") == 1
 
-    teams, starter_pts = {}, {}
+    teams, starter_pts, week_pts = {}, {}, {}
     for r in rosters:
         u = users.get(r.get("owner_id"), {})
         meta = u.get("metadata") or {}
@@ -134,6 +142,7 @@ def fetch_week(league_id, week):
             "wins": 0, "losses": 0, "ties": 0, "pf": 0.0, "results": [],
         }
         starter_pts[r["roster_id"]] = {}
+        week_pts[r["roster_id"]] = {}
 
     for w in range(1, week + 1):
         entries = get(f"/league/{league_id}/matchups/{w}")
@@ -145,6 +154,8 @@ def fetch_week(league_id, week):
             for pid, p in zip(e.get("starters") or [], e.get("starters_points") or []):
                 if pid and pid != "0":
                     totals[pid] = totals.get(pid, 0) + (p or 0)
+                    if w == week:
+                        week_pts[e["roster_id"]][pid] = p or 0
 
         if regular and median_game and pts:
             mid = sorted(pts.values())[len(pts) // 2 - 1: len(pts) // 2 + 1]
@@ -164,9 +175,12 @@ def fetch_week(league_id, week):
                 if regular:
                     record(t, pts[me], pts[opp])
 
-    top = {rid: sorted(totals.items(), key=lambda kv: -kv[1])[:3] for rid, totals in starter_pts.items()}
-    players = load_players({pid for picks in top.values() for pid, _ in picks})
-    ranks = position_ranks(league["season"], week, league.get("scoring_settings") or {}, players)
+    top3 = lambda pts: sorted(pts.items(), key=lambda kv: -kv[1])[:3]
+    top = {rid: top3(totals) for rid, totals in starter_pts.items()}
+    top_week = {rid: top3(pts) for rid, pts in week_pts.items()}
+    players = load_players({pid for picks in [*top.values(), *top_week.values()] for pid, _ in picks})
+    ranks, week_ranks = position_ranks(league["season"], week, league.get("scoring_settings") or {}, players)
+    card = lambda pid, p, r: {**players.get(pid, {"name": pid, "pos": ""}), "rank": r.get(pid, ""), "pts": round(p, 2)}
     for rid, t in teams.items():
         t["pf"] = round(t["pf"], 2)
         streak = ""
@@ -176,8 +190,8 @@ def fetch_week(league_id, week):
             streak = res + str(int(streak[1:] or 0) + 1)
         t["streak"] = streak
         del t["results"]
-        t["top"] = [{**players.get(pid, {"name": pid, "pos": ""}), "rank": ranks.get(pid, ""), "pts": round(p, 2)}
-                    for pid, p in top[rid]]
+        t["top"] = [card(pid, p, ranks) for pid, p in top[rid]]
+        t["top_week"] = [card(pid, p, week_ranks) for pid, p in top_week[rid]]
 
     return {
         "league": league["name"],
@@ -248,8 +262,9 @@ def new_week(week, season=None):
     ]
     for i, rid in enumerate(prev or standings_order(data), 1):
         t = teams[rid]
-        top = ", ".join(f"{p['name']} ({p.get('rank') or p['pos']}) {p['pts']:.1f}" for p in t["top"])
-        lines += [f"{i}. {t['name']}", f"// {rec(t)}, {t['pf']:.2f} PF, streak {t['streak'] or '-'} | {top}", "", ""]
+        top = lambda picks: ", ".join(f"{p['name']} ({p.get('rank') or p['pos']}) {p['pts']:.1f}" for p in picks)
+        lines += [f"{i}. {t['name']}", f"// {rec(t)}, {t['pf']:.2f} PF, streak {t['streak'] or '-'} | {top(t['top'])}",
+                  f"// this week: {top(t['top_week'])}", "", ""]
     txt.write_text("\n".join(lines), encoding="utf-8")
     print(f"Created {txt.relative_to(ROOT)}. Open it and set your rankings.")
 
@@ -341,9 +356,11 @@ def render_week(data, content, prev_rank, all_weeks, latest_week, base):
             d = prev_rank.index(rid) + 1 - i
             move = (f'<span class="mv up">▲{d}</span>' if d > 0 else
                     f'<span class="mv down">▼{-d}</span>' if d < 0 else '<span class="mv same">–</span>')
-        top = "".join(f'<li><span class="pos">{e(p.get("rank") or p["pos"])}</span>{e(p["name"])}'
-                      f'<span class="pp">{p["pts"]:.1f}</span></li>'
-                      for p in t["top"])
+        chips = lambda picks: "".join(f'<li><span class="pos">{e(p.get("rank") or p["pos"])}</span>{e(p["name"])}'
+                                      f'<span class="pp">{p["pts"]:.1f}</span></li>' for p in picks)
+        tops = "".join(f'<div class="lbl">{label}</div><ul class="top">{chips(picks)}</ul>'
+                       for label, picks in (("Overall top performers", t["top"]),
+                                            ("Weekly top performers", t.get("top_week") or [])) if picks)
         rows.append(f"""
   <li class="rank">
     <div class="rank-num">{i}{move}</div>
@@ -351,7 +368,7 @@ def render_week(data, content, prev_rank, all_weeks, latest_week, base):
       <div class="team">{avatar(t)}<div><h2>{e(t['name'])}</h2>
         <div class="meta"><b>{rec(t)}</b> · {t['pf']:.2f} PF{' · ' + t['streak'] if t['streak'] else ''}</div></div></div>
       {f'<div class="blurb">{fmt(blurb, base)}</div>' if blurb else ''}
-      {f'<ul class="top"><li class="lbl">Top performers</li>{top}</ul>' if top else ''}
+      {f'<div class="tops">{tops}</div>' if tops else ''}
     </div>
   </li>""")
 
@@ -407,7 +424,7 @@ PAGE = """<!doctype html>
 <nav>{nav}</nav>
 {intro}
 <ol class="ranks">{rows}</ol>
-<footer>{note}Top performers are season points scored as a starter for that team; QB1, RB3, etc. is the player's season rank at his position across the NFL through that week. Stats from Sleeper. Rankings are the commissioner's own.</footer>
+<footer>{note}Top performers are points scored as a starter for that team: overall is the season through that week, weekly is that week alone. QB1, RB3, etc. is the player's rank at his position across the NFL over the same span. Stats from Sleeper. Rankings are the commissioner's own.</footer>
 </main></div></body></html>
 """
 
@@ -453,9 +470,11 @@ nav a.cur{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .pic{display:block;max-width:100%;max-height:260px;height:auto;border-radius:8px;margin:6px 0}
 video.pic{max-height:360px}
 .blurb{margin-top:10px}.blurb p{margin:.5em 0 0}.blurb p:first-child{margin-top:0}
-.top{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.85rem}
+.tops{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;align-items:center;margin-top:12px}
+.tops .lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.top{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.85rem}
 .top li{background:var(--chip);border-radius:8px;padding:3px 9px;display:flex;gap:6px;align-items:baseline}
-.top li.lbl{background:none;padding-left:0;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+@media (max-width:560px){.tops{grid-template-columns:1fr;gap:4px}.tops .top{margin-bottom:6px}}
 .top .pos{color:var(--muted);font-size:.7rem;font-weight:700}
 .top .pp{font-variant-numeric:tabular-nums;color:var(--muted)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}

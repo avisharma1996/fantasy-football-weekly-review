@@ -33,6 +33,26 @@
           "rank": "WR9",
           "pts": 17.7
         }
+      ],
+      "top_week": [
+        {
+          "name": "D'Andre Swift",
+          "pos": "RB",
+          "rank": "RB3",
+          "pts": 31.9
+        },
+        {
+          "name": "Bijan Robinson",
+          "pos": "RB",
+          "rank": "RB7",
+          "pts": 27.3
+        },
+        {
+          "name": "Nico Collins",
+          "pos": "WR",
+          "rank": "WR9",
+          "pts": 17.7
+        }
       ]
     },
     "2": {
@@ -45,6 +65,26 @@
       "pf": 101.02,
       "streak": "W1",
       "top": [
+        {
+          "name": "Chuba Hubbard",
+          "pos": "RB",
+          "rank": "RB9",
+          "pts": 22.2
+        },
+        {
+          "name": "Juwan Johnson",
+          "pos": "TE",
+          "rank": "TE7",
+          "pts": 12.9
+        },
+        {
+          "name": "Drake Maye",
+          "pos": "QB",
+          "rank": "QB23",
+          "pts": 12.82
+        }
+      ],
+      "top_week": [
         {
           "name": "Chuba Hubbard",
           "pos": "RB",
@@ -93,6 +133,26 @@
           "rank": "RB19",
           "pts": 12.0
         }
+      ],
+      "top_week": [
+        {
+          "name": "Jalen Hurts",
+          "pos": "QB",
+          "rank": "QB8",
+          "pts": 24.72
+        },
+        {
+          "name": "Jaxon Smith-Njigba",
+          "pos": "WR",
+          "rank": "WR7",
+          "pts": 22.2
+        },
+        {
+          "name": "Jeremiyah Love",
+          "pos": "RB",
+          "rank": "RB19",
+          "pts": 12.0
+        }
       ]
     },
     "4": {
@@ -105,6 +165,26 @@
       "pf": 132.46,
       "streak": "L1",
       "top": [
+        {
+          "name": "Christian Watson",
+          "pos": "WR",
+          "rank": "WR2",
+          "pts": 29.7
+        },
+        {
+          "name": "Jonathan Taylor",
+          "pos": "RB",
+          "rank": "RB8",
+          "pts": 23.6
+        },
+        {
+          "name": "Patrick Mahomes",
+          "pos": "QB",
+          "rank": "QB9",
+          "pts": 22.66
+        }
+      ],
+      "top_week": [
         {
           "name": "Christian Watson",
           "pos": "WR",
@@ -153,6 +233,26 @@
           "rank": "RB5",
           "pts": 29.7
         }
+      ],
+      "top_week": [
+        {
+          "name": "Josh Allen",
+          "pos": "QB",
+          "rank": "QB2",
+          "pts": 35.66
+        },
+        {
+          "name": "Jalen Coker",
+          "pos": "WR",
+          "rank": "WR1",
+          "pts": 29.8
+        },
+        {
+          "name": "Ashton Jeanty",
+          "pos": "RB",
+          "rank": "RB5",
+          "pts": 29.7
+        }
       ]
     },
     "6": {
@@ -165,6 +265,26 @@
       "pf": 135.8,
       "streak": "L1",
       "top": [
+        {
+          "name": "Derrick Henry",
+          "pos": "RB",
+          "rank": "RB1",
+          "pts": 34.8
+        },
+        {
+          "name": "Brock Purdy",
+          "pos": "QB",
+          "rank": "QB10",
+          "pts": 22.1
+        },
+        {
+          "name": "Ladd McConkey",
+          "pos": "WR",
+          "rank": "WR11",
+          "pts": 16.7
+        }
+      ],
+      "top_week": [
         {
           "name": "Derrick Henry",
           "pos": "RB",
@@ -213,6 +333,26 @@
           "rank": "WR10",
           "pts": 16.8
         }
+      ],
+      "top_week": [
+        {
+          "name": "David Montgomery",
+          "pos": "RB",
+          "rank": "RB6",
+          "pts": 27.4
+        },
+        {
+          "name": "Isaiah Likely",
+          "pos": "TE",
+          "rank": "TE1",
+          "pts": 23.8
+        },
+        {
+          "name": "Parker Washington",
+          "pos": "WR",
+          "rank": "WR10",
+          "pts": 16.8
+        }
       ]
     },
     "8": {
@@ -225,6 +365,26 @@
       "pf": 93.9,
       "streak": "L1",
       "top": [
+        {
+          "name": "Pittsburgh Steelers D/ST",
+          "pos": "DEF",
+          "rank": "DEF2",
+          "pts": 20.0
+        },
+        {
+          "name": "Chase Brown",
+          "pos": "RB",
+          "rank": "RB14",
+          "pts": 16.3
+        },
+        {
+          "name": "Dak Prescott",
+          "pos": "QB",
+          "rank": "QB19",
+          "pts": 15.4
+        }
+      ],
+      "top_week": [
         {
           "name": "Pittsburgh Steelers D/ST",
           "pos": "DEF",
@@ -273,6 +433,26 @@
           "rank": "WR5",
           "pts": 23.5
         }
+      ],
+      "top_week": [
+        {
+          "name": "Justin Jefferson",
+          "pos": "WR",
+          "rank": "WR3",
+          "pts": 27.2
+        },
+        {
+          "name": "Jaxson Dart",
+          "pos": "QB",
+          "rank": "QB4",
+          "pts": 26.6
+        },
+        {
+          "name": "Zay Flowers",
+          "pos": "WR",
+          "rank": "WR5",
+          "pts": 23.5
+        }
       ]
     },
     "10": {
@@ -285,6 +465,26 @@
       "pf": 138.06,
       "streak": "W1",
       "top": [
+        {
+          "name": "Caleb Williams",
+          "pos": "QB",
+          "rank": "QB1",
+          "pts": 37.26
+        },
+        {
+          "name": "Jahmyr Gibbs",
+          "pos": "RB",
+          "rank": "RB4",
+          "pts": 31.1
+        },
+        {
+          "name": "Trey McBride",
+          "pos": "TE",
+          "rank": "TE3",
+          "pts": 20.0
+        }
+      ],
+      "top_week": [
         {
           "name": "Caleb Williams",
           "pos": "QB",
@@ -333,6 +533,26 @@
           "rank": "RB16",
           "pts": 14.0
         }
+      ],
+      "top_week": [
+        {
+          "name": "Lamar Jackson",
+          "pos": "QB",
+          "rank": "QB7",
+          "pts": 24.96
+        },
+        {
+          "name": "Dallas Goedert",
+          "pos": "TE",
+          "rank": "TE2",
+          "pts": 21.7
+        },
+        {
+          "name": "Kyren Williams",
+          "pos": "RB",
+          "rank": "RB16",
+          "pts": 14.0
+        }
       ]
     },
     "12": {
@@ -345,6 +565,26 @@
       "pf": 159.46,
       "streak": "W1",
       "top": [
+        {
+          "name": "Kenneth Walker",
+          "pos": "RB",
+          "rank": "RB2",
+          "pts": 32.6
+        },
+        {
+          "name": "Chris Olave",
+          "pos": "WR",
+          "rank": "WR6",
+          "pts": 23.2
+        },
+        {
+          "name": "DJ Moore",
+          "pos": "WR",
+          "rank": "WR8",
+          "pts": 18.5
+        }
+      ],
+      "top_week": [
         {
           "name": "Kenneth Walker",
           "pos": "RB",
