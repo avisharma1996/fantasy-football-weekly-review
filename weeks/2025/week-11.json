@@ -14,25 +14,14 @@
       "losses": 12,
       "ties": 0,
       "pf": 1306.06,
-      "ap_wins": 49,
-      "ap_losses": 50,
-      "h2h_wins": 4.0,
-      "exp_wins": 5.44,
-      "bench": 109.4,
-      "bench_week": 0.0,
-      "bench_miss": {
-        "pts": 5.9,
-        "name": "Tyjae Spears",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 68.17,
-        "bye": 0.0,
-        "semis": 32.95,
-        "final": 11.55,
-        "champ": 4.67
+        "playoffs": 61.73,
+        "bye": 0.15,
+        "semis": 32.4,
+        "final": 13.43,
+        "champ": 5.78,
+        "settled": false
       },
-      "luck": -1.44,
       "streak": "W1",
       "top": [
         {
@@ -84,25 +73,14 @@
       "losses": 9,
       "ties": 0,
       "pf": 1271.8,
-      "ap_wins": 50,
-      "ap_losses": 49,
-      "h2h_wins": 7.0,
-      "exp_wins": 5.56,
-      "bench": 174.5,
-      "bench_week": 20.1,
-      "bench_miss": {
-        "pts": 17.2,
-        "name": "Devin Singletary",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 95.9,
-        "bye": 5.6,
-        "semis": 48.2,
-        "final": 15.7,
-        "champ": 5.67
+        "playoffs": 94.92,
+        "bye": 8.8,
+        "semis": 47.52,
+        "final": 19.4,
+        "champ": 8.32,
+        "settled": false
       },
-      "luck": 1.44,
       "streak": "W3",
       "top": [
         {
@@ -154,25 +132,14 @@
       "losses": 13,
       "ties": 0,
       "pf": 1259.44,
-      "ap_wins": 41,
-      "ap_losses": 58,
-      "h2h_wins": 4.0,
-      "exp_wins": 4.56,
-      "bench": 142.22,
-      "bench_week": 11.5,
-      "bench_miss": {
-        "pts": 10.5,
-        "name": "Jordan Mason",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 26.75,
+        "playoffs": 33.23,
         "bye": 0.0,
-        "semis": 11.22,
-        "final": 3.45,
-        "champ": 1.38
+        "semis": 17.75,
+        "final": 8.22,
+        "champ": 4.0,
+        "settled": false
       },
-      "luck": -0.56,
       "streak": "L1",
       "top": [
         {
@@ -224,25 +191,14 @@
       "losses": 13,
       "ties": 0,
       "pf": 1230.1,
-      "ap_wins": 44,
-      "ap_losses": 55,
-      "h2h_wins": 4.0,
-      "exp_wins": 4.89,
-      "bench": 146.68,
-      "bench_week": 2.08,
-      "bench_miss": {
-        "pts": 16.02,
-        "name": "Trevor Lawrence",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 24.85,
+        "playoffs": 28.68,
         "bye": 0.0,
-        "semis": 10.4,
-        "final": 3.05,
-        "champ": 0.7
+        "semis": 13.9,
+        "final": 5.7,
+        "champ": 2.73,
+        "settled": false
       },
-      "luck": -0.89,
       "streak": "L2",
       "top": [
         {
@@ -294,25 +250,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 1490.54,
-      "ap_wins": 75,
-      "ap_losses": 24,
-      "h2h_wins": 9.0,
-      "exp_wins": 8.33,
-      "bench": 132.52,
-      "bench_week": 12.68,
-      "bench_miss": {
-        "pts": 19.3,
-        "name": "Brock Purdy",
-        "pos": "QB"
-      },
       "odds": {
         "playoffs": 100.0,
-        "bye": 99.35,
-        "semis": 99.8,
-        "final": 64.8,
-        "champ": 35.58
+        "bye": 98.62,
+        "semis": 99.42,
+        "final": 56.05,
+        "champ": 29.5,
+        "settled": false
       },
-      "luck": 0.67,
       "streak": "W6",
       "top": [
         {
@@ -364,25 +309,14 @@
       "losses": 12,
       "ties": 0,
       "pf": 1324.98,
-      "ap_wins": 48,
-      "ap_losses": 51,
-      "h2h_wins": 6.0,
-      "exp_wins": 5.33,
-      "bench": 105.48,
-      "bench_week": 3.7,
-      "bench_miss": {
-        "pts": 10.2,
-        "name": "Kyle Monangai",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 74.92,
-        "bye": 0.03,
-        "semis": 36.62,
-        "final": 13.53,
-        "champ": 4.92
+        "playoffs": 68.72,
+        "bye": 0.07,
+        "semis": 35.38,
+        "final": 16.3,
+        "champ": 7.45,
+        "settled": false
       },
-      "luck": 0.67,
       "streak": "W2",
       "top": [
         {
@@ -434,25 +368,14 @@
       "losses": 15,
       "ties": 0,
       "pf": 1278.78,
-      "ap_wins": 44,
-      "ap_losses": 55,
-      "h2h_wins": 3.0,
-      "exp_wins": 4.89,
-      "bench": 227.3,
-      "bench_week": 25.42,
-      "bench_miss": {
-        "pts": 18.6,
-        "name": "Kenneth Walker",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 9.35,
+        "playoffs": 12.57,
         "bye": 0.0,
-        "semis": 4.38,
-        "final": 1.35,
-        "champ": 0.47
+        "semis": 7.38,
+        "final": 3.52,
+        "champ": 2.05,
+        "settled": false
       },
-      "luck": -1.89,
       "streak": "L3",
       "top": [
         {
@@ -504,25 +427,14 @@
       "losses": 16,
       "ties": 0,
       "pf": 1127.86,
-      "ap_wins": 27,
-      "ap_losses": 72,
-      "h2h_wins": 4.0,
-      "exp_wins": 3.0,
-      "bench": 194.9,
-      "bench_week": 14.6,
-      "bench_miss": {
-        "pts": 12.7,
-        "name": "Tre Tucker",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 0.2,
+        "playoffs": 0.55,
         "bye": 0.0,
-        "semis": 0.03,
+        "semis": 0.15,
         "final": 0.03,
-        "champ": 0.0
+        "champ": 0.0,
+        "settled": false
       },
-      "luck": 1.0,
       "streak": "L2",
       "top": [
         {
@@ -574,25 +486,14 @@
       "losses": 8,
       "ties": 0,
       "pf": 1523.1,
-      "ap_wins": 66,
-      "ap_losses": 33,
-      "h2h_wins": 7.0,
-      "exp_wins": 7.33,
-      "bench": 160.96,
-      "bench_week": 5.3,
-      "bench_miss": {
-        "pts": 9.8,
-        "name": "Zay Flowers",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 99.97,
-        "bye": 74.65,
-        "semis": 92.7,
-        "final": 64.62,
-        "champ": 37.48
+        "playoffs": 100.0,
+        "bye": 65.2,
+        "semis": 84.85,
+        "final": 51.27,
+        "champ": 28.35,
+        "settled": false
       },
-      "luck": -0.33,
       "streak": "W1",
       "top": [
         {
@@ -644,25 +545,14 @@
       "losses": 8,
       "ties": 0,
       "pf": 1322.36,
-      "ap_wins": 51,
-      "ap_losses": 48,
-      "h2h_wins": 7.0,
-      "exp_wins": 5.67,
-      "bench": 177.26,
-      "bench_week": 14.82,
-      "bench_miss": {
-        "pts": 17.82,
-        "name": "Baker Mayfield",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 99.88,
-        "bye": 20.38,
-        "semis": 63.7,
-        "final": 21.93,
-        "champ": 9.12
+        "playoffs": 99.6,
+        "bye": 27.15,
+        "semis": 61.25,
+        "final": 26.07,
+        "champ": 11.82,
+        "settled": false
       },
-      "luck": 1.33,
       "streak": "L1",
       "top": [
         {

@@ -14,21 +14,14 @@
       "losses": 11,
       "ties": 0,
       "pf": 1753.8,
-      "ap_wins": 79,
-      "ap_losses": 47,
-      "h2h_wins": 7.0,
-      "exp_wins": 8.78,
-      "bench": 208.3,
-      "bench_week": 0.0,
-      "bench_miss": null,
       "odds": {
         "playoffs": 100.0,
         "bye": 0.0,
-        "semis": 60.38,
-        "final": 30.5,
-        "champ": 13.1
+        "semis": 56.65,
+        "final": 31.4,
+        "champ": 13.93,
+        "settled": true
       },
-      "luck": -1.78,
       "streak": "W3",
       "top": [
         {
@@ -80,25 +73,14 @@
       "losses": 17,
       "ties": 0,
       "pf": 1650.38,
-      "ap_wins": 59,
-      "ap_losses": 67,
-      "h2h_wins": 5.0,
-      "exp_wins": 6.56,
-      "bench": 163.38,
-      "bench_week": 15.1,
-      "bench_miss": {
-        "pts": 18.2,
-        "name": "Rome Odunze",
-        "pos": "WR"
-      },
       "odds": {
         "playoffs": 0.0,
         "bye": 0.0,
         "semis": 0.0,
         "final": 0.0,
-        "champ": 0.0
+        "champ": 0.0,
+        "settled": true
       },
-      "luck": -1.56,
       "streak": "W4",
       "top": [
         {
@@ -150,25 +132,14 @@
       "losses": 18,
       "ties": 0,
       "pf": 1530.0,
-      "ap_wins": 37,
-      "ap_losses": 89,
-      "h2h_wins": 7.0,
-      "exp_wins": 4.11,
-      "bench": 184.64,
-      "bench_week": 1.92,
-      "bench_miss": {
-        "pts": 16.02,
-        "name": "Russell Wilson",
-        "pos": "QB"
-      },
       "odds": {
         "playoffs": 0.0,
         "bye": 0.0,
         "semis": 0.0,
         "final": 0.0,
-        "champ": 0.0
+        "champ": 0.0,
+        "settled": true
       },
-      "luck": 2.89,
       "streak": "L6",
       "top": [
         {
@@ -220,25 +191,14 @@
       "losses": 17,
       "ties": 0,
       "pf": 1562.1,
-      "ap_wins": 49,
-      "ap_losses": 77,
-      "h2h_wins": 6.0,
-      "exp_wins": 5.44,
-      "bench": 169.9,
-      "bench_week": 4.9,
-      "bench_miss": {
-        "pts": 4.9,
-        "name": "Xavier Legette",
-        "pos": "WR"
-      },
       "odds": {
         "playoffs": 0.0,
         "bye": 0.0,
         "semis": 0.0,
         "final": 0.0,
-        "champ": 0.0
+        "champ": 0.0,
+        "settled": true
       },
-      "luck": 0.56,
       "streak": "W4",
       "top": [
         {
@@ -290,25 +250,14 @@
       "losses": 7,
       "ties": 0,
       "pf": 1946.6,
-      "ap_wins": 95,
-      "ap_losses": 31,
-      "h2h_wins": 9.0,
-      "exp_wins": 10.56,
-      "bench": 234.42,
-      "bench_week": 19.7,
-      "bench_miss": {
-        "pts": 14.7,
-        "name": "Adam Thielen",
-        "pos": "WR"
-      },
       "odds": {
         "playoffs": 100.0,
         "bye": 100.0,
         "semis": 100.0,
-        "final": 69.53,
-        "champ": 45.9
+        "final": 61.7,
+        "champ": 37.42,
+        "settled": true
       },
-      "luck": -1.56,
       "streak": "L1",
       "top": [
         {
@@ -360,25 +309,14 @@
       "losses": 15,
       "ties": 0,
       "pf": 1623.62,
-      "ap_wins": 58,
-      "ap_losses": 68,
-      "h2h_wins": 6.0,
-      "exp_wins": 6.44,
-      "bench": 159.3,
-      "bench_week": 10.7,
-      "bench_miss": {
-        "pts": 16.4,
-        "name": "Jaylen Waddle",
-        "pos": "WR"
-      },
       "odds": {
         "playoffs": 100.0,
         "bye": 0.0,
-        "semis": 39.62,
-        "final": 16.35,
-        "champ": 5.22
+        "semis": 43.35,
+        "final": 20.1,
+        "champ": 8.4,
+        "settled": true
       },
-      "luck": -0.44,
       "streak": "W1",
       "top": [
         {
@@ -430,25 +368,14 @@
       "losses": 9,
       "ties": 0,
       "pf": 1736.82,
-      "ap_wins": 76,
-      "ap_losses": 50,
-      "h2h_wins": 9.0,
-      "exp_wins": 8.44,
-      "bench": 151.88,
-      "bench_week": 13.68,
-      "bench_miss": {
-        "pts": 34.58,
-        "name": "Sam Darnold",
-        "pos": "QB"
-      },
       "odds": {
         "playoffs": 100.0,
         "bye": 100.0,
         "semis": 100.0,
-        "final": 53.15,
-        "champ": 21.7
+        "final": 48.5,
+        "champ": 20.9,
+        "settled": true
       },
-      "luck": 0.56,
       "streak": "L1",
       "top": [
         {
@@ -500,25 +427,14 @@
       "losses": 13,
       "ties": 0,
       "pf": 1680.82,
-      "ap_wins": 63,
-      "ap_losses": 63,
-      "h2h_wins": 8.0,
-      "exp_wins": 7.0,
-      "bench": 166.2,
-      "bench_week": 20.6,
-      "bench_miss": {
-        "pts": 23.9,
-        "name": "Rachaad White",
-        "pos": "RB"
-      },
       "odds": {
         "playoffs": 100.0,
         "bye": 0.0,
-        "semis": 51.08,
-        "final": 15.6,
-        "champ": 7.3
+        "semis": 49.7,
+        "final": 19.52,
+        "champ": 10.25,
+        "settled": true
       },
-      "luck": 1.0,
       "streak": "W1",
       "top": [
         {
@@ -570,21 +486,14 @@
       "losses": 12,
       "ties": 0,
       "pf": 1672.36,
-      "ap_wins": 68,
-      "ap_losses": 58,
-      "h2h_wins": 9.0,
-      "exp_wins": 7.56,
-      "bench": 214.52,
-      "bench_week": 0.0,
-      "bench_miss": null,
       "odds": {
         "playoffs": 100.0,
         "bye": 0.0,
-        "semis": 48.92,
-        "final": 14.88,
-        "champ": 6.78
+        "semis": 50.3,
+        "final": 18.77,
+        "champ": 9.1,
+        "settled": true
       },
-      "luck": 1.44,
       "streak": "L2",
       "top": [
         {
@@ -636,25 +545,14 @@
       "losses": 21,
       "ties": 0,
       "pf": 1569.8,
-      "ap_wins": 46,
-      "ap_losses": 80,
-      "h2h_wins": 4.0,
-      "exp_wins": 5.11,
-      "bench": 229.3,
-      "bench_week": 8.2,
-      "bench_miss": {
-        "pts": 14.9,
-        "name": "Jerry Jeudy",
-        "pos": "WR"
-      },
       "odds": {
         "playoffs": 0.0,
         "bye": 0.0,
         "semis": 0.0,
         "final": 0.0,
-        "champ": 0.0
+        "champ": 0.0,
+        "settled": true
       },
-      "luck": -1.11,
       "streak": "L4",
       "top": [
         {

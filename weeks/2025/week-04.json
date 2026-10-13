@@ -14,25 +14,14 @@
       "losses": 5,
       "ties": 0,
       "pf": 431.86,
-      "ap_wins": 13,
-      "ap_losses": 23,
-      "h2h_wins": 1.0,
-      "exp_wins": 1.44,
-      "bench": 38.7,
-      "bench_week": 4.2,
-      "bench_miss": {
-        "pts": 11.4,
-        "name": "Zach Charbonnet",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 28.55,
-        "bye": 1.27,
-        "semis": 11.78,
-        "final": 4.3,
-        "champ": 1.68
+        "playoffs": 41.95,
+        "bye": 6.62,
+        "semis": 24.6,
+        "final": 11.43,
+        "champ": 5.67,
+        "settled": false
       },
-      "luck": -0.44,
       "streak": "W1",
       "top": [
         {
@@ -84,25 +73,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 446.42,
-      "ap_wins": 21,
-      "ap_losses": 15,
-      "h2h_wins": 2.0,
-      "exp_wins": 2.33,
-      "bench": 69.6,
-      "bench_week": 19.8,
-      "bench_miss": {
-        "pts": 15.4,
-        "name": "Khalil Shakir",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 51.48,
-        "bye": 4.7,
-        "semis": 23.65,
-        "final": 9.35,
-        "champ": 3.83
+        "playoffs": 55.23,
+        "bye": 12.38,
+        "semis": 33.27,
+        "final": 14.62,
+        "champ": 7.0,
+        "settled": false
       },
-      "luck": -0.33,
       "streak": "L2",
       "top": [
         {
@@ -154,25 +132,14 @@
       "losses": 3,
       "ties": 0,
       "pf": 475.02,
-      "ap_wins": 19,
-      "ap_losses": 17,
-      "h2h_wins": 2.0,
-      "exp_wins": 2.11,
-      "bench": 48.62,
-      "bench_week": 16.32,
-      "bench_miss": {
-        "pts": 26.74,
-        "name": "Bo Nix",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 82.97,
-        "bye": 17.98,
-        "semis": 52.83,
-        "final": 24.27,
-        "champ": 10.3
+        "playoffs": 72.65,
+        "bye": 23.38,
+        "semis": 47.2,
+        "final": 23.65,
+        "champ": 11.85,
+        "settled": false
       },
-      "luck": -0.11,
       "streak": "W1",
       "top": [
         {
@@ -224,25 +191,14 @@
       "losses": 7,
       "ties": 0,
       "pf": 404.16,
-      "ap_wins": 11,
-      "ap_losses": 25,
-      "h2h_wins": 1.0,
-      "exp_wins": 1.22,
-      "bench": 112.0,
-      "bench_week": 27.8,
-      "bench_miss": {
-        "pts": 17.1,
-        "name": "Deebo Samuel",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 4.6,
-        "bye": 0.0,
-        "semis": 1.55,
-        "final": 0.47,
-        "champ": 0.17
+        "playoffs": 20.85,
+        "bye": 1.82,
+        "semis": 11.62,
+        "final": 5.55,
+        "champ": 2.67,
+        "settled": false
       },
-      "luck": -0.22,
       "streak": "L2",
       "top": [
         {
@@ -294,25 +250,14 @@
       "losses": 2,
       "ties": 0,
       "pf": 533.16,
-      "ap_wins": 26,
-      "ap_losses": 10,
-      "h2h_wins": 3.0,
-      "exp_wins": 2.89,
-      "bench": 83.04,
-      "bench_week": 6.88,
-      "bench_miss": {
-        "pts": 19.66,
-        "name": "Brock Purdy",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 98.88,
-        "bye": 71.7,
-        "semis": 89.25,
-        "final": 52.92,
-        "champ": 29.98
+        "playoffs": 87.47,
+        "bye": 47.67,
+        "semis": 67.35,
+        "final": 37.52,
+        "champ": 18.73,
+        "settled": false
       },
-      "luck": 0.11,
       "streak": "W3",
       "top": [
         {
@@ -364,25 +309,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 450.96,
-      "ap_wins": 15,
-      "ap_losses": 21,
-      "h2h_wins": 3.0,
-      "exp_wins": 1.67,
-      "bench": 56.78,
-      "bench_week": 27.78,
-      "bench_miss": {
-        "pts": 30.96,
-        "name": "Dak Prescott",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 51.5,
-        "bye": 5.25,
-        "semis": 24.43,
-        "final": 9.82,
-        "champ": 3.85
+        "playoffs": 57.38,
+        "bye": 14.03,
+        "semis": 36.15,
+        "final": 16.9,
+        "champ": 8.2,
+        "settled": false
       },
-      "luck": 1.33,
       "streak": "W2",
       "top": [
         {
@@ -434,25 +368,14 @@
       "losses": 5,
       "ties": 0,
       "pf": 476.22,
-      "ap_wins": 18,
-      "ap_losses": 18,
-      "h2h_wins": 1.0,
-      "exp_wins": 2.0,
-      "bench": 74.62,
-      "bench_week": 5.5,
-      "bench_miss": {
-        "pts": 10.9,
-        "name": "Hunter Henry",
-        "pos": "TE"
-      },
       "odds": {
-        "playoffs": 62.65,
-        "bye": 7.22,
-        "semis": 34.5,
-        "final": 15.22,
-        "champ": 7.17
+        "playoffs": 57.25,
+        "bye": 14.1,
+        "semis": 37.75,
+        "final": 17.95,
+        "champ": 9.22,
+        "settled": false
       },
-      "luck": -1.0,
       "streak": "L3",
       "top": [
         {
@@ -504,25 +427,14 @@
       "losses": 5,
       "ties": 0,
       "pf": 436.86,
-      "ap_wins": 13,
-      "ap_losses": 23,
-      "h2h_wins": 2.0,
-      "exp_wins": 1.44,
-      "bench": 90.6,
-      "bench_week": 28.5,
-      "bench_miss": {
-        "pts": 25.9,
-        "name": "Woody Marks",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 30.62,
-        "bye": 1.52,
-        "semis": 13.28,
-        "final": 5.25,
-        "champ": 2.15
+        "playoffs": 44.73,
+        "bye": 8.9,
+        "semis": 26.18,
+        "final": 11.65,
+        "champ": 6.2,
+        "settled": false
       },
-      "luck": 0.56,
       "streak": "L1",
       "top": [
         {
@@ -574,25 +486,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 521.46,
-      "ap_wins": 21,
-      "ap_losses": 15,
-      "h2h_wins": 2.0,
-      "exp_wins": 2.33,
-      "bench": 87.08,
-      "bench_week": 20.58,
-      "bench_miss": {
-        "pts": 26.28,
-        "name": "Jordan Love",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 92.42,
-        "bye": 36.73,
-        "semis": 71.6,
-        "final": 39.15,
-        "champ": 22.38
+        "playoffs": 77.08,
+        "bye": 29.25,
+        "semis": 54.73,
+        "final": 29.35,
+        "champ": 15.28,
+        "settled": false
       },
-      "luck": -0.33,
       "streak": "L1",
       "top": [
         {
@@ -644,25 +545,14 @@
       "losses": 1,
       "ties": 0,
       "pf": 491.74,
-      "ap_wins": 23,
-      "ap_losses": 13,
-      "h2h_wins": 3.0,
-      "exp_wins": 2.56,
-      "bench": 100.1,
-      "bench_week": 22.44,
-      "bench_miss": {
-        "pts": 27.4,
-        "name": "Matthew Stafford",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 96.33,
-        "bye": 53.62,
-        "semis": 77.15,
-        "final": 39.23,
-        "champ": 18.5
+        "playoffs": 85.42,
+        "bye": 41.85,
+        "semis": 61.15,
+        "final": 31.38,
+        "champ": 15.18,
+        "settled": false
       },
-      "luck": 0.44,
       "streak": "W2",
       "top": [
         {

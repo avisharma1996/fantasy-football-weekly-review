@@ -14,25 +14,14 @@
       "losses": 1,
       "ties": 0,
       "pf": 119.76,
-      "ap_wins": 5,
-      "ap_losses": 6,
-      "h2h_wins": 1.0,
-      "exp_wins": 0.45,
-      "bench": 22.88,
-      "bench_week": 22.88,
-      "bench_miss": {
-        "pts": 16.44,
-        "name": "Jared Goff",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 41.75,
-        "bye": 5.2,
-        "semis": 20.77,
-        "final": 8.5,
-        "champ": 3.27
+        "playoffs": 46.85,
+        "bye": 12.68,
+        "semis": 29.62,
+        "final": 14.15,
+        "champ": 6.62,
+        "settled": false
       },
-      "luck": 0.55,
       "streak": "W1",
       "top": [
         {
@@ -84,21 +73,14 @@
       "losses": 1,
       "ties": 0,
       "pf": 101.02,
-      "ap_wins": 2,
-      "ap_losses": 9,
-      "h2h_wins": 1.0,
-      "exp_wins": 0.18,
-      "bench": 0.0,
-      "bench_week": 0.0,
-      "bench_miss": null,
       "odds": {
-        "playoffs": 20.35,
-        "bye": 1.15,
-        "semis": 9.0,
-        "final": 3.05,
-        "champ": 0.7
+        "playoffs": 40.6,
+        "bye": 9.43,
+        "semis": 24.9,
+        "final": 11.6,
+        "champ": 5.3,
+        "settled": false
       },
-      "luck": 0.82,
       "streak": "W1",
       "top": [
         {
@@ -150,25 +132,14 @@
       "losses": 2,
       "ties": 0,
       "pf": 97.82,
-      "ap_wins": 1,
-      "ap_losses": 10,
-      "h2h_wins": 0.0,
-      "exp_wins": 0.09,
-      "bench": 1.0,
-      "bench_week": 1.0,
-      "bench_miss": {
-        "pts": 1.0,
-        "name": "Makai Lemon",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 11.55,
-        "bye": 0.82,
-        "semis": 5.2,
-        "final": 1.9,
-        "champ": 0.82
+        "playoffs": 31.85,
+        "bye": 6.45,
+        "semis": 19.05,
+        "final": 8.93,
+        "champ": 4.08,
+        "settled": false
       },
-      "luck": -0.09,
       "streak": "L1",
       "top": [
         {
@@ -220,25 +191,14 @@
       "losses": 1,
       "ties": 0,
       "pf": 132.46,
-      "ap_wins": 6,
-      "ap_losses": 5,
-      "h2h_wins": 0.0,
-      "exp_wins": 0.55,
-      "bench": 5.8,
-      "bench_week": 5.8,
-      "bench_miss": {
-        "pts": 9.9,
-        "name": "Kenyon Sadiq",
-        "pos": "TE"
-      },
       "odds": {
-        "playoffs": 61.2,
-        "bye": 12.5,
-        "semis": 34.88,
-        "final": 14.4,
-        "champ": 6.47
+        "playoffs": 53.55,
+        "bye": 16.2,
+        "semis": 34.9,
+        "final": 18.18,
+        "champ": 9.15,
+        "settled": false
       },
-      "luck": -0.55,
       "streak": "L1",
       "top": [
         {
@@ -290,25 +250,14 @@
       "losses": 0,
       "ties": 0,
       "pf": 172.46,
-      "ap_wins": 11,
-      "ap_losses": 0,
-      "h2h_wins": 1.0,
-      "exp_wins": 1.0,
-      "bench": 29.5,
-      "bench_week": 29.5,
-      "bench_miss": {
-        "pts": 19.4,
-        "name": "Kyle Monangai",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 96.47,
-        "bye": 66.2,
-        "semis": 85.67,
-        "final": 51.75,
-        "champ": 30.05
+        "playoffs": 73.58,
+        "bye": 34.83,
+        "semis": 55.55,
+        "final": 30.3,
+        "champ": 16.32,
+        "settled": false
       },
-      "luck": 0.0,
       "streak": "W1",
       "top": [
         {
@@ -360,21 +309,14 @@
       "losses": 1,
       "ties": 0,
       "pf": 135.8,
-      "ap_wins": 7,
-      "ap_losses": 4,
-      "h2h_wins": 0.0,
-      "exp_wins": 0.64,
-      "bench": 0.0,
-      "bench_week": 0.0,
-      "bench_miss": null,
       "odds": {
-        "playoffs": 65.3,
-        "bye": 13.78,
-        "semis": 39.27,
-        "final": 17.65,
-        "champ": 7.58
+        "playoffs": 54.33,
+        "bye": 17.15,
+        "semis": 35.95,
+        "final": 18.02,
+        "champ": 9.35,
+        "settled": false
       },
-      "luck": -0.64,
       "streak": "L1",
       "top": [
         {
@@ -426,25 +368,14 @@
       "losses": 2,
       "ties": 0,
       "pf": 106.16,
-      "ap_wins": 3,
-      "ap_losses": 8,
-      "h2h_wins": 0.0,
-      "exp_wins": 0.27,
-      "bench": 9.1,
-      "bench_week": 9.1,
-      "bench_miss": {
-        "pts": 8.3,
-        "name": "David Njoku",
-        "pos": "TE"
-      },
       "odds": {
-        "playoffs": 19.98,
-        "bye": 1.02,
-        "semis": 8.82,
-        "final": 3.7,
-        "champ": 1.35
+        "playoffs": 36.55,
+        "bye": 8.65,
+        "semis": 22.4,
+        "final": 10.5,
+        "champ": 5.22,
+        "settled": false
       },
-      "luck": -0.27,
       "streak": "L1",
       "top": [
         {
@@ -496,25 +427,14 @@
       "losses": 2,
       "ties": 0,
       "pf": 93.9,
-      "ap_wins": 0,
-      "ap_losses": 11,
-      "h2h_wins": 0.0,
-      "exp_wins": 0.0,
-      "bench": 15.9,
-      "bench_week": 15.9,
-      "bench_miss": {
-        "pts": 14.3,
-        "name": "Dontayvion Wicks",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 9.22,
-        "bye": 0.33,
-        "semis": 3.0,
-        "final": 0.93,
-        "champ": 0.28
+        "playoffs": 31.77,
+        "bye": 6.42,
+        "semis": 19.12,
+        "final": 8.47,
+        "champ": 4.38,
+        "settled": false
       },
-      "luck": 0.0,
       "streak": "L1",
       "top": [
         {
@@ -566,25 +486,14 @@
       "losses": 0,
       "ties": 0,
       "pf": 142.2,
-      "ap_wins": 9,
-      "ap_losses": 2,
-      "h2h_wins": 1.0,
-      "exp_wins": 0.82,
-      "bench": 2.7,
-      "bench_week": 2.7,
-      "bench_miss": {
-        "pts": 6.2,
-        "name": "Michael Mayer",
-        "pos": "TE"
-      },
       "odds": {
-        "playoffs": 81.5,
-        "bye": 25.4,
-        "semis": 55.12,
-        "final": 26.4,
-        "champ": 12.62
+        "playoffs": 63.55,
+        "bye": 23.7,
+        "semis": 43.08,
+        "final": 21.05,
+        "champ": 9.95,
+        "settled": false
       },
-      "luck": 0.18,
       "streak": "W1",
       "top": [
         {
@@ -636,25 +545,14 @@
       "losses": 0,
       "ties": 0,
       "pf": 138.06,
-      "ap_wins": 8,
-      "ap_losses": 3,
-      "h2h_wins": 1.0,
-      "exp_wins": 0.73,
-      "bench": 8.6,
-      "bench_week": 8.6,
-      "bench_miss": {
-        "pts": 10.0,
-        "name": "Aaron Jones",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 77.45,
-        "bye": 22.57,
-        "semis": 51.85,
-        "final": 24.62,
-        "champ": 11.9
+        "playoffs": 61.58,
+        "bye": 22.85,
+        "semis": 41.52,
+        "final": 20.98,
+        "champ": 10.35,
+        "settled": false
       },
-      "luck": 0.27,
       "streak": "W1",
       "top": [
         {
@@ -706,25 +604,14 @@
       "losses": 2,
       "ties": 0,
       "pf": 110.66,
-      "ap_wins": 4,
-      "ap_losses": 7,
-      "h2h_wins": 0.0,
-      "exp_wins": 0.36,
-      "bench": 12.3,
-      "bench_week": 12.3,
-      "bench_miss": {
-        "pts": 13.5,
-        "name": "Stefon Diggs",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 22.98,
-        "bye": 1.82,
-        "semis": 11.2,
-        "final": 4.17,
-        "champ": 1.55
+        "playoffs": 37.48,
+        "bye": 9.7,
+        "semis": 23.23,
+        "final": 11.93,
+        "champ": 5.92,
+        "settled": false
       },
-      "luck": -0.36,
       "streak": "L1",
       "top": [
         {
@@ -776,25 +663,14 @@
       "losses": 0,
       "ties": 0,
       "pf": 159.46,
-      "ap_wins": 10,
-      "ap_losses": 1,
-      "h2h_wins": 1.0,
-      "exp_wins": 0.91,
-      "bench": 10.3,
-      "bench_week": 10.3,
-      "bench_miss": {
-        "pts": 15.0,
-        "name": "Deebo Samuel",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 92.25,
-        "bye": 49.2,
-        "semis": 75.2,
-        "final": 42.92,
-        "champ": 23.4
+        "playoffs": 68.33,
+        "bye": 31.95,
+        "semis": 50.67,
+        "final": 25.9,
+        "champ": 13.35,
+        "settled": false
       },
-      "luck": 0.09,
       "streak": "W1",
       "top": [
         {

@@ -14,25 +14,14 @@
       "losses": 14,
       "ties": 0,
       "pf": 1661.44,
-      "ap_wins": 64,
-      "ap_losses": 62,
-      "h2h_wins": 6.0,
-      "exp_wins": 7.11,
-      "bench": 146.7,
-      "bench_week": 9.3,
-      "bench_miss": {
-        "pts": 10.9,
-        "name": "Kimani Vidal",
-        "pos": "RB"
-      },
       "odds": {
         "playoffs": 100.0,
         "bye": 0.0,
-        "semis": 47.65,
-        "final": 16.38,
-        "champ": 6.95
+        "semis": 47.4,
+        "final": 19.85,
+        "champ": 8.78,
+        "settled": true
       },
-      "luck": -1.11,
       "streak": "W2",
       "top": [
         {
@@ -84,25 +73,14 @@
       "losses": 13,
       "ties": 0,
       "pf": 1601.64,
-      "ap_wins": 62,
-      "ap_losses": 64,
-      "h2h_wins": 8.0,
-      "exp_wins": 6.89,
-      "bench": 246.54,
-      "bench_week": 13.5,
-      "bench_miss": {
-        "pts": 14.7,
-        "name": "Rashid Shaheed",
-        "pos": "WR"
-      },
       "odds": {
         "playoffs": 100.0,
         "bye": 0.0,
-        "semis": 45.7,
-        "final": 14.07,
-        "champ": 5.0
+        "semis": 47.1,
+        "final": 17.95,
+        "champ": 7.67,
+        "settled": true
       },
-      "luck": 1.11,
       "streak": "L2",
       "top": [
         {
@@ -154,25 +132,14 @@
       "losses": 13,
       "ties": 0,
       "pf": 1645.56,
-      "ap_wins": 60,
-      "ap_losses": 66,
-      "h2h_wins": 7.0,
-      "exp_wins": 6.67,
-      "bench": 174.92,
-      "bench_week": 23.0,
-      "bench_miss": {
-        "pts": 15.1,
-        "name": "Jerry Jeudy",
-        "pos": "WR"
-      },
       "odds": {
         "playoffs": 100.0,
         "bye": 0.0,
-        "semis": 54.3,
-        "final": 18.05,
-        "champ": 7.08
+        "semis": 52.9,
+        "final": 21.55,
+        "champ": 9.68,
+        "settled": true
       },
-      "luck": 0.33,
       "streak": "W3",
       "top": [
         {
@@ -224,25 +191,14 @@
       "losses": 16,
       "ties": 0,
       "pf": 1606.52,
-      "ap_wins": 59,
-      "ap_losses": 67,
-      "h2h_wins": 6.0,
-      "exp_wins": 6.56,
-      "bench": 200.9,
-      "bench_week": 23.16,
-      "bench_miss": {
-        "pts": 19.36,
-        "name": "Trevor Lawrence",
-        "pos": "QB"
-      },
       "odds": {
         "playoffs": 0.0,
         "bye": 0.0,
         "semis": 0.0,
         "final": 0.0,
-        "champ": 0.0
+        "champ": 0.0,
+        "settled": true
       },
-      "luck": -0.56,
       "streak": "L1",
       "top": [
         {
@@ -294,25 +250,14 @@
       "losses": 5,
       "ties": 0,
       "pf": 1887.36,
-      "ap_wins": 97,
-      "ap_losses": 29,
-      "h2h_wins": 11.0,
-      "exp_wins": 10.78,
-      "bench": 180.32,
-      "bench_week": 25.5,
-      "bench_miss": {
-        "pts": 28.1,
-        "name": "Tony Pollard",
-        "pos": "RB"
-      },
       "odds": {
         "playoffs": 100.0,
         "bye": 100.0,
         "semis": 100.0,
-        "final": 67.88,
-        "champ": 36.92
+        "final": 60.5,
+        "champ": 32.58,
+        "settled": true
       },
-      "luck": 0.22,
       "streak": "W1",
       "top": [
         {
@@ -364,25 +309,14 @@
       "losses": 15,
       "ties": 0,
       "pf": 1676.18,
-      "ap_wins": 60,
-      "ap_losses": 66,
-      "h2h_wins": 8.0,
-      "exp_wins": 6.67,
-      "bench": 160.28,
-      "bench_week": 21.5,
-      "bench_miss": {
-        "pts": 25.6,
-        "name": "Blake Corum",
-        "pos": "RB"
-      },
       "odds": {
         "playoffs": 0.0,
         "bye": 0.0,
         "semis": 0.0,
         "final": 0.0,
-        "champ": 0.0
+        "champ": 0.0,
+        "settled": true
       },
-      "luck": 1.33,
       "streak": "L1",
       "top": [
         {
@@ -434,25 +368,14 @@
       "losses": 20,
       "ties": 0,
       "pf": 1614.28,
-      "ap_wins": 56,
-      "ap_losses": 70,
-      "h2h_wins": 3.0,
-      "exp_wins": 6.22,
-      "bench": 267.96,
-      "bench_week": 21.16,
-      "bench_miss": {
-        "pts": 13.16,
-        "name": "Justin Herbert",
-        "pos": "QB"
-      },
       "odds": {
         "playoffs": 0.0,
         "bye": 0.0,
         "semis": 0.0,
         "final": 0.0,
-        "champ": 0.0
+        "champ": 0.0,
+        "settled": true
       },
-      "luck": -3.22,
       "streak": "L6",
       "top": [
         {
@@ -504,25 +427,14 @@
       "losses": 22,
       "ties": 0,
       "pf": 1382.88,
-      "ap_wins": 27,
-      "ap_losses": 99,
-      "h2h_wins": 4.0,
-      "exp_wins": 3.0,
-      "bench": 236.0,
-      "bench_week": 12.3,
-      "bench_miss": {
-        "pts": 11.0,
-        "name": "Jacksonville Jaguars D/ST",
-        "pos": "DEF"
-      },
       "odds": {
         "playoffs": 0.0,
         "bye": 0.0,
         "semis": 0.0,
         "final": 0.0,
-        "champ": 0.0
+        "champ": 0.0,
+        "settled": true
       },
-      "luck": 1.0,
       "streak": "L5",
       "top": [
         {
@@ -574,25 +486,14 @@
       "losses": 10,
       "ties": 0,
       "pf": 1887.96,
-      "ap_wins": 80,
-      "ap_losses": 46,
-      "h2h_wins": 9.0,
-      "exp_wins": 8.89,
-      "bench": 188.76,
-      "bench_week": 16.8,
-      "bench_miss": {
-        "pts": 16.6,
-        "name": "Zay Flowers",
-        "pos": "WR"
-      },
       "odds": {
         "playoffs": 100.0,
         "bye": 100.0,
         "semis": 100.0,
-        "final": 65.03,
-        "champ": 36.33
+        "final": 56.77,
+        "champ": 30.07,
+        "settled": true
       },
-      "luck": 0.11,
       "streak": "W2",
       "top": [
         {
@@ -644,25 +545,14 @@
       "losses": 12,
       "ties": 0,
       "pf": 1698.44,
-      "ap_wins": 65,
-      "ap_losses": 61,
-      "h2h_wins": 8.0,
-      "exp_wins": 7.22,
-      "bench": 199.2,
-      "bench_week": 1.1,
-      "bench_miss": {
-        "pts": 5.4,
-        "name": "John Metchie",
-        "pos": "WR"
-      },
       "odds": {
         "playoffs": 100.0,
         "bye": 0.0,
-        "semis": 52.35,
-        "final": 18.6,
-        "champ": 7.72
+        "semis": 52.6,
+        "final": 23.38,
+        "champ": 11.22,
+        "settled": true
       },
-      "luck": 0.78,
       "streak": "W1",
       "top": [
         {

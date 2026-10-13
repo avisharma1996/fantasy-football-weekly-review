@@ -121,25 +121,6 @@ def position_ranks(season, week, scoring, players):
     return rank(totals), rank(this_week)
 
 
-SLOT_FITS = {"FLEX": {"RB", "WR", "TE"}, "SUPER_FLEX": {"QB", "RB", "WR", "TE"}, "REC_FLEX": {"WR", "TE"},
-             "WRRB_FLEX": {"RB", "WR"}, "IDP_FLEX": {"DL", "LB", "DB"}}
-
-
-def best_lineup(points, slots, players):
-    """Highest-scoring legal lineup from a roster's points. Filling the most restrictive slots first is optimal
-    because flex slots only ever widen eligibility."""
-    fits = lambda slot: SLOT_FITS.get(slot, {slot})
-    used, total = set(), 0.0
-    for slot in sorted(slots, key=lambda s: len(fits(s))):
-        options = [(p or 0, pid) for pid, p in points.items()
-                   if pid not in used and fits(slot) & set(players.get(pid, {}).get("fpos") or [])]
-        if options:
-            p, pid = max(options)
-            used.add(pid)
-            total += p
-    return total, used
-
-
 def avatar_url(user):
     meta = user.get("metadata") or {}
     if meta.get("avatar"):
@@ -157,8 +138,6 @@ def fetch_week(league_id, week):
     settings = league.get("settings") or {}
     playoff_start = settings.get("playoff_week_start") or 99
     median_game = settings.get("league_average_match") == 1
-    slots = [s for s in league.get("roster_positions") or [] if s not in ("BN", "IR", "TAXI")]
-    players = load_players(set())
 
     teams, starter_pts, week_pts = {}, {}, {}
     for r in rosters:
@@ -170,10 +149,6 @@ def fetch_week(league_id, week):
             "owner": r.get("owner_id"),
             "avatar": avatar_url(u) if u else None,
             "wins": 0, "losses": 0, "ties": 0, "pf": 0.0, "results": [],
-            # All-play: record against every team each week. Luck: actual minus expected head-to-head wins.
-            "ap_wins": 0, "ap_losses": 0, "h2h_wins": 0.0, "exp_wins": 0.0,
-            # Bench: points the best possible lineup would have added.
-            "bench": 0.0, "bench_week": 0.0, "bench_miss": None,
         }
         starter_pts[r["roster_id"]] = {}
         week_pts[r["roster_id"]] = {}
@@ -192,25 +167,10 @@ def fetch_week(league_id, week):
                     totals[pid] = totals.get(pid, 0) + (p or 0)
                     if w == week:
                         week_pts[rid][pid] = p or 0
-            best, lineup = best_lineup(e.get("players_points") or {}, slots, players)
-            left = max(best - pts[rid], 0)
-            teams[rid]["bench"] += left
-            if w == week:
-                teams[rid]["bench_week"] = round(left, 2)
-                missed = [(e["players_points"][pid], pid) for pid in lineup - set(e.get("starters") or [])]
-                if left > 0 and missed:
-                    p, pid = max(missed)
-                    teams[rid]["bench_miss"] = {"player": pid, "pts": round(p, 2)}
 
         if regular and len(pts) > 1:
             for rid, p in pts.items():
                 scores[rid].append(p)
-                beat = sum(p > q for o, q in pts.items() if o != rid)
-                tied = sum(p == q for o, q in pts.items() if o != rid)
-                t = teams[rid]
-                t["ap_wins"] += beat
-                t["ap_losses"] += len(pts) - 1 - beat - tied
-                t["exp_wins"] += (beat + tied / 2) / (len(pts) - 1)
 
         if regular and median_game and pts:
             mid = sorted(pts.values())[len(pts) // 2 - 1: len(pts) // 2 + 1]
@@ -229,7 +189,6 @@ def fetch_week(league_id, week):
                 t["results"].append("W" if pts[me] > pts[opp] else "L" if pts[me] < pts[opp] else "T")
                 if regular:
                     record(t, pts[me], pts[opp])
-                    t["h2h_wins"] += 1 if pts[me] > pts[opp] else 0.5 if pts[me] == pts[opp] else 0
             if w == week:
                 this_week.append({"a": str(a), "a_pts": round(pts[a], 2), "b": str(b), "b_pts": round(pts[b], 2)})
 
@@ -248,17 +207,12 @@ def fetch_week(league_id, week):
     top3 = lambda pts: sorted(pts.items(), key=lambda kv: -kv[1])[:3]
     top = {rid: top3(totals) for rid, totals in starter_pts.items()}
     top_week = {rid: top3(pts) for rid, pts in week_pts.items()}
-    missed = {t["bench_miss"]["player"] for t in teams.values() if t["bench_miss"]}
-    players = load_players({pid for picks in [*top.values(), *top_week.values()] for pid, _ in picks} | missed)
+    players = load_players({pid for picks in [*top.values(), *top_week.values()] for pid, _ in picks})
     ranks, week_ranks = position_ranks(league["season"], week, league.get("scoring_settings") or {}, players)
     who = lambda pid: {k: players.get(pid, {"name": pid, "pos": ""})[k] for k in ("name", "pos")}
     card = lambda pid, p, r: {**who(pid), "rank": r.get(pid, ""), "pts": round(p, 2)}
     for rid, t in teams.items():
         t["pf"] = round(t["pf"], 2)
-        t["luck"] = round(t["h2h_wins"] - t["exp_wins"], 2)
-        t["exp_wins"], t["bench"] = round(t["exp_wins"], 2), round(t["bench"], 2)
-        if t["bench_miss"]:
-            t["bench_miss"].update(who(t["bench_miss"].pop("player")))
         streak = ""
         for res in reversed(t["results"]):
             if streak and res != streak[0]:
@@ -332,9 +286,9 @@ def fetch_faab(league_id):
                 elif "claimed by another owner" in ((t.get("metadata") or {}).get("notes") or ""):
                     lost.setdefault((t["leg"], pid), []).append({"roster": rid, "bid": bid})
     players = load_players({c["player"] for c in claims})
-    started = started_points(league_id)
+    rostered, last = rostered_points(league_id)
     for c in claims:
-        c["pts"] = points_after(started, c["roster"], c["player"], c["week"])
+        c.update(tenure(rostered, last, c["roster"], c["player"], c["week"]))
         p = players.get(c["player"], {"name": c["player"], "pos": ""})
         c["name"], c["pos"] = p["name"], p["pos"]
         c["outbid"] = sorted(lost.get((c["week"], c["player"]), []), key=lambda o: -o["bid"])
@@ -353,6 +307,38 @@ def started_points(league_id):
                 if pid and pid != "0":
                     out.setdefault((str(e["roster_id"]), pid), {})[w] = p or 0
     return out
+
+
+def rostered_points(league_id):
+    """{(roster_id, player_id): {week: (points, points if started else 0)}} for everyone on a roster each week."""
+    league = get(f"/league/{league_id}")
+    last = min((league.get("settings") or {}).get("last_scored_leg") or 0, 18)
+    out = {}
+    for w in range(1, last + 1):
+        for e in get(f"/league/{league_id}/matchups/{w}") or []:
+            starters, pts = set(e.get("starters") or []), e.get("players_points") or {}
+            for pid in e.get("players") or []:
+                p = pts.get(pid) or 0
+                out.setdefault((str(e["roster_id"]), pid), {})[w] = (p, p if pid in starters else 0)
+    return out, last
+
+
+def tenure(rostered, last, rid, pid, week):
+    """What a player did for `rid` after joining in `week`: from his first game there until the first week he's
+    gone, so a player who's dropped and re-claimed isn't counted twice."""
+    weeks = rostered.get((rid, pid), {})
+    total = started = 0.0
+    played, active = 0, False
+    for w in range(week, last + 1):
+        if w not in weeks:
+            if played or w > week + 1:  # gone, or never showed up
+                break
+            continue
+        played += 1
+        total += weeks[w][0]
+        started += weeks[w][1]
+        active = w == last
+    return {"pts": round(total, 2), "started": round(started, 2), "weeks": played, "active": active}
 
 
 def points_after(started, rid, pid, week):
@@ -412,19 +398,25 @@ def fetch_draft(league_id):
         if pts > 0 and pos_of(pid):
             by_pos.setdefault(pos_of(pid), []).append((pts, pid))
     finish = {pid: i for ranked in by_pos.values() for i, (_, pid) in enumerate(sorted(ranked, reverse=True), 1)}
+    rostered, _ = rostered_points(league_id)
     taken, out = {}, []
     for p in picks:
         pid, pos = p["player_id"], pos_of(p["player_id"])
         taken[pos] = taken.get(pos, 0) + 1
         # Someone who never scored finishes behind everyone who did.
         fin = finish.get(pid, len(by_pos.get(pos, [])) + 1)
-        out.append({"round": p["round"], "pick": p["pick_no"], "roster": str(p["roster_id"]), "owner": p.get("picked_by"),
+        stay = tenure(rostered, last, str(p["roster_id"]), pid, 1)
+        out.append({"kept": stay["active"], "team_pts": stay["pts"], "team_weeks": stay["weeks"],"round": p["round"], "pick": p["pick_no"], "roster": str(p["roster_id"]), "owner": p.get("picked_by"),
                     "name": players.get(pid, {}).get("name", pid), "pos": pos, "pts": round(totals.get(pid, 0), 2),
                     "drafted": taken[pos], "finish": fin, "value": taken[pos] - fin, "keeper": bool(p.get("is_keeper"))})
     return {"through_week": last, "complete": league.get("status") == "complete", "picks": out}
 
 
-def playoff_odds(league, teams, scores, remaining, sims=4000, seed=0):
+ODDS_SHRINK = 6   # games of league-average scoring blended into each team's average
+ODDS_DRIFT = 12   # points a team's true strength can differ from its average so far, per simulated season
+
+
+def playoff_odds(league, teams, scores, remaining, sims=4000, seed=0, shrink=ODDS_SHRINK, drift=ODDS_DRIFT):
     """Simulate the rest of the regular season and the bracket. `scores` maps roster id to its weekly scores so far;
     `remaining` is a list of weeks, each a list of (a, b) pairings. Returns {roster_id: {round: % of sims reached}}
     for playoffs, bye, semis, final and champ."""
@@ -435,15 +427,18 @@ def playoff_odds(league, teams, scores, remaining, sims=4000, seed=0):
     if len(played) < 2 or n_playoff not in (4, 6, 8):
         return {}
     avg, sd = statistics.mean(played), statistics.pstdev(played) or 1
-    # Shrink each team toward the league average early in the season.
-    mean = {r: (sum(v) + 3 * avg) / (len(v) + 3) for r, v in scores.items()}
+    # A few weeks of scores say little about true strength: pull each team toward the league average, and let its
+    # strength wander in every simulated season (injuries, trades, slumps).
+    base = {r: (sum(v) + shrink * avg) / (len(v) + shrink) for r, v in scores.items()}
     rng = random.Random(seed)
+    mean = dict(base)
     reached = {r: dict.fromkeys(("playoffs", "bye", "semis", "final", "champ"), 0) for r in teams}
 
     def game(a, b):
         return a if rng.gauss(mean[a], sd) >= rng.gauss(mean[b], sd) else b
 
     for _ in range(sims):
+        mean.update({r: base[r] + rng.gauss(0, drift) for r in base})
         wins = {r: teams[r]["wins"] + teams[r]["ties"] / 2 for r in teams}
         pf = {r: teams[r]["pf"] for r in teams}
         for pairs in remaining:
@@ -473,7 +468,9 @@ def playoff_odds(league, teams, scores, remaining, sims=4000, seed=0):
         for r in final:
             reached[r]["final"] += 1
         reached[game(*final)]["champ"] += 1
-    return {r: {k: round(100 * v / sims, 2) for k, v in counts.items()} for r, counts in reached.items()}
+    # Only call a race settled when no regular-season games remain; a 4,000-sim sweep isn't a clinch.
+    return {r: {**{k: round(100 * v / sims, 2) for k, v in counts.items()}, "settled": not remaining}
+            for r, counts in reached.items()}
 
 
 def record(t, mine, theirs):
@@ -662,7 +659,7 @@ def tiles(title, items):
 
 
 def awards(data):
-    """This week's superlatives, plus season-long luck and lineup awards."""
+    """This week's superlatives."""
     teams, ms, e = data["teams"], data.get("matchups") or [], html.escape
     if not ms:
         return ""
@@ -682,22 +679,7 @@ def awards(data):
         ("Unluckiest loss", nm(unlucky[1][0]), f"{unlucky[1][1]:.2f} pts and still lost"),
         ("Luckiest win", nm(lucky[0][0]), f"won with {lucky[0][1]:.2f} pts"),
     ]
-    if any("bench_week" in t for t in teams.values()):
-        b = max(teams, key=lambda r: teams[r].get("bench_week", 0))
-        miss = teams[b].get("bench_miss")
-        week.append(("Benchwarmer", nm(b), f"{teams[b]['bench_week']:.1f} pts left on the bench"
-                     + (f" ({e(miss['name'])} scored {miss['pts']:.1f})" if miss else "")))
-    out = tiles(f"Week {data['week']} Awards", week)
-    if any("luck" in t for t in teams.values()):
-        luck = sorted(teams, key=lambda r: teams[r]["luck"])
-        bench = sorted(teams, key=lambda r: teams[r]["bench"])
-        out += tiles("Season So Far", [
-            ("Luckiest team", nm(luck[-1]), f"{teams[luck[-1]]['luck']:+.1f} wins vs. expected"),
-            ("Unluckiest team", nm(luck[0]), f"{teams[luck[0]]['luck']:+.1f} wins vs. expected"),
-            ("Lineup genius", nm(bench[0]), f"only {teams[bench[0]]['bench']:.1f} pts left on the bench"),
-            ("Lineup disaster", nm(bench[-1]), f"{teams[bench[-1]]['bench']:.1f} pts left on the bench"),
-        ])
-    return out
+    return tiles(f"Week {data['week']} Awards", week)
 
 
 def render_week(data, content, prev_rank, all_weeks, site, base, rank_history=()):
@@ -716,23 +698,12 @@ def render_week(data, content, prev_rank, all_weeks, site, base, rank_history=()
         tops = "".join(f'<div class="lbl">{label}</div><ul class="top">{chips(picks)}</ul>'
                        for label, picks in (("Overall top performers", t["top"]),
                                             ("Weekly top performers", t.get("top_week") or [])) if picks)
-        extra = []
-        if "ap_wins" in t:
-            extra.append(f"All-play {t['ap_wins']}-{t['ap_losses']}")
-        if "luck" in t:
-            cls = "up" if t["luck"] >= 0.5 else "down" if t["luck"] <= -0.5 else ""
-            extra.append(f'Luck <span class="{cls}">{t["luck"]:+.1f}</span>')
-        if "bench_week" in t:
-            extra.append(f"{t['bench_week']:.1f} pts left on bench")
-        if t.get("odds"):
-            extra.append(f"Playoffs {pct(t['odds']['playoffs'])} · Title {pct(t['odds']['champ'])}")
         rows.append(f"""
   <li class="rank">
     <div class="rank-num">{i}{move}</div>
     <div class="rank-body">
       <div class="team">{avatar(t)}<div><h2>{e(t['name'])}</h2>
-        <div class="meta"><b>{rec(t)}</b> · {t['pf']:.2f} PF{' · ' + t['streak'] if t['streak'] else ''}</div>
-        {f'<div class="meta">{" · ".join(extra)}</div>' if extra else ''}</div></div>
+        <div class="meta"><b>{rec(t)}</b> · {t['pf']:.2f} PF{' · ' + t['streak'] if t['streak'] else ''}</div></div></div>
       {f'<div class="blurb">{fmt(blurb, base)}</div>' if blurb else ''}
       {f'<div class="tops">{tops}</div>' if tops else ''}
     </div>
@@ -740,9 +711,7 @@ def render_week(data, content, prev_rank, all_weeks, site, base, rank_history=()
 
     note = "Records include a game against the league median each week. " if data.get("median_game") else ""
     intro = f'<section class="intro">{fmt(content["intro"], base)}</section>' if content["intro"] else ""
-    footer = (f"{note}All-play is the record a team would have playing every other team every week. Luck is actual "
-              "head-to-head wins minus the wins that all-play scoring would expect. Bench is how many more points the "
-              "best possible lineup would have scored. Top performers are points scored as a starter for that team: "
+    footer = (f"{note}Top performers are points scored as a starter for that team: "
               "overall is the season through that week, weekly is that week alone. QB1, RB3, etc. is the player's rank "
               "at his position across the NFL over the same span. Stats from Sleeper. Rankings are the commissioner's own.")
     return page(data, base, sidebar(season, base, site), week_nav(season, all_weeks, base, week),
@@ -857,8 +826,13 @@ def render_trades(trades, data, site):
 DRAFT_CAP = 25  # a 13th-round pick finishing 40 spots high shouldn't outweigh everything else
 
 
+def draft_value(p):
+    """A player the drafting team dropped or traded can't earn them credit for what he did elsewhere."""
+    return p["value"] if p.get("kept", True) else min(p["value"], 0)
+
+
 def draft_grade(picks):
-    vals = [max(-DRAFT_CAP, min(DRAFT_CAP, p["value"])) for p in picks]
+    vals = [max(-DRAFT_CAP, min(DRAFT_CAP, draft_value(p))) for p in picks]
     return sum(vals) / len(vals) if vals else 0
 
 
@@ -867,16 +841,19 @@ def render_draft(draft, data, site, all_drafts, managers):
     picks = [p for p in draft["picks"] if not p["keeper"]]
     tname = lambda rid: e(teams.get(rid, {}).get("name", f"Team {rid}"))
     move = lambda p: f'{p["pos"]}{p["drafted"]} → {p["pos"]}{p["finish"]}'
-    line = lambda p: (f'<li><span class="amt {"up" if p["value"] > 0 else "down" if p["value"] < 0 else ""}">'
-                      f'{p["value"]:+d}</span><div><b>{e(p["name"])}</b> <span class="pos">{e(p["pos"])}</span> · {tname(p["roster"])}'
-                      f'<div class="beat">Round {p["round"]}, pick {p["pick"]} · drafted {move(p)} · {p["pts"]:.1f} pts</div></div></li>')
-    steals = sorted(picks, key=lambda p: (-p["value"], p["pick"]))[:8]
+    def line(p):
+        stayed = (" · kept all season" if draft["complete"] else " · still on roster") if p.get("kept", True) else             f' · gone after {p.get("team_weeks", 0)} wk{"s" if p.get("team_weeks", 0) != 1 else ""}'
+        return (f'<li><span class="amt {"up" if p["value"] > 0 else "down" if p["value"] < 0 else ""}">'
+                f'{p["value"]:+d}</span><div><b>{e(p["name"])}</b> <span class="pos">{e(p["pos"])}</span> · {tname(p["roster"])}'
+                f'<div class="beat">Round {p["round"]}, pick {p["pick"]} · drafted {move(p)} · '
+                f'{p.get("team_pts", p["pts"]):.1f} pts for them{stayed}</div></div></li>')
+    steals = sorted((p for p in picks if p.get("kept", True) and p["value"] > 0), key=lambda p: (-p["value"], p["pick"]))[:8]
     busts = sorted((p for p in picks if p["round"] <= 5), key=lambda p: (p["value"], p["pick"]))[:8]
 
     rounds = []
     for r in sorted({p["round"] for p in picks}):
         rp = [p for p in picks if p["round"] == r]
-        b, w = max(rp, key=lambda p: p["value"]), min(rp, key=lambda p: p["value"])
+        b, w = max(rp, key=draft_value), min(rp, key=draft_value)
         cell = lambda p: f'{e(p["name"])} <small>{tname(p["roster"])} · {move(p)}</small>'
         rounds.append(f'<tr><td>{r}</td><td class="tn">{cell(b)}</td><td class="tn">{cell(w)}</td></tr>')
 
@@ -885,9 +862,9 @@ def render_draft(draft, data, site, all_drafts, managers):
         mine = [p for p in picks if p["roster"] == rid]
         if not mine:
             continue
-        top = max(mine, key=lambda p: p["value"])
+        top = max(mine, key=draft_value)
         grades.append(f'<tr><td class="tn">{team_label(teams, rid)}</td><td>{draft_grade(mine):+.1f}</td>'
-                      f'<td>{sum(p["pts"] for p in mine):,.0f}</td><td class="tn">{e(top["name"])} <small>{move(top)}</small></td></tr>')
+                      f'<td>{sum(p.get("team_pts", p["pts"]) for p in mine):,.0f}</td><td class="tn">{e(top["name"])} <small>{move(top)}</small></td></tr>')
 
     alltime = ""
     if len(all_drafts) > 1:
@@ -917,14 +894,20 @@ def render_draft(draft, data, site, all_drafts, managers):
 {alltime}"""
     footer = (f"Value compares where a player was drafted at his position (RB5 = the fifth running back taken) with "
               f"where he finished at that position across the NFL in league scoring, over {span}. +10 means he finished "
-              f"10 spots better than drafted. Grades average each pick's value, capped at ±{DRAFT_CAP}.")
+              f"10 spots better than drafted. Steals only count players the drafting team kept; a player they dropped or traded "
+              f"gets no credit for what he did afterward. Points from picks are what drafted players scored while on that "
+              f"team. Grades average each pick's value, capped at ±{DRAFT_CAP}.")
     nav = "".join(f'<a href="{base}{s}/draft.html"{" class=cur" if s == season else ""}>{s}</a>'
                   for s in sorted(site["draft_seasons"], reverse=True))
     return page(data, base, sidebar(season, base, site, "draft"), nav, f"{e(data['league'])} · {e(season)}",
                 "Draft Report Card", body, footer, f"{season} draft report card")
 
 
-def pct(v):
+def pct(v, settled=True):
+    if not settled and v >= 99:
+        return ">99%"
+    if not settled and v < 1:
+        return "<1%"
     return "<1%" if 0 < v < 1 else ">99%" if 99 < v < 100 else f"{v:.0f}%"
 
 
@@ -939,15 +922,15 @@ def odds_table(data):
     rows = []
     for rid in sorted(odds, key=lambda r: tuple(-odds[r][k] for k, _ in cols)):
         o, t = odds[rid], teams[rid]
-        mark = (' <span class="flag up">clinched</span>' if o["playoffs"] == 100 else
-                ' <span class="flag down">eliminated</span>' if o["playoffs"] == 0 else "")
-        cells = "".join(f'<td class="{"zero" if not o[k] else ""}">{pct(o[k])}</td>' for k, _ in cols)
+        settled = o.get("settled", True)
+        mark = "" if not settled else (' <span class="flag up">clinched</span>' if o["playoffs"] == 100 else
+                                       ' <span class="flag down">eliminated</span>' if o["playoffs"] == 0 else "")
+        cells = "".join(f'<td class="{"zero" if not o[k] else ""}">{pct(o[k], settled)}</td>' for k, _ in cols)
         rows.append(f'<tr><td class="tn">{team_label(teams, rid)}{mark}</td><td>{rec(t)}</td>{cells}</tr>')
     head = "".join(f"<th>{label}</th>" for _, label in cols)
     return f"""<section><h2 class="sec">Playoff Odds</h2><div class="tbl"><table class="odds">
   <thead><tr><th class="tn">Team</th><th>Record</th>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table></div>
-<p class="hint">Chance of reaching each round, from 4,000 simulations of the rest of the regular season and the playoffs.
-Each team's future scores are drawn around its scoring average so far.</p></section>"""
+</section>"""
 
 def history_totals(hist):
     """All-time regular-season record per manager, and head-to-head records between each pair."""
@@ -1107,7 +1090,7 @@ def render_faab(faab, data, site):
         table.append(f"""<tr><td class="tn"><span class="who">{avatar(teams[rid])}<span>{e(name(rid))}</span></span></td>
       <td>{money(spent[rid])}</td>{f"<td>{tr_txt}</td>" if trades else ""}
       <td><div class="left"><span>{money(left)}</span><span class="bar"><span style="width:{min(100, 100 * left / budget):.0f}%"></span></span></div></td>
-      <td>{len(mine)}</td><td>{gained:.1f}</td><td>{per}</td><td class="tn wrap">{big_txt}</td></tr>""")
+      <td>{len(mine)}</td><td>{gained:.1f}</td><td>{per}</td><td class="tn buy">{big_txt}</td></tr>""")
 
     log = []
     for w in sorted({c["week"] for c in claims} | {x["week"] for x in trades}, reverse=True):
@@ -1123,7 +1106,7 @@ def render_faab(faab, data, site):
                         + (f'by {money(margin)}' if margin > 0 else 'won the tiebreaker') + '</div>')
             items.append(f"""<li{' class="zero"' if not c['bid'] else ''}><span class="amt">{money(c['bid'])}</span>
         <div><b>{e(name(c['roster']))}</b> won <b>{e(c['name'])}</b> <span class="pos">{e(c['pos'])}</span>
-        <span class="gain">→ {c.get('pts', 0):.1f} pts</span>{beat}</div></li>""")
+        <span class="gain">{f"→ {c['pts']:.1f} pts ({c['started']:.1f} started)" if c.get('weeks') else "→ hasn't played for them yet"}</span>{beat}</div></li>""")
         log.append(f'<h3>{f"Week {w}" if w else "Preseason"}</h3><ul class="bids">{"".join(items)}</ul>')
 
     body = f"""<section><h2 class="sec">Budget</h2><div class="tbl"><table>
@@ -1131,20 +1114,26 @@ def render_faab(faab, data, site):
   <tbody>{"".join(table)}</tbody></table></div></section>
 <!--ROI-->
 <section><h2 class="sec">Bid log</h2>{"".join(log) or "<p>No waiver claims yet.</p>"}</section>"""
-    roi_line = lambda c, val: (f'<li><span class="amt">{val}</span><div><b>{e(c["name"])}</b> <span class="pos">{e(c["pos"])}</span>'
-                               f' · {e(name(c["roster"]))}<div class="beat">{money(c["bid"])} in Wk {c["week"]} → '
-                               f'{c.get("pts", 0):.1f} pts started</div></div></li>')
-    paid = [c for c in claims if c["bid"] >= 1]
-    values = sorted(paid, key=lambda c: -c.get("pts", 0) / c["bid"])[:5]
-    busts = sorted((c for c in claims if c["bid"] >= 10), key=lambda c: c.get("pts", 0) / c["bid"])[:5]
+    def roi_line(c, val, unit):
+        weeks = f'{c.get("weeks", 0)} wk{"s" if c.get("weeks", 0) != 1 else ""}' + (" so far" if c.get("active") else "")
+        return (f'<li><span class="amt">{val}<small>{unit}</small></span><div><b>{e(c["name"])}</b> '
+                f'<span class="pos">{e(c["pos"])}</span> · {e(name(c["roster"]))}<div class="beat">{money(c["bid"])} in '
+                f'Wk {c["week"]} → {c.get("pts", 0):.1f} pts ({c.get("started", 0):.1f} started) · {weeks}</div></div></li>')
+    per_dollar = lambda c: c.get("pts", 0) / c["bid"]
+    values = sorted((c for c in claims if c["bid"] >= 5), key=per_dollar, reverse=True)[:5]
+    # Judge a bust only once he's had a couple of weeks, or is already gone.
+    busts = sorted((c for c in claims if c["bid"] >= 10 and (c.get("weeks", 0) >= 2 or not c.get("active"))),
+                   key=per_dollar)[:5]
     free = sorted((c for c in claims if c["bid"] <= 1), key=lambda c: -c.get("pts", 0))[:5]
+    lst = lambda items: "".join(items) or "<li><div>None yet</div></li>"
     roi = "" if not claims else f"""<section><h2 class="sec">Waiver ROI</h2><div class="records">
-  <div><h3>Best value (pts per $)</h3><ul class="bids">{"".join(roi_line(c, f'{c.get("pts", 0) / c["bid"]:.1f}') for c in values)}</ul></div>
-  <div><h3>Biggest busts ($10+)</h3><ul class="bids">{"".join(roi_line(c, f'{c.get("pts", 0) / c["bid"]:.1f}') for c in busts) or "<li><div>None yet</div></li>"}</ul></div>
-  <div><h3>Best $0–$1 pickups</h3><ul class="bids">{"".join(roi_line(c, f'{c.get("pts", 0):.0f}') for c in free)}</ul></div>
+  <div><h3>Best value ($5+ bids)</h3><ul class="bids">{lst(roi_line(c, f"{per_dollar(c):.1f}", "pts/$") for c in values)}</ul></div>
+  <div><h3>Biggest busts ($10+ bids)</h3><ul class="bids">{lst(roi_line(c, f"{per_dollar(c):.1f}", "pts/$") for c in busts)}</ul></div>
+  <div><h3>Best $0–$1 pickups</h3><ul class="bids">{lst(roi_line(c, f"{c.get('pts', 0):.0f}", "pts") for c in free)}</ul></div>
 </div></section>"""
     body = body.replace("<!--ROI-->", roi)
-    footer = (f"Pickup pts are what claimed players scored in that team's starting lineup after the claim. "
+    footer = (f"Pickup pts are everything a claimed player scored while on that team (started or not), from the claim "
+              "until he left the roster. "
               f"Each team starts with {money(budget)} of FAAB; remaining includes FAAB traded between teams. Winning "
               "waiver claims from Sleeper, newest week first. “Outbidding” lists the other teams that bid on the same "
               "player that week.")
@@ -1285,7 +1274,7 @@ th,td{padding:10px 14px;text-align:right;white-space:nowrap;border-bottom:1px so
 tbody tr:last-child td{border-bottom:0}
 th{color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em}
 .tn{text-align:left}
-td.wrap{white-space:normal;min-width:180px}
+td.buy{white-space:normal;min-width:180px}
 .who{display:inline-flex;vertical-align:middle;align-items:center;gap:10px;font-weight:600}.who .av{width:28px;height:28px;font-size:.75rem}
 .left{display:flex;align-items:center;gap:10px;justify-content:flex-end}
 .bar{width:90px;height:8px;border-radius:99px;background:var(--chip);overflow:hidden}
@@ -1294,6 +1283,7 @@ h3{font-size:.95rem;margin:22px 0 8px;color:var(--muted)}
 .bids{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px}
 .bids li{display:flex;gap:14px;align-items:baseline;padding:10px 16px;border-bottom:1px solid var(--line)}
 .bids li:last-child{border-bottom:0}
+.bids .amt small{display:block;font-size:.65rem;font-weight:600;color:var(--muted)}
 .bids .amt{flex:none;min-width:3.2em;text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
 .bids .zero .amt{color:var(--muted);font-weight:600}
 .bids .pos{color:var(--muted);font-size:.72rem;font-weight:700}

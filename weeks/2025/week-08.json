@@ -14,25 +14,14 @@
       "losses": 10,
       "ties": 0,
       "pf": 901.42,
-      "ap_wins": 30,
-      "ap_losses": 42,
-      "h2h_wins": 2.0,
-      "exp_wins": 3.33,
-      "bench": 96.3,
-      "bench_week": 23.5,
-      "bench_miss": {
-        "pts": 15.4,
-        "name": "Isaiah Davis",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 33.1,
-        "bye": 0.1,
-        "semis": 14.57,
-        "final": 4.6,
-        "champ": 1.48
+        "playoffs": 38.75,
+        "bye": 0.93,
+        "semis": 19.62,
+        "final": 8.05,
+        "champ": 3.48,
+        "settled": false
       },
-      "luck": -1.33,
       "streak": "L2",
       "top": [
         {
@@ -84,25 +73,14 @@
       "losses": 8,
       "ties": 0,
       "pf": 921.06,
-      "ap_wins": 37,
-      "ap_losses": 35,
-      "h2h_wins": 4.0,
-      "exp_wins": 4.11,
-      "bench": 124.9,
-      "bench_week": 17.8,
-      "bench_miss": {
-        "pts": 17.8,
-        "name": "Khalil Shakir",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 72.65,
-        "bye": 0.72,
-        "semis": 34.58,
-        "final": 9.75,
-        "champ": 3.75
+        "playoffs": 64.3,
+        "bye": 4.15,
+        "semis": 33.05,
+        "final": 14.15,
+        "champ": 6.55,
+        "settled": false
       },
-      "luck": -0.11,
       "streak": "L2",
       "top": [
         {
@@ -154,25 +132,14 @@
       "losses": 9,
       "ties": 0,
       "pf": 933.34,
-      "ap_wins": 31,
-      "ap_losses": 41,
-      "h2h_wins": 3.0,
-      "exp_wins": 3.44,
-      "bench": 111.06,
-      "bench_week": 5.0,
-      "bench_miss": {
-        "pts": 27.28,
-        "name": "Drake Maye",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 59.77,
-        "bye": 0.28,
-        "semis": 27.62,
-        "final": 9.22,
-        "champ": 2.83
+        "playoffs": 55.6,
+        "bye": 2.48,
+        "semis": 29.77,
+        "final": 12.25,
+        "champ": 5.97,
+        "settled": false
       },
-      "luck": -0.44,
       "streak": "L1",
       "top": [
         {
@@ -224,21 +191,14 @@
       "losses": 10,
       "ties": 0,
       "pf": 881.46,
-      "ap_wins": 30,
-      "ap_losses": 42,
-      "h2h_wins": 3.0,
-      "exp_wins": 3.33,
-      "bench": 116.5,
-      "bench_week": 0,
-      "bench_miss": null,
       "odds": {
-        "playoffs": 27.57,
-        "bye": 0.03,
-        "semis": 11.05,
-        "final": 2.8,
-        "champ": 0.68
+        "playoffs": 34.98,
+        "bye": 0.45,
+        "semis": 17.68,
+        "final": 8.12,
+        "champ": 3.02,
+        "settled": false
       },
-      "luck": -0.33,
       "streak": "L1",
       "top": [
         {
@@ -290,25 +250,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 1051.02,
-      "ap_wins": 50,
-      "ap_losses": 22,
-      "h2h_wins": 6.0,
-      "exp_wins": 5.56,
-      "bench": 118.14,
-      "bench_week": 0.4,
-      "bench_miss": {
-        "pts": 5.8,
-        "name": "Tony Pollard",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 100.0,
-        "bye": 66.85,
-        "semis": 88.3,
-        "final": 51.15,
-        "champ": 22.7
+        "playoffs": 99.15,
+        "bye": 59.35,
+        "semis": 78.9,
+        "final": 42.9,
+        "champ": 20.25,
+        "settled": false
       },
-      "luck": 0.44,
       "streak": "W3",
       "top": [
         {
@@ -360,25 +309,14 @@
       "losses": 10,
       "ties": 0,
       "pf": 914.76,
-      "ap_wins": 29,
-      "ap_losses": 43,
-      "h2h_wins": 4.0,
-      "exp_wins": 3.22,
-      "bench": 96.98,
-      "bench_week": 20.9,
-      "bench_miss": {
-        "pts": 23.6,
-        "name": "RJ Harvey",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 35.35,
-        "bye": 0.03,
-        "semis": 15.5,
-        "final": 4.47,
-        "champ": 1.6
+        "playoffs": 40.17,
+        "bye": 0.68,
+        "semis": 20.8,
+        "final": 8.97,
+        "champ": 4.33,
+        "settled": false
       },
-      "luck": 0.78,
       "streak": "L3",
       "top": [
         {
@@ -430,25 +368,14 @@
       "losses": 9,
       "ties": 0,
       "pf": 952.94,
-      "ap_wins": 35,
-      "ap_losses": 37,
-      "h2h_wins": 3.0,
-      "exp_wins": 3.89,
-      "bench": 143.28,
-      "bench_week": 9.92,
-      "bench_miss": {
-        "pts": 28.3,
-        "name": "Jordan Love",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 68.72,
-        "bye": 0.35,
-        "semis": 34.92,
-        "final": 11.3,
-        "champ": 4.42
+        "playoffs": 59.8,
+        "bye": 2.55,
+        "semis": 32.52,
+        "final": 13.9,
+        "champ": 7.2,
+        "settled": false
       },
-      "luck": -0.89,
       "streak": "W2",
       "top": [
         {
@@ -500,25 +427,14 @@
       "losses": 12,
       "ties": 0,
       "pf": 844.14,
-      "ap_wins": 21,
-      "ap_losses": 51,
-      "h2h_wins": 3.0,
-      "exp_wins": 2.33,
-      "bench": 149.2,
-      "bench_week": 12.5,
-      "bench_miss": {
-        "pts": 15.0,
-        "name": "Kayshon Boutte",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 3.2,
-        "bye": 0.0,
-        "semis": 1.07,
-        "final": 0.25,
-        "champ": 0.07
+        "playoffs": 10.03,
+        "bye": 0.07,
+        "semis": 5.2,
+        "final": 2.25,
+        "champ": 1.07,
+        "settled": false
       },
-      "luck": 0.67,
       "streak": "W1",
       "top": [
         {
@@ -570,25 +486,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 1165.98,
-      "ap_wins": 55,
-      "ap_losses": 17,
-      "h2h_wins": 6.0,
-      "exp_wins": 6.11,
-      "bench": 119.76,
-      "bench_week": 0.6,
-      "bench_miss": {
-        "pts": 10.6,
-        "name": "Zay Flowers",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 100.0,
-        "bye": 92.7,
-        "semis": 98.28,
-        "final": 72.47,
-        "champ": 49.75
+        "playoffs": 99.8,
+        "bye": 82.92,
+        "semis": 92.35,
+        "final": 56.65,
+        "champ": 33.92,
+        "settled": false
       },
-      "luck": -0.11,
       "streak": "W4",
       "top": [
         {
@@ -640,25 +545,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 984.7,
-      "ap_wins": 42,
-      "ap_losses": 30,
-      "h2h_wins": 6.0,
-      "exp_wins": 4.67,
-      "bench": 146.86,
-      "bench_week": 3.8,
-      "bench_miss": {
-        "pts": 7.2,
-        "name": "Elic Ayomanor",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 99.62,
-        "bye": 38.95,
-        "semis": 74.1,
-        "final": 33.98,
-        "champ": 12.72
+        "playoffs": 97.42,
+        "bye": 46.42,
+        "semis": 70.1,
+        "final": 32.75,
+        "champ": 14.2,
+        "settled": false
       },
-      "luck": 1.33,
       "streak": "W1",
       "top": [
         {

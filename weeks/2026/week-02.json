@@ -14,25 +14,14 @@
       "losses": 3,
       "ties": 0,
       "pf": 220.54,
-      "ap_wins": 7,
-      "ap_losses": 15,
-      "h2h_wins": 1.0,
-      "exp_wins": 0.64,
-      "bench": 51.18,
-      "bench_week": 28.3,
-      "bench_miss": {
-        "pts": 18.0,
-        "name": "Denzel Boston",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 26.0,
-        "bye": 1.23,
-        "semis": 12.0,
-        "final": 4.6,
-        "champ": 1.48
+        "playoffs": 38.7,
+        "bye": 8.03,
+        "semis": 23.65,
+        "final": 11.8,
+        "champ": 5.97,
+        "settled": false
       },
-      "luck": 0.36,
       "streak": "L1",
       "top": [
         {
@@ -84,25 +73,14 @@
       "losses": 1,
       "ties": 0,
       "pf": 218.64,
-      "ap_wins": 10,
-      "ap_losses": 12,
-      "h2h_wins": 2.0,
-      "exp_wins": 0.91,
-      "bench": 6.3,
-      "bench_week": 6.3,
-      "bench_miss": {
-        "pts": 11.0,
-        "name": "Xavier Worthy",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 45.45,
-        "bye": 4.55,
-        "semis": 21.98,
-        "final": 7.72,
-        "champ": 2.85
+        "playoffs": 50.23,
+        "bye": 13.97,
+        "semis": 30.35,
+        "final": 14.03,
+        "champ": 6.45,
+        "settled": false
       },
-      "luck": 1.09,
       "streak": "W2",
       "top": [
         {
@@ -154,25 +132,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 206.08,
-      "ap_wins": 4,
-      "ap_losses": 18,
-      "h2h_wins": 0.0,
-      "exp_wins": 0.36,
-      "bench": 11.2,
-      "bench_week": 10.2,
-      "bench_miss": {
-        "pts": 13.3,
-        "name": "Jonah Coleman",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 9.68,
-        "bye": 0.17,
-        "semis": 3.65,
-        "final": 1.07,
-        "champ": 0.47
+        "playoffs": 26.32,
+        "bye": 3.95,
+        "semis": 15.05,
+        "final": 6.7,
+        "champ": 3.27,
+        "settled": false
       },
-      "luck": -0.36,
       "streak": "L2",
       "top": [
         {
@@ -224,25 +191,14 @@
       "losses": 1,
       "ties": 0,
       "pf": 263.44,
-      "ap_wins": 16,
-      "ap_losses": 6,
-      "h2h_wins": 1.0,
-      "exp_wins": 1.45,
-      "bench": 12.1,
-      "bench_week": 6.3,
-      "bench_miss": {
-        "pts": 10.8,
-        "name": "Tank Bigsby",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 86.83,
-        "bye": 28.2,
-        "semis": 60.83,
-        "final": 30.43,
-        "champ": 13.75
+        "playoffs": 67.72,
+        "bye": 25.93,
+        "semis": 48.4,
+        "final": 24.85,
+        "champ": 12.68,
+        "settled": false
       },
-      "luck": -0.45,
       "streak": "W1",
       "top": [
         {
@@ -294,25 +250,14 @@
       "losses": 0,
       "ties": 0,
       "pf": 313.98,
-      "ap_wins": 22,
-      "ap_losses": 0,
-      "h2h_wins": 2.0,
-      "exp_wins": 2.0,
-      "bench": 40.7,
-      "bench_week": 11.2,
-      "bench_miss": {
-        "pts": 11.3,
-        "name": "Rachaad White",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 99.53,
-        "bye": 86.65,
-        "semis": 95.7,
-        "final": 62.38,
-        "champ": 40.15
+        "playoffs": 87.05,
+        "bye": 50.67,
+        "semis": 69.92,
+        "final": 37.35,
+        "champ": 19.88,
+        "settled": false
       },
-      "luck": 0.0,
       "streak": "W2",
       "top": [
         {
@@ -364,25 +309,14 @@
       "losses": 1,
       "ties": 0,
       "pf": 248.18,
-      "ap_wins": 13,
-      "ap_losses": 9,
-      "h2h_wins": 1.0,
-      "exp_wins": 1.18,
-      "bench": 9.5,
-      "bench_week": 9.5,
-      "bench_miss": {
-        "pts": 14.4,
-        "name": "Terrance Ferguson",
-        "pos": "TE"
-      },
       "odds": {
-        "playoffs": 77.85,
-        "bye": 15.7,
-        "semis": 46.98,
-        "final": 20.95,
-        "champ": 8.75
+        "playoffs": 62.62,
+        "bye": 19.32,
+        "semis": 40.67,
+        "final": 20.35,
+        "champ": 9.9,
+        "settled": false
       },
-      "luck": -0.18,
       "streak": "W1",
       "top": [
         {
@@ -434,21 +368,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 185.34,
-      "ap_wins": 4,
-      "ap_losses": 18,
-      "h2h_wins": 0.0,
-      "exp_wins": 0.36,
-      "bench": 9.1,
-      "bench_week": 0.0,
-      "bench_miss": null,
       "odds": {
-        "playoffs": 3.42,
-        "bye": 0.03,
-        "semis": 1.1,
-        "final": 0.38,
-        "champ": 0.1
+        "playoffs": 19.98,
+        "bye": 2.65,
+        "semis": 11.18,
+        "final": 5.28,
+        "champ": 2.52,
+        "settled": false
       },
-      "luck": -0.36,
       "streak": "L2",
       "top": [
         {
@@ -500,25 +427,14 @@
       "losses": 3,
       "ties": 0,
       "pf": 223.56,
-      "ap_wins": 9,
-      "ap_losses": 13,
-      "h2h_wins": 0.0,
-      "exp_wins": 0.82,
-      "bench": 24.4,
-      "bench_week": 8.5,
-      "bench_miss": {
-        "pts": 10.0,
-        "name": "Pittsburgh Steelers D/ST",
-        "pos": "DEF"
-      },
       "odds": {
-        "playoffs": 28.3,
-        "bye": 1.75,
-        "semis": 13.32,
-        "final": 4.58,
-        "champ": 1.85
+        "playoffs": 39.83,
+        "bye": 8.2,
+        "semis": 24.25,
+        "final": 11.47,
+        "champ": 5.75,
+        "settled": false
       },
-      "luck": -0.82,
       "streak": "L2",
       "top": [
         {
@@ -570,25 +486,14 @@
       "losses": 2,
       "ties": 0,
       "pf": 212.3,
-      "ap_wins": 9,
-      "ap_losses": 13,
-      "h2h_wins": 1.0,
-      "exp_wins": 0.82,
-      "bench": 20.78,
-      "bench_week": 18.08,
-      "bench_miss": {
-        "pts": 12.48,
-        "name": "Malik Willis",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 26.82,
-        "bye": 1.48,
-        "semis": 11.68,
-        "final": 4.15,
-        "champ": 1.4
+        "playoffs": 40.35,
+        "bye": 9.15,
+        "semis": 24.4,
+        "final": 11.75,
+        "champ": 5.62,
+        "settled": false
       },
-      "luck": 0.18,
       "streak": "L1",
       "top": [
         {
@@ -640,25 +545,14 @@
       "losses": 0,
       "ties": 0,
       "pf": 251.98,
-      "ap_wins": 15,
-      "ap_losses": 7,
-      "h2h_wins": 2.0,
-      "exp_wins": 1.36,
-      "bench": 35.26,
-      "bench_week": 26.66,
-      "bench_miss": {
-        "pts": 22.38,
-        "name": "Tyler Shough",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 87.12,
-        "bye": 27.75,
-        "semis": 59.4,
-        "final": 26.35,
-        "champ": 11.15
+        "playoffs": 67.95,
+        "bye": 27.38,
+        "semis": 46.25,
+        "final": 24.07,
+        "champ": 11.57,
+        "settled": false
       },
-      "luck": 0.64,
       "streak": "W2",
       "top": [
         {
@@ -710,25 +604,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 220.96,
-      "ap_wins": 9,
-      "ap_losses": 13,
-      "h2h_wins": 0.0,
-      "exp_wins": 0.82,
-      "bench": 47.5,
-      "bench_week": 35.2,
-      "bench_miss": {
-        "pts": 20.0,
-        "name": "Dalton Schultz",
-        "pos": "TE"
-      },
       "odds": {
-        "playoffs": 19.85,
-        "bye": 0.88,
-        "semis": 9.1,
-        "final": 3.48,
-        "champ": 1.45
+        "playoffs": 31.35,
+        "bye": 4.95,
+        "semis": 18.7,
+        "final": 8.8,
+        "champ": 4.5,
+        "settled": false
       },
-      "luck": -0.82,
       "streak": "L2",
       "top": [
         {
@@ -780,25 +663,14 @@
       "losses": 1,
       "ties": 0,
       "pf": 268.3,
-      "ap_wins": 14,
-      "ap_losses": 8,
-      "h2h_wins": 2.0,
-      "exp_wins": 1.27,
-      "bench": 14.8,
-      "bench_week": 4.5,
-      "bench_miss": {
-        "pts": 4.4,
-        "name": "T.J. Hockenson",
-        "pos": "TE"
-      },
       "odds": {
-        "playoffs": 89.15,
-        "bye": 31.62,
-        "semis": 64.28,
-        "final": 33.92,
-        "champ": 16.6
+        "playoffs": 67.9,
+        "bye": 25.8,
+        "semis": 47.17,
+        "final": 23.55,
+        "champ": 11.88,
+        "settled": false
       },
-      "luck": 0.73,
       "streak": "W2",
       "top": [
         {

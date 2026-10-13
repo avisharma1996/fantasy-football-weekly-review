@@ -14,25 +14,14 @@
       "losses": 10,
       "ties": 0,
       "pf": 1034.94,
-      "ap_wins": 37,
-      "ap_losses": 44,
-      "h2h_wins": 3.0,
-      "exp_wins": 4.11,
-      "bench": 109.4,
-      "bench_week": 13.1,
-      "bench_miss": {
-        "pts": 18.8,
-        "name": "Tory Horton",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 53.85,
-        "bye": 0.15,
-        "semis": 24.48,
-        "final": 8.07,
-        "champ": 2.52
+        "playoffs": 51.65,
+        "bye": 1.35,
+        "semis": 26.1,
+        "final": 11.5,
+        "champ": 4.92,
+        "settled": false
       },
-      "luck": -1.11,
       "streak": "W1",
       "top": [
         {
@@ -84,25 +73,14 @@
       "losses": 8,
       "ties": 0,
       "pf": 1052.66,
-      "ap_wins": 43,
-      "ap_losses": 38,
-      "h2h_wins": 5.0,
-      "exp_wins": 4.78,
-      "bench": 133.1,
-      "bench_week": 8.2,
-      "bench_miss": {
-        "pts": 13.3,
-        "name": "Quentin Johnston",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 88.62,
-        "bye": 2.77,
-        "semis": 46.65,
-        "final": 15.47,
-        "champ": 5.33
+        "playoffs": 80.12,
+        "bye": 8.9,
+        "semis": 42.42,
+        "final": 18.07,
+        "champ": 8.0,
+        "settled": false
       },
-      "luck": 0.22,
       "streak": "W1",
       "top": [
         {
@@ -154,25 +132,14 @@
       "losses": 11,
       "ties": 0,
       "pf": 1017.0,
-      "ap_wins": 31,
-      "ap_losses": 50,
-      "h2h_wins": 3.0,
-      "exp_wins": 3.44,
-      "bench": 114.92,
-      "bench_week": 3.86,
-      "bench_miss": {
-        "pts": 19.52,
-        "name": "Bo Nix",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 29.55,
-        "bye": 0.0,
-        "semis": 12.32,
-        "final": 3.8,
-        "champ": 1.23
+        "playoffs": 35.4,
+        "bye": 0.23,
+        "semis": 18.55,
+        "final": 8.4,
+        "champ": 4.03,
+        "settled": false
       },
-      "luck": -0.44,
       "streak": "L2",
       "top": [
         {
@@ -224,25 +191,14 @@
       "losses": 10,
       "ties": 0,
       "pf": 1020.04,
-      "ap_wins": 38,
-      "ap_losses": 43,
-      "h2h_wins": 4.0,
-      "exp_wins": 4.22,
-      "bench": 124.5,
-      "bench_week": 8.0,
-      "bench_miss": {
-        "pts": 7.0,
-        "name": "Houston Texans D/ST",
-        "pos": "DEF"
-      },
       "odds": {
-        "playoffs": 51.92,
-        "bye": 0.17,
-        "semis": 23.23,
-        "final": 7.4,
-        "champ": 2.73
+        "playoffs": 50.38,
+        "bye": 1.5,
+        "semis": 25.88,
+        "final": 10.28,
+        "champ": 5.1,
+        "settled": false
       },
-      "luck": -0.22,
       "streak": "W1",
       "top": [
         {
@@ -294,21 +250,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 1196.12,
-      "ap_wins": 59,
-      "ap_losses": 22,
-      "h2h_wins": 7.0,
-      "exp_wins": 6.56,
-      "bench": 118.14,
-      "bench_week": 0.0,
-      "bench_miss": null,
       "odds": {
-        "playoffs": 100.0,
-        "bye": 90.15,
-        "semis": 96.45,
-        "final": 61.12,
-        "champ": 29.95
+        "playoffs": 99.9,
+        "bye": 81.12,
+        "semis": 90.12,
+        "final": 49.7,
+        "champ": 24.48,
+        "settled": false
       },
-      "luck": 0.44,
       "streak": "W4",
       "top": [
         {
@@ -360,25 +309,14 @@
       "losses": 12,
       "ties": 0,
       "pf": 1037.56,
-      "ap_wins": 33,
-      "ap_losses": 48,
-      "h2h_wins": 4.0,
-      "exp_wins": 3.67,
-      "bench": 101.78,
-      "bench_week": 4.8,
-      "bench_miss": {
-        "pts": 14.1,
-        "name": "RJ Harvey",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 21.52,
-        "bye": 0.0,
-        "semis": 9.65,
-        "final": 2.9,
-        "champ": 0.82
+        "playoffs": 27.73,
+        "bye": 0.17,
+        "semis": 15.4,
+        "final": 7.1,
+        "champ": 3.52,
+        "settled": false
       },
-      "luck": 0.33,
       "streak": "L4",
       "top": [
         {
@@ -430,25 +368,14 @@
       "losses": 11,
       "ties": 0,
       "pf": 1066.14,
-      "ap_wins": 38,
-      "ap_losses": 43,
-      "h2h_wins": 3.0,
-      "exp_wins": 4.22,
-      "bench": 184.58,
-      "bench_week": 41.3,
-      "bench_miss": {
-        "pts": 34.3,
-        "name": "Drake London",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 48.85,
-        "bye": 0.1,
-        "semis": 24.48,
-        "final": 8.8,
-        "champ": 3.9
+        "playoffs": 45.42,
+        "bye": 1.07,
+        "semis": 25.12,
+        "final": 11.32,
+        "champ": 6.0,
+        "settled": false
       },
-      "luck": -1.22,
       "streak": "L1",
       "top": [
         {
@@ -500,25 +427,14 @@
       "losses": 12,
       "ties": 0,
       "pf": 968.8,
-      "ap_wins": 26,
-      "ap_losses": 55,
-      "h2h_wins": 4.0,
-      "exp_wins": 2.89,
-      "bench": 151.1,
-      "bench_week": 1.9,
-      "bench_miss": {
-        "pts": 4.6,
-        "name": "Jacory Croskey-Merritt",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 6.65,
-        "bye": 0.0,
-        "semis": 2.3,
-        "final": 0.55,
-        "champ": 0.17
+        "playoffs": 14.38,
+        "bye": 0.07,
+        "semis": 8.28,
+        "final": 3.45,
+        "champ": 1.65,
+        "settled": false
       },
-      "luck": 1.11,
       "streak": "W2",
       "top": [
         {
@@ -570,25 +486,14 @@
       "losses": 6,
       "ties": 0,
       "pf": 1277.22,
-      "ap_wins": 57,
-      "ap_losses": 24,
-      "h2h_wins": 6.0,
-      "exp_wins": 6.33,
-      "bench": 140.26,
-      "bench_week": 20.5,
-      "bench_miss": {
-        "pts": 19.1,
-        "name": "Dalton Kincaid",
-        "pos": "TE"
-      },
       "odds": {
-        "playoffs": 99.97,
-        "bye": 86.1,
-        "semis": 96.42,
-        "final": 67.38,
-        "champ": 42.42
+        "playoffs": 99.45,
+        "bye": 74.15,
+        "semis": 87.55,
+        "final": 52.88,
+        "champ": 30.5,
+        "settled": false
       },
-      "luck": -0.33,
       "streak": "L1",
       "top": [
         {
@@ -640,25 +545,14 @@
       "losses": 6,
       "ties": 0,
       "pf": 1094.94,
-      "ap_wins": 43,
-      "ap_losses": 38,
-      "h2h_wins": 6.0,
-      "exp_wins": 4.78,
-      "bench": 152.36,
-      "bench_week": 5.5,
-      "bench_miss": {
-        "pts": 11.0,
-        "name": "Will Reichard",
-        "pos": "K"
-      },
       "odds": {
-        "playoffs": 99.05,
-        "bye": 20.55,
-        "semis": 64.03,
-        "final": 24.5,
-        "champ": 10.93
+        "playoffs": 95.58,
+        "bye": 31.43,
+        "semis": 60.58,
+        "final": 27.3,
+        "champ": 11.8,
+        "settled": false
       },
-      "luck": 1.22,
       "streak": "L1",
       "top": [
         {

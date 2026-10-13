@@ -3,6 +3,9 @@
  "complete": true,
  "picks": [
   {
+   "kept": true,
+   "team_pts": 176.8,
+   "team_weeks": 14,
    "round": 1,
    "pick": 1,
    "roster": "10",
@@ -16,6 +19,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 40.3,
+   "team_weeks": 13,
    "round": 1,
    "pick": 2,
    "roster": "4",
@@ -29,6 +35,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 20.2,
+   "team_weeks": 2,
    "round": 1,
    "pick": 3,
    "roster": "7",
@@ -42,6 +51,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 144.7,
+   "team_weeks": 14,
    "round": 1,
    "pick": 4,
    "roster": "3",
@@ -55,6 +67,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 166.3,
+   "team_weeks": 14,
    "round": 1,
    "pick": 5,
    "roster": "1",
@@ -68,6 +83,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 197.68,
+   "team_weeks": 14,
    "round": 1,
    "pick": 6,
    "roster": "8",
@@ -81,6 +99,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 220.3,
+   "team_weeks": 14,
    "round": 1,
    "pick": 7,
    "roster": "5",
@@ -94,6 +115,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 131.6,
+   "team_weeks": 14,
    "round": 1,
    "pick": 8,
    "roster": "2",
@@ -107,6 +131,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 158.7,
+   "team_weeks": 14,
    "round": 1,
    "pick": 9,
    "roster": "9",
@@ -120,6 +147,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 135.2,
+   "team_weeks": 14,
    "round": 1,
    "pick": 10,
    "roster": "6",
@@ -133,6 +163,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 128.0,
+   "team_weeks": 14,
    "round": 2,
    "pick": 11,
    "roster": "6",
@@ -146,6 +179,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 285.5,
+   "team_weeks": 14,
    "round": 2,
    "pick": 12,
    "roster": "9",
@@ -159,6 +195,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 219.8,
+   "team_weeks": 14,
    "round": 2,
    "pick": 13,
    "roster": "2",
@@ -172,6 +211,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 270.9,
+   "team_weeks": 14,
    "round": 2,
    "pick": 14,
    "roster": "5",
@@ -185,6 +227,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 71.0,
+   "team_weeks": 13,
    "round": 2,
    "pick": 15,
    "roster": "8",
@@ -198,6 +243,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 308.62,
+   "team_weeks": 14,
    "round": 2,
    "pick": 16,
    "roster": "1",
@@ -211,6 +259,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 247.7,
+   "team_weeks": 14,
    "round": 2,
    "pick": 17,
    "roster": "3",
@@ -224,6 +275,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 214.8,
+   "team_weeks": 14,
    "round": 2,
    "pick": 18,
    "roster": "7",
@@ -237,6 +291,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 125.3,
+   "team_weeks": 14,
    "round": 2,
    "pick": 19,
    "roster": "4",
@@ -250,6 +307,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 57.2,
+   "team_weeks": 4,
    "round": 2,
    "pick": 20,
    "roster": "10",
@@ -263,6 +323,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 159.8,
+   "team_weeks": 14,
    "round": 3,
    "pick": 21,
    "roster": "10",
@@ -276,6 +339,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 118.3,
+   "team_weeks": 14,
    "round": 3,
    "pick": 22,
    "roster": "4",
@@ -289,6 +355,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 119.2,
+   "team_weeks": 14,
    "round": 3,
    "pick": 23,
    "roster": "7",
@@ -302,6 +371,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 49.9,
+   "team_weeks": 8,
    "round": 3,
    "pick": 24,
    "roster": "3",
@@ -315,6 +387,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 208.8,
+   "team_weeks": 14,
    "round": 3,
    "pick": 25,
    "roster": "1",
@@ -328,6 +403,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 40.9,
+   "team_weeks": 14,
    "round": 3,
    "pick": 26,
    "roster": "8",
@@ -341,6 +419,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 38.2,
+   "team_weeks": 2,
    "round": 3,
    "pick": 27,
    "roster": "5",
@@ -354,6 +435,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 30.2,
+   "team_weeks": 2,
    "round": 3,
    "pick": 28,
    "roster": "2",
@@ -367,6 +451,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 122.5,
+   "team_weeks": 14,
    "round": 3,
    "pick": 29,
    "roster": "9",
@@ -380,6 +467,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 134.2,
+   "team_weeks": 14,
    "round": 3,
    "pick": 30,
    "roster": "6",
@@ -393,6 +483,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 113.6,
+   "team_weeks": 14,
    "round": 4,
    "pick": 31,
    "roster": "6",
@@ -406,6 +499,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 287.48,
+   "team_weeks": 14,
    "round": 4,
    "pick": 32,
    "roster": "9",
@@ -419,6 +515,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 178.7,
+   "team_weeks": 14,
    "round": 4,
    "pick": 33,
    "roster": "2",
@@ -432,6 +531,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 60.7,
+   "team_weeks": 14,
    "round": 4,
    "pick": 34,
    "roster": "5",
@@ -445,6 +547,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 324.4,
+   "team_weeks": 14,
    "round": 4,
    "pick": 35,
    "roster": "8",
@@ -458,6 +563,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 92.5,
+   "team_weeks": 14,
    "round": 4,
    "pick": 36,
    "roster": "1",
@@ -471,6 +579,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 98.42,
+   "team_weeks": 9,
    "round": 4,
    "pick": 37,
    "roster": "3",
@@ -484,6 +595,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 216.3,
+   "team_weeks": 14,
    "round": 4,
    "pick": 38,
    "roster": "7",
@@ -497,6 +611,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 140.8,
+   "team_weeks": 14,
    "round": 4,
    "pick": 39,
    "roster": "4",
@@ -510,6 +627,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 39.9,
+   "team_weeks": 6,
    "round": 4,
    "pick": 40,
    "roster": "10",
@@ -523,6 +643,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 145.64,
+   "team_weeks": 10,
    "round": 5,
    "pick": 41,
    "roster": "10",
@@ -536,6 +659,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 76.4,
+   "team_weeks": 5,
    "round": 5,
    "pick": 42,
    "roster": "4",
@@ -549,6 +675,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 61.02,
+   "team_weeks": 7,
    "round": 5,
    "pick": 43,
    "roster": "7",
@@ -562,6 +691,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 148.3,
+   "team_weeks": 14,
    "round": 5,
    "pick": 44,
    "roster": "3",
@@ -575,6 +707,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 90.0,
+   "team_weeks": 13,
    "round": 5,
    "pick": 45,
    "roster": "1",
@@ -588,6 +723,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 122.2,
+   "team_weeks": 14,
    "round": 5,
    "pick": 46,
    "roster": "8",
@@ -601,6 +739,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 137.3,
+   "team_weeks": 14,
    "round": 5,
    "pick": 47,
    "roster": "5",
@@ -614,6 +755,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 9.2,
+   "team_weeks": 2,
    "round": 5,
    "pick": 48,
    "roster": "2",
@@ -627,6 +771,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 112.9,
+   "team_weeks": 14,
    "round": 5,
    "pick": 49,
    "roster": "9",
@@ -640,6 +787,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 175.6,
+   "team_weeks": 14,
    "round": 5,
    "pick": 50,
    "roster": "6",
@@ -653,6 +803,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 64.6,
+   "team_weeks": 13,
    "round": 6,
    "pick": 51,
    "roster": "6",
@@ -666,6 +819,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 107.8,
+   "team_weeks": 14,
    "round": 6,
    "pick": 52,
    "roster": "9",
@@ -679,6 +835,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 142.1,
+   "team_weeks": 14,
    "round": 6,
    "pick": 53,
    "roster": "2",
@@ -692,6 +851,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 198.6,
+   "team_weeks": 14,
    "round": 6,
    "pick": 54,
    "roster": "5",
@@ -705,6 +867,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 32.0,
+   "team_weeks": 4,
    "round": 6,
    "pick": 55,
    "roster": "8",
@@ -718,6 +883,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 168.0,
+   "team_weeks": 14,
    "round": 6,
    "pick": 56,
    "roster": "1",
@@ -731,6 +899,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 86.8,
+   "team_weeks": 14,
    "round": 6,
    "pick": 57,
    "roster": "3",
@@ -744,6 +915,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 8.9,
+   "team_weeks": 2,
    "round": 6,
    "pick": 58,
    "roster": "7",
@@ -757,6 +931,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 64.4,
+   "team_weeks": 8,
    "round": 6,
    "pick": 59,
    "roster": "4",
@@ -770,6 +947,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 156.0,
+   "team_weeks": 14,
    "round": 6,
    "pick": 60,
    "roster": "10",
@@ -783,6 +963,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 154.7,
+   "team_weeks": 14,
    "round": 7,
    "pick": 61,
    "roster": "10",
@@ -796,6 +979,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 65.0,
+   "team_weeks": 4,
    "round": 7,
    "pick": 62,
    "roster": "4",
@@ -809,6 +995,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 59.5,
+   "team_weeks": 4,
    "round": 7,
    "pick": 63,
    "roster": "7",
@@ -822,6 +1011,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 100.6,
+   "team_weeks": 14,
    "round": 7,
    "pick": 64,
    "roster": "3",
@@ -835,6 +1027,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 3.6,
+   "team_weeks": 1,
    "round": 7,
    "pick": 65,
    "roster": "1",
@@ -848,6 +1043,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 110.6,
+   "team_weeks": 14,
    "round": 7,
    "pick": 66,
    "roster": "8",
@@ -861,6 +1059,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 230.88,
+   "team_weeks": 14,
    "round": 7,
    "pick": 67,
    "roster": "5",
@@ -874,6 +1075,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 94.9,
+   "team_weeks": 8,
    "round": 7,
    "pick": 68,
    "roster": "2",
@@ -887,6 +1091,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 172.3,
+   "team_weeks": 14,
    "round": 7,
    "pick": 69,
    "roster": "9",
@@ -900,6 +1107,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 63.7,
+   "team_weeks": 4,
    "round": 7,
    "pick": 70,
    "roster": "6",
@@ -913,6 +1123,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 22.8,
+   "team_weeks": 2,
    "round": 8,
    "pick": 71,
    "roster": "6",
@@ -926,6 +1139,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 2.9,
+   "team_weeks": 4,
    "round": 8,
    "pick": 72,
    "roster": "9",
@@ -939,6 +1155,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 1.0,
+   "team_weeks": 1,
    "round": 8,
    "pick": 73,
    "roster": "2",
@@ -952,6 +1171,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 52.9,
+   "team_weeks": 5,
    "round": 8,
    "pick": 74,
    "roster": "5",
@@ -965,6 +1187,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 64.5,
+   "team_weeks": 7,
    "round": 8,
    "pick": 75,
    "roster": "8",
@@ -978,6 +1203,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 10.5,
+   "team_weeks": 1,
    "round": 8,
    "pick": 76,
    "roster": "1",
@@ -991,6 +1219,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 124.52,
+   "team_weeks": 13,
    "round": 8,
    "pick": 77,
    "roster": "3",
@@ -1004,6 +1235,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 8,
    "pick": 78,
    "roster": "7",
@@ -1017,6 +1251,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 59.8,
+   "team_weeks": 5,
    "round": 8,
    "pick": 79,
    "roster": "4",
@@ -1030,6 +1267,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 6.5,
+   "team_weeks": 1,
    "round": 8,
    "pick": 80,
    "roster": "10",
@@ -1043,6 +1283,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 162.2,
+   "team_weeks": 14,
    "round": 9,
    "pick": 81,
    "roster": "10",
@@ -1056,6 +1299,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 58.7,
+   "team_weeks": 14,
    "round": 9,
    "pick": 82,
    "roster": "4",
@@ -1069,6 +1315,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 3.0,
+   "team_weeks": 2,
    "round": 9,
    "pick": 83,
    "roster": "7",
@@ -1082,6 +1331,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 158.5,
+   "team_weeks": 14,
    "round": 9,
    "pick": 84,
    "roster": "3",
@@ -1095,6 +1347,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 37.1,
+   "team_weeks": 5,
    "round": 9,
    "pick": 85,
    "roster": "1",
@@ -1108,6 +1363,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 41.6,
+   "team_weeks": 5,
    "round": 9,
    "pick": 86,
    "roster": "8",
@@ -1121,6 +1379,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 146.1,
+   "team_weeks": 14,
    "round": 9,
    "pick": 87,
    "roster": "5",
@@ -1134,6 +1395,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 8.06,
+   "team_weeks": 1,
    "round": 9,
    "pick": 88,
    "roster": "2",
@@ -1147,6 +1411,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 2.9,
+   "team_weeks": 1,
    "round": 9,
    "pick": 89,
    "roster": "9",
@@ -1160,6 +1427,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 10,
    "round": 9,
    "pick": 90,
    "roster": "6",
@@ -1173,6 +1443,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 17.4,
+   "team_weeks": 2,
    "round": 10,
    "pick": 91,
    "roster": "6",
@@ -1186,6 +1459,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 6.4,
+   "team_weeks": 1,
    "round": 10,
    "pick": 92,
    "roster": "9",
@@ -1199,6 +1475,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 105.2,
+   "team_weeks": 14,
    "round": 10,
    "pick": 93,
    "roster": "2",
@@ -1212,6 +1491,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 15.9,
+   "team_weeks": 3,
    "round": 10,
    "pick": 94,
    "roster": "5",
@@ -1225,6 +1507,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 8.8,
+   "team_weeks": 2,
    "round": 10,
    "pick": 95,
    "roster": "8",
@@ -1238,6 +1523,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 10,
    "pick": 96,
    "roster": "1",
@@ -1251,6 +1539,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 47.38,
+   "team_weeks": 4,
    "round": 10,
    "pick": 97,
    "roster": "3",
@@ -1264,6 +1555,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 5.9,
+   "team_weeks": 2,
    "round": 10,
    "pick": 98,
    "roster": "7",
@@ -1277,6 +1571,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 5.0,
+   "team_weeks": 1,
    "round": 10,
    "pick": 99,
    "roster": "4",
@@ -1290,6 +1587,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 47.0,
+   "team_weeks": 7,
    "round": 10,
    "pick": 100,
    "roster": "10",
@@ -1303,6 +1603,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 2.7,
+   "team_weeks": 2,
    "round": 11,
    "pick": 101,
    "roster": "10",
@@ -1316,6 +1619,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 161.7,
+   "team_weeks": 14,
    "round": 11,
    "pick": 102,
    "roster": "4",
@@ -1329,6 +1635,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 7.2,
+   "team_weeks": 1,
    "round": 11,
    "pick": 103,
    "roster": "7",
@@ -1342,6 +1651,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 96.0,
+   "team_weeks": 14,
    "round": 11,
    "pick": 104,
    "roster": "3",
@@ -1355,6 +1667,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 89.0,
+   "team_weeks": 11,
    "round": 11,
    "pick": 105,
    "roster": "1",
@@ -1368,6 +1683,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 2,
    "round": 11,
    "pick": 106,
    "roster": "8",
@@ -1381,6 +1699,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 155.1,
+   "team_weeks": 14,
    "round": 11,
    "pick": 107,
    "roster": "5",
@@ -1394,6 +1715,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 79.0,
+   "team_weeks": 10,
    "round": 11,
    "pick": 108,
    "roster": "2",
@@ -1407,6 +1731,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 10.1,
+   "team_weeks": 3,
    "round": 11,
    "pick": 109,
    "roster": "9",
@@ -1420,6 +1747,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 18.0,
+   "team_weeks": 3,
    "round": 11,
    "pick": 110,
    "roster": "6",
@@ -1433,6 +1763,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 2.3,
+   "team_weeks": 1,
    "round": 12,
    "pick": 111,
    "roster": "6",
@@ -1446,6 +1779,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 23.0,
+   "team_weeks": 4,
    "round": 12,
    "pick": 112,
    "roster": "9",
@@ -1459,6 +1795,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 18.0,
+   "team_weeks": 2,
    "round": 12,
    "pick": 113,
    "roster": "2",
@@ -1472,6 +1811,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 137.0,
+   "team_weeks": 14,
    "round": 12,
    "pick": 114,
    "roster": "5",
@@ -1485,6 +1827,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 21.0,
+   "team_weeks": 3,
    "round": 12,
    "pick": 115,
    "roster": "8",
@@ -1498,6 +1843,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 1,
    "round": 12,
    "pick": 116,
    "roster": "1",
@@ -1511,6 +1859,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 75.1,
+   "team_weeks": 14,
    "round": 12,
    "pick": 117,
    "roster": "3",
@@ -1524,6 +1875,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 12,
    "pick": 118,
    "roster": "7",
@@ -1537,6 +1891,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 3.7,
+   "team_weeks": 1,
    "round": 12,
    "pick": 119,
    "roster": "4",
@@ -1550,6 +1907,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 22.36,
+   "team_weeks": 2,
    "round": 12,
    "pick": 120,
    "roster": "10",
@@ -1563,6 +1923,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 52.0,
+   "team_weeks": 7,
    "round": 13,
    "pick": 121,
    "roster": "10",
@@ -1576,6 +1939,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 142.0,
+   "team_weeks": 14,
    "round": 13,
    "pick": 122,
    "roster": "4",
@@ -1589,6 +1955,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 13,
    "pick": 123,
    "roster": "7",
@@ -1602,6 +1971,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 13,
    "pick": 124,
    "roster": "3",
@@ -1615,6 +1987,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 13,
    "pick": 125,
    "roster": "1",
@@ -1628,6 +2003,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 10.0,
+   "team_weeks": 1,
    "round": 13,
    "pick": 126,
    "roster": "8",
@@ -1641,6 +2019,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 28.3,
+   "team_weeks": 4,
    "round": 13,
    "pick": 127,
    "roster": "5",
@@ -1654,6 +2035,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 16.1,
+   "team_weeks": 2,
    "round": 13,
    "pick": 128,
    "roster": "2",
@@ -1667,6 +2051,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 78.0,
+   "team_weeks": 9,
    "round": 13,
    "pick": 129,
    "roster": "9",
@@ -1680,6 +2067,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 267.76,
+   "team_weeks": 14,
    "round": 13,
    "pick": 130,
    "roster": "6",
@@ -1693,6 +2083,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 14,
    "pick": 131,
    "roster": "6",
@@ -1706,6 +2099,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 14,
    "pick": 132,
    "roster": "9",
@@ -1719,6 +2115,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 2,
    "round": 14,
    "pick": 133,
    "roster": "2",
@@ -1732,6 +2131,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 14,
    "pick": 134,
    "roster": "5",
@@ -1745,6 +2147,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 3.1,
+   "team_weeks": 1,
    "round": 14,
    "pick": 135,
    "roster": "8",
@@ -1758,6 +2163,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 14,
    "pick": 136,
    "roster": "1",
@@ -1771,6 +2179,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 37.9,
+   "team_weeks": 4,
    "round": 14,
    "pick": 137,
    "roster": "3",
@@ -1784,6 +2195,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 36.0,
+   "team_weeks": 3,
    "round": 14,
    "pick": 138,
    "roster": "7",
@@ -1797,6 +2211,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 5.5,
+   "team_weeks": 2,
    "round": 14,
    "pick": 139,
    "roster": "4",
@@ -1810,6 +2227,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 2.5,
+   "team_weeks": 1,
    "round": 14,
    "pick": 140,
    "roster": "10",
@@ -1823,6 +2243,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 1.4,
+   "team_weeks": 1,
    "round": 15,
    "pick": 141,
    "roster": "10",
@@ -1836,6 +2259,9 @@
    "keeper": false
   },
   {
+   "kept": true,
+   "team_pts": 145.0,
+   "team_weeks": 14,
    "round": 15,
    "pick": 142,
    "roster": "4",
@@ -1849,6 +2275,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 15,
    "pick": 143,
    "roster": "7",
@@ -1862,6 +2291,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 30.0,
+   "team_weeks": 4,
    "round": 15,
    "pick": 144,
    "roster": "3",
@@ -1875,6 +2307,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 2.4,
+   "team_weeks": 2,
    "round": 15,
    "pick": 145,
    "roster": "1",
@@ -1888,6 +2323,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 15,
    "pick": 146,
    "roster": "8",
@@ -1901,6 +2339,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 15,
    "pick": 147,
    "roster": "5",
@@ -1914,6 +2355,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.7,
+   "team_weeks": 1,
    "round": 15,
    "pick": 148,
    "roster": "2",
@@ -1927,6 +2371,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 11.28,
+   "team_weeks": 1,
    "round": 15,
    "pick": 149,
    "roster": "9",
@@ -1940,6 +2387,9 @@
    "keeper": false
   },
   {
+   "kept": false,
+   "team_pts": 0.0,
+   "team_weeks": 0,
    "round": 15,
    "pick": 150,
    "roster": "6",

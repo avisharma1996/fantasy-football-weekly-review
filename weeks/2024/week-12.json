@@ -14,25 +14,14 @@
       "losses": 11,
       "ties": 0,
       "pf": 1458.8,
-      "ap_wins": 64,
-      "ap_losses": 44,
-      "h2h_wins": 5.0,
-      "exp_wins": 7.11,
-      "bench": 188.7,
-      "bench_week": 9.3,
-      "bench_miss": {
-        "pts": 12.6,
-        "name": "Michael Pittman",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 99.72,
-        "bye": 5.62,
-        "semis": 56.6,
-        "final": 22.93,
-        "champ": 10.4
+        "playoffs": 99.33,
+        "bye": 6.2,
+        "semis": 57.25,
+        "final": 25.55,
+        "champ": 12.25,
+        "settled": false
       },
-      "luck": -2.11,
       "streak": "W1",
       "top": [
         {
@@ -84,25 +73,14 @@
       "losses": 16,
       "ties": 0,
       "pf": 1387.06,
-      "ap_wins": 49,
-      "ap_losses": 59,
-      "h2h_wins": 3.0,
-      "exp_wins": 5.44,
-      "bench": 144.68,
-      "bench_week": 12.9,
-      "bench_miss": {
-        "pts": 17.1,
-        "name": "Jakobi Meyers",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 7.88,
+        "playoffs": 8.82,
         "bye": 0.0,
-        "semis": 3.98,
-        "final": 1.77,
-        "champ": 0.75
+        "semis": 4.7,
+        "final": 2.48,
+        "champ": 1.15,
+        "settled": false
       },
-      "luck": -2.44,
       "streak": "W2",
       "top": [
         {
@@ -154,25 +132,14 @@
       "losses": 14,
       "ties": 0,
       "pf": 1331.16,
-      "ap_wins": 37,
-      "ap_losses": 71,
-      "h2h_wins": 7.0,
-      "exp_wins": 4.11,
-      "bench": 163.1,
-      "bench_week": 12.1,
-      "bench_miss": {
-        "pts": 13.9,
-        "name": "Jaylen Warren",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 21.3,
+        "playoffs": 24.6,
         "bye": 0.0,
-        "semis": 8.72,
-        "final": 3.77,
-        "champ": 1.23
+        "semis": 12.3,
+        "final": 5.7,
+        "champ": 2.67,
+        "settled": false
       },
-      "luck": 2.89,
       "streak": "L4",
       "top": [
         {
@@ -224,25 +191,14 @@
       "losses": 16,
       "ties": 0,
       "pf": 1297.74,
-      "ap_wins": 39,
-      "ap_losses": 69,
-      "h2h_wins": 4.0,
-      "exp_wins": 4.33,
-      "bench": 147.2,
-      "bench_week": 28.6,
-      "bench_miss": {
-        "pts": 23.4,
-        "name": "DJ Moore",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 2.85,
+        "playoffs": 3.77,
         "bye": 0.0,
-        "semis": 1.07,
-        "final": 0.3,
-        "champ": 0.07
+        "semis": 1.88,
+        "final": 0.95,
+        "champ": 0.47,
+        "settled": false
       },
-      "luck": -0.33,
       "streak": "W2",
       "top": [
         {
@@ -294,25 +250,14 @@
       "losses": 6,
       "ties": 0,
       "pf": 1660.3,
-      "ap_wins": 81,
-      "ap_losses": 27,
-      "h2h_wins": 8.0,
-      "exp_wins": 9.0,
-      "bench": 195.82,
-      "bench_week": 5.0,
-      "bench_miss": {
-        "pts": 5.0,
-        "name": "Washington Commanders D/ST",
-        "pos": "DEF"
-      },
       "odds": {
         "playoffs": 100.0,
-        "bye": 100.0,
-        "semis": 100.0,
-        "final": 66.97,
-        "champ": 46.48
+        "bye": 99.7,
+        "semis": 99.85,
+        "final": 62.85,
+        "champ": 37.4,
+        "settled": false
       },
-      "luck": -1.0,
       "streak": "L1",
       "top": [
         {
@@ -364,25 +309,14 @@
       "losses": 13,
       "ties": 0,
       "pf": 1360.52,
-      "ap_wins": 48,
-      "ap_losses": 60,
-      "h2h_wins": 5.0,
-      "exp_wins": 5.33,
-      "bench": 137.3,
-      "bench_week": 25.6,
-      "bench_miss": {
-        "pts": 24.4,
-        "name": "Jaylen Waddle",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 67.15,
+        "playoffs": 62.15,
         "bye": 0.0,
-        "semis": 29.1,
-        "final": 12.88,
-        "champ": 3.95
+        "semis": 30.1,
+        "final": 14.32,
+        "champ": 6.05,
+        "settled": false
       },
-      "luck": -0.33,
       "streak": "L2",
       "top": [
         {
@@ -434,25 +368,14 @@
       "losses": 8,
       "ties": 0,
       "pf": 1434.22,
-      "ap_wins": 60,
-      "ap_losses": 48,
-      "h2h_wins": 8.0,
-      "exp_wins": 6.67,
-      "bench": 130.8,
-      "bench_week": 2.44,
-      "bench_miss": {
-        "pts": 21.1,
-        "name": "Sam Darnold",
-        "pos": "QB"
-      },
       "odds": {
         "playoffs": 100.0,
-        "bye": 53.6,
-        "semis": 78.3,
-        "final": 37.58,
-        "champ": 14.62
+        "bye": 50.05,
+        "semis": 73.33,
+        "final": 32.92,
+        "champ": 14.68,
+        "settled": false
       },
-      "luck": 1.33,
       "streak": "W1",
       "top": [
         {
@@ -504,25 +427,14 @@
       "losses": 10,
       "ties": 0,
       "pf": 1433.72,
-      "ap_wins": 57,
-      "ap_losses": 51,
-      "h2h_wins": 7.0,
-      "exp_wins": 6.33,
-      "bench": 128.0,
-      "bench_week": 16.2,
-      "bench_miss": {
-        "pts": 12.0,
-        "name": "Philadelphia Eagles D/ST",
-        "pos": "DEF"
-      },
       "odds": {
-        "playoffs": 99.97,
-        "bye": 11.57,
-        "semis": 56.23,
-        "final": 23.0,
-        "champ": 9.7
+        "playoffs": 99.8,
+        "bye": 13.22,
+        "semis": 56.2,
+        "final": 25.2,
+        "champ": 11.68,
+        "settled": false
       },
-      "luck": 0.67,
       "streak": "L1",
       "top": [
         {
@@ -574,25 +486,14 @@
       "losses": 9,
       "ties": 0,
       "pf": 1433.48,
-      "ap_wins": 62,
-      "ap_losses": 46,
-      "h2h_wins": 9.0,
-      "exp_wins": 6.89,
-      "bench": 202.58,
-      "bench_week": 13.6,
-      "bench_miss": {
-        "pts": 15.0,
-        "name": "Ameer Abdullah",
-        "pos": "RB"
-      },
       "odds": {
         "playoffs": 100.0,
-        "bye": 29.2,
-        "semis": 65.38,
-        "final": 30.43,
-        "champ": 12.72
+        "bye": 30.82,
+        "semis": 63.73,
+        "final": 29.73,
+        "champ": 13.57,
+        "settled": false
       },
-      "luck": 2.11,
       "streak": "W4",
       "top": [
         {
@@ -644,25 +545,14 @@
       "losses": 17,
       "ties": 0,
       "pf": 1353.5,
-      "ap_wins": 43,
-      "ap_losses": 65,
-      "h2h_wins": 4.0,
-      "exp_wins": 4.78,
-      "bench": 180.6,
-      "bench_week": 8.0,
-      "bench_miss": {
-        "pts": 8.0,
-        "name": "D'Andre Swift",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 1.12,
+        "playoffs": 1.52,
         "bye": 0.0,
-        "semis": 0.62,
-        "final": 0.38,
-        "champ": 0.07
+        "semis": 0.68,
+        "final": 0.3,
+        "champ": 0.07,
+        "settled": false
       },
-      "luck": -0.78,
       "streak": "L2",
       "top": [
         {

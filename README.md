@@ -6,7 +6,7 @@ A weekly power rankings site for a Sleeper league, live at https://redvinesfanta
 
 Everything except the ranking order, blurbs and pictures is pulled from Sleeper automatically.
 
-- **Weekly rankings:** record, PF, streak, all-play record, luck, bench points left, playoff and title odds, and top performers (season and week) for each team. Each week also has a playoff odds table, a rankings-over-time chart, and weekly and season awards.
+- **Weekly rankings:** record, PF, streak and top performers (season and week) for each team. Each week also has a playoff odds table, a rankings-over-time chart, and weekly awards.
 - **League pages (per season):** FAAB Tracker (budget, bid log and waiver ROI), Trade Grades and Draft Report Card.
 - **League History (all seasons):** Record Book (champions, all-time standings, records) and Head-to-Head.
 

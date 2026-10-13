@@ -14,25 +14,14 @@
       "losses": 7,
       "ties": 0,
       "pf": 706.7,
-      "ap_wins": 30,
-      "ap_losses": 24,
-      "h2h_wins": 2.0,
-      "exp_wins": 3.33,
-      "bench": 90.3,
-      "bench_week": 4.7,
-      "bench_miss": {
-        "pts": 11.0,
-        "name": "Michael Pittman",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 49.8,
-        "bye": 3.85,
-        "semis": 26.73,
-        "final": 12.1,
-        "champ": 5.53
+        "playoffs": 53.88,
+        "bye": 9.12,
+        "semis": 31.93,
+        "final": 15.4,
+        "champ": 7.67,
+        "settled": false
       },
-      "luck": -1.33,
       "streak": "L3",
       "top": [
         {
@@ -84,21 +73,14 @@
       "losses": 11,
       "ties": 0,
       "pf": 654.96,
-      "ap_wins": 17,
-      "ap_losses": 37,
-      "h2h_wins": 0.0,
-      "exp_wins": 1.89,
-      "bench": 46.1,
-      "bench_week": 0.0,
-      "bench_miss": null,
       "odds": {
-        "playoffs": 2.17,
-        "bye": 0.0,
-        "semis": 0.93,
-        "final": 0.28,
-        "champ": 0.07
+        "playoffs": 11.88,
+        "bye": 0.17,
+        "semis": 6.67,
+        "final": 3.45,
+        "champ": 1.73,
+        "settled": false
       },
-      "luck": -1.89,
       "streak": "L6",
       "top": [
         {
@@ -150,25 +132,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 734.14,
-      "ap_wins": 27,
-      "ap_losses": 27,
-      "h2h_wins": 5.0,
-      "exp_wins": 3.0,
-      "bench": 100.14,
-      "bench_week": 28.8,
-      "bench_miss": {
-        "pts": 18.6,
-        "name": "Keenan Allen",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 91.75,
-        "bye": 29.93,
-        "semis": 62.58,
-        "final": 30.48,
-        "champ": 14.47
+        "playoffs": 82.72,
+        "bye": 30.85,
+        "semis": 56.08,
+        "final": 27.57,
+        "champ": 13.5,
+        "settled": false
       },
-      "luck": 2.0,
       "streak": "W4",
       "top": [
         {
@@ -220,21 +191,14 @@
       "losses": 9,
       "ties": 0,
       "pf": 580.0,
-      "ap_wins": 12,
-      "ap_losses": 42,
-      "h2h_wins": 2.0,
-      "exp_wins": 1.33,
-      "bench": 82.0,
-      "bench_week": 0.0,
-      "bench_miss": null,
       "odds": {
-        "playoffs": 1.2,
-        "bye": 0.0,
-        "semis": 0.38,
-        "final": 0.07,
-        "champ": 0.05
+        "playoffs": 12.05,
+        "bye": 0.6,
+        "semis": 6.3,
+        "final": 2.8,
+        "champ": 1.38,
+        "settled": false
       },
-      "luck": 0.67,
       "streak": "L1",
       "top": [
         {
@@ -286,25 +250,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 792.58,
-      "ap_wins": 39,
-      "ap_losses": 15,
-      "h2h_wins": 3.0,
-      "exp_wins": 4.33,
-      "bench": 136.98,
-      "bench_week": 46.84,
-      "bench_miss": {
-        "pts": 26.2,
-        "name": "Joe Mixon",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 98.35,
-        "bye": 64.25,
-        "semis": 84.33,
-        "final": 50.38,
-        "champ": 29.9
+        "playoffs": 90.75,
+        "bye": 46.42,
+        "semis": 70.25,
+        "final": 39.15,
+        "champ": 19.9,
+        "settled": false
       },
-      "luck": -1.33,
       "streak": "L1",
       "top": [
         {
@@ -356,25 +309,14 @@
       "losses": 6,
       "ties": 0,
       "pf": 690.46,
-      "ap_wins": 24,
-      "ap_losses": 30,
-      "h2h_wins": 3.0,
-      "exp_wins": 2.67,
-      "bench": 69.7,
-      "bench_week": 1.1,
-      "bench_miss": {
-        "pts": 4.0,
-        "name": "Zach Charbonnet",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 54.98,
-        "bye": 3.95,
-        "semis": 26.68,
-        "final": 11.05,
-        "champ": 4.0
+        "playoffs": 58.3,
+        "bye": 11.38,
+        "semis": 34.7,
+        "final": 16.68,
+        "champ": 8.0,
+        "settled": false
       },
-      "luck": 0.33,
       "streak": "L2",
       "top": [
         {
@@ -426,25 +368,14 @@
       "losses": 2,
       "ties": 0,
       "pf": 715.36,
-      "ap_wins": 32,
-      "ap_losses": 22,
-      "h2h_wins": 5.0,
-      "exp_wins": 3.56,
-      "bench": 61.06,
-      "bench_week": 2.0,
-      "bench_miss": {
-        "pts": 2.0,
-        "name": "Tyler Conklin",
-        "pos": "TE"
-      },
       "odds": {
-        "playoffs": 96.47,
-        "bye": 50.7,
-        "semis": 73.03,
-        "final": 34.15,
-        "champ": 15.68
+        "playoffs": 90.95,
+        "bye": 46.08,
+        "semis": 64.38,
+        "final": 31.4,
+        "champ": 14.28,
+        "settled": false
       },
-      "luck": 1.44,
       "streak": "W3",
       "top": [
         {
@@ -496,25 +427,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 753.96,
-      "ap_wins": 34,
-      "ap_losses": 20,
-      "h2h_wins": 4.0,
-      "exp_wins": 3.78,
-      "bench": 91.9,
-      "bench_week": 15.9,
-      "bench_miss": {
-        "pts": 8.0,
-        "name": "Rico Dowdle",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 94.83,
-        "bye": 38.98,
-        "semis": 70.12,
-        "final": 36.95,
-        "champ": 19.23
+        "playoffs": 85.72,
+        "bye": 34.67,
+        "semis": 60.05,
+        "final": 30.45,
+        "champ": 15.9,
+        "settled": false
       },
-      "luck": 0.22,
       "streak": "W1",
       "top": [
         {
@@ -566,25 +486,14 @@
       "losses": 6,
       "ties": 0,
       "pf": 687.4,
-      "ap_wins": 28,
-      "ap_losses": 26,
-      "h2h_wins": 4.0,
-      "exp_wins": 3.11,
-      "bench": 81.22,
-      "bench_week": 23.64,
-      "bench_miss": {
-        "pts": 21.86,
-        "name": "Jalen Hurts",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 53.75,
-        "bye": 3.98,
-        "semis": 24.75,
-        "final": 10.75,
-        "champ": 5.0
+        "playoffs": 57.88,
+        "bye": 10.35,
+        "semis": 35.02,
+        "final": 15.65,
+        "champ": 8.32,
+        "settled": false
       },
-      "luck": 0.89,
       "streak": "W2",
       "top": [
         {
@@ -636,25 +545,14 @@
       "losses": 7,
       "ties": 0,
       "pf": 718.28,
-      "ap_wins": 27,
-      "ap_losses": 27,
-      "h2h_wins": 2.0,
-      "exp_wins": 3.0,
-      "bench": 101.62,
-      "bench_week": 7.24,
-      "bench_miss": {
-        "pts": 26.62,
-        "name": "Jordan Love",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 56.7,
-        "bye": 4.38,
-        "semis": 30.5,
-        "final": 13.8,
-        "champ": 6.08
+        "playoffs": 55.88,
+        "bye": 10.35,
+        "semis": 34.62,
+        "final": 17.45,
+        "champ": 9.32,
+        "settled": false
       },
-      "luck": -1.0,
       "streak": "W1",
       "top": [
         {

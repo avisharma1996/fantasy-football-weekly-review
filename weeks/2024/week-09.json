@@ -14,25 +14,14 @@
       "losses": 8,
       "ties": 0,
       "pf": 1103.64,
-      "ap_wins": 49,
-      "ap_losses": 32,
-      "h2h_wins": 4.0,
-      "exp_wins": 5.44,
-      "bench": 144.4,
-      "bench_week": 13.7,
-      "bench_miss": {
-        "pts": 15.6,
-        "name": "Tank Dell",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 91.08,
-        "bye": 11.12,
-        "semis": 52.75,
-        "final": 23.45,
-        "champ": 10.32
+        "playoffs": 83.33,
+        "bye": 14.1,
+        "semis": 50.73,
+        "final": 24.2,
+        "champ": 11.7,
+        "settled": false
       },
-      "luck": -1.44,
       "streak": "W1",
       "top": [
         {
@@ -84,25 +73,14 @@
       "losses": 14,
       "ties": 0,
       "pf": 1024.4,
-      "ap_wins": 33,
-      "ap_losses": 48,
-      "h2h_wins": 1.0,
-      "exp_wins": 3.67,
-      "bench": 111.38,
-      "bench_week": 15.2,
-      "bench_miss": {
-        "pts": 14.5,
-        "name": "Jakobi Meyers",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 1.93,
+        "playoffs": 6.65,
         "bye": 0.0,
-        "semis": 0.82,
-        "final": 0.4,
-        "champ": 0.17
+        "semis": 3.92,
+        "final": 1.75,
+        "champ": 0.95,
+        "settled": false
       },
-      "luck": -2.67,
       "streak": "L1",
       "top": [
         {
@@ -154,25 +132,14 @@
       "losses": 8,
       "ties": 0,
       "pf": 1071.72,
-      "ap_wins": 34,
-      "ap_losses": 47,
-      "h2h_wins": 7.0,
-      "exp_wins": 3.78,
-      "bench": 119.74,
-      "bench_week": 16.5,
-      "bench_miss": {
-        "pts": 16.5,
-        "name": "Cedric Tillman",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 85.12,
-        "bye": 4.92,
-        "semis": 43.9,
-        "final": 19.07,
-        "champ": 8.28
+        "playoffs": 77.8,
+        "bye": 10.05,
+        "semis": 43.08,
+        "final": 19.25,
+        "champ": 9.15,
+        "settled": false
       },
-      "luck": 3.22,
       "streak": "L1",
       "top": [
         {
@@ -224,21 +191,14 @@
       "losses": 15,
       "ties": 0,
       "pf": 899.4,
-      "ap_wins": 18,
-      "ap_losses": 63,
-      "h2h_wins": 2.0,
-      "exp_wins": 2.0,
-      "bench": 114.4,
-      "bench_week": 0,
-      "bench_miss": null,
       "odds": {
-        "playoffs": 0.0,
+        "playoffs": 0.82,
         "bye": 0.0,
-        "semis": 0.0,
-        "final": 0.0,
-        "champ": 0.0
+        "semis": 0.47,
+        "final": 0.3,
+        "champ": 0.12,
+        "settled": false
       },
-      "luck": 0.0,
       "streak": "L4",
       "top": [
         {
@@ -290,25 +250,14 @@
       "losses": 4,
       "ties": 0,
       "pf": 1234.02,
-      "ap_wins": 63,
-      "ap_losses": 18,
-      "h2h_wins": 6.0,
-      "exp_wins": 7.0,
-      "bench": 183.1,
-      "bench_week": 12.0,
-      "bench_miss": {
-        "pts": 13.8,
-        "name": "Jayden Reed",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 99.97,
-        "bye": 96.92,
-        "semis": 98.97,
-        "final": 63.52,
-        "champ": 39.42
+        "playoffs": 99.78,
+        "bye": 87.58,
+        "semis": 93.8,
+        "final": 55.75,
+        "champ": 31.4,
+        "settled": false
       },
-      "luck": -1.0,
       "streak": "W3",
       "top": [
         {
@@ -360,25 +309,14 @@
       "losses": 10,
       "ties": 0,
       "pf": 1009.6,
-      "ap_wins": 32,
-      "ap_losses": 49,
-      "h2h_wins": 4.0,
-      "exp_wins": 3.56,
-      "bench": 89.6,
-      "bench_week": 13.4,
-      "bench_miss": {
-        "pts": 15.8,
-        "name": "Austin Ekeler",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 22.98,
-        "bye": 0.15,
-        "semis": 9.65,
-        "final": 3.85,
-        "champ": 1.65
+        "playoffs": 36.83,
+        "bye": 0.82,
+        "semis": 20.2,
+        "final": 8.85,
+        "champ": 4.12,
+        "settled": false
       },
-      "luck": 0.44,
       "streak": "L1",
       "top": [
         {
@@ -430,21 +368,14 @@
       "losses": 5,
       "ties": 0,
       "pf": 1076.08,
-      "ap_wins": 46,
-      "ap_losses": 35,
-      "h2h_wins": 7.0,
-      "exp_wins": 5.11,
-      "bench": 85.26,
-      "bench_week": 0.0,
-      "bench_miss": null,
       "odds": {
-        "playoffs": 98.75,
-        "bye": 45.08,
-        "semis": 72.1,
-        "final": 32.73,
-        "champ": 13.5
+        "playoffs": 96.08,
+        "bye": 42.42,
+        "semis": 65.95,
+        "final": 30.32,
+        "champ": 13.68,
+        "settled": false
       },
-      "luck": 1.89,
       "streak": "W2",
       "top": [
         {
@@ -496,25 +427,14 @@
       "losses": 7,
       "ties": 0,
       "pf": 1119.06,
-      "ap_wins": 47,
-      "ap_losses": 34,
-      "h2h_wins": 5.0,
-      "exp_wins": 5.22,
-      "bench": 107.0,
-      "bench_week": 2.2,
-      "bench_miss": {
-        "pts": 2.2,
-        "name": "Tank Bigsby",
-        "pos": "RB"
-      },
       "odds": {
-        "playoffs": 96.6,
-        "bye": 26.23,
-        "semis": 64.08,
-        "final": 32.1,
-        "champ": 15.47
+        "playoffs": 91.12,
+        "bye": 25.65,
+        "semis": 57.77,
+        "final": 28.35,
+        "champ": 13.82,
+        "settled": false
       },
-      "luck": -0.22,
       "streak": "W1",
       "top": [
         {
@@ -566,25 +486,14 @@
       "losses": 7,
       "ties": 0,
       "pf": 1082.7,
-      "ap_wins": 48,
-      "ap_losses": 33,
-      "h2h_wins": 6.0,
-      "exp_wins": 5.33,
-      "bench": 128.04,
-      "bench_week": 16.02,
-      "bench_miss": {
-        "pts": 30.14,
-        "name": "Joe Burrow",
-        "pos": "QB"
-      },
       "odds": {
-        "playoffs": 93.2,
-        "bye": 15.57,
-        "semis": 53.1,
-        "final": 23.1,
-        "champ": 10.45
+        "playoffs": 85.9,
+        "bye": 19.27,
+        "semis": 52.5,
+        "final": 25.2,
+        "champ": 11.97,
+        "settled": false
       },
-      "luck": 0.67,
       "streak": "W1",
       "top": [
         {
@@ -636,25 +545,14 @@
       "losses": 12,
       "ties": 0,
       "pf": 1034.48,
-      "ap_wins": 35,
-      "ap_losses": 46,
-      "h2h_wins": 3.0,
-      "exp_wins": 3.89,
-      "bench": 136.64,
-      "bench_week": 5.8,
-      "bench_miss": {
-        "pts": 13.6,
-        "name": "Jordan Addison",
-        "pos": "WR"
-      },
       "odds": {
-        "playoffs": 10.38,
-        "bye": 0.0,
-        "semis": 4.62,
-        "final": 1.77,
-        "champ": 0.72
+        "playoffs": 21.7,
+        "bye": 0.1,
+        "semis": 11.57,
+        "final": 6.03,
+        "champ": 3.08,
+        "settled": false
       },
-      "luck": -0.89,
       "streak": "L2",
       "top": [
         {
