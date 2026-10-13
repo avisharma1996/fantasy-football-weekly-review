@@ -309,6 +309,9 @@ def fmt(text, base):
             if not (IMAGES / src).exists():
                 print(f"  warning: images/{src} not found")
             src = f"{base}images/{src}"
+        if src.lower().endswith((".mp4", ".webm", ".mov")):
+            # Silent looping video behaves like a gif at a fraction of the size.
+            return f'<video class="pic" src="{src}" autoplay loop muted playsinline preload="metadata"></video>'
         return f'<img class="pic" src="{src}" alt="{m.group(1)}" loading="lazy">'
 
     out = []
@@ -448,6 +451,7 @@ nav a.cur{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .meta{color:var(--muted);font-size:.88rem}.meta b{color:var(--ink)}
 .av{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;background:var(--line);display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:var(--muted)}
 .pic{display:block;max-width:100%;max-height:260px;height:auto;border-radius:8px;margin:6px 0}
+video.pic{max-height:360px}
 .blurb{margin-top:10px}.blurb p{margin:.5em 0 0}.blurb p:first-child{margin-top:0}
 .top{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.85rem}
 .top li{background:var(--chip);border-radius:8px;padding:3px 9px;display:flex;gap:6px;align-items:baseline}
