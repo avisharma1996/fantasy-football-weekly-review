@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 10 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Amver Alert🚨
+// 16-4, 1415.64 PF, streak W4 | Ja'Marr Chase (WR1) 192.2, Bijan Robinson (RB4) 170.4, Joe Mixon (RB10) 111.2
+
+
+2. superdiddy
+// 12-8, 1185.08 PF, streak W2 | Jalen Hurts (QB4) 190.0, Saquon Barkley (RB3) 175.4, Garrett Wilson (WR3) 133.4
+
+
+3. Not Last Place == W
+// 13-7, 1225.06 PF, streak W2 | Lamar Jackson (QB1) 260.6, Justin Jefferson (WR2) 140.8, DK Metcalf (WR26) 88.3
+
+
+4. yrkpapi
+// 13-7, 1158.62 PF, streak L1 | Alvin Kamara (RB2) 181.1, Josh Jacobs (RB17) 120.5, Darnell Mooney (WR8) 92.5
+
+
+5. Ducky Irving
+// 10-10, 1189.34 PF, streak L1 | Josh Allen (QB5) 203.3, Kyren Williams (RB6) 148.5, Breece Hall (RB11) 132.7
+
+
+6. WE DID NOT DO IT
+// 10-10, 1124.18 PF, streak W1 | James Conner (RB9) 138.4, Jayden Daniels (QB6) 136.1, Jonathan Taylor (RB22) 108.4
+
+
+7. Ankitty
+// 10-10, 1148.66 PF, streak L2 | Derrick Henry (RB1) 210.6, Kenneth Walker (RB18) 118.5, Stefon Diggs (WR17) 98.4
+
+
+8. ... Sanak al-Gaib!
+// 7-13, 1128.10 PF, streak W1 | Drake London (WR4) 129.9, CeeDee Lamb (WR6) 127.1, George Kittle (TE1) 119.5
+
+
+9. Karans Fraud-book
+// 5-15, 1135.26 PF, streak L2 | Jahmyr Gibbs (RB5) 151.9, James Cook (RB8) 139.1, Malik Nabers (WR13) 109.0
+
+
+10. Braelon Allen
+// 4-16, 1031.20 PF, streak L5 | Ka'imi Fairbairn (K1) 112.0, Travis Kelce (TE5) 90.0, Kareem Hunt (RB29) 84.0
+

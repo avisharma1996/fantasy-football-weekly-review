@@ -27,10 +27,19 @@ API = "https://api.sleeper.app/v1"
 
 # ---------------------------------------------------------------- Sleeper data
 
+_seen = {}
+
+
 def get(path):
+    # Weekly matchups and stats are re-read for every later week, so reuse them within a run.
+    if path in _seen:
+        return _seen[path]
     req = urllib.request.Request(API + path, headers={"User-Agent": "ffr-weekly-review"})
     with urllib.request.urlopen(req, timeout=60) as r:
-        return json.load(r)
+        data = json.load(r)
+    if "/matchups/" in path or path.startswith("/stats/"):
+        _seen[path] = data
+    return data
 
 
 def load_seasons():

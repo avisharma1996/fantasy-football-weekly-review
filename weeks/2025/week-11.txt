@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 11 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Amver Alert🚨
+// 18-4, 1490.54 PF, streak W6 | De'Von Achane (RB3) 208.0, James Cook (RB6) 172.3, Amon-Ra St. Brown (WR4) 155.4
+
+
+2. superdiddy
+// 14-8, 1523.10 PF, streak W1 | Jonathan Taylor (RB1) 258.9, Jalen Hurts (QB7) 189.3, Ja'Marr Chase (WR5) 154.2
+
+
+3. Ain't That Herb-tastic
+// 14-8, 1322.36 PF, streak L1 | Josh Jacobs (RB7) 166.5, Puka Nacua (WR3) 156.8, Baker Mayfield (QB11) 145.6
+
+
+4. Karans Fraudbook
+// 13-9, 1271.80 PF, streak W3 | Jaxon Smith-Njigba (WR1) 181.9, Kyren Williams (RB8) 154.7, Tetairoa McMillan (WR10) 117.3
+
+
+5. 6 7
+// 10-12, 1324.98 PF, streak W2 | Christian McCaffrey (RB2) 246.9, Dak Prescott (QB9) 154.2, Chase Brown (RB18) 114.3
+
+
+6. #NoToJunie
+// 10-12, 1306.06 PF, streak W1 | Josh Allen (QB1) 254.3, Bijan Robinson (RB4) 186.4, Rico Dowdle (RB10) 131.7
+
+
+7. Braelon Allen
+// 9-13, 1230.10 PF, streak L2 | Patrick Mahomes (QB3) 225.8, Saquon Barkley (RB11) 136.9, Jameson Williams (WR29) 102.7
+
+
+8. Ankitty
+// 9-13, 1259.44 PF, streak L1 | Jahmyr Gibbs (RB5) 185.1, Drake Maye (QB2) 157.8, Davante Adams (WR7) 138.4
+
+
+9. yrkpapi
+// 7-15, 1278.78 PF, streak L3 | Justin Herbert (QB4) 122.9, Emeka Egbuka (WR8) 121.6, Drake London (WR6) 112.7
+
+
+10. Cucked By JPow’s 25 Bps
+// 6-16, 1127.86 PF, streak L2 | Lamar Jackson (QB21) 143.3, Ashton Jeanty (RB15) 126.2, Justin Jefferson (WR16) 115.1
+

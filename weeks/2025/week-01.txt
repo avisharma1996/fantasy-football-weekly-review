@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is the standings.
+
+TITLE: Week 1 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. yrkpapi
+// 2-0, 143.72 PF, streak W1 | Derrick Henry (RB1) 28.7, Emeka Egbuka (WR3) 21.6, Garrett Wilson (WR6) 19.0
+
+
+2. Karans Fraudbook
+// 2-0, 117.52 PF, streak W1 | Jayden Daniels (QB13) 20.1, Jaxon Smith-Njigba (WR13) 14.9, Aaron Jones (RB11) 14.2
+
+
+3. Ain't That Herb-tastic
+// 2-0, 113.28 PF, streak W1 | Baker Mayfield (QB12) 22.6, Puka Nacua (WR7) 18.1, Breece Hall (RB9) 15.5
+
+
+4. 6 7
+// 2-0, 111.32 PF, streak W1 | Christian McCaffrey (RB5) 18.7, Denver Broncos D/ST (DEF1) 16.0, CeeDee Lamb (WR15) 14.5
+
+
+5. #NoToJunie
+// 1-1, 110.16 PF, streak L1 | Josh Allen (QB1) 38.8, Bijan Robinson (RB2) 21.4, Chuba Hubbard (RB7) 16.4
+
+
+6. Cucked By JPow’s 25 Bps
+// 1-1, 104.06 PF, streak W1 | Lamar Jackson (QB4) 29.4, Justin Jefferson (WR19) 12.8, Alvin Kamara (RB18) 12.7
+
+
+7. Braelon Allen
+// 0-2, 105.62 PF, streak L1 | Patrick Mahomes (QB6) 26.0, Saquon Barkley (RB8) 16.4, Marvin Harrison (WR10) 15.6
+
+
+8. Amver Alert🚨
+// 0-2, 100.62 PF, streak L1 | James Cook (RB4) 18.7, Courtland Sutton (WR11) 15.1, De'Von Achane (RB10) 15.0
+
+
+9. superdiddy
+// 0-2, 98.88 PF, streak L1 | Jalen Hurts (QB8) 24.3, Javonte Williams (RB3) 19.4, Travis Kelce (TE3) 11.7
+
+
+10. Ankitty
+// 0-2, 80.14 PF, streak L1 | Bucky Irving (RB19) 12.5, George Kittle (TE8) 10.5, Ladd McConkey (WR25) 10.4
+

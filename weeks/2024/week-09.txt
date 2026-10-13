@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 9 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Amver Alert🚨
+// 14-4, 1234.02 PF, streak W3 | Bijan Robinson (RB4) 142.5, Ja'Marr Chase (WR1) 142.3, Joe Mixon (RB10) 95.2
+
+
+2. yrkpapi
+// 13-5, 1076.08 PF, streak W2 | Alvin Kamara (RB2) 167.7, Josh Jacobs (RB12) 120.5, Baker Mayfield (QB2) 81.3
+
+
+3. superdiddy
+// 11-7, 1082.70 PF, streak W1 | Saquon Barkley (RB3) 167.1, Jalen Hurts (QB6) 159.3, Garrett Wilson (WR3) 126.8
+
+
+4. Not Last Place == W
+// 11-7, 1119.06 PF, streak W1 | Lamar Jackson (QB1) 227.7, Justin Jefferson (WR2) 133.5, DK Metcalf (WR18) 88.3
+
+
+5. Ducky Irving
+// 10-8, 1103.64 PF, streak W1 | Josh Allen (QB4) 183.1, Kyren Williams (RB6) 139.8, Breece Hall (RB9) 122.4
+
+
+6. Ankitty
+// 10-8, 1071.72 PF, streak L1 | Derrick Henry (RB1) 197.0, Kenneth Walker (RB15) 118.5, Stefon Diggs (WR15) 98.4
+
+
+7. WE DID NOT DO IT
+// 8-10, 1009.60 PF, streak L1 | Jayden Daniels (QB3) 127.5, James Conner (RB14) 118.6, Jonathan Taylor (RB23) 95.2
+
+
+8. ... Sanak al-Gaib!
+// 6-12, 1034.48 PF, streak L2 | CeeDee Lamb (WR4) 121.7, Drake London (WR5) 116.2, C.J. Stroud (QB17) 109.9
+
+
+9. Karans Fraud-book
+// 4-14, 1024.40 PF, streak L1 | Jahmyr Gibbs (RB5) 140.1, James Cook (RB8) 124.1, Malik Nabers (WR14) 101.2
+
+
+10. Braelon Allen
+// 3-15, 899.40 PF, streak L4 | Ka'imi Fairbairn (K3) 100.0, Pittsburgh Steelers D/ST (DEF2) 81.0, Patrick Mahomes (QB16) 76.4
+

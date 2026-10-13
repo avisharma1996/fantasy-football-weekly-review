@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 8 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. superdiddy
+// 12-4, 1165.98 PF, streak W4 | Jonathan Taylor (RB1) 204.1, Jalen Hurts (QB3) 174.8, Javonte Williams (RB4) 136.6
+
+
+2. Amver Alert🚨
+// 12-4, 1051.02 PF, streak W3 | De'Von Achane (RB3) 137.9, James Cook (RB6) 132.2, Amon-Ra St. Brown (WR4) 121.7
+
+
+3. Ain't That Herb-tastic
+// 12-4, 984.70 PF, streak W1 | Josh Jacobs (RB7) 127.3, Baker Mayfield (QB9) 122.7, Puka Nacua (WR5) 111.8
+
+
+4. Ankitty
+// 7-9, 933.34 PF, streak L1 | Jahmyr Gibbs (RB8) 127.0, Drake Maye (QB2) 105.9, D'Andre Swift (RB11) 102.6
+
+
+5. yrkpapi
+// 7-9, 952.94 PF, streak W2 | Emeka Egbuka (WR6) 94.6, Tyler Warren (TE3) 92.3, Brandon Aubrey (K1) 89.0
+
+
+6. Karans Fraudbook
+// 8-8, 921.06 PF, streak L2 | Jaxon Smith-Njigba (WR2) 130.0, Kyren Williams (RB13) 99.8, Jayden Daniels (QB24) 97.3
+
+
+7. Braelon Allen
+// 6-10, 881.46 PF, streak L1 | Patrick Mahomes (QB1) 200.0, Saquon Barkley (RB9) 115.8, A.J. Brown (WR32) 72.0
+
+
+8. #NoToJunie
+// 6-10, 901.42 PF, streak L2 | Josh Allen (QB7) 160.5, Bijan Robinson (RB5) 134.7, Rico Dowdle (RB14) 78.3
+
+
+9. 6 7
+// 6-10, 914.76 PF, streak L3 | Christian McCaffrey (RB2) 168.9, Dak Prescott (QB8) 113.5, Chase Brown (RB20) 83.4
+
+
+10. Cucked By JPow’s 25 Bps
+// 4-12, 844.14 PF, streak W1 | Lamar Jackson (QB26) 94.4, Ashton Jeanty (RB18) 88.6, Justin Jefferson (WR16) 87.1
+

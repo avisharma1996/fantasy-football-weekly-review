@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 11 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Amver Alert🚨
+// 18-4, 1577.80 PF, streak W5 | Ja'Marr Chase (WR1) 215.2, Bijan Robinson (RB4) 178.7, Joe Mixon (RB5) 145.5
+
+
+2. Not Last Place == W
+// 14-8, 1333.14 PF, streak W3 | Lamar Jackson (QB1) 276.4, Justin Jefferson (WR3) 151.9, DK Metcalf (WR22) 98.8
+
+
+3. yrkpapi
+// 14-8, 1294.96 PF, streak L2 | Alvin Kamara (RB3) 192.0, Josh Jacobs (RB14) 120.5, Darnell Mooney (WR10) 96.2
+
+
+4. Ducky Irving
+// 11-11, 1340.44 PF, streak L2 | Josh Allen (QB4) 228.3, Breece Hall (RB7) 160.3, Kyren Williams (RB8) 157.1
+
+
+5. superdiddy
+// 13-9, 1278.22 PF, streak W3 | Jalen Hurts (QB3) 208.7, Saquon Barkley (RB2) 208.2, Garrett Wilson (WR6) 137.2
+
+
+6. WE DID NOT DO IT
+// 10-12, 1224.42 PF, streak L1 | Jayden Daniels (QB6) 150.5, James Conner (RB16) 138.4, Jonathan Taylor (RB23) 114.9
+
+
+7. Karans Fraud-book
+// 7-15, 1276.14 PF, streak W1 | Jahmyr Gibbs (RB6) 170.7, James Cook (RB9) 156.3, Malik Nabers (WR15) 109.0
+
+
+8. ... Sanak al-Gaib!
+// 7-15, 1256.88 PF, streak L1 | CeeDee Lamb (WR4) 141.7, Drake London (WR5) 137.5, George Kittle (TE2) 119.5
+
+
+9. Ankitty
+// 10-12, 1220.60 PF, streak L3 | Derrick Henry (RB1) 221.1, Kenneth Walker (RB18) 118.5, Stefon Diggs (WR23) 98.4
+
+
+10. Braelon Allen
+// 6-16, 1182.38 PF, streak W1 | Ka'imi Fairbairn (K2) 122.0, Jared Goff (QB10) 116.4, Travis Kelce (TE4) 91.8
+

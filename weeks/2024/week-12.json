@@ -1,0 +1,309 @@
+{
+  "league": "Red Vines",
+  "league_avatar": "https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f",
+  "season": "2024",
+  "week": 12,
+  "median_game": true,
+  "teams": {
+    "1": {
+      "name": "Ducky Irving",
+      "manager": "avian96",
+      "avatar": "https://sleepercdn.com/uploads/881b4fa23c1e0a38f87f10a15e2251f2.jpg",
+      "wins": 13,
+      "losses": 11,
+      "ties": 0,
+      "pf": 1458.8,
+      "streak": "W1",
+      "top": [
+        {
+          "name": "Josh Allen",
+          "pos": "QB",
+          "rank": "QB6",
+          "pts": 228.32
+        },
+        {
+          "name": "Kyren Williams",
+          "pos": "RB",
+          "rank": "RB8",
+          "pts": 168.3
+        },
+        {
+          "name": "Breece Hall",
+          "pos": "RB",
+          "rank": "RB12",
+          "pts": 160.3
+        }
+      ]
+    },
+    "2": {
+      "name": "Karans Fraud-book",
+      "manager": "kgids",
+      "avatar": "https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg",
+      "wins": 8,
+      "losses": 16,
+      "ties": 0,
+      "pf": 1387.06,
+      "streak": "W2",
+      "top": [
+        {
+          "name": "Jahmyr Gibbs",
+          "pos": "RB",
+          "rank": "RB3",
+          "pts": 194.1
+        },
+        {
+          "name": "James Cook",
+          "pos": "RB",
+          "rank": "RB13",
+          "pts": 156.3
+        },
+        {
+          "name": "Malik Nabers",
+          "pos": "WR",
+          "rank": "WR14",
+          "pts": 118.4
+        }
+      ]
+    },
+    "3": {
+      "name": "Ankitty",
+      "manager": "bruhking123",
+      "avatar": "https://sleepercdn.com/uploads/43b7fcba29e5b6bae3600185cb229986.jpg",
+      "wins": 10,
+      "losses": 14,
+      "ties": 0,
+      "pf": 1331.16,
+      "streak": "L4",
+      "top": [
+        {
+          "name": "Derrick Henry",
+          "pos": "RB",
+          "rank": "RB2",
+          "pts": 235.1
+        },
+        {
+          "name": "Kenneth Walker",
+          "pos": "RB",
+          "rank": "RB17",
+          "pts": 129.8
+        },
+        {
+          "name": "Patrick Mahomes",
+          "pos": "QB",
+          "rank": "QB8",
+          "pts": 120.92
+        }
+      ]
+    },
+    "4": {
+      "name": "Braelon Allen",
+      "manager": "nmadan",
+      "avatar": "https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg",
+      "wins": 8,
+      "losses": 16,
+      "ties": 0,
+      "pf": 1297.74,
+      "streak": "W2",
+      "top": [
+        {
+          "name": "Ka'imi Fairbairn",
+          "pos": "K",
+          "rank": "K2",
+          "pts": 132.0
+        },
+        {
+          "name": "Jared Goff",
+          "pos": "QB",
+          "rank": "QB12",
+          "pts": 127.14
+        },
+        {
+          "name": "Travis Kelce",
+          "pos": "TE",
+          "rank": "TE5",
+          "pts": 101.0
+        }
+      ]
+    },
+    "5": {
+      "name": "Amver Alert🚨",
+      "manager": "Amver",
+      "avatar": "https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg",
+      "wins": 18,
+      "losses": 6,
+      "ties": 0,
+      "pf": 1660.3,
+      "streak": "L1",
+      "top": [
+        {
+          "name": "Ja'Marr Chase",
+          "pos": "WR",
+          "rank": "WR1",
+          "pts": 215.2
+        },
+        {
+          "name": "Bijan Robinson",
+          "pos": "RB",
+          "rank": "RB5",
+          "pts": 178.7
+        },
+        {
+          "name": "Joe Mixon",
+          "pos": "RB",
+          "rank": "RB6",
+          "pts": 152.5
+        }
+      ]
+    },
+    "6": {
+      "name": "WE DID NOT DO IT",
+      "manager": "amach124",
+      "avatar": "https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg",
+      "wins": 11,
+      "losses": 13,
+      "ties": 0,
+      "pf": 1360.52,
+      "streak": "L2",
+      "top": [
+        {
+          "name": "Jayden Daniels",
+          "pos": "QB",
+          "rank": "QB4",
+          "pts": 182.9
+        },
+        {
+          "name": "James Conner",
+          "pos": "RB",
+          "rank": "RB15",
+          "pts": 145.8
+        },
+        {
+          "name": "Jonathan Taylor",
+          "pos": "RB",
+          "rank": "RB24",
+          "pts": 118.4
+        }
+      ]
+    },
+    "7": {
+      "name": "yrkpapi",
+      "manager": "yrkpapi",
+      "avatar": "https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e",
+      "wins": 16,
+      "losses": 8,
+      "ties": 0,
+      "pf": 1434.22,
+      "streak": "W1",
+      "top": [
+        {
+          "name": "Alvin Kamara",
+          "pos": "RB",
+          "rank": "RB4",
+          "pts": 192.0
+        },
+        {
+          "name": "Josh Jacobs",
+          "pos": "RB",
+          "rank": "RB7",
+          "pts": 149.1
+        },
+        {
+          "name": "David Montgomery",
+          "pos": "RB",
+          "rank": "RB9",
+          "pts": 102.42
+        }
+      ]
+    },
+    "8": {
+      "name": "Not Last Place == W",
+      "manager": "roheezy",
+      "avatar": "https://sleepercdn.com/uploads/c01bc166669b9a82696745d962741855.jpg",
+      "wins": 14,
+      "losses": 10,
+      "ties": 0,
+      "pf": 1433.72,
+      "streak": "L1",
+      "top": [
+        {
+          "name": "Lamar Jackson",
+          "pos": "QB",
+          "rank": "QB1",
+          "pts": 299.02
+        },
+        {
+          "name": "Justin Jefferson",
+          "pos": "WR",
+          "rank": "WR3",
+          "pts": 155.58
+        },
+        {
+          "name": "DK Metcalf",
+          "pos": "WR",
+          "rank": "WR25",
+          "pts": 106.7
+        }
+      ]
+    },
+    "9": {
+      "name": "superdiddy",
+      "manager": "jallerbo",
+      "avatar": "https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg",
+      "wins": 15,
+      "losses": 9,
+      "ties": 0,
+      "pf": 1433.48,
+      "streak": "W4",
+      "top": [
+        {
+          "name": "Saquon Barkley",
+          "pos": "RB",
+          "rank": "RB1",
+          "pts": 252.4
+        },
+        {
+          "name": "Jalen Hurts",
+          "pos": "QB",
+          "rank": "QB2",
+          "pts": 223.78
+        },
+        {
+          "name": "Terry McLaurin",
+          "pos": "WR",
+          "rank": "WR5",
+          "pts": 149.0
+        }
+      ]
+    },
+    "10": {
+      "name": "... Sanak al-Gaib!",
+      "manager": "ZebroGodilla",
+      "avatar": "https://sleepercdn.com/uploads/8c3c0f4de8052276c77518f04d8c421d.jpg",
+      "wins": 7,
+      "losses": 17,
+      "ties": 0,
+      "pf": 1353.5,
+      "streak": "L2",
+      "top": [
+        {
+          "name": "CeeDee Lamb",
+          "pos": "WR",
+          "rank": "WR4",
+          "pts": 153.5
+        },
+        {
+          "name": "Drake London",
+          "pos": "WR",
+          "rank": "WR6",
+          "pts": 137.5
+        },
+        {
+          "name": "George Kittle",
+          "pos": "TE",
+          "rank": "TE1",
+          "pts": 136.7
+        }
+      ]
+    }
+  }
+}

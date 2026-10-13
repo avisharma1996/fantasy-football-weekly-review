@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 13 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Amver Alert🚨
+// 20-6, 1811.60 PF, streak W1 | Ja'Marr Chase (WR1) 232.8, Bijan Robinson (RB5) 201.2, Joe Mixon (RB6) 172.4
+
+
+2. yrkpapi
+// 18-8, 1583.22 PF, streak W2 | Alvin Kamara (RB3) 205.9, Josh Jacobs (RB7) 168.8, David Montgomery (RB10) 116.3
+
+
+3. Ducky Irving
+// 15-11, 1592.72 PF, streak W2 | Josh Allen (QB5) 256.7, Kyren Williams (RB8) 186.1, Breece Hall (RB12) 166.3
+
+
+4. superdiddy
+// 16-10, 1562.20 PF, streak L1 | Saquon Barkley (RB1) 271.1, Jalen Hurts (QB4) 241.4, Terry McLaurin (WR3) 172.3
+
+
+5. Not Last Place == W
+// 14-12, 1548.80 PF, streak L2 | Lamar Jackson (QB1) 324.4, Justin Jefferson (WR4) 169.0, DK Metcalf (WR25) 115.3
+
+
+6. Karans Fraud-book
+// 10-16, 1528.74 PF, streak W3 | Jahmyr Gibbs (RB4) 203.5, James Cook (RB11) 174.8, Malik Nabers (WR17) 129.7
+
+
+7. WE DID NOT DO IT
+// 11-15, 1486.26 PF, streak L3 | Jayden Daniels (QB2) 211.5, James Conner (RB15) 155.4, Jonathan Taylor (RB24) 135.2
+
+
+8. Braelon Allen
+// 9-17, 1425.38 PF, streak W3 | Ka'imi Fairbairn (K2) 145.0, Jared Goff (QB11) 144.1, Travis Kelce (TE6) 111.3
+
+
+9. Ankitty
+// 10-16, 1422.90 PF, streak L5 | Derrick Henry (RB2) 247.7, Patrick Mahomes (QB9) 137.6, Kenneth Walker (RB20) 135.4
+
+
+10. ... Sanak al-Gaib!
+// 7-19, 1453.26 PF, streak L3 | CeeDee Lamb (WR5) 158.4, Drake London (WR6) 150.3, George Kittle (TE2) 137.9
+

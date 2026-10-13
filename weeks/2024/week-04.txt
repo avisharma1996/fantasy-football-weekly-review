@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 4 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Not Last Place == W
+// 6-2, 525.92 PF, streak W3 | Lamar Jackson (QB2) 92.1, Justin Jefferson (WR3) 69.8, DK Metcalf (WR7) 58.6
+
+
+2. WE DID NOT DO IT
+// 6-2, 508.68 PF, streak W2 | Jonathan Taylor (RB6) 69.6, James Conner (RB13) 57.5, Marvin Harrison (WR9) 55.8
+
+
+3. Amver Alert🚨
+// 5-3, 525.86 PF, streak L2 | Kyler Murray (QB10) 68.5, Brandon Aubrey (K1) 61.0, Ja'Marr Chase (WR8) 57.5
+
+
+4. Ankitty
+// 5-3, 489.40 PF, streak W2 | Derrick Henry (RB3) 91.0, Dak Prescott (QB7) 73.0, Stefon Diggs (WR10) 55.5
+
+
+5. yrkpapi
+// 6-2, 455.46 PF, streak W1 | Alvin Kamara (RB1) 98.1, Anthony Richardson (QB20) 52.3, Brian Robinson (RB11) 43.1
+
+
+6. Ducky Irving
+// 4-4, 451.76 PF, streak L1 | Josh Allen (QB5) 79.2, Kyren Williams (RB4) 75.1, Aaron Jones (RB9) 64.4
+
+
+7. ... Sanak al-Gaib!
+// 3-5, 437.96 PF, streak W1 | C.J. Stroud (QB11) 68.3, De'Von Achane (RB14) 57.2, CeeDee Lamb (WR12) 54.9
+
+
+8. superdiddy
+// 3-5, 428.00 PF, streak L1 | Saquon Barkley (RB2) 92.0, Jalen Hurts (QB9) 71.5, Mike Evans (WR16) 48.4
+
+
+9. Karans Fraud-book
+// 1-7, 445.72 PF, streak L4 | Malik Nabers (WR2) 74.1, Jahmyr Gibbs (RB7) 65.6, James Cook (RB10) 61.8
+
+
+10. Braelon Allen
+// 1-7, 361.56 PF, streak L2 | David Montgomery (RB8) 65.0, Patrick Mahomes (QB16) 62.0, Ka'imi Fairbairn (K4) 43.0
+

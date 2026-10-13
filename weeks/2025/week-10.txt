@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 10 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Amver Alert🚨
+// 16-4, 1357.12 PF, streak W5 | De'Von Achane (RB3) 189.0, James Cook (RB7) 153.4, Amon-Ra St. Brown (WR2) 150.2
+
+
+2. superdiddy
+// 13-7, 1409.30 PF, streak L2 | Jonathan Taylor (RB1) 258.9, Jalen Hurts (QB8) 174.8, Ja'Marr Chase (WR3) 149.7
+
+
+3. Ain't That Herb-tastic
+// 14-6, 1234.16 PF, streak W1 | Josh Jacobs (RB5) 162.5, Puka Nacua (WR4) 146.0, Baker Mayfield (QB11) 145.6
+
+
+4. Karans Fraudbook
+// 11-9, 1152.38 PF, streak W2 | Jaxon Smith-Njigba (WR1) 165.8, Kyren Williams (RB9) 138.6, Jayden Daniels (QB26) 97.3
+
+
+5. Ankitty
+// 9-11, 1166.80 PF, streak W1 | Jahmyr Gibbs (RB4) 168.0, Drake Maye (QB1) 142.3, Davante Adams (WR6) 131.8
+
+
+6. 6 7
+// 8-12, 1173.16 PF, streak W1 | Christian McCaffrey (RB2) 214.3, Dak Prescott (QB10) 129.9, Chase Brown (RB20) 98.6
+
+
+7. #NoToJunie
+// 8-12, 1162.68 PF, streak L1 | Josh Allen (QB4) 209.7, Bijan Robinson (RB6) 158.1, Rico Dowdle (RB10) 119.2
+
+
+8. yrkpapi
+// 7-13, 1178.34 PF, streak L2 | Justin Herbert (QB3) 118.6, Emeka Egbuka (WR8) 115.1, Tyler Warren (TE2) 111.3
+
+
+9. Braelon Allen
+// 8-12, 1108.76 PF, streak L1 | Patrick Mahomes (QB2) 211.5, Saquon Barkley (RB11) 127.4, Marvin Harrison (WR26) 95.5
+
+
+10. Cucked By JPow’s 25 Bps
+// 6-14, 1063.44 PF, streak L1 | Lamar Jackson (QB19) 136.6, Ashton Jeanty (RB12) 119.8, Justin Jefferson (WR15) 106.5
+

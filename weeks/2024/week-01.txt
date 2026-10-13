@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is the standings.
+
+TITLE: Week 1 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Ducky Irving
+// 2-0, 135.48 PF, streak W1 | Josh Allen (QB1) 31.2, Chicago Bears D/ST (DEF1) 25.0, Aaron Jones (RB9) 17.9
+
+
+2. Amver Alert🚨
+// 2-0, 134.38 PF, streak W1 | Joe Mixon (RB2) 25.3, Brandon Aubrey (K4) 21.0, New Orleans Saints D/ST (DEF4) 15.0
+
+
+3. yrkpapi
+// 2-0, 122.18 PF, streak W1 | Anthony Richardson (QB4) 27.1, Jake Moody (K2) 26.0, Alvin Kamara (RB7) 19.5
+
+
+4. Ankitty
+// 2-0, 119.16 PF, streak W1 | Tyreek Hill (WR4) 22.5, Stefon Diggs (WR10) 18.9, Kenneth Walker (RB8) 17.9
+
+
+5. superdiddy
+// 1-1, 122.12 PF, streak L1 | Saquon Barkley (RB1) 32.2, Mike Evans (WR6) 20.6, Jalen Hurts (QB10) 18.4
+
+
+6. WE DID NOT DO IT
+// 1-1, 117.10 PF, streak W1 | Cooper Kupp (WR2) 25.0, James Conner (RB10) 17.8, Jordan Love (QB11) 17.4
+
+
+7. Not Last Place == W
+// 0-2, 106.42 PF, streak L1 | Lamar Jackson (QB5) 25.1, Isiah Pacheco (RB17) 14.8, Justin Jefferson (WR15) 13.9
+
+
+8. Braelon Allen
+// 0-2, 103.94 PF, streak L1 | Rhamondre Stevenson (RB5) 20.1, Ka'imi Fairbairn (K5) 17.0, David Montgomery (RB15) 15.8
+
+
+9. Karans Fraud-book
+// 0-2, 101.36 PF, streak L1 | A.J. Brown (WR7) 20.4, Deebo Samuel (WR12) 16.2, Jahmyr Gibbs (RB16) 15.4
+
+
+10. ... Sanak al-Gaib!
+// 0-2, 90.86 PF, streak L1 | De'Von Achane (RB6) 19.5, C.J. Stroud (QB8) 18.7, Rachaad White (RB20) 13.6
+

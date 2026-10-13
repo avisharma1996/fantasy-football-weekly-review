@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 3 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Amver Alert🚨
+// 5-1, 423.50 PF, streak L1 | Kyler Murray (QB6) 58.5, Rashee Rice (WR4) 52.9, Brandon Aubrey (K1) 50.0
+
+
+2. Not Last Place == W
+// 4-2, 387.38 PF, streak W2 | Lamar Jackson (QB3) 68.5, Justin Jefferson (WR5) 52.3, DK Metcalf (WR7) 46.7
+
+
+3. Ducky Irving
+// 4-2, 375.06 PF, streak W1 | Josh Allen (QB1) 71.9, Kyren Williams (RB3) 56.7, Breece Hall (RB6) 53.0
+
+
+4. WE DID NOT DO IT
+// 4-2, 365.36 PF, streak W1 | Jonathan Taylor (RB8) 51.3, Marvin Harrison (WR9) 42.8, James Conner (RB17) 39.7
+
+
+5. yrkpapi
+// 4-2, 335.32 PF, streak L1 | Alvin Kamara (RB2) 76.7, Anthony Richardson (QB14) 47.0, Jake Moody (K4) 36.0
+
+
+6. Ankitty
+// 3-3, 320.16 PF, streak W1 | Derrick Henry (RB4) 56.6, Dak Prescott (QB7) 56.2, Stefon Diggs (WR12) 39.5
+
+
+7. superdiddy
+// 3-3, 319.78 PF, streak W2 | Saquon Barkley (RB1) 79.4, Jalen Hurts (QB8) 55.2, DeVonta Smith (WR11) 40.4
+
+
+8. Karans Fraud-book
+// 1-5, 339.32 PF, streak L3 | Malik Nabers (WR1) 57.0, James Cook (RB5) 56.5, Jahmyr Gibbs (RB14) 45.8
+
+
+9. ... Sanak al-Gaib!
+// 1-5, 311.06 PF, streak L3 | De'Von Achane (RB7) 52.8, C.J. Stroud (QB16) 44.8, CeeDee Lamb (WR19) 34.8
+
+
+10. Braelon Allen
+// 1-5, 286.06 PF, streak L1 | David Montgomery (RB10) 50.5, Patrick Mahomes (QB13) 48.0, Ka'imi Fairbairn (K3) 37.0
+

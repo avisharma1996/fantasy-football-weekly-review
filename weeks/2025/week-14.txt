@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 14 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Amver Alert🚨
+// 23-5, 1887.36 PF, streak W1 | De'Von Achane (RB4) 244.4, James Cook (RB6) 220.0, Amon-Ra St. Brown (WR4) 193.0
+
+
+2. superdiddy
+// 18-10, 1887.96 PF, streak W2 | Jonathan Taylor (RB1) 291.5, Jalen Hurts (QB6) 241.8, Javonte Williams (RB7) 193.5
+
+
+3. Ain't That Herb-tastic
+// 16-12, 1698.44 PF, streak W1 | Puka Nacua (WR2) 212.4, Josh Jacobs (RB8) 192.3, Breece Hall (RB16) 157.8
+
+
+4. Ankitty
+// 15-13, 1645.56 PF, streak W3 | Jahmyr Gibbs (RB3) 278.6, Drake Maye (QB4) 195.2, Davante Adams (WR5) 183.8
+
+
+5. #NoToJunie
+// 14-14, 1661.44 PF, streak W2 | Josh Allen (QB1) 320.0, Bijan Robinson (RB5) 236.3, Rico Dowdle (RB13) 141.1
+
+
+6. 6 7
+// 13-15, 1676.18 PF, streak L1 | Christian McCaffrey (RB2) 286.0, Dak Prescott (QB3) 224.3, Chase Brown (RB15) 160.1
+
+
+7. Karans Fraudbook
+// 15-13, 1601.64 PF, streak L2 | Jaxon Smith-Njigba (WR1) 242.9, Kyren Williams (RB9) 189.9, Tetairoa McMillan (WR11) 138.6
+
+
+8. Braelon Allen
+// 12-16, 1606.52 PF, streak L1 | Patrick Mahomes (QB2) 282.1, Saquon Barkley (RB12) 169.6, A.J. Brown (WR13) 146.9
+
+
+9. yrkpapi
+// 8-20, 1614.28 PF, streak L6 | Brandon Aubrey (K2) 144.0, Travis Etienne (RB11) 143.8, Tee Higgins (WR15) 141.0
+
+
+10. Cucked By JPow’s 25 Bps
+// 6-22, 1382.88 PF, streak L5 | Lamar Jackson (QB16) 180.1, Ashton Jeanty (RB14) 160.9, Justin Jefferson (WR25) 125.4
+

@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 6 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. yrkpapi
+// 10-2, 715.36 PF, streak W3 | Alvin Kamara (RB2) 122.6, Josh Jacobs (RB21) 66.0, Nico Collins (WR4) 52.5
+
+
+2. Amver Alert🚨
+// 8-4, 792.58 PF, streak L1 | Ja'Marr Chase (WR1) 103.5, Bijan Robinson (RB8) 82.6, Brandon Aubrey (K1) 82.0
+
+
+3. Ankitty
+// 8-4, 734.14 PF, streak W4 | Derrick Henry (RB1) 132.3, Stefon Diggs (WR6) 83.4, Kenneth Walker (RB12) 77.5
+
+
+4. Not Last Place == W
+// 8-4, 753.96 PF, streak W1 | Lamar Jackson (QB1) 145.5, Justin Jefferson (WR7) 82.0, DK Metcalf (WR16) 70.4
+
+
+5. ... Sanak al-Gaib!
+// 5-7, 718.28 PF, streak W1 | C.J. Stroud (QB10) 104.6, Drake London (WR5) 85.8, CeeDee Lamb (WR10) 76.4
+
+
+6. superdiddy
+// 6-6, 687.40 PF, streak W2 | Saquon Barkley (RB3) 98.4, Garrett Wilson (WR9) 76.9, Mike Evans (WR13) 73.5
+
+
+7. WE DID NOT DO IT
+// 6-6, 690.46 PF, streak L2 | Jayden Daniels (QB3) 80.1, James Conner (RB14) 75.1, Jonathan Taylor (RB18) 69.6
+
+
+8. Ducky Irving
+// 5-7, 706.70 PF, streak L3 | Josh Allen (QB5) 118.2, Kyren Williams (RB4) 90.1, Breece Hall (RB10) 80.4
+
+
+9. Karans Fraud-book
+// 1-11, 654.96 PF, streak L6 | James Cook (RB11) 78.7, Jahmyr Gibbs (RB13) 76.2, Malik Nabers (WR12) 74.1
+
+
+10. Braelon Allen
+// 3-9, 580.00 PF, streak L1 | Patrick Mahomes (QB22) 76.4, Ka'imi Fairbairn (K3) 70.0, DJ Moore (WR22) 65.7
+

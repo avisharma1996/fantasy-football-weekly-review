@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 7 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Amver Alert🚨
+// 10-4, 950.96 PF, streak W1 | Ja'Marr Chase (WR1) 118.6, Bijan Robinson (RB6) 104.4, Brandon Aubrey (K4) 82.0
+
+
+2. Not Last Place == W
+// 9-5, 907.60 PF, streak L1 | Lamar Jackson (QB1) 179.9, Justin Jefferson (WR4) 99.9, DK Metcalf (WR8) 88.3
+
+
+3. yrkpapi
+// 10-4, 806.86 PF, streak L1 | Alvin Kamara (RB2) 128.0, Josh Jacobs (RB16) 83.7, Baker Mayfield (QB2) 81.3
+
+
+4. Ankitty
+// 9-5, 844.60 PF, streak W5 | Derrick Henry (RB1) 157.0, Kenneth Walker (RB8) 99.8, Stefon Diggs (WR9) 88.2
+
+
+5. superdiddy
+// 8-6, 803.16 PF, streak W3 | Saquon Barkley (RB3) 124.1, Jalen Hurts (QB9) 94.3, Garrett Wilson (WR11) 87.5
+
+
+6. Ducky Irving
+// 7-7, 834.52 PF, streak W1 | Josh Allen (QB4) 139.2, Kyren Williams (RB4) 109.7, Breece Hall (RB7) 103.5
+
+
+7. ... Sanak al-Gaib!
+// 6-8, 796.72 PF, streak W2 | C.J. Stroud (QB12) 109.9, Drake London (WR3) 101.1, George Kittle (TE1) 84.5
+
+
+8. WE DID NOT DO IT
+// 6-8, 760.40 PF, streak L3 | James Conner (RB12) 91.3, Jayden Daniels (QB3) 85.4, Jonathan Taylor (RB25) 69.6
+
+
+9. Karans Fraud-book
+// 2-12, 776.24 PF, streak L7 | Jahmyr Gibbs (RB5) 106.2, Geno Smith (QB6) 90.8, James Cook (RB14) 87.9
+
+
+10. Braelon Allen
+// 3-11, 687.40 PF, streak L2 | Ka'imi Fairbairn (K3) 82.0, Patrick Mahomes (QB22) 76.4, DJ Moore (WR26) 65.7
+

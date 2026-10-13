@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 13 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Amver Alert🚨
+// 21-5, 1757.40 PF, streak L1 | De'Von Achane (RB5) 227.4, James Cook (RB6) 209.9, George Pickens (WR2) 180.9
+
+
+2. superdiddy
+// 17-9, 1781.76 PF, streak W1 | Jonathan Taylor (RB2) 280.1, Jalen Hurts (QB4) 237.4, Javonte Williams (RB7) 179.8
+
+
+3. 6 7
+// 13-13, 1568.84 PF, streak W4 | Christian McCaffrey (RB1) 286.0, Dak Prescott (QB5) 203.8, Chase Brown (RB17) 143.1
+
+
+4. Karans Fraudbook
+// 15-11, 1492.28 PF, streak L1 | Jaxon Smith-Njigba (WR1) 218.3, Kyren Williams (RB9) 173.2, Tetairoa McMillan (WR7) 138.6
+
+
+5. Ankitty
+// 13-13, 1533.08 PF, streak W2 | Jahmyr Gibbs (RB3) 245.1, Drake Maye (QB3) 195.2, Davante Adams (WR5) 178.9
+
+
+6. #NoToJunie
+// 12-14, 1546.20 PF, streak W1 | Josh Allen (QB1) 282.2, Bijan Robinson (RB4) 227.9, Rico Dowdle (RB11) 141.1
+
+
+7. Braelon Allen
+// 12-14, 1499.22 PF, streak W2 | Patrick Mahomes (QB2) 273.3, Saquon Barkley (RB15) 151.4, A.J. Brown (WR14) 133.9
+
+
+8. Ain't That Herb-tastic
+// 14-12, 1538.20 PF, streak L3 | Puka Nacua (WR4) 180.2, Josh Jacobs (RB8) 176.1, Breece Hall (RB14) 153.5
+
+
+9. yrkpapi
+// 7-19, 1495.58 PF, streak L5 | Justin Herbert (QB8) 136.8, Tyler Warren (TE3) 128.0, Emeka Egbuka (WR9) 126.3
+
+
+10. Cucked By JPow’s 25 Bps
+// 6-20, 1291.12 PF, streak L4 | Lamar Jackson (QB18) 158.0, Ashton Jeanty (RB13) 156.1, Justin Jefferson (WR21) 123.3
+

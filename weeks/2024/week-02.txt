@@ -1,0 +1,48 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Starting order is last week's ranking.
+
+TITLE: Week 2 Power Rankings
+// Optional intro: type it here, above the first team.
+
+
+1. Amver Alert🚨
+// 4-0, 283.12 PF, streak W2 | Kyler Murray (QB4) 42.7, Nico Collins (WR2) 38.2, Brandon Aubrey (K1) 38.0
+
+
+2. yrkpapi
+// 4-0, 271.14 PF, streak W2 | Alvin Kamara (RB1) 62.5, Anthony Richardson (QB8) 39.9, Jake Moody (K4) 31.0
+
+
+3. Not Last Place == W
+// 2-2, 257.10 PF, streak W1 | Lamar Jackson (QB5) 42.5, Justin Jefferson (WR4) 35.2, Isiah Pacheco (RB15) 28.4
+
+
+4. WE DID NOT DO IT
+// 2-2, 242.24 PF, streak L1 | James Conner (RB8) 36.7, Cooper Kupp (WR9) 30.7, Marvin Harrison (WR17) 27.9
+
+
+5. Ducky Irving
+// 2-2, 226.14 PF, streak L1 | Josh Allen (QB7) 40.9, Breece Hall (RB7) 36.7, Kyren Williams (RB19) 26.1
+
+
+6. superdiddy
+// 2-2, 222.94 PF, streak W1 | Saquon Barkley (RB2) 47.8, Jalen Hurts (QB3) 43.2, DeVonta Smith (WR14) 29.0
+
+
+7. Ankitty
+// 2-2, 202.48 PF, streak L1 | Tyreek Hill (WR18) 27.6, Derrick Henry (RB17) 26.7, Dak Prescott (QB15) 26.4
+
+
+8. ... Sanak al-Gaib!
+// 1-3, 219.56 PF, streak L2 | De'Von Achane (RB3) 45.5, C.J. Stroud (QB11) 33.0, CeeDee Lamb (WR16) 28.1
+
+
+9. Karans Fraud-book
+// 0-4, 220.06 PF, streak L2 | James Cook (RB5) 39.8, Malik Nabers (WR8) 32.8, Deebo Samuel (WR10) 30.2
+
+
+10. Braelon Allen
+// 1-3, 197.08 PF, streak W1 | Ka'imi Fairbairn (K2) 37.0, Rhamondre Stevenson (RB9) 36.1, David Montgomery (RB11) 30.8
+
