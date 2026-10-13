@@ -26,6 +26,7 @@ IMAGES = ROOT / "images"
 PLAYERS = ROOT / ".cache" / "players.json"
 API = "https://api.sleeper.app/v1"
 SITE_NAME = "Red Vines Fantasy Football"  # browser tab and link-preview title on every page
+RULE_BOOK_URL = "https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0"
 
 
 # ---------------------------------------------------------------- Sleeper data
@@ -381,7 +382,7 @@ def render_week(data, content, prev_rank, all_weeks, latest_week, base):
     note = "Records include a game against the league median each week. " if data.get("median_game") else ""
     intro = f'<section class="intro">{fmt(content["intro"], base)}</section>' if content["intro"] else ""
     return PAGE.format(title=e(content["title"]), league=e(data["league"]), season=e(season), week=week,
-                       site_name=e(SITE_NAME), logo=logo, nav=nav, years=years, intro=intro, rows="".join(rows),
+                       site_name=e(SITE_NAME), rule_book=e(RULE_BOOK_URL), logo=logo, nav=nav, years=years, intro=intro, rows="".join(rows),
                        note=note, css=CSS)
 
 
@@ -421,7 +422,10 @@ PAGE = """<!doctype html>
 <meta property="og:description" content="{season} Week {week} power rankings">
 <style>{css}</style></head>
 <body><div class="layout">
-<aside class="seasons"><div class="seasons-lbl">Season</div><div class="seasons-list">{years}</div></aside>
+<aside class="seasons">
+<div class="side-group"><div class="seasons-lbl">Season</div><div class="seasons-list">{years}</div></div>
+<div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="{rule_book}" target="_blank" rel="noopener">Rule Book ↗</a></div></div>
+</aside>
 <main class="wrap">
 <header>{logo}<div><div class="kicker">{league} · {season} · Week {week}</div><h1>{title}</h1></div></header>
 <nav>{nav}</nav>
@@ -438,7 +442,8 @@ CSS = """
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .layout{display:flex;max-width:1160px;margin:0 auto}
 .seasons{flex:none;width:150px;padding:40px 16px 0;position:sticky;top:0;align-self:flex-start}
-.seasons-lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px 10px}
+.side-group+.side-group{margin-top:28px}
+.seasons-lbl{color:var(--muted);font-size:.85rem;font-weight:600;margin:0 0 6px 10px}
 .seasons-list{display:flex;flex-direction:column;gap:2px}
 .seasons a{padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
 .seasons a:hover{background:var(--chip);color:var(--ink)}
@@ -446,7 +451,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-ap
 .wrap{flex:1;min-width:0;max-width:1000px;padding:32px 16px 64px}
 @media (max-width:760px){
   .layout{display:block}
-  .seasons{position:static;width:auto;padding:16px 16px 0;display:flex;align-items:center;gap:10px}
+  .seasons{position:static;width:auto;padding:16px 16px 0;display:flex;flex-wrap:wrap;gap:10px 24px}
+  .side-group{display:flex;align-items:center;gap:10px}
+  .side-group+.side-group{margin-top:0}
   .seasons-lbl{margin:0}
   .seasons-list{flex-direction:row;flex-wrap:wrap;gap:6px}
   .seasons a{padding:4px 12px}

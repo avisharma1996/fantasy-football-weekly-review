@@ -12,7 +12,8 @@
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .layout{display:flex;max-width:1160px;margin:0 auto}
 .seasons{flex:none;width:150px;padding:40px 16px 0;position:sticky;top:0;align-self:flex-start}
-.seasons-lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px 10px}
+.side-group+.side-group{margin-top:28px}
+.seasons-lbl{color:var(--muted);font-size:.85rem;font-weight:600;margin:0 0 6px 10px}
 .seasons-list{display:flex;flex-direction:column;gap:2px}
 .seasons a{padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
 .seasons a:hover{background:var(--chip);color:var(--ink)}
@@ -20,7 +21,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-ap
 .wrap{flex:1;min-width:0;max-width:1000px;padding:32px 16px 64px}
 @media (max-width:760px){
   .layout{display:block}
-  .seasons{position:static;width:auto;padding:16px 16px 0;display:flex;align-items:center;gap:10px}
+  .seasons{position:static;width:auto;padding:16px 16px 0;display:flex;flex-wrap:wrap;gap:10px 24px}
+  .side-group{display:flex;align-items:center;gap:10px}
+  .side-group+.side-group{margin-top:0}
   .seasons-lbl{margin:0}
   .seasons-list{flex-direction:row;flex-wrap:wrap;gap:6px}
   .seasons a{padding:4px 12px}
@@ -57,7 +60,10 @@ video.pic{max-height:360px}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 </style></head>
 <body><div class="layout">
-<aside class="seasons"><div class="seasons-lbl">Season</div><div class="seasons-list"><a href="../2026/week-05.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html" class=cur>2024</a></div></aside>
+<aside class="seasons">
+<div class="side-group"><div class="seasons-lbl">Season</div><div class="seasons-list"><a href="../2026/week-05.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html" class=cur>2024</a></div></div>
+<div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a></div></div>
+</aside>
 <main class="wrap">
 <header><img class="logo" src="https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f" alt=""><div><div class="kicker">Red Vines · 2024 · Week 13</div><h1>Week 13 Power Rankings</h1></div></header>
 <nav><a href="../2024/week-01.html">Wk 1</a><a href="../2024/week-02.html">Wk 2</a><a href="../2024/week-03.html">Wk 3</a><a href="../2024/week-04.html">Wk 4</a><a href="../2024/week-05.html">Wk 5</a><a href="../2024/week-06.html">Wk 6</a><a href="../2024/week-07.html">Wk 7</a><a href="../2024/week-08.html">Wk 8</a><a href="../2024/week-09.html">Wk 9</a><a href="../2024/week-10.html">Wk 10</a><a href="../2024/week-11.html">Wk 11</a><a href="../2024/week-12.html">Wk 12</a><a href="../2024/week-13.html" class=cur>Wk 13</a><a href="../2024/week-14.html">Wk 14</a></nav>
