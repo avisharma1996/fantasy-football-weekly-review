@@ -12,6 +12,7 @@ The season defaults to the newest one in config.json.
 import html
 import json
 import re
+import shutil
 import sys
 import time
 import urllib.request
@@ -21,6 +22,7 @@ ROOT = Path(__file__).parent
 CONFIG = ROOT / "config.json"
 WEEKS = ROOT / "weeks"
 SITE = ROOT / "docs"
+IMAGES = ROOT / "images"
 PLAYERS = ROOT / ".cache" / "players.json"
 API = "https://api.sleeper.app/v1"
 
@@ -236,6 +238,7 @@ def new_week(week, season=None):
         "// Lines starting with // are notes for you and won't show on the page.",
         "// Reorder the team lines into your ranking. The numbers don't matter; order does.",
         "// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.",
+        "// Pictures: save the file in the images folder, then write ![](file-name.png) on its own line.",
         "// Starting order is " + ("last week's ranking." if prev else "the standings."),
         "",
         f"TITLE: Week {week} Power Rankings",
@@ -298,11 +301,20 @@ def previous_ranking(season, week):
 
 # ---------------------------------------------------------------- website
 
-def fmt(text):
-    """Escape, then allow **bold**, *italic*, and blank-line paragraphs."""
+def fmt(text, base):
+    """Escape, then allow **bold**, *italic*, ![](image.png) from images/, and blank-line paragraphs."""
+    def image(m):
+        src = m.group(2)
+        if not src.startswith(("http://", "https://")):
+            if not (IMAGES / src).exists():
+                print(f"  warning: images/{src} not found")
+            src = f"{base}images/{src}"
+        return f'<img class="pic" src="{src}" alt="{m.group(1)}" loading="lazy">'
+
     out = []
     for para in re.split(r"\n\s*\n", text.strip()):
         p = html.escape(para.strip())
+        p = re.sub(r"!\[([^\]]*)\]\(([^)\s]+)\)", image, p)
         p = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", p)
         p = re.sub(r"\*(.+?)\*", r"<em>\1</em>", p)
         out.append(f"<p>{p.replace(chr(10), '<br>')}</p>")
@@ -335,7 +347,7 @@ def render_week(data, content, prev_rank, all_weeks, latest_week, base):
     <div class="rank-body">
       <div class="team">{avatar(t)}<div><h2>{e(t['name'])}</h2>
         <div class="meta"><b>{rec(t)}</b> · {t['pf']:.2f} PF{' · ' + t['streak'] if t['streak'] else ''}</div></div></div>
-      {f'<div class="blurb">{fmt(blurb)}</div>' if blurb else ''}
+      {f'<div class="blurb">{fmt(blurb, base)}</div>' if blurb else ''}
       {f'<ul class="top"><li class="lbl">Top performers</li>{top}</ul>' if top else ''}
     </div>
   </li>""")
@@ -346,7 +358,7 @@ def render_week(data, content, prev_rank, all_weeks, latest_week, base):
                     for s in sorted(latest_week, reverse=True))
     logo = f'<img class="logo" src="{e(data["league_avatar"])}" alt="">' if data.get("league_avatar") else ""
     note = "Records include a game against the league median each week. " if data.get("median_game") else ""
-    intro = f'<section class="intro">{fmt(content["intro"])}</section>' if content["intro"] else ""
+    intro = f'<section class="intro">{fmt(content["intro"], base)}</section>' if content["intro"] else ""
     return PAGE.format(title=e(content["title"]), league=e(data["league"]), season=e(season), week=week,
                        logo=logo, nav=nav, years=years, intro=intro, rows="".join(rows), note=note, css=CSS)
 
@@ -356,6 +368,8 @@ def build():
     if not seasons:
         sys.exit("No weeks yet. Run: py ffr.py new <week>")
     latest_week = {s: weeks_written(s)[-1] for s in seasons}
+    if IMAGES.exists():
+        shutil.copytree(IMAGES, SITE / "images", dirs_exist_ok=True)
     for s in seasons:
         weeks = weeks_written(s)
         (SITE / s).mkdir(parents=True, exist_ok=True)
@@ -433,6 +447,7 @@ nav a.cur{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .team{display:flex;gap:12px;align-items:center}
 .meta{color:var(--muted);font-size:.88rem}.meta b{color:var(--ink)}
 .av{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;background:var(--line);display:inline-flex;align-items:center;justify-content:center;font-weight:700;color:var(--muted)}
+.pic{display:block;max-width:100%;max-height:260px;height:auto;border-radius:8px;margin:6px 0}
 .blurb{margin-top:10px}.blurb p{margin:.5em 0 0}.blurb p:first-child{margin-top:0}
 .top{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.85rem}
 .top li{background:var(--chip);border-radius:8px;padding:3px 9px;display:flex;gap:6px;align-items:baseline}
