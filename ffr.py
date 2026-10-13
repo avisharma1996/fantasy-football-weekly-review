@@ -25,6 +25,7 @@ SITE = ROOT / "docs"
 IMAGES = ROOT / "images"
 PLAYERS = ROOT / ".cache" / "players.json"
 API = "https://api.sleeper.app/v1"
+SITE_NAME = "Red Vines Fantasy Football"  # browser tab and link-preview title on every page
 
 
 # ---------------------------------------------------------------- Sleeper data
@@ -380,7 +381,8 @@ def render_week(data, content, prev_rank, all_weeks, latest_week, base):
     note = "Records include a game against the league median each week. " if data.get("median_game") else ""
     intro = f'<section class="intro">{fmt(content["intro"], base)}</section>' if content["intro"] else ""
     return PAGE.format(title=e(content["title"]), league=e(data["league"]), season=e(season), week=week,
-                       logo=logo, nav=nav, years=years, intro=intro, rows="".join(rows), note=note, css=CSS)
+                       site_name=e(SITE_NAME), logo=logo, nav=nav, years=years, intro=intro, rows="".join(rows),
+                       note=note, css=CSS)
 
 
 def build():
@@ -413,9 +415,10 @@ def build():
 PAGE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{title} · {league}</title>
-<meta property="og:title" content="{title} · {league}">
-<meta property="og:description" content="Week {week} power rankings">
+<title>{site_name}</title>
+<meta property="og:title" content="{site_name}">
+<meta property="og:site_name" content="{site_name}">
+<meta property="og:description" content="{season} Week {week} power rankings">
 <style>{css}</style></head>
 <body><div class="layout">
 <aside class="seasons"><div class="seasons-lbl">Season</div><div class="seasons-list">{years}</div></aside>
