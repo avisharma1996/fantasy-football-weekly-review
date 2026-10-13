@@ -8,11 +8,24 @@
     "1": {
       "name": "#NoToJunie",
       "manager": "avian96",
+      "owner": "1129665810802278400",
       "avatar": "https://sleepercdn.com/uploads/a2b1e540f6130fba129542566222606d.jpg",
       "wins": 14,
       "losses": 14,
       "ties": 0,
       "pf": 1661.44,
+      "ap_wins": 64,
+      "ap_losses": 62,
+      "h2h_wins": 6.0,
+      "exp_wins": 7.11,
+      "bench": 146.7,
+      "bench_week": 9.3,
+      "bench_miss": {
+        "pts": 10.9,
+        "name": "Kimani Vidal",
+        "pos": "RB"
+      },
+      "luck": -1.11,
       "streak": "W2",
       "top": [
         {
@@ -58,11 +71,24 @@
     "2": {
       "name": "Karans Fraudbook",
       "manager": "kgids",
+      "owner": "1129574561793630208",
       "avatar": "https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg",
       "wins": 15,
       "losses": 13,
       "ties": 0,
       "pf": 1601.64,
+      "ap_wins": 62,
+      "ap_losses": 64,
+      "h2h_wins": 8.0,
+      "exp_wins": 6.89,
+      "bench": 246.54,
+      "bench_week": 13.5,
+      "bench_miss": {
+        "pts": 14.7,
+        "name": "Rashid Shaheed",
+        "pos": "WR"
+      },
+      "luck": 1.11,
       "streak": "L2",
       "top": [
         {
@@ -108,11 +134,24 @@
     "3": {
       "name": "Ankitty",
       "manager": "bruhking123",
+      "owner": "1085126678843682816",
       "avatar": "https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg",
       "wins": 15,
       "losses": 13,
       "ties": 0,
       "pf": 1645.56,
+      "ap_wins": 60,
+      "ap_losses": 66,
+      "h2h_wins": 7.0,
+      "exp_wins": 6.67,
+      "bench": 174.92,
+      "bench_week": 23.0,
+      "bench_miss": {
+        "pts": 15.1,
+        "name": "Jerry Jeudy",
+        "pos": "WR"
+      },
+      "luck": 0.33,
       "streak": "W3",
       "top": [
         {
@@ -158,11 +197,24 @@
     "4": {
       "name": "Braelon Allen",
       "manager": "nmadan",
+      "owner": "535242776309989376",
       "avatar": "https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg",
       "wins": 12,
       "losses": 16,
       "ties": 0,
       "pf": 1606.52,
+      "ap_wins": 59,
+      "ap_losses": 67,
+      "h2h_wins": 6.0,
+      "exp_wins": 6.56,
+      "bench": 200.9,
+      "bench_week": 23.16,
+      "bench_miss": {
+        "pts": 19.36,
+        "name": "Trevor Lawrence",
+        "pos": "QB"
+      },
+      "luck": -0.56,
       "streak": "L1",
       "top": [
         {
@@ -208,11 +260,24 @@
     "5": {
       "name": "Amver Alert🚨",
       "manager": "amver",
+      "owner": "1002009644597993472",
       "avatar": "https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg",
       "wins": 23,
       "losses": 5,
       "ties": 0,
       "pf": 1887.36,
+      "ap_wins": 97,
+      "ap_losses": 29,
+      "h2h_wins": 11.0,
+      "exp_wins": 10.78,
+      "bench": 180.32,
+      "bench_week": 25.5,
+      "bench_miss": {
+        "pts": 28.1,
+        "name": "Tony Pollard",
+        "pos": "RB"
+      },
+      "luck": 0.22,
       "streak": "W1",
       "top": [
         {
@@ -258,11 +323,24 @@
     "6": {
       "name": "6 7",
       "manager": "amach124",
+      "owner": "471050766644146176",
       "avatar": "https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg",
       "wins": 13,
       "losses": 15,
       "ties": 0,
       "pf": 1676.18,
+      "ap_wins": 60,
+      "ap_losses": 66,
+      "h2h_wins": 8.0,
+      "exp_wins": 6.67,
+      "bench": 160.28,
+      "bench_week": 21.5,
+      "bench_miss": {
+        "pts": 25.6,
+        "name": "Blake Corum",
+        "pos": "RB"
+      },
+      "luck": 1.33,
       "streak": "L1",
       "top": [
         {
@@ -308,11 +386,24 @@
     "7": {
       "name": "yrkpapi",
       "manager": "yrkpapi",
+      "owner": "873130597315481600",
       "avatar": "https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e",
       "wins": 8,
       "losses": 20,
       "ties": 0,
       "pf": 1614.28,
+      "ap_wins": 56,
+      "ap_losses": 70,
+      "h2h_wins": 3.0,
+      "exp_wins": 6.22,
+      "bench": 267.96,
+      "bench_week": 21.16,
+      "bench_miss": {
+        "pts": 13.16,
+        "name": "Justin Herbert",
+        "pos": "QB"
+      },
+      "luck": -3.22,
       "streak": "L6",
       "top": [
         {
@@ -358,11 +449,24 @@
     "8": {
       "name": "Cucked By JPow’s 25 Bps",
       "manager": "roheezy",
+      "owner": "470927114183372800",
       "avatar": "https://sleepercdn.com/uploads/ac1f715e03d9439ae0332082ccb4fddd",
       "wins": 6,
       "losses": 22,
       "ties": 0,
       "pf": 1382.88,
+      "ap_wins": 27,
+      "ap_losses": 99,
+      "h2h_wins": 4.0,
+      "exp_wins": 3.0,
+      "bench": 236.0,
+      "bench_week": 12.3,
+      "bench_miss": {
+        "pts": 11.0,
+        "name": "Jacksonville Jaguars D/ST",
+        "pos": "DEF"
+      },
+      "luck": 1.0,
       "streak": "L5",
       "top": [
         {
@@ -408,11 +512,24 @@
     "9": {
       "name": "superdiddy",
       "manager": "jallerbo",
+      "owner": "1084605692373233664",
       "avatar": "https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg",
       "wins": 18,
       "losses": 10,
       "ties": 0,
       "pf": 1887.96,
+      "ap_wins": 80,
+      "ap_losses": 46,
+      "h2h_wins": 9.0,
+      "exp_wins": 8.89,
+      "bench": 188.76,
+      "bench_week": 16.8,
+      "bench_miss": {
+        "pts": 16.6,
+        "name": "Zay Flowers",
+        "pos": "WR"
+      },
+      "luck": 0.11,
       "streak": "W2",
       "top": [
         {
@@ -458,11 +575,24 @@
     "10": {
       "name": "Ain't That Herb-tastic",
       "manager": "ZebroGodilla",
+      "owner": "1132924651295956992",
       "avatar": "https://sleepercdn.com/uploads/8c1f57470cf91452d838f4c11283f98f.jpg",
       "wins": 16,
       "losses": 12,
       "ties": 0,
       "pf": 1698.44,
+      "ap_wins": 65,
+      "ap_losses": 61,
+      "h2h_wins": 8.0,
+      "exp_wins": 7.22,
+      "bench": 199.2,
+      "bench_week": 1.1,
+      "bench_miss": {
+        "pts": 5.4,
+        "name": "John Metchie",
+        "pos": "WR"
+      },
+      "luck": 0.78,
       "streak": "W1",
       "top": [
         {
@@ -505,5 +635,37 @@
         }
       ]
     }
-  }
+  },
+  "matchups": [
+    {
+      "a": "1",
+      "a_pts": 115.24,
+      "b": "2",
+      "b_pts": 109.36
+    },
+    {
+      "a": "3",
+      "a_pts": 112.48,
+      "b": "4",
+      "b_pts": 107.3
+    },
+    {
+      "a": "5",
+      "a_pts": 129.96,
+      "b": "6",
+      "b_pts": 107.34
+    },
+    {
+      "a": "7",
+      "a_pts": 118.7,
+      "b": "10",
+      "b_pts": 160.24
+    },
+    {
+      "a": "8",
+      "a_pts": 91.76,
+      "b": "9",
+      "b_pts": 106.2
+    }
+  ]
 }

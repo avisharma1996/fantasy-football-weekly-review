@@ -8,11 +8,24 @@
     "1": {
       "name": "#NoToJunie",
       "manager": "avian96",
+      "owner": "1129665810802278400",
       "avatar": "https://sleepercdn.com/uploads/a2b1e540f6130fba129542566222606d.jpg",
       "wins": 6,
       "losses": 10,
       "ties": 0,
       "pf": 901.42,
+      "ap_wins": 30,
+      "ap_losses": 42,
+      "h2h_wins": 2.0,
+      "exp_wins": 3.33,
+      "bench": 96.3,
+      "bench_week": 23.5,
+      "bench_miss": {
+        "pts": 15.4,
+        "name": "Isaiah Davis",
+        "pos": "RB"
+      },
+      "luck": -1.33,
       "streak": "L2",
       "top": [
         {
@@ -58,11 +71,24 @@
     "2": {
       "name": "Karans Fraudbook",
       "manager": "kgids",
+      "owner": "1129574561793630208",
       "avatar": "https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg",
       "wins": 8,
       "losses": 8,
       "ties": 0,
       "pf": 921.06,
+      "ap_wins": 37,
+      "ap_losses": 35,
+      "h2h_wins": 4.0,
+      "exp_wins": 4.11,
+      "bench": 124.9,
+      "bench_week": 17.8,
+      "bench_miss": {
+        "pts": 17.8,
+        "name": "Khalil Shakir",
+        "pos": "WR"
+      },
+      "luck": -0.11,
       "streak": "L2",
       "top": [
         {
@@ -108,11 +134,24 @@
     "3": {
       "name": "Ankitty",
       "manager": "bruhking123",
+      "owner": "1085126678843682816",
       "avatar": "https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg",
       "wins": 7,
       "losses": 9,
       "ties": 0,
       "pf": 933.34,
+      "ap_wins": 31,
+      "ap_losses": 41,
+      "h2h_wins": 3.0,
+      "exp_wins": 3.44,
+      "bench": 111.06,
+      "bench_week": 5.0,
+      "bench_miss": {
+        "pts": 27.28,
+        "name": "Drake Maye",
+        "pos": "QB"
+      },
+      "luck": -0.44,
       "streak": "L1",
       "top": [
         {
@@ -158,11 +197,20 @@
     "4": {
       "name": "Braelon Allen",
       "manager": "nmadan",
+      "owner": "535242776309989376",
       "avatar": "https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg",
       "wins": 6,
       "losses": 10,
       "ties": 0,
       "pf": 881.46,
+      "ap_wins": 30,
+      "ap_losses": 42,
+      "h2h_wins": 3.0,
+      "exp_wins": 3.33,
+      "bench": 116.5,
+      "bench_week": 0,
+      "bench_miss": null,
+      "luck": -0.33,
       "streak": "L1",
       "top": [
         {
@@ -208,11 +256,24 @@
     "5": {
       "name": "Amver Alert🚨",
       "manager": "amver",
+      "owner": "1002009644597993472",
       "avatar": "https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg",
       "wins": 12,
       "losses": 4,
       "ties": 0,
       "pf": 1051.02,
+      "ap_wins": 50,
+      "ap_losses": 22,
+      "h2h_wins": 6.0,
+      "exp_wins": 5.56,
+      "bench": 118.14,
+      "bench_week": 0.4,
+      "bench_miss": {
+        "pts": 5.8,
+        "name": "Tony Pollard",
+        "pos": "RB"
+      },
+      "luck": 0.44,
       "streak": "W3",
       "top": [
         {
@@ -258,11 +319,24 @@
     "6": {
       "name": "6 7",
       "manager": "amach124",
+      "owner": "471050766644146176",
       "avatar": "https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg",
       "wins": 6,
       "losses": 10,
       "ties": 0,
       "pf": 914.76,
+      "ap_wins": 29,
+      "ap_losses": 43,
+      "h2h_wins": 4.0,
+      "exp_wins": 3.22,
+      "bench": 96.98,
+      "bench_week": 20.9,
+      "bench_miss": {
+        "pts": 23.6,
+        "name": "RJ Harvey",
+        "pos": "RB"
+      },
+      "luck": 0.78,
       "streak": "L3",
       "top": [
         {
@@ -308,11 +382,24 @@
     "7": {
       "name": "yrkpapi",
       "manager": "yrkpapi",
+      "owner": "873130597315481600",
       "avatar": "https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e",
       "wins": 7,
       "losses": 9,
       "ties": 0,
       "pf": 952.94,
+      "ap_wins": 35,
+      "ap_losses": 37,
+      "h2h_wins": 3.0,
+      "exp_wins": 3.89,
+      "bench": 143.28,
+      "bench_week": 9.92,
+      "bench_miss": {
+        "pts": 28.3,
+        "name": "Jordan Love",
+        "pos": "QB"
+      },
+      "luck": -0.89,
       "streak": "W2",
       "top": [
         {
@@ -358,11 +445,24 @@
     "8": {
       "name": "Cucked By JPow’s 25 Bps",
       "manager": "roheezy",
+      "owner": "470927114183372800",
       "avatar": "https://sleepercdn.com/uploads/ac1f715e03d9439ae0332082ccb4fddd",
       "wins": 4,
       "losses": 12,
       "ties": 0,
       "pf": 844.14,
+      "ap_wins": 21,
+      "ap_losses": 51,
+      "h2h_wins": 3.0,
+      "exp_wins": 2.33,
+      "bench": 149.2,
+      "bench_week": 12.5,
+      "bench_miss": {
+        "pts": 15.0,
+        "name": "Kayshon Boutte",
+        "pos": "WR"
+      },
+      "luck": 0.67,
       "streak": "W1",
       "top": [
         {
@@ -408,11 +508,24 @@
     "9": {
       "name": "superdiddy",
       "manager": "jallerbo",
+      "owner": "1084605692373233664",
       "avatar": "https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg",
       "wins": 12,
       "losses": 4,
       "ties": 0,
       "pf": 1165.98,
+      "ap_wins": 55,
+      "ap_losses": 17,
+      "h2h_wins": 6.0,
+      "exp_wins": 6.11,
+      "bench": 119.76,
+      "bench_week": 0.6,
+      "bench_miss": {
+        "pts": 10.6,
+        "name": "Zay Flowers",
+        "pos": "WR"
+      },
+      "luck": -0.11,
       "streak": "W4",
       "top": [
         {
@@ -458,11 +571,24 @@
     "10": {
       "name": "Ain't That Herb-tastic",
       "manager": "ZebroGodilla",
+      "owner": "1132924651295956992",
       "avatar": "https://sleepercdn.com/uploads/8c1f57470cf91452d838f4c11283f98f.jpg",
       "wins": 12,
       "losses": 4,
       "ties": 0,
       "pf": 984.7,
+      "ap_wins": 42,
+      "ap_losses": 30,
+      "h2h_wins": 6.0,
+      "exp_wins": 4.67,
+      "bench": 146.86,
+      "bench_week": 3.8,
+      "bench_miss": {
+        "pts": 7.2,
+        "name": "Elic Ayomanor",
+        "pos": "WR"
+      },
+      "luck": 1.33,
       "streak": "W1",
       "top": [
         {
@@ -505,5 +631,37 @@
         }
       ]
     }
-  }
+  },
+  "matchups": [
+    {
+      "a": "1",
+      "a_pts": 81.92,
+      "b": "9",
+      "b_pts": 176.76
+    },
+    {
+      "a": "2",
+      "a_pts": 117.32,
+      "b": "7",
+      "b_pts": 130.78
+    },
+    {
+      "a": "3",
+      "a_pts": 101.28,
+      "b": "8",
+      "b_pts": 104.48
+    },
+    {
+      "a": "4",
+      "a_pts": 119.06,
+      "b": "5",
+      "b_pts": 140.0
+    },
+    {
+      "a": "6",
+      "a_pts": 99.52,
+      "b": "10",
+      "b_pts": 144.54
+    }
+  ]
 }

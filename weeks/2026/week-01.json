@@ -8,11 +8,24 @@
     "1": {
       "name": "Baltimore Avians",
       "manager": "avian96",
+      "owner": "1129665810802278400",
       "avatar": "https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg",
       "wins": 1,
       "losses": 1,
       "ties": 0,
       "pf": 119.76,
+      "ap_wins": 5,
+      "ap_losses": 6,
+      "h2h_wins": 1.0,
+      "exp_wins": 0.45,
+      "bench": 22.88,
+      "bench_week": 22.88,
+      "bench_miss": {
+        "pts": 16.44,
+        "name": "Jared Goff",
+        "pos": "QB"
+      },
+      "luck": 0.55,
       "streak": "W1",
       "top": [
         {
@@ -58,11 +71,20 @@
     "2": {
       "name": "Karans Sportsbook",
       "manager": "kgids",
+      "owner": "1129574561793630208",
       "avatar": "https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg",
       "wins": 1,
       "losses": 1,
       "ties": 0,
       "pf": 101.02,
+      "ap_wins": 2,
+      "ap_losses": 9,
+      "h2h_wins": 1.0,
+      "exp_wins": 0.18,
+      "bench": 0.0,
+      "bench_week": 0.0,
+      "bench_miss": null,
+      "luck": 0.82,
       "streak": "W1",
       "top": [
         {
@@ -108,11 +130,24 @@
     "3": {
       "name": "Ankitty",
       "manager": "bruhking123",
+      "owner": "1085126678843682816",
       "avatar": "https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg",
       "wins": 0,
       "losses": 2,
       "ties": 0,
       "pf": 97.82,
+      "ap_wins": 1,
+      "ap_losses": 10,
+      "h2h_wins": 0.0,
+      "exp_wins": 0.09,
+      "bench": 1.0,
+      "bench_week": 1.0,
+      "bench_miss": {
+        "pts": 1.0,
+        "name": "Makai Lemon",
+        "pos": "WR"
+      },
+      "luck": -0.09,
       "streak": "L1",
       "top": [
         {
@@ -158,11 +193,24 @@
     "4": {
       "name": "Braelon Allen",
       "manager": "nmadan",
+      "owner": "535242776309989376",
       "avatar": "https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg",
       "wins": 1,
       "losses": 1,
       "ties": 0,
       "pf": 132.46,
+      "ap_wins": 6,
+      "ap_losses": 5,
+      "h2h_wins": 0.0,
+      "exp_wins": 0.55,
+      "bench": 5.8,
+      "bench_week": 5.8,
+      "bench_miss": {
+        "pts": 9.9,
+        "name": "Kenyon Sadiq",
+        "pos": "TE"
+      },
+      "luck": -0.55,
       "streak": "L1",
       "top": [
         {
@@ -208,11 +256,24 @@
     "5": {
       "name": "Amver Alert🚨",
       "manager": "amver",
+      "owner": "1002009644597993472",
       "avatar": "https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg",
       "wins": 2,
       "losses": 0,
       "ties": 0,
       "pf": 172.46,
+      "ap_wins": 11,
+      "ap_losses": 0,
+      "h2h_wins": 1.0,
+      "exp_wins": 1.0,
+      "bench": 29.5,
+      "bench_week": 29.5,
+      "bench_miss": {
+        "pts": 19.4,
+        "name": "Kyle Monangai",
+        "pos": "RB"
+      },
+      "luck": 0.0,
       "streak": "W1",
       "top": [
         {
@@ -258,11 +319,20 @@
     "6": {
       "name": "6 7",
       "manager": "amach124",
+      "owner": "471050766644146176",
       "avatar": "https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg",
       "wins": 1,
       "losses": 1,
       "ties": 0,
       "pf": 135.8,
+      "ap_wins": 7,
+      "ap_losses": 4,
+      "h2h_wins": 0.0,
+      "exp_wins": 0.64,
+      "bench": 0.0,
+      "bench_week": 0.0,
+      "bench_miss": null,
+      "luck": -0.64,
       "streak": "L1",
       "top": [
         {
@@ -308,11 +378,24 @@
     "7": {
       "name": "yrkpapi",
       "manager": "yrkpapi",
+      "owner": "873130597315481600",
       "avatar": "https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e",
       "wins": 0,
       "losses": 2,
       "ties": 0,
       "pf": 106.16,
+      "ap_wins": 3,
+      "ap_losses": 8,
+      "h2h_wins": 0.0,
+      "exp_wins": 0.27,
+      "bench": 9.1,
+      "bench_week": 9.1,
+      "bench_miss": {
+        "pts": 8.3,
+        "name": "David Njoku",
+        "pos": "TE"
+      },
+      "luck": -0.27,
       "streak": "L1",
       "top": [
         {
@@ -358,11 +441,24 @@
     "8": {
       "name": "I’m Whipped by Bezos",
       "manager": "roheezy",
+      "owner": "470927114183372800",
       "avatar": "https://sleepercdn.com/uploads/1e1f1094e8d4b98b25130a8d3c0cf063.jpg",
       "wins": 0,
       "losses": 2,
       "ties": 0,
       "pf": 93.9,
+      "ap_wins": 0,
+      "ap_losses": 11,
+      "h2h_wins": 0.0,
+      "exp_wins": 0.0,
+      "bench": 15.9,
+      "bench_week": 15.9,
+      "bench_miss": {
+        "pts": 14.3,
+        "name": "Dontayvion Wicks",
+        "pos": "WR"
+      },
+      "luck": 0.0,
       "streak": "L1",
       "top": [
         {
@@ -408,11 +504,24 @@
     "9": {
       "name": "superdiddy",
       "manager": "jallerbo",
+      "owner": "1084605692373233664",
       "avatar": "https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg",
       "wins": 2,
       "losses": 0,
       "ties": 0,
       "pf": 142.2,
+      "ap_wins": 9,
+      "ap_losses": 2,
+      "h2h_wins": 1.0,
+      "exp_wins": 0.82,
+      "bench": 2.7,
+      "bench_week": 2.7,
+      "bench_miss": {
+        "pts": 6.2,
+        "name": "Michael Mayer",
+        "pos": "TE"
+      },
+      "luck": 0.18,
       "streak": "W1",
       "top": [
         {
@@ -458,11 +567,24 @@
     "10": {
       "name": "Justin Beer Loyalist",
       "manager": "ZebroGodilla",
+      "owner": "1132924651295956992",
       "avatar": "https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg",
       "wins": 2,
       "losses": 0,
       "ties": 0,
       "pf": 138.06,
+      "ap_wins": 8,
+      "ap_losses": 3,
+      "h2h_wins": 1.0,
+      "exp_wins": 0.73,
+      "bench": 8.6,
+      "bench_week": 8.6,
+      "bench_miss": {
+        "pts": 10.0,
+        "name": "Aaron Jones",
+        "pos": "RB"
+      },
+      "luck": 0.27,
       "streak": "W1",
       "top": [
         {
@@ -508,11 +630,24 @@
     "11": {
       "name": "NShah19",
       "manager": "NShah19",
+      "owner": "536026305198518272",
       "avatar": "https://sleepercdn.com/avatars/thumbs/4fb394f49d806fbad75dd79ecc68f525",
       "wins": 0,
       "losses": 2,
       "ties": 0,
       "pf": 110.66,
+      "ap_wins": 4,
+      "ap_losses": 7,
+      "h2h_wins": 0.0,
+      "exp_wins": 0.36,
+      "bench": 12.3,
+      "bench_week": 12.3,
+      "bench_miss": {
+        "pts": 13.5,
+        "name": "Stefon Diggs",
+        "pos": "WR"
+      },
+      "luck": -0.36,
       "streak": "L1",
       "top": [
         {
@@ -558,11 +693,24 @@
     "12": {
       "name": "Shivxn",
       "manager": "Shivxn",
+      "owner": "1392294069287256064",
       "avatar": "https://sleepercdn.com/avatars/thumbs/d55d1f7075eda01948318de4af616075",
       "wins": 2,
       "losses": 0,
       "ties": 0,
       "pf": 159.46,
+      "ap_wins": 10,
+      "ap_losses": 1,
+      "h2h_wins": 1.0,
+      "exp_wins": 0.91,
+      "bench": 10.3,
+      "bench_week": 10.3,
+      "bench_miss": {
+        "pts": 15.0,
+        "name": "Deebo Samuel",
+        "pos": "WR"
+      },
+      "luck": 0.09,
       "streak": "W1",
       "top": [
         {
@@ -605,5 +753,43 @@
         }
       ]
     }
-  }
+  },
+  "matchups": [
+    {
+      "a": "1",
+      "a_pts": 119.76,
+      "b": "3",
+      "b_pts": 97.82
+    },
+    {
+      "a": "2",
+      "a_pts": 101.02,
+      "b": "8",
+      "b_pts": 93.9
+    },
+    {
+      "a": "4",
+      "a_pts": 132.46,
+      "b": "5",
+      "b_pts": 172.46
+    },
+    {
+      "a": "6",
+      "a_pts": 135.8,
+      "b": "10",
+      "b_pts": 138.06
+    },
+    {
+      "a": "7",
+      "a_pts": 106.16,
+      "b": "12",
+      "b_pts": 159.46
+    },
+    {
+      "a": "9",
+      "a_pts": 142.2,
+      "b": "11",
+      "b_pts": 110.66
+    }
+  ]
 }

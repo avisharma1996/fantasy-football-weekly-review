@@ -10,12 +10,12 @@
 @media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.layout{display:flex;max-width:1160px;margin:0 auto}
-.seasons{flex:none;width:150px;padding:40px 16px 0;position:sticky;top:0;align-self:flex-start}
+.layout{display:flex;max-width:1180px;margin:0 auto}
+.seasons{flex:none;width:172px;padding:40px 16px 0;position:sticky;top:0;align-self:flex-start}
 .side-group+.side-group{margin-top:28px}
 .seasons-lbl{color:var(--muted);font-size:.85rem;font-weight:600;margin:0 0 6px 10px}
 .seasons-list{display:flex;flex-direction:column;gap:2px}
-.seasons a{padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
+.seasons a{white-space:nowrap;padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
 .seasons a:hover{background:var(--chip);color:var(--ink)}
 .seasons a.cur{background:var(--card);color:var(--ink);box-shadow:inset 3px 0 0 var(--ink),0 0 0 1px var(--line)}
 .wrap{flex:1;min-width:0;max-width:1000px;padding:32px 16px 64px}
@@ -77,10 +77,33 @@ h3{font-size:.95rem;margin:22px 0 8px;color:var(--muted)}
 .bids .zero .amt{color:var(--muted);font-weight:600}
 .bids .pos{color:var(--muted);font-size:.72rem;font-weight:700}
 .bids .beat{color:var(--muted);font-size:.85rem}
+.awards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.award{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.award .lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.award .who{font-weight:700;margin-top:2px}
+.award .val{color:var(--muted);font-size:.88rem}
+section+section .sec,.ranks+section .sec{margin-top:36px}
+.who small,.tn small{display:block;color:var(--muted);font-weight:400;font-size:.75rem}
+.tn small{display:inline}
+.tn .who small{display:block}
+.records{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:4px 16px}
+.records h3{margin-top:14px}
+.records .amt{min-width:3.6em}
+.h2h td,.h2h th{padding:8px 10px;text-align:center}
+.h2h th.col{vertical-align:bottom}
+.h2h th.col .av{width:26px;height:26px;display:flex;margin:0 auto 4px;font-size:.7rem}
+.h2h th.col span{display:block;font-size:.7rem;text-transform:none;letter-spacing:0;max-width:72px;overflow:hidden;text-overflow:ellipsis}
+.h2h td.tn,.h2h th.tn{text-align:left}
+.h2h .tot{font-weight:700}
+.h2h .win{background:color-mix(in srgb,var(--up) 16%,transparent);color:var(--up);font-weight:600}
+.h2h .loss{background:color-mix(in srgb,var(--down) 13%,transparent);color:var(--down)}
+.h2h .even{color:var(--muted)}
+.h2h .none,.h2h .self{color:var(--line)}
+.h2h .self{background:var(--chip)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 </style></head>
 <body><div class="layout">
-<aside class="seasons"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-05.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html">2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2025/faab.html" class=cur>FAAB Tracker</a></div></div></aside>
+<aside class="seasons"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-05.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html">2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2025/faab.html" class=cur>FAAB Tracker</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a></div></div></aside>
 <main class="wrap">
 <header><img class="logo" src="https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f" alt=""><div><div class="kicker">Red Vines · 2025</div><h1>FAAB Tracker</h1></div></header>
 <nav><a href="../2026/faab.html">2026</a><a href="../2025/faab.html" class=cur>2025</a><a href="../2024/faab.html">2024</a></nav>

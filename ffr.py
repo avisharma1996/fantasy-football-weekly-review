@@ -22,6 +22,7 @@ ROOT = Path(__file__).parent
 CONFIG = ROOT / "config.json"
 WEEKS = ROOT / "weeks"
 SITE = ROOT / "docs"
+HISTORY = WEEKS / "history.json"
 IMAGES = ROOT / "images"
 PLAYERS = ROOT / ".cache" / "players.json"
 API = "https://api.sleeper.app/v1"
@@ -77,15 +78,18 @@ def load_players(ids):
     """Map every player id to name and position. Sleeper's player list is large, so keep a slim local copy."""
     names = json.loads(PLAYERS.read_text(encoding="utf-8")) if PLAYERS.exists() else {}
     stale = not PLAYERS.exists() or time.time() - PLAYERS.stat().st_mtime > 7 * 86400
-    if stale or any(i not in names for i in ids):
+    old_format = names and "fpos" not in next(iter(names.values()))
+    if stale or old_format or any(i not in names for i in ids):
         print("Downloading Sleeper player list...")
         names = {}
         for pid, p in get("/players/nfl").items():
-            if p.get("position") == "DEF":
-                names[pid] = {"name": f"{p.get('first_name', '')} {p.get('last_name', '')} D/ST".strip(), "pos": "DEF"}
+            pos = p.get("position") or ""
+            if pos == "DEF":
+                name = f"{p.get('first_name', '')} {p.get('last_name', '')} D/ST".strip()
             else:
-                names[pid] = {"name": p.get("full_name") or f"{p.get('first_name', '')} {p.get('last_name', '')}".strip(),
-                              "pos": p.get("position") or ""}
+                name = p.get("full_name") or f"{p.get('first_name', '')} {p.get('last_name', '')}".strip()
+            # fpos: every lineup position the player is eligible for.
+            names[pid] = {"name": name, "pos": pos, "fpos": p.get("fantasy_positions") or [pos]}
         PLAYERS.parent.mkdir(exist_ok=True)
         PLAYERS.write_text(json.dumps(names), encoding="utf-8")
     return names
@@ -115,6 +119,25 @@ def position_ranks(season, week, scoring, players):
     return rank(totals), rank(this_week)
 
 
+SLOT_FITS = {"FLEX": {"RB", "WR", "TE"}, "SUPER_FLEX": {"QB", "RB", "WR", "TE"}, "REC_FLEX": {"WR", "TE"},
+             "WRRB_FLEX": {"RB", "WR"}, "IDP_FLEX": {"DL", "LB", "DB"}}
+
+
+def best_lineup(points, slots, players):
+    """Highest-scoring legal lineup from a roster's points. Filling the most restrictive slots first is optimal
+    because flex slots only ever widen eligibility."""
+    fits = lambda slot: SLOT_FITS.get(slot, {slot})
+    used, total = set(), 0.0
+    for slot in sorted(slots, key=lambda s: len(fits(s))):
+        options = [(p or 0, pid) for pid, p in points.items()
+                   if pid not in used and fits(slot) & set(players.get(pid, {}).get("fpos") or [])]
+        if options:
+            p, pid = max(options)
+            used.add(pid)
+            total += p
+    return total, used
+
+
 def avatar_url(user):
     meta = user.get("metadata") or {}
     if meta.get("avatar"):
@@ -132,6 +155,8 @@ def fetch_week(league_id, week):
     settings = league.get("settings") or {}
     playoff_start = settings.get("playoff_week_start") or 99
     median_game = settings.get("league_average_match") == 1
+    slots = [s for s in league.get("roster_positions") or [] if s not in ("BN", "IR", "TAXI")]
+    players = load_players(set())
 
     teams, starter_pts, week_pts = {}, {}, {}
     for r in rosters:
@@ -140,24 +165,49 @@ def fetch_week(league_id, week):
         teams[r["roster_id"]] = {
             "name": meta.get("team_name") or u.get("display_name") or f"Team {r['roster_id']}",
             "manager": u.get("display_name", ""),
+            "owner": r.get("owner_id"),
             "avatar": avatar_url(u) if u else None,
             "wins": 0, "losses": 0, "ties": 0, "pf": 0.0, "results": [],
+            # All-play: record against every team each week. Luck: actual minus expected head-to-head wins.
+            "ap_wins": 0, "ap_losses": 0, "h2h_wins": 0.0, "exp_wins": 0.0,
+            # Bench: points the best possible lineup would have added.
+            "bench": 0.0, "bench_week": 0.0, "bench_miss": None,
         }
         starter_pts[r["roster_id"]] = {}
         week_pts[r["roster_id"]] = {}
 
+    this_week = []
     for w in range(1, week + 1):
         entries = get(f"/league/{league_id}/matchups/{w}")
         pts = {e["roster_id"]: float(e.get("custom_points") or e.get("points") or 0) for e in entries}
         regular = w < playoff_start
 
         for e in entries:
-            totals = starter_pts[e["roster_id"]]
+            rid = e["roster_id"]
+            totals = starter_pts[rid]
             for pid, p in zip(e.get("starters") or [], e.get("starters_points") or []):
                 if pid and pid != "0":
                     totals[pid] = totals.get(pid, 0) + (p or 0)
                     if w == week:
-                        week_pts[e["roster_id"]][pid] = p or 0
+                        week_pts[rid][pid] = p or 0
+            best, lineup = best_lineup(e.get("players_points") or {}, slots, players)
+            left = max(best - pts[rid], 0)
+            teams[rid]["bench"] += left
+            if w == week:
+                teams[rid]["bench_week"] = round(left, 2)
+                missed = [(e["players_points"][pid], pid) for pid in lineup - set(e.get("starters") or [])]
+                if left > 0 and missed:
+                    p, pid = max(missed)
+                    teams[rid]["bench_miss"] = {"player": pid, "pts": round(p, 2)}
+
+        if regular and len(pts) > 1:
+            for rid, p in pts.items():
+                beat = sum(p > q for o, q in pts.items() if o != rid)
+                tied = sum(p == q for o, q in pts.items() if o != rid)
+                t = teams[rid]
+                t["ap_wins"] += beat
+                t["ap_losses"] += len(pts) - 1 - beat - tied
+                t["exp_wins"] += (beat + tied / 2) / (len(pts) - 1)
 
         if regular and median_game and pts:
             mid = sorted(pts.values())[len(pts) // 2 - 1: len(pts) // 2 + 1]
@@ -169,22 +219,31 @@ def fetch_week(league_id, week):
         for e in entries:
             if e.get("matchup_id"):
                 games.setdefault(e["matchup_id"], []).append(e["roster_id"])
-        for a, b in (g for g in games.values() if len(g) == 2):
+        for mid, (a, b) in ((m, g) for m, g in games.items() if len(g) == 2):
             for me, opp in ((a, b), (b, a)):
                 t = teams[me]
                 t["pf"] += pts[me]
                 t["results"].append("W" if pts[me] > pts[opp] else "L" if pts[me] < pts[opp] else "T")
                 if regular:
                     record(t, pts[me], pts[opp])
+                    t["h2h_wins"] += 1 if pts[me] > pts[opp] else 0.5 if pts[me] == pts[opp] else 0
+            if w == week:
+                this_week.append({"a": str(a), "a_pts": round(pts[a], 2), "b": str(b), "b_pts": round(pts[b], 2)})
 
     top3 = lambda pts: sorted(pts.items(), key=lambda kv: -kv[1])[:3]
     top = {rid: top3(totals) for rid, totals in starter_pts.items()}
     top_week = {rid: top3(pts) for rid, pts in week_pts.items()}
-    players = load_players({pid for picks in [*top.values(), *top_week.values()] for pid, _ in picks})
+    missed = {t["bench_miss"]["player"] for t in teams.values() if t["bench_miss"]}
+    players = load_players({pid for picks in [*top.values(), *top_week.values()] for pid, _ in picks} | missed)
     ranks, week_ranks = position_ranks(league["season"], week, league.get("scoring_settings") or {}, players)
-    card = lambda pid, p, r: {**players.get(pid, {"name": pid, "pos": ""}), "rank": r.get(pid, ""), "pts": round(p, 2)}
+    who = lambda pid: {k: players.get(pid, {"name": pid, "pos": ""})[k] for k in ("name", "pos")}
+    card = lambda pid, p, r: {**who(pid), "rank": r.get(pid, ""), "pts": round(p, 2)}
     for rid, t in teams.items():
         t["pf"] = round(t["pf"], 2)
+        t["luck"] = round(t["h2h_wins"] - t["exp_wins"], 2)
+        t["exp_wins"], t["bench"] = round(t["exp_wins"], 2), round(t["bench"], 2)
+        if t["bench_miss"]:
+            t["bench_miss"].update(who(t["bench_miss"].pop("player")))
         streak = ""
         for res in reversed(t["results"]):
             if streak and res != streak[0]:
@@ -202,7 +261,41 @@ def fetch_week(league_id, week):
         "week": week,
         "median_game": median_game,
         "teams": {str(k): v for k, v in teams.items()},
+        "matchups": this_week,
     }
+
+
+def fetch_history(seasons):
+    """Every regular-season game and final placing across all seasons, keyed by manager (Sleeper user id)."""
+    managers, games, finishes, names = {}, [], [], {}
+    for season, league_id in sorted(seasons.items()):
+        league = get(f"/league/{league_id}")
+        settings = league.get("settings") or {}
+        users = {u["user_id"]: u for u in get(f"/league/{league_id}/users")}
+        owner = {r["roster_id"]: r.get("owner_id") for r in get(f"/league/{league_id}/rosters")}
+        names[season] = {}
+        for uid in filter(None, owner.values()):
+            u = users.get(uid, {})
+            team = (u.get("metadata") or {}).get("team_name") or u.get("display_name", "?")
+            names[season][uid] = team
+            # Later seasons overwrite earlier ones, so each manager shows their latest team name.
+            managers[uid] = {"name": team, "manager": u.get("display_name", ""), "avatar": avatar_url(u) if u else None}
+        last_regular = (settings.get("playoff_week_start") or 15) - 1
+        scored = settings.get("last_scored_leg") or 0
+        for w in range(1, min(last_regular, scored) + 1):
+            entries = get(f"/league/{league_id}/matchups/{w}")
+            pts = {e["roster_id"]: float(e.get("custom_points") or e.get("points") or 0) for e in entries}
+            pairs = {}
+            for e in entries:
+                if e.get("matchup_id"):
+                    pairs.setdefault(e["matchup_id"], []).append(e["roster_id"])
+            games += [{"season": season, "week": w, "a": owner[a], "a_pts": round(pts[a], 2),
+                       "b": owner[b], "b_pts": round(pts[b], 2)} for a, b in (p for p in pairs.values() if len(p) == 2) if owner[a] and owner[b]]
+        if league.get("status") == "complete":
+            for m in get(f"/league/{league_id}/winners_bracket") or []:
+                if m.get("p") == 1 and m.get("w"):
+                    finishes.append({"season": season, "champion": owner[m["w"]], "runner_up": owner[m["l"]]})
+    return {"managers": managers, "names": names, "games": games, "finishes": finishes}
 
 
 def fetch_faab(league_id):
@@ -273,6 +366,7 @@ def new_week(week, season=None):
     print(f"Saved stats to {js.relative_to(ROOT)}")
     faab = WEEKS / season / "faab.json"
     faab.write_text(json.dumps(fetch_faab(seasons[season]), indent=1, ensure_ascii=False), encoding="utf-8")
+    HISTORY.write_text(json.dumps(fetch_history(seasons), indent=1, ensure_ascii=False), encoding="utf-8")
     if txt.exists():
         print(f"{txt.relative_to(ROOT)} already exists. Kept your rankings and refreshed only the stats.")
         return
@@ -376,16 +470,21 @@ def avatar(t):
     return f'<span class="av ph">{html.escape(t["name"][:1].upper())}</span>'
 
 
-def sidebar(season, base, latest_week, faab_seasons, faab_page=False):
-    """Power rankings by season, plus league links."""
-    years = "".join(f'<a href="{base}{s}/week-{latest_week[s]:02d}.html"'
-                    f'{" class=cur" if s == season and not faab_page else ""}>{s}</a>'
-                    for s in sorted(latest_week, reverse=True))
+def sidebar(season, base, site, current=None):
+    """Power rankings by season, plus league and history links. `current` marks a non-rankings page."""
+    lw = site["latest_week"]
+    years = "".join(f'<a href="{base}{s}/week-{lw[s]:02d}.html"{" class=cur" if s == season and not current else ""}>'
+                    f'{s}</a>' for s in sorted(lw, reverse=True))
+    link = lambda href, label, key: f'<a href="{href}"{" class=cur" if current == key else ""}>{label}</a>'
     league = f'<a href="{html.escape(RULE_BOOK_URL)}" target="_blank" rel="noopener">Rule Book ↗</a>'
-    if season in faab_seasons:
-        league += f'<a href="{base}{season}/faab.html"{" class=cur" if faab_page else ""}>FAAB Tracker</a>'
-    return (f'<div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list">{years}</div></div>'
-            f'<div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list">{league}</div></div>')
+    if season in site["faab_seasons"]:
+        league += link(f"{base}{season}/faab.html", "FAAB Tracker", "faab")
+    groups = [("Power Rankings", years), ("League", league)]
+    if site["history"]:
+        groups.append(("League History", link(f"{base}history/records.html", "Record Book", "records")
+                       + link(f"{base}history/h2h.html", "Head-to-Head", "h2h")))
+    return "".join(f'<div class="side-group"><div class="seasons-lbl">{label}</div>'
+                   f'<div class="seasons-list">{links}</div></div>' for label, links in groups)
 
 
 def week_nav(season, weeks, base, current=None):
@@ -400,8 +499,53 @@ def page(data, base, side, nav, kicker, heading, body, footer, description):
                        heading=heading, nav=nav, body=body, footer=footer, css=CSS)
 
 
-def render_week(data, content, prev_rank, all_weeks, latest_week, faab_seasons, base):
-    """`latest_week` maps each built season to its newest week; `base` is the path back to the site root."""
+def tiles(title, items):
+    cells = "".join(f'<div class="award"><div class="lbl">{label}</div><div class="who">{who}</div>'
+                    f'<div class="val">{val}</div></div>' for label, who, val in items)
+    return f'<section><h2 class="sec">{title}</h2><div class="awards">{cells}</div></section>'
+
+
+def awards(data):
+    """This week's superlatives, plus season-long luck and lineup awards."""
+    teams, ms, e = data["teams"], data.get("matchups") or [], html.escape
+    if not ms:
+        return ""
+    nm = lambda rid: e(teams[rid]["name"])
+    score = {m["a"]: m["a_pts"] for m in ms} | {m["b"]: m["b_pts"] for m in ms}
+    games = [((m["a"], m["a_pts"]), (m["b"], m["b_pts"])) if m["a_pts"] >= m["b_pts"]
+             else ((m["b"], m["b_pts"]), (m["a"], m["a_pts"])) for m in ms]  # (winner, loser)
+    margin = lambda g: g[0][1] - g[1][1]
+    hi, lo = max(score, key=score.get), min(score, key=score.get)
+    blow, close = max(games, key=margin), min(games, key=margin)
+    unlucky, lucky = max(games, key=lambda g: g[1][1]), min(games, key=lambda g: g[0][1])
+    week = [
+        ("Top score", nm(hi), f"{score[hi]:.2f} pts"),
+        ("Basement", nm(lo), f"{score[lo]:.2f} pts"),
+        ("Biggest blowout", f"{nm(blow[0][0])} over {nm(blow[1][0])}", f"by {margin(blow):.2f}"),
+        ("Closest game", f"{nm(close[0][0])} over {nm(close[1][0])}", f"by {margin(close):.2f}"),
+        ("Unluckiest loss", nm(unlucky[1][0]), f"{unlucky[1][1]:.2f} pts and still lost"),
+        ("Luckiest win", nm(lucky[0][0]), f"won with {lucky[0][1]:.2f} pts"),
+    ]
+    if any("bench_week" in t for t in teams.values()):
+        b = max(teams, key=lambda r: teams[r].get("bench_week", 0))
+        miss = teams[b].get("bench_miss")
+        week.append(("Benchwarmer", nm(b), f"{teams[b]['bench_week']:.1f} pts left on the bench"
+                     + (f" ({e(miss['name'])} scored {miss['pts']:.1f})" if miss else "")))
+    out = tiles(f"Week {data['week']} Awards", week)
+    if any("luck" in t for t in teams.values()):
+        luck = sorted(teams, key=lambda r: teams[r]["luck"])
+        bench = sorted(teams, key=lambda r: teams[r]["bench"])
+        out += tiles("Season So Far", [
+            ("Luckiest team", nm(luck[-1]), f"{teams[luck[-1]]['luck']:+.1f} wins vs. expected"),
+            ("Unluckiest team", nm(luck[0]), f"{teams[luck[0]]['luck']:+.1f} wins vs. expected"),
+            ("Lineup genius", nm(bench[0]), f"only {teams[bench[0]]['bench']:.1f} pts left on the bench"),
+            ("Lineup disaster", nm(bench[-1]), f"{teams[bench[-1]]['bench']:.1f} pts left on the bench"),
+        ])
+    return out
+
+
+def render_week(data, content, prev_rank, all_weeks, site, base):
+    """`site` describes what's been built (seasons, FAAB, history); `base` is the path back to the site root."""
     teams, week, season, e = data["teams"], data["week"], str(data["season"]), html.escape
     rows = []
     for i, (rid, blurb) in enumerate(content["rankings"], 1):
@@ -416,12 +560,21 @@ def render_week(data, content, prev_rank, all_weeks, latest_week, faab_seasons, 
         tops = "".join(f'<div class="lbl">{label}</div><ul class="top">{chips(picks)}</ul>'
                        for label, picks in (("Overall top performers", t["top"]),
                                             ("Weekly top performers", t.get("top_week") or [])) if picks)
+        extra = []
+        if "ap_wins" in t:
+            extra.append(f"All-play {t['ap_wins']}-{t['ap_losses']}")
+        if "luck" in t:
+            cls = "up" if t["luck"] >= 0.5 else "down" if t["luck"] <= -0.5 else ""
+            extra.append(f'Luck <span class="{cls}">{t["luck"]:+.1f}</span>')
+        if "bench_week" in t:
+            extra.append(f"{t['bench_week']:.1f} pts left on bench")
         rows.append(f"""
   <li class="rank">
     <div class="rank-num">{i}{move}</div>
     <div class="rank-body">
       <div class="team">{avatar(t)}<div><h2>{e(t['name'])}</h2>
-        <div class="meta"><b>{rec(t)}</b> · {t['pf']:.2f} PF{' · ' + t['streak'] if t['streak'] else ''}</div></div></div>
+        <div class="meta"><b>{rec(t)}</b> · {t['pf']:.2f} PF{' · ' + t['streak'] if t['streak'] else ''}</div>
+        {f'<div class="meta">{" · ".join(extra)}</div>' if extra else ''}</div></div>
       {f'<div class="blurb">{fmt(blurb, base)}</div>' if blurb else ''}
       {f'<div class="tops">{tops}</div>' if tops else ''}
     </div>
@@ -429,15 +582,153 @@ def render_week(data, content, prev_rank, all_weeks, latest_week, faab_seasons, 
 
     note = "Records include a game against the league median each week. " if data.get("median_game") else ""
     intro = f'<section class="intro">{fmt(content["intro"], base)}</section>' if content["intro"] else ""
-    footer = (f"{note}Top performers are points scored as a starter for that team: overall is the season through that "
-              "week, weekly is that week alone. QB1, RB3, etc. is the player's rank at his position across the NFL over "
-              "the same span. Stats from Sleeper. Rankings are the commissioner's own.")
-    return page(data, base, sidebar(season, base, latest_week, faab_seasons), week_nav(season, all_weeks, base, week),
+    footer = (f"{note}All-play is the record a team would have playing every other team every week. Luck is actual "
+              "head-to-head wins minus the wins that all-play scoring would expect. Bench is how many more points the "
+              "best possible lineup would have scored. Top performers are points scored as a starter for that team: "
+              "overall is the season through that week, weekly is that week alone. QB1, RB3, etc. is the player's rank "
+              "at his position across the NFL over the same span. Stats from Sleeper. Rankings are the commissioner's own.")
+    return page(data, base, sidebar(season, base, site), week_nav(season, all_weeks, base, week),
                 f"{e(data['league'])} · {e(season)} · Week {week}", e(content["title"]),
-                f'{intro}<ol class="ranks">{"".join(rows)}</ol>', footer, f"{season} Week {week} power rankings")
+                f'{intro}<ol class="ranks">{"".join(rows)}</ol>{awards(data)}', footer,
+                f"{season} Week {week} power rankings")
 
 
-def render_faab(faab, data, all_weeks, latest_week, faab_seasons):
+def history_totals(hist):
+    """All-time regular-season record per manager, and head-to-head records between each pair."""
+    tally = lambda: {"w": 0, "l": 0, "t": 0}
+    totals = {uid: {**tally(), "pf": 0.0, "games": 0, "seasons": set(), "titles": 0} for uid in hist["managers"]}
+    pairs = {}
+    for g in hist["games"]:
+        for me, mine, opp, theirs in ((g["a"], g["a_pts"], g["b"], g["b_pts"]), (g["b"], g["b_pts"], g["a"], g["a_pts"])):
+            k = "w" if mine > theirs else "l" if mine < theirs else "t"
+            totals[me][k] += 1
+            totals[me]["pf"] += mine
+            totals[me]["games"] += 1
+            totals[me]["seasons"].add(g["season"])
+            pairs.setdefault((me, opp), tally())[k] += 1
+    for f in hist["finishes"]:
+        totals[f["champion"]]["titles"] += 1
+    pct = lambda r: (r["w"] + r["t"] / 2) / max(r["w"] + r["l"] + r["t"], 1)
+    order = sorted(totals, key=lambda u: (-pct(totals[u]), -totals[u]["pf"]))
+    return totals, pairs, order, pct
+
+
+def wlt(r):
+    return f"{r['w']}-{r['l']}" + (f"-{r['t']}" if r["t"] else "")
+
+
+def history_page(hist, data, site, current, heading, body, footer, description):
+    base = "../"
+    nav = "".join(f'<a href="{base}history/{key}.html"{" class=cur" if key == current else ""}>{label}</a>'
+                  for key, label in (("records", "Record Book"), ("h2h", "Head-to-Head")))
+    seasons = sorted({g["season"] for g in hist["games"]})
+    span = f"{seasons[0]}–{seasons[-1]}" if seasons else ""
+    return page(data, base, sidebar(str(data["season"]), base, site, current), nav,
+                f"{html.escape(data['league'])} · {span}", heading, body, footer, description)
+
+
+def render_records(hist, data, site):
+    e, mgr, names = html.escape, hist["managers"], hist["names"]
+    totals, _, order, pct = history_totals(hist)
+    who = lambda uid: (f'<span class="who">{avatar(mgr[uid])}<span>{e(mgr[uid]["name"])}'
+                       f'<small>{e(mgr[uid]["manager"])}</small></span></span>')
+    team = lambda season, uid: e(names[season].get(uid) or mgr[uid]["name"])
+
+    standings = "".join(
+        f'<tr><td class="tn">{who(u)}</td><td>{len(totals[u]["seasons"])}</td><td>{wlt(totals[u])}</td>'
+        f'<td>{pct(totals[u]):.3f}</td><td>{totals[u]["pf"] / max(totals[u]["games"], 1):.1f}</td>'
+        f'<td>{"🏆" * totals[u]["titles"] or "–"}</td></tr>' for u in order if totals[u]["games"])
+    champs = "".join(
+        f'<tr><td class="tn">{f["season"]}</td><td class="tn"><b>{team(f["season"], f["champion"])}</b> '
+        f'<small>{e(mgr[f["champion"]]["manager"])}</small></td>'
+        f'<td class="tn">{team(f["season"], f["runner_up"])} <small>{e(mgr[f["runner_up"]]["manager"])}</small></td></tr>'
+        for f in sorted(hist["finishes"], key=lambda f: f["season"], reverse=True))
+
+    scores = [(g["a_pts"], g["a"], g) for g in hist["games"]] + [(g["b_pts"], g["b"], g) for g in hist["games"]]
+    when = lambda g: f'{g["season"]} Wk {g["week"]}'
+    winner = lambda g: (g["a"], g["a_pts"], g["b"], g["b_pts"]) if g["a_pts"] >= g["b_pts"] else (g["b"], g["b_pts"], g["a"], g["a_pts"])
+    margin = lambda g: abs(g["a_pts"] - g["b_pts"])
+    game_line = lambda g: (lambda w, wp, l, lp: f'{team(g["season"], w)} over {team(g["season"], l)}')(*winner(g))
+
+    def top5(title, rows):
+        items = "".join(f'<li><span class="amt">{val}</span><div>{text}<div class="beat">{sub}</div></div></li>'
+                        for val, text, sub in rows[:5])
+        return f'<div><h3>{title}</h3><ul class="bids">{items}</ul></div>'
+
+    season_pf, streaks = {}, {}
+    for (season, uid) in {(g["season"], u) for g in hist["games"] for u in (g["a"], g["b"])}:
+        mine = sorted((g["week"], g["a_pts"] if g["a"] == uid else g["b_pts"], g["b_pts"] if g["a"] == uid else g["a_pts"])
+                      for g in hist["games"] if g["season"] == season and uid in (g["a"], g["b"]))
+        season_pf[(season, uid)] = (sum(m for _, m, _ in mine), len(mine))
+        best = {"W": (0, 0, 0), "L": (0, 0, 0)}
+        run, kind, start = 0, None, 0
+        for week, m, o in mine:
+            res = "W" if m > o else "L" if m < o else "T"
+            run, start = (run + 1, start) if res == kind else (1, week)
+            kind = res
+            if res in best and run > best[res][0]:
+                best[res] = (run, start, week)
+        streaks[(season, uid)] = best
+    streak_rows = lambda k: sorted(((v[k], s) for s, v in streaks.items() if v[k][0]), reverse=True)
+
+    lists = "".join([
+        top5("Highest single-week scores", [(f"{p:.1f}", team(g["season"], u), when(g))
+                                            for p, u, g in sorted(scores, key=lambda x: -x[0])]),
+        top5("Lowest single-week scores", [(f"{p:.1f}", team(g["season"], u), when(g))
+                                           for p, u, g in sorted(scores, key=lambda x: x[0])]),
+        top5("Biggest blowouts", [(f"+{margin(g):.1f}", game_line(g), when(g))
+                                  for g in sorted(hist["games"], key=lambda g: -margin(g))]),
+        top5("Closest games", [(f"+{margin(g):.2f}", game_line(g), when(g))
+                               for g in sorted(hist["games"], key=margin)]),
+        top5("Most points in a season", [(f"{pf:.0f}", team(s, u), f"{s} · {n} games")
+                                         for (s, u), (pf, n) in sorted(season_pf.items(), key=lambda kv: -kv[1][0])]),
+        top5("Longest winning streaks", [(f"{n}", team(s, u), f"{s} · Wk {a}–{b}") for (n, a, b), (s, u) in streak_rows("W")]),
+        top5("Longest losing streaks", [(f"{n}", team(s, u), f"{s} · Wk {a}–{b}") for (n, a, b), (s, u) in streak_rows("L")]),
+    ])
+
+    body = f"""<section><h2 class="sec">Champions</h2><div class="tbl"><table>
+  <thead><tr><th class="tn">Season</th><th class="tn">Champion</th><th class="tn">Runner-up</th></tr></thead>
+  <tbody>{champs or '<tr><td class="tn" colspan="3">No completed seasons yet.</td></tr>'}</tbody></table></div></section>
+<section><h2 class="sec">All-Time Standings</h2><div class="tbl"><table>
+  <thead><tr><th class="tn">Manager</th><th>Seasons</th><th>Record</th><th>Win %</th><th>PF / game</th><th>Titles</th></tr></thead>
+  <tbody>{standings}</tbody></table></div></section>
+<section><h2 class="sec">Records</h2><div class="records">{lists}</div></section>"""
+    footer = ("Regular-season head-to-head games only; median games and playoffs aren't counted in records or streaks. "
+              "Managers are tracked across seasons by their Sleeper account and shown with their latest team name; "
+              "records show the team name from that season.")
+    return history_page(hist, data, site, "records", "Record Book", body, footer, "League records and champions")
+
+
+def render_h2h(hist, data, site):
+    e, mgr = html.escape, hist["managers"]
+    totals, pairs, order, pct = history_totals(hist)
+    order = [u for u in order if totals[u]["games"]]
+    head = "".join(f'<th class="col" title="{e(mgr[u]["name"])}">{avatar(mgr[u])}<span>{e(mgr[u]["manager"])}</span></th>'
+                   for u in order)
+    rows = []
+    for me in order:
+        cells = []
+        for opp in order:
+            r = pairs.get((me, opp))
+            if me == opp:
+                cells.append('<td class="self"></td>')
+            elif not r:
+                cells.append('<td class="none">–</td>')
+            else:
+                cls = "win" if r["w"] > r["l"] else "loss" if r["w"] < r["l"] else "even"
+                cells.append(f'<td class="{cls}">{wlt(r)}</td>')
+        rows.append(f'<tr><td class="tn"><span class="who">{avatar(mgr[me])}<span>{e(mgr[me]["name"])}'
+                    f'<small>{e(mgr[me]["manager"])}</small></span></span></td>'
+                    f'<td class="tot">{wlt(totals[me])}</td>{"".join(cells)}</tr>')
+    body = f"""<section><div class="tbl"><table class="h2h">
+  <thead><tr><th class="tn">Manager</th><th>All-time</th>{head}</tr></thead>
+  <tbody>{"".join(rows)}</tbody></table></div></section>"""
+    footer = ("Read across a row: that manager's regular-season record against each opponent, across every season. "
+              "Green means they lead the series. Median games and playoffs aren't counted.")
+    return history_page(hist, data, site, "h2h", "Head-to-Head", body, footer, "All-time head-to-head records")
+
+
+def render_faab(faab, data, site):
     """Budget table and bid log for one season. `data` is the season's latest week, for team names and avatars."""
     teams, season, e, base = data["teams"], str(data["season"]), html.escape, "../"
     budget, claims, trades = faab["budget"], faab["claims"], faab.get("trades", [])
@@ -484,8 +775,8 @@ def render_faab(faab, data, all_weeks, latest_week, faab_seasons):
               "waiver claims from Sleeper, newest week first. “Outbidding” lists the other teams that bid on the same "
               "player that week.")
     seasons_nav = "".join(f'<a href="{base}{s}/faab.html"{" class=cur" if s == season else ""}>{s}</a>'
-                          for s in sorted(faab_seasons, reverse=True))
-    return page(data, base, sidebar(season, base, latest_week, faab_seasons, faab_page=True), seasons_nav,
+                          for s in sorted(site["faab_seasons"], reverse=True))
+    return page(data, base, sidebar(season, base, site, "faab"), seasons_nav,
                 f"{e(data['league'])} · {e(season)}", "FAAB Tracker", body, footer, f"{season} FAAB spending")
 
 
@@ -493,8 +784,10 @@ def build():
     seasons = sorted(d.name for d in WEEKS.iterdir() if d.is_dir() and weeks_written(d.name)) if WEEKS.exists() else []
     if not seasons:
         sys.exit("No weeks yet. Run: py ffr.py new <week>")
-    latest_week = {s: weeks_written(s)[-1] for s in seasons}
-    faab_seasons = {s for s in seasons if (WEEKS / s / "faab.json").exists()}
+    site = {"latest_week": {s: weeks_written(s)[-1] for s in seasons},
+            "faab_seasons": {s for s in seasons if (WEEKS / s / "faab.json").exists()},
+            "history": HISTORY.exists()}
+    faab_seasons = site["faab_seasons"]
     if IMAGES.exists():
         shutil.copytree(IMAGES, SITE / "images", dirs_exist_ok=True)
     for s in seasons:
@@ -505,19 +798,25 @@ def build():
             txt, js = week_paths(s, w)
             data = json.loads(js.read_text(encoding="utf-8"))
             content = parse_week(txt, data)
-            out = render_week(data, content, prev_rank, weeks, latest_week, faab_seasons, "../")
+            out = render_week(data, content, prev_rank, weeks, site, "../")
             (SITE / s / f"week-{w:02d}.html").write_text(out, encoding="utf-8")
             if w == weeks[-1]:
                 (SITE / s / "index.html").write_text(out, encoding="utf-8")
                 if s == seasons[-1]:
-                    root = render_week(data, content, prev_rank, weeks, latest_week, faab_seasons, "")
+                    root = render_week(data, content, prev_rank, weeks, site, "")
                     (SITE / "index.html").write_text(root, encoding="utf-8")
             prev_rank = [r for r, _ in content["rankings"]]
         if s in faab_seasons:
             faab = json.loads((WEEKS / s / "faab.json").read_text(encoding="utf-8"))
-            (SITE / s / "faab.html").write_text(render_faab(faab, data, weeks, latest_week, faab_seasons),
+            (SITE / s / "faab.html").write_text(render_faab(faab, data, site),
                                                 encoding="utf-8")
         print(f"Built {s}: {len(weeks)} week(s)" + (" + FAAB" if s in faab_seasons else ""))
+    if site["history"]:
+        hist = json.loads(HISTORY.read_text(encoding="utf-8"))
+        (SITE / "history").mkdir(exist_ok=True)
+        (SITE / "history" / "records.html").write_text(render_records(hist, data, site), encoding="utf-8")
+        (SITE / "history" / "h2h.html").write_text(render_h2h(hist, data, site), encoding="utf-8")
+        print("Built league history")
     print("Open docs/index.html to preview.")
 
 
@@ -544,12 +843,12 @@ CSS = """
 @media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.layout{display:flex;max-width:1160px;margin:0 auto}
-.seasons{flex:none;width:150px;padding:40px 16px 0;position:sticky;top:0;align-self:flex-start}
+.layout{display:flex;max-width:1180px;margin:0 auto}
+.seasons{flex:none;width:172px;padding:40px 16px 0;position:sticky;top:0;align-self:flex-start}
 .side-group+.side-group{margin-top:28px}
 .seasons-lbl{color:var(--muted);font-size:.85rem;font-weight:600;margin:0 0 6px 10px}
 .seasons-list{display:flex;flex-direction:column;gap:2px}
-.seasons a{padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
+.seasons a{white-space:nowrap;padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:600;font-variant-numeric:tabular-nums}
 .seasons a:hover{background:var(--chip);color:var(--ink)}
 .seasons a.cur{background:var(--card);color:var(--ink);box-shadow:inset 3px 0 0 var(--ink),0 0 0 1px var(--line)}
 .wrap{flex:1;min-width:0;max-width:1000px;padding:32px 16px 64px}
@@ -611,6 +910,29 @@ h3{font-size:.95rem;margin:22px 0 8px;color:var(--muted)}
 .bids .zero .amt{color:var(--muted);font-weight:600}
 .bids .pos{color:var(--muted);font-size:.72rem;font-weight:700}
 .bids .beat{color:var(--muted);font-size:.85rem}
+.awards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.award{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.award .lbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.award .who{font-weight:700;margin-top:2px}
+.award .val{color:var(--muted);font-size:.88rem}
+section+section .sec,.ranks+section .sec{margin-top:36px}
+.who small,.tn small{display:block;color:var(--muted);font-weight:400;font-size:.75rem}
+.tn small{display:inline}
+.tn .who small{display:block}
+.records{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:4px 16px}
+.records h3{margin-top:14px}
+.records .amt{min-width:3.6em}
+.h2h td,.h2h th{padding:8px 10px;text-align:center}
+.h2h th.col{vertical-align:bottom}
+.h2h th.col .av{width:26px;height:26px;display:flex;margin:0 auto 4px;font-size:.7rem}
+.h2h th.col span{display:block;font-size:.7rem;text-transform:none;letter-spacing:0;max-width:72px;overflow:hidden;text-overflow:ellipsis}
+.h2h td.tn,.h2h th.tn{text-align:left}
+.h2h .tot{font-weight:700}
+.h2h .win{background:color-mix(in srgb,var(--up) 16%,transparent);color:var(--up);font-weight:600}
+.h2h .loss{background:color-mix(in srgb,var(--down) 13%,transparent);color:var(--down)}
+.h2h .even{color:var(--muted)}
+.h2h .none,.h2h .self{color:var(--line)}
+.h2h .self{background:var(--chip)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 """
 
