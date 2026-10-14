@@ -1492,5 +1492,167 @@
    "1084605692373233664": "🏆 Champion",
    "1132924651295956992": "3rd · lost semifinal"
   }
- }
+ },
+ "playoff_games": [
+  {
+   "season": "2024",
+   "week": 15,
+   "bracket": "playoffs",
+   "stage": "Quarterfinal",
+   "w": "1084605692373233664",
+   "w_pts": 146.94,
+   "l": "470927114183372800",
+   "l_pts": 127.0
+  },
+  {
+   "season": "2024",
+   "week": 15,
+   "bracket": "playoffs",
+   "stage": "Quarterfinal",
+   "w": "1129665810802278400",
+   "w_pts": 152.88,
+   "l": "471050766644146176",
+   "l_pts": 107.44
+  },
+  {
+   "season": "2024",
+   "week": 16,
+   "bracket": "playoffs",
+   "stage": "Semifinal",
+   "w": "1002009644597993472",
+   "w_pts": 168.68,
+   "l": "1084605692373233664",
+   "l_pts": 123.18
+  },
+  {
+   "season": "2024",
+   "week": 16,
+   "bracket": "playoffs",
+   "stage": "Semifinal",
+   "w": "873130597315481600",
+   "w_pts": 126.02,
+   "l": "1129665810802278400",
+   "l_pts": 123.66
+  },
+  {
+   "season": "2024",
+   "week": 17,
+   "bracket": "playoffs",
+   "stage": "Championship",
+   "w": "1002009644597993472",
+   "w_pts": 160.68,
+   "l": "873130597315481600",
+   "l_pts": 97.86
+  },
+  {
+   "season": "2024",
+   "week": 15,
+   "bracket": "toilet",
+   "stage": "Toilet bowl semifinal",
+   "w": "1132924651295956992",
+   "w_pts": 136.1,
+   "l": "1129574561793630208",
+   "l_pts": 135.94
+  },
+  {
+   "season": "2024",
+   "week": 15,
+   "bracket": "toilet",
+   "stage": "Toilet bowl semifinal",
+   "w": "535242776309989376",
+   "w_pts": 130.06,
+   "l": "1085126678843682816",
+   "l_pts": 92.56
+  },
+  {
+   "season": "2024",
+   "week": 16,
+   "bracket": "toilet",
+   "stage": "Toilet bowl",
+   "w": "1129574561793630208",
+   "w_pts": 147.26,
+   "l": "1085126678843682816",
+   "l_pts": 107.0
+  },
+  {
+   "season": "2025",
+   "week": 15,
+   "bracket": "playoffs",
+   "stage": "Quarterfinal",
+   "w": "1085126678843682816",
+   "w_pts": 154.0,
+   "l": "1129574561793630208",
+   "l_pts": 115.04
+  },
+  {
+   "season": "2025",
+   "week": 15,
+   "bracket": "playoffs",
+   "stage": "Quarterfinal",
+   "w": "1132924651295956992",
+   "w_pts": 129.12,
+   "l": "1129665810802278400",
+   "l_pts": 118.42
+  },
+  {
+   "season": "2025",
+   "week": 16,
+   "bracket": "playoffs",
+   "stage": "Semifinal",
+   "w": "1002009644597993472",
+   "w_pts": 151.1,
+   "l": "1085126678843682816",
+   "l_pts": 127.9
+  },
+  {
+   "season": "2025",
+   "week": 16,
+   "bracket": "playoffs",
+   "stage": "Semifinal",
+   "w": "1084605692373233664",
+   "w_pts": 146.4,
+   "l": "1132924651295956992",
+   "l_pts": 119.0
+  },
+  {
+   "season": "2025",
+   "week": 17,
+   "bracket": "playoffs",
+   "stage": "Championship",
+   "w": "1084605692373233664",
+   "w_pts": 159.3,
+   "l": "1002009644597993472",
+   "l_pts": 115.4
+  },
+  {
+   "season": "2025",
+   "week": 15,
+   "bracket": "toilet",
+   "stage": "Toilet bowl semifinal",
+   "w": "471050766644146176",
+   "w_pts": 109.56,
+   "l": "470927114183372800",
+   "l_pts": 109.3
+  },
+  {
+   "season": "2025",
+   "week": 15,
+   "bracket": "toilet",
+   "stage": "Toilet bowl semifinal",
+   "w": "535242776309989376",
+   "w_pts": 126.66,
+   "l": "873130597315481600",
+   "l_pts": 97.9
+  },
+  {
+   "season": "2025",
+   "week": 16,
+   "bracket": "toilet",
+   "stage": "Toilet bowl",
+   "w": "873130597315481600",
+   "w_pts": 128.6,
+   "l": "470927114183372800",
+   "l_pts": 107.14
+  }
+ ]
 }
