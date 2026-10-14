@@ -1103,7 +1103,7 @@ def render_faab(faab, data, site):
         big_txt = f'{e(big["name"])}, {money(big["bid"])}, Wk {big["week"]}' if big and big["bid"] else "–"
         tr = traded[rid]
         tr_txt = f'<span class="up">+{money(tr)}</span>' if tr > 0 else f'<span class="down">−{money(-tr)}</span>' if tr < 0 else "–"
-        gained = sum(c.get("pts", 0) for c in mine)
+        gained = sum(c.get("started", 0) for c in mine)
         per = f"{gained / spent[rid]:.1f}" if spent[rid] else "–"
         table.append(f"""<tr><td class="tn"><span class="who">{avatar(teams[rid])}<span>{e(name(rid))}</span></span></td>
       <td>{money(spent[rid])}</td>{f"<td>{tr_txt}</td>" if trades else ""}
@@ -1129,7 +1129,7 @@ def render_faab(faab, data, site):
         log.append(f'<h3>{f"Week {w}" if w else "Preseason"}</h3><ul class="bids">{"".join(items)}</ul>')
 
     body = f"""<section><h2 class="sec">Budget</h2><div class="tbl"><table>
-  <thead><tr><th class="tn">Team</th><th>Spent</th>{"<th>Traded</th>" if trades else ""}<th>Remaining</th><th>Claims won</th><th>Pickup pts</th><th>Pts per $</th><th class="tn">Biggest buy</th></tr></thead>
+  <thead><tr><th class="tn">Team</th><th>Spent</th>{"<th>Traded</th>" if trades else ""}<th>Remaining</th><th>Claims won</th><th>Started pts</th><th>Pts per $</th><th class="tn">Biggest buy</th></tr></thead>
   <tbody>{"".join(table)}</tbody></table></div></section>
 <!--ROI-->
 <section><h2 class="sec">Bid log</h2>{"".join(log) or "<p>No waiver claims yet.</p>"}</section>"""
@@ -1137,23 +1137,23 @@ def render_faab(faab, data, site):
         weeks = f'{c.get("weeks", 0)} wk{"s" if c.get("weeks", 0) != 1 else ""}' + (" so far" if c.get("active") else "")
         return (f'<li><span class="amt">{val}<small>{unit}</small></span><div><b>{e(c["name"])}</b> '
                 f'<span class="pos">{e(c["pos"])}</span> · {e(name(c["roster"]))}<div class="beat">{money(c["bid"])} in '
-                f'Wk {c["week"]} → {c.get("pts", 0):.1f} pts ({c.get("started", 0):.1f} started) · {weeks}</div></div></li>')
-    per_dollar = lambda c: c.get("pts", 0) / c["bid"]
+                f'Wk {c["week"]} → {c.get("started", 0):.1f} pts started · {weeks}</div></div></li>')
+    per_dollar = lambda c: c.get("started", 0) / c["bid"]  # ROI only counts points from the starting lineup
     values = sorted((c for c in claims if c["bid"] >= 2), key=per_dollar, reverse=True)[:5]
     # Judge a bust only once he's had a couple of weeks, or played and is already gone.
     busts = sorted((c for c in claims if c["bid"] >= 10 and (c.get("weeks", 0) >= 2
                                                              or c.get("weeks", 0) and not c.get("active"))),
-                   key=per_dollar)[:5]
-    free = sorted((c for c in claims if c["bid"] <= 1), key=lambda c: -c.get("pts", 0))[:5]
+                   key=lambda c: (per_dollar(c), -c["bid"]))[:5]
+    free = sorted((c for c in claims if c["bid"] <= 1), key=lambda c: -c.get("started", 0))[:5]
     lst = lambda items: "".join(items) or "<li><div>None yet</div></li>"
     roi = "" if not claims else f"""<section><h2 class="sec">Waiver ROI</h2><div class="records">
   <div><h3>Best value ($2+ bids)</h3><ul class="bids">{lst(roi_line(c, f"{per_dollar(c):.1f}", "pts/$") for c in values)}</ul></div>
   <div><h3>Biggest busts ($10+ bids)</h3><ul class="bids">{lst(roi_line(c, f"{per_dollar(c):.1f}", "pts/$") for c in busts)}</ul></div>
-  <div><h3>Best $0–$1 pickups</h3><ul class="bids">{lst(roi_line(c, f"{c.get('pts', 0):.0f}", "pts") for c in free)}</ul></div>
+  <div><h3>Best $0–$1 pickups</h3><ul class="bids">{lst(roi_line(c, f"{c.get('started', 0):.0f}", "pts") for c in free)}</ul></div>
 </div></section>"""
     body = body.replace("<!--ROI-->", roi)
     footer = (f"Pickup pts are everything a claimed player scored while on that team (started or not), from the claim "
-              "until he left the roster. "
+              "until he left the roster. Started pts, Pts per $ and Waiver ROI count only points scored in the starting lineup. "
               f"Each team starts with {money(budget)} of FAAB; remaining includes FAAB traded between teams. Winning "
               "waiver claims from Sleeper, newest week first. “Outbidding” lists the other teams that bid on the same "
               "player that week.")
