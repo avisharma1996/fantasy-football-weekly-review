@@ -1,0 +1,25 @@
+# Re-pulls Sleeper data and rebuilds the site every morning. Never creates a new week or changes rankings.
+name: Refresh stats
+
+on:
+  schedule:
+    - cron: "0 13 * * *"  # daily, 6am Pacific (5am in winter)
+  workflow_dispatch:      # "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python ffr.py refresh
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Auto-refresh stats" && git push)

@@ -1204,6 +1204,29 @@
   },
   {
    "week": 5,
+   "player": "8129",
+   "roster": "1",
+   "bid": 12,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Dameon Pierce",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 12
+    },
+    {
+     "roster": "7",
+     "bid": 10
+    }
+   ]
+  },
+  {
+   "week": 5,
    "player": "11628",
    "roster": "9",
    "bid": 10,
@@ -1241,6 +1264,25 @@
   },
   {
    "week": 5,
+   "player": "NE",
+   "roster": "1",
+   "bid": 5,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "New England Patriots D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 5,
    "player": "10222",
    "roster": "7",
    "bid": 3,
@@ -1266,6 +1308,62 @@
    "name": "Antonio Williams",
    "pos": "WR",
    "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "96",
+   "roster": "1",
+   "bid": 2,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Aaron Rodgers",
+   "pos": "QB",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "player": "9480",
+   "roster": "11",
+   "bid": 1,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Brenton Strange",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "KC",
+   "roster": "11",
+   "bid": 1,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 1,
+   "active": true,
+   "name": "Kansas City Chiefs D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "12",
+     "bid": 0
+    }
+   ]
   },
   {
    "week": 5,
@@ -1350,6 +1448,61 @@
    "name": "Matt Gay",
    "pos": "K",
    "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "12711",
+   "roster": "11",
+   "bid": 0,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tyler Loop",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "7567",
+   "roster": "7",
+   "bid": 0,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Kenny Gainwell",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "11631",
+   "roster": "9",
+   "bid": 0,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Brian Thomas",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
   }
  ],
  "trades": []

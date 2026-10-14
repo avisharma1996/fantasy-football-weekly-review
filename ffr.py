@@ -5,6 +5,7 @@ Usage:
   py ffr.py new <week> [season]        Fetch data through that week and create weeks/<season>/week-NN.txt
   py ffr.py new <first>-<last>         Same, for a range of weeks (e.g. new 1-4 to backfill)
   py ffr.py build                      Turn every season's week files into the website in docs/
+  py ffr.py refresh                    Re-pull stats for the latest ranked week and rebuild (rankings untouched)
 
 The season defaults to the newest one in config.json.
 """
@@ -1356,6 +1357,11 @@ if __name__ == "__main__":
         for w in range(int(m.group(1)), int(m.group(2) or m.group(1)) + 1):
             new_week(w, args[2] if len(args) == 3 else None)
     elif args == ["build"]:
+        build()
+    elif args == ["refresh"]:
+        season = max(load_seasons())
+        if weeks_written(season):
+            new_week(weeks_written(season)[-1], season)
         build()
     else:
         print(__doc__)
