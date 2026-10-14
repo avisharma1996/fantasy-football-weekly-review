@@ -1029,7 +1029,7 @@ def season_breakdown(hist, extras, latest, uid):
         else:  # older history.json without brackets
             result = next(("🏆 Champion" if f["champion"] == uid else "Runner-up" for f in hist["finishes"]
                            if f["season"] == s and uid in (f["champion"], f["runner_up"])), "–" if done else "In progress")
-        median = "–"
+        median, overall = "–", dict(r)
         if data and data.get("median_game"):
             # Each week the top half of scores gets a median win.
             mr = {"w": 0, "l": 0, "t": 0}
@@ -1041,6 +1041,7 @@ def season_breakdown(hist, extras, latest, uid):
                     cut = scores[len(scores) // 2 - 1], scores[len(scores) // 2]
                     mr["w" if mine_w > cut[1] and mine_w >= cut[0] else "t" if cut[0] == cut[1] == mine_w else "l"] += 1
             median = wlt(mr)
+            overall = {k: r[k] + mr[k] for k in r}
         claims = [c for c in ((x.get("faab") or {}).get("claims") or []) if c["roster"] in rids]
         faab = f"${sum(c['bid'] for c in claims)} · {len(claims)}" if x.get("faab") else "–"
         best = max(claims, key=lambda c: c.get("started", 0), default=None)
@@ -1051,11 +1052,11 @@ def season_breakdown(hist, extras, latest, uid):
         picks = [p for p in ((x.get("draft") or {}).get("picks") or []) if p["owner"] == uid and not p["keeper"]]
         draft = f"{draft_grade(picks):+.1f}" if picks else "–"
         rows.append(f'<tr><td class="tn">{s}</td><td class="tn">{e(hist["names"].get(s, {}).get(uid, ""))}</td>'
-                    f'<td>{wlt(r)}</td><td>{median}</td><td>{sum(m for m, _ in mine) / max(len(mine), 1):.1f}</td>'
+                    f'<td>{wlt(r)}</td><td>{median}</td><td><b>{wlt(overall)}</b></td><td>{sum(m for m, _ in mine) / max(len(mine), 1):.1f}</td>'
                     f'<td>{max((m for m, _ in mine), default=0):.1f}</td><td>{finish}</td><td class="tn">{result}</td>'
                     f'<td>{faab}</td><td class="tn">{pickup}</td><td>{trades}</td><td>{draft}</td></tr>')
     return ('<table class="inner"><thead><tr><th class="tn">Season</th><th class="tn">Team</th><th>Record</th>'
-            '<th>vs median</th><th>PF / game</th><th>High score</th><th>Finish</th><th class="tn">Playoffs</th>'
+            '<th>vs median</th><th>Overall</th><th>PF / game</th><th>High score</th><th>Finish</th><th class="tn">Playoffs</th>'
             '<th>FAAB spent · claims</th><th class="tn">Best pickup</th><th>Trades</th><th>Draft value</th>'
             '</tr></thead><tbody>' + "".join(rows) + '</tbody></table>')
 
@@ -1140,7 +1141,7 @@ document.querySelectorAll('.alltime .expand').forEach(function (b) {{
 <section><h2 class="sec">Records</h2><div class="records">{lists}</div></section>"""
     footer = ("Regular-season head-to-head games only; median games and playoffs aren't counted in records or streaks. "
               "In the season breakdown, Finish is the official regular-season place (median wins included), "
-              "vs median is the record against each week's league median, Best pickup is the waiver claim with the "
+              "vs median is the record against each week's league median, Overall is the two combined, Best pickup is the waiver claim with the "
               "most points in their starting lineup, "
               "Draft value is average value per pick from the Draft Report Card, and Trades counts trades made that season. "
               "Managers are tracked across seasons by their Sleeper account and shown with their latest team name; "
