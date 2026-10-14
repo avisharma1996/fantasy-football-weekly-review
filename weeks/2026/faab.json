@@ -3,116 +3,6 @@
  "claims": [
   {
    "week": 1,
-   "player": "13296",
-   "roster": "8",
-   "bid": 21,
-   "at": 1789542894472,
-   "pts": 2.9,
-   "started": 0.0,
-   "weeks": 4,
-   "active": true,
-   "name": "Caleb Douglas",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 12
-    },
-    {
-     "roster": "7",
-     "bid": 12
-    },
-    {
-     "roster": "7",
-     "bid": 7
-    },
-    {
-     "roster": "10",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 1,
-   "player": "13301",
-   "roster": "7",
-   "bid": 12,
-   "at": 1789542894472,
-   "pts": 10.0,
-   "started": 0.0,
-   "weeks": 3,
-   "active": false,
-   "name": "Antonio Williams",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "9",
-     "bid": 5
-    }
-   ]
-  },
-  {
-   "week": 1,
-   "player": "SF",
-   "roster": "8",
-   "bid": 11,
-   "at": 1789542894472,
-   "pts": 35.0,
-   "started": 10.0,
-   "weeks": 4,
-   "active": true,
-   "name": "San Francisco 49ers D/ST",
-   "pos": "DEF",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 4
-    },
-    {
-     "roster": "5",
-     "bid": 2
-    },
-    {
-     "roster": "1",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 1,
-   "player": "7600",
-   "roster": "9",
-   "bid": 10,
-   "at": 1789542894472,
-   "pts": 37.7,
-   "started": 0.0,
-   "weeks": 4,
-   "active": true,
-   "name": "Pat Freiermuth",
-   "pos": "TE",
-   "outbid": []
-  },
-  {
-   "week": 1,
-   "player": "KC",
-   "roster": "1",
-   "bid": 4,
-   "at": 1789542894472,
-   "pts": 10.0,
-   "started": 10.0,
-   "weeks": 2,
-   "active": false,
-   "name": "Kansas City Chiefs D/ST",
-   "pos": "DEF",
-   "outbid": [
-    {
-     "roster": "2",
-     "bid": 3
-    }
-   ]
-  },
-  {
-   "week": 1,
    "player": "7090",
    "roster": "10",
    "bid": 2,
@@ -196,186 +86,112 @@
    "outbid": []
   },
   {
-   "week": 1,
-   "player": "12711",
-   "roster": "1",
-   "bid": 0,
-   "at": 1789542894472,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "Tyler Loop",
-   "pos": "K",
-   "outbid": []
-  },
-  {
-   "week": 1,
-   "player": "TB",
-   "roster": "5",
-   "bid": 0,
-   "at": 1789542894472,
-   "pts": 2.0,
-   "started": 2.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Tampa Bay Buccaneers D/ST",
-   "pos": "DEF",
-   "outbid": []
-  },
-  {
-   "week": 1,
-   "player": "9501",
-   "roster": "9",
-   "bid": 0,
-   "at": 1789542894472,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "DeMario Douglas",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
    "week": 2,
-   "player": "9228",
-   "roster": "2",
-   "bid": 17,
-   "at": 1790147651341,
-   "pts": 36.1,
-   "started": 36.1,
-   "weeks": 3,
+   "player": "13296",
+   "roster": "8",
+   "bid": 21,
+   "at": 1789542894472,
+   "pts": 2.9,
+   "started": 0.0,
+   "weeks": 4,
    "active": true,
-   "name": "Bryce Young",
-   "pos": "QB",
+   "name": "Caleb Douglas",
+   "pos": "WR",
    "outbid": [
     {
-     "roster": "6",
+     "roster": "1",
      "bid": 12
     },
     {
-     "roster": "12",
-     "bid": 10
-    },
-    {
-     "roster": "1",
-     "bid": 8
+     "roster": "7",
+     "bid": 12
     },
     {
      "roster": "7",
      "bid": 7
     },
     {
-     "roster": "9",
-     "bid": 1
+     "roster": "10",
+     "bid": 0
     }
    ]
   },
   {
    "week": 2,
-   "player": "11435",
-   "roster": "3",
-   "bid": 15,
-   "at": 1790147651341,
-   "pts": 39.1,
+   "player": "13301",
+   "roster": "7",
+   "bid": 12,
+   "at": 1789542894472,
+   "pts": 10.0,
    "started": 0.0,
    "weeks": 3,
-   "active": true,
-   "name": "Emanuel Wilson",
-   "pos": "RB",
-   "outbid": []
+   "active": false,
+   "name": "Antonio Williams",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "9",
+     "bid": 5
+    }
+   ]
   },
   {
    "week": 2,
-   "player": "CIN",
-   "roster": "6",
-   "bid": 8,
-   "at": 1790147651341,
-   "pts": 18.0,
-   "started": 13.0,
-   "weeks": 3,
+   "player": "SF",
+   "roster": "8",
+   "bid": 11,
+   "at": 1789542894472,
+   "pts": 35.0,
+   "started": 10.0,
+   "weeks": 4,
    "active": true,
-   "name": "Cincinnati Bengals D/ST",
+   "name": "San Francisco 49ers D/ST",
    "pos": "DEF",
    "outbid": [
     {
      "roster": "1",
-     "bid": 0
+     "bid": 4
     },
     {
      "roster": "5",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 2,
-   "player": "10213",
-   "roster": "10",
-   "bid": 3,
-   "at": 1790147651341,
-   "pts": 18.2,
-   "started": 0.0,
-   "weeks": 3,
-   "active": true,
-   "name": "Tre Tucker",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 3
+     "bid": 2
     },
     {
-     "roster": "11",
-     "bid": 1
+     "roster": "1",
+     "bid": 0
     }
    ]
   },
   {
    "week": 2,
-   "player": "3163",
-   "roster": "11",
-   "bid": 2,
-   "at": 1790147651341,
-   "pts": 68.78,
-   "started": 28.94,
-   "weeks": 3,
+   "player": "7600",
+   "roster": "9",
+   "bid": 10,
+   "at": 1789542894472,
+   "pts": 37.7,
+   "started": 0.0,
+   "weeks": 4,
    "active": true,
-   "name": "Jared Goff",
-   "pos": "QB",
+   "name": "Pat Freiermuth",
+   "pos": "TE",
    "outbid": []
   },
   {
    "week": 2,
-   "player": "13285",
-   "roster": "6",
-   "bid": 2,
-   "at": 1790147651341,
-   "pts": 15.1,
-   "started": 0.0,
+   "player": "KC",
+   "roster": "1",
+   "bid": 4,
+   "at": 1789542894472,
+   "pts": 10.0,
+   "started": 10.0,
    "weeks": 2,
    "active": false,
-   "name": "Malachi Fields",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
-   "week": 2,
-   "player": "5947",
-   "roster": "9",
-   "bid": 2,
-   "at": 1790147651341,
-   "pts": 25.4,
-   "started": 4.8,
-   "weeks": 3,
-   "active": true,
-   "name": "Jakobi Meyers",
-   "pos": "WR",
+   "name": "Kansas City Chiefs D/ST",
+   "pos": "DEF",
    "outbid": [
     {
-     "roster": "10",
-     "bid": 0
+     "roster": "2",
+     "bid": 3
     }
    ]
   },
@@ -423,6 +239,48 @@
   },
   {
    "week": 2,
+   "player": "12711",
+   "roster": "1",
+   "bid": 0,
+   "at": 1789542894472,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tyler Loop",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "TB",
+   "roster": "5",
+   "bid": 0,
+   "at": 1789542894472,
+   "pts": 2.0,
+   "started": 2.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Tampa Bay Buccaneers D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "9501",
+   "roster": "9",
+   "bid": 0,
+   "at": 1789542894472,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "DeMario Douglas",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 2,
    "player": "9228",
    "roster": "1",
    "bid": 0,
@@ -433,28 +291,7 @@
    "active": false,
    "name": "Bryce Young",
    "pos": "QB",
-   "outbid": [
-    {
-     "roster": "6",
-     "bid": 12
-    },
-    {
-     "roster": "12",
-     "bid": 10
-    },
-    {
-     "roster": "1",
-     "bid": 8
-    },
-    {
-     "roster": "7",
-     "bid": 7
-    },
-    {
-     "roster": "9",
-     "bid": 1
-    }
-   ]
+   "outbid": []
   },
   {
    "week": 2,
@@ -546,127 +383,6 @@
    "outbid": []
   },
   {
-   "week": 2,
-   "player": "8188",
-   "roster": "1",
-   "bid": 0,
-   "at": 1790147651341,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "Tyquan Thornton",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
-   "week": 2,
-   "player": "NYG",
-   "roster": "5",
-   "bid": 0,
-   "at": 1790147651341,
-   "pts": 8.0,
-   "started": 8.0,
-   "weeks": 1,
-   "active": false,
-   "name": "New York Giants D/ST",
-   "pos": "DEF",
-   "outbid": []
-  },
-  {
-   "week": 2,
-   "player": "6650",
-   "roster": "8",
-   "bid": 0,
-   "at": 1790147651341,
-   "pts": 21.0,
-   "started": 21.0,
-   "weeks": 3,
-   "active": true,
-   "name": "Chase McLaughlin",
-   "pos": "K",
-   "outbid": [
-    {
-     "roster": "10",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 3,
-   "player": "12495",
-   "roster": "7",
-   "bid": 51,
-   "at": 1790752463838,
-   "pts": 31.8,
-   "started": 31.8,
-   "weeks": 2,
-   "active": true,
-   "name": "Ollie Gordon",
-   "pos": "RB",
-   "outbid": [
-    {
-     "roster": "7",
-     "bid": 40
-    },
-    {
-     "roster": "12",
-     "bid": 35
-    },
-    {
-     "roster": "9",
-     "bid": 25
-    },
-    {
-     "roster": "3",
-     "bid": 22
-    },
-    {
-     "roster": "1",
-     "bid": 21
-    },
-    {
-     "roster": "11",
-     "bid": 16
-    },
-    {
-     "roster": "8",
-     "bid": 11
-    }
-   ]
-  },
-  {
-   "week": 3,
-   "player": "4035",
-   "roster": "10",
-   "bid": 30,
-   "at": 1790752463838,
-   "pts": 21.9,
-   "started": 21.9,
-   "weeks": 2,
-   "active": true,
-   "name": "Alvin Kamara",
-   "pos": "RB",
-   "outbid": [
-    {
-     "roster": "11",
-     "bid": 12
-    },
-    {
-     "roster": "8",
-     "bid": 11
-    },
-    {
-     "roster": "1",
-     "bid": 6
-    },
-    {
-     "roster": "1",
-     "bid": 1
-    }
-   ]
-  },
-  {
    "week": 3,
    "player": "13298",
    "roster": "7",
@@ -687,49 +403,52 @@
   },
   {
    "week": 3,
-   "player": "1479",
-   "roster": "11",
-   "bid": 15,
-   "at": 1790752463838,
-   "pts": 7.0,
-   "started": 0.0,
-   "weeks": 2,
+   "player": "9228",
+   "roster": "2",
+   "bid": 17,
+   "at": 1790147651341,
+   "pts": 36.1,
+   "started": 36.1,
+   "weeks": 3,
    "active": true,
-   "name": "Keenan Allen",
-   "pos": "WR",
+   "name": "Bryce Young",
+   "pos": "QB",
    "outbid": [
     {
-     "roster": "10",
+     "roster": "6",
+     "bid": 12
+    },
+    {
+     "roster": "12",
      "bid": 10
     },
     {
-     "roster": "8",
+     "roster": "1",
+     "bid": 8
+    },
+    {
+     "roster": "7",
      "bid": 7
+    },
+    {
+     "roster": "9",
+     "bid": 1
     }
    ]
   },
   {
    "week": 3,
-   "player": "3634",
-   "roster": "1",
-   "bid": 11,
-   "at": 1790752463838,
-   "pts": 3.5,
+   "player": "11435",
+   "roster": "3",
+   "bid": 15,
+   "at": 1790147651341,
+   "pts": 39.1,
    "started": 0.0,
-   "weeks": 2,
+   "weeks": 3,
    "active": true,
-   "name": "Kalif Raymond",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "8",
-     "bid": 7
-    },
-    {
-     "roster": "6",
-     "bid": 3
-    }
-   ]
+   "name": "Emanuel Wilson",
+   "pos": "RB",
+   "outbid": []
   },
   {
    "week": 3,
@@ -747,6 +466,52 @@
   },
   {
    "week": 3,
+   "player": "CIN",
+   "roster": "6",
+   "bid": 8,
+   "at": 1790147651341,
+   "pts": 18.0,
+   "started": 13.0,
+   "weeks": 3,
+   "active": true,
+   "name": "Cincinnati Bengals D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "5",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "player": "10213",
+   "roster": "10",
+   "bid": 3,
+   "at": 1790147651341,
+   "pts": 18.2,
+   "started": 0.0,
+   "weeks": 3,
+   "active": true,
+   "name": "Tre Tucker",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 3
+    },
+    {
+     "roster": "11",
+     "bid": 1
+    }
+   ]
+  },
+  {
+   "week": 3,
    "player": "13347",
    "roster": "7",
    "bid": 3,
@@ -761,17 +526,50 @@
   },
   {
    "week": 3,
-   "player": "CLE",
-   "roster": "5",
-   "bid": 3,
-   "at": 1790752463838,
-   "pts": 9.0,
-   "started": 9.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Cleveland Browns D/ST",
-   "pos": "DEF",
+   "player": "3163",
+   "roster": "11",
+   "bid": 2,
+   "at": 1790147651341,
+   "pts": 68.78,
+   "started": 28.94,
+   "weeks": 3,
+   "active": true,
+   "name": "Jared Goff",
+   "pos": "QB",
    "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "13285",
+   "roster": "6",
+   "bid": 2,
+   "at": 1790147651341,
+   "pts": 15.1,
+   "started": 0.0,
+   "weeks": 2,
+   "active": false,
+   "name": "Malachi Fields",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "5947",
+   "roster": "9",
+   "bid": 2,
+   "at": 1790147651341,
+   "pts": 25.4,
+   "started": 4.8,
+   "weeks": 3,
+   "active": true,
+   "name": "Jakobi Meyers",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 0
+    }
+   ]
   },
   {
    "week": 3,
@@ -787,18 +585,6 @@
    "pos": "RB",
    "outbid": [
     {
-     "roster": "11",
-     "bid": 12
-    },
-    {
-     "roster": "8",
-     "bid": 11
-    },
-    {
-     "roster": "1",
-     "bid": 6
-    },
-    {
      "roster": "1",
      "bid": 1
     }
@@ -806,31 +592,50 @@
   },
   {
    "week": 3,
-   "player": "12711",
+   "player": "8188",
    "roster": "1",
-   "bid": 1,
-   "at": 1790752463838,
+   "bid": 0,
+   "at": 1790147651341,
    "pts": 0.0,
    "started": 0.0,
    "weeks": 0,
    "active": false,
-   "name": "Tyler Loop",
-   "pos": "K",
+   "name": "Tyquan Thornton",
+   "pos": "WR",
    "outbid": []
   },
   {
    "week": 3,
-   "player": "LV",
-   "roster": "1",
-   "bid": 1,
-   "at": 1790752463838,
-   "pts": 1.0,
-   "started": 0.0,
-   "weeks": 2,
-   "active": true,
-   "name": "Las Vegas Raiders D/ST",
+   "player": "NYG",
+   "roster": "5",
+   "bid": 0,
+   "at": 1790147651341,
+   "pts": 8.0,
+   "started": 8.0,
+   "weeks": 1,
+   "active": false,
+   "name": "New York Giants D/ST",
    "pos": "DEF",
    "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "6650",
+   "roster": "8",
+   "bid": 0,
+   "at": 1790147651341,
+   "pts": 21.0,
+   "started": 21.0,
+   "weeks": 3,
+   "active": true,
+   "name": "Chase McLaughlin",
+   "pos": "K",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 0
+    }
+   ]
   },
   {
    "week": 3,
@@ -931,72 +736,118 @@
    "outbid": []
   },
   {
-   "week": 3,
-   "player": "11603",
-   "roster": "10",
-   "bid": 0,
+   "week": 4,
+   "player": "12495",
+   "roster": "7",
+   "bid": 51,
    "at": 1790752463838,
-   "pts": 5.2,
-   "started": 0.0,
+   "pts": 31.8,
+   "started": 31.8,
    "weeks": 2,
    "active": true,
-   "name": "AJ Barner",
-   "pos": "TE",
-   "outbid": []
-  },
-  {
-   "week": 4,
-   "player": "11577",
-   "roster": "6",
-   "bid": 25,
-   "at": 1791357262592,
-   "pts": 7.8,
-   "started": 0.0,
-   "weeks": 1,
-   "active": true,
-   "name": "Will Shipley",
+   "name": "Ollie Gordon",
    "pos": "RB",
    "outbid": [
     {
+     "roster": "7",
+     "bid": 40
+    },
+    {
+     "roster": "12",
+     "bid": 35
+    },
+    {
+     "roster": "9",
+     "bid": 25
+    },
+    {
+     "roster": "3",
+     "bid": 22
+    },
+    {
      "roster": "1",
-     "bid": 15
+     "bid": 21
+    },
+    {
+     "roster": "11",
+     "bid": 16
+    },
+    {
+     "roster": "8",
+     "bid": 11
     }
    ]
   },
   {
    "week": 4,
-   "player": "4018",
-   "roster": "12",
-   "bid": 18,
-   "at": 1791357262592,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Joe Mixon",
+   "player": "4035",
+   "roster": "10",
+   "bid": 30,
+   "at": 1790752463838,
+   "pts": 21.9,
+   "started": 21.9,
+   "weeks": 2,
+   "active": true,
+   "name": "Alvin Kamara",
    "pos": "RB",
-   "outbid": []
+   "outbid": [
+    {
+     "roster": "11",
+     "bid": 12
+    },
+    {
+     "roster": "8",
+     "bid": 11
+    },
+    {
+     "roster": "1",
+     "bid": 6
+    }
+   ]
   },
   {
    "week": 4,
-   "player": "11630",
-   "roster": "6",
-   "bid": 10,
-   "at": 1791357262592,
-   "pts": 0.0,
+   "player": "1479",
+   "roster": "11",
+   "bid": 15,
+   "at": 1790752463838,
+   "pts": 7.0,
    "started": 0.0,
-   "weeks": 1,
+   "weeks": 2,
    "active": true,
-   "name": "Roman Wilson",
+   "name": "Keenan Allen",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 10
+    },
+    {
+     "roster": "8",
+     "bid": 7
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "player": "3634",
+   "roster": "1",
+   "bid": 11,
+   "at": 1790752463838,
+   "pts": 3.5,
+   "started": 0.0,
+   "weeks": 2,
+   "active": true,
+   "name": "Kalif Raymond",
    "pos": "WR",
    "outbid": [
     {
      "roster": "8",
-     "bid": 3
+     "bid": 7
     },
     {
-     "roster": "1",
-     "bid": 0
+     "roster": "6",
+     "bid": 3
     }
    ]
   },
@@ -1021,64 +872,59 @@
   },
   {
    "week": 4,
-   "player": "11610",
-   "roster": "10",
-   "bid": 5,
-   "at": 1791357262592,
-   "pts": 9.1,
-   "started": 0.0,
-   "weeks": 1,
-   "active": true,
-   "name": "Malik Washington",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 0
-    },
-    {
-     "roster": "1",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 4,
-   "player": "13264",
-   "roster": "1",
-   "bid": 4,
-   "at": 1791357262592,
-   "pts": 2.2,
-   "started": 0.0,
-   "weeks": 1,
-   "active": true,
-   "name": "Dohnte Meyers",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "6",
-     "bid": 4
-    }
-   ]
-  },
-  {
-   "week": 4,
-   "player": "1166",
-   "roster": "7",
+   "player": "CLE",
+   "roster": "5",
    "bid": 3,
-   "at": 1791357262592,
-   "pts": 13.72,
-   "started": 13.72,
+   "at": 1790752463838,
+   "pts": 9.0,
+   "started": 9.0,
    "weeks": 1,
+   "active": false,
+   "name": "Cleveland Browns D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "12711",
+   "roster": "1",
+   "bid": 1,
+   "at": 1790752463838,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tyler Loop",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "LV",
+   "roster": "1",
+   "bid": 1,
+   "at": 1790752463838,
+   "pts": 1.0,
+   "started": 0.0,
+   "weeks": 2,
    "active": true,
-   "name": "Kirk Cousins",
-   "pos": "QB",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 1
-    }
-   ]
+   "name": "Las Vegas Raiders D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "11603",
+   "roster": "10",
+   "bid": 0,
+   "at": 1790752463838,
+   "pts": 5.2,
+   "started": 0.0,
+   "weeks": 2,
+   "active": true,
+   "name": "AJ Barner",
+   "pos": "TE",
+   "outbid": []
   },
   {
    "week": 4,
@@ -1184,44 +1030,58 @@
    "outbid": []
   },
   {
-   "week": 4,
-   "player": "5045",
-   "roster": "9",
-   "bid": 0,
+   "week": 5,
+   "player": "11577",
+   "roster": "6",
+   "bid": 25,
    "at": 1791357262592,
-   "pts": 8.8,
-   "started": 8.8,
+   "pts": 7.8,
+   "started": 0.0,
    "weeks": 1,
    "active": true,
-   "name": "Courtland Sutton",
-   "pos": "WR",
+   "name": "Will Shipley",
+   "pos": "RB",
    "outbid": [
     {
      "roster": "1",
-     "bid": 0
+     "bid": 15
     }
    ]
   },
   {
    "week": 5,
-   "player": "8129",
-   "roster": "1",
-   "bid": 12,
-   "at": 1791962097101,
+   "player": "4018",
+   "roster": "12",
+   "bid": 18,
+   "at": 1791357262592,
    "pts": 0.0,
    "started": 0.0,
    "weeks": 0,
    "active": false,
-   "name": "Dameon Pierce",
+   "name": "Joe Mixon",
    "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "11630",
+   "roster": "6",
+   "bid": 10,
+   "at": 1791357262592,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 1,
+   "active": true,
+   "name": "Roman Wilson",
+   "pos": "WR",
    "outbid": [
     {
-     "roster": "1",
-     "bid": 12
+     "roster": "8",
+     "bid": 3
     },
     {
-     "roster": "7",
-     "bid": 10
+     "roster": "1",
+     "bid": 0
     }
    ]
   },
@@ -1250,6 +1110,29 @@
   },
   {
    "week": 5,
+   "player": "11610",
+   "roster": "10",
+   "bid": 5,
+   "at": 1791357262592,
+   "pts": 9.1,
+   "started": 0.0,
+   "weeks": 1,
+   "active": true,
+   "name": "Malik Washington",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 5,
    "player": "11581",
    "roster": "12",
    "bid": 5,
@@ -1264,20 +1147,39 @@
   },
   {
    "week": 5,
-   "player": "NE",
+   "player": "13264",
    "roster": "1",
-   "bid": 5,
-   "at": 1791962097101,
-   "pts": 0.0,
+   "bid": 4,
+   "at": 1791357262592,
+   "pts": 2.2,
    "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "New England Patriots D/ST",
-   "pos": "DEF",
+   "weeks": 1,
+   "active": true,
+   "name": "Dohnte Meyers",
+   "pos": "WR",
    "outbid": [
     {
      "roster": "6",
-     "bid": 0
+     "bid": 4
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "player": "1166",
+   "roster": "7",
+   "bid": 3,
+   "at": 1791357262592,
+   "pts": 13.72,
+   "started": 13.72,
+   "weeks": 1,
+   "active": true,
+   "name": "Kirk Cousins",
+   "pos": "QB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 1
     }
    ]
   },
@@ -1311,56 +1213,19 @@
   },
   {
    "week": 5,
-   "player": "96",
-   "roster": "1",
-   "bid": 2,
-   "at": 1791962097101,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "Aaron Rodgers",
-   "pos": "QB",
-   "outbid": [
-    {
-     "roster": "10",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 5,
-   "player": "9480",
-   "roster": "11",
-   "bid": 1,
-   "at": 1791962097101,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "Brenton Strange",
-   "pos": "TE",
-   "outbid": []
-  },
-  {
-   "week": 5,
-   "player": "KC",
-   "roster": "11",
-   "bid": 1,
-   "at": 1791962097101,
-   "pts": 0.0,
-   "started": 0.0,
+   "player": "5045",
+   "roster": "9",
+   "bid": 0,
+   "at": 1791357262592,
+   "pts": 8.8,
+   "started": 8.8,
    "weeks": 1,
    "active": true,
-   "name": "Kansas City Chiefs D/ST",
-   "pos": "DEF",
+   "name": "Courtland Sutton",
+   "pos": "WR",
    "outbid": [
     {
      "roster": "1",
-     "bid": 0
-    },
-    {
-     "roster": "12",
      "bid": 0
     }
    ]
@@ -1450,7 +1315,105 @@
    "outbid": []
   },
   {
-   "week": 5,
+   "week": 6,
+   "player": "8129",
+   "roster": "1",
+   "bid": 12,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Dameon Pierce",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 12
+    },
+    {
+     "roster": "7",
+     "bid": 10
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "player": "NE",
+   "roster": "1",
+   "bid": 5,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "New England Patriots D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "player": "96",
+   "roster": "1",
+   "bid": 2,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Aaron Rodgers",
+   "pos": "QB",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "player": "9480",
+   "roster": "11",
+   "bid": 1,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Brenton Strange",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "KC",
+   "roster": "11",
+   "bid": 1,
+   "at": 1791962097101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Kansas City Chiefs D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    },
+    {
+     "roster": "12",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 6,
    "player": "12711",
    "roster": "11",
    "bid": 0,
@@ -1464,7 +1427,7 @@
    "outbid": []
   },
   {
-   "week": 5,
+   "week": 6,
    "player": "7567",
    "roster": "7",
    "bid": 0,
@@ -1478,7 +1441,7 @@
    "outbid": []
   },
   {
-   "week": 5,
+   "week": 6,
    "player": "11631",
    "roster": "9",
    "bid": 0,

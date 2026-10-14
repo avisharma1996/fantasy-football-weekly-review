@@ -10,6 +10,7 @@ Usage:
 The season defaults to the newest one in config.json.
 """
 
+import datetime
 import html
 import json
 import random
@@ -268,24 +269,40 @@ def fetch_history(seasons):
     return {"managers": managers, "names": names, "games": games, "finishes": finishes}
 
 
+def season_opener(season):
+    """Thursday of NFL week 1: the Thursday after Labor Day (first Monday of September)."""
+    first = datetime.date(int(season), 9, 1)
+    labor_day = first + datetime.timedelta(days=(7 - first.weekday()) % 7)
+    return labor_day + datetime.timedelta(days=3)
+
+
+def faab_week(season, leg, at):
+    """The week a transaction counts toward. Sleeper keeps calling it week N until the waivers after week N's games,
+    so anything after that week's Monday night game counts toward week N + 1."""
+    tuesday = season_opener(season) + datetime.timedelta(days=7 * (leg - 1) + 5)
+    done = datetime.datetime.combine(tuesday, datetime.time(10), datetime.timezone.utc)  # well after MNF ends
+    return leg + 1 if leg and at >= done.timestamp() * 1000 else leg
+
+
 def fetch_faab(league_id):
     """Every winning waiver claim this season, with the competing bids it beat, plus FAAB traded between teams."""
     league = get(f"/league/{league_id}")
     claims, lost, trades = [], {}, []
     for w in range(0, 19):
         for t in get(f"/league/{league_id}/transactions/{w}") or []:
+            week = faab_week(league["season"], t["leg"], t["status_updated"])
             if t["status"] == "complete":
-                trades += [{"week": t["leg"], "from": str(x["sender"]), "to": str(x["receiver"]), "amount": x["amount"]}
+                trades += [{"week": week, "from": str(x["sender"]), "to": str(x["receiver"]), "amount": x["amount"]}
                            for x in t.get("waiver_budget") or []]
             if t.get("type") != "waiver" or not t.get("adds"):
                 continue
             bid, rid = (t.get("settings") or {}).get("waiver_bid", 0), str(t["roster_ids"][0])
             for pid in t["adds"]:
                 if t["status"] == "complete":
-                    claims.append({"week": t["leg"], "player": pid, "roster": rid, "bid": bid, "at": t["status_updated"]})
+                    claims.append({"week": week, "player": pid, "roster": rid, "bid": bid, "at": t["status_updated"]})
                 # Other failures (e.g. a full roster) weren't real competing bids.
                 elif "claimed by another owner" in ((t.get("metadata") or {}).get("notes") or ""):
-                    lost.setdefault((t["leg"], pid), []).append({"roster": rid, "bid": bid})
+                    lost.setdefault((week, pid), []).append({"roster": rid, "bid": bid})
     players = load_players({c["player"] for c in claims})
     rostered, last = rostered_points(league_id)
     for c in claims:
