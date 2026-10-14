@@ -1117,9 +1117,10 @@ def render_faab(faab, data, site):
                  for x in trades if x["week"] == w]
         for c in (c for c in claims if c["week"] == w):
             beat = ""
-            if c["outbid"]:
-                others = ", ".join(f'{e(name(o["roster"]))}’s {money(o["bid"])}' for o in c["outbid"])
-                margin = c["bid"] - c["outbid"][0]["bid"]
+            outbid = [o for o in c["outbid"] if o["roster"] != c["roster"]]  # not the winner's own backup claims
+            if outbid:
+                others = ", ".join(f'{e(name(o["roster"]))}’s {money(o["bid"])}' for o in outbid)
+                margin = c["bid"] - outbid[0]["bid"]
                 beat = (f'<div class="beat">outbidding {others} · '
                         + (f'by {money(margin)}' if margin > 0 else 'won the tiebreaker') + '</div>')
             items.append(f"""<li{' class="zero"' if not c['bid'] else ''}><span class="amt">{money(c['bid'])}</span>
@@ -1138,14 +1139,15 @@ def render_faab(faab, data, site):
                 f'<span class="pos">{e(c["pos"])}</span> · {e(name(c["roster"]))}<div class="beat">{money(c["bid"])} in '
                 f'Wk {c["week"]} → {c.get("pts", 0):.1f} pts ({c.get("started", 0):.1f} started) · {weeks}</div></div></li>')
     per_dollar = lambda c: c.get("pts", 0) / c["bid"]
-    values = sorted((c for c in claims if c["bid"] >= 5), key=per_dollar, reverse=True)[:5]
-    # Judge a bust only once he's had a couple of weeks, or is already gone.
-    busts = sorted((c for c in claims if c["bid"] >= 10 and (c.get("weeks", 0) >= 2 or not c.get("active"))),
+    values = sorted((c for c in claims if c["bid"] >= 2), key=per_dollar, reverse=True)[:5]
+    # Judge a bust only once he's had a couple of weeks, or played and is already gone.
+    busts = sorted((c for c in claims if c["bid"] >= 10 and (c.get("weeks", 0) >= 2
+                                                             or c.get("weeks", 0) and not c.get("active"))),
                    key=per_dollar)[:5]
     free = sorted((c for c in claims if c["bid"] <= 1), key=lambda c: -c.get("pts", 0))[:5]
     lst = lambda items: "".join(items) or "<li><div>None yet</div></li>"
     roi = "" if not claims else f"""<section><h2 class="sec">Waiver ROI</h2><div class="records">
-  <div><h3>Best value ($5+ bids)</h3><ul class="bids">{lst(roi_line(c, f"{per_dollar(c):.1f}", "pts/$") for c in values)}</ul></div>
+  <div><h3>Best value ($2+ bids)</h3><ul class="bids">{lst(roi_line(c, f"{per_dollar(c):.1f}", "pts/$") for c in values)}</ul></div>
   <div><h3>Biggest busts ($10+ bids)</h3><ul class="bids">{lst(roi_line(c, f"{per_dollar(c):.1f}", "pts/$") for c in busts)}</ul></div>
   <div><h3>Best $0–$1 pickups</h3><ul class="bids">{lst(roi_line(c, f"{c.get('pts', 0):.0f}", "pts") for c in free)}</ul></div>
 </div></section>"""
