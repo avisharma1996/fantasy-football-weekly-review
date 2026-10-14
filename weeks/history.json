@@ -1474,5 +1474,23 @@
    "champion": "1084605692373233664",
    "runner_up": "1002009644597993472"
   }
- ]
+ ],
+ "playoffs": {
+  "2024": {
+   "1129665810802278400": "4th · lost semifinal",
+   "1002009644597993472": "🏆 Champion",
+   "471050766644146176": "5th · lost quarterfinal",
+   "873130597315481600": "Runner-up",
+   "470927114183372800": "6th · lost quarterfinal",
+   "1084605692373233664": "3rd · lost semifinal"
+  },
+  "2025": {
+   "1129665810802278400": "5th · lost quarterfinal",
+   "1129574561793630208": "6th · lost quarterfinal",
+   "1085126678843682816": "4th · lost semifinal",
+   "1002009644597993472": "Runner-up",
+   "1084605692373233664": "🏆 Champion",
+   "1132924651295956992": "3rd · lost semifinal"
+  }
+ }
 }

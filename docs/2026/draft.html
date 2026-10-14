@@ -71,6 +71,20 @@ td.buy{white-space:normal;min-width:180px}
 .bar{width:90px;height:8px;border-radius:99px;background:var(--chip);overflow:hidden}
 .bar span{display:block;height:100%;background:var(--up);border-radius:99px}
 h3{font-size:.95rem;margin:22px 0 8px;color:var(--muted)}
+.sechead{display:flex;align-items:flex-end;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
+.sechead .sec{margin-bottom:12px}
+.search{margin-bottom:12px;width:min(260px,100%);padding:8px 12px;font:inherit;font-size:.9rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px}
+.search:focus{outline:2px solid var(--hl);outline-offset:1px}
+.nomatch{color:var(--muted)}
+.expand{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;border-radius:8px}
+.expand:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+.chev{color:var(--muted);font-size:.8rem;transition:transform .15s}
+.expand[aria-expanded=true] .chev{transform:rotate(90deg)}
+tr.more>td{padding:0 0 4px;background:var(--chip)}
+table.inner{font-size:.85rem}
+table.inner th,table.inner td{padding:8px 14px}
+.hint{color:var(--muted);font-size:.8rem;margin:8px 2px 0}
+[hidden]{display:none!important}
 .bids{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px}
 .bids li{display:flex;gap:14px;align-items:baseline;padding:10px 16px;border-bottom:1px solid var(--line)}
 .bids li:last-child{border-bottom:0}

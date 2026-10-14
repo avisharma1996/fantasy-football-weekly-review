@@ -71,6 +71,20 @@ td.buy{white-space:normal;min-width:180px}
 .bar{width:90px;height:8px;border-radius:99px;background:var(--chip);overflow:hidden}
 .bar span{display:block;height:100%;background:var(--up);border-radius:99px}
 h3{font-size:.95rem;margin:22px 0 8px;color:var(--muted)}
+.sechead{display:flex;align-items:flex-end;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
+.sechead .sec{margin-bottom:12px}
+.search{margin-bottom:12px;width:min(260px,100%);padding:8px 12px;font:inherit;font-size:.9rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px}
+.search:focus{outline:2px solid var(--hl);outline-offset:1px}
+.nomatch{color:var(--muted)}
+.expand{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;border-radius:8px}
+.expand:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+.chev{color:var(--muted);font-size:.8rem;transition:transform .15s}
+.expand[aria-expanded=true] .chev{transform:rotate(90deg)}
+tr.more>td{padding:0 0 4px;background:var(--chip)}
+table.inner{font-size:.85rem}
+table.inner th,table.inner td{padding:8px 14px}
+.hint{color:var(--muted);font-size:.8rem;margin:8px 2px 0}
+[hidden]{display:none!important}
 .bids{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px}
 .bids li{display:flex;gap:14px;align-items:baseline;padding:10px 16px;border-bottom:1px solid var(--line)}
 .bids li:last-child{border-bottom:0}
@@ -180,377 +194,397 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
   <div><h3>Biggest busts ($10+ bids)</h3><ul class="bids"><li><span class="amt">0.0<small>pts/$</small></span><div><b>Quentin Johnston</b> <span class="pos">WR</span> · ... Sanak al-Gaib!<div class="beat">$35 in Wk 3 → 0.0 pts started · 2 wks</div></div></li><li><span class="amt">0.0<small>pts/$</small></span><div><b>Isaiah Likely</b> <span class="pos">TE</span> · superdiddy<div class="beat">$20 in Wk 2 → 0.0 pts started · 2 wks</div></div></li><li><span class="amt">0.0<small>pts/$</small></span><div><b>Isaiah Davis</b> <span class="pos">RB</span> · superdiddy<div class="beat">$19 in Wk 15 → 0.0 pts started · 1 wk</div></div></li><li><span class="amt">0.0<small>pts/$</small></span><div><b>Sean Tucker</b> <span class="pos">RB</span> · yrkpapi<div class="beat">$17 in Wk 7 → 0.0 pts started · 2 wks</div></div></li><li><span class="amt">0.0<small>pts/$</small></span><div><b>Marquez Valdes-Scantling</b> <span class="pos">WR</span> · ... Sanak al-Gaib!<div class="beat">$16 in Wk 12 → 0.0 pts started · 6 wks so far</div></div></li></ul></div>
   <div><h3>Best $0–$1 pickups</h3><ul class="bids"><li><span class="amt">184<small>pts</small></span><div><b>Chuba Hubbard</b> <span class="pos">RB</span> · ... Sanak al-Gaib!<div class="beat">$0 in Wk 3 → 183.7 pts started · 15 wks so far</div></div></li><li><span class="amt">105<small>pts</small></span><div><b>Rico Dowdle</b> <span class="pos">RB</span> · Not Last Place == W<div class="beat">$1 in Wk 4 → 105.2 pts started · 14 wks so far</div></div></li><li><span class="amt">100<small>pts</small></span><div><b>Geno Smith</b> <span class="pos">QB</span> · Karans Fraud-book<div class="beat">$0 in Wk 3 → 99.9 pts started · 6 wks</div></div></li><li><span class="amt">88<small>pts</small></span><div><b>Minnesota Vikings D/ST</b> <span class="pos">DEF</span> · Not Last Place == W<div class="beat">$1 in Wk 4 → 88.0 pts started · 13 wks</div></div></li><li><span class="amt">75<small>pts</small></span><div><b>Chris Boswell</b> <span class="pos">K</span> · Not Last Place == W<div class="beat">$1 in Wk 2 → 75.0 pts started · 7 wks</div></div></li></ul></div>
 </div></section>
-<section><h2 class="sec">Bid log</h2><h3>Week 17</h3><ul class="bids"><li><span class="amt">$7</span>
+<section id="log"><div class="sechead"><h2 class="sec">Bid log</h2><input class="search" type="search" placeholder="Search players" aria-label="Search players">
+<script>
+(function () {
+  var log = document.getElementById('log'), box = log.querySelector('.search'), none = log.querySelector('.nomatch');
+  box.addEventListener('input', function () {
+    var q = box.value.trim().toLowerCase(), any = false;
+    log.querySelectorAll('.wk').forEach(function (wk) {
+      var shown = 0;
+      wk.querySelectorAll('li').forEach(function (li) {
+        var hit = !q || (li.dataset.player || '').indexOf(q) !== -1;
+        li.hidden = !hit;
+        shown += hit;
+      });
+      wk.hidden = !shown;
+      any = any || shown > 0;
+    });
+    none.hidden = any;
+  });
+})();
+</script></div>
+<div class="wk"><h3>Week 17</h3><ul class="bids"><li data-player="diontae johnson"><span class="amt">$7</span>
         <div><b>Not Last Place == W</b> won <b>Diontae Johnson</b> <span class="pos">WR</span>
-        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li><li><span class="amt">$3</span>
+        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li><li data-player="anthony richardson"><span class="amt">$3</span>
         <div><b>Amver Alert🚨</b> won <b>Anthony Richardson</b> <span class="pos">QB</span>
-        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li><li data-player="tyjae spears" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Tyjae Spears</b> <span class="pos">RB</span>
-        <span class="gain">→ 11.8 pts (0.0 started)</span></div></li></ul><h3>Week 16</h3><ul class="bids"><li><span class="amt">$16</span>
+        <span class="gain">→ 11.8 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 16</h3><ul class="bids"><li data-player="detroit lions d/st"><span class="amt">$16</span>
         <div><b>Karans Fraud-book</b> won <b>Detroit Lions D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 15.0 pts (15.0 started)</span></div></li><li><span class="amt">$1</span>
+        <span class="gain">→ 15.0 pts (15.0 started)</span></div></li><li data-player="jerome ford"><span class="amt">$1</span>
         <div><b>superdiddy</b> won <b>Jerome Ford</b> <span class="pos">RB</span>
-        <span class="gain">→ 23.8 pts (23.8 started)</span><div class="beat">outbidding Ducky Irving’s $0, Ducky Irving’s $0, Ducky Irving’s $0 · by $1</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 23.8 pts (23.8 started)</span><div class="beat">outbidding Ducky Irving’s $0, Ducky Irving’s $0, Ducky Irving’s $0 · by $1</div></div></li><li data-player="kendre miller" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Kendre Miller</b> <span class="pos">RB</span>
-        <span class="gain">→ 6.5 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 6.5 pts (0.0 started)</span></div></li><li data-player="harrison butker" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Harrison Butker</b> <span class="pos">K</span>
-        <span class="gain">→ 10.0 pts (10.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 10.0 pts (10.0 started)</span></div></li><li data-player="jalen mcmillan" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Jalen McMillan</b> <span class="pos">WR</span>
-        <span class="gain">→ 34.7 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 34.7 pts (0.0 started)</span></div></li><li data-player="indianapolis colts d/st" class="zero"><span class="amt">$0</span>
         <div><b>Amver Alert🚨</b> won <b>Indianapolis Colts D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="travis etienne" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Travis Etienne</b> <span class="pos">RB</span>
-        <span class="gain">→ 4.7 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 4.7 pts (0.0 started)</span></div></li><li data-player="las vegas raiders d/st" class="zero"><span class="amt">$0</span>
         <div><b>Braelon Allen</b> won <b>Las Vegas Raiders D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 22.0 pts (22.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 22.0 pts (22.0 started)</span></div></li><li data-player="alvin kamara" class="zero"><span class="amt">$0</span>
         <div><b>Karans Fraud-book</b> won <b>Alvin Kamara</b> <span class="pos">RB</span>
-        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li></ul><h3>Week 15</h3><ul class="bids"><li><span class="amt">$27</span>
+        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 15</h3><ul class="bids"><li data-player="patrick taylor"><span class="amt">$27</span>
         <div><b>Braelon Allen</b> won <b>Patrick Taylor</b> <span class="pos">RB</span>
-        <span class="gain">→ 3.0 pts (3.0 started)</span><div class="beat">outbidding Ducky Irving’s $0, Ducky Irving’s $0, superdiddy’s $0 · by $27</div></div></li><li><span class="amt">$19</span>
+        <span class="gain">→ 3.0 pts (3.0 started)</span><div class="beat">outbidding Ducky Irving’s $0, Ducky Irving’s $0, superdiddy’s $0 · by $27</div></div></li><li data-player="isaiah davis"><span class="amt">$19</span>
         <div><b>superdiddy</b> won <b>Isaiah Davis</b> <span class="pos">RB</span>
-        <span class="gain">→ 3.1 pts (0.0 started)</span><div class="beat">outbidding ... Sanak al-Gaib!’s $10, Ducky Irving’s $0, Ducky Irving’s $0 · by $9</div></div></li><li><span class="amt">$10</span>
+        <span class="gain">→ 3.1 pts (0.0 started)</span><div class="beat">outbidding ... Sanak al-Gaib!’s $10, Ducky Irving’s $0, Ducky Irving’s $0 · by $9</div></div></li><li data-player="tank bigsby"><span class="amt">$10</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Tank Bigsby</b> <span class="pos">RB</span>
-        <span class="gain">→ 4.2 pts (0.0 started)</span><div class="beat">outbidding Ducky Irving’s $0, Ducky Irving’s $0 · by $10</div></div></li><li><span class="amt">$8</span>
+        <span class="gain">→ 4.2 pts (0.0 started)</span><div class="beat">outbidding Ducky Irving’s $0, Ducky Irving’s $0 · by $10</div></div></li><li data-player="baltimore ravens d/st"><span class="amt">$8</span>
         <div><b>Karans Fraud-book</b> won <b>Baltimore Ravens D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 6.0 pts (6.0 started)</span><div class="beat">outbidding ... Sanak al-Gaib!’s $0 · by $8</div></div></li><li><span class="amt">$5</span>
+        <span class="gain">→ 6.0 pts (6.0 started)</span><div class="beat">outbidding ... Sanak al-Gaib!’s $0 · by $8</div></div></li><li data-player="arizona cardinals d/st"><span class="amt">$5</span>
         <div><b>Ankitty</b> won <b>Arizona Cardinals D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 9.0 pts (9.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · by $5</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 9.0 pts (9.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · by $5</div></div></li><li data-player="sincere mccormick" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Sincere McCormick</b> <span class="pos">RB</span>
-        <span class="gain">→ 3.5 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 3.5 pts (0.0 started)</span></div></li><li data-player="washington commanders d/st" class="zero"><span class="amt">$0</span>
         <div><b>WE DID NOT DO IT</b> won <b>Washington Commanders D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 6.0 pts (6.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 6.0 pts (6.0 started)</span></div></li><li data-player="wil lutz" class="zero"><span class="amt">$0</span>
         <div><b>WE DID NOT DO IT</b> won <b>Wil Lutz</b> <span class="pos">K</span>
-        <span class="gain">→ 26.0 pts (26.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 26.0 pts (26.0 started)</span></div></li><li data-player="atlanta falcons d/st" class="zero"><span class="amt">$0</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Atlanta Falcons D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 53.0 pts (53.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 53.0 pts (53.0 started)</span></div></li><li data-player="harrison butker" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Harrison Butker</b> <span class="pos">K</span>
-        <span class="gain">→ 10.0 pts (10.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 10.0 pts (10.0 started)</span></div></li><li data-player="xavier worthy" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Xavier Worthy</b> <span class="pos">WR</span>
-        <span class="gain">→ 52.5 pts (0.0 started)</span></div></li></ul><h3>Week 14</h3><ul class="bids"><li><span class="amt">$20</span>
+        <span class="gain">→ 52.5 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 14</h3><ul class="bids"><li data-player="isaac guerendo"><span class="amt">$20</span>
         <div><b>Braelon Allen</b> won <b>Isaac Guerendo</b> <span class="pos">RB</span>
-        <span class="gain">→ 47.2 pts (35.3 started)</span><div class="beat">outbidding superdiddy’s $19, Amver Alert🚨’s $10, Ducky Irving’s $0 · by $1</div></div></li><li><span class="amt">$20</span>
+        <span class="gain">→ 47.2 pts (35.3 started)</span><div class="beat">outbidding superdiddy’s $19, Amver Alert🚨’s $10, Ducky Irving’s $0 · by $1</div></div></li><li data-player="gus edwards"><span class="amt">$20</span>
         <div><b>Ankitty</b> won <b>Gus Edwards</b> <span class="pos">RB</span>
-        <span class="gain">→ 31.5 pts (9.6 started)</span></div></li><li><span class="amt">$7</span>
+        <span class="gain">→ 31.5 pts (9.6 started)</span></div></li><li data-player="adam thielen"><span class="amt">$7</span>
         <div><b>Amver Alert🚨</b> won <b>Adam Thielen</b> <span class="pos">WR</span>
-        <span class="gain">→ 60.6 pts (20.4 started)</span><div class="beat">outbidding Ducky Irving’s $0 · by $7</div></div></li><li><span class="amt">$5</span>
+        <span class="gain">→ 60.6 pts (20.4 started)</span><div class="beat">outbidding Ducky Irving’s $0 · by $7</div></div></li><li data-player="tua tagovailoa"><span class="amt">$5</span>
         <div><b>Karans Fraud-book</b> won <b>Tua Tagovailoa</b> <span class="pos">QB</span>
-        <span class="gain">→ 42.9 pts (30.4 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · by $5</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 42.9 pts (30.4 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · by $5</div></div></li><li data-player="chris rodriguez" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Chris Rodriguez</b> <span class="pos">RB</span>
-        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li><li data-player="buffalo bills d/st" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Buffalo Bills D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 29.0 pts (30.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 29.0 pts (30.0 started)</span></div></li><li data-player="parker romo" class="zero"><span class="amt">$0</span>
         <div><b>WE DID NOT DO IT</b> won <b>Parker Romo</b> <span class="pos">K</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="jake elliott" class="zero"><span class="amt">$0</span>
         <div><b>Braelon Allen</b> won <b>Jake Elliott</b> <span class="pos">K</span>
-        <span class="gain">→ 1.0 pts (1.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 1.0 pts (1.0 started)</span></div></li><li data-player="elijah moore" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Elijah Moore</b> <span class="pos">WR</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="spencer shrader" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Spencer Shrader</b> <span class="pos">K</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="miami dolphins d/st" class="zero"><span class="amt">$0</span>
         <div><b>Karans Fraud-book</b> won <b>Miami Dolphins D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 3.0 pts (3.0 started)</span></div></li></ul><h3>Week 13</h3><ul class="bids"><li><span class="amt">$10</span>
+        <span class="gain">→ 3.0 pts (3.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 13</h3><ul class="bids"><li data-player="austin ekeler"><span class="amt">$10</span>
         <div><b>superdiddy</b> won <b>Austin Ekeler</b> <span class="pos">RB</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="dallas cowboys d/st" class="zero"><span class="amt">$0</span>
         <div><b>Karans Fraud-book</b> won <b>Dallas Cowboys D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 19.0 pts (19.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 19.0 pts (19.0 started)</span></div></li><li data-player="jordan addison" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Jordan Addison</b> <span class="pos">WR</span>
-        <span class="gain">→ 80.4 pts (73.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 80.4 pts (73.0 started)</span></div></li><li data-player="seattle seahawks d/st" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Seattle Seahawks D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 46.0 pts (26.0 started)</span></div></li></ul><h3>Week 12</h3><ul class="bids"><li><span class="amt">$16</span>
+        <span class="gain">→ 46.0 pts (26.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 12</h3><ul class="bids"><li data-player="marquez valdes-scantling"><span class="amt">$16</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Marquez Valdes-Scantling</b> <span class="pos">WR</span>
-        <span class="gain">→ 25.5 pts (0.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · by $16</div></div></li><li><span class="amt">$2</span>
+        <span class="gain">→ 25.5 pts (0.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · by $16</div></div></li><li data-player="wan&#x27;dale robinson"><span class="amt">$2</span>
         <div><b>Amver Alert🚨</b> won <b>Wan&#x27;Dale Robinson</b> <span class="pos">WR</span>
-        <span class="gain">→ 8.8 pts (7.2 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 8.8 pts (7.2 started)</span></div></li><li data-player="tua tagovailoa" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Tua Tagovailoa</b> <span class="pos">QB</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="philadelphia eagles d/st" class="zero"><span class="amt">$0</span>
         <div><b>Not Last Place == W</b> won <b>Philadelphia Eagles D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 62.0 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 62.0 pts (0.0 started)</span></div></li><li data-player="nick westbrook-ikhine" class="zero"><span class="amt">$0</span>
         <div><b>Not Last Place == W</b> won <b>Nick Westbrook-Ikhine</b> <span class="pos">WR</span>
-        <span class="gain">→ 49.6 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 49.6 pts (0.0 started)</span></div></li><li data-player="chase mclaughlin" class="zero"><span class="amt">$0</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Chase McLaughlin</b> <span class="pos">K</span>
-        <span class="gain">→ 61.0 pts (61.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · won the tiebreaker</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 61.0 pts (61.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · won the tiebreaker</div></div></li><li data-player="tampa bay buccaneers d/st" class="zero"><span class="amt">$0</span>
         <div><b>WE DID NOT DO IT</b> won <b>Tampa Bay Buccaneers D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 52.0 pts (42.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 52.0 pts (42.0 started)</span></div></li><li data-player="arizona cardinals d/st" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Arizona Cardinals D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 12.0 pts (12.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 12.0 pts (12.0 started)</span></div></li><li data-player="zach ertz" class="zero"><span class="amt">$0</span>
         <div><b>Not Last Place == W</b> won <b>Zach Ertz</b> <span class="pos">TE</span>
-        <span class="gain">→ 51.2 pts (27.3 started)</span></div></li></ul><h3>Week 11</h3><ul class="bids"><li><span class="amt">$9</span>
+        <span class="gain">→ 51.2 pts (27.3 started)</span></div></li></ul></div><div class="wk"><h3>Week 11</h3><ul class="bids"><li data-player="marquez valdes-scantling"><span class="amt">$9</span>
         <div><b>Ducky Irving</b> won <b>Marquez Valdes-Scantling</b> <span class="pos">WR</span>
-        <span class="gain">→ 15.7 pts (0.0 started)</span></div></li><li><span class="amt">$2</span>
+        <span class="gain">→ 15.7 pts (0.0 started)</span></div></li><li data-player="houston texans d/st"><span class="amt">$2</span>
         <div><b>Braelon Allen</b> won <b>Houston Texans D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 42.0 pts (42.0 started)</span><div class="beat">outbidding Karans Fraud-book’s $2, superdiddy’s $0 · won the tiebreaker</div></div></li><li><span class="amt">$1</span>
+        <span class="gain">→ 42.0 pts (42.0 started)</span><div class="beat">outbidding Karans Fraud-book’s $2, superdiddy’s $0 · won the tiebreaker</div></div></li><li data-player="tucker kraft"><span class="amt">$1</span>
         <div><b>Not Last Place == W</b> won <b>Tucker Kraft</b> <span class="pos">TE</span>
-        <span class="gain">→ 50.7 pts (25.9 started)</span><div class="beat">outbidding Amver Alert🚨’s $0 · by $1</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 50.7 pts (25.9 started)</span><div class="beat">outbidding Amver Alert🚨’s $0 · by $1</div></div></li><li data-player="audric estime" class="zero"><span class="amt">$0</span>
         <div><b>Not Last Place == W</b> won <b>Audric Estime</b> <span class="pos">RB</span>
-        <span class="gain">→ 4.0 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 4.0 pts (0.0 started)</span></div></li><li data-player="jason sanders" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Jason Sanders</b> <span class="pos">K</span>
-        <span class="gain">→ 11.0 pts (11.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 11.0 pts (11.0 started)</span></div></li><li data-player="jordan love" class="zero"><span class="amt">$0</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Jordan Love</b> <span class="pos">QB</span>
-        <span class="gain">→ 112.5 pts (59.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 112.5 pts (59.0 started)</span></div></li><li data-player="tyler bass" class="zero"><span class="amt">$0</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Tyler Bass</b> <span class="pos">K</span>
-        <span class="gain">→ 5.0 pts (5.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 5.0 pts (5.0 started)</span></div></li><li data-player="austin ekeler" class="zero"><span class="amt">$0</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Austin Ekeler</b> <span class="pos">RB</span>
-        <span class="gain">→ 17.0 pts (3.4 started)</span></div></li></ul><h3>Week 10</h3><ul class="bids"><li><span class="amt">$21</span>
+        <span class="gain">→ 17.0 pts (3.4 started)</span></div></li></ul></div><div class="wk"><h3>Week 10</h3><ul class="bids"><li data-player="amari cooper"><span class="amt">$21</span>
         <div><b>WE DID NOT DO IT</b> won <b>Amari Cooper</b> <span class="pos">WR</span>
-        <span class="gain">→ 36.3 pts (6.5 started)</span><div class="beat">outbidding Ducky Irving’s $10, Not Last Place == W’s $0 · by $11</div></div></li><li><span class="amt">$7</span>
+        <span class="gain">→ 36.3 pts (6.5 started)</span><div class="beat">outbidding Ducky Irving’s $10, Not Last Place == W’s $0 · by $11</div></div></li><li data-player="jerry jeudy"><span class="amt">$7</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Jerry Jeudy</b> <span class="pos">WR</span>
-        <span class="gain">→ 120.3 pts (46.2 started)</span><div class="beat">outbidding Ducky Irving’s $4 · by $3</div></div></li><li><span class="amt">$5</span>
+        <span class="gain">→ 120.3 pts (46.2 started)</span><div class="beat">outbidding Ducky Irving’s $4 · by $3</div></div></li><li data-player="mike gesicki"><span class="amt">$5</span>
         <div><b>Karans Fraud-book</b> won <b>Mike Gesicki</b> <span class="pos">TE</span>
-        <span class="gain">→ 5.0 pts (5.0 started)</span></div></li><li><span class="amt">$4</span>
+        <span class="gain">→ 5.0 pts (5.0 started)</span></div></li><li data-player="demario douglas"><span class="amt">$4</span>
         <div><b>Ducky Irving</b> won <b>DeMario Douglas</b> <span class="pos">WR</span>
-        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · by $4</div></div></li><li><span class="amt">$3</span>
+        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · by $4</div></div></li><li data-player="los angeles rams d/st"><span class="amt">$3</span>
         <div><b>Ducky Irving</b> won <b>Los Angeles Rams D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 8.0 pts (8.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 8.0 pts (8.0 started)</span></div></li><li data-player="jake moody" class="zero"><span class="amt">$0</span>
         <div><b>Not Last Place == W</b> won <b>Jake Moody</b> <span class="pos">K</span>
-        <span class="gain">→ 14.0 pts (14.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · won the tiebreaker</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 14.0 pts (14.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · won the tiebreaker</div></div></li><li data-player="blake grupe" class="zero"><span class="amt">$0</span>
         <div><b>WE DID NOT DO IT</b> won <b>Blake Grupe</b> <span class="pos">K</span>
-        <span class="gain">→ 13.0 pts (13.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 13.0 pts (13.0 started)</span></div></li><li data-player="chicago bears d/st" class="zero"><span class="amt">$0</span>
         <div><b>Karans Fraud-book</b> won <b>Chicago Bears D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 4.0 pts (4.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 4.0 pts (4.0 started)</span></div></li><li data-player="new york giants d/st" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>New York Giants D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 5.0 pts (5.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 5.0 pts (5.0 started)</span></div></li><li data-player="isaiah likely" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Isaiah Likely</b> <span class="pos">TE</span>
-        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li><li data-player="jalen mcmillan" class="zero"><span class="amt">$0</span>
         <div><b>Not Last Place == W</b> won <b>Jalen McMillan</b> <span class="pos">WR</span>
-        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li></ul><h3>Week 9</h3><ul class="bids"><li class="trade"><span class="amt">$21</span>
-        <div><b>Karans Fraud-book</b> sent $21 FAAB to <b>WE DID NOT DO IT</b> in a trade</div></li><li><span class="amt">$23</span>
+        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 9</h3><ul class="bids"><li class="trade"><span class="amt">$21</span>
+        <div><b>Karans Fraud-book</b> sent $21 FAAB to <b>WE DID NOT DO IT</b> in a trade</div></li><li data-player="josh downs"><span class="amt">$23</span>
         <div><b>WE DID NOT DO IT</b> won <b>Josh Downs</b> <span class="pos">WR</span>
-        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding Ducky Irving’s $16, Karans Fraud-book’s $5, yrkpapi’s $2 · by $7</div></div></li><li><span class="amt">$20</span>
+        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding Ducky Irving’s $16, Karans Fraud-book’s $5, yrkpapi’s $2 · by $7</div></div></li><li data-player="calvin ridley"><span class="amt">$20</span>
         <div><b>superdiddy</b> won <b>Calvin Ridley</b> <span class="pos">WR</span>
-        <span class="gain">→ 101.6 pts (61.7 started)</span><div class="beat">outbidding Ducky Irving’s $5 · by $15</div></div></li><li><span class="amt">$12</span>
+        <span class="gain">→ 101.6 pts (61.7 started)</span><div class="beat">outbidding Ducky Irving’s $5 · by $15</div></div></li><li data-player="cedric tillman"><span class="amt">$12</span>
         <div><b>Ankitty</b> won <b>Cedric Tillman</b> <span class="pos">WR</span>
-        <span class="gain">→ 24.5 pts (1.8 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $9, Ducky Irving’s $8 · by $3</div></div></li><li><span class="amt">$7</span>
+        <span class="gain">→ 24.5 pts (1.8 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $9, Ducky Irving’s $8 · by $3</div></div></li><li data-player="chris boswell"><span class="amt">$7</span>
         <div><b>yrkpapi</b> won <b>Chris Boswell</b> <span class="pos">K</span>
-        <span class="gain">→ 80.0 pts (80.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0, Ducky Irving’s $0 · by $7</div></div></li><li><span class="amt">$2</span>
+        <span class="gain">→ 80.0 pts (80.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0, Ducky Irving’s $0 · by $7</div></div></li><li data-player="elijah moore"><span class="amt">$2</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Elijah Moore</b> <span class="pos">WR</span>
-        <span class="gain">→ 4.3 pts (0.0 started)</span></div></li><li><span class="amt">$1</span>
+        <span class="gain">→ 4.3 pts (0.0 started)</span></div></li><li data-player="philadelphia eagles d/st"><span class="amt">$1</span>
         <div><b>Braelon Allen</b> won <b>Philadelphia Eagles D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 39.0 pts (32.0 started)</span><div class="beat">outbidding yrkpapi’s $0 · by $1</div></div></li><li><span class="amt">$1</span>
+        <span class="gain">→ 39.0 pts (32.0 started)</span><div class="beat">outbidding yrkpapi’s $0 · by $1</div></div></li><li data-player="detroit lions d/st"><span class="amt">$1</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Detroit Lions D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 44.0 pts (44.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 44.0 pts (44.0 started)</span></div></li><li data-player="tyler bass" class="zero"><span class="amt">$0</span>
         <div><b>Not Last Place == W</b> won <b>Tyler Bass</b> <span class="pos">K</span>
-        <span class="gain">→ 14.0 pts (14.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 14.0 pts (14.0 started)</span></div></li><li data-player="matthew stafford" class="zero"><span class="amt">$0</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Matthew Stafford</b> <span class="pos">QB</span>
-        <span class="gain">→ 29.6 pts (29.6 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 29.6 pts (29.6 started)</span></div></li><li data-player="austin ekeler" class="zero"><span class="amt">$0</span>
         <div><b>WE DID NOT DO IT</b> won <b>Austin Ekeler</b> <span class="pos">RB</span>
-        <span class="gain">→ 33.4 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 33.4 pts (0.0 started)</span></div></li><li data-player="jake elliott" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Jake Elliott</b> <span class="pos">K</span>
-        <span class="gain">→ 4.0 pts (4.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 4.0 pts (4.0 started)</span></div></li><li data-player="tucker kraft" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Tucker Kraft</b> <span class="pos">TE</span>
-        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding Not Last Place == W’s $0 · won the tiebreaker</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding Not Last Place == W’s $0 · won the tiebreaker</div></div></li><li data-player="rakim jarrett" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Rakim Jarrett</b> <span class="pos">WR</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li></ul><h3>Week 8</h3><ul class="bids"><li><span class="amt">$26</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li></ul></div><div class="wk"><h3>Week 8</h3><ul class="bids"><li data-player="george pickens"><span class="amt">$26</span>
         <div><b>Braelon Allen</b> won <b>George Pickens</b> <span class="pos">WR</span>
-        <span class="gain">→ 68.5 pts (62.0 started)</span><div class="beat">outbidding Ducky Irving’s $18, ... Sanak al-Gaib!’s $15, Not Last Place == W’s $11, yrkpapi’s $8, WE DID NOT DO IT’s $5, Karans Fraud-book’s $0, Amver Alert🚨’s $0 · by $8</div></div></li><li><span class="amt">$17</span>
+        <span class="gain">→ 68.5 pts (62.0 started)</span><div class="beat">outbidding Ducky Irving’s $18, ... Sanak al-Gaib!’s $15, Not Last Place == W’s $11, yrkpapi’s $8, WE DID NOT DO IT’s $5, Karans Fraud-book’s $0, Amver Alert🚨’s $0 · by $8</div></div></li><li data-player="jauan jennings"><span class="amt">$17</span>
         <div><b>Not Last Place == W</b> won <b>Jauan Jennings</b> <span class="pos">WR</span>
-        <span class="gain">→ 92.4 pts (92.4 started)</span><div class="beat">outbidding Ducky Irving’s $13, superdiddy’s $6, WE DID NOT DO IT’s $0 · by $4</div></div></li><li><span class="amt">$9</span>
+        <span class="gain">→ 92.4 pts (92.4 started)</span><div class="beat">outbidding Ducky Irving’s $13, superdiddy’s $6, WE DID NOT DO IT’s $0 · by $4</div></div></li><li data-player="rachaad white"><span class="amt">$9</span>
         <div><b>Not Last Place == W</b> won <b>Rachaad White</b> <span class="pos">RB</span>
-        <span class="gain">→ 108.1 pts (75.9 started)</span><div class="beat">outbidding Ducky Irving’s $6, ... Sanak al-Gaib!’s $3, WE DID NOT DO IT’s $2, superdiddy’s $0 · by $3</div></div></li><li><span class="amt">$7</span>
+        <span class="gain">→ 108.1 pts (75.9 started)</span><div class="beat">outbidding Ducky Irving’s $6, ... Sanak al-Gaib!’s $3, WE DID NOT DO IT’s $2, superdiddy’s $0 · by $3</div></div></li><li data-player="keon coleman"><span class="amt">$7</span>
         <div><b>yrkpapi</b> won <b>Keon Coleman</b> <span class="pos">WR</span>
-        <span class="gain">→ 39.4 pts (0.0 started)</span><div class="beat">outbidding Ducky Irving’s $0 · by $7</div></div></li><li><span class="amt">$6</span>
+        <span class="gain">→ 39.4 pts (0.0 started)</span><div class="beat">outbidding Ducky Irving’s $0 · by $7</div></div></li><li data-player="khalil shakir"><span class="amt">$6</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Khalil Shakir</b> <span class="pos">WR</span>
-        <span class="gain">→ 87.4 pts (74.5 started)</span><div class="beat">outbidding Ducky Irving’s $0, Ducky Irving’s $0 · by $6</div></div></li><li><span class="amt">$5</span>
+        <span class="gain">→ 87.4 pts (74.5 started)</span><div class="beat">outbidding Ducky Irving’s $0, Ducky Irving’s $0 · by $6</div></div></li><li data-player="russell wilson"><span class="amt">$5</span>
         <div><b>Ankitty</b> won <b>Russell Wilson</b> <span class="pos">QB</span>
-        <span class="gain">→ 141.4 pts (0.0 started)</span></div></li><li><span class="amt">$5</span>
+        <span class="gain">→ 141.4 pts (0.0 started)</span></div></li><li data-player="kansas city chiefs d/st"><span class="amt">$5</span>
         <div><b>superdiddy</b> won <b>Kansas City Chiefs D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 77.0 pts (77.0 started)</span><div class="beat">outbidding Karans Fraud-book’s $0 · by $5</div></div></li><li><span class="amt">$5</span>
+        <span class="gain">→ 77.0 pts (77.0 started)</span><div class="beat">outbidding Karans Fraud-book’s $0 · by $5</div></div></li><li data-player="jakobi meyers"><span class="amt">$5</span>
         <div><b>Karans Fraud-book</b> won <b>Jakobi Meyers</b> <span class="pos">WR</span>
-        <span class="gain">→ 103.6 pts (39.6 started)</span><div class="beat">outbidding Not Last Place == W’s $0 · by $5</div></div></li><li><span class="amt">$3</span>
+        <span class="gain">→ 103.6 pts (39.6 started)</span><div class="beat">outbidding Not Last Place == W’s $0 · by $5</div></div></li><li data-player="cade otton"><span class="amt">$3</span>
         <div><b>Ducky Irving</b> won <b>Cade Otton</b> <span class="pos">TE</span>
-        <span class="gain">→ 67.7 pts (64.3 started)</span></div></li><li><span class="amt">$2</span>
+        <span class="gain">→ 67.7 pts (64.3 started)</span></div></li><li data-player="caleb williams"><span class="amt">$2</span>
         <div><b>WE DID NOT DO IT</b> won <b>Caleb Williams</b> <span class="pos">QB</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li><span class="amt">$2</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="romeo doubs"><span class="amt">$2</span>
         <div><b>Ducky Irving</b> won <b>Romeo Doubs</b> <span class="pos">WR</span>
-        <span class="gain">→ 13.5 pts (8.7 started)</span></div></li><li><span class="amt">$1</span>
+        <span class="gain">→ 13.5 pts (8.7 started)</span></div></li><li data-player="seattle seahawks d/st"><span class="amt">$1</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Seattle Seahawks D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 2.0 pts (2.0 started)</span></div></li><li><span class="amt">$1</span>
+        <span class="gain">→ 2.0 pts (2.0 started)</span></div></li><li data-player="wil lutz"><span class="amt">$1</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Wil Lutz</b> <span class="pos">K</span>
-        <span class="gain">→ 8.0 pts (8.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · by $1</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 8.0 pts (8.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $0 · by $1</div></div></li><li data-player="jalen mcmillan" class="zero"><span class="amt">$0</span>
         <div><b>WE DID NOT DO IT</b> won <b>Jalen McMillan</b> <span class="pos">WR</span>
-        <span class="gain">→ 7.2 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 7.2 pts (0.0 started)</span></div></li><li data-player="los angeles chargers d/st" class="zero"><span class="amt">$0</span>
         <div><b>Amver Alert🚨</b> won <b>Los Angeles Chargers D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 81.0 pts (50.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 81.0 pts (50.0 started)</span></div></li><li data-player="daniel carlson" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Daniel Carlson</b> <span class="pos">K</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="wan&#x27;dale robinson" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Wan&#x27;Dale Robinson</b> <span class="pos">WR</span>
-        <span class="gain">→ 5.5 pts (0.0 started)</span></div></li></ul><h3>Week 7</h3><ul class="bids"><li><span class="amt">$17</span>
+        <span class="gain">→ 5.5 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 7</h3><ul class="bids"><li data-player="sean tucker"><span class="amt">$17</span>
         <div><b>yrkpapi</b> won <b>Sean Tucker</b> <span class="pos">RB</span>
-        <span class="gain">→ 6.3 pts (0.0 started)</span><div class="beat">outbidding Ducky Irving’s $0 · by $17</div></div></li><li><span class="amt">$13</span>
+        <span class="gain">→ 6.3 pts (0.0 started)</span><div class="beat">outbidding Ducky Irving’s $0 · by $17</div></div></li><li data-player="raheem mostert"><span class="amt">$13</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Raheem Mostert</b> <span class="pos">RB</span>
-        <span class="gain">→ 30.5 pts (10.6 started)</span><div class="beat">outbidding Not Last Place == W’s $7, WE DID NOT DO IT’s $3 · by $6</div></div></li><li><span class="amt">$13</span>
+        <span class="gain">→ 30.5 pts (10.6 started)</span><div class="beat">outbidding Not Last Place == W’s $7, WE DID NOT DO IT’s $3 · by $6</div></div></li><li data-player="khalil shakir"><span class="amt">$13</span>
         <div><b>yrkpapi</b> won <b>Khalil Shakir</b> <span class="pos">WR</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li><span class="amt">$10</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="allen lazard"><span class="amt">$10</span>
         <div><b>Karans Fraud-book</b> won <b>Allen Lazard</b> <span class="pos">WR</span>
-        <span class="gain">→ 7.8 pts (0.0 started)</span></div></li><li><span class="amt">$10</span>
+        <span class="gain">→ 7.8 pts (0.0 started)</span></div></li><li data-player="sean tucker"><span class="amt">$10</span>
         <div><b>Ankitty</b> won <b>Sean Tucker</b> <span class="pos">RB</span>
-        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding yrkpapi’s $10, Ducky Irving’s $0 · won the tiebreaker</div></div></li><li><span class="amt">$10</span>
+        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding yrkpapi’s $10, Ducky Irving’s $0 · won the tiebreaker</div></div></li><li data-player="harrison butker"><span class="amt">$10</span>
         <div><b>Karans Fraud-book</b> won <b>Harrison Butker</b> <span class="pos">K</span>
-        <span class="gain">→ 31.0 pts (31.0 started)</span><div class="beat">outbidding yrkpapi’s $5 · by $5</div></div></li><li><span class="amt">$3</span>
+        <span class="gain">→ 31.0 pts (31.0 started)</span><div class="beat">outbidding yrkpapi’s $5 · by $5</div></div></li><li data-player="tyler lockett"><span class="amt">$3</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Tyler Lockett</b> <span class="pos">WR</span>
-        <span class="gain">→ 7.9 pts (0.0 started)</span></div></li><li><span class="amt">$1</span>
+        <span class="gain">→ 7.9 pts (0.0 started)</span></div></li><li data-player="george pickens"><span class="amt">$1</span>
         <div><b>Not Last Place == W</b> won <b>George Pickens</b> <span class="pos">WR</span>
-        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding yrkpapi’s $0 · by $1</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding yrkpapi’s $0 · by $1</div></div></li><li data-player="hunter henry" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Hunter Henry</b> <span class="pos">TE</span>
-        <span class="gain">→ 20.2 pts (20.2 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 20.2 pts (20.2 started)</span></div></li><li data-player="green bay packers d/st" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Green Bay Packers D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 10.0 pts (10.0 started)</span><div class="beat">outbidding Ducky Irving’s $0 · won the tiebreaker</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 10.0 pts (10.0 started)</span><div class="beat">outbidding Ducky Irving’s $0 · won the tiebreaker</div></div></li><li data-player="juju smith-schuster" class="zero"><span class="amt">$0</span>
         <div><b>WE DID NOT DO IT</b> won <b>JuJu Smith-Schuster</b> <span class="pos">WR</span>
-        <span class="gain">→ 0.0 pts (0.0 started)</span><div class="beat">outbidding Ducky Irving’s $0 · won the tiebreaker</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 0.0 pts (0.0 started)</span><div class="beat">outbidding Ducky Irving’s $0 · won the tiebreaker</div></div></li><li data-player="christian watson" class="zero"><span class="amt">$0</span>
         <div><b>WE DID NOT DO IT</b> won <b>Christian Watson</b> <span class="pos">WR</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="cam akers" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Cam Akers</b> <span class="pos">RB</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="new orleans saints d/st" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>New Orleans Saints D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 3.0 pts (3.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 3.0 pts (3.0 started)</span></div></li><li data-player="courtland sutton" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Courtland Sutton</b> <span class="pos">WR</span>
-        <span class="gain">→ 0.0 pts (0.0 started)</span><div class="beat">outbidding yrkpapi’s $0, Ducky Irving’s $0 · won the tiebreaker</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 0.0 pts (0.0 started)</span><div class="beat">outbidding yrkpapi’s $0, Ducky Irving’s $0 · won the tiebreaker</div></div></li><li data-player="los angeles rams d/st" class="zero"><span class="amt">$0</span>
         <div><b>Karans Fraud-book</b> won <b>Los Angeles Rams D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="chicago bears d/st" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Chicago Bears D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li></ul><h3>Week 6</h3><ul class="bids"><li><span class="amt">$22</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li></ul></div><div class="wk"><h3>Week 6</h3><ul class="bids"><li data-player="tank bigsby"><span class="amt">$22</span>
         <div><b>Not Last Place == W</b> won <b>Tank Bigsby</b> <span class="pos">RB</span>
-        <span class="gain">→ 38.0 pts (23.8 started)</span><div class="beat">outbidding yrkpapi’s $20, Ducky Irving’s $10, superdiddy’s $5 · by $2</div></div></li><li><span class="amt">$18</span>
+        <span class="gain">→ 38.0 pts (23.8 started)</span><div class="beat">outbidding yrkpapi’s $20, Ducky Irving’s $10, superdiddy’s $5 · by $2</div></div></li><li data-player="chase brown"><span class="amt">$18</span>
         <div><b>WE DID NOT DO IT</b> won <b>Chase Brown</b> <span class="pos">RB</span>
-        <span class="gain">→ 30.1 pts (19.7 started)</span><div class="beat">outbidding Ducky Irving’s $17, Not Last Place == W’s $6, Not Last Place == W’s $6, Karans Fraud-book’s $0 · by $1</div></div></li><li><span class="amt">$17</span>
+        <span class="gain">→ 30.1 pts (19.7 started)</span><div class="beat">outbidding Ducky Irving’s $17, Not Last Place == W’s $6, Not Last Place == W’s $6, Karans Fraud-book’s $0 · by $1</div></div></li><li data-player="rhamondre stevenson"><span class="amt">$17</span>
         <div><b>Ducky Irving</b> won <b>Rhamondre Stevenson</b> <span class="pos">RB</span>
-        <span class="gain">→ 99.6 pts (54.8 started)</span></div></li><li><span class="amt">$15</span>
+        <span class="gain">→ 99.6 pts (54.8 started)</span></div></li><li data-player="jakobi meyers"><span class="amt">$15</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Jakobi Meyers</b> <span class="pos">WR</span>
-        <span class="gain">→ 0.0 pts (0.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $6 · by $9</div></div></li><li><span class="amt">$6</span>
+        <span class="gain">→ 0.0 pts (0.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $6 · by $9</div></div></li><li data-player="houston texans d/st"><span class="amt">$6</span>
         <div><b>Not Last Place == W</b> won <b>Houston Texans D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 15.0 pts (15.0 started)</span><div class="beat">outbidding yrkpapi’s $0 · by $6</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 15.0 pts (15.0 started)</span><div class="beat">outbidding yrkpapi’s $0 · by $6</div></div></li><li data-player="tyler conklin" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Tyler Conklin</b> <span class="pos">TE</span>
-        <span class="gain">→ 2.0 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 2.0 pts (0.0 started)</span></div></li><li data-player="jake elliott" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Jake Elliott</b> <span class="pos">K</span>
-        <span class="gain">→ 13.0 pts (13.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 13.0 pts (13.0 started)</span></div></li><li data-player="brayden narveson" class="zero"><span class="amt">$0</span>
         <div><b>Karans Fraud-book</b> won <b>Brayden Narveson</b> <span class="pos">K</span>
-        <span class="gain">→ 10.0 pts (10.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 10.0 pts (10.0 started)</span></div></li><li data-player="jalen tolbert" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Jalen Tolbert</b> <span class="pos">WR</span>
-        <span class="gain">→ 6.3 pts (6.3 started)</span></div></li></ul><h3>Week 5</h3><ul class="bids"><li class="trade"><span class="amt">$15</span>
-        <div><b>WE DID NOT DO IT</b> sent $15 FAAB to <b>... Sanak al-Gaib!</b> in a trade</div></li><li><span class="amt">$18</span>
+        <span class="gain">→ 6.3 pts (6.3 started)</span></div></li></ul></div><div class="wk"><h3>Week 5</h3><ul class="bids"><li class="trade"><span class="amt">$15</span>
+        <div><b>WE DID NOT DO IT</b> sent $15 FAAB to <b>... Sanak al-Gaib!</b> in a trade</div></li><li data-player="trey sermon"><span class="amt">$18</span>
         <div><b>WE DID NOT DO IT</b> won <b>Trey Sermon</b> <span class="pos">RB</span>
-        <span class="gain">→ 23.6 pts (23.6 started)</span></div></li><li><span class="amt">$10</span>
+        <span class="gain">→ 23.6 pts (23.6 started)</span></div></li><li data-player="dontayvion wicks"><span class="amt">$10</span>
         <div><b>Ankitty</b> won <b>Dontayvion Wicks</b> <span class="pos">WR</span>
-        <span class="gain">→ 4.4 pts (4.4 started)</span></div></li><li><span class="amt">$10</span>
+        <span class="gain">→ 4.4 pts (4.4 started)</span></div></li><li data-player="zach ertz"><span class="amt">$10</span>
         <div><b>yrkpapi</b> won <b>Zach Ertz</b> <span class="pos">TE</span>
-        <span class="gain">→ 2.0 pts (2.0 started)</span></div></li><li><span class="amt">$8</span>
+        <span class="gain">→ 2.0 pts (2.0 started)</span></div></li><li data-player="justin fields"><span class="amt">$8</span>
         <div><b>Ankitty</b> won <b>Justin Fields</b> <span class="pos">QB</span>
-        <span class="gain">→ 39.6 pts (39.6 started)</span><div class="beat">outbidding Amver Alert🚨’s $0 · by $8</div></div></li><li><span class="amt">$7</span>
+        <span class="gain">→ 39.6 pts (39.6 started)</span><div class="beat">outbidding Amver Alert🚨’s $0 · by $8</div></div></li><li data-player="alexander mattison"><span class="amt">$7</span>
         <div><b>Not Last Place == W</b> won <b>Alexander Mattison</b> <span class="pos">RB</span>
-        <span class="gain">→ 9.1 pts (0.0 started)</span></div></li><li><span class="amt">$6</span>
+        <span class="gain">→ 9.1 pts (0.0 started)</span></div></li><li data-player="tank bigsby"><span class="amt">$6</span>
         <div><b>WE DID NOT DO IT</b> won <b>Tank Bigsby</b> <span class="pos">RB</span>
-        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding Not Last Place == W’s $0 · by $6</div></div></li><li><span class="amt">$3</span>
+        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding Not Last Place == W’s $0 · by $6</div></div></li><li data-player="denver broncos d/st"><span class="amt">$3</span>
         <div><b>Ducky Irving</b> won <b>Denver Broncos D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 118.0 pts (115.0 started)</span></div></li><li><span class="amt">$2</span>
+        <span class="gain">→ 118.0 pts (115.0 started)</span></div></li><li data-player="tucker kraft"><span class="amt">$2</span>
         <div><b>Amver Alert🚨</b> won <b>Tucker Kraft</b> <span class="pos">TE</span>
-        <span class="gain">→ 25.3 pts (22.8 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 25.3 pts (22.8 started)</span></div></li><li data-player="josh downs" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Josh Downs</b> <span class="pos">WR</span>
-        <span class="gain">→ 28.2 pts (27.4 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 28.2 pts (27.4 started)</span></div></li><li data-player="wil lutz" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Wil Lutz</b> <span class="pos">K</span>
-        <span class="gain">→ 13.0 pts (13.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 13.0 pts (13.0 started)</span></div></li><li data-player="javonte williams" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Javonte Williams</b> <span class="pos">RB</span>
-        <span class="gain">→ 84.6 pts (58.5 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 84.6 pts (58.5 started)</span></div></li><li data-player="seattle seahawks d/st" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Seattle Seahawks D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 14.0 pts (14.0 started)</span><div class="beat">outbidding yrkpapi’s $0 · won the tiebreaker</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 14.0 pts (14.0 started)</span><div class="beat">outbidding yrkpapi’s $0 · won the tiebreaker</div></div></li><li data-player="t.j. hockenson" class="zero"><span class="amt">$0</span>
         <div><b>Karans Fraud-book</b> won <b>T.J. Hockenson</b> <span class="pos">TE</span>
-        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li><li data-player="calvin ridley" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Calvin Ridley</b> <span class="pos">WR</span>
-        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li></ul><h3>Week 4</h3><ul class="bids"><li><span class="amt">$19</span>
+        <span class="gain">→ 0.0 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 4</h3><ul class="bids"><li data-player="jauan jennings"><span class="amt">$19</span>
         <div><b>superdiddy</b> won <b>Jauan Jennings</b> <span class="pos">WR</span>
-        <span class="gain">→ 16.3 pts (12.1 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $12, Ducky Irving’s $8, Karans Fraud-book’s $8 · by $7</div></div></li><li><span class="amt">$10</span>
+        <span class="gain">→ 16.3 pts (12.1 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $12, Ducky Irving’s $8, Karans Fraud-book’s $8 · by $7</div></div></li><li data-player="andrei iosivas"><span class="amt">$10</span>
         <div><b>yrkpapi</b> won <b>Andrei Iosivas</b> <span class="pos">WR</span>
-        <span class="gain">→ 3.4 pts (0.0 started)</span><div class="beat">outbidding Ducky Irving’s $0 · by $10</div></div></li><li><span class="amt">$6</span>
+        <span class="gain">→ 3.4 pts (0.0 started)</span><div class="beat">outbidding Ducky Irving’s $0 · by $10</div></div></li><li data-player="wan&#x27;dale robinson"><span class="amt">$6</span>
         <div><b>Ducky Irving</b> won <b>Wan&#x27;Dale Robinson</b> <span class="pos">WR</span>
-        <span class="gain">→ 43.9 pts (20.5 started)</span><div class="beat">outbidding ... Sanak al-Gaib!’s $2 · by $4</div></div></li><li><span class="amt">$5</span>
+        <span class="gain">→ 43.9 pts (20.5 started)</span><div class="beat">outbidding ... Sanak al-Gaib!’s $2 · by $4</div></div></li><li data-player="sam darnold"><span class="amt">$5</span>
         <div><b>yrkpapi</b> won <b>Sam Darnold</b> <span class="pos">QB</span>
-        <span class="gain">→ 252.5 pts (72.3 started)</span></div></li><li><span class="amt">$5</span>
+        <span class="gain">→ 252.5 pts (72.3 started)</span></div></li><li data-player="darnell mooney"><span class="amt">$5</span>
         <div><b>yrkpapi</b> won <b>Darnell Mooney</b> <span class="pos">WR</span>
-        <span class="gain">→ 132.3 pts (128.8 started)</span><div class="beat">outbidding Ducky Irving’s $4 · by $1</div></div></li><li><span class="amt">$3</span>
+        <span class="gain">→ 132.3 pts (128.8 started)</span><div class="beat">outbidding Ducky Irving’s $4 · by $1</div></div></li><li data-player="cole kmet"><span class="amt">$3</span>
         <div><b>Amver Alert🚨</b> won <b>Cole Kmet</b> <span class="pos">TE</span>
-        <span class="gain">→ 4.9 pts (4.9 started)</span><div class="beat">outbidding superdiddy’s $0 · by $3</div></div></li><li><span class="amt">$2</span>
+        <span class="gain">→ 4.9 pts (4.9 started)</span><div class="beat">outbidding superdiddy’s $0 · by $3</div></div></li><li data-player="kansas city chiefs d/st"><span class="amt">$2</span>
         <div><b>Not Last Place == W</b> won <b>Kansas City Chiefs D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 6.0 pts (6.0 started)</span><div class="beat">outbidding Ducky Irving’s $2, Amver Alert🚨’s $0, Karans Fraud-book’s $0 · won the tiebreaker</div></div></li><li><span class="amt">$1</span>
+        <span class="gain">→ 6.0 pts (6.0 started)</span><div class="beat">outbidding Ducky Irving’s $2, Amver Alert🚨’s $0, Karans Fraud-book’s $0 · won the tiebreaker</div></div></li><li data-player="rico dowdle"><span class="amt">$1</span>
         <div><b>Not Last Place == W</b> won <b>Rico Dowdle</b> <span class="pos">RB</span>
-        <span class="gain">→ 144.2 pts (105.2 started)</span></div></li><li><span class="amt">$1</span>
+        <span class="gain">→ 144.2 pts (105.2 started)</span></div></li><li data-player="minnesota vikings d/st"><span class="amt">$1</span>
         <div><b>Not Last Place == W</b> won <b>Minnesota Vikings D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 111.0 pts (88.0 started)</span><div class="beat">outbidding yrkpapi’s $0, Ducky Irving’s $0 · by $1</div></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 111.0 pts (88.0 started)</span><div class="beat">outbidding yrkpapi’s $0, Ducky Irving’s $0 · by $1</div></div></li><li data-player="ricky pearsall" class="zero"><span class="amt">$0</span>
         <div><b>WE DID NOT DO IT</b> won <b>Ricky Pearsall</b> <span class="pos">WR</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="houston texans d/st" class="zero"><span class="amt">$0</span>
         <div><b>Amver Alert🚨</b> won <b>Houston Texans D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 2.0 pts (2.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 2.0 pts (2.0 started)</span></div></li><li data-player="brenton strange" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Brenton Strange</b> <span class="pos">TE</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="tyler conklin" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Tyler Conklin</b> <span class="pos">TE</span>
-        <span class="gain">→ 3.7 pts (3.7 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 3.7 pts (3.7 started)</span></div></li><li data-player="jerry jeudy" class="zero"><span class="amt">$0</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Jerry Jeudy</b> <span class="pos">WR</span>
-        <span class="gain">→ 12.3 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 12.3 pts (0.0 started)</span></div></li><li data-player="alec pierce" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Alec Pierce</b> <span class="pos">WR</span>
-        <span class="gain">→ 26.4 pts (0.0 started)</span></div></li></ul><h3>Week 3</h3><ul class="bids"><li class="trade"><span class="amt">$10</span>
-        <div><b>yrkpapi</b> sent $10 FAAB to <b>Amver Alert🚨</b> in a trade</div></li><li><span class="amt">$35</span>
+        <span class="gain">→ 26.4 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 3</h3><ul class="bids"><li class="trade"><span class="amt">$10</span>
+        <div><b>yrkpapi</b> sent $10 FAAB to <b>Amver Alert🚨</b> in a trade</div></li><li data-player="quentin johnston"><span class="amt">$35</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Quentin Johnston</b> <span class="pos">WR</span>
-        <span class="gain">→ 13.2 pts (0.0 started)</span><div class="beat">outbidding Karans Fraud-book’s $20, Not Last Place == W’s $16, WE DID NOT DO IT’s $9, Ducky Irving’s $0 · by $15</div></div></li><li><span class="amt">$21</span>
+        <span class="gain">→ 13.2 pts (0.0 started)</span><div class="beat">outbidding Karans Fraud-book’s $20, Not Last Place == W’s $16, WE DID NOT DO IT’s $9, Ducky Irving’s $0 · by $15</div></div></li><li data-player="diontae johnson"><span class="amt">$21</span>
         <div><b>Not Last Place == W</b> won <b>Diontae Johnson</b> <span class="pos">WR</span>
-        <span class="gain">→ 64.5 pts (41.2 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $2 · by $19</div></div></li><li><span class="amt">$17</span>
+        <span class="gain">→ 64.5 pts (41.2 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $2 · by $19</div></div></li><li data-player="rashid shaheed"><span class="amt">$17</span>
         <div><b>Ducky Irving</b> won <b>Rashid Shaheed</b> <span class="pos">WR</span>
-        <span class="gain">→ 11.7 pts (11.7 started)</span><div class="beat">outbidding Not Last Place == W’s $16, Not Last Place == W’s $16, WE DID NOT DO IT’s $5 · by $1</div></div></li><li><span class="amt">$11</span>
+        <span class="gain">→ 11.7 pts (11.7 started)</span><div class="beat">outbidding Not Last Place == W’s $16, Not Last Place == W’s $16, WE DID NOT DO IT’s $5 · by $1</div></div></li><li data-player="carson steele"><span class="amt">$11</span>
         <div><b>Braelon Allen</b> won <b>Carson Steele</b> <span class="pos">RB</span>
-        <span class="gain">→ 7.0 pts (7.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $10, Ankitty’s $10, Not Last Place == W’s $6, Ducky Irving’s $5 · by $1</div></div></li><li><span class="amt">$10</span>
+        <span class="gain">→ 7.0 pts (7.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $10, Ankitty’s $10, Not Last Place == W’s $6, Ducky Irving’s $5 · by $1</div></div></li><li data-player="jauan jennings"><span class="amt">$10</span>
         <div><b>Karans Fraud-book</b> won <b>Jauan Jennings</b> <span class="pos">WR</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li><span class="amt">$9</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="jordan addison"><span class="amt">$9</span>
         <div><b>WE DID NOT DO IT</b> won <b>Jordan Addison</b> <span class="pos">WR</span>
-        <span class="gain">→ 21.4 pts (21.4 started)</span></div></li><li><span class="amt">$7</span>
+        <span class="gain">→ 21.4 pts (21.4 started)</span></div></li><li data-player="braelon allen"><span class="amt">$7</span>
         <div><b>Braelon Allen</b> won <b>Braelon Allen</b> <span class="pos">RB</span>
-        <span class="gain">→ 51.6 pts (23.2 started)</span><div class="beat">outbidding Ducky Irving’s $3, WE DID NOT DO IT’s $0 · by $4</div></div></li><li><span class="amt">$6</span>
+        <span class="gain">→ 51.6 pts (23.2 started)</span><div class="beat">outbidding Ducky Irving’s $3, WE DID NOT DO IT’s $0 · by $4</div></div></li><li data-player="alec pierce"><span class="amt">$6</span>
         <div><b>WE DID NOT DO IT</b> won <b>Alec Pierce</b> <span class="pos">WR</span>
-        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding Ducky Irving’s $5 · by $1</div></div></li><li><span class="amt">$5</span>
+        <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding Ducky Irving’s $5 · by $1</div></div></li><li data-player="josh reynolds"><span class="amt">$5</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Josh Reynolds</b> <span class="pos">WR</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li><span class="amt">$5</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="rome odunze"><span class="amt">$5</span>
         <div><b>Karans Fraud-book</b> won <b>Rome Odunze</b> <span class="pos">WR</span>
-        <span class="gain">→ 109.2 pts (11.5 started)</span></div></li><li><span class="amt">$2</span>
+        <span class="gain">→ 109.2 pts (11.5 started)</span></div></li><li data-player="jake ferguson"><span class="amt">$2</span>
         <div><b>Not Last Place == W</b> won <b>Jake Ferguson</b> <span class="pos">TE</span>
-        <span class="gain">→ 51.8 pts (51.8 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 51.8 pts (51.8 started)</span></div></li><li data-player="green bay packers d/st" class="zero"><span class="amt">$0</span>
         <div><b>Ducky Irving</b> won <b>Green Bay Packers D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 22.0 pts (22.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 22.0 pts (22.0 started)</span></div></li><li data-player="tampa bay buccaneers d/st" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Tampa Bay Buccaneers D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 3.0 pts (3.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 3.0 pts (3.0 started)</span></div></li><li data-player="geno smith" class="zero"><span class="amt">$0</span>
         <div><b>Karans Fraud-book</b> won <b>Geno Smith</b> <span class="pos">QB</span>
-        <span class="gain">→ 99.9 pts (99.9 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 99.9 pts (99.9 started)</span></div></li><li data-player="chuba hubbard" class="zero"><span class="amt">$0</span>
         <div><b>... Sanak al-Gaib!</b> won <b>Chuba Hubbard</b> <span class="pos">RB</span>
-        <span class="gain">→ 209.1 pts (183.7 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 209.1 pts (183.7 started)</span></div></li><li data-player="evan engram" class="zero"><span class="amt">$0</span>
         <div><b>Karans Fraud-book</b> won <b>Evan Engram</b> <span class="pos">TE</span>
-        <span class="gain">→ hasn't played for them yet</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="tyler johnson" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Tyler Johnson</b> <span class="pos">WR</span>
-        <span class="gain">→ 3.5 pts (0.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 3.5 pts (0.0 started)</span></div></li><li data-player="xavier legette" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Xavier Legette</b> <span class="pos">WR</span>
-        <span class="gain">→ 5.2 pts (0.0 started)</span></div></li></ul><h3>Week 2</h3><ul class="bids"><li><span class="amt">$91</span>
+        <span class="gain">→ 5.2 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 2</h3><ul class="bids"><li data-player="j.k. dobbins"><span class="amt">$91</span>
         <div><b>Amver Alert🚨</b> won <b>J.K. Dobbins</b> <span class="pos">RB</span>
-        <span class="gain">→ 145.4 pts (108.6 started)</span><div class="beat">outbidding Ducky Irving’s $30, WE DID NOT DO IT’s $23, ... Sanak al-Gaib!’s $10, Braelon Allen’s $3, Karans Fraud-book’s $2, yrkpapi’s $0 · by $61</div></div></li><li><span class="amt">$20</span>
+        <span class="gain">→ 145.4 pts (108.6 started)</span><div class="beat">outbidding Ducky Irving’s $30, WE DID NOT DO IT’s $23, ... Sanak al-Gaib!’s $10, Braelon Allen’s $3, Karans Fraud-book’s $2, yrkpapi’s $0 · by $61</div></div></li><li data-player="bucky irving"><span class="amt">$20</span>
         <div><b>Ducky Irving</b> won <b>Bucky Irving</b> <span class="pos">RB</span>
-        <span class="gain">→ 196.9 pts (107.7 started)</span></div></li><li><span class="amt">$20</span>
+        <span class="gain">→ 196.9 pts (107.7 started)</span></div></li><li data-player="isaiah likely"><span class="amt">$20</span>
         <div><b>superdiddy</b> won <b>Isaiah Likely</b> <span class="pos">TE</span>
-        <span class="gain">→ 4.5 pts (0.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $11, Karans Fraud-book’s $2, yrkpapi’s $2 · by $9</div></div></li><li><span class="amt">$15</span>
+        <span class="gain">→ 4.5 pts (0.0 started)</span><div class="beat">outbidding WE DID NOT DO IT’s $11, Karans Fraud-book’s $2, yrkpapi’s $2 · by $9</div></div></li><li data-player="demarcus robinson"><span class="amt">$15</span>
         <div><b>Ducky Irving</b> won <b>Demarcus Robinson</b> <span class="pos">WR</span>
-        <span class="gain">→ 9.7 pts (0.0 started)</span></div></li><li><span class="amt">$6</span>
+        <span class="gain">→ 9.7 pts (0.0 started)</span></div></li><li data-player="joe burrow"><span class="amt">$6</span>
         <div><b>superdiddy</b> won <b>Joe Burrow</b> <span class="pos">QB</span>
-        <span class="gain">→ 359.8 pts (158.0 started)</span></div></li><li><span class="amt">$5</span>
+        <span class="gain">→ 359.8 pts (158.0 started)</span></div></li><li data-player="david njoku"><span class="amt">$5</span>
         <div><b>Karans Fraud-book</b> won <b>David Njoku</b> <span class="pos">TE</span>
-        <span class="gain">→ 110.1 pts (99.5 started)</span><div class="beat">outbidding yrkpapi’s $0 · by $5</div></div></li><li><span class="amt">$3</span>
+        <span class="gain">→ 110.1 pts (99.5 started)</span><div class="beat">outbidding yrkpapi’s $0 · by $5</div></div></li><li data-player="allen lazard"><span class="amt">$3</span>
         <div><b>WE DID NOT DO IT</b> won <b>Allen Lazard</b> <span class="pos">WR</span>
-        <span class="gain">→ 2.1 pts (0.0 started)</span></div></li><li><span class="amt">$2</span>
+        <span class="gain">→ 2.1 pts (0.0 started)</span></div></li><li data-player="los angeles chargers d/st"><span class="amt">$2</span>
         <div><b>Amver Alert🚨</b> won <b>Los Angeles Chargers D/ST</b> <span class="pos">DEF</span>
-        <span class="gain">→ 16.0 pts (16.0 started)</span><div class="beat">outbidding Ducky Irving’s $1 · by $1</div></div></li><li><span class="amt">$1</span>
+        <span class="gain">→ 16.0 pts (16.0 started)</span><div class="beat">outbidding Ducky Irving’s $1 · by $1</div></div></li><li data-player="chris boswell"><span class="amt">$1</span>
         <div><b>Not Last Place == W</b> won <b>Chris Boswell</b> <span class="pos">K</span>
-        <span class="gain">→ 75.0 pts (75.0 started)</span></div></li><li><span class="amt">$1</span>
+        <span class="gain">→ 75.0 pts (75.0 started)</span></div></li><li data-player="devin singletary"><span class="amt">$1</span>
         <div><b>Ducky Irving</b> won <b>Devin Singletary</b> <span class="pos">RB</span>
-        <span class="gain">→ 37.7 pts (35.1 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 37.7 pts (35.1 started)</span></div></li><li data-player="tua tagovailoa" class="zero"><span class="amt">$0</span>
         <div><b>Karans Fraud-book</b> won <b>Tua Tagovailoa</b> <span class="pos">QB</span>
-        <span class="gain">→ 8.5 pts (8.5 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 8.5 pts (8.5 started)</span></div></li><li data-player="dalton schultz" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Dalton Schultz</b> <span class="pos">TE</span>
-        <span class="gain">→ 5.2 pts (5.2 started)</span></div></li></ul><h3>Week 1</h3><ul class="bids"><li><span class="amt">$15</span>
+        <span class="gain">→ 5.2 pts (5.2 started)</span></div></li></ul></div><div class="wk"><h3>Week 1</h3><ul class="bids"><li data-player="jameson williams"><span class="amt">$15</span>
         <div><b>yrkpapi</b> won <b>Jameson Williams</b> <span class="pos">WR</span>
-        <span class="gain">→ 176.8 pts (60.0 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 176.8 pts (60.0 started)</span></div></li><li data-player="devin singletary" class="zero"><span class="amt">$0</span>
         <div><b>yrkpapi</b> won <b>Devin Singletary</b> <span class="pos">RB</span>
-        <span class="gain">→ 7.2 pts (7.2 started)</span></div></li><li class="zero"><span class="amt">$0</span>
+        <span class="gain">→ 7.2 pts (7.2 started)</span></div></li><li data-player="keon coleman" class="zero"><span class="amt">$0</span>
         <div><b>superdiddy</b> won <b>Keon Coleman</b> <span class="pos">WR</span>
-        <span class="gain">→ 16.0 pts (0.0 started)</span><div class="beat">outbidding yrkpapi’s $0 · won the tiebreaker</div></div></li></ul></section>
+        <span class="gain">→ 16.0 pts (0.0 started)</span><div class="beat">outbidding yrkpapi’s $0 · won the tiebreaker</div></div></li></ul></div><p class="nomatch" hidden>No players match.</p></section>
 <footer>Pickup pts are everything a claimed player scored while on that team (started or not), from the claim until he left the roster. Started pts, Pts per $ and Waiver ROI count only points scored in the starting lineup. Each team starts with $100 of FAAB; remaining includes FAAB traded between teams. Winning waiver claims from Sleeper, newest week first. “Outbidding” lists the other teams that bid on the same player that week.</footer>
 </main></div></body></html>

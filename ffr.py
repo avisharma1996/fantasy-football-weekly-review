@@ -238,7 +238,7 @@ def fetch_week(league_id, week):
 
 def fetch_history(seasons):
     """Every regular-season game and final placing across all seasons, keyed by manager (Sleeper user id)."""
-    managers, games, finishes, names = {}, [], [], {}
+    managers, games, finishes, names, playoffs = {}, [], [], {}, {}
     for season, league_id in sorted(seasons.items()):
         league = get(f"/league/{league_id}")
         settings = league.get("settings") or {}
@@ -263,10 +263,32 @@ def fetch_history(seasons):
             games += [{"season": season, "week": w, "a": owner[a], "a_pts": round(pts[a], 2),
                        "b": owner[b], "b_pts": round(pts[b], 2)} for a, b in (p for p in pairs.values() if len(p) == 2) if owner[a] and owner[b]]
         if league.get("status") == "complete":
-            for m in get(f"/league/{league_id}/winners_bracket") or []:
+            bracket = get(f"/league/{league_id}/winners_bracket") or []
+            for m in bracket:
                 if m.get("p") == 1 and m.get("w"):
                     finishes.append({"season": season, "champion": owner[m["w"]], "runner_up": owner[m["l"]]})
-    return {"managers": managers, "names": names, "games": games, "finishes": finishes}
+            playoffs[season] = playoff_results(bracket, owner)
+    return {"managers": managers, "names": names, "games": games, "finishes": finishes, "playoffs": playoffs}
+
+
+def playoff_results(bracket, owner):
+    """{manager: "🏆 Champion" | "Runner-up" | "3rd · lost semifinal" ...} for every team in a finished bracket."""
+    if not bracket:
+        return {}
+    last = max(m["r"] for m in bracket)
+    stage = {last: "final", last - 1: "semifinal", last - 2: "quarterfinal"}
+    place = {}
+    for m in bracket:
+        if m.get("p") and m.get("w"):
+            place[m["w"]], place[m["l"]] = m["p"], m["p"] + 1
+    lost = {m["l"]: stage.get(m["r"], f"round {m['r']}") for m in bracket if not m.get("p") and m.get("l")}
+    out = {}
+    for rid in {t for m in bracket for t in (m.get("t1"), m.get("t2")) if t}:
+        n = place.get(rid)
+        out[owner.get(rid)] = ("🏆 Champion" if n == 1 else "Runner-up" if n == 2 else
+                               " · ".join(filter(None, [n and ordinal(n), rid in lost and f"lost {lost[rid]}"])))
+    out.pop(None, None)
+    return out
 
 
 def season_opener(season):
@@ -984,7 +1006,61 @@ def history_page(hist, data, site, current, heading, body, footer, description):
                 f"{html.escape(data['league'])} · {span}", heading, body, footer, description)
 
 
-def render_records(hist, data, site):
+def ordinal(n):
+    return f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+
+
+def season_breakdown(hist, extras, latest, uid):
+    """One row per season a manager played: record, finish, playoffs, FAAB, trades and draft."""
+    e, rows = html.escape, []
+    for s in sorted({g["season"] for g in hist["games"] if uid in (g["a"], g["b"])}, reverse=True):
+        data, x = latest.get(s), extras.get(s) or {}
+        mine = [(g["a_pts"], g["b_pts"]) if g["a"] == uid else (g["b_pts"], g["a_pts"])
+                for g in hist["games"] if g["season"] == s and uid in (g["a"], g["b"])]
+        r = {"w": sum(m > o for m, o in mine), "l": sum(m < o for m, o in mine), "t": sum(m == o for m, o in mine)}
+        rids = {rid for rid, t in (data or {}).get("teams", {}).items() if t.get("owner") == uid}
+        done = s in {f["season"] for f in hist["finishes"]}
+        finish = "–"
+        if data and rids:
+            place = next(i for i, rid in enumerate(standings_order(data), 1) if rid in rids)
+            finish = f"{ordinal(place)} of {len(data['teams'])}"
+        if s in hist.get("playoffs", {}):
+            result = hist["playoffs"][s].get(uid, "Missed")
+        else:  # older history.json without brackets
+            result = next(("🏆 Champion" if f["champion"] == uid else "Runner-up" for f in hist["finishes"]
+                           if f["season"] == s and uid in (f["champion"], f["runner_up"])), "–" if done else "In progress")
+        median = "–"
+        if data and data.get("median_game"):
+            # Each week the top half of scores gets a median win.
+            mr = {"w": 0, "l": 0, "t": 0}
+            for w in {g["week"] for g in hist["games"] if g["season"] == s}:
+                week = [g for g in hist["games"] if g["season"] == s and g["week"] == w]
+                scores = sorted((p for g in week for p in (g["a_pts"], g["b_pts"])), reverse=True)
+                mine_w = next((g["a_pts"] if g["a"] == uid else g["b_pts"] for g in week if uid in (g["a"], g["b"])), None)
+                if mine_w is not None:
+                    cut = scores[len(scores) // 2 - 1], scores[len(scores) // 2]
+                    mr["w" if mine_w > cut[1] and mine_w >= cut[0] else "t" if cut[0] == cut[1] == mine_w else "l"] += 1
+            median = wlt(mr)
+        claims = [c for c in ((x.get("faab") or {}).get("claims") or []) if c["roster"] in rids]
+        faab = f"${sum(c['bid'] for c in claims)} · {len(claims)}" if x.get("faab") else "–"
+        best = max(claims, key=lambda c: c.get("started", 0), default=None)
+        pickup = (f'{e(best["name"])} <small>${best["bid"]} · {best["started"]:.0f} pts started</small>'
+                  if best and best.get("started") else "–")
+        trades = (str(sum(any(side["roster"] in rids for side in t["sides"]) for t in x["trades"]))
+                  if x.get("trades") is not None else "–")
+        picks = [p for p in ((x.get("draft") or {}).get("picks") or []) if p["owner"] == uid and not p["keeper"]]
+        draft = f"{draft_grade(picks):+.1f}" if picks else "–"
+        rows.append(f'<tr><td class="tn">{s}</td><td class="tn">{e(hist["names"].get(s, {}).get(uid, ""))}</td>'
+                    f'<td>{wlt(r)}</td><td>{median}</td><td>{sum(m for m, _ in mine) / max(len(mine), 1):.1f}</td>'
+                    f'<td>{max((m for m, _ in mine), default=0):.1f}</td><td>{finish}</td><td class="tn">{result}</td>'
+                    f'<td>{faab}</td><td class="tn">{pickup}</td><td>{trades}</td><td>{draft}</td></tr>')
+    return ('<table class="inner"><thead><tr><th class="tn">Season</th><th class="tn">Team</th><th>Record</th>'
+            '<th>vs median</th><th>PF / game</th><th>High score</th><th>Finish</th><th class="tn">Playoffs</th>'
+            '<th>FAAB spent · claims</th><th class="tn">Best pickup</th><th>Trades</th><th>Draft value</th>'
+            '</tr></thead><tbody>' + "".join(rows) + '</tbody></table>')
+
+
+def render_records(hist, data, site, extras=None, latest=None):
     e, mgr, names = html.escape, hist["managers"], hist["names"]
     totals, _, order, pct = history_totals(hist)
     who = lambda uid: (f'<span class="who">{avatar(mgr[uid])}<span>{e(mgr[uid]["name"])}'
@@ -992,9 +1068,12 @@ def render_records(hist, data, site):
     team = lambda season, uid: e(names[season].get(uid) or mgr[uid]["name"])
 
     standings = "".join(
-        f'<tr><td class="tn">{who(u)}</td><td>{len(totals[u]["seasons"])}</td><td>{wlt(totals[u])}</td>'
-        f'<td>{pct(totals[u]):.3f}</td><td>{totals[u]["pf"] / max(totals[u]["games"], 1):.1f}</td>'
-        f'<td>{"🏆" * totals[u]["titles"] or "–"}</td></tr>' for u in order if totals[u]["games"])
+        f'<tr class="mgr"><td class="tn"><button class="expand" aria-expanded="false" aria-controls="seasons-{u}">'
+        f'{who(u)}<span class="chev" aria-hidden="true">▸</span></button></td><td>{len(totals[u]["seasons"])}</td>'
+        f'<td>{wlt(totals[u])}</td><td>{pct(totals[u]):.3f}</td><td>{totals[u]["pf"] / max(totals[u]["games"], 1):.1f}</td>'
+        f'<td>{"🏆" * totals[u]["titles"] or "–"}</td></tr>'
+        f'<tr class="more" id="seasons-{u}" hidden><td colspan="6">{season_breakdown(hist, extras or {}, latest or {}, u)}</td></tr>'
+        for u in order if totals[u]["games"])
     champs = "".join(
         f'<tr><td class="tn">{f["season"]}</td><td class="tn"><b>{team(f["season"], f["champion"])}</b> '
         f'<small>{e(mgr[f["champion"]]["manager"])}</small></td>'
@@ -1046,11 +1125,24 @@ def render_records(hist, data, site):
     body = f"""<section><h2 class="sec">Champions</h2><div class="tbl"><table>
   <thead><tr><th class="tn">Season</th><th class="tn">Champion</th><th class="tn">Runner-up</th></tr></thead>
   <tbody>{champs or '<tr><td class="tn" colspan="3">No completed seasons yet.</td></tr>'}</tbody></table></div></section>
-<section><h2 class="sec">All-Time Standings</h2><div class="tbl"><table>
+<section><h2 class="sec">All-Time Standings</h2><div class="tbl"><table class="alltime">
   <thead><tr><th class="tn">Manager</th><th>Seasons</th><th>Record</th><th>Win %</th><th>PF / game</th><th>Titles</th></tr></thead>
-  <tbody>{standings}</tbody></table></div></section>
+  <tbody>{standings}</tbody></table></div><p class="hint">Tap a manager for their season-by-season breakdown.</p></section>
+<script>
+document.querySelectorAll('.alltime .expand').forEach(function (b) {{
+  b.addEventListener('click', function () {{
+    var open = b.getAttribute('aria-expanded') !== 'true';
+    b.setAttribute('aria-expanded', open);
+    document.getElementById(b.getAttribute('aria-controls')).hidden = !open;
+  }});
+}});
+</script>
 <section><h2 class="sec">Records</h2><div class="records">{lists}</div></section>"""
     footer = ("Regular-season head-to-head games only; median games and playoffs aren't counted in records or streaks. "
+              "In the season breakdown, Finish is the official regular-season place (median wins included), "
+              "vs median is the record against each week's league median, Best pickup is the waiver claim with the "
+              "most points in their starting lineup, "
+              "Draft value is average value per pick from the Draft Report Card, and Trades counts trades made that season. "
               "Managers are tracked across seasons by their Sleeper account and shown with their latest team name; "
               "records show the team name from that season.")
     return history_page(hist, data, site, "records", "Record Book", body, footer, "League records and champions")
@@ -1083,6 +1175,29 @@ def render_h2h(hist, data, site):
     footer = ("Read across a row: that manager's regular-season record against each opponent, across every season. "
               "Green means they lead the series. Median games and playoffs aren't counted.")
     return history_page(hist, data, site, "h2h", "Head-to-Head", body, footer, "All-time head-to-head records")
+
+
+# Bid log search: filters claims by player name and hides weeks with no matches.
+SEARCH = """<input class="search" type="search" placeholder="Search players" aria-label="Search players">
+<script>
+(function () {
+  var log = document.getElementById('log'), box = log.querySelector('.search'), none = log.querySelector('.nomatch');
+  box.addEventListener('input', function () {
+    var q = box.value.trim().toLowerCase(), any = false;
+    log.querySelectorAll('.wk').forEach(function (wk) {
+      var shown = 0;
+      wk.querySelectorAll('li').forEach(function (li) {
+        var hit = !q || (li.dataset.player || '').indexOf(q) !== -1;
+        li.hidden = !hit;
+        shown += hit;
+      });
+      wk.hidden = !shown;
+      any = any || shown > 0;
+    });
+    none.hidden = any;
+  });
+})();
+</script>"""
 
 
 def render_faab(faab, data, site):
@@ -1123,16 +1238,17 @@ def render_faab(faab, data, site):
                 margin = c["bid"] - outbid[0]["bid"]
                 beat = (f'<div class="beat">outbidding {others} · '
                         + (f'by {money(margin)}' if margin > 0 else 'won the tiebreaker') + '</div>')
-            items.append(f"""<li{' class="zero"' if not c['bid'] else ''}><span class="amt">{money(c['bid'])}</span>
+            items.append(f"""<li data-player="{e(c['name'].lower())}"{' class="zero"' if not c['bid'] else ''}><span class="amt">{money(c['bid'])}</span>
         <div><b>{e(name(c['roster']))}</b> won <b>{e(c['name'])}</b> <span class="pos">{e(c['pos'])}</span>
         <span class="gain">{f"→ {c['pts']:.1f} pts ({c['started']:.1f} started)" if c.get('weeks') else "→ hasn't played for them yet"}</span>{beat}</div></li>""")
-        log.append(f'<h3>{f"Week {w}" if w else "Preseason"}</h3><ul class="bids">{"".join(items)}</ul>')
+        log.append(f'<div class="wk"><h3>{f"Week {w}" if w else "Preseason"}</h3><ul class="bids">{"".join(items)}</ul></div>')
 
     body = f"""<section><h2 class="sec">Budget</h2><div class="tbl"><table>
   <thead><tr><th class="tn">Team</th><th>Spent</th>{"<th>Traded</th>" if trades else ""}<th>Remaining</th><th>Claims won</th><th>Started pts</th><th>Pts per $</th><th class="tn">Biggest buy</th></tr></thead>
   <tbody>{"".join(table)}</tbody></table></div></section>
 <!--ROI-->
-<section><h2 class="sec">Bid log</h2>{"".join(log) or "<p>No waiver claims yet.</p>"}</section>"""
+<section id="log"><div class="sechead"><h2 class="sec">Bid log</h2>{SEARCH if log else ""}</div>
+{"".join(log) or "<p>No waiver claims yet.</p>"}<p class="nomatch" hidden>No players match.</p></section>"""
     def roi_line(c, val, unit):
         weeks = f'{c.get("weeks", 0)} wk{"s" if c.get("weeks", 0) != 1 else ""}' + (" so far" if c.get("active") else "")
         return (f'<li><span class="amt">{val}<small>{unit}</small></span><div><b>{e(c["name"])}</b> '
@@ -1181,6 +1297,7 @@ def build():
             "draft_seasons": {s for s in seasons if extras[s]["draft"]}}
     if IMAGES.exists():
         shutil.copytree(IMAGES, SITE / "images", dirs_exist_ok=True)
+    latest = {}  # each season's latest week data, for team names and roster owners
     for s in seasons:
         weeks = weeks_written(s)
         (SITE / s).mkdir(parents=True, exist_ok=True)
@@ -1198,6 +1315,7 @@ def build():
                     root = render_week(data, content, prev_rank, weeks, site, "", history)
                     (SITE / "index.html").write_text(root, encoding="utf-8")
             prev_rank = history[-1][1]
+        latest[s] = data
         x = extras[s]
         if x["faab"]:
             (SITE / s / "faab.html").write_text(render_faab(x["faab"], data, site), encoding="utf-8")
@@ -1210,7 +1328,7 @@ def build():
         print(f"Built {s}: {len(weeks)} week(s) + " + ", ".join(k for k, v in x.items() if v is not None))
     if hist:
         (SITE / "history").mkdir(exist_ok=True)
-        (SITE / "history" / "records.html").write_text(render_records(hist, data, site), encoding="utf-8")
+        (SITE / "history" / "records.html").write_text(render_records(hist, data, site, extras, latest), encoding="utf-8")
         (SITE / "history" / "h2h.html").write_text(render_h2h(hist, data, site), encoding="utf-8")
         print("Built league history")
     print("Open docs/index.html to preview.")
@@ -1300,6 +1418,20 @@ td.buy{white-space:normal;min-width:180px}
 .bar{width:90px;height:8px;border-radius:99px;background:var(--chip);overflow:hidden}
 .bar span{display:block;height:100%;background:var(--up);border-radius:99px}
 h3{font-size:.95rem;margin:22px 0 8px;color:var(--muted)}
+.sechead{display:flex;align-items:flex-end;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
+.sechead .sec{margin-bottom:12px}
+.search{margin-bottom:12px;width:min(260px,100%);padding:8px 12px;font:inherit;font-size:.9rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px}
+.search:focus{outline:2px solid var(--hl);outline-offset:1px}
+.nomatch{color:var(--muted)}
+.expand{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;border-radius:8px}
+.expand:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+.chev{color:var(--muted);font-size:.8rem;transition:transform .15s}
+.expand[aria-expanded=true] .chev{transform:rotate(90deg)}
+tr.more>td{padding:0 0 4px;background:var(--chip)}
+table.inner{font-size:.85rem}
+table.inner th,table.inner td{padding:8px 14px}
+.hint{color:var(--muted);font-size:.8rem;margin:8px 2px 0}
+[hidden]{display:none!important}
 .bids{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px}
 .bids li{display:flex;gap:14px;align-items:baseline;padding:10px 16px;border-bottom:1px solid var(--line)}
 .bids li:last-child{border-bottom:0}
