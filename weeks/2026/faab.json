@@ -1292,7 +1292,7 @@
    "roster": "5",
    "bid": 0,
    "at": 1791702266878,
-   "pts": 8.0,
+   "pts": 9.0,
    "started": 0.0,
    "weeks": 1,
    "active": true,
@@ -1339,6 +1339,20 @@
   },
   {
    "week": 6,
+   "player": "13274",
+   "roster": "7",
+   "bid": 9,
+   "at": 1792047870125,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Germie Bernard",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 6,
    "player": "NE",
    "roster": "1",
    "bid": 5,
@@ -1352,6 +1366,29 @@
    "outbid": [
     {
      "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "player": "6083",
+   "roster": "2",
+   "bid": 5,
+   "at": 1792047870125,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Matt Gay",
+   "pos": "K",
+   "outbid": [
+    {
+     "roster": "5",
+     "bid": 0
+    },
+    {
+     "roster": "10",
      "bid": 0
     }
    ]
@@ -1466,6 +1503,76 @@
      "bid": 0
     }
    ]
+  },
+  {
+   "week": 6,
+   "player": "13150",
+   "roster": "6",
+   "bid": 0,
+   "at": 1792047870125,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Darius Cooper",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "NO",
+   "roster": "6",
+   "bid": 0,
+   "at": 1792047870125,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "New Orleans Saints D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "11559",
+   "roster": "10",
+   "bid": 0,
+   "at": 1792047870125,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Michael Penix",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "11439",
+   "roster": "10",
+   "bid": 0,
+   "at": 1792047870125,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Jaleel McLaughlin",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "3271",
+   "roster": "10",
+   "bid": 0,
+   "at": 1792047870125,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tyler Higbee",
+   "pos": "TE",
+   "outbid": []
   }
  ],
  "trades": []
