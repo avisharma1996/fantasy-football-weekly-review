@@ -66,5 +66,39 @@
     "total": 0
    }
   ]
+ },
+ {
+  "week": 6,
+  "at": 1792110701774,
+  "sides": [
+   {
+    "roster": "7",
+    "players": [
+     {
+      "player": "11581",
+      "pts": 0,
+      "name": "MarShawn Lloyd",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   },
+   {
+    "roster": "12",
+    "players": [
+     {
+      "player": "5892",
+      "pts": 0,
+      "name": "David Montgomery",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   }
+  ]
  }
 ]
