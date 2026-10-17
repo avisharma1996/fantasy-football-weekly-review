@@ -100,5 +100,39 @@
     "total": 0
    }
   ]
+ },
+ {
+  "week": 6,
+  "at": 1792211115227,
+  "sides": [
+   {
+    "roster": "1",
+    "players": [
+     {
+      "player": "11646",
+      "pts": 0,
+      "name": "Jalen Coker",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   },
+   {
+    "roster": "5",
+    "players": [
+     {
+      "player": "7525",
+      "pts": 0,
+      "name": "DeVonta Smith",
+      "pos": "WR"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   }
+  ]
  }
 ]

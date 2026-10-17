@@ -1689,6 +1689,20 @@
    "name": "Trey Smack",
    "pos": "K",
    "outbid": []
+  },
+  {
+   "week": 6,
+   "player": "3257",
+   "roster": "11",
+   "bid": 0,
+   "at": 1792220692466,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Jacoby Brissett",
+   "pos": "QB",
+   "outbid": []
   }
  ],
  "trades": []
