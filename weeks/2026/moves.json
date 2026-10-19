@@ -1,0 +1,163 @@
+{
+ "teams": {
+  "1": {
+   "waiver": 22,
+   "drops": 26,
+   "free_agent": 5,
+   "trades": 1
+  },
+  "7": {
+   "waiver": 8,
+   "drops": 9,
+   "trades": 3,
+   "free_agent": 2
+  },
+  "8": {
+   "waiver": 4,
+   "drops": 6,
+   "free_agent": 2
+  },
+  "9": {
+   "waiver": 13,
+   "drops": 13,
+   "free_agent": 1
+  },
+  "5": {
+   "waiver": 5,
+   "drops": 6,
+   "free_agent": 1,
+   "trades": 1
+  },
+  "6": {
+   "free_agent": 3,
+   "drops": 16,
+   "trades": 1,
+   "waiver": 14
+  },
+  "10": {
+   "waiver": 11,
+   "drops": 13,
+   "free_agent": 2,
+   "trades": 1
+  },
+  "2": {
+   "free_agent": 1,
+   "drops": 3,
+   "waiver": 2
+  },
+  "11": {
+   "free_agent": 2,
+   "drops": 16,
+   "waiver": 14
+  },
+  "3": {
+   "waiver": 1,
+   "drops": 2,
+   "free_agent": 2
+  },
+  "12": {
+   "waiver": 5,
+   "drops": 5,
+   "free_agent": 1,
+   "trades": 1
+  },
+  "4": {
+   "free_agent": 3,
+   "drops": 5,
+   "waiver": 3
+  }
+ },
+ "players": [
+  {
+   "name": "Malik Washington",
+   "pos": "WR",
+   "teams": [
+    "9",
+    "1",
+    "10"
+   ],
+   "adds": 3
+  },
+  {
+   "name": "Tyler Loop",
+   "pos": "K",
+   "teams": [
+    "1",
+    "11"
+   ],
+   "adds": 4
+  },
+  {
+   "name": "Kansas City Chiefs D/ST",
+   "pos": "DEF",
+   "teams": [
+    "1",
+    "11"
+   ],
+   "adds": 2
+  },
+  {
+   "name": "Antonio Williams",
+   "pos": "WR",
+   "teams": [
+    "7",
+    "6"
+   ],
+   "adds": 2
+  },
+  {
+   "name": "Caleb Douglas",
+   "pos": "WR",
+   "teams": [
+    "8",
+    "1"
+   ],
+   "adds": 2
+  },
+  {
+   "name": "Jake Ferguson",
+   "pos": "TE",
+   "teams": [
+    "6",
+    "5"
+   ],
+   "adds": 2
+  },
+  {
+   "name": "Chris Bell",
+   "pos": "WR",
+   "teams": [
+    "9",
+    "6"
+   ],
+   "adds": 2
+  },
+  {
+   "name": "Michael Mayer",
+   "pos": "TE",
+   "teams": [
+    "9",
+    "6"
+   ],
+   "adds": 2
+  },
+  {
+   "name": "Malachi Fields",
+   "pos": "WR",
+   "teams": [
+    "1",
+    "6"
+   ],
+   "adds": 2
+  },
+  {
+   "name": "Bryce Young",
+   "pos": "QB",
+   "teams": [
+    "2",
+    "1"
+   ],
+   "adds": 2
+  }
+ ]
+}

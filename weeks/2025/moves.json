@@ -1,0 +1,174 @@
+{
+ "teams": {
+  "8": {
+   "waiver": 16,
+   "drops": 35,
+   "free_agent": 18,
+   "trades": 3
+  },
+  "6": {
+   "waiver": 20,
+   "drops": 40,
+   "free_agent": 20,
+   "trades": 2
+  },
+  "1": {
+   "waiver": 43,
+   "drops": 144,
+   "free_agent": 101,
+   "trades": 2
+  },
+  "10": {
+   "waiver": 18,
+   "drops": 49,
+   "free_agent": 30,
+   "trades": 4
+  },
+  "2": {
+   "waiver": 15,
+   "drops": 32,
+   "trades": 3,
+   "free_agent": 17
+  },
+  "9": {
+   "waiver": 17,
+   "drops": 35,
+   "free_agent": 18,
+   "trades": 5
+  },
+  "5": {
+   "free_agent": 16,
+   "drops": 33,
+   "waiver": 17
+  },
+  "7": {
+   "free_agent": 30,
+   "drops": 42,
+   "waiver": 14,
+   "trades": 4
+  },
+  "3": {
+   "free_agent": 5,
+   "waiver": 4,
+   "drops": 9
+  },
+  "4": {
+   "waiver": 2,
+   "drops": 10,
+   "trades": 1,
+   "free_agent": 8
+  }
+ },
+ "players": [
+  {
+   "name": "Daniel Jones",
+   "pos": "QB",
+   "teams": [
+    "6",
+    "1",
+    "8",
+    "5",
+    "7"
+   ],
+   "adds": 5
+  },
+  {
+   "name": "Green Bay Packers D/ST",
+   "pos": "DEF",
+   "teams": [
+    "7",
+    "5",
+    "1",
+    "2"
+   ],
+   "adds": 7
+  },
+  {
+   "name": "Los Angeles Rams D/ST",
+   "pos": "DEF",
+   "teams": [
+    "8",
+    "10",
+    "7",
+    "5"
+   ],
+   "adds": 5
+  },
+  {
+   "name": "New England Patriots D/ST",
+   "pos": "DEF",
+   "teams": [
+    "5",
+    "10",
+    "9",
+    "1"
+   ],
+   "adds": 5
+  },
+  {
+   "name": "Dalton Kincaid",
+   "pos": "TE",
+   "teams": [
+    "7",
+    "1",
+    "10",
+    "9"
+   ],
+   "adds": 5
+  },
+  {
+   "name": "Wan'Dale Robinson",
+   "pos": "WR",
+   "teams": [
+    "10",
+    "1",
+    "9",
+    "7"
+   ],
+   "adds": 5
+  },
+  {
+   "name": "Tampa Bay Buccaneers D/ST",
+   "pos": "DEF",
+   "teams": [
+    "10",
+    "7",
+    "1",
+    "2"
+   ],
+   "adds": 4
+  },
+  {
+   "name": "Pittsburgh Steelers D/ST",
+   "pos": "DEF",
+   "teams": [
+    "1",
+    "10",
+    "8",
+    "5"
+   ],
+   "adds": 4
+  },
+  {
+   "name": "Hunter Henry",
+   "pos": "TE",
+   "teams": [
+    "7",
+    "5",
+    "10",
+    "2"
+   ],
+   "adds": 4
+  },
+  {
+   "name": "Los Angeles Chargers D/ST",
+   "pos": "DEF",
+   "teams": [
+    "1",
+    "2",
+    "7"
+   ],
+   "adds": 6
+  }
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "teams": {
+  "1": {
+   "waiver": 26,
+   "drops": 72,
+   "trades": 3,
+   "free_agent": 46
+  },
+  "6": {
+   "waiver": 19,
+   "drops": 48,
+   "free_agent": 30,
+   "trades": 4
+  },
+  "10": {
+   "trades": 3,
+   "waiver": 21,
+   "drops": 33,
+   "free_agent": 10
+  },
+  "5": {
+   "waiver": 10,
+   "drops": 30,
+   "free_agent": 21,
+   "trades": 1
+  },
+  "8": {
+   "waiver": 21,
+   "drops": 34,
+   "free_agent": 13,
+   "trades": 1
+  },
+  "4": {
+   "free_agent": 17,
+   "drops": 27,
+   "waiver": 9,
+   "trades": 1
+  },
+  "2": {
+   "waiver": 20,
+   "drops": 42,
+   "free_agent": 19,
+   "trades": 3
+  },
+  "9": {
+   "waiver": 22,
+   "drops": 45,
+   "free_agent": 21
+  },
+  "7": {
+   "waiver": 29,
+   "drops": 52,
+   "trades": 3,
+   "free_agent": 24
+  },
+  "3": {
+   "trades": 1,
+   "waiver": 7,
+   "drops": 14,
+   "free_agent": 7
+  }
+ },
+ "players": [
+  {
+   "name": "Tucker Kraft",
+   "pos": "TE",
+   "teams": [
+    "5",
+    "1",
+    "9",
+    "4",
+    "8"
+   ],
+   "adds": 6
+  },
+  {
+   "name": "Tank Bigsby",
+   "pos": "RB",
+   "teams": [
+    "6",
+    "8",
+    "10",
+    "3",
+    "7"
+   ],
+   "adds": 6
+  },
+  {
+   "name": "Austin Ekeler",
+   "pos": "RB",
+   "teams": [
+    "4",
+    "1",
+    "6",
+    "10",
+    "9"
+   ],
+   "adds": 5
+  },
+  {
+   "name": "Dalton Schultz",
+   "pos": "TE",
+   "teams": [
+    "7",
+    "8",
+    "5",
+    "9"
+   ],
+   "adds": 5
+  },
+  {
+   "name": "Xavier Legette",
+   "pos": "WR",
+   "teams": [
+    "7",
+    "5",
+    "8",
+    "4"
+   ],
+   "adds": 5
+  },
+  {
+   "name": "Cam Akers",
+   "pos": "RB",
+   "teams": [
+    "8",
+    "9",
+    "1",
+    "10"
+   ],
+   "adds": 5
+  },
+  {
+   "name": "Khalil Shakir",
+   "pos": "WR",
+   "teams": [
+    "1",
+    "2",
+    "10",
+    "7"
+   ],
+   "adds": 4
+  },
+  {
+   "name": "Green Bay Packers D/ST",
+   "pos": "DEF",
+   "teams": [
+    "1",
+    "7",
+    "5",
+    "8"
+   ],
+   "adds": 4
+  },
+  {
+   "name": "Houston Texans D/ST",
+   "pos": "DEF",
+   "teams": [
+    "8",
+    "5",
+    "4"
+   ],
+   "adds": 5
+  },
+  {
+   "name": "Alexander Mattison",
+   "pos": "RB",
+   "teams": [
+    "9",
+    "8",
+    "6"
+   ],
+   "adds": 5
+  }
+ ]
+}

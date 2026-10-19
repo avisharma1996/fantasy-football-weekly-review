@@ -403,7 +403,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 39.0,
    "team_weeks": 5,
    "round": 3,
@@ -627,7 +627,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 42.0,
    "team_weeks": 5,
    "round": 4,
@@ -1235,7 +1235,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 21.0,
    "team_weeks": 5,
    "round": 7,
@@ -1459,7 +1459,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 17.8,
    "team_weeks": 5,
    "round": 8,
@@ -2291,7 +2291,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 49.0,
    "team_weeks": 5,
    "round": 12,
@@ -2419,7 +2419,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 43.2,
    "team_weeks": 5,
    "round": 13,
@@ -2531,7 +2531,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 19.3,
    "team_weeks": 5,
    "round": 14,
@@ -2579,7 +2579,7 @@
    "keeper": false
   },
   {
-   "kept": false,
+   "kept": true,
    "team_pts": 4.0,
    "team_weeks": 1,
    "round": 14,
@@ -2595,7 +2595,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 28.0,
    "team_weeks": 5,
    "round": 14,
@@ -2643,7 +2643,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 28.0,
    "team_weeks": 5,
    "round": 14,
@@ -2691,7 +2691,7 @@
    "keeper": false
   },
   {
-   "kept": false,
+   "kept": true,
    "team_pts": 0.0,
    "team_weeks": 0,
    "round": 15,
@@ -2739,7 +2739,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 41.78,
    "team_weeks": 5,
    "round": 15,
@@ -2803,7 +2803,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 54.0,
    "team_weeks": 5,
    "round": 15,
@@ -3059,7 +3059,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 90.16,
    "team_weeks": 5,
    "round": 16,

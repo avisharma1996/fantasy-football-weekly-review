@@ -6,8 +6,8 @@
 <meta property="og:site_name" content="Red Vines Fantasy Football">
 <meta property="og:description" content="2024 Week 9 power rankings">
 <style>
-:root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;--hl:#2a78d6;--trend:#c4c1b9;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;color-scheme:dark}}
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;--hl:#2a78d6;--trend:#c4c1b9;--pos:#2a78d6;--neg:#e34948;--neutral:#f0efec;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;--pos:#3987e5;--neg:#e66767;--neutral:#383835;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .layout{display:flex;max-width:1180px;margin:0 auto}
@@ -135,10 +135,39 @@ section+section .sec,.ranks+section .sec{margin-top:36px}
 .deal .tot{margin-top:8px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
 .deal .verdict{margin-top:10px;font-size:.92rem}
 .amt.up{color:var(--up)}.amt.down{color:var(--down)}
+.legend{display:flex;align-items:center;gap:3px;color:var(--muted);font-size:.8rem;margin:0 0 8px}
+.legend span:last-child{margin-left:8px}
+.sw{width:22px;height:12px;border-radius:3px;background:var(--neutral)}
+.heat td{min-width:64px}
+.heat .hi1,.sw.hi1{background:color-mix(in srgb,var(--pos) 18%,var(--neutral))}
+.heat .hi2,.sw.hi2{background:color-mix(in srgb,var(--pos) 38%,var(--neutral))}
+.heat .hi3,.sw.hi3{background:color-mix(in srgb,var(--pos) 60%,var(--neutral))}
+.heat .lo1,.sw.lo1{background:color-mix(in srgb,var(--neg) 18%,var(--neutral))}
+.heat .lo2,.sw.lo2{background:color-mix(in srgb,var(--neg) 38%,var(--neutral))}
+.heat .lo3,.sw.lo3{background:color-mix(in srgb,var(--neg) 60%,var(--neutral))}
+.heat tr.avg td{color:var(--muted);font-weight:600}
+td small,.tn small{color:var(--muted);font-size:.75rem}
+.bracket{display:flex;gap:18px;overflow-x:auto;padding-bottom:6px}
+.round{display:flex;flex-direction:column;justify-content:space-around;gap:12px;min-width:220px}
+.rlbl{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.match{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.mlbl{font-size:.7rem;color:var(--muted);padding:6px 10px 0;text-transform:uppercase;letter-spacing:.04em}
+.slot{display:flex;justify-content:space-between;gap:10px;padding:7px 10px;color:var(--muted);font-size:.9rem}
+.slot+.slot{border-top:1px solid var(--line)}
+.slot.won{color:var(--ink);font-weight:700}
+.slot b{font-variant-numeric:tabular-nums;font-weight:inherit}
+.slot.tbd{font-style:italic}
+.podium .who{display:flex;align-items:center;gap:8px;font-size:1.05rem}
+a.mlink{color:inherit;text-decoration:none}a.mlink:hover span{text-decoration:underline}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.mcard{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:inherit;text-decoration:none}
+.mcard:hover{border-color:var(--muted)}
+.mcard small{display:block;color:var(--muted)}
+.h2h-list .win{color:var(--up);font-weight:600}.h2h-list .loss{color:var(--down)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 </style></head>
 <body><div class="layout">
-<aside class="seasons"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-05.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html" class=cur>2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2024/faab.html">FAAB Tracker</a><a href="../2024/trades.html">Trade Grades</a><a href="../2024/draft.html">Draft Report Card</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a></div></div></aside>
+<aside class="seasons"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-05.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html" class=cur>2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2024/recap.html">Season Recap</a><a href="../2024/stats.html">Team Stats</a><a href="../2024/faab.html">FAAB Tracker</a><a href="../2024/trades.html">Trade Grades</a><a href="../2024/draft.html">Draft Report Card</a><a href="../2024/moves.html">Transactions</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a><a href="../history/managers.html">Managers</a></div></div></aside>
 <main class="wrap">
 <header><img class="logo" src="https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f" alt=""><div><div class="kicker">Red Vines · 2024 · Week 9</div><h1>Week 9 Power Rankings</h1></div></header>
 <nav><a href="../2024/week-01.html">Wk 1</a><a href="../2024/week-02.html">Wk 2</a><a href="../2024/week-03.html">Wk 3</a><a href="../2024/week-04.html">Wk 4</a><a href="../2024/week-05.html">Wk 5</a><a href="../2024/week-06.html">Wk 6</a><a href="../2024/week-07.html">Wk 7</a><a href="../2024/week-08.html">Wk 8</a><a href="../2024/week-09.html" class=cur>Wk 9</a><a href="../2024/week-10.html">Wk 10</a><a href="../2024/week-11.html">Wk 11</a><a href="../2024/week-12.html">Wk 12</a><a href="../2024/week-13.html">Wk 13</a><a href="../2024/week-14.html">Wk 14</a></nav>
