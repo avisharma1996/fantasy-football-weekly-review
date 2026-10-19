@@ -71,6 +71,22 @@ td.buy{white-space:normal;min-width:180px}
 .bar{width:90px;height:8px;border-radius:99px;background:var(--chip);overflow:hidden}
 .bar span{display:block;height:100%;background:var(--up);border-radius:99px}
 h3{font-size:.95rem;margin:22px 0 8px;color:var(--muted)}
+.sechead{display:flex;align-items:flex-end;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
+.sechead .sec{margin-bottom:12px}
+.search{margin-bottom:12px;width:min(260px,100%);padding:8px 12px;font:inherit;font-size:.9rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px}
+.search:focus{outline:2px solid var(--hl);outline-offset:1px}
+.nomatch{color:var(--muted)}
+.expand{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;border-radius:8px}
+.expand:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+.chev{color:var(--muted);font-size:.8rem;transition:transform .15s}
+.expand[aria-expanded=true] .chev{transform:rotate(90deg)}
+tr.more>td{padding:0 0 4px;background:var(--chip)}
+table.inner{font-size:.85rem}
+table.inner th,table.inner td{padding:8px 14px}
+.hint{color:var(--muted);font-size:.8rem;margin:8px 2px 0}
+table.inner td.win{color:var(--up);font-weight:700}
+table.inner td.loss{color:var(--down);font-weight:700}
+[hidden]{display:none!important}
 .bids{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px}
 .bids li{display:flex;gap:14px;align-items:baseline;padding:10px 16px;border-bottom:1px solid var(--line)}
 .bids li:last-child{border-bottom:0}
@@ -158,6 +174,7 @@ td small,.tn small{color:var(--muted);font-size:.75rem}
 .slot b{font-variant-numeric:tabular-nums;font-weight:inherit}
 .slot.tbd{font-style:italic}
 .podium .who{display:flex;align-items:center;gap:8px;font-size:1.05rem}
+a.mpage{display:inline-block;margin:4px 0 8px;font-size:.85rem;color:var(--hl)}
 a.mlink{color:inherit;text-decoration:none}a.mlink:hover span{text-decoration:underline}
 .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
 .mcard{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:inherit;text-decoration:none}
@@ -176,7 +193,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
   <thead><tr><th>Season</th><th class="tn">Team</th><th>Record</th><th>PF</th><th>Seed</th><th class="tn">Finish</th>
   <th>Draft grade</th><th>FAAB spent</th><th>Moves</th></tr></thead><tbody><tr><td>2026</td><td class="tn">NShah19</td><td>4-6</td><td>585.02</td><td>7</td><td class="tn">In progress</td><td>-3.8</td><td>$19</td><td>16</td></tr></tbody></table></div></section>
 <section><h2 class="sec">Moves</h2><div class="records">
-  <div><h3>Best pickups</h3><ul class="bids"><li><span class="amt">69<small>pts</small></span><div><b>Jared Goff</b> <span class="pos">QB</span><div class="beat">2026 · $2 in Wk 2</div></div></li><li><span class="amt">10<small>pts</small></span><div><b>Khalil Shakir</b> <span class="pos">WR</span><div class="beat">2026 · $0 in Wk 5</div></div></li><li><span class="amt">8<small>pts</small></span><div><b>Tyler Loop</b> <span class="pos">K</span><div class="beat">2026 · $0 in Wk 4</div></div></li></ul></div>
+  <div><h3>Best pickups</h3><ul class="bids"><li><span class="amt">69<small>pts</small></span><div><b>Jared Goff</b> <span class="pos">QB</span><div class="beat">2026 · $2 in Wk 3</div></div></li><li><span class="amt">10<small>pts</small></span><div><b>Khalil Shakir</b> <span class="pos">WR</span><div class="beat">2026 · $0 in Wk 5</div></div></li><li><span class="amt">8<small>pts</small></span><div><b>Tyler Loop</b> <span class="pos">K</span><div class="beat">2026 · $0 in Wk 4</div></div></li></ul></div>
   <div><h3>Best draft steals</h3><ul class="bids"><li><span class="amt up">+16</span><div><b>Stefon Diggs</b> <span class="pos">WR</span><div class="beat">2026 · Rd 9 · WR43 → WR27</div></div></li><li><span class="amt up">+11</span><div><b>Rhamondre Stevenson</b> <span class="pos">RB</span><div class="beat">2026 · Rd 7 · RB29 → RB18</div></div></li><li><span class="amt up">+8</span><div><b>Kyren Williams</b> <span class="pos">RB</span><div class="beat">2026 · Rd 3 · RB13 → RB5</div></div></li></ul></div></div></section>
 <section><h2 class="sec">Head-to-Head</h2><div class="tbl"><table class="h2h-list">
   <thead><tr><th class="tn">Opponent</th><th>Record</th></tr></thead><tbody><tr><td class="tn"><a class="who mlink" href="../history/m-1084605692373233664.html"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><span>superdiddy<small>jallerbo</small></span></a></td><td class="loss">0-1</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1132924651295956992.html"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"><span>Justin Beer Loyalist<small>ZebroGodilla</small></span></a></td><td class="loss">0-1</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-873130597315481600.html"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi<small>yrkpapi</small></span></a></td><td class="win">1-0</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1085126678843682816.html"><img class="av" src="https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg" alt="" loading="lazy"><span>Ankitty<small>bruhking123</small></span></a></td><td class="win">1-0</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1129665810802278400.html"><img class="av" src="https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg" alt="" loading="lazy"><span>Baltimore Avians<small>avian96</small></span></a></td><td class="loss">0-1</td></tr></tbody></table></div></section>

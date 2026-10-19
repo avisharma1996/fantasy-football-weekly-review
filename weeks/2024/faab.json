@@ -3,6 +3,53 @@
  "claims": [
   {
    "week": 1,
+   "player": "8148",
+   "roster": "7",
+   "bid": 15,
+   "at": 1725574555459,
+   "pts": 176.8,
+   "started": 60.0,
+   "weeks": 17,
+   "active": true,
+   "name": "Jameson Williams",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 1,
+   "player": "6130",
+   "roster": "7",
+   "bid": 0,
+   "at": 1725344758952,
+   "pts": 7.2,
+   "started": 7.2,
+   "weeks": 1,
+   "active": false,
+   "name": "Devin Singletary",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 1,
+   "player": "11637",
+   "roster": "9",
+   "bid": 0,
+   "at": 1725491750223,
+   "pts": 16.0,
+   "started": 0.0,
+   "weeks": 3,
+   "active": false,
+   "name": "Keon Coleman",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 2,
    "player": "6806",
    "roster": "5",
    "bid": 91,
@@ -41,7 +88,7 @@
    ]
   },
   {
-   "week": 1,
+   "week": 2,
    "player": "11584",
    "roster": "1",
    "bid": 20,
@@ -55,7 +102,7 @@
    "outbid": []
   },
   {
-   "week": 1,
+   "week": 2,
    "player": "8131",
    "roster": "9",
    "bid": 20,
@@ -86,21 +133,7 @@
    ]
   },
   {
-   "week": 1,
-   "player": "8148",
-   "roster": "7",
-   "bid": 15,
-   "at": 1725574555459,
-   "pts": 176.8,
-   "started": 60.0,
-   "weeks": 17,
-   "active": true,
-   "name": "Jameson Williams",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
-   "week": 1,
+   "week": 2,
    "player": "3286",
    "roster": "1",
    "bid": 15,
@@ -114,7 +147,40 @@
    "outbid": []
   },
   {
-   "week": 1,
+   "week": 2,
+   "player": "6770",
+   "roster": "9",
+   "bid": 6,
+   "at": 1726121194188,
+   "pts": 359.78,
+   "started": 157.96,
+   "weeks": 16,
+   "active": true,
+   "name": "Joe Burrow",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 2,
+   "player": "4033",
+   "roster": "2",
+   "bid": 5,
+   "at": 1726121194188,
+   "pts": 110.1,
+   "started": 99.5,
+   "weeks": 16,
+   "active": true,
+   "name": "David Njoku",
+   "pos": "TE",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 2,
    "player": "5185",
    "roster": "6",
    "bid": 3,
@@ -128,7 +194,7 @@
    "outbid": []
   },
   {
-   "week": 1,
+   "week": 2,
    "player": "LAC",
    "roster": "5",
    "bid": 2,
@@ -147,7 +213,7 @@
    ]
   },
   {
-   "week": 1,
+   "week": 2,
    "player": "1945",
    "roster": "8",
    "bid": 1,
@@ -161,40 +227,21 @@
    "outbid": []
   },
   {
-   "week": 1,
+   "week": 2,
    "player": "6130",
-   "roster": "7",
-   "bid": 0,
-   "at": 1725344758952,
-   "pts": 7.2,
-   "started": 7.2,
-   "weeks": 1,
+   "roster": "1",
+   "bid": 1,
+   "at": 1726360592899,
+   "pts": 37.7,
+   "started": 35.1,
+   "weeks": 6,
    "active": false,
    "name": "Devin Singletary",
    "pos": "RB",
    "outbid": []
   },
   {
-   "week": 1,
-   "player": "11637",
-   "roster": "9",
-   "bid": 0,
-   "at": 1725491750223,
-   "pts": 16.0,
-   "started": 0.0,
-   "weeks": 3,
-   "active": false,
-   "name": "Keon Coleman",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "7",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 1,
+   "week": 2,
    "player": "6768",
    "roster": "2",
    "bid": 0,
@@ -209,6 +256,20 @@
   },
   {
    "week": 2,
+   "player": "5001",
+   "roster": "7",
+   "bid": 0,
+   "at": 1726277784177,
+   "pts": 5.2,
+   "started": 5.2,
+   "weeks": 2,
+   "active": false,
+   "name": "Dalton Schultz",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 3,
    "player": "9754",
    "roster": "10",
    "bid": 35,
@@ -239,7 +300,7 @@
    ]
   },
   {
-   "week": 2,
+   "week": 3,
    "player": "5937",
    "roster": "8",
    "bid": 21,
@@ -258,7 +319,7 @@
    ]
   },
   {
-   "week": 2,
+   "week": 3,
    "player": "8676",
    "roster": "1",
    "bid": 17,
@@ -285,7 +346,7 @@
    ]
   },
   {
-   "week": 2,
+   "week": 3,
    "player": "11582",
    "roster": "4",
    "bid": 11,
@@ -316,7 +377,7 @@
    ]
   },
   {
-   "week": 2,
+   "week": 3,
    "player": "7049",
    "roster": "2",
    "bid": 10,
@@ -330,7 +391,7 @@
    "outbid": []
   },
   {
-   "week": 2,
+   "week": 3,
    "player": "9756",
    "roster": "6",
    "bid": 9,
@@ -344,7 +405,7 @@
    "outbid": []
   },
   {
-   "week": 2,
+   "week": 3,
    "player": "11576",
    "roster": "4",
    "bid": 7,
@@ -367,21 +428,7 @@
    ]
   },
   {
-   "week": 2,
-   "player": "6770",
-   "roster": "9",
-   "bid": 6,
-   "at": 1726121194188,
-   "pts": 359.78,
-   "started": 157.96,
-   "weeks": 16,
-   "active": true,
-   "name": "Joe Burrow",
-   "pos": "QB",
-   "outbid": []
-  },
-  {
-   "week": 2,
+   "week": 3,
    "player": "8142",
    "roster": "6",
    "bid": 6,
@@ -400,26 +447,7 @@
    ]
   },
   {
-   "week": 2,
-   "player": "4033",
-   "roster": "2",
-   "bid": 5,
-   "at": 1726121194188,
-   "pts": 110.1,
-   "started": 99.5,
-   "weeks": 16,
-   "active": true,
-   "name": "David Njoku",
-   "pos": "TE",
-   "outbid": [
-    {
-     "roster": "7",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 2,
+   "week": 3,
    "player": "4171",
    "roster": "10",
    "bid": 5,
@@ -431,169 +459,6 @@
    "name": "Josh Reynolds",
    "pos": "WR",
    "outbid": []
-  },
-  {
-   "week": 2,
-   "player": "6130",
-   "roster": "1",
-   "bid": 1,
-   "at": 1726360592899,
-   "pts": 37.7,
-   "started": 35.1,
-   "weeks": 6,
-   "active": false,
-   "name": "Devin Singletary",
-   "pos": "RB",
-   "outbid": []
-  },
-  {
-   "week": 2,
-   "player": "5001",
-   "roster": "7",
-   "bid": 0,
-   "at": 1726277784177,
-   "pts": 5.2,
-   "started": 5.2,
-   "weeks": 2,
-   "active": false,
-   "name": "Dalton Schultz",
-   "pos": "TE",
-   "outbid": []
-  },
-  {
-   "week": 2,
-   "player": "GB",
-   "roster": "1",
-   "bid": 0,
-   "at": 1726643184652,
-   "pts": 22.0,
-   "started": 22.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Green Bay Packers D/ST",
-   "pos": "DEF",
-   "outbid": []
-  },
-  {
-   "week": 2,
-   "player": "TB",
-   "roster": "7",
-   "bid": 0,
-   "at": 1726643184652,
-   "pts": 3.0,
-   "started": 3.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Tampa Bay Buccaneers D/ST",
-   "pos": "DEF",
-   "outbid": []
-  },
-  {
-   "week": 2,
-   "player": "1373",
-   "roster": "2",
-   "bid": 0,
-   "at": 1726643184652,
-   "pts": 99.86,
-   "started": 99.86,
-   "weeks": 6,
-   "active": false,
-   "name": "Geno Smith",
-   "pos": "QB",
-   "outbid": []
-  },
-  {
-   "week": 2,
-   "player": "7594",
-   "roster": "10",
-   "bid": 0,
-   "at": 1726643184652,
-   "pts": 209.1,
-   "started": 183.7,
-   "weeks": 15,
-   "active": true,
-   "name": "Chuba Hubbard",
-   "pos": "RB",
-   "outbid": []
-  },
-  {
-   "week": 2,
-   "player": "4066",
-   "roster": "2",
-   "bid": 0,
-   "at": 1726643184652,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "Evan Engram",
-   "pos": "TE",
-   "outbid": []
-  },
-  {
-   "week": 3,
-   "player": "7049",
-   "roster": "9",
-   "bid": 19,
-   "at": 1727247955591,
-   "pts": 16.3,
-   "started": 12.1,
-   "weeks": 3,
-   "active": false,
-   "name": "Jauan Jennings",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "6",
-     "bid": 12
-    },
-    {
-     "roster": "1",
-     "bid": 8
-    },
-    {
-     "roster": "2",
-     "bid": 8
-    }
-   ]
-  },
-  {
-   "week": 3,
-   "player": "10226",
-   "roster": "7",
-   "bid": 10,
-   "at": 1727247955591,
-   "pts": 3.4,
-   "started": 0.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Andrei Iosivas",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 3,
-   "player": "8126",
-   "roster": "1",
-   "bid": 6,
-   "at": 1727247955591,
-   "pts": 43.9,
-   "started": 20.5,
-   "weeks": 5,
-   "active": false,
-   "name": "Wan'Dale Robinson",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "10",
-     "bid": 2
-    }
-   ]
   },
   {
    "week": 3,
@@ -611,58 +476,6 @@
   },
   {
    "week": 3,
-   "player": "4943",
-   "roster": "7",
-   "bid": 5,
-   "at": 1727247955591,
-   "pts": 252.54,
-   "started": 72.28,
-   "weeks": 14,
-   "active": true,
-   "name": "Sam Darnold",
-   "pos": "QB",
-   "outbid": []
-  },
-  {
-   "week": 3,
-   "player": "7090",
-   "roster": "7",
-   "bid": 5,
-   "at": 1727247955591,
-   "pts": 132.3,
-   "started": 128.8,
-   "weeks": 14,
-   "active": true,
-   "name": "Darnell Mooney",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 4
-    }
-   ]
-  },
-  {
-   "week": 3,
-   "player": "6826",
-   "roster": "5",
-   "bid": 3,
-   "at": 1727247955591,
-   "pts": 4.9,
-   "started": 4.9,
-   "weeks": 1,
-   "active": false,
-   "name": "Cole Kmet",
-   "pos": "TE",
-   "outbid": [
-    {
-     "roster": "9",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 3,
    "player": "8110",
    "roster": "8",
    "bid": 2,
@@ -677,67 +490,73 @@
   },
   {
    "week": 3,
-   "player": "KC",
-   "roster": "8",
-   "bid": 2,
-   "at": 1727247955591,
-   "pts": 6.0,
-   "started": 6.0,
+   "player": "GB",
+   "roster": "1",
+   "bid": 0,
+   "at": 1726643184652,
+   "pts": 22.0,
+   "started": 22.0,
    "weeks": 1,
    "active": false,
-   "name": "Kansas City Chiefs D/ST",
+   "name": "Green Bay Packers D/ST",
    "pos": "DEF",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 2
-    },
-    {
-     "roster": "5",
-     "bid": 0
-    },
-    {
-     "roster": "2",
-     "bid": 0
-    }
-   ]
+   "outbid": []
   },
   {
    "week": 3,
-   "player": "7021",
-   "roster": "8",
-   "bid": 1,
-   "at": 1727247955591,
-   "pts": 144.2,
-   "started": 105.2,
-   "weeks": 14,
+   "player": "TB",
+   "roster": "7",
+   "bid": 0,
+   "at": 1726643184652,
+   "pts": 3.0,
+   "started": 3.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Tampa Bay Buccaneers D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "1373",
+   "roster": "2",
+   "bid": 0,
+   "at": 1726643184652,
+   "pts": 99.86,
+   "started": 99.86,
+   "weeks": 6,
+   "active": false,
+   "name": "Geno Smith",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 3,
+   "player": "7594",
+   "roster": "10",
+   "bid": 0,
+   "at": 1726643184652,
+   "pts": 209.1,
+   "started": 183.7,
+   "weeks": 15,
    "active": true,
-   "name": "Rico Dowdle",
+   "name": "Chuba Hubbard",
    "pos": "RB",
    "outbid": []
   },
   {
    "week": 3,
-   "player": "MIN",
-   "roster": "8",
-   "bid": 1,
-   "at": 1727247955591,
-   "pts": 111.0,
-   "started": 88.0,
-   "weeks": 13,
+   "player": "4066",
+   "roster": "2",
+   "bid": 0,
+   "at": 1726643184652,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
    "active": false,
-   "name": "Minnesota Vikings D/ST",
-   "pos": "DEF",
-   "outbid": [
-    {
-     "roster": "7",
-     "bid": 0
-    },
-    {
-     "roster": "1",
-     "bid": 0
-    }
-   ]
+   "name": "Evan Engram",
+   "pos": "TE",
+   "outbid": []
   },
   {
    "week": 3,
@@ -768,7 +587,188 @@
    "outbid": []
   },
   {
-   "week": 3,
+   "week": 4,
+   "player": "7049",
+   "roster": "9",
+   "bid": 19,
+   "at": 1727247955591,
+   "pts": 16.3,
+   "started": 12.1,
+   "weeks": 3,
+   "active": false,
+   "name": "Jauan Jennings",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 12
+    },
+    {
+     "roster": "1",
+     "bid": 8
+    },
+    {
+     "roster": "2",
+     "bid": 8
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "player": "10226",
+   "roster": "7",
+   "bid": 10,
+   "at": 1727247955591,
+   "pts": 3.4,
+   "started": 0.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Andrei Iosivas",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "player": "8126",
+   "roster": "1",
+   "bid": 6,
+   "at": 1727247955591,
+   "pts": 43.9,
+   "started": 20.5,
+   "weeks": 5,
+   "active": false,
+   "name": "Wan'Dale Robinson",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 2
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "player": "4943",
+   "roster": "7",
+   "bid": 5,
+   "at": 1727247955591,
+   "pts": 252.54,
+   "started": 72.28,
+   "weeks": 14,
+   "active": true,
+   "name": "Sam Darnold",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "7090",
+   "roster": "7",
+   "bid": 5,
+   "at": 1727247955591,
+   "pts": 132.3,
+   "started": 128.8,
+   "weeks": 14,
+   "active": true,
+   "name": "Darnell Mooney",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 4
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "player": "6826",
+   "roster": "5",
+   "bid": 3,
+   "at": 1727247955591,
+   "pts": 4.9,
+   "started": 4.9,
+   "weeks": 1,
+   "active": false,
+   "name": "Cole Kmet",
+   "pos": "TE",
+   "outbid": [
+    {
+     "roster": "9",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "player": "KC",
+   "roster": "8",
+   "bid": 2,
+   "at": 1727247955591,
+   "pts": 6.0,
+   "started": 6.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Kansas City Chiefs D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 2
+    },
+    {
+     "roster": "5",
+     "bid": 0
+    },
+    {
+     "roster": "2",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "player": "7021",
+   "roster": "8",
+   "bid": 1,
+   "at": 1727247955591,
+   "pts": 144.2,
+   "started": 105.2,
+   "weeks": 14,
+   "active": true,
+   "name": "Rico Dowdle",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 4,
+   "player": "MIN",
+   "roster": "8",
+   "bid": 1,
+   "at": 1727247955591,
+   "pts": 111.0,
+   "started": 88.0,
+   "weeks": 13,
+   "active": false,
+   "name": "Minnesota Vikings D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 4,
    "player": "11638",
    "roster": "6",
    "bid": 0,
@@ -782,7 +782,7 @@
    "outbid": []
   },
   {
-   "week": 3,
+   "week": 4,
    "player": "HOU",
    "roster": "5",
    "bid": 0,
@@ -796,7 +796,7 @@
    "outbid": []
   },
   {
-   "week": 3,
+   "week": 4,
    "player": "9480",
    "roster": "9",
    "bid": 0,
@@ -810,7 +810,7 @@
    "outbid": []
   },
   {
-   "week": 3,
+   "week": 4,
    "player": "5133",
    "roster": "7",
    "bid": 0,
@@ -820,133 +820,6 @@
    "weeks": 1,
    "active": false,
    "name": "Tyler Conklin",
-   "pos": "TE",
-   "outbid": []
-  },
-  {
-   "week": 4,
-   "player": "7593",
-   "roster": "6",
-   "bid": 18,
-   "at": 1727852778366,
-   "pts": 23.6,
-   "started": 23.6,
-   "weeks": 3,
-   "active": false,
-   "name": "Trey Sermon",
-   "pos": "RB",
-   "outbid": []
-  },
-  {
-   "week": 4,
-   "player": "9486",
-   "roster": "3",
-   "bid": 10,
-   "at": 1727852778366,
-   "pts": 4.4,
-   "started": 4.4,
-   "weeks": 2,
-   "active": false,
-   "name": "Dontayvion Wicks",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "3",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 4,
-   "player": "1339",
-   "roster": "7",
-   "bid": 10,
-   "at": 1727852778366,
-   "pts": 2.0,
-   "started": 2.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Zach Ertz",
-   "pos": "TE",
-   "outbid": []
-  },
-  {
-   "week": 4,
-   "player": "7591",
-   "roster": "3",
-   "bid": 8,
-   "at": 1727852778366,
-   "pts": 39.64,
-   "started": 39.64,
-   "weeks": 3,
-   "active": false,
-   "name": "Justin Fields",
-   "pos": "QB",
-   "outbid": [
-    {
-     "roster": "5",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 4,
-   "player": "5987",
-   "roster": "8",
-   "bid": 7,
-   "at": 1727852778366,
-   "pts": 9.1,
-   "started": 0.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Alexander Mattison",
-   "pos": "RB",
-   "outbid": []
-  },
-  {
-   "week": 4,
-   "player": "9225",
-   "roster": "6",
-   "bid": 6,
-   "at": 1727852778366,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "Tank Bigsby",
-   "pos": "RB",
-   "outbid": [
-    {
-     "roster": "8",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 4,
-   "player": "DEN",
-   "roster": "1",
-   "bid": 3,
-   "at": 1727852778366,
-   "pts": 118.0,
-   "started": 115.0,
-   "weeks": 11,
-   "active": false,
-   "name": "Denver Broncos D/ST",
-   "pos": "DEF",
-   "outbid": []
-  },
-  {
-   "week": 4,
-   "player": "9484",
-   "roster": "5",
-   "bid": 2,
-   "at": 1727852778366,
-   "pts": 25.3,
-   "started": 22.8,
-   "weeks": 2,
-   "active": false,
-   "name": "Tucker Kraft",
    "pos": "TE",
    "outbid": []
   },
@@ -979,7 +852,134 @@
    "outbid": []
   },
   {
-   "week": 4,
+   "week": 5,
+   "player": "7593",
+   "roster": "6",
+   "bid": 18,
+   "at": 1727852778366,
+   "pts": 23.6,
+   "started": 23.6,
+   "weeks": 3,
+   "active": false,
+   "name": "Trey Sermon",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "9486",
+   "roster": "3",
+   "bid": 10,
+   "at": 1727852778366,
+   "pts": 4.4,
+   "started": 4.4,
+   "weeks": 2,
+   "active": false,
+   "name": "Dontayvion Wicks",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "3",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "player": "1339",
+   "roster": "7",
+   "bid": 10,
+   "at": 1727852778366,
+   "pts": 2.0,
+   "started": 2.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Zach Ertz",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "7591",
+   "roster": "3",
+   "bid": 8,
+   "at": 1727852778366,
+   "pts": 39.64,
+   "started": 39.64,
+   "weeks": 3,
+   "active": false,
+   "name": "Justin Fields",
+   "pos": "QB",
+   "outbid": [
+    {
+     "roster": "5",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "player": "5987",
+   "roster": "8",
+   "bid": 7,
+   "at": 1727852778366,
+   "pts": 9.1,
+   "started": 0.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Alexander Mattison",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "9225",
+   "roster": "6",
+   "bid": 6,
+   "at": 1727852778366,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tank Bigsby",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "8",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "player": "DEN",
+   "roster": "1",
+   "bid": 3,
+   "at": 1727852778366,
+   "pts": 118.0,
+   "started": 115.0,
+   "weeks": 11,
+   "active": false,
+   "name": "Denver Broncos D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 5,
+   "player": "9484",
+   "roster": "5",
+   "bid": 2,
+   "at": 1727852778366,
+   "pts": 25.3,
+   "started": 22.8,
+   "weeks": 2,
+   "active": false,
+   "name": "Tucker Kraft",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 5,
    "player": "9500",
    "roster": "7",
    "bid": 0,
@@ -993,7 +993,7 @@
    "outbid": []
   },
   {
-   "week": 4,
+   "week": 5,
    "player": "3678",
    "roster": "7",
    "bid": 0,
@@ -1007,7 +1007,7 @@
    "outbid": []
   },
   {
-   "week": 4,
+   "week": 5,
    "player": "7588",
    "roster": "9",
    "bid": 0,
@@ -1021,7 +1021,7 @@
    "outbid": []
   },
   {
-   "week": 4,
+   "week": 5,
    "player": "SEA",
    "roster": "9",
    "bid": 0,
@@ -1040,7 +1040,7 @@
    ]
   },
   {
-   "week": 4,
+   "week": 5,
    "player": "5844",
    "roster": "2",
    "bid": 0,
@@ -1055,6 +1055,20 @@
   },
   {
    "week": 5,
+   "player": "4981",
+   "roster": "1",
+   "bid": 0,
+   "at": 1728335767985,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Calvin Ridley",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 6,
    "player": "9225",
    "roster": "8",
    "bid": 22,
@@ -1081,7 +1095,7 @@
    ]
   },
   {
-   "week": 5,
+   "week": 6,
    "player": "9224",
    "roster": "6",
    "bid": 18,
@@ -1112,7 +1126,21 @@
    ]
   },
   {
-   "week": 5,
+   "week": 6,
+   "player": "7611",
+   "roster": "1",
+   "bid": 17,
+   "at": 1728803139516,
+   "pts": 99.6,
+   "started": 54.8,
+   "weeks": 12,
+   "active": true,
+   "name": "Rhamondre Stevenson",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 6,
    "player": "5947",
    "roster": "10",
    "bid": 15,
@@ -1131,7 +1159,7 @@
    ]
   },
   {
-   "week": 5,
+   "week": 6,
    "player": "HOU",
    "roster": "8",
    "bid": 6,
@@ -1150,21 +1178,7 @@
    ]
   },
   {
-   "week": 5,
-   "player": "4981",
-   "roster": "1",
-   "bid": 0,
-   "at": 1728335767985,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Calvin Ridley",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
-   "week": 5,
+   "week": 6,
    "player": "5133",
    "roster": "7",
    "bid": 0,
@@ -1178,21 +1192,21 @@
    "outbid": []
   },
   {
-   "week": 5,
+   "week": 6,
    "player": "4195",
    "roster": "7",
    "bid": 0,
    "at": 1728457554340,
    "pts": 13.0,
    "started": 13.0,
-   "weeks": 3,
+   "weeks": 2,
    "active": false,
    "name": "Jake Elliott",
    "pos": "K",
    "outbid": []
   },
   {
-   "week": 5,
+   "week": 6,
    "player": "11949",
    "roster": "2",
    "bid": 0,
@@ -1207,27 +1221,50 @@
   },
   {
    "week": 6,
-   "player": "7611",
+   "player": "8117",
    "roster": "1",
-   "bid": 17,
-   "at": 1728803139516,
-   "pts": 99.6,
-   "started": 54.8,
-   "weeks": 12,
-   "active": true,
-   "name": "Rhamondre Stevenson",
-   "pos": "RB",
+   "bid": 0,
+   "at": 1728814539975,
+   "pts": 6.3,
+   "started": 6.3,
+   "weeks": 1,
+   "active": false,
+   "name": "Jalen Tolbert",
+   "pos": "WR",
    "outbid": []
   },
   {
-   "week": 6,
+   "week": 7,
+   "player": "9506",
+   "roster": "7",
+   "bid": 17,
+   "at": 1729402594737,
+   "pts": 6.3,
+   "started": 0.0,
+   "weeks": 2,
+   "active": false,
+   "name": "Sean Tucker",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 10
+    },
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
    "player": "2749",
    "roster": "10",
    "bid": 13,
    "at": 1729062358992,
    "pts": 30.5,
    "started": 10.6,
-   "weeks": 6,
+   "weeks": 5,
    "active": false,
    "name": "Raheem Mostert",
    "pos": "RB",
@@ -1243,7 +1280,21 @@
    ]
   },
   {
-   "week": 6,
+   "week": 7,
+   "player": "8134",
+   "roster": "7",
+   "bid": 13,
+   "at": 1729207577341,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Khalil Shakir",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 7,
    "player": "5185",
    "roster": "2",
    "bid": 10,
@@ -1257,7 +1308,7 @@
    "outbid": []
   },
   {
-   "week": 6,
+   "week": 7,
    "player": "9506",
    "roster": "3",
    "bid": 10,
@@ -1280,14 +1331,14 @@
    ]
   },
   {
-   "week": 6,
+   "week": 7,
    "player": "4227",
    "roster": "2",
    "bid": 10,
    "at": 1729062358992,
    "pts": 31.0,
    "started": 31.0,
-   "weeks": 5,
+   "weeks": 4,
    "active": false,
    "name": "Harrison Butker",
    "pos": "K",
@@ -1299,7 +1350,7 @@
    ]
   },
   {
-   "week": 6,
+   "week": 7,
    "player": "2374",
    "roster": "10",
    "bid": 3,
@@ -1313,21 +1364,26 @@
    "outbid": []
   },
   {
-   "week": 6,
-   "player": "8117",
-   "roster": "1",
-   "bid": 0,
-   "at": 1728814539975,
-   "pts": 6.3,
-   "started": 6.3,
-   "weeks": 1,
+   "week": 7,
+   "player": "8137",
+   "roster": "8",
+   "bid": 1,
+   "at": 1729145171070,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
    "active": false,
-   "name": "Jalen Tolbert",
+   "name": "George Pickens",
    "pos": "WR",
-   "outbid": []
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
   },
   {
-   "week": 6,
+   "week": 7,
    "player": "3214",
    "roster": "7",
    "bid": 0,
@@ -1341,7 +1397,7 @@
    "outbid": []
   },
   {
-   "week": 6,
+   "week": 7,
    "player": "GB",
    "roster": "7",
    "bid": 0,
@@ -1360,14 +1416,14 @@
    ]
   },
   {
-   "week": 6,
+   "week": 7,
    "player": "4040",
    "roster": "6",
    "bid": 0,
    "at": 1729062358992,
    "pts": 0.0,
    "started": 0.0,
-   "weeks": 2,
+   "weeks": 1,
    "active": false,
    "name": "JuJu Smith-Schuster",
    "pos": "WR",
@@ -1379,7 +1435,7 @@
    ]
   },
   {
-   "week": 6,
+   "week": 7,
    "player": "8167",
    "roster": "6",
    "bid": 0,
@@ -1398,7 +1454,7 @@
    ]
   },
   {
-   "week": 6,
+   "week": 7,
    "player": "6938",
    "roster": "1",
    "bid": 0,
@@ -1412,7 +1468,7 @@
    "outbid": []
   },
   {
-   "week": 6,
+   "week": 7,
    "player": "NO",
    "roster": "9",
    "bid": 0,
@@ -1426,7 +1482,7 @@
    "outbid": []
   },
   {
-   "week": 6,
+   "week": 7,
    "player": "5045",
    "roster": "9",
    "bid": 0,
@@ -1449,14 +1505,14 @@
    ]
   },
   {
-   "week": 6,
+   "week": 7,
    "player": "LAR",
    "roster": "2",
    "bid": 0,
    "at": 1729062358992,
    "pts": 0.0,
    "started": 0.0,
-   "weeks": 1,
+   "weeks": 0,
    "active": false,
    "name": "Los Angeles Rams D/ST",
    "pos": "DEF",
@@ -1464,6 +1520,20 @@
   },
   {
    "week": 7,
+   "player": "CHI",
+   "roster": "9",
+   "bid": 0,
+   "at": 1729473342176,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Chicago Bears D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 8,
    "player": "8137",
    "roster": "4",
    "bid": 26,
@@ -1502,29 +1572,11 @@
     {
      "roster": "5",
      "bid": 0
-    },
-    {
-     "roster": "7",
-     "bid": 0
     }
    ]
   },
   {
-   "week": 7,
-   "player": "9506",
-   "roster": "7",
-   "bid": 17,
-   "at": 1729402594737,
-   "pts": 6.3,
-   "started": 0.0,
-   "weeks": 2,
-   "active": false,
-   "name": "Sean Tucker",
-   "pos": "RB",
-   "outbid": []
-  },
-  {
-   "week": 7,
+   "week": 8,
    "player": "7049",
    "roster": "8",
    "bid": 17,
@@ -1551,30 +1603,7 @@
    ]
   },
   {
-   "week": 7,
-   "player": "8134",
-   "roster": "7",
-   "bid": 13,
-   "at": 1729207577341,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "Khalil Shakir",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 0
-    },
-    {
-     "roster": "1",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 7,
+   "week": 8,
    "player": "8136",
    "roster": "8",
    "bid": 9,
@@ -1609,7 +1638,7 @@
    ]
   },
   {
-   "week": 7,
+   "week": 8,
    "player": "11637",
    "roster": "7",
    "bid": 7,
@@ -1628,7 +1657,7 @@
    ]
   },
   {
-   "week": 7,
+   "week": 8,
    "player": "8134",
    "roster": "10",
    "bid": 6,
@@ -1651,7 +1680,7 @@
    ]
   },
   {
-   "week": 7,
+   "week": 8,
    "player": "1234",
    "roster": "3",
    "bid": 5,
@@ -1665,7 +1694,7 @@
    "outbid": []
   },
   {
-   "week": 7,
+   "week": 8,
    "player": "KC",
    "roster": "9",
    "bid": 5,
@@ -1684,7 +1713,26 @@
    ]
   },
   {
-   "week": 7,
+   "week": 8,
+   "player": "5947",
+   "roster": "2",
+   "bid": 5,
+   "at": 1729750551956,
+   "pts": 103.6,
+   "started": 39.6,
+   "weeks": 10,
+   "active": true,
+   "name": "Jakobi Meyers",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "8",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 8,
    "player": "8111",
    "roster": "1",
    "bid": 3,
@@ -1698,21 +1746,21 @@
    "outbid": []
   },
   {
-   "week": 7,
+   "week": 8,
    "player": "11560",
    "roster": "6",
    "bid": 2,
    "at": 1729667196040,
    "pts": 0.0,
    "started": 0.0,
-   "weeks": 1,
+   "weeks": 0,
    "active": false,
    "name": "Caleb Williams",
    "pos": "QB",
    "outbid": []
   },
   {
-   "week": 7,
+   "week": 8,
    "player": "8121",
    "roster": "1",
    "bid": 2,
@@ -1726,54 +1774,7 @@
    "outbid": []
   },
   {
-   "week": 7,
-   "player": "8137",
-   "roster": "8",
-   "bid": 1,
-   "at": 1729145171070,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "George Pickens",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 18
-    },
-    {
-     "roster": "10",
-     "bid": 15
-    },
-    {
-     "roster": "8",
-     "bid": 11
-    },
-    {
-     "roster": "7",
-     "bid": 8
-    },
-    {
-     "roster": "6",
-     "bid": 5
-    },
-    {
-     "roster": "2",
-     "bid": 0
-    },
-    {
-     "roster": "5",
-     "bid": 0
-    },
-    {
-     "roster": "7",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 7,
+   "week": 8,
    "player": "SEA",
    "roster": "10",
    "bid": 1,
@@ -1787,7 +1788,7 @@
    "outbid": []
   },
   {
-   "week": 7,
+   "week": 8,
    "player": "3678",
    "roster": "10",
    "bid": 1,
@@ -1806,21 +1807,7 @@
    ]
   },
   {
-   "week": 7,
-   "player": "CHI",
-   "roster": "9",
-   "bid": 0,
-   "at": 1729473342176,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "Chicago Bears D/ST",
-   "pos": "DEF",
-   "outbid": []
-  },
-  {
-   "week": 7,
+   "week": 8,
    "player": "11618",
    "roster": "6",
    "bid": 0,
@@ -1834,7 +1821,7 @@
    "outbid": []
   },
   {
-   "week": 7,
+   "week": 8,
    "player": "LAC",
    "roster": "5",
    "bid": 0,
@@ -1848,7 +1835,7 @@
    "outbid": []
   },
   {
-   "week": 7,
+   "week": 8,
    "player": "5095",
    "roster": "7",
    "bid": 0,
@@ -1863,6 +1850,20 @@
   },
   {
    "week": 8,
+   "player": "8126",
+   "roster": "1",
+   "bid": 0,
+   "at": 1730150783645,
+   "pts": 5.5,
+   "started": 0.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Wan'Dale Robinson",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 9,
    "player": "9500",
    "roster": "6",
    "bid": 23,
@@ -1889,7 +1890,7 @@
    ]
   },
   {
-   "week": 8,
+   "week": 9,
    "player": "4981",
    "roster": "9",
    "bid": 20,
@@ -1908,7 +1909,7 @@
    ]
   },
   {
-   "week": 8,
+   "week": 9,
    "player": "10444",
    "roster": "3",
    "bid": 12,
@@ -1927,198 +1928,6 @@
     {
      "roster": "1",
      "bid": 8
-    }
-   ]
-  },
-  {
-   "week": 8,
-   "player": "5947",
-   "roster": "2",
-   "bid": 5,
-   "at": 1729750551956,
-   "pts": 103.6,
-   "started": 39.6,
-   "weeks": 10,
-   "active": true,
-   "name": "Jakobi Meyers",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "8",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 8,
-   "player": "7596",
-   "roster": "10",
-   "bid": 2,
-   "at": 1730271953359,
-   "pts": 4.3,
-   "started": 0.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Elijah Moore",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
-   "week": 8,
-   "player": "PHI",
-   "roster": "4",
-   "bid": 1,
-   "at": 1730271953359,
-   "pts": 39.0,
-   "started": 32.0,
-   "weeks": 3,
-   "active": false,
-   "name": "Philadelphia Eagles D/ST",
-   "pos": "DEF",
-   "outbid": [
-    {
-     "roster": "7",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 8,
-   "player": "DET",
-   "roster": "10",
-   "bid": 1,
-   "at": 1730271953359,
-   "pts": 44.0,
-   "started": 44.0,
-   "weeks": 6,
-   "active": false,
-   "name": "Detroit Lions D/ST",
-   "pos": "DEF",
-   "outbid": []
-  },
-  {
-   "week": 8,
-   "player": "8126",
-   "roster": "1",
-   "bid": 0,
-   "at": 1730150783645,
-   "pts": 5.5,
-   "started": 0.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Wan'Dale Robinson",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
-   "week": 8,
-   "player": "7042",
-   "roster": "8",
-   "bid": 0,
-   "at": 1730271953359,
-   "pts": 14.0,
-   "started": 14.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Tyler Bass",
-   "pos": "K",
-   "outbid": []
-  },
-  {
-   "week": 8,
-   "player": "421",
-   "roster": "10",
-   "bid": 0,
-   "at": 1730271953359,
-   "pts": 29.64,
-   "started": 29.64,
-   "weeks": 2,
-   "active": false,
-   "name": "Matthew Stafford",
-   "pos": "QB",
-   "outbid": []
-  },
-  {
-   "week": 8,
-   "player": "4663",
-   "roster": "6",
-   "bid": 0,
-   "at": 1730271953359,
-   "pts": 33.4,
-   "started": 0.0,
-   "weeks": 2,
-   "active": false,
-   "name": "Austin Ekeler",
-   "pos": "RB",
-   "outbid": []
-  },
-  {
-   "week": 8,
-   "player": "4195",
-   "roster": "7",
-   "bid": 0,
-   "at": 1730271953359,
-   "pts": 4.0,
-   "started": 4.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Jake Elliott",
-   "pos": "K",
-   "outbid": []
-  },
-  {
-   "week": 8,
-   "player": "9484",
-   "roster": "9",
-   "bid": 0,
-   "at": 1730271953359,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "Tucker Kraft",
-   "pos": "TE",
-   "outbid": [
-    {
-     "roster": "8",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 8,
-   "player": "9495",
-   "roster": "7",
-   "bid": 0,
-   "at": 1730271953359,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 0,
-   "active": false,
-   "name": "Rakim Jarrett",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
-   "week": 9,
-   "player": "2309",
-   "roster": "6",
-   "bid": 21,
-   "at": 1730880352241,
-   "pts": 36.3,
-   "started": 6.5,
-   "weeks": 8,
-   "active": true,
-   "name": "Amari Cooper",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 10
-    },
-    {
-     "roster": "8",
-     "bid": 0
     }
    ]
   },
@@ -2147,6 +1956,165 @@
   },
   {
    "week": 9,
+   "player": "7596",
+   "roster": "10",
+   "bid": 2,
+   "at": 1730271953359,
+   "pts": 4.3,
+   "started": 0.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Elijah Moore",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "PHI",
+   "roster": "4",
+   "bid": 1,
+   "at": 1730271953359,
+   "pts": 39.0,
+   "started": 32.0,
+   "weeks": 3,
+   "active": false,
+   "name": "Philadelphia Eagles D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "player": "DET",
+   "roster": "10",
+   "bid": 1,
+   "at": 1730271953359,
+   "pts": 44.0,
+   "started": 44.0,
+   "weeks": 6,
+   "active": false,
+   "name": "Detroit Lions D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "7042",
+   "roster": "8",
+   "bid": 0,
+   "at": 1730271953359,
+   "pts": 14.0,
+   "started": 14.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Tyler Bass",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "421",
+   "roster": "10",
+   "bid": 0,
+   "at": 1730271953359,
+   "pts": 29.64,
+   "started": 29.64,
+   "weeks": 2,
+   "active": false,
+   "name": "Matthew Stafford",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "4663",
+   "roster": "6",
+   "bid": 0,
+   "at": 1730271953359,
+   "pts": 33.4,
+   "started": 0.0,
+   "weeks": 2,
+   "active": false,
+   "name": "Austin Ekeler",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "4195",
+   "roster": "7",
+   "bid": 0,
+   "at": 1730271953359,
+   "pts": 4.0,
+   "started": 4.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Jake Elliott",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "9484",
+   "roster": "9",
+   "bid": 0,
+   "at": 1730271953359,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tucker Kraft",
+   "pos": "TE",
+   "outbid": [
+    {
+     "roster": "8",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "player": "9495",
+   "roster": "7",
+   "bid": 0,
+   "at": 1730271953359,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Rakim Jarrett",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 10,
+   "player": "2309",
+   "roster": "6",
+   "bid": 21,
+   "at": 1730880352241,
+   "pts": 36.3,
+   "started": 6.5,
+   "weeks": 8,
+   "active": true,
+   "name": "Amari Cooper",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 10
+    },
+    {
+     "roster": "8",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 10,
    "player": "6783",
    "roster": "10",
    "bid": 7,
@@ -2165,7 +2133,7 @@
    ]
   },
   {
-   "week": 9,
+   "week": 10,
    "player": "4993",
    "roster": "2",
    "bid": 5,
@@ -2179,7 +2147,7 @@
    "outbid": []
   },
   {
-   "week": 9,
+   "week": 10,
    "player": "9501",
    "roster": "1",
    "bid": 4,
@@ -2198,7 +2166,7 @@
    ]
   },
   {
-   "week": 9,
+   "week": 10,
    "player": "LAR",
    "roster": "1",
    "bid": 3,
@@ -2212,14 +2180,14 @@
    "outbid": []
   },
   {
-   "week": 9,
+   "week": 10,
    "player": "10937",
    "roster": "8",
    "bid": 0,
    "at": 1730880352241,
    "pts": 14.0,
    "started": 14.0,
-   "weeks": 3,
+   "weeks": 2,
    "active": false,
    "name": "Jake Moody",
    "pos": "K",
@@ -2231,7 +2199,7 @@
    ]
   },
   {
-   "week": 9,
+   "week": 10,
    "player": "11058",
    "roster": "6",
    "bid": 0,
@@ -2245,7 +2213,7 @@
    "outbid": []
   },
   {
-   "week": 9,
+   "week": 10,
    "player": "CHI",
    "roster": "2",
    "bid": 0,
@@ -2259,7 +2227,7 @@
    "outbid": []
   },
   {
-   "week": 9,
+   "week": 10,
    "player": "NYG",
    "roster": "7",
    "bid": 0,
@@ -2273,7 +2241,7 @@
    "outbid": []
   },
   {
-   "week": 9,
+   "week": 10,
    "player": "8131",
    "roster": "7",
    "bid": 0,
@@ -2288,6 +2256,20 @@
   },
   {
    "week": 10,
+   "player": "11618",
+   "roster": "8",
+   "bid": 0,
+   "at": 1730963170648,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Jalen McMillan",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 11,
    "player": "5086",
    "roster": "1",
    "bid": 9,
@@ -2301,7 +2283,7 @@
    "outbid": []
   },
   {
-   "week": 10,
+   "week": 11,
    "player": "HOU",
    "roster": "4",
    "bid": 2,
@@ -2324,109 +2306,6 @@
    ]
   },
   {
-   "week": 10,
-   "player": "11618",
-   "roster": "8",
-   "bid": 0,
-   "at": 1730963170648,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Jalen McMillan",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
-   "week": 10,
-   "player": "11579",
-   "roster": "8",
-   "bid": 0,
-   "at": 1731485179735,
-   "pts": 4.0,
-   "started": 0.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Audric Estime",
-   "pos": "RB",
-   "outbid": []
-  },
-  {
-   "week": 10,
-   "player": "5119",
-   "roster": "9",
-   "bid": 0,
-   "at": 1731485179735,
-   "pts": 11.0,
-   "started": 11.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Jason Sanders",
-   "pos": "K",
-   "outbid": []
-  },
-  {
-   "week": 10,
-   "player": "6804",
-   "roster": "10",
-   "bid": 0,
-   "at": 1731485179735,
-   "pts": 112.5,
-   "started": 58.98,
-   "weeks": 8,
-   "active": true,
-   "name": "Jordan Love",
-   "pos": "QB",
-   "outbid": []
-  },
-  {
-   "week": 10,
-   "player": "7042",
-   "roster": "10",
-   "bid": 0,
-   "at": 1731485179735,
-   "pts": 5.0,
-   "started": 5.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Tyler Bass",
-   "pos": "K",
-   "outbid": []
-  },
-  {
-   "week": 11,
-   "player": "5086",
-   "roster": "10",
-   "bid": 16,
-   "at": 1732089989159,
-   "pts": 25.5,
-   "started": 0.0,
-   "weeks": 6,
-   "active": true,
-   "name": "Marquez Valdes-Scantling",
-   "pos": "WR",
-   "outbid": [
-    {
-     "roster": "6",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 11,
-   "player": "8126",
-   "roster": "5",
-   "bid": 2,
-   "at": 1732089989159,
-   "pts": 8.8,
-   "started": 7.2,
-   "weeks": 3,
-   "active": false,
-   "name": "Wan'Dale Robinson",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
    "week": 11,
    "player": "9484",
    "roster": "8",
@@ -2447,6 +2326,62 @@
   },
   {
    "week": 11,
+   "player": "11579",
+   "roster": "8",
+   "bid": 0,
+   "at": 1731485179735,
+   "pts": 4.0,
+   "started": 0.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Audric Estime",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "5119",
+   "roster": "9",
+   "bid": 0,
+   "at": 1731485179735,
+   "pts": 11.0,
+   "started": 11.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Jason Sanders",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "6804",
+   "roster": "10",
+   "bid": 0,
+   "at": 1731485179735,
+   "pts": 112.5,
+   "started": 58.98,
+   "weeks": 7,
+   "active": true,
+   "name": "Jordan Love",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "7042",
+   "roster": "10",
+   "bid": 0,
+   "at": 1731485179735,
+   "pts": 5.0,
+   "started": 5.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Tyler Bass",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 11,
    "player": "4663",
    "roster": "10",
    "bid": 0,
@@ -2460,7 +2395,40 @@
    "outbid": []
   },
   {
-   "week": 11,
+   "week": 12,
+   "player": "5086",
+   "roster": "10",
+   "bid": 16,
+   "at": 1732089989159,
+   "pts": 25.5,
+   "started": 0.0,
+   "weeks": 6,
+   "active": true,
+   "name": "Marquez Valdes-Scantling",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "player": "8126",
+   "roster": "5",
+   "bid": 2,
+   "at": 1732089989159,
+   "pts": 8.8,
+   "started": 7.2,
+   "weeks": 2,
+   "active": false,
+   "name": "Wan'Dale Robinson",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 12,
    "player": "6768",
    "roster": "1",
    "bid": 0,
@@ -2474,7 +2442,7 @@
    "outbid": []
   },
   {
-   "week": 11,
+   "week": 12,
    "player": "PHI",
    "roster": "8",
    "bid": 0,
@@ -2488,7 +2456,7 @@
    "outbid": []
   },
   {
-   "week": 11,
+   "week": 12,
    "player": "7496",
    "roster": "8",
    "bid": 0,
@@ -2502,14 +2470,14 @@
    "outbid": []
   },
   {
-   "week": 11,
+   "week": 12,
    "player": "6650",
    "roster": "10",
    "bid": 0,
    "at": 1732089989159,
    "pts": 61.0,
    "started": 61.0,
-   "weeks": 7,
+   "weeks": 6,
    "active": true,
    "name": "Chase McLaughlin",
    "pos": "K",
@@ -2521,35 +2489,35 @@
    ]
   },
   {
-   "week": 11,
+   "week": 12,
    "player": "TB",
    "roster": "6",
    "bid": 0,
    "at": 1732089989159,
    "pts": 52.0,
    "started": 42.0,
-   "weeks": 7,
+   "weeks": 6,
    "active": true,
    "name": "Tampa Bay Buccaneers D/ST",
    "pos": "DEF",
    "outbid": []
   },
   {
-   "week": 11,
+   "week": 12,
    "player": "ARI",
    "roster": "7",
    "bid": 0,
    "at": 1732089989159,
    "pts": 12.0,
    "started": 12.0,
-   "weeks": 2,
+   "weeks": 1,
    "active": false,
    "name": "Arizona Cardinals D/ST",
    "pos": "DEF",
    "outbid": []
   },
   {
-   "week": 11,
+   "week": 12,
    "player": "1339",
    "roster": "8",
    "bid": 0,
@@ -2563,7 +2531,7 @@
    "outbid": []
   },
   {
-   "week": 12,
+   "week": 13,
    "player": "4663",
    "roster": "9",
    "bid": 10,
@@ -2577,7 +2545,7 @@
    "outbid": []
   },
   {
-   "week": 12,
+   "week": 13,
    "player": "DAL",
    "roster": "2",
    "bid": 0,
@@ -2591,7 +2559,7 @@
    "outbid": []
   },
   {
-   "week": 12,
+   "week": 13,
    "player": "9756",
    "roster": "1",
    "bid": 0,
@@ -2605,7 +2573,7 @@
    "outbid": []
   },
   {
-   "week": 12,
+   "week": 13,
    "player": "SEA",
    "roster": "7",
    "bid": 0,
@@ -2619,7 +2587,7 @@
    "outbid": []
   },
   {
-   "week": 13,
+   "week": 14,
    "player": "11651",
    "roster": "4",
    "bid": 20,
@@ -2646,7 +2614,21 @@
    ]
   },
   {
-   "week": 13,
+   "week": 14,
+   "player": "5248",
+   "roster": "3",
+   "bid": 20,
+   "at": 1733390762212,
+   "pts": 31.5,
+   "started": 9.6,
+   "weeks": 4,
+   "active": true,
+   "name": "Gus Edwards",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 14,
    "player": "1689",
    "roster": "5",
    "bid": 7,
@@ -2665,7 +2647,7 @@
    ]
   },
   {
-   "week": 13,
+   "week": 14,
    "player": "6768",
    "roster": "2",
    "bid": 5,
@@ -2684,7 +2666,7 @@
    ]
   },
   {
-   "week": 13,
+   "week": 14,
    "player": "10219",
    "roster": "9",
    "bid": 0,
@@ -2698,7 +2680,7 @@
    "outbid": []
   },
   {
-   "week": 13,
+   "week": 14,
    "player": "BUF",
    "roster": "7",
    "bid": 0,
@@ -2712,7 +2694,7 @@
    "outbid": []
   },
   {
-   "week": 13,
+   "week": 14,
    "player": "8670",
    "roster": "6",
    "bid": 0,
@@ -2726,7 +2708,7 @@
    "outbid": []
   },
   {
-   "week": 13,
+   "week": 14,
    "player": "4195",
    "roster": "4",
    "bid": 0,
@@ -2740,7 +2722,7 @@
    "outbid": []
   },
   {
-   "week": 13,
+   "week": 14,
    "player": "7596",
    "roster": "1",
    "bid": 0,
@@ -2754,7 +2736,7 @@
    "outbid": []
   },
   {
-   "week": 13,
+   "week": 14,
    "player": "12185",
    "roster": "9",
    "bid": 0,
@@ -2768,7 +2750,7 @@
    "outbid": []
   },
   {
-   "week": 13,
+   "week": 14,
    "player": "MIA",
    "roster": "2",
    "bid": 0,
@@ -2782,7 +2764,7 @@
    "outbid": []
   },
   {
-   "week": 14,
+   "week": 15,
    "player": "6963",
    "roster": "4",
    "bid": 27,
@@ -2809,21 +2791,7 @@
    ]
   },
   {
-   "week": 14,
-   "player": "5248",
-   "roster": "3",
-   "bid": 20,
-   "at": 1733390762212,
-   "pts": 31.5,
-   "started": 9.6,
-   "weeks": 4,
-   "active": true,
-   "name": "Gus Edwards",
-   "pos": "RB",
-   "outbid": []
-  },
-  {
-   "week": 14,
+   "week": 15,
    "player": "11571",
    "roster": "9",
    "bid": 19,
@@ -2850,7 +2818,7 @@
    ]
   },
   {
-   "week": 14,
+   "week": 15,
    "player": "9225",
    "roster": "10",
    "bid": 10,
@@ -2873,14 +2841,14 @@
    ]
   },
   {
-   "week": 14,
+   "week": 15,
    "player": "BAL",
    "roster": "2",
    "bid": 8,
    "at": 1733904353175,
    "pts": 6.0,
    "started": 6.0,
-   "weeks": 2,
+   "weeks": 1,
    "active": false,
    "name": "Baltimore Ravens D/ST",
    "pos": "DEF",
@@ -2890,95 +2858,6 @@
      "bid": 0
     }
    ]
-  },
-  {
-   "week": 14,
-   "player": "8220",
-   "roster": "1",
-   "bid": 0,
-   "at": 1733904353175,
-   "pts": 3.5,
-   "started": 0.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Sincere McCormick",
-   "pos": "RB",
-   "outbid": [
-    {
-     "roster": "1",
-     "bid": 0
-    }
-   ]
-  },
-  {
-   "week": 14,
-   "player": "WAS",
-   "roster": "6",
-   "bid": 0,
-   "at": 1733904353175,
-   "pts": 6.0,
-   "started": 6.0,
-   "weeks": 2,
-   "active": false,
-   "name": "Washington Commanders D/ST",
-   "pos": "DEF",
-   "outbid": []
-  },
-  {
-   "week": 14,
-   "player": "3678",
-   "roster": "6",
-   "bid": 0,
-   "at": 1733904353175,
-   "pts": 26.0,
-   "started": 26.0,
-   "weeks": 4,
-   "active": true,
-   "name": "Wil Lutz",
-   "pos": "K",
-   "outbid": []
-  },
-  {
-   "week": 14,
-   "player": "ATL",
-   "roster": "10",
-   "bid": 0,
-   "at": 1733904353175,
-   "pts": 53.0,
-   "started": 53.0,
-   "weeks": 3,
-   "active": true,
-   "name": "Atlanta Falcons D/ST",
-   "pos": "DEF",
-   "outbid": []
-  },
-  {
-   "week": 14,
-   "player": "4227",
-   "roster": "9",
-   "bid": 0,
-   "at": 1733904353175,
-   "pts": 10.0,
-   "started": 10.0,
-   "weeks": 1,
-   "active": false,
-   "name": "Harrison Butker",
-   "pos": "K",
-   "outbid": []
-  },
-  {
-   "week": 15,
-   "player": "DET",
-   "roster": "2",
-   "bid": 16,
-   "at": 1734509171054,
-   "pts": 15.0,
-   "started": 15.0,
-   "weeks": 2,
-   "active": true,
-   "name": "Detroit Lions D/ST",
-   "pos": "DEF",
-   "outbid": []
   },
   {
    "week": 15,
@@ -3001,6 +2880,109 @@
   },
   {
    "week": 15,
+   "player": "8220",
+   "roster": "1",
+   "bid": 0,
+   "at": 1733904353175,
+   "pts": 3.5,
+   "started": 0.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Sincere McCormick",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "player": "WAS",
+   "roster": "6",
+   "bid": 0,
+   "at": 1733904353175,
+   "pts": 6.0,
+   "started": 6.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Washington Commanders D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 15,
+   "player": "3678",
+   "roster": "6",
+   "bid": 0,
+   "at": 1733904353175,
+   "pts": 26.0,
+   "started": 26.0,
+   "weeks": 3,
+   "active": true,
+   "name": "Wil Lutz",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 15,
+   "player": "ATL",
+   "roster": "10",
+   "bid": 0,
+   "at": 1733904353175,
+   "pts": 53.0,
+   "started": 53.0,
+   "weeks": 3,
+   "active": true,
+   "name": "Atlanta Falcons D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 15,
+   "player": "4227",
+   "roster": "9",
+   "bid": 0,
+   "at": 1733904353175,
+   "pts": 10.0,
+   "started": 10.0,
+   "weeks": 1,
+   "active": false,
+   "name": "Harrison Butker",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 15,
+   "player": "11624",
+   "roster": "1",
+   "bid": 0,
+   "at": 1734111982779,
+   "pts": 52.5,
+   "started": 0.0,
+   "weeks": 3,
+   "active": true,
+   "name": "Xavier Worthy",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 16,
+   "player": "DET",
+   "roster": "2",
+   "bid": 16,
+   "at": 1734509171054,
+   "pts": 15.0,
+   "started": 15.0,
+   "weeks": 2,
+   "active": true,
+   "name": "Detroit Lions D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 16,
    "player": "8143",
    "roster": "9",
    "bid": 1,
@@ -3027,21 +3009,7 @@
    ]
   },
   {
-   "week": 15,
-   "player": "11624",
-   "roster": "1",
-   "bid": 0,
-   "at": 1734111982779,
-   "pts": 52.5,
-   "started": 0.0,
-   "weeks": 3,
-   "active": true,
-   "name": "Xavier Worthy",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
-   "week": 15,
+   "week": 16,
    "player": "9757",
    "roster": "1",
    "bid": 0,
@@ -3055,7 +3023,7 @@
    "outbid": []
   },
   {
-   "week": 15,
+   "week": 16,
    "player": "4227",
    "roster": "9",
    "bid": 0,
@@ -3069,7 +3037,7 @@
    "outbid": []
   },
   {
-   "week": 15,
+   "week": 16,
    "player": "11618",
    "roster": "1",
    "bid": 0,
@@ -3083,7 +3051,7 @@
    "outbid": []
   },
   {
-   "week": 15,
+   "week": 16,
    "player": "IND",
    "roster": "5",
    "bid": 0,
@@ -3097,7 +3065,7 @@
    "outbid": []
   },
   {
-   "week": 15,
+   "week": 16,
    "player": "7543",
    "roster": "1",
    "bid": 0,
@@ -3118,34 +3086,6 @@
      "bid": 0
     }
    ]
-  },
-  {
-   "week": 16,
-   "player": "5937",
-   "roster": "8",
-   "bid": 7,
-   "at": 1735113963625,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 1,
-   "active": true,
-   "name": "Diontae Johnson",
-   "pos": "WR",
-   "outbid": []
-  },
-  {
-   "week": 16,
-   "player": "9229",
-   "roster": "5",
-   "bid": 3,
-   "at": 1735113963625,
-   "pts": 0.0,
-   "started": 0.0,
-   "weeks": 1,
-   "active": true,
-   "name": "Anthony Richardson",
-   "pos": "QB",
-   "outbid": []
   },
   {
    "week": 16,
@@ -3176,7 +3116,35 @@
    "outbid": []
   },
   {
-   "week": 16,
+   "week": 17,
+   "player": "5937",
+   "roster": "8",
+   "bid": 7,
+   "at": 1735113963625,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 1,
+   "active": true,
+   "name": "Diontae Johnson",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 17,
+   "player": "9229",
+   "roster": "5",
+   "bid": 3,
+   "at": 1735113963625,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 1,
+   "active": true,
+   "name": "Anthony Richardson",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 17,
    "player": "9508",
    "roster": "1",
    "bid": 0,

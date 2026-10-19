@@ -20,6 +20,10 @@ Everything except the ranking order, blurbs and pictures is pulled from Sleeper 
 3. `py ffr.py build` regenerates `docs/`. Open `docs/index.html` to preview.
 4. When you're happy: `git pull`, `git add -A`, `git commit -m "Week 5"`, `git push`, then post the link.
 
+## Automatic refresh
+
+`.github/workflows/refresh.yml` runs `python ffr.py refresh` every morning and pushes the result. It re-pulls stats for the latest week you've already ranked, along with FAAB, trades, draft and history. It never creates a new week or changes your rankings. To run it by hand, use `py ffr.py refresh` locally or the "Run workflow" button on the repo's Actions tab.
+
 ## Each new season
 
 Sleeper gives the league a new ID every year. Once the new season's league exists, run:
