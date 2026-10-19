@@ -161,7 +161,7 @@ section+section .sec,.ranks+section .sec{margin-top:36px}
 .heat .lo1,.sw.lo1{background:color-mix(in srgb,var(--neg) 18%,var(--neutral))}
 .heat .lo2,.sw.lo2{background:color-mix(in srgb,var(--neg) 38%,var(--neutral))}
 .heat .lo3,.sw.lo3{background:color-mix(in srgb,var(--neg) 60%,var(--neutral))}
-.heat tr.avg td{color:var(--muted);font-weight:600}
+.heat tr.avg td{color:var(--muted);font-weight:600;border-top:1px solid var(--line);border-bottom:0}
 td small,.tn small{color:var(--muted);font-size:.75rem}
 .bracket{display:flex;gap:18px;overflow-x:auto;padding-bottom:6px}
 .round{display:flex;flex-direction:column;justify-content:space-around;gap:12px;min-width:220px}
@@ -181,6 +181,10 @@ a.mlink{color:inherit;text-decoration:none}a.mlink:hover span{text-decoration:un
 .mcard:hover{border-color:var(--muted)}
 .mcard small{display:block;color:var(--muted)}
 .h2h-list .win{color:var(--up);font-weight:600}.h2h-list .loss{color:var(--down)}
+th[data-sort]{cursor:pointer;user-select:none;white-space:nowrap}
+th[data-sort]::after{content:"↕";margin-left:4px;opacity:.35}
+th[aria-sort=ascending]::after{content:"↑";opacity:1}th[aria-sort=descending]::after{content:"↓";opacity:1}
+th[data-sort]:hover,th[data-sort]:focus-visible{color:var(--ink)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 </style></head>
 <body><div class="layout">
@@ -199,4 +203,64 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 <section><h2 class="sec">Head-to-Head</h2><div class="tbl"><table class="h2h-list">
   <thead><tr><th class="tn">Opponent</th><th>Record</th></tr></thead><tbody><tr><td class="tn"><a class="who mlink" href="../history/m-1129574561793630208.html"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><span>Karans Sportsbook<small>kgids</small></span></a></td><td class="win">3-2</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1084605692373233664.html"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><span>superdiddy<small>jallerbo</small></span></a></td><td class="loss">1-3</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-535242776309989376.html"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><span>Braelon Allen<small>nmadan</small></span></a></td><td class="">2-2</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-471050766644146176.html"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><span>6 7<small>amach124</small></span></a></td><td class="win">3-1</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1132924651295956992.html"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"><span>Justin Beer Loyalist<small>ZebroGodilla</small></span></a></td><td class="loss">1-2</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1002009644597993472.html"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><span>Amver Alert🚨<small>amver</small></span></a></td><td class="loss">1-2</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-873130597315481600.html"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi<small>yrkpapi</small></span></a></td><td class="win">2-1</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1129665810802278400.html"><img class="av" src="https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg" alt="" loading="lazy"><span>Baltimore Avians<small>avian96</small></span></a></td><td class="loss">1-2</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-470927114183372800.html"><img class="av" src="https://sleepercdn.com/uploads/1e1f1094e8d4b98b25130a8d3c0cf063.jpg" alt="" loading="lazy"><span>I’m Whipped by Bezos<small>roheezy</small></span></a></td><td class="">1-1</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1392294069287256064.html"><img class="av" src="https://sleepercdn.com/avatars/thumbs/d55d1f7075eda01948318de4af616075" alt="" loading="lazy"><span>6-4 god team <small>Shivxn</small></span></a></td><td class="loss">0-1</td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-536026305198518272.html"><img class="av" src="https://sleepercdn.com/avatars/thumbs/4fb394f49d806fbad75dd79ecc68f525" alt="" loading="lazy"><span>NShah19<small>NShah19</small></span></a></td><td class="loss">0-1</td></tr></tbody></table></div></section>
 <footer>Career record and head-to-head are regular-season games only (no median games). Season records are Sleeper's and include median games.</footer>
-</main></div></body></html>
+</main></div><script>
+// Every table sorts by any column. A cell's data-v (if set) is its sort value; otherwise it's read from the text:
+// numbers, $ and %, records like 9-1 (by win %), <1% / >99%, and runs of 🏆 / 🚽 (by count). Blanks sort last.
+(function () {
+  function value(cell) {
+    if (cell.dataset.v !== undefined) return cell.dataset.v;
+    var t = (cell.innerText || '').trim().split('\n')[0].trim();
+    if (t === '' || t === '–' || t === '-' || t === '—') return '';
+    var rec = t.match(/^(\d+)-(\d+)(?:-(\d+))?$/);
+    if (rec) {
+      var w = +rec[1], l = +rec[2], d = +(rec[3] || 0);
+      return String((w + d / 2) / Math.max(w + l + d, 1) + w * 1e-6);
+    }
+    if (t === '<1%') return '0.5';
+    if (t === '>99%') return '99.5';
+    var icons = t.match(/^(?:🏆|🚽)+$/u);
+    if (icons) return String(Array.from(t).length);
+    var num = t.replace(/\u2212/g, '-').match(/^([+-]?)\$?([\d,]*\.?\d+)/);
+    if (num) return String((num[1] === '-' ? -1 : 1) * parseFloat(num[2].replace(/,/g, '')));
+    return t.toLowerCase();
+  }
+  document.querySelectorAll('main table').forEach(function (table) {
+    var head = table.tHead && table.tHead.rows[0], body = table.tBodies[0];
+    if (!head || !body || body.rows.length < 2) return;
+    // Rows to move together: a row plus any expandable detail rows (tr.more) that follow it.
+    function groups() {
+      var out = [];
+      Array.prototype.forEach.call(body.rows, function (r) {
+        if (r.classList.contains('more') && out.length) out[out.length - 1].push(r); else out.push([r]);
+      });
+      return out;
+    }
+    Array.prototype.forEach.call(head.cells, function (th, col) {
+      var vals = groups().map(function (g) { return g[0].cells[col] ? value(g[0].cells[col]) : ''; });
+      if (!th.dataset.sort) {
+        var filled = vals.filter(function (v) { return v !== ''; });
+        var nums = filled.filter(function (v) { return !isNaN(parseFloat(v)) && isFinite(v); });
+        th.dataset.sort = filled.length && nums.length >= filled.length * 0.6 ? 'num' : 'text';
+      }
+      th.tabIndex = 0;
+      function sort() {
+        var now = th.getAttribute('aria-sort');
+        // First click: numbers high to low, names A to Z. Clicking again flips it.
+        var asc = now ? now === 'descending' : th.dataset.sort === 'text';
+        Array.prototype.forEach.call(head.cells, function (h) { h.removeAttribute('aria-sort'); });
+        th.setAttribute('aria-sort', asc ? 'ascending' : 'descending');
+        var num = th.dataset.sort === 'num';
+        var rows = groups().map(function (g) { return { g: g, v: g[0].cells[col] ? value(g[0].cells[col]) : '' }; });
+        rows.sort(function (a, b) {
+          if (a.v === '' || b.v === '') return a.v === b.v ? 0 : a.v === '' ? 1 : -1;  // blanks always last
+          var d = num ? parseFloat(a.v) - parseFloat(b.v) : String(a.v).localeCompare(String(b.v), undefined, { numeric: true });
+          return asc ? d : -d;
+        });
+        rows.forEach(function (r) { r.g.forEach(function (tr) { body.appendChild(tr); }); });
+      }
+      th.addEventListener('click', sort);
+      th.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); sort(); } });
+    });
+  });
+})();
+</script></body></html>

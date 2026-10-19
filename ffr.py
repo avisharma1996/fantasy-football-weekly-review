@@ -810,7 +810,8 @@ def page(data, base, side, nav, kicker, heading, body, footer, description):
     e = html.escape
     logo = f'<img class="logo" src="{e(data["league_avatar"])}" alt="">' if data.get("league_avatar") else ""
     return PAGE.format(site_name=e(SITE_NAME), description=e(description), side=side, logo=logo, kicker=kicker,
-                       heading=heading, nav=nav, body=body, footer=footer, css=CSS)
+                       heading=heading, nav=nav, body=body, footer=footer, css=CSS,
+                       scripts=SORT_JS)
 
 
 def tiles(title, items):
@@ -1112,12 +1113,16 @@ def render_stats(data, site):
     rank = lambda vals: {r: i for i, r in enumerate(sorted((r for r in vals if vals[r] is not None),
                                                            key=lambda r: -vals[r]), 1)}
     past_rank, left_rank = rank(past), rank(left)
-    cell = lambda v, rk: f'{v:.1f} <small>#{rk}</small>' if v is not None else "–"
-    sos = "".join(
-        f'<tr><td class="tn">{team_label(teams, r)}</td><td>{rec(teams[r])}</td><td>{ppg(teams[r]):.1f}</td>'
-        f'<td>{cell(past[r], past_rank.get(r))}</td><td>{cell(left[r], left_rank.get(r))}</td></tr>'
-        for r in sorted(teams, key=lambda r: past_rank.get(r, 99)))
     any_left = any(v is not None for v in left.values())
+    # data-v holds each cell's sort value; blank sorts last.
+    cell = lambda v, rk: (f'<td data-v="{v:.3f}">{v:.1f} <small>#{rk}</small></td>' if v is not None
+                          else '<td data-v="">–</td>')
+    win_pct = lambda t: (t["wins"] + t["ties"] / 2) / max(t["wins"] + t["losses"] + t["ties"], 1)
+    sos = "".join(
+        f'<tr><td class="tn" data-v="{e(teams[r]["name"].lower())}">{team_label(teams, r)}</td>'
+        f'<td data-v="{win_pct(teams[r]):.4f}">{rec(teams[r])}</td><td data-v="{ppg(teams[r]):.3f}">{ppg(teams[r]):.1f}</td>'
+        f'{cell(past[r], past_rank.get(r))}{cell(left[r], left_rank.get(r)) if any_left else ""}</tr>'
+        for r in sorted(teams, key=lambda r: past_rank.get(r, 99)))
 
     # Positional strength: points per game from each position's starters, against the league average.
     positions = [p for p in ("QB", "RB", "WR", "TE", "K", "DEF") if any(p in t.get("pos_pts", {}) for t in teams.values())]
@@ -1130,9 +1135,10 @@ def render_stats(data, site):
         z = (per_game[r][p] - league_avg[p]) / spread[p]
         step = 0 if abs(z) < 0.5 else 1 if abs(z) < 1 else 2 if abs(z) < 1.5 else 3
         cls = f' class="{"hi" if z > 0 else "lo"}{step}"' if step else ""
-        return f'<td{cls}>{per_game[r][p]:.1f}</td>'
+        return f'<td{cls} data-v="{per_game[r][p]:.3f}">{per_game[r][p]:.1f}</td>'
     heat_rows = "".join(
-        f'<tr><td class="tn">{team_label(teams, r)}</td>{"".join(heat(r, p) for p in positions)}</tr>'
+        f'<tr><td class="tn" data-v="{e(teams[r]["name"].lower())}">{team_label(teams, r)}</td>'
+        f'{"".join(heat(r, p) for p in positions)}</tr>'
         for r in sorted(teams, key=lambda r: -ppg(teams[r])))
     heat_avg = "".join(f"<td>{league_avg[p]:.1f}</td>" for p in positions)
 
@@ -1141,27 +1147,35 @@ def render_stats(data, site):
     order = sorted(teams, key=lambda r: swing[r])
     third = max(len(order) // 3, 1)
     label = lambda r: "Steady" if r in order[:third] else "Boom or bust" if r in order[-third:] else "Balanced"
+    styles = ["Steady", "Balanced", "Boom or bust"]  # sorts in this order
+    num = lambda v: f'<td data-v="{v:.3f}">{v:.1f}</td>'
     cons = "".join(
-        f'<tr><td class="tn">{team_label(teams, r)}</td><td>{ppg(teams[r]):.1f}</td><td>{swing[r]:.1f}</td>'
-        f'<td>{min(teams[r]["scores"]):.1f}</td><td>{max(teams[r]["scores"]):.1f}</td><td class="tn">{label(r)}</td></tr>'
+        f'<tr><td class="tn" data-v="{e(teams[r]["name"].lower())}">{team_label(teams, r)}</td>'
+        f'{num(ppg(teams[r]))}{num(swing[r])}{num(min(teams[r]["scores"]))}{num(max(teams[r]["scores"]))}'
+        f'<td class="tn" data-v="{styles.index(label(r))}">{label(r)}</td></tr>'
         for r in order if teams[r].get("scores"))
 
-    body = f"""<section><h2 class="sec">Strength of Schedule</h2><div class="tbl"><table>
-  <thead><tr><th class="tn">Team</th><th>Record</th><th>Pts / game</th><th>Opponents so far</th>
-  {"<th>Opponents left</th>" if any_left else ""}</tr></thead>
-  <tbody>{sos if any_left else sos.replace("<td>–</td></tr>", "</tr>")}</tbody></table></div>
-<p class="hint">Average points per game of the opponents each team has played, and has left to play. #1 is the toughest.</p></section>
+    body = f"""<section><h2 class="sec">Strength of Schedule</h2><div class="tbl"><table class="sortable">
+  <thead><tr><th class="tn" data-sort="text">Team</th><th data-sort="num">Record</th><th data-sort="num">Pts / game</th>
+  <th data-sort="num" aria-sort="descending">Opponents so far</th>{'<th data-sort="num">Opponents left</th>' if any_left else ""}</tr></thead>
+  <tbody>{sos}</tbody></table></div>
+<p class="hint">Average points per game of the opponents each team has played, and has left to play. #1 is the toughest.
+Tap a column to sort.</p></section>
 <section><h2 class="sec">Positional Strength</h2>
 <div class="legend"><span class="sw lo3"></span><span class="sw lo2"></span><span class="sw lo1"></span><span class="sw"></span>
 <span class="sw hi1"></span><span class="sw hi2"></span><span class="sw hi3"></span><span>Below league average → above</span></div>
-<div class="tbl"><table class="heat">
-  <thead><tr><th class="tn">Team</th>{"".join(f"<th>{p}</th>" for p in positions)}</tr></thead>
-  <tbody>{heat_rows}<tr class="avg"><td class="tn">League average</td>{heat_avg}</tr></tbody></table></div>
-<p class="hint">Points per game from each position's starters. Flex starters count at their own position.</p></section>
-<section><h2 class="sec">Consistency</h2><div class="tbl"><table>
-  <thead><tr><th class="tn">Team</th><th>Avg</th><th>Swing (std dev)</th><th>Floor</th><th>Ceiling</th><th class="tn">Style</th></tr></thead>
+<div class="tbl"><table class="heat sortable">
+  <thead><tr><th class="tn" data-sort="text">Team</th>{"".join(f'<th data-sort="num">{p}</th>' for p in positions)}</tr></thead>
+  <tbody>{heat_rows}</tbody>
+  <tfoot><tr class="avg"><td class="tn">League average</td>{heat_avg}</tr></tfoot></table></div>
+<p class="hint">Points per game from each position's starters. Flex starters count at their own position. Tap a column to sort.</p></section>
+<section><h2 class="sec">Consistency</h2><div class="tbl"><table class="sortable">
+  <thead><tr><th class="tn" data-sort="text">Team</th><th data-sort="num">Avg</th>
+  <th data-sort="num" aria-sort="ascending">Swing (std dev)</th><th data-sort="num">Floor</th><th data-sort="num">Ceiling</th>
+  <th class="tn" data-sort="num">Style</th></tr></thead>
   <tbody>{cons}</tbody></table></div>
-<p class="hint">Swing is how far a team's weekly score typically lands from its average. Floor and ceiling are its lowest and highest weeks.</p></section>"""
+<p class="hint">Swing is how far a team's weekly score typically lands from its average. Floor and ceiling are its lowest and
+highest weeks. Tap a column to sort.</p></section>"""
     footer = f"Regular season through week {data['week']}. Stats from Sleeper."
     return page(data, base, sidebar(season, base, site, "stats"), season_nav(site, "stats", season),
                 f"{e(data['league'])} · {e(season)} · Week {data['week']}", "Team Stats", body, footer,
@@ -1964,6 +1978,69 @@ def build():
     print("Open docs/index.html to preview.")
 
 
+SORT_JS = r"""<script>
+// Every table sorts by any column. A cell's data-v (if set) is its sort value; otherwise it's read from the text:
+// numbers, $ and %, records like 9-1 (by win %), <1% / >99%, and runs of 🏆 / 🚽 (by count). Blanks sort last.
+(function () {
+  function value(cell) {
+    if (cell.dataset.v !== undefined) return cell.dataset.v;
+    var t = (cell.innerText || '').trim().split('\n')[0].trim();
+    if (t === '' || t === '–' || t === '-' || t === '—') return '';
+    var rec = t.match(/^(\d+)-(\d+)(?:-(\d+))?$/);
+    if (rec) {
+      var w = +rec[1], l = +rec[2], d = +(rec[3] || 0);
+      return String((w + d / 2) / Math.max(w + l + d, 1) + w * 1e-6);
+    }
+    if (t === '<1%') return '0.5';
+    if (t === '>99%') return '99.5';
+    var icons = t.match(/^(?:🏆|🚽)+$/u);
+    if (icons) return String(Array.from(t).length);
+    var num = t.replace(/\u2212/g, '-').match(/^([+-]?)\$?([\d,]*\.?\d+)/);
+    if (num) return String((num[1] === '-' ? -1 : 1) * parseFloat(num[2].replace(/,/g, '')));
+    return t.toLowerCase();
+  }
+  document.querySelectorAll('main table').forEach(function (table) {
+    var head = table.tHead && table.tHead.rows[0], body = table.tBodies[0];
+    if (!head || !body || body.rows.length < 2) return;
+    // Rows to move together: a row plus any expandable detail rows (tr.more) that follow it.
+    function groups() {
+      var out = [];
+      Array.prototype.forEach.call(body.rows, function (r) {
+        if (r.classList.contains('more') && out.length) out[out.length - 1].push(r); else out.push([r]);
+      });
+      return out;
+    }
+    Array.prototype.forEach.call(head.cells, function (th, col) {
+      var vals = groups().map(function (g) { return g[0].cells[col] ? value(g[0].cells[col]) : ''; });
+      if (!th.dataset.sort) {
+        var filled = vals.filter(function (v) { return v !== ''; });
+        var nums = filled.filter(function (v) { return !isNaN(parseFloat(v)) && isFinite(v); });
+        th.dataset.sort = filled.length && nums.length >= filled.length * 0.6 ? 'num' : 'text';
+      }
+      th.tabIndex = 0;
+      function sort() {
+        var now = th.getAttribute('aria-sort');
+        // First click: numbers high to low, names A to Z. Clicking again flips it.
+        var asc = now ? now === 'descending' : th.dataset.sort === 'text';
+        Array.prototype.forEach.call(head.cells, function (h) { h.removeAttribute('aria-sort'); });
+        th.setAttribute('aria-sort', asc ? 'ascending' : 'descending');
+        var num = th.dataset.sort === 'num';
+        var rows = groups().map(function (g) { return { g: g, v: g[0].cells[col] ? value(g[0].cells[col]) : '' }; });
+        rows.sort(function (a, b) {
+          if (a.v === '' || b.v === '') return a.v === b.v ? 0 : a.v === '' ? 1 : -1;  // blanks always last
+          var d = num ? parseFloat(a.v) - parseFloat(b.v) : String(a.v).localeCompare(String(b.v), undefined, { numeric: true });
+          return asc ? d : -d;
+        });
+        rows.forEach(function (r) { r.g.forEach(function (tr) { body.appendChild(tr); }); });
+      }
+      th.addEventListener('click', sort);
+      th.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); sort(); } });
+    });
+  });
+})();
+</script>"""
+
+
 PAGE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1979,7 +2056,7 @@ PAGE = """<!doctype html>
 <nav>{nav}</nav>
 {body}
 <footer>{footer}</footer>
-</main></div></body></html>
+</main></div>{scripts}</body></html>
 """
 
 CSS = """
@@ -2138,7 +2215,7 @@ section+section .sec,.ranks+section .sec{margin-top:36px}
 .heat .lo1,.sw.lo1{background:color-mix(in srgb,var(--neg) 18%,var(--neutral))}
 .heat .lo2,.sw.lo2{background:color-mix(in srgb,var(--neg) 38%,var(--neutral))}
 .heat .lo3,.sw.lo3{background:color-mix(in srgb,var(--neg) 60%,var(--neutral))}
-.heat tr.avg td{color:var(--muted);font-weight:600}
+.heat tr.avg td{color:var(--muted);font-weight:600;border-top:1px solid var(--line);border-bottom:0}
 td small,.tn small{color:var(--muted);font-size:.75rem}
 .bracket{display:flex;gap:18px;overflow-x:auto;padding-bottom:6px}
 .round{display:flex;flex-direction:column;justify-content:space-around;gap:12px;min-width:220px}
@@ -2158,6 +2235,10 @@ a.mlink{color:inherit;text-decoration:none}a.mlink:hover span{text-decoration:un
 .mcard:hover{border-color:var(--muted)}
 .mcard small{display:block;color:var(--muted)}
 .h2h-list .win{color:var(--up);font-weight:600}.h2h-list .loss{color:var(--down)}
+th[data-sort]{cursor:pointer;user-select:none;white-space:nowrap}
+th[data-sort]::after{content:"↕";margin-left:4px;opacity:.35}
+th[aria-sort=ascending]::after{content:"↑";opacity:1}th[aria-sort=descending]::after{content:"↓";opacity:1}
+th[data-sort]:hover,th[data-sort]:focus-visible{color:var(--ink)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 """
 

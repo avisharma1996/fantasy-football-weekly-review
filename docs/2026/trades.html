@@ -161,7 +161,7 @@ section+section .sec,.ranks+section .sec{margin-top:36px}
 .heat .lo1,.sw.lo1{background:color-mix(in srgb,var(--neg) 18%,var(--neutral))}
 .heat .lo2,.sw.lo2{background:color-mix(in srgb,var(--neg) 38%,var(--neutral))}
 .heat .lo3,.sw.lo3{background:color-mix(in srgb,var(--neg) 60%,var(--neutral))}
-.heat tr.avg td{color:var(--muted);font-weight:600}
+.heat tr.avg td{color:var(--muted);font-weight:600;border-top:1px solid var(--line);border-bottom:0}
 td small,.tn small{color:var(--muted);font-size:.75rem}
 .bracket{display:flex;gap:18px;overflow-x:auto;padding-bottom:6px}
 .round{display:flex;flex-direction:column;justify-content:space-around;gap:12px;min-width:220px}
@@ -181,6 +181,10 @@ a.mlink{color:inherit;text-decoration:none}a.mlink:hover span{text-decoration:un
 .mcard:hover{border-color:var(--muted)}
 .mcard small{display:block;color:var(--muted)}
 .h2h-list .win{color:var(--up);font-weight:600}.h2h-list .loss{color:var(--down)}
+th[data-sort]{cursor:pointer;user-select:none;white-space:nowrap}
+th[data-sort]::after{content:"↕";margin-left:4px;opacity:.35}
+th[aria-sort=ascending]::after{content:"↑";opacity:1}th[aria-sort=descending]::after{content:"↓";opacity:1}
+th[data-sort]:hover,th[data-sort]:focus-visible{color:var(--ink)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 </style></head>
 <body><div class="layout">
@@ -190,4 +194,64 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 <nav><a href="../2026/trades.html" class=cur>2026</a><a href="../2025/trades.html">2025</a><a href="../2024/trades.html">2024</a></nav>
 <article class="deal"><div class="when">Week 6</div><div class="sides"><div class="side"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg" alt="" loading="lazy"><span>Baltimore Avians</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">WR</span>Jalen Coker<span class="pp">0.0</span></li></ul><div class="tot">0.0 pts</div></div><div class="side"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><span>Amver Alert🚨</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">WR</span>DeVonta Smith<span class="pp">0.0</span></li></ul><div class="tot">0.0 pts</div></div></div><div class="verdict">No points scored yet by anyone involved</div></article><article class="deal"><div class="when">Week 6</div><div class="sides"><div class="side"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">RB</span>MarShawn Lloyd<span class="pp">0.0</span></li></ul><div class="tot">0.0 pts</div></div><div class="side"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/d55d1f7075eda01948318de4af616075" alt="" loading="lazy"><span>Shivxn</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">RB</span>David Montgomery<span class="pp">0.0</span></li></ul><div class="tot">0.0 pts</div></div></div><div class="verdict">No points scored yet by anyone involved</div></article><article class="deal"><div class="when">Week 5</div><div class="sides"><div class="side"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">WR</span>Keon Coleman<span class="pp">0.0</span></li></ul><div class="tot">0.0 pts</div></div><div class="side"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"><span>Justin Beer Loyalist</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">WR</span>Tre&#x27; Harris<span class="pp">0.0</span></li></ul><div class="tot">0.0 pts</div></div></div><div class="verdict">No points scored yet by anyone involved</div></article><article class="deal"><div class="when">Week 1</div><div class="sides"><div class="side"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><span>6 7</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">WR</span>Emeka Egbuka<span class="pp">28.6</span></li></ul><div class="tot">28.6 pts</div></div><div class="side lead"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi</span></span><div class="lbl">Received</div><ul class="got"><li><span class="pos">WR</span>Parker Washington<span class="pp">70.5</span></li></ul><div class="tot">70.5 pts</div></div></div><div class="verdict"><b>yrkpapi</b> is winning by 41.9 pts</div></article>
 <footer>Points are what each player scored in the receiving team's starting lineup after the trade. Draft picks and FAAB are listed but not scored.</footer>
-</main></div></body></html>
+</main></div><script>
+// Every table sorts by any column. A cell's data-v (if set) is its sort value; otherwise it's read from the text:
+// numbers, $ and %, records like 9-1 (by win %), <1% / >99%, and runs of 🏆 / 🚽 (by count). Blanks sort last.
+(function () {
+  function value(cell) {
+    if (cell.dataset.v !== undefined) return cell.dataset.v;
+    var t = (cell.innerText || '').trim().split('\n')[0].trim();
+    if (t === '' || t === '–' || t === '-' || t === '—') return '';
+    var rec = t.match(/^(\d+)-(\d+)(?:-(\d+))?$/);
+    if (rec) {
+      var w = +rec[1], l = +rec[2], d = +(rec[3] || 0);
+      return String((w + d / 2) / Math.max(w + l + d, 1) + w * 1e-6);
+    }
+    if (t === '<1%') return '0.5';
+    if (t === '>99%') return '99.5';
+    var icons = t.match(/^(?:🏆|🚽)+$/u);
+    if (icons) return String(Array.from(t).length);
+    var num = t.replace(/\u2212/g, '-').match(/^([+-]?)\$?([\d,]*\.?\d+)/);
+    if (num) return String((num[1] === '-' ? -1 : 1) * parseFloat(num[2].replace(/,/g, '')));
+    return t.toLowerCase();
+  }
+  document.querySelectorAll('main table').forEach(function (table) {
+    var head = table.tHead && table.tHead.rows[0], body = table.tBodies[0];
+    if (!head || !body || body.rows.length < 2) return;
+    // Rows to move together: a row plus any expandable detail rows (tr.more) that follow it.
+    function groups() {
+      var out = [];
+      Array.prototype.forEach.call(body.rows, function (r) {
+        if (r.classList.contains('more') && out.length) out[out.length - 1].push(r); else out.push([r]);
+      });
+      return out;
+    }
+    Array.prototype.forEach.call(head.cells, function (th, col) {
+      var vals = groups().map(function (g) { return g[0].cells[col] ? value(g[0].cells[col]) : ''; });
+      if (!th.dataset.sort) {
+        var filled = vals.filter(function (v) { return v !== ''; });
+        var nums = filled.filter(function (v) { return !isNaN(parseFloat(v)) && isFinite(v); });
+        th.dataset.sort = filled.length && nums.length >= filled.length * 0.6 ? 'num' : 'text';
+      }
+      th.tabIndex = 0;
+      function sort() {
+        var now = th.getAttribute('aria-sort');
+        // First click: numbers high to low, names A to Z. Clicking again flips it.
+        var asc = now ? now === 'descending' : th.dataset.sort === 'text';
+        Array.prototype.forEach.call(head.cells, function (h) { h.removeAttribute('aria-sort'); });
+        th.setAttribute('aria-sort', asc ? 'ascending' : 'descending');
+        var num = th.dataset.sort === 'num';
+        var rows = groups().map(function (g) { return { g: g, v: g[0].cells[col] ? value(g[0].cells[col]) : '' }; });
+        rows.sort(function (a, b) {
+          if (a.v === '' || b.v === '') return a.v === b.v ? 0 : a.v === '' ? 1 : -1;  // blanks always last
+          var d = num ? parseFloat(a.v) - parseFloat(b.v) : String(a.v).localeCompare(String(b.v), undefined, { numeric: true });
+          return asc ? d : -d;
+        });
+        rows.forEach(function (r) { r.g.forEach(function (tr) { body.appendChild(tr); }); });
+      }
+      th.addEventListener('click', sort);
+      th.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); sort(); } });
+    });
+  });
+})();
+</script></body></html>
