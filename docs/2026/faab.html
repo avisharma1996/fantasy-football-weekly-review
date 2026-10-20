@@ -199,6 +199,36 @@ th[data-sort]::after{content:"↕";margin-left:4px;opacity:.35}
 th[aria-sort=ascending]::after{content:"↑";opacity:1}th[aria-sort=descending]::after{content:"↓";opacity:1}
 th[data-sort]:hover,th[data-sort]:focus-visible{color:var(--ink)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
+button.pl{all:unset;cursor:pointer;text-decoration:underline dotted color-mix(in srgb,currentColor 45%,transparent);text-underline-offset:3px}
+button.pl:hover{text-decoration-style:solid;text-decoration-color:currentColor}
+button.pl:focus-visible{outline:2px solid var(--hl);outline-offset:2px;border-radius:3px}
+html:has(dialog.pcard[open]){overflow:hidden}
+dialog.pcard{width:min(760px,calc(100vw - 32px));max-height:min(88vh,900px);padding:0;border:1px solid var(--line);border-radius:16px;background:var(--bg);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.3)}
+dialog.pcard::backdrop{background:rgba(10,12,16,.55)}
+.pc-head{position:sticky;top:0;z-index:1;display:flex;gap:14px;align-items:center;padding:16px;background:var(--card);border-bottom:1px solid var(--line)}
+.pc-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--chip);flex:none}
+.pc-id{min-width:0}
+.pc-name{font-size:1.35rem;font-weight:800;line-height:1.2}
+.pc-sub{color:var(--muted);font-size:.88rem}
+.pc-inj{display:inline-block;vertical-align:middle;padding:1px 8px;border-radius:99px;background:color-mix(in srgb,var(--down) 16%,transparent);color:var(--down);font-size:.72rem;font-weight:700}
+.pc-x{margin-left:auto;align-self:flex-start;flex:none;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:1.4rem;line-height:1;cursor:pointer}
+.pc-x:hover{background:var(--chip)}
+.pc-x:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+.pc-body{padding:0 16px 18px}
+.pc-body h3{margin:20px 0 8px}
+.pc-body table{font-size:.85rem}
+.pc-body th,.pc-body td{padding:8px 10px}
+.pc-body tr.pc-season{cursor:pointer}
+.pc-body tr.pc-season:hover td{background:var(--chip)}
+.pc-body tr.pc-season.cur td{background:color-mix(in srgb,var(--hl) 14%,var(--card))}
+.pc-body tr.pc-season:focus-visible{outline:2px solid var(--hl);outline-offset:-2px}
+.pc-body tr.dnp td{color:var(--muted);font-style:italic}
+.pc-note{color:var(--muted);font-size:.82rem;margin:10px 2px 0}
+@media (max-width:760px){
+  dialog.pcard{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border:0;border-radius:0}
+  .pc-photo{width:56px;height:56px}
+  .pc-name{font-size:1.15rem}
+}
 </style><script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script></head>
 <body><div class="layout">
 <div class="mbar"><button class="menu-btn" type="button" aria-expanded="false" aria-controls="side"><span aria-hidden="true">&#9776;</span> Menu</button></div>
@@ -211,44 +241,44 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
   <tbody><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi</span></span></td>
       <td>$99</td>
       <td><div class="left"><span>$1</span><span class="bar"><span style="width:1%"></span></span></div></td>
-      <td>8</td><td>91.0</td><td>0.9</td><td class="tn buy">Ollie Gordon, $51, Wk 4</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><span>6 7</span></span></td>
+      <td>8</td><td>91.0</td><td>0.9</td><td class="tn buy"><button type="button" class="pl" data-pid="12495">Ollie Gordon</button>, $51, Wk 4</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><span>6 7</span></span></td>
       <td>$50</td>
       <td><div class="left"><span>$50</span><span class="bar"><span style="width:50%"></span></span></div></td>
-      <td>14</td><td>77.4</td><td>1.5</td><td class="tn buy">Will Shipley, $25, Wk 5</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><span>superdiddy</span></span></td>
+      <td>14</td><td>77.4</td><td>1.5</td><td class="tn buy"><button type="button" class="pl" data-pid="11577">Will Shipley</button>, $25, Wk 5</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><span>superdiddy</span></span></td>
       <td>$43</td>
       <td><div class="left"><span>$57</span><span class="bar"><span style="width:57%"></span></span></div></td>
-      <td>13</td><td>113.1</td><td>2.6</td><td class="tn buy">Tyler Shough, $20, Wk 6</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg" alt="" loading="lazy"><span>Baltimore Avians</span></span></td>
+      <td>13</td><td>113.1</td><td>2.6</td><td class="tn buy"><button type="button" class="pl" data-pid="12545">Tyler Shough</button>, $20, Wk 6</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg" alt="" loading="lazy"><span>Baltimore Avians</span></span></td>
       <td>$40</td>
       <td><div class="left"><span>$60</span><span class="bar"><span style="width:60%"></span></span></div></td>
-      <td>22</td><td>111.0</td><td>2.8</td><td class="tn buy">Dameon Pierce, $12, Wk 6</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"><span>Justin Beer Loyalist</span></span></td>
+      <td>22</td><td>111.0</td><td>2.8</td><td class="tn buy"><button type="button" class="pl" data-pid="8129">Dameon Pierce</button>, $12, Wk 6</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"><span>Justin Beer Loyalist</span></span></td>
       <td>$40</td>
       <td><div class="left"><span>$60</span><span class="bar"><span style="width:60%"></span></span></div></td>
-      <td>11</td><td>77.7</td><td>1.9</td><td class="tn buy">Alvin Kamara, $30, Wk 4</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/1e1f1094e8d4b98b25130a8d3c0cf063.jpg" alt="" loading="lazy"><span>I’m Whipped by Bezos</span></span></td>
+      <td>11</td><td>77.7</td><td>1.9</td><td class="tn buy"><button type="button" class="pl" data-pid="4035">Alvin Kamara</button>, $30, Wk 4</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/1e1f1094e8d4b98b25130a8d3c0cf063.jpg" alt="" loading="lazy"><span>I’m Whipped by Bezos</span></span></td>
       <td>$38</td>
       <td><div class="left"><span>$62</span><span class="bar"><span style="width:62%"></span></span></div></td>
-      <td>4</td><td>48.0</td><td>1.3</td><td class="tn buy">Caleb Douglas, $21, Wk 2</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/d55d1f7075eda01948318de4af616075" alt="" loading="lazy"><span>8-4 god team </span></span></td>
+      <td>4</td><td>48.0</td><td>1.3</td><td class="tn buy"><button type="button" class="pl" data-pid="13296">Caleb Douglas</button>, $21, Wk 2</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/d55d1f7075eda01948318de4af616075" alt="" loading="lazy"><span>8-4 god team </span></span></td>
       <td>$34</td>
       <td><div class="left"><span>$66</span><span class="bar"><span style="width:66%"></span></span></div></td>
-      <td>5</td><td>91.0</td><td>2.7</td><td class="tn buy">Joe Mixon, $18, Wk 5</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><span>Braelon Allen</span></span></td>
+      <td>5</td><td>91.0</td><td>2.7</td><td class="tn buy"><button type="button" class="pl" data-pid="4018">Joe Mixon</button>, $18, Wk 5</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><span>Braelon Allen</span></span></td>
       <td>$29</td>
       <td><div class="left"><span>$71</span><span class="bar"><span style="width:71%"></span></span></div></td>
-      <td>3</td><td>8.5</td><td>0.3</td><td class="tn buy">Kimani Vidal, $21, Wk 6</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><span>Karans Sportsbook</span></span></td>
+      <td>3</td><td>8.5</td><td>0.3</td><td class="tn buy"><button type="button" class="pl" data-pid="11647">Kimani Vidal</button>, $21, Wk 6</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><span>Karans Sportsbook</span></span></td>
       <td>$22</td>
       <td><div class="left"><span>$78</span><span class="bar"><span style="width:78%"></span></span></div></td>
-      <td>2</td><td>48.1</td><td>2.2</td><td class="tn buy">Bryce Young, $17, Wk 3</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/4fb394f49d806fbad75dd79ecc68f525" alt="" loading="lazy"><span>NShah19</span></span></td>
+      <td>2</td><td>48.1</td><td>2.2</td><td class="tn buy"><button type="button" class="pl" data-pid="9228">Bryce Young</button>, $17, Wk 3</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/4fb394f49d806fbad75dd79ecc68f525" alt="" loading="lazy"><span>NShah19</span></span></td>
       <td>$19</td>
       <td><div class="left"><span>$81</span><span class="bar"><span style="width:81%"></span></span></div></td>
-      <td>14</td><td>77.8</td><td>4.1</td><td class="tn buy">Keenan Allen, $15, Wk 4</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg" alt="" loading="lazy"><span>Ankitty</span></span></td>
+      <td>14</td><td>77.8</td><td>4.1</td><td class="tn buy"><button type="button" class="pl" data-pid="1479">Keenan Allen</button>, $15, Wk 4</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg" alt="" loading="lazy"><span>Ankitty</span></span></td>
       <td>$15</td>
       <td><div class="left"><span>$85</span><span class="bar"><span style="width:85%"></span></span></div></td>
-      <td>1</td><td>5.2</td><td>0.3</td><td class="tn buy">Emanuel Wilson, $15, Wk 3</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><span>Amver Alert🚨</span></span></td>
+      <td>1</td><td>5.2</td><td>0.3</td><td class="tn buy"><button type="button" class="pl" data-pid="11435">Emanuel Wilson</button>, $15, Wk 3</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><span>Amver Alert🚨</span></span></td>
       <td>$3</td>
       <td><div class="left"><span>$97</span><span class="bar"><span style="width:97%"></span></span></div></td>
-      <td>5</td><td>31.0</td><td>10.3</td><td class="tn buy">Cleveland Browns D/ST, $3, Wk 4</td></tr></tbody></table></div></section>
+      <td>5</td><td>31.0</td><td>10.3</td><td class="tn buy"><button type="button" class="pl" data-pid="CLE">Cleveland Browns D/ST</button>, $3, Wk 4</td></tr></tbody></table></div></section>
 <section><h2 class="sec">Waiver ROI</h2><div class="records">
-  <div><h3>Best paid pickups ($1+ bids)</h3><ul class="bids"><li><span class="amt">40.0<small>pts</small></span><div><b>Green Bay Packers D/ST</b> <span class="pos">DEF</span> · 8-4 god team <div class="beat">$1 in Wk 2 → 40.0 pts started · 5 wks so far</div></div></li><li><span class="amt">36.1<small>pts</small></span><div><b>Bryce Young</b> <span class="pos">QB</span> · Karans Sportsbook<div class="beat">$17 in Wk 3 → 36.1 pts started · 4 wks so far</div></div></li><li><span class="amt">35.8<small>pts</small></span><div><b>Alvin Kamara</b> <span class="pos">RB</span> · Justin Beer Loyalist<div class="beat">$30 in Wk 4 → 35.8 pts started · 3 wks so far</div></div></li><li><span class="amt">34.8<small>pts</small></span><div><b>C.J. Stroud</b> <span class="pos">QB</span> · 8-4 god team <div class="beat">$10 in Wk 3 → 34.8 pts started · 4 wks so far</div></div></li><li><span class="amt">33.2<small>pts</small></span><div><b>Kirk Cousins</b> <span class="pos">QB</span> · yrkpapi<div class="beat">$3 in Wk 5 → 33.2 pts started · 2 wks so far</div></div></li></ul></div>
-  <div><h3>Biggest busts ($10+ bids)</h3><ul class="bids"><li><span class="amt">0.0<small>pts</small></span><div><b>Will Shipley</b> <span class="pos">RB</span> · 6 7<div class="beat">$25 in Wk 5 → 0.0 pts started · 1 wk</div></div></li><li><span class="amt">0.0<small>pts</small></span><div><b>Caleb Douglas</b> <span class="pos">WR</span> · I’m Whipped by Bezos<div class="beat">$21 in Wk 2 → 0.0 pts started · 5 wks so far</div></div></li><li><span class="amt">0.0<small>pts</small></span><div><b>Keenan Allen</b> <span class="pos">WR</span> · NShah19<div class="beat">$15 in Wk 4 → 0.0 pts started · 2 wks</div></div></li><li><span class="amt">0.0<small>pts</small></span><div><b>Antonio Williams</b> <span class="pos">WR</span> · yrkpapi<div class="beat">$12 in Wk 2 → 0.0 pts started · 3 wks</div></div></li><li><span class="amt">0.0<small>pts</small></span><div><b>Kalif Raymond</b> <span class="pos">WR</span> · Baltimore Avians<div class="beat">$11 in Wk 4 → 0.0 pts started · 2 wks</div></div></li></ul></div>
-  <div><h3>Best free pickups ($0)</h3><ul class="bids"><li><span class="amt">46.0<small>pts</small></span><div><b>Spencer Shrader</b> <span class="pos">K</span> · Baltimore Avians<div class="beat">$0 in Wk 4 → 46.0 pts started · 3 wks so far</div></div></li><li><span class="amt">43.0<small>pts</small></span><div><b>Cam Little</b> <span class="pos">K</span> · 6 7<div class="beat">$0 in Wk 2 → 43.0 pts started · 5 wks so far</div></div></li><li><span class="amt">40.7<small>pts</small></span><div><b>Jordan Love</b> <span class="pos">QB</span> · superdiddy<div class="beat">$0 in Wk 3 → 40.7 pts started · 4 wks so far</div></div></li><li><span class="amt">38.0<small>pts</small></span><div><b>Chase McLaughlin</b> <span class="pos">K</span> · I’m Whipped by Bezos<div class="beat">$0 in Wk 3 → 38.0 pts started · 4 wks so far</div></div></li><li><span class="amt">24.6<small>pts</small></span><div><b>Sam Darnold</b> <span class="pos">QB</span> · superdiddy<div class="beat">$0 in Wk 3 → 24.6 pts started · 4 wks so far</div></div></li></ul></div>
+  <div><h3>Best paid pickups ($1+ bids)</h3><ul class="bids"><li><span class="amt">40.0<small>pts</small></span><div><b><button type="button" class="pl" data-pid="GB">Green Bay Packers D/ST</button></b> <span class="pos">DEF</span> · 8-4 god team <div class="beat">$1 in Wk 2 → 40.0 pts started · 5 wks so far</div></div></li><li><span class="amt">36.1<small>pts</small></span><div><b><button type="button" class="pl" data-pid="9228">Bryce Young</button></b> <span class="pos">QB</span> · Karans Sportsbook<div class="beat">$17 in Wk 3 → 36.1 pts started · 4 wks so far</div></div></li><li><span class="amt">35.8<small>pts</small></span><div><b><button type="button" class="pl" data-pid="4035">Alvin Kamara</button></b> <span class="pos">RB</span> · Justin Beer Loyalist<div class="beat">$30 in Wk 4 → 35.8 pts started · 3 wks so far</div></div></li><li><span class="amt">34.8<small>pts</small></span><div><b><button type="button" class="pl" data-pid="9758">C.J. Stroud</button></b> <span class="pos">QB</span> · 8-4 god team <div class="beat">$10 in Wk 3 → 34.8 pts started · 4 wks so far</div></div></li><li><span class="amt">33.2<small>pts</small></span><div><b><button type="button" class="pl" data-pid="1166">Kirk Cousins</button></b> <span class="pos">QB</span> · yrkpapi<div class="beat">$3 in Wk 5 → 33.2 pts started · 2 wks so far</div></div></li></ul></div>
+  <div><h3>Biggest busts ($10+ bids)</h3><ul class="bids"><li><span class="amt">0.0<small>pts</small></span><div><b><button type="button" class="pl" data-pid="11577">Will Shipley</button></b> <span class="pos">RB</span> · 6 7<div class="beat">$25 in Wk 5 → 0.0 pts started · 1 wk</div></div></li><li><span class="amt">0.0<small>pts</small></span><div><b><button type="button" class="pl" data-pid="13296">Caleb Douglas</button></b> <span class="pos">WR</span> · I’m Whipped by Bezos<div class="beat">$21 in Wk 2 → 0.0 pts started · 5 wks so far</div></div></li><li><span class="amt">0.0<small>pts</small></span><div><b><button type="button" class="pl" data-pid="1479">Keenan Allen</button></b> <span class="pos">WR</span> · NShah19<div class="beat">$15 in Wk 4 → 0.0 pts started · 2 wks</div></div></li><li><span class="amt">0.0<small>pts</small></span><div><b><button type="button" class="pl" data-pid="13301">Antonio Williams</button></b> <span class="pos">WR</span> · yrkpapi<div class="beat">$12 in Wk 2 → 0.0 pts started · 3 wks</div></div></li><li><span class="amt">0.0<small>pts</small></span><div><b><button type="button" class="pl" data-pid="3634">Kalif Raymond</button></b> <span class="pos">WR</span> · Baltimore Avians<div class="beat">$11 in Wk 4 → 0.0 pts started · 2 wks</div></div></li></ul></div>
+  <div><h3>Best free pickups ($0)</h3><ul class="bids"><li><span class="amt">46.0<small>pts</small></span><div><b><button type="button" class="pl" data-pid="12185">Spencer Shrader</button></b> <span class="pos">K</span> · Baltimore Avians<div class="beat">$0 in Wk 4 → 46.0 pts started · 3 wks so far</div></div></li><li><span class="amt">43.0<small>pts</small></span><div><b><button type="button" class="pl" data-pid="11786">Cam Little</button></b> <span class="pos">K</span> · 6 7<div class="beat">$0 in Wk 2 → 43.0 pts started · 5 wks so far</div></div></li><li><span class="amt">40.7<small>pts</small></span><div><b><button type="button" class="pl" data-pid="6804">Jordan Love</button></b> <span class="pos">QB</span> · superdiddy<div class="beat">$0 in Wk 3 → 40.7 pts started · 4 wks so far</div></div></li><li><span class="amt">38.0<small>pts</small></span><div><b><button type="button" class="pl" data-pid="6650">Chase McLaughlin</button></b> <span class="pos">K</span> · I’m Whipped by Bezos<div class="beat">$0 in Wk 3 → 38.0 pts started · 4 wks so far</div></div></li><li><span class="amt">24.6<small>pts</small></span><div><b><button type="button" class="pl" data-pid="4943">Sam Darnold</button></b> <span class="pos">QB</span> · superdiddy<div class="beat">$0 in Wk 3 → 24.6 pts started · 4 wks so far</div></div></li></ul></div>
 </div></section>
 <section id="log"><div class="sechead"><h2 class="sec">Bid log</h2><input class="search" type="search" placeholder="Search players" aria-label="Search players">
 <script>
@@ -271,212 +301,212 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 })();
 </script></div>
 <div class="wk"><h3>Week 6</h3><ul class="bids"><li data-player="kimani vidal"><span class="amt">$21</span>
-        <div><b>Braelon Allen</b> won <b>Kimani Vidal</b> <span class="pos">RB</span>
+        <div><b>Braelon Allen</b> won <b><button type="button" class="pl" data-pid="11647">Kimani Vidal</button></b> <span class="pos">RB</span>
         <span class="gain">→ 5.5 pts (5.5 started)</span><div class="beat">outbidding Justin Beer Loyalist’s $1, yrkpapi’s $1, yrkpapi’s $1 · by $20</div></div></li><li data-player="tyler shough"><span class="amt">$20</span>
-        <div><b>superdiddy</b> won <b>Tyler Shough</b> <span class="pos">QB</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="12545">Tyler Shough</button></b> <span class="pos">QB</span>
         <span class="gain">→ 27.0 pts (0.0 started)</span></div></li><li data-player="dameon pierce"><span class="amt">$12</span>
-        <div><b>Baltimore Avians</b> won <b>Dameon Pierce</b> <span class="pos">RB</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="8129">Dameon Pierce</button></b> <span class="pos">RB</span>
         <span class="gain">→ 13.0 pts (13.0 started)</span><div class="beat">outbidding yrkpapi’s $10 · by $2</div></div></li><li data-player="germie bernard"><span class="amt">$9</span>
-        <div><b>yrkpapi</b> won <b>Germie Bernard</b> <span class="pos">WR</span>
+        <div><b>yrkpapi</b> won <b><button type="button" class="pl" data-pid="13274">Germie Bernard</button></b> <span class="pos">WR</span>
         <span class="gain">→ 20.2 pts (20.2 started)</span></div></li><li data-player="indianapolis colts d/st"><span class="amt">$7</span>
-        <div><b>Braelon Allen</b> won <b>Indianapolis Colts D/ST</b> <span class="pos">DEF</span>
+        <div><b>Braelon Allen</b> won <b><button type="button" class="pl" data-pid="IND">Indianapolis Colts D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 2.0 pts (2.0 started)</span><div class="beat">outbidding 8-4 god team ’s $5 · by $2</div></div></li><li data-player="new england patriots d/st"><span class="amt">$5</span>
-        <div><b>Baltimore Avians</b> won <b>New England Patriots D/ST</b> <span class="pos">DEF</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="NE">New England Patriots D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 6.0 pts (6.0 started)</span><div class="beat">outbidding 6 7’s $0 · by $5</div></div></li><li data-player="matt gay"><span class="amt">$5</span>
-        <div><b>Karans Sportsbook</b> won <b>Matt Gay</b> <span class="pos">K</span>
+        <div><b>Karans Sportsbook</b> won <b><button type="button" class="pl" data-pid="6083">Matt Gay</button></b> <span class="pos">K</span>
         <span class="gain">→ 12.0 pts (12.0 started)</span><div class="beat">outbidding Amver Alert🚨’s $0, Justin Beer Loyalist’s $0 · by $5</div></div></li><li data-player="aaron rodgers"><span class="amt">$2</span>
-        <div><b>Baltimore Avians</b> won <b>Aaron Rodgers</b> <span class="pos">QB</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="96">Aaron Rodgers</button></b> <span class="pos">QB</span>
         <span class="gain">→ 17.0 pts (17.0 started)</span><div class="beat">outbidding Justin Beer Loyalist’s $0 · by $2</div></div></li><li data-player="brenton strange"><span class="amt">$1</span>
-        <div><b>NShah19</b> won <b>Brenton Strange</b> <span class="pos">TE</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="9480">Brenton Strange</button></b> <span class="pos">TE</span>
         <span class="gain">→ 6.9 pts (6.9 started)</span></div></li><li data-player="kansas city chiefs d/st"><span class="amt">$1</span>
-        <div><b>NShah19</b> won <b>Kansas City Chiefs D/ST</b> <span class="pos">DEF</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="KC">Kansas City Chiefs D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 16.0 pts (16.0 started)</span><div class="beat">outbidding Baltimore Avians’s $0, 8-4 god team ’s $0 · by $1</div></div></li><li data-player="nick folk"><span class="amt">$1</span>
-        <div><b>Braelon Allen</b> won <b>Nick Folk</b> <span class="pos">K</span>
+        <div><b>Braelon Allen</b> won <b><button type="button" class="pl" data-pid="650">Nick Folk</button></b> <span class="pos">K</span>
         <span class="gain">→ 1.0 pts (1.0 started)</span></div></li><li data-player="tyler loop" class="zero"><span class="amt">$0</span>
-        <div><b>NShah19</b> won <b>Tyler Loop</b> <span class="pos">K</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="12711">Tyler Loop</button></b> <span class="pos">K</span>
         <span class="gain">→ 3.0 pts (3.0 started)</span></div></li><li data-player="kenny gainwell" class="zero"><span class="amt">$0</span>
-        <div><b>yrkpapi</b> won <b>Kenny Gainwell</b> <span class="pos">RB</span>
+        <div><b>yrkpapi</b> won <b><button type="button" class="pl" data-pid="7567">Kenny Gainwell</button></b> <span class="pos">RB</span>
         <span class="gain">→ 2.9 pts (2.9 started)</span></div></li><li data-player="brian thomas" class="zero"><span class="amt">$0</span>
-        <div><b>superdiddy</b> won <b>Brian Thomas</b> <span class="pos">WR</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="11631">Brian Thomas</button></b> <span class="pos">WR</span>
         <span class="gain">→ 0.0 pts (0.0 started)</span><div class="beat">outbidding Baltimore Avians’s $0, Baltimore Avians’s $0, Baltimore Avians’s $0 · won the tiebreaker</div></div></li><li data-player="darius cooper" class="zero"><span class="amt">$0</span>
-        <div><b>6 7</b> won <b>Darius Cooper</b> <span class="pos">WR</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="13150">Darius Cooper</button></b> <span class="pos">WR</span>
         <span class="gain">→ 1.4 pts (0.0 started)</span></div></li><li data-player="new orleans saints d/st" class="zero"><span class="amt">$0</span>
-        <div><b>6 7</b> won <b>New Orleans Saints D/ST</b> <span class="pos">DEF</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="NO">New Orleans Saints D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 13.0 pts (13.0 started)</span></div></li><li data-player="michael penix" class="zero"><span class="amt">$0</span>
-        <div><b>Justin Beer Loyalist</b> won <b>Michael Penix</b> <span class="pos">QB</span>
+        <div><b>Justin Beer Loyalist</b> won <b><button type="button" class="pl" data-pid="11559">Michael Penix</button></b> <span class="pos">QB</span>
         <span class="gain">→ 23.1 pts (0.0 started)</span></div></li><li data-player="jaleel mclaughlin" class="zero"><span class="amt">$0</span>
-        <div><b>Justin Beer Loyalist</b> won <b>Jaleel McLaughlin</b> <span class="pos">RB</span>
+        <div><b>Justin Beer Loyalist</b> won <b><button type="button" class="pl" data-pid="11439">Jaleel McLaughlin</button></b> <span class="pos">RB</span>
         <span class="gain">→ 7.5 pts (7.5 started)</span></div></li><li data-player="tyler higbee" class="zero"><span class="amt">$0</span>
-        <div><b>Justin Beer Loyalist</b> won <b>Tyler Higbee</b> <span class="pos">TE</span>
+        <div><b>Justin Beer Loyalist</b> won <b><button type="button" class="pl" data-pid="3271">Tyler Higbee</button></b> <span class="pos">TE</span>
         <span class="gain">→ 2.2 pts (2.2 started)</span></div></li><li data-player="jakobi meyers" class="zero"><span class="amt">$0</span>
-        <div><b>NShah19</b> won <b>Jakobi Meyers</b> <span class="pos">WR</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="5947">Jakobi Meyers</button></b> <span class="pos">WR</span>
         <span class="gain">→ 10.8 pts (0.0 started)</span></div></li><li data-player="dominic zvada" class="zero"><span class="amt">$0</span>
-        <div><b>Justin Beer Loyalist</b> won <b>Dominic Zvada</b> <span class="pos">K</span>
+        <div><b>Justin Beer Loyalist</b> won <b><button type="button" class="pl" data-pid="13833">Dominic Zvada</button></b> <span class="pos">K</span>
         <span class="gain">→ 8.0 pts (8.0 started)</span></div></li><li data-player="trey smack" class="zero"><span class="amt">$0</span>
-        <div><b>Amver Alert🚨</b> won <b>Trey Smack</b> <span class="pos">K</span>
+        <div><b>Amver Alert🚨</b> won <b><button type="button" class="pl" data-pid="13545">Trey Smack</button></b> <span class="pos">K</span>
         <span class="gain">→ 12.0 pts (12.0 started)</span></div></li><li data-player="jacoby brissett" class="zero"><span class="amt">$0</span>
-        <div><b>NShah19</b> won <b>Jacoby Brissett</b> <span class="pos">QB</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="3257">Jacoby Brissett</button></b> <span class="pos">QB</span>
         <span class="gain">→ 7.9 pts (7.9 started)</span></div></li><li data-player="kc concepcion" class="zero"><span class="amt">$0</span>
-        <div><b>8-4 god team </b> won <b>KC Concepcion</b> <span class="pos">WR</span>
+        <div><b>8-4 god team </b> won <b><button type="button" class="pl" data-pid="13298">KC Concepcion</button></b> <span class="pos">WR</span>
         <span class="gain">→ 5.9 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 5</h3><ul class="bids"><li data-player="will shipley"><span class="amt">$25</span>
-        <div><b>6 7</b> won <b>Will Shipley</b> <span class="pos">RB</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="11577">Will Shipley</button></b> <span class="pos">RB</span>
         <span class="gain">→ 7.8 pts (0.0 started)</span><div class="beat">outbidding Baltimore Avians’s $15 · by $10</div></div></li><li data-player="joe mixon"><span class="amt">$18</span>
-        <div><b>8-4 god team </b> won <b>Joe Mixon</b> <span class="pos">RB</span>
+        <div><b>8-4 god team </b> won <b><button type="button" class="pl" data-pid="4018">Joe Mixon</button></b> <span class="pos">RB</span>
         <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="roman wilson"><span class="amt">$10</span>
-        <div><b>6 7</b> won <b>Roman Wilson</b> <span class="pos">WR</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="11630">Roman Wilson</button></b> <span class="pos">WR</span>
         <span class="gain">→ 0.0 pts (0.0 started)</span><div class="beat">outbidding I’m Whipped by Bezos’s $3, Baltimore Avians’s $0 · by $7</div></div></li><li data-player="marvin harrison"><span class="amt">$10</span>
-        <div><b>superdiddy</b> won <b>Marvin Harrison</b> <span class="pos">WR</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="11628">Marvin Harrison</button></b> <span class="pos">WR</span>
         <span class="gain">→ 4.9 pts (4.9 started)</span><div class="beat">outbidding Baltimore Avians’s $2, 6 7’s $0 · by $8</div></div></li><li data-player="malik washington"><span class="amt">$5</span>
-        <div><b>Justin Beer Loyalist</b> won <b>Malik Washington</b> <span class="pos">WR</span>
+        <div><b>Justin Beer Loyalist</b> won <b><button type="button" class="pl" data-pid="11610">Malik Washington</button></b> <span class="pos">WR</span>
         <span class="gain">→ 9.1 pts (0.0 started)</span><div class="beat">outbidding Baltimore Avians’s $0, Baltimore Avians’s $0 · by $5</div></div></li><li data-player="marshawn lloyd"><span class="amt">$5</span>
-        <div><b>8-4 god team </b> won <b>MarShawn Lloyd</b> <span class="pos">RB</span>
+        <div><b>8-4 god team </b> won <b><button type="button" class="pl" data-pid="11581">MarShawn Lloyd</button></b> <span class="pos">RB</span>
         <span class="gain">→ 16.2 pts (16.2 started)</span></div></li><li data-player="dohnte meyers"><span class="amt">$4</span>
-        <div><b>Baltimore Avians</b> won <b>Dohnte Meyers</b> <span class="pos">WR</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="13264">Dohnte Meyers</button></b> <span class="pos">WR</span>
         <span class="gain">→ 2.2 pts (0.0 started)</span><div class="beat">outbidding 6 7’s $4 · won the tiebreaker</div></div></li><li data-player="kirk cousins"><span class="amt">$3</span>
-        <div><b>yrkpapi</b> won <b>Kirk Cousins</b> <span class="pos">QB</span>
+        <div><b>yrkpapi</b> won <b><button type="button" class="pl" data-pid="1166">Kirk Cousins</button></b> <span class="pos">QB</span>
         <span class="gain">→ 33.2 pts (33.2 started)</span><div class="beat">outbidding Baltimore Avians’s $1 · by $2</div></div></li><li data-player="jayden reed"><span class="amt">$3</span>
-        <div><b>yrkpapi</b> won <b>Jayden Reed</b> <span class="pos">WR</span>
+        <div><b>yrkpapi</b> won <b><button type="button" class="pl" data-pid="10222">Jayden Reed</button></b> <span class="pos">WR</span>
         <span class="gain">→ 0.0 pts (0.0 started)</span></div></li><li data-player="antonio williams"><span class="amt">$2</span>
-        <div><b>6 7</b> won <b>Antonio Williams</b> <span class="pos">WR</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="13301">Antonio Williams</button></b> <span class="pos">WR</span>
         <span class="gain">→ 4.6 pts (0.0 started)</span></div></li><li data-player="courtland sutton" class="zero"><span class="amt">$0</span>
-        <div><b>superdiddy</b> won <b>Courtland Sutton</b> <span class="pos">WR</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="5045">Courtland Sutton</button></b> <span class="pos">WR</span>
         <span class="gain">→ 11.7 pts (8.8 started)</span><div class="beat">outbidding Baltimore Avians’s $0 · won the tiebreaker</div></div></li><li data-player="keon coleman" class="zero"><span class="amt">$0</span>
-        <div><b>Justin Beer Loyalist</b> won <b>Keon Coleman</b> <span class="pos">WR</span>
+        <div><b>Justin Beer Loyalist</b> won <b><button type="button" class="pl" data-pid="11637">Keon Coleman</button></b> <span class="pos">WR</span>
         <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="dallas cowboys d/st" class="zero"><span class="amt">$0</span>
-        <div><b>NShah19</b> won <b>Dallas Cowboys D/ST</b> <span class="pos">DEF</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="DAL">Dallas Cowboys D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 1.0 pts (1.0 started)</span></div></li><li data-player="khalil shakir" class="zero"><span class="amt">$0</span>
-        <div><b>NShah19</b> won <b>Khalil Shakir</b> <span class="pos">WR</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="8134">Khalil Shakir</button></b> <span class="pos">WR</span>
         <span class="gain">→ 20.9 pts (0.0 started)</span></div></li><li data-player="mike gesicki" class="zero"><span class="amt">$0</span>
-        <div><b>NShah19</b> won <b>Mike Gesicki</b> <span class="pos">TE</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="4993">Mike Gesicki</button></b> <span class="pos">TE</span>
         <span class="gain">→ 6.9 pts (0.0 started)</span></div></li><li data-player="washington commanders d/st" class="zero"><span class="amt">$0</span>
-        <div><b>Amver Alert🚨</b> won <b>Washington Commanders D/ST</b> <span class="pos">DEF</span>
+        <div><b>Amver Alert🚨</b> won <b><button type="button" class="pl" data-pid="WAS">Washington Commanders D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 9.0 pts (0.0 started)</span></div></li><li data-player="matt gay" class="zero"><span class="amt">$0</span>
-        <div><b>NShah19</b> won <b>Matt Gay</b> <span class="pos">K</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="6083">Matt Gay</button></b> <span class="pos">K</span>
         <span class="gain">→ 5.0 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 4</h3><ul class="bids"><li data-player="ollie gordon"><span class="amt">$51</span>
-        <div><b>yrkpapi</b> won <b>Ollie Gordon</b> <span class="pos">RB</span>
+        <div><b>yrkpapi</b> won <b><button type="button" class="pl" data-pid="12495">Ollie Gordon</button></b> <span class="pos">RB</span>
         <span class="gain">→ 31.8 pts (31.8 started)</span><div class="beat">outbidding 8-4 god team ’s $35, superdiddy’s $25, Ankitty’s $22, Baltimore Avians’s $21, NShah19’s $16, I’m Whipped by Bezos’s $11 · by $16</div></div></li><li data-player="alvin kamara"><span class="amt">$30</span>
-        <div><b>Justin Beer Loyalist</b> won <b>Alvin Kamara</b> <span class="pos">RB</span>
+        <div><b>Justin Beer Loyalist</b> won <b><button type="button" class="pl" data-pid="4035">Alvin Kamara</button></b> <span class="pos">RB</span>
         <span class="gain">→ 35.8 pts (35.8 started)</span><div class="beat">outbidding NShah19’s $12, I’m Whipped by Bezos’s $11, Baltimore Avians’s $6 · by $18</div></div></li><li data-player="keenan allen"><span class="amt">$15</span>
-        <div><b>NShah19</b> won <b>Keenan Allen</b> <span class="pos">WR</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="1479">Keenan Allen</button></b> <span class="pos">WR</span>
         <span class="gain">→ 7.0 pts (0.0 started)</span><div class="beat">outbidding Justin Beer Loyalist’s $10, I’m Whipped by Bezos’s $7 · by $5</div></div></li><li data-player="kalif raymond"><span class="amt">$11</span>
-        <div><b>Baltimore Avians</b> won <b>Kalif Raymond</b> <span class="pos">WR</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="3634">Kalif Raymond</button></b> <span class="pos">WR</span>
         <span class="gain">→ 3.5 pts (0.0 started)</span><div class="beat">outbidding I’m Whipped by Bezos’s $7, 6 7’s $3 · by $4</div></div></li><li data-player="jaylen wright"><span class="amt">$6</span>
-        <div><b>I’m Whipped by Bezos</b> won <b>Jaylen Wright</b> <span class="pos">RB</span>
+        <div><b>I’m Whipped by Bezos</b> won <b><button type="button" class="pl" data-pid="11643">Jaylen Wright</button></b> <span class="pos">RB</span>
         <span class="gain">→ 1.8 pts (0.0 started)</span><div class="beat">outbidding Baltimore Avians’s $6 · won the tiebreaker</div></div></li><li data-player="cleveland browns d/st"><span class="amt">$3</span>
-        <div><b>Amver Alert🚨</b> won <b>Cleveland Browns D/ST</b> <span class="pos">DEF</span>
+        <div><b>Amver Alert🚨</b> won <b><button type="button" class="pl" data-pid="CLE">Cleveland Browns D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 9.0 pts (9.0 started)</span></div></li><li data-player="tyler loop"><span class="amt">$1</span>
-        <div><b>Baltimore Avians</b> won <b>Tyler Loop</b> <span class="pos">K</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="12711">Tyler Loop</button></b> <span class="pos">K</span>
         <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="las vegas raiders d/st"><span class="amt">$1</span>
-        <div><b>Baltimore Avians</b> won <b>Las Vegas Raiders D/ST</b> <span class="pos">DEF</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="LV">Las Vegas Raiders D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 1.0 pts (0.0 started)</span></div></li><li data-player="aj barner" class="zero"><span class="amt">$0</span>
-        <div><b>Justin Beer Loyalist</b> won <b>AJ Barner</b> <span class="pos">TE</span>
+        <div><b>Justin Beer Loyalist</b> won <b><button type="button" class="pl" data-pid="11603">AJ Barner</button></b> <span class="pos">TE</span>
         <span class="gain">→ 5.2 pts (0.0 started)</span></div></li><li data-player="buffalo bills d/st" class="zero"><span class="amt">$0</span>
-        <div><b>NShah19</b> won <b>Buffalo Bills D/ST</b> <span class="pos">DEF</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="BUF">Buffalo Bills D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 5.0 pts (5.0 started)</span></div></li><li data-player="spencer shrader" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Spencer Shrader</b> <span class="pos">K</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="12185">Spencer Shrader</button></b> <span class="pos">K</span>
         <span class="gain">→ 46.0 pts (46.0 started)</span><div class="beat">outbidding superdiddy’s $0 · won the tiebreaker</div></div></li><li data-player="chicago bears d/st" class="zero"><span class="amt">$0</span>
-        <div><b>6 7</b> won <b>Chicago Bears D/ST</b> <span class="pos">DEF</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="CHI">Chicago Bears D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 7.0 pts (7.0 started)</span></div></li><li data-player="kendre miller" class="zero"><span class="amt">$0</span>
-        <div><b>superdiddy</b> won <b>Kendre Miller</b> <span class="pos">RB</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="9757">Kendre Miller</button></b> <span class="pos">RB</span>
         <span class="gain">→ 17.9 pts (8.9 started)</span></div></li><li data-player="mack hollins" class="zero"><span class="amt">$0</span>
-        <div><b>Justin Beer Loyalist</b> won <b>Mack Hollins</b> <span class="pos">WR</span>
+        <div><b>Justin Beer Loyalist</b> won <b><button type="button" class="pl" data-pid="4177">Mack Hollins</button></b> <span class="pos">WR</span>
         <span class="gain">→ 6.8 pts (0.0 started)</span></div></li><li data-player="tyler loop" class="zero"><span class="amt">$0</span>
-        <div><b>NShah19</b> won <b>Tyler Loop</b> <span class="pos">K</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="12711">Tyler Loop</button></b> <span class="pos">K</span>
         <span class="gain">→ 8.0 pts (8.0 started)</span></div></li><li data-player="chris bell" class="zero"><span class="amt">$0</span>
-        <div><b>6 7</b> won <b>Chris Bell</b> <span class="pos">WR</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="13311">Chris Bell</button></b> <span class="pos">WR</span>
         <span class="gain">→ 0.0 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 3</h3><ul class="bids"><li data-player="kc concepcion"><span class="amt">$18</span>
-        <div><b>yrkpapi</b> won <b>KC Concepcion</b> <span class="pos">WR</span>
+        <div><b>yrkpapi</b> won <b><button type="button" class="pl" data-pid="13298">KC Concepcion</button></b> <span class="pos">WR</span>
         <span class="gain">→ 11.8 pts (2.9 started)</span><div class="beat">outbidding 6 7’s $0 · by $18</div></div></li><li data-player="bryce young"><span class="amt">$17</span>
-        <div><b>Karans Sportsbook</b> won <b>Bryce Young</b> <span class="pos">QB</span>
+        <div><b>Karans Sportsbook</b> won <b><button type="button" class="pl" data-pid="9228">Bryce Young</button></b> <span class="pos">QB</span>
         <span class="gain">→ 55.9 pts (36.1 started)</span><div class="beat">outbidding 6 7’s $12, 8-4 god team ’s $10, Baltimore Avians’s $8, yrkpapi’s $7, superdiddy’s $1 · by $5</div></div></li><li data-player="emanuel wilson"><span class="amt">$15</span>
-        <div><b>Ankitty</b> won <b>Emanuel Wilson</b> <span class="pos">RB</span>
+        <div><b>Ankitty</b> won <b><button type="button" class="pl" data-pid="11435">Emanuel Wilson</button></b> <span class="pos">RB</span>
         <span class="gain">→ 44.3 pts (5.2 started)</span></div></li><li data-player="c.j. stroud"><span class="amt">$10</span>
-        <div><b>8-4 god team </b> won <b>C.J. Stroud</b> <span class="pos">QB</span>
+        <div><b>8-4 god team </b> won <b><button type="button" class="pl" data-pid="9758">C.J. Stroud</button></b> <span class="pos">QB</span>
         <span class="gain">→ 79.7 pts (34.8 started)</span></div></li><li data-player="cincinnati bengals d/st"><span class="amt">$8</span>
-        <div><b>6 7</b> won <b>Cincinnati Bengals D/ST</b> <span class="pos">DEF</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="CIN">Cincinnati Bengals D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 18.0 pts (13.0 started)</span><div class="beat">outbidding Baltimore Avians’s $0, Amver Alert🚨’s $0 · by $8</div></div></li><li data-player="tre tucker"><span class="amt">$3</span>
-        <div><b>Justin Beer Loyalist</b> won <b>Tre Tucker</b> <span class="pos">WR</span>
+        <div><b>Justin Beer Loyalist</b> won <b><button type="button" class="pl" data-pid="10213">Tre Tucker</button></b> <span class="pos">WR</span>
         <span class="gain">→ 42.4 pts (24.2 started)</span><div class="beat">outbidding Baltimore Avians’s $3, NShah19’s $1 · won the tiebreaker</div></div></li><li data-player="demond claiborne"><span class="amt">$3</span>
-        <div><b>yrkpapi</b> won <b>Demond Claiborne</b> <span class="pos">RB</span>
+        <div><b>yrkpapi</b> won <b><button type="button" class="pl" data-pid="13347">Demond Claiborne</button></b> <span class="pos">RB</span>
         <span class="gain">→ 1.3 pts (0.0 started)</span></div></li><li data-player="jared goff"><span class="amt">$2</span>
-        <div><b>NShah19</b> won <b>Jared Goff</b> <span class="pos">QB</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="3163">Jared Goff</button></b> <span class="pos">QB</span>
         <span class="gain">→ 68.8 pts (28.9 started)</span></div></li><li data-player="malachi fields"><span class="amt">$2</span>
-        <div><b>6 7</b> won <b>Malachi Fields</b> <span class="pos">WR</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="13285">Malachi Fields</button></b> <span class="pos">WR</span>
         <span class="gain">→ 15.1 pts (0.0 started)</span></div></li><li data-player="jakobi meyers"><span class="amt">$2</span>
-        <div><b>superdiddy</b> won <b>Jakobi Meyers</b> <span class="pos">WR</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="5947">Jakobi Meyers</button></b> <span class="pos">WR</span>
         <span class="gain">→ 25.4 pts (4.8 started)</span><div class="beat">outbidding Justin Beer Loyalist’s $0 · by $2</div></div></li><li data-player="alvin kamara"><span class="amt">$2</span>
-        <div><b>6 7</b> won <b>Alvin Kamara</b> <span class="pos">RB</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="4035">Alvin Kamara</button></b> <span class="pos">RB</span>
         <span class="gain">→ hasn't played for them yet</span><div class="beat">outbidding Baltimore Avians’s $1 · by $1</div></div></li><li data-player="tyquan thornton" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Tyquan Thornton</b> <span class="pos">WR</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="8188">Tyquan Thornton</button></b> <span class="pos">WR</span>
         <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="new york giants d/st" class="zero"><span class="amt">$0</span>
-        <div><b>Amver Alert🚨</b> won <b>New York Giants D/ST</b> <span class="pos">DEF</span>
+        <div><b>Amver Alert🚨</b> won <b><button type="button" class="pl" data-pid="NYG">New York Giants D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 8.0 pts (8.0 started)</span></div></li><li data-player="chase mclaughlin" class="zero"><span class="amt">$0</span>
-        <div><b>I’m Whipped by Bezos</b> won <b>Chase McLaughlin</b> <span class="pos">K</span>
+        <div><b>I’m Whipped by Bezos</b> won <b><button type="button" class="pl" data-pid="6650">Chase McLaughlin</button></b> <span class="pos">K</span>
         <span class="gain">→ 38.0 pts (38.0 started)</span><div class="beat">outbidding Justin Beer Loyalist’s $0 · won the tiebreaker</div></div></li><li data-player="darius slayton" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Darius Slayton</b> <span class="pos">WR</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="6149">Darius Slayton</button></b> <span class="pos">WR</span>
         <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="jordan love" class="zero"><span class="amt">$0</span>
-        <div><b>superdiddy</b> won <b>Jordan Love</b> <span class="pos">QB</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="6804">Jordan Love</button></b> <span class="pos">QB</span>
         <span class="gain">→ 80.1 pts (40.7 started)</span></div></li><li data-player="harrison butker" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Harrison Butker</b> <span class="pos">K</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="4227">Harrison Butker</button></b> <span class="pos">K</span>
         <span class="gain">→ 5.0 pts (5.0 started)</span></div></li><li data-player="sam darnold" class="zero"><span class="amt">$0</span>
-        <div><b>superdiddy</b> won <b>Sam Darnold</b> <span class="pos">QB</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="4943">Sam Darnold</button></b> <span class="pos">QB</span>
         <span class="gain">→ 67.3 pts (24.6 started)</span></div></li><li data-player="isaiah williams" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Isaiah Williams</b> <span class="pos">WR</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="11608">Isaiah Williams</button></b> <span class="pos">WR</span>
         <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="philadelphia eagles d/st" class="zero"><span class="amt">$0</span>
-        <div><b>NShah19</b> won <b>Philadelphia Eagles D/ST</b> <span class="pos">DEF</span>
+        <div><b>NShah19</b> won <b><button type="button" class="pl" data-pid="PHI">Philadelphia Eagles D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 1.0 pts (1.0 started)</span></div></li><li data-player="malik washington" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Malik Washington</b> <span class="pos">WR</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="11610">Malik Washington</button></b> <span class="pos">WR</span>
         <span class="gain">→ 8.6 pts (0.0 started)</span></div></li></ul></div><div class="wk"><h3>Week 2</h3><ul class="bids"><li data-player="caleb douglas"><span class="amt">$21</span>
-        <div><b>I’m Whipped by Bezos</b> won <b>Caleb Douglas</b> <span class="pos">WR</span>
+        <div><b>I’m Whipped by Bezos</b> won <b><button type="button" class="pl" data-pid="13296">Caleb Douglas</button></b> <span class="pos">WR</span>
         <span class="gain">→ 2.9 pts (0.0 started)</span><div class="beat">outbidding Baltimore Avians’s $12, yrkpapi’s $12, yrkpapi’s $7, Justin Beer Loyalist’s $0 · by $9</div></div></li><li data-player="antonio williams"><span class="amt">$12</span>
-        <div><b>yrkpapi</b> won <b>Antonio Williams</b> <span class="pos">WR</span>
+        <div><b>yrkpapi</b> won <b><button type="button" class="pl" data-pid="13301">Antonio Williams</button></b> <span class="pos">WR</span>
         <span class="gain">→ 10.0 pts (0.0 started)</span><div class="beat">outbidding superdiddy’s $5 · by $7</div></div></li><li data-player="san francisco 49ers d/st"><span class="amt">$11</span>
-        <div><b>I’m Whipped by Bezos</b> won <b>San Francisco 49ers D/ST</b> <span class="pos">DEF</span>
+        <div><b>I’m Whipped by Bezos</b> won <b><button type="button" class="pl" data-pid="SF">San Francisco 49ers D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 40.0 pts (10.0 started)</span><div class="beat">outbidding Baltimore Avians’s $4, Amver Alert🚨’s $2, Baltimore Avians’s $0 · by $7</div></div></li><li data-player="pat freiermuth"><span class="amt">$10</span>
-        <div><b>superdiddy</b> won <b>Pat Freiermuth</b> <span class="pos">TE</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="7600">Pat Freiermuth</button></b> <span class="pos">TE</span>
         <span class="gain">→ 39.8 pts (2.1 started)</span></div></li><li data-player="kansas city chiefs d/st"><span class="amt">$4</span>
-        <div><b>Baltimore Avians</b> won <b>Kansas City Chiefs D/ST</b> <span class="pos">DEF</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="KC">Kansas City Chiefs D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 10.0 pts (10.0 started)</span><div class="beat">outbidding Karans Sportsbook’s $3 · by $1</div></div></li><li data-player="ja&#x27;kobi lane"><span class="amt">$1</span>
-        <div><b>6 7</b> won <b>Ja&#x27;Kobi Lane</b> <span class="pos">WR</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="13293">Ja&#x27;Kobi Lane</button></b> <span class="pos">WR</span>
         <span class="gain">→ 6.0 pts (0.0 started)</span></div></li><li data-player="green bay packers d/st"><span class="amt">$1</span>
-        <div><b>8-4 god team </b> won <b>Green Bay Packers D/ST</b> <span class="pos">DEF</span>
+        <div><b>8-4 god team </b> won <b><button type="button" class="pl" data-pid="GB">Green Bay Packers D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 40.0 pts (40.0 started)</span></div></li><li data-player="rashod bateman"><span class="amt">$1</span>
-        <div><b>superdiddy</b> won <b>Rashod Bateman</b> <span class="pos">WR</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="7571">Rashod Bateman</button></b> <span class="pos">WR</span>
         <span class="gain">→ 28.6 pts (18.3 started)</span></div></li><li data-player="tyler loop" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Tyler Loop</b> <span class="pos">K</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="12711">Tyler Loop</button></b> <span class="pos">K</span>
         <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="tampa bay buccaneers d/st" class="zero"><span class="amt">$0</span>
-        <div><b>Amver Alert🚨</b> won <b>Tampa Bay Buccaneers D/ST</b> <span class="pos">DEF</span>
+        <div><b>Amver Alert🚨</b> won <b><button type="button" class="pl" data-pid="TB">Tampa Bay Buccaneers D/ST</button></b> <span class="pos">DEF</span>
         <span class="gain">→ 2.0 pts (2.0 started)</span></div></li><li data-player="demario douglas" class="zero"><span class="amt">$0</span>
-        <div><b>superdiddy</b> won <b>DeMario Douglas</b> <span class="pos">WR</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="9501">DeMario Douglas</button></b> <span class="pos">WR</span>
         <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="bryce young" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Bryce Young</b> <span class="pos">QB</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="9228">Bryce Young</button></b> <span class="pos">QB</span>
         <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="jordan love" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Jordan Love</b> <span class="pos">QB</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="6804">Jordan Love</button></b> <span class="pos">QB</span>
         <span class="gain">→ 13.8 pts (0.0 started)</span></div></li><li data-player="emmett johnson" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Emmett Johnson</b> <span class="pos">RB</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="13337">Emmett Johnson</button></b> <span class="pos">RB</span>
         <span class="gain">→ 6.2 pts (0.0 started)</span><div class="beat">outbidding 6 7’s $0 · won the tiebreaker</div></div></li><li data-player="cam little" class="zero"><span class="amt">$0</span>
-        <div><b>6 7</b> won <b>Cam Little</b> <span class="pos">K</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="11786">Cam Little</button></b> <span class="pos">K</span>
         <span class="gain">→ 43.0 pts (43.0 started)</span></div></li><li data-player="michael mayer" class="zero"><span class="amt">$0</span>
-        <div><b>6 7</b> won <b>Michael Mayer</b> <span class="pos">TE</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="9482">Michael Mayer</button></b> <span class="pos">TE</span>
         <span class="gain">→ 3.8 pts (0.0 started)</span></div></li><li data-player="trey smack" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Trey Smack</b> <span class="pos">K</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="13545">Trey Smack</button></b> <span class="pos">K</span>
         <span class="gain">→ 9.0 pts (8.0 started)</span></div></li><li data-player="terrance ferguson" class="zero"><span class="amt">$0</span>
-        <div><b>6 7</b> won <b>Terrance Ferguson</b> <span class="pos">TE</span>
+        <div><b>6 7</b> won <b><button type="button" class="pl" data-pid="12487">Terrance Ferguson</button></b> <span class="pos">TE</span>
         <span class="gain">→ 15.8 pts (1.4 started)</span></div></li></ul></div><div class="wk"><h3>Week 1</h3><ul class="bids"><li data-player="darnell mooney"><span class="amt">$2</span>
-        <div><b>Justin Beer Loyalist</b> won <b>Darnell Mooney</b> <span class="pos">WR</span>
+        <div><b>Justin Beer Loyalist</b> won <b><button type="button" class="pl" data-pid="7090">Darnell Mooney</button></b> <span class="pos">WR</span>
         <span class="gain">→ 9.5 pts (0.0 started)</span></div></li><li data-player="malik washington" class="zero"><span class="amt">$0</span>
-        <div><b>superdiddy</b> won <b>Malik Washington</b> <span class="pos">WR</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="11610">Malik Washington</button></b> <span class="pos">WR</span>
         <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="roschon johnson" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Roschon Johnson</b> <span class="pos">RB</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="10235">Roschon Johnson</button></b> <span class="pos">RB</span>
         <span class="gain">→ hasn't played for them yet</span></div></li><li data-player="spencer shrader" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Spencer Shrader</b> <span class="pos">K</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="12185">Spencer Shrader</button></b> <span class="pos">K</span>
         <span class="gain">→ 6.0 pts (6.0 started)</span></div></li><li data-player="malachi fields" class="zero"><span class="amt">$0</span>
-        <div><b>Baltimore Avians</b> won <b>Malachi Fields</b> <span class="pos">WR</span>
+        <div><b>Baltimore Avians</b> won <b><button type="button" class="pl" data-pid="13285">Malachi Fields</button></b> <span class="pos">WR</span>
         <span class="gain">→ 3.5 pts (0.0 started)</span></div></li><li data-player="michael mayer" class="zero"><span class="amt">$0</span>
-        <div><b>superdiddy</b> won <b>Michael Mayer</b> <span class="pos">TE</span>
+        <div><b>superdiddy</b> won <b><button type="button" class="pl" data-pid="9482">Michael Mayer</button></b> <span class="pos">TE</span>
         <span class="gain">→ 6.2 pts (0.0 started)</span></div></li></ul></div><p class="nomatch" hidden>No players match.</p></section>
 <footer>Pickup pts are everything a claimed player scored while on that team (started or not), from the claim until he left the roster. Started pts, Pts per $ and Waiver ROI count only points scored in the starting lineup. Each team starts with $100 of FAAB; remaining includes FAAB traded between teams. Winning waiver claims from Sleeper, newest week first. “Outbidding” lists the other teams that bid on the same player that week.</footer>
-</main></div><script>
+</main></div><script type="application/json" id="pl-data">{"latest":"2026","scoring":{"2024":{"sack":1.0,"fgm_40_49":4.0,"pass_int":-1.0,"pts_allow_0":10.0,"pass_2pt":2.0,"st_td":6.0,"rec_td":6.0,"fgm_30_39":3.0,"fgm_50_59":5.0,"xpmiss":-1.0,"rush_td":6.0,"rec_2pt":2.0,"st_fum_rec":1.0,"fgmiss":-1.0,"ff":1.0,"rec":0.5,"pts_allow_14_20":1.0,"fgm_0_19":3.0,"int":2.0,"def_st_fum_rec":1.0,"fum_lost":-2.0,"pts_allow_1_6":7.0,"fgm_60p":6.0,"fgm_20_29":3.0,"pts_allow_21_27":0.0,"xpm":1.0,"rush_2pt":2.0,"fum_rec":2.0,"def_st_td":6.0,"fgm_50p":0.0,"def_td":6.0,"safe":2.0,"pass_yd":0.04,"blk_kick":2.0,"pass_td":4.0,"rush_yd":0.1,"fum":0.0,"pts_allow_28_34":-1.0,"pts_allow_35p":-4.0,"fum_rec_td":6.0,"rec_yd":0.1,"def_st_ff":1.0,"pts_allow_7_13":4.0,"st_ff":1.0},"2025":{"sack":1.0,"fgm_40_49":4.0,"pass_int":-1.0,"pts_allow_0":10.0,"pass_2pt":2.0,"st_td":6.0,"rec_td":6.0,"fgm_30_39":3.0,"fgm_50_59":5.0,"xpmiss":-1.0,"rush_td":6.0,"rec_2pt":2.0,"st_fum_rec":1.0,"fgmiss":-1.0,"ff":1.0,"rec":0.5,"pts_allow_14_20":1.0,"fgm_0_19":3.0,"int":2.0,"def_st_fum_rec":1.0,"fum_lost":-2.0,"pts_allow_1_6":7.0,"fgm_60p":6.0,"fgm_20_29":3.0,"pts_allow_21_27":0.0,"xpm":1.0,"rush_2pt":2.0,"fum_rec":2.0,"def_st_td":6.0,"fgm_50p":0.0,"def_td":6.0,"safe":2.0,"pass_yd":0.04,"blk_kick":2.0,"pass_td":4.0,"rush_yd":0.1,"fum":0.0,"pts_allow_28_34":-1.0,"pts_allow_35p":-4.0,"fum_rec_td":6.0,"rec_yd":0.1,"def_st_ff":1.0,"pts_allow_7_13":4.0,"st_ff":1.0},"2026":{"sack":1.0,"fgm_40_49":4.0,"pass_int":-1.0,"pts_allow_0":10.0,"pass_2pt":2.0,"st_td":6.0,"rec_td":6.0,"fgm_30_39":3.0,"fgm_50_59":5.0,"xpmiss":-1.0,"rush_td":6.0,"rec_2pt":2.0,"st_fum_rec":1.0,"fgmiss":-1.0,"ff":1.0,"rec":0.5,"pts_allow_14_20":1.0,"fgm_0_19":3.0,"int":2.0,"def_st_fum_rec":1.0,"fum_lost":-2.0,"pts_allow_1_6":7.0,"fgm_60p":6.0,"fgm_20_29":3.0,"pts_allow_21_27":0.0,"xpm":1.0,"rush_2pt":2.0,"fum_rec":2.0,"def_st_td":6.0,"fgm_50p":0.0,"def_td":6.0,"safe":2.0,"pass_yd":0.04,"blk_kick":2.0,"pass_td":4.0,"rush_yd":0.1,"fum":0.0,"pts_allow_28_34":-1.0,"pts_allow_35p":-4.0,"fum_rec_td":6.0,"rec_yd":0.1,"def_st_ff":1.0,"pts_allow_7_13":4.0,"st_ff":1.0}},"players":{"10213":{"n":"Tre Tucker","p":"WR","t":"LV","no":1,"age":25,"exp":3,"col":"Cincinnati","inj":null,"rv":[["2026","Justin Beer Loyalist",4,42.4,24.2],["2026","I’m Whipped by Bezos",1,3.7,0],["2025","Cucked By JPow’s 25 Bps",8,43.2,0],["2025","Ankitty",4,27.6,24.4]]},"10222":{"n":"Jayden Reed","p":"WR","t":"GB","no":11,"age":26,"exp":3,"col":"Michigan State","inj":"IR","rv":[["2026","superdiddy",4,4.4,4.4],["2026","yrkpapi",2,0,0],["2025","#NoToJunie",8,27.0,11.7],["2025","Ankitty",3,12.0,0],["2024","Amver Alert🚨",17,165.4,80.2]]},"10235":{"n":"Roschon Johnson","p":"RB","t":"CHI","no":23,"age":25,"exp":3,"col":"Texas","inj":null,"rv":[]},"11435":{"n":"Emanuel Wilson","p":"RB","t":"SEA","no":23,"age":27,"exp":3,"col":"Fort Valley State","inj":null,"rv":[["2026","Ankitty",4,44.3,5.2],["2025","Ain't That Herb-tastic",10,54.6,25.5]]},"11439":{"n":"Jaleel McLaughlin","p":"RB","t":"CLE","no":38,"age":26,"exp":3,"col":"Youngstown State","inj":null,"rv":[["2026","Justin Beer Loyalist",1,7.5,7.5],["2025","#NoToJunie",1,3.5,0],["2024","... Sanak al-Gaib!",1,0.6,0]]},"11559":{"n":"Michael Penix","p":"QB","t":"ATL","no":9,"age":26,"exp":2,"col":"Washington","inj":"Questionable","rv":[["2026","Justin Beer Loyalist",1,23.1,0],["2025","yrkpapi",1,5.3,0]]},"11577":{"n":"Will Shipley","p":"RB","t":"PHI","no":28,"age":24,"exp":2,"col":"Clemson","inj":"IR","rv":[["2026","6 7",1,7.8,0]]},"11581":{"n":"MarShawn Lloyd","p":"RB","t":"GB","no":32,"age":25,"exp":2,"col":"USC","inj":null,"rv":[["2026","6 7",3,14.1,0],["2026","8-4 god team ",1,16.2,16.2],["2026","yrkpapi",1,1.0,1.0]]},"11603":{"n":"AJ Barner","p":"TE","t":"SEA","no":88,"age":24,"exp":2,"col":"Michigan","inj":null,"rv":[["2026","Justin Beer Loyalist",2,5.2,0],["2025","Braelon Allen",2,10.0,8.6],["2025","#NoToJunie",1,10.0,10.0]]},"11608":{"n":"Isaiah Williams","p":"WR","t":"NYJ","no":18,"age":25,"exp":2,"col":"Illinois","inj":null,"rv":[]},"11610":{"n":"Malik Washington","p":"WR","t":"MIA","no":6,"age":25,"exp":2,"col":"Virginia","inj":null,"rv":[["2026","Justin Beer Loyalist",2,9.1,0],["2026","Baltimore Avians",1,8.6,0],["2025","yrkpapi",1,2.0,0]]},"11628":{"n":"Marvin Harrison","p":"WR","t":"HOU","no":18,"age":24,"exp":2,"col":"Ohio State","inj":null,"rv":[["2026","NShah19",4,17.0,0],["2026","superdiddy",2,4.9,4.9],["2025","Braelon Allen",17,107.3,95.5],["2024","WE DID NOT DO IT",17,150.7,118.1]]},"11630":{"n":"Roman Wilson","p":"WR","t":"PIT","no":14,"age":25,"exp":2,"col":"Michigan","inj":"IR","rv":[["2026","6 7",2,0,0]]},"11631":{"n":"Brian Thomas","p":"WR","t":"JAX","no":7,"age":24,"exp":2,"col":"LSU","inj":null,"rv":[["2026","Braelon Allen",5,21.0,0],["2026","superdiddy",1,0,0],["2025","#NoToJunie",17,108.4,108.4],["2024","Amver Alert🚨",17,226.7,90.9]]},"11637":{"n":"Keon Coleman","p":"WR","t":"BUF","no":0,"age":23,"exp":2,"col":"Florida State","inj":null,"rv":[["2026","yrkpapi",2,21.1,0],["2025","Cucked By JPow’s 25 Bps",4,34.8,4.1],["2025","6 7",1,8.3,8.3],["2025","Amver Alert🚨",1,2.6,0],["2024","yrkpapi",10,39.4,0],["2024","superdiddy",3,16.0,0]]},"11643":{"n":"Jaylen Wright","p":"RB","t":"MIA","no":5,"age":23,"exp":2,"col":"Tennessee","inj":null,"rv":[["2026","I’m Whipped by Bezos",2,1.8,0],["2024","WE DID NOT DO IT",1,0.4,0]]},"11647":{"n":"Kimani Vidal","p":"RB","t":"LAC","no":28,"age":25,"exp":2,"col":"Troy","inj":null,"rv":[["2026","Braelon Allen",1,5.5,5.5],["2025","yrkpapi",7,68.5,27.7],["2025","#NoToJunie",3,36.4,20.2],["2025","Ain't That Herb-tastic",1,1.1,0],["2024","superdiddy",1,2.0,0]]},"1166":{"n":"Kirk Cousins","p":"QB","t":"LV","no":8,"age":38,"exp":14,"col":"Michigan State","inj":null,"rv":[["2026","yrkpapi",2,33.24,33.24],["2025","Karans Fraudbook",1,15.46,15.46]]},"11786":{"n":"Cam Little","p":"K","t":"JAX","no":39,"age":23,"exp":2,"col":"Arkansas","inj":null,"rv":[["2026","6 7",5,43.0,43.0],["2025","#NoToJunie",2,19.0,19.0],["2025","Amver Alert🚨",1,14.0,14.0]]},"12185":{"n":"Spencer Shrader","p":"K","t":"IND","no":3,"age":27,"exp":2,"col":"Notre Dame","inj":null,"rv":[["2026","Baltimore Avians",4,52.0,52.0],["2025","superdiddy",4,40.0,40.0],["2024","superdiddy",1,13.0,13.0]]},"12487":{"n":"Terrance Ferguson","p":"TE","t":"LAR","no":18,"age":23,"exp":1,"col":"Oregon","inj":"IR","rv":[["2026","6 7",2,15.8,1.4]]},"12495":{"n":"Ollie Gordon","p":"RB","t":"MIA","no":0,"age":22,"exp":1,"col":"Oklahoma State","inj":"Questionable","rv":[["2026","yrkpapi",3,31.8,31.8],["2025","superdiddy",3,12.4,0],["2025","yrkpapi",3,1.5,0]]},"12545":{"n":"Tyler Shough","p":"QB","t":"NO","no":6,"age":27,"exp":1,"col":"Louisville","inj":null,"rv":[["2026","Justin Beer Loyalist",5,90.16,42.58],["2026","superdiddy",1,26.96,0]]},"12711":{"n":"Tyler Loop","p":"K","t":"BAL","no":33,"age":25,"exp":1,"col":"Arizona","inj":null,"rv":[["2026","NShah19",2,11.0,11.0],["2025","Braelon Allen",13,102.0,102.0]]},"13150":{"n":"Darius Cooper","p":"WR","t":"PHI","no":80,"age":24,"exp":1,"col":"Tarleton State","inj":null,"rv":[["2026","6 7",1,1.4,0]]},"13264":{"n":"Dohnte Meyers","p":"WR","t":"CIN","no":81,"age":26,"exp":0,"col":"Delta State","inj":null,"rv":[["2026","Baltimore Avians",1,2.2,0]]},"13274":{"n":"Germie Bernard","p":"WR","t":"PIT","no":17,"age":22,"exp":0,"col":"Alabama","inj":null,"rv":[["2026","yrkpapi",1,20.2,20.2]]},"13285":{"n":"Malachi Fields","p":"WR","t":"NYG","no":88,"age":23,"exp":0,"col":"Notre Dame","inj":null,"rv":[["2026","6 7",2,15.1,0],["2026","Baltimore Avians",1,3.5,0]]},"13293":{"n":"Ja'Kobi Lane","p":"WR","t":"BAL","no":6,"age":22,"exp":0,"col":"USC","inj":null,"rv":[["2026","6 7",5,6.0,0],["2026","yrkpapi",1,1.6,0]]},"13296":{"n":"Caleb Douglas","p":"WR","t":"MIA","no":7,"age":23,"exp":0,"col":"Texas Tech","inj":"Out","rv":[["2026","I’m Whipped by Bezos",5,2.9,0]]},"13298":{"n":"KC Concepcion","p":"WR","t":"CLE","no":1,"age":22,"exp":0,"col":"Texas A&M","inj":null,"rv":[["2026","yrkpapi",3,11.8,2.9],["2026","Karans Sportsbook",2,11.0,0],["2026","8-4 god team ",1,5.9,0]]},"13301":{"n":"Antonio Williams","p":"WR","t":"WAS","no":14,"age":22,"exp":0,"col":"Clemson","inj":null,"rv":[["2026","yrkpapi",3,10.0,0],["2026","6 7",1,4.6,0]]},"13311":{"n":"Chris Bell","p":"WR","t":"MIA","no":18,"age":22,"exp":0,"col":"Louisville","inj":null,"rv":[["2026","superdiddy",1,3.0,0],["2026","6 7",1,0,0]]},"13337":{"n":"Emmett Johnson","p":"RB","t":"KC","no":10,"age":23,"exp":0,"col":"Nebraska","inj":null,"rv":[["2026","Baltimore Avians",2,6.2,0]]},"13347":{"n":"Demond Claiborne","p":"RB","t":"MIN","no":21,"age":23,"exp":0,"col":"Wake Forest","inj":null,"rv":[["2026","yrkpapi",2,1.3,0]]},"13545":{"n":"Trey Smack","p":"K","t":"GB","no":28,"age":23,"exp":0,"col":"Florida","inj":null,"rv":[["2026","Baltimore Avians",2,9.0,8.0],["2026","Amver Alert🚨",1,12.0,12.0]]},"13833":{"n":"Dominic Zvada","p":"K","t":"NYG","no":34,"age":22,"exp":0,"col":"Michigan","inj":null,"rv":[["2026","Justin Beer Loyalist",1,8.0,8.0]]},"1479":{"n":"Keenan Allen","p":"WR","t":"IND","no":10,"age":34,"exp":13,"col":"California","inj":null,"rv":[["2026","NShah19",2,7.0,0],["2026","I’m Whipped by Bezos",1,6.2,0],["2025","Ain't That Herb-tastic",15,126.0,69.3],["2024","Ankitty",17,147.4,120.6]]},"3163":{"n":"Jared Goff","p":"QB","t":"DET","no":16,"age":32,"exp":10,"col":"California","inj":null,"rv":[["2026","NShah19",4,68.78,28.94],["2026","Baltimore Avians",1,16.44,0],["2025","yrkpapi",6,92.84,42.18],["2025","superdiddy",1,11.9,0],["2025","6 7",1,24.8,24.8],["2025","Karans Fraudbook",1,16.16,16.16],["2024","Braelon Allen",12,259.32,259.32]]},"3257":{"n":"Jacoby Brissett","p":"QB","t":"ARI","no":7,"age":33,"exp":10,"col":"North Carolina State","inj":null,"rv":[["2026","NShah19",1,7.92,7.92]]},"3271":{"n":"Tyler Higbee","p":"TE","t":"LAR","no":89,"age":33,"exp":10,"col":"Western Kentucky","inj":null,"rv":[["2026","Justin Beer Loyalist",1,2.2,2.2]]},"3634":{"n":"Kalif Raymond","p":"WR","t":"CHI","no":14,"age":32,"exp":10,"col":"Holy Cross","inj":null,"rv":[["2026","Baltimore Avians",2,3.5,0]]},"4018":{"n":"Joe Mixon","p":"RB","t":null,"no":28,"age":30,"exp":9,"col":"Oklahoma","inj":"Questionable","rv":[["2026","8-4 god team ",1,0,0],["2025","Cucked By JPow’s 25 Bps",5,0,0],["2024","Amver Alert🚨",17,219.2,193.0]]},"4035":{"n":"Alvin Kamara","p":"RB","t":"NO","no":41,"age":31,"exp":9,"col":"Tennessee","inj":"Questionable","rv":[["2026","Justin Beer Loyalist",3,35.8,35.8],["2026","Ankitty",2,4.7,0],["2025","Cucked By JPow’s 25 Bps",10,81.7,68.5],["2025","Ain't That Herb-tastic",7,2.5,2.5],["2024","yrkpapi",15,231.3,231.3],["2024","Karans Fraud-book",1,0,0]]},"4177":{"n":"Mack Hollins","p":"WR","t":"NE","no":13,"age":33,"exp":9,"col":"North Carolina","inj":"IR","rv":[["2026","Justin Beer Loyalist",1,6.8,0],["2025","Ain't That Herb-tastic",2,12.4,12.4]]},"4227":{"n":"Harrison Butker","p":"K","t":"KC","no":7,"age":31,"exp":9,"col":"Georgia Tech","inj":null,"rv":[["2026","6 7",1,7.0,7.0],["2026","Baltimore Avians",1,5.0,5.0],["2025","Ankitty",7,58.0,58.0],["2025","#NoToJunie",2,16.0,16.0],["2025","6 7",2,9.0,9.0],["2025","superdiddy",2,12.0,12.0],["2024","Karans Fraud-book",10,79.0,79.0],["2024","superdiddy",1,10.0,10.0]]},"4943":{"n":"Sam Darnold","p":"QB","t":"SEA","no":14,"age":29,"exp":8,"col":"USC","inj":null,"rv":[["2026","superdiddy",4,67.3,24.62],["2025","Karans Fraudbook",2,9.04,9.04],["2025","superdiddy",1,20.0,0],["2025","#NoToJunie",1,9.62,9.62],["2024","yrkpapi",14,252.54,72.28]]},"4993":{"n":"Mike Gesicki","p":"TE","t":"CIN","no":88,"age":31,"exp":8,"col":"Penn State","inj":null,"rv":[["2026","NShah19",1,6.9,0],["2024","Karans Fraud-book",3,4.6,4.6]]},"5045":{"n":"Courtland Sutton","p":"WR","t":"DEN","no":14,"age":31,"exp":8,"col":"SMU","inj":null,"rv":[["2026","I’m Whipped by Bezos",3,12.2,6.1],["2026","superdiddy",2,11.7,8.8],["2025","Amver Alert🚨",17,181.7,140.1],["2024","superdiddy",10,118.18,71.1],["2024","yrkpapi",2,8.9,5.8],["2024","Karans Fraud-book",1,4.2,4.2],["2024","Not Last Place == W",1,13.12,13.12]]},"5947":{"n":"Jakobi Meyers","p":"WR","t":"JAX","no":3,"age":29,"exp":7,"col":"NC State","inj":null,"rv":[["2026","superdiddy",3,25.4,4.8],["2026","Baltimore Avians",1,11.2,0],["2026","NShah19",1,10.8,0],["2025","Amver Alert🚨",17,131.4,51.7],["2024","Karans Fraud-book",10,103.6,39.6],["2024","Ankitty",4,37.9,0],["2024","... Sanak al-Gaib!",2,0,0]]},"6083":{"n":"Matt Gay","p":"K","t":"LV","no":14,"age":32,"exp":7,"col":"Utah","inj":null,"rv":[["2026","NShah19",1,5.0,0],["2026","Karans Sportsbook",1,12.0,12.0],["2025","Braelon Allen",1,2.0,2.0]]},"6149":{"n":"Darius Slayton","p":"WR","t":null,"no":11,"age":29,"exp":7,"col":"Auburn","inj":null,"rv":[["2025","Karans Fraudbook",3,2.6,0]]},"650":{"n":"Nick Folk","p":"K","t":"ATL","no":6,"age":41,"exp":19,"col":"Arizona","inj":null,"rv":[["2026","NShah19",1,12.0,12.0],["2026","Braelon Allen",1,1.0,1.0]]},"6650":{"n":"Chase McLaughlin","p":"K","t":"TB","no":4,"age":30,"exp":7,"col":"Illinois","inj":null,"rv":[["2026","I’m Whipped by Bezos",4,38.0,38.0],["2025","Cucked By JPow’s 25 Bps",13,98.0,98.0],["2025","superdiddy",1,4.0,4.0],["2024","... Sanak al-Gaib!",7,61.0,61.0],["2024","WE DID NOT DO IT",6,50.0,50.0]]},"6804":{"n":"Jordan Love","p":"QB","t":"GB","no":10,"age":27,"exp":6,"col":"Utah State","inj":null,"rv":[["2026","superdiddy",4,80.08,40.72],["2026","Baltimore Avians",1,13.8,0],["2025","yrkpapi",4,63.82,0],["2025","superdiddy",2,38.4,0],["2025","Cucked By JPow’s 25 Bps",1,15.96,15.96],["2024","... Sanak al-Gaib!",15,224.7,65.72],["2024","WE DID NOT DO IT",2,17.4,17.4]]},"7090":{"n":"Darnell Mooney","p":"WR","t":"NYG","no":17,"age":28,"exp":6,"col":"Tulane","inj":"Questionable","rv":[["2026","Justin Beer Loyalist",2,9.5,0],["2025","yrkpapi",3,20.4,16.9],["2025","6 7",2,3.0,0],["2025","#NoToJunie",1,1.6,1.6],["2024","yrkpapi",14,132.3,128.8]]},"7567":{"n":"Kenny Gainwell","p":"RB","t":"TB","no":1,"age":27,"exp":5,"col":"Memphis","inj":null,"rv":[["2026","NShah19",3,7.3,0],["2026","yrkpapi",1,2.9,2.9],["2025","6 7",8,105.0,56.8],["2025","#NoToJunie",1,6.6,0]]},"7571":{"n":"Rashod Bateman","p":"WR","t":"BAL","no":7,"age":26,"exp":5,"col":"Minnesota","inj":"Out","rv":[["2026","superdiddy",3,28.6,18.3]]},"7600":{"n":"Pat Freiermuth","p":"TE","t":"PIT","no":88,"age":27,"exp":5,"col":"Penn State","inj":null,"rv":[["2026","superdiddy",5,39.8,2.1],["2024","Braelon Allen",3,11.6,2.6],["2024","Ducky Irving",1,7.7,7.7]]},"8129":{"n":"Dameon Pierce","p":"RB","t":"PHI","no":39,"age":26,"exp":4,"col":"Florida","inj":null,"rv":[["2026","Baltimore Avians",1,13.0,13.0]]},"8134":{"n":"Khalil Shakir","p":"WR","t":"BUF","no":10,"age":26,"exp":4,"col":"Boise State","inj":null,"rv":[["2026","Justin Beer Loyalist",3,13.4,8.1],["2026","NShah19",2,20.9,0],["2025","Karans Fraudbook",17,130.4,56.1],["2024","... Sanak al-Gaib!",10,87.4,74.5],["2024","Karans Fraud-book",4,27.3,27.3],["2024","Ducky Irving",2,19.8,0]]},"8188":{"n":"Tyquan Thornton","p":"WR","t":"KC","no":2,"age":26,"exp":4,"col":"Baylor","inj":"IR","rv":[["2025","6 7",1,7.6,7.6]]},"9228":{"n":"Bryce Young","p":"QB","t":"CAR","no":9,"age":25,"exp":3,"col":"Alabama","inj":null,"rv":[["2026","Karans Sportsbook",4,55.94,36.1]]},"9480":{"n":"Brenton Strange","p":"TE","t":"JAX","no":85,"age":25,"exp":3,"col":"Penn State","inj":null,"rv":[["2026","NShah19",1,6.9,6.9],["2025","6 7",5,38.6,26.6],["2025","Cucked By JPow’s 25 Bps",2,10.2,2.7],["2025","#NoToJunie",1,11.8,0],["2024","superdiddy",3,14.0,1.2]]},"9482":{"n":"Michael Mayer","p":"TE","t":"LV","no":87,"age":25,"exp":3,"col":"Notre Dame","inj":null,"rv":[["2026","superdiddy",1,6.2,0],["2026","6 7",1,3.8,0],["2025","superdiddy",1,13.4,0]]},"9501":{"n":"DeMario Douglas","p":"WR","t":"NE","no":3,"age":25,"exp":3,"col":"Liberty","inj":null,"rv":[["2024","WE DID NOT DO IT",2,4.6,0]]},"96":{"n":"Aaron Rodgers","p":"QB","t":"PIT","no":8,"age":42,"exp":21,"col":"California","inj":null,"rv":[["2026","Baltimore Avians",1,17.02,17.02],["2025","Karans Fraudbook",1,12.66,12.66]]},"9757":{"n":"Kendre Miller","p":"RB","t":"NO","no":5,"age":24,"exp":3,"col":"TCU","inj":null,"rv":[["2026","superdiddy",3,17.9,8.9],["2025","6 7",1,3.7,0],["2024","Amver Alert🚨",4,0,0],["2024","Ducky Irving",2,6.5,0]]},"9758":{"n":"C.J. Stroud","p":"QB","t":"HOU","no":7,"age":25,"exp":3,"col":"Ohio State","inj":null,"rv":[["2026","8-4 god team ",4,79.68,34.76],["2024","... Sanak al-Gaib!",10,145.64,109.92]]},"BUF":{"n":"Buffalo Bills D/ST","p":"DEF","t":"BUF","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","NShah19",1,5.0,5.0],["2025","Karans Fraudbook",3,22.0,22.0],["2025","Cucked By JPow’s 25 Bps",2,9.0,9.0],["2025","Amver Alert🚨",2,13.0,8.0],["2024","WE DID NOT DO IT",9,80.0,79.0],["2024","yrkpapi",4,29.0,30.0]]},"CHI":{"n":"Chicago Bears D/ST","p":"DEF","t":"CHI","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","6 7",1,7.0,7.0],["2024","Karans Fraud-book",4,40.0,40.0],["2024","Ducky Irving",1,25.0,25.0]]},"CIN":{"n":"Cincinnati Bengals D/ST","p":"DEF","t":"CIN","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","6 7",4,18.0,13.0],["2024","Karans Fraud-book",2,2.0,2.0],["2024","Not Last Place == W",1,16.0,16.0],["2024","Amver Alert🚨",1,20.0,20.0]]},"CLE":{"n":"Cleveland Browns D/ST","p":"DEF","t":"CLE","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","Amver Alert🚨",1,9.0,9.0],["2025","Cucked By JPow’s 25 Bps",2,5.0,5.0],["2025","6 7",1,18.0,18.0],["2025","superdiddy",1,2.0,2.0],["2024","Not Last Place == W",3,21.0,10.0],["2024","WE DID NOT DO IT",1,12.0,12.0],["2024","Ducky Irving",1,3.0,0]]},"DAL":{"n":"Dallas Cowboys D/ST","p":"DEF","t":"DAL","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","NShah19",1,1.0,1.0],["2025","Amver Alert🚨",1,1.0,1.0],["2024","superdiddy",4,23.0,23.0],["2024","Karans Fraud-book",1,19.0,19.0]]},"GB":{"n":"Green Bay Packers D/ST","p":"DEF","t":"GB","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","8-4 god team ",5,40.0,40.0],["2025","#NoToJunie",3,7.0,7.0],["2025","yrkpapi",2,15.0,0],["2025","Amver Alert🚨",2,5.0,0],["2025","Karans Fraudbook",2,25.0,25.0],["2024","Not Last Place == W",3,37.0,0],["2024","yrkpapi",2,10.0,10.0],["2024","Ducky Irving",1,22.0,22.0],["2024","Amver Alert🚨",1,6.0,6.0]]},"IND":{"n":"Indianapolis Colts D/ST","p":"DEF","t":"IND","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","Braelon Allen",1,2.0,2.0],["2025","Cucked By JPow’s 25 Bps",9,62.0,41.0],["2024","Ducky Irving",3,7.0,7.0],["2024","Karans Fraud-book",1,12.0,12.0]]},"KC":{"n":"Kansas City Chiefs D/ST","p":"DEF","t":"KC","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","Baltimore Avians",2,10.0,10.0],["2026","NShah19",2,16.0,16.0],["2025","Amver Alert🚨",4,34.0,31.0],["2025","Cucked By JPow’s 25 Bps",1,2.0,2.0],["2024","superdiddy",10,77.0,77.0],["2024","Karans Fraud-book",2,18.0,13.0],["2024","Not Last Place == W",1,6.0,6.0],["2024","Amver Alert🚨",1,7.0,7.0]]},"LV":{"n":"Las Vegas Raiders D/ST","p":"DEF","t":"LV","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","Baltimore Avians",2,1.0,0],["2024","Braelon Allen",5,31.0,20.0],["2024","Amver Alert🚨",1,9.0,9.0]]},"NE":{"n":"New England Patriots D/ST","p":"DEF","t":"NE","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","NShah19",2,29.0,29.0],["2026","Baltimore Avians",1,6.0,6.0],["2025","superdiddy",12,78.0,78.0],["2025","Amver Alert🚨",1,7.0,7.0],["2025","Ain't That Herb-tastic",1,12.0,12.0],["2024","yrkpapi",1,10.0,10.0]]},"NO":{"n":"New Orleans Saints D/ST","p":"DEF","t":"NO","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","6 7",1,13.0,13.0],["2025","yrkpapi",2,34.0,34.0],["2024","Amver Alert🚨",1,15.0,15.0],["2024","superdiddy",1,3.0,3.0],["2024","yrkpapi",1,3.0,3.0]]},"NYG":{"n":"New York Giants D/ST","p":"DEF","t":"NYG","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","Amver Alert🚨",1,8.0,8.0],["2024","yrkpapi",1,5.0,5.0]]},"PHI":{"n":"Philadelphia Eagles D/ST","p":"DEF","t":"PHI","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","6 7",2,8.0,8.0],["2026","NShah19",1,1.0,1.0],["2025","Ankitty",17,142.0,142.0],["2024","Not Last Place == W",6,62.0,0],["2024","Braelon Allen",3,39.0,32.0],["2024","Amver Alert🚨",2,22.0,22.0]]},"SF":{"n":"San Francisco 49ers D/ST","p":"DEF","t":"SF","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","I’m Whipped by Bezos",5,40.0,10.0],["2025","Karans Fraudbook",4,25.0,25.0],["2025","#NoToJunie",2,0,0],["2024","Ankitty",14,96.0,96.0]]},"TB":{"n":"Tampa Bay Buccaneers D/ST","p":"DEF","t":"TB","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","Amver Alert🚨",1,2.0,2.0],["2025","Karans Fraudbook",5,23.0,23.0],["2025","Ain't That Herb-tastic",1,15.0,15.0],["2025","yrkpapi",1,28.0,28.0],["2024","WE DID NOT DO IT",8,57.0,47.0],["2024","yrkpapi",1,3.0,3.0]]},"WAS":{"n":"Washington Commanders D/ST","p":"DEF","t":"WAS","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","Amver Alert🚨",1,9.0,0],["2025","Braelon Allen",17,80.0,55.0],["2024","Amver Alert🚨",2,13.0,8.0],["2024","WE DID NOT DO IT",2,6.0,6.0],["2024","Ducky Irving",1,5.0,5.0]]}}}</script><script>
 // Every table sorts by any column. A cell's data-v (if set) is its sort value; otherwise it's read from the text:
 // numbers, $ and %, records like 9-1 (by win %), <1% / >99%, and runs of 🏆 / 🚽 (by count). Blanks sort last.
 (function () {
@@ -570,5 +600,174 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
   if (cur && nav.scrollWidth > nav.clientWidth) {
     nav.scrollLeft += cur.getBoundingClientRect().left - nav.getBoundingClientRect().left - (nav.clientWidth - cur.offsetWidth) / 2;
   }
+})();
+</script><script>
+(function () {
+  var data = document.getElementById('pl-data');
+  if (!data) return;
+  var D = JSON.parse(data.textContent), API = 'https://api.sleeper.com/stats/nfl/player/';
+  var REC = [['rec_tgt', 'Tgt'], ['rec', 'Rec'], ['rec_yd', 'Rec Yd'], ['rec_td', 'Rec TD']];
+  var COLS = {
+    QB: [['pass_yd', 'Pass Yd'], ['pass_td', 'Pass TD'], ['pass_int', 'INT'], ['rush_yd', 'Rush Yd'], ['rush_td', 'Rush TD']],
+    RB: [['rush_att', 'Car'], ['rush_yd', 'Rush Yd'], ['rush_td', 'Rush TD'], ['rec', 'Rec'], ['rec_yd', 'Rec Yd'], ['rec_td', 'Rec TD']],
+    WR: REC, TE: REC,
+    K: [['fgm', 'FGM'], ['fga', 'FGA'], ['xpm', 'XPM']],
+    DEF: [['sack', 'Sack'], ['int', 'INT'], ['fum_rec', 'FR'], ['def_td', 'TD'], ['pts_allow', 'PA']]
+  };
+  var cache = {}, dlg;
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+  function num(v) { return v ? String(Math.round(v * 10) / 10) : '0'; }
+  function pts(v) { return v.toFixed(1); }
+  function ordinal(n) { return n + (['th', 'st', 'nd', 'rd'][(n % 100 - 20) % 10] || ['th', 'st', 'nd', 'rd'][n % 100] || 'th'); }
+  // Seasons before the league existed use its earliest scoring; later ones its latest.
+  function scoring(season) {
+    var have = Object.keys(D.scoring).sort();
+    if (!have.length) return {};
+    return D.scoring[season] || D.scoring[season < have[0] ? have[0] : have[have.length - 1]];
+  }
+  function score(stats, sc) {
+    var t = 0;
+    for (var k in sc) if (typeof stats[k] === 'number') t += stats[k] * sc[k];
+    return t;
+  }
+
+  // Every season of a player's career, newest first: [{season, games: [{wk, opp, played, stats, pts}]}].
+  function load(pid, p) {
+    if (cache[pid]) return cache[pid];
+    var last = +D.latest, first = last - (p.exp == null ? 4 : Math.min(p.exp, 25)), years = [];
+    for (var y = last; y >= first; y--) years.push(y);
+    cache[pid] = Promise.all(years.map(function (y) {
+      return fetch(API + encodeURIComponent(pid) + '?season_type=regular&season=' + y + '&grouping=week')
+        .then(function (r) { return r.ok ? r.json() : {}; })
+        .catch(function () { return null; })
+        .then(function (weeks) { return { season: String(y), weeks: weeks }; });
+    })).then(function (list) {
+      if (list.every(function (s) { return s.weeks === null; })) throw new Error('offline');
+      return list.filter(function (s) { return s.weeks; }).map(function (s) {
+        var sc = scoring(s.season), games = [];
+        Object.keys(s.weeks).sort(function (a, b) { return a - b; }).forEach(function (w) {
+          var g = s.weeks[w];
+          if (!g || !g.stats) return;
+          var st = g.stats;
+          games.push({ wk: +w, team: g.team, opp: g.opponent ? (g.is_away_team ? '@' : '') + g.opponent : '',
+                       played: (st.gp || 0) > 0 || (st.pts_ppr || 0) !== 0, stats: st, pts: score(st, sc) });
+        });
+        return { season: s.season, games: games };
+      }).filter(function (s) { return s.games.some(function (g) { return g.played; }); });
+    });
+    cache[pid].catch(function () { delete cache[pid]; });
+    return cache[pid];
+  }
+
+  function table(head, rows, cls) {
+    return '<div class="tbl"><table' + (cls ? ' class="' + cls + '"' : '') + '><thead><tr>' +
+      head.map(function (h, i) { return '<th' + (i < 2 ? ' class="tn"' : '') + '>' + h + '</th>'; }).join('') +
+      '</tr></thead><tbody>' + rows.join('') + '</tbody></table></div>';
+  }
+
+  function career(p, seasons) {
+    var cols = COLS[p.p] || [];
+    var rows = seasons.map(function (s) {
+      var played = s.games.filter(function (g) { return g.played; }), tot = {}, total = 0, teams = {};
+      played.forEach(function (g) {
+        total += g.pts;
+        if (g.team) teams[g.team] = 1;
+        cols.forEach(function (c) { tot[c[0]] = (tot[c[0]] || 0) + (g.stats[c[0]] || 0); });
+      });
+      return '<tr class="pc-season" data-season="' + s.season + '" tabindex="0"><td class="tn">' + s.season + '</td><td class="tn">' +
+        esc(Object.keys(teams).join('/')) + '</td><td>' + played.length + '</td><td><b>' + pts(total) + '</b></td><td>' +
+        pts(played.length ? total / played.length : 0) + '</td>' +
+        cols.map(function (c) { return '<td>' + num(tot[c[0]]) + '</td>'; }).join('') + '</tr>';
+    });
+    return table(['Season', 'Team', 'GP', 'Pts', 'PPG'].concat(cols.map(function (c) { return c[1]; })), rows, 'pc-career');
+  }
+
+  function gameLog(p, s) {
+    var cols = COLS[p.p] || [];
+    var rows = s.games.map(function (g) {
+      if (!g.played) {
+        return '<tr class="dnp"><td class="tn">' + g.wk + '</td><td class="tn">' + esc(g.opp) + '</td><td colspan="' +
+          (cols.length + 1) + '">Did not play</td></tr>';
+      }
+      return '<tr><td class="tn">' + g.wk + '</td><td class="tn">' + esc(g.opp) + '</td><td><b>' + pts(g.pts) + '</b></td>' +
+        cols.map(function (c) { return '<td>' + num(g.stats[c[0]]) + '</td>'; }).join('') + '</tr>';
+    });
+    return '<h3>' + s.season + ' games</h3>' + table(['Wk', 'Opp', 'Pts'].concat(cols.map(function (c) { return c[1]; })), rows);
+  }
+
+  function league(p) {
+    if (!p.rv.length) return '';
+    var rows = p.rv.map(function (r) {
+      return '<tr><td class="tn">' + r[0] + '</td><td class="tn">' + esc(r[1]) + '</td><td>' + r[2] + '</td><td>' +
+        pts(r[3]) + '</td><td><b>' + pts(r[4]) + '</b></td></tr>';
+    });
+    return '<h3>On Red Vines rosters</h3>' + table(['Season', 'Team', 'Weeks', 'Pts', 'As starter'], rows);
+  }
+
+  function header(pid, p) {
+    var photo = p.p === 'DEF' ? 'https://sleepercdn.com/images/team_logos/nfl/' + pid.toLowerCase() + '.png'
+                              : 'https://sleepercdn.com/content/nfl/players/thumb/' + encodeURIComponent(pid) + '.jpg';
+    var line1 = [p.p, p.t || 'Free agent', p.no != null && p.p !== 'DEF' ? '#' + p.no : ''].filter(Boolean).join(' · ');
+    var line2 = p.p === 'DEF' ? '' : [p.age ? 'Age ' + p.age : '', p.exp == null ? '' : p.exp ? ordinal(p.exp + 1) + ' season' : 'Rookie',
+                                      p.col].filter(Boolean).join(' · ');
+    return '<div class="pc-head"><img class="pc-photo" src="' + photo + '" alt="" onerror="this.style.visibility=\'hidden\'">' +
+      '<div class="pc-id"><div class="pc-name">' + esc(p.n) + (p.inj ? ' <span class="pc-inj">' + esc(p.inj) + '</span>' : '') + '</div>' +
+      '<div class="pc-sub">' + esc(line1) + '</div>' + (line2 ? '<div class="pc-sub">' + esc(line2) + '</div>' : '') + '</div>' +
+      '<button type="button" class="pc-x" aria-label="Close">&times;</button></div>';
+  }
+
+  function open(pid) {
+    var p = D.players[pid];
+    if (!p) return;
+    if (!dlg) {
+      dlg = document.createElement('dialog');
+      dlg.className = 'pcard';
+      document.body.appendChild(dlg);
+      dlg.addEventListener('click', function (ev) {
+        if (ev.target === dlg || ev.target.closest('.pc-x')) dlg.close();
+        var row = ev.target.closest('.pc-season');
+        if (row) pick(row);
+      });
+      dlg.addEventListener('keydown', function (ev) {
+        var row = ev.target.closest && ev.target.closest('.pc-season');
+        if (row && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); pick(row); }
+      });
+    }
+    dlg.setAttribute('aria-label', p.n);
+    dlg.innerHTML = header(pid, p) + '<div class="pc-body">' + league(p) +
+      '<h3>Career</h3><div class="pc-career-box"><p class="pc-note">Loading stats from Sleeper…</p></div>' +
+      '<div class="pc-log"></div><p class="pc-note">Stats from Sleeper. Points use Red Vines scoring. Tap a season to see its games.</p></div>';
+    if (!dlg.open) dlg.showModal();
+    dlg.scrollTop = 0;
+    var box = dlg.querySelector('.pc-career-box');
+    load(pid, p).then(function (seasons) {
+      if (dlg.getAttribute('aria-label') !== p.n) return;  // another card was opened meanwhile
+      if (!seasons.length) { box.innerHTML = '<p class="pc-note">No NFL games yet.</p>'; return; }
+      dlg._seasons = seasons;
+      dlg._player = p;
+      box.innerHTML = career(p, seasons);
+      pick(box.querySelector('.pc-season'));
+    }).catch(function () {
+      box.innerHTML = '<p class="pc-note">Couldn’t reach Sleeper. Check your connection and tap the name again.</p>';
+    });
+  }
+
+  function pick(row) {
+    if (!row || !dlg._seasons) return;
+    var season = row.dataset.season;
+    dlg.querySelectorAll('.pc-season').forEach(function (r) { r.classList.toggle('cur', r === row); });
+    var s = dlg._seasons.filter(function (x) { return x.season === season; })[0];
+    dlg.querySelector('.pc-log').innerHTML = gameLog(dlg._player, s);
+  }
+
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest && ev.target.closest('button.pl');
+    if (b) open(b.dataset.pid);
+  });
 })();
 </script></body></html>

@@ -9,6 +9,7 @@ Everything except the ranking order, blurbs and pictures is pulled from Sleeper 
 - **Weekly rankings:** record, PF, streak and top performers (season and week) for each team. Each week also has a playoff odds table, a rankings-over-time chart, and weekly awards.
 - **League pages (per season):** FAAB Tracker (budget, bid log and waiver ROI), Trade Grades and Draft Report Card.
 - **League History (all seasons):** Record Book (champions, all-time standings, records) and Head-to-Head.
+- **Player cards:** tap any player's name to see his profile, every Red Vines team that has rostered him, and his career and game-by-game stats (in league scoring). Game stats load live from Sleeper when the card opens; roster history comes from `weeks/<season>/rosters.json`, which `new` and `refresh` keep up to date.
 
 ## Every week
 

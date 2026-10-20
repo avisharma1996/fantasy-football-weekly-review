@@ -199,6 +199,36 @@ th[data-sort]::after{content:"↕";margin-left:4px;opacity:.35}
 th[aria-sort=ascending]::after{content:"↑";opacity:1}th[aria-sort=descending]::after{content:"↓";opacity:1}
 th[data-sort]:hover,th[data-sort]:focus-visible{color:var(--ink)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
+button.pl{all:unset;cursor:pointer;text-decoration:underline dotted color-mix(in srgb,currentColor 45%,transparent);text-underline-offset:3px}
+button.pl:hover{text-decoration-style:solid;text-decoration-color:currentColor}
+button.pl:focus-visible{outline:2px solid var(--hl);outline-offset:2px;border-radius:3px}
+html:has(dialog.pcard[open]){overflow:hidden}
+dialog.pcard{width:min(760px,calc(100vw - 32px));max-height:min(88vh,900px);padding:0;border:1px solid var(--line);border-radius:16px;background:var(--bg);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.3)}
+dialog.pcard::backdrop{background:rgba(10,12,16,.55)}
+.pc-head{position:sticky;top:0;z-index:1;display:flex;gap:14px;align-items:center;padding:16px;background:var(--card);border-bottom:1px solid var(--line)}
+.pc-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--chip);flex:none}
+.pc-id{min-width:0}
+.pc-name{font-size:1.35rem;font-weight:800;line-height:1.2}
+.pc-sub{color:var(--muted);font-size:.88rem}
+.pc-inj{display:inline-block;vertical-align:middle;padding:1px 8px;border-radius:99px;background:color-mix(in srgb,var(--down) 16%,transparent);color:var(--down);font-size:.72rem;font-weight:700}
+.pc-x{margin-left:auto;align-self:flex-start;flex:none;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:1.4rem;line-height:1;cursor:pointer}
+.pc-x:hover{background:var(--chip)}
+.pc-x:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+.pc-body{padding:0 16px 18px}
+.pc-body h3{margin:20px 0 8px}
+.pc-body table{font-size:.85rem}
+.pc-body th,.pc-body td{padding:8px 10px}
+.pc-body tr.pc-season{cursor:pointer}
+.pc-body tr.pc-season:hover td{background:var(--chip)}
+.pc-body tr.pc-season.cur td{background:color-mix(in srgb,var(--hl) 14%,var(--card))}
+.pc-body tr.pc-season:focus-visible{outline:2px solid var(--hl);outline-offset:-2px}
+.pc-body tr.dnp td{color:var(--muted);font-style:italic}
+.pc-note{color:var(--muted);font-size:.82rem;margin:10px 2px 0}
+@media (max-width:760px){
+  dialog.pcard{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border:0;border-radius:0}
+  .pc-photo{width:56px;height:56px}
+  .pc-name{font-size:1.15rem}
+}
 </style><script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script></head>
 <body><div class="layout">
 <div class="mbar"><button class="menu-btn" type="button" aria-expanded="false" aria-controls="side"><span aria-hidden="true">&#9776;</span> Menu</button></div>
@@ -213,7 +243,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><div><h2>superdiddy</h2>
         <div class="meta"><b>10-4</b> · 989.22 PF · W3</div></div></div>
       
-      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB1</span>Jonathan Taylor<span class="pp">167.7</span></li><li><span class="pos">QB3</span>Jalen Hurts<span class="pp">149.4</span></li><li><span class="pos">WR3</span>Ja&#x27;Marr Chase<span class="pp">120.5</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB3</span>Jonathan Taylor<span class="pp">32.7</span></li><li><span class="pos">WR1</span>Ja&#x27;Marr Chase<span class="pp">30.1</span></li><li><span class="pos">WR4</span>Chris Olave<span class="pp">24.3</span></li></ul></div>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB1</span><button type="button" class="pl" data-pid="6813">Jonathan Taylor</button><span class="pp">167.7</span></li><li><span class="pos">QB3</span><button type="button" class="pl" data-pid="6904">Jalen Hurts</button><span class="pp">149.4</span></li><li><span class="pos">WR3</span><button type="button" class="pl" data-pid="7564">Ja&#x27;Marr Chase</button><span class="pp">120.5</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB3</span><button type="button" class="pl" data-pid="6813">Jonathan Taylor</button><span class="pp">32.7</span></li><li><span class="pos">WR1</span><button type="button" class="pl" data-pid="7564">Ja&#x27;Marr Chase</button><span class="pp">30.1</span></li><li><span class="pos">WR4</span><button type="button" class="pl" data-pid="8144">Chris Olave</button><span class="pp">24.3</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -222,7 +252,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><div><h2>Amver Alert🚨</h2>
         <div class="meta"><b>10-4</b> · 911.02 PF · W2</div></div></div>
       
-      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR2</span>Amon-Ra St. Brown<span class="pp">121.7</span></li><li><span class="pos">RB5</span>De&#x27;Von Achane<span class="pp">120.3</span></li><li><span class="pos">RB10</span>James Cook<span class="pp">98.6</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">TE3</span>Trey McBride<span class="pp">24.4</span></li><li><span class="pos">WR12</span>Amon-Ra St. Brown<span class="pp">17.6</span></li><li><span class="pos">WR17</span>Courtland Sutton<span class="pp">13.7</span></li></ul></div>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR2</span><button type="button" class="pl" data-pid="7547">Amon-Ra St. Brown</button><span class="pp">121.7</span></li><li><span class="pos">RB5</span><button type="button" class="pl" data-pid="9226">De&#x27;Von Achane</button><span class="pp">120.3</span></li><li><span class="pos">RB10</span><button type="button" class="pl" data-pid="8138">James Cook</button><span class="pp">98.6</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">TE3</span><button type="button" class="pl" data-pid="8130">Trey McBride</button><span class="pp">24.4</span></li><li><span class="pos">WR12</span><button type="button" class="pl" data-pid="7547">Amon-Ra St. Brown</button><span class="pp">17.6</span></li><li><span class="pos">WR17</span><button type="button" class="pl" data-pid="5045">Courtland Sutton</button><span class="pp">13.7</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -231,7 +261,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/8c1f57470cf91452d838f4c11283f98f.jpg" alt="" loading="lazy"><div><h2>Ain&#x27;t That Herb-tastic</h2>
         <div class="meta"><b>10-4</b> · 840.16 PF · L1</div></div></div>
       
-      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB8</span>Baker Mayfield<span class="pp">118.6</span></li><li><span class="pos">RB7</span>Josh Jacobs<span class="pp">115.3</span></li><li><span class="pos">WR5</span>Puka Nacua<span class="pp">111.8</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR6</span>Keenan Allen<span class="pp">23.4</span></li><li><span class="pos">RB8</span>Josh Jacobs<span class="pp">18.3</span></li><li><span class="pos">TE7</span>Tucker Kraft<span class="pp">14.3</span></li></ul></div>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB8</span><button type="button" class="pl" data-pid="4892">Baker Mayfield</button><span class="pp">118.6</span></li><li><span class="pos">RB7</span><button type="button" class="pl" data-pid="5850">Josh Jacobs</button><span class="pp">115.3</span></li><li><span class="pos">WR5</span><button type="button" class="pl" data-pid="9493">Puka Nacua</button><span class="pp">111.8</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR6</span><button type="button" class="pl" data-pid="1479">Keenan Allen</button><span class="pp">23.4</span></li><li><span class="pos">RB8</span><button type="button" class="pl" data-pid="5850">Josh Jacobs</button><span class="pp">18.3</span></li><li><span class="pos">TE7</span><button type="button" class="pl" data-pid="9484">Tucker Kraft</button><span class="pp">14.3</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -240,7 +270,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><div><h2>Karans Fraudbook</h2>
         <div class="meta"><b>8-6</b> · 803.74 PF · L1</div></div></div>
       
-      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR1</span>Jaxon Smith-Njigba<span class="pp">130.0</span></li><li><span class="pos">RB9</span>Kyren Williams<span class="pp">99.8</span></li><li><span class="pos">QB20</span>Jayden Daniels<span class="pp">97.3</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR7</span>Jaxon Smith-Njigba<span class="pp">22.3</span></li><li><span class="pos">RB6</span>Zach Charbonnet<span class="pp">18.5</span></li><li><span class="pos">QB13</span>Jayden Daniels<span class="pp">17.7</span></li></ul></div>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR1</span><button type="button" class="pl" data-pid="9488">Jaxon Smith-Njigba</button><span class="pp">130.0</span></li><li><span class="pos">RB9</span><button type="button" class="pl" data-pid="8150">Kyren Williams</button><span class="pp">99.8</span></li><li><span class="pos">QB20</span><button type="button" class="pl" data-pid="11566">Jayden Daniels</button><span class="pp">97.3</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR7</span><button type="button" class="pl" data-pid="9488">Jaxon Smith-Njigba</button><span class="pp">22.3</span></li><li><span class="pos">RB6</span><button type="button" class="pl" data-pid="9753">Zach Charbonnet</button><span class="pp">18.5</span></li><li><span class="pos">QB13</span><button type="button" class="pl" data-pid="11566">Jayden Daniels</button><span class="pp">17.7</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -249,7 +279,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg" alt="" loading="lazy"><div><h2>Ankitty</h2>
         <div class="meta"><b>7-7</b> · 832.06 PF · W1</div></div></div>
       
-      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB4</span>Jahmyr Gibbs<span class="pp">127.0</span></li><li><span class="pos">QB4</span>Drake Maye<span class="pp">105.9</span></li><li><span class="pos">WR7</span>Davante Adams<span class="pp">94.6</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB2</span>Jahmyr Gibbs<span class="pp">35.3</span></li><li><span class="pos">WR5</span>Davante Adams<span class="pp">24.0</span></li><li><span class="pos">QB10</span>Drake Maye<span class="pp">23.1</span></li></ul></div>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB4</span><button type="button" class="pl" data-pid="9221">Jahmyr Gibbs</button><span class="pp">127.0</span></li><li><span class="pos">QB4</span><button type="button" class="pl" data-pid="11564">Drake Maye</button><span class="pp">105.9</span></li><li><span class="pos">WR7</span><button type="button" class="pl" data-pid="2133">Davante Adams</button><span class="pp">94.6</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB2</span><button type="button" class="pl" data-pid="9221">Jahmyr Gibbs</button><span class="pp">35.3</span></li><li><span class="pos">WR5</span><button type="button" class="pl" data-pid="2133">Davante Adams</button><span class="pp">24.0</span></li><li><span class="pos">QB10</span><button type="button" class="pl" data-pid="11564">Drake Maye</button><span class="pp">23.1</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -258,7 +288,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/a2b1e540f6130fba129542566222606d.jpg" alt="" loading="lazy"><div><h2>#NoToJunie</h2>
         <div class="meta"><b>6-8</b> · 819.50 PF · L1</div></div></div>
       
-      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB9</span>Josh Allen<span class="pp">137.3</span></li><li><span class="pos">RB3</span>Bijan Robinson<span class="pp">130.4</span></li><li><span class="pos">RB11</span>Rico Dowdle<span class="pp">72.9</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB4</span>Quinshon Judkins<span class="pp">26.4</span></li><li><span class="pos">WR9</span>Rashee Rice<span class="pp">19.7</span></li><li><span class="pos">RB9</span>Bijan Robinson<span class="pp">18.2</span></li></ul></div>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB9</span><button type="button" class="pl" data-pid="4984">Josh Allen</button><span class="pp">137.3</span></li><li><span class="pos">RB3</span><button type="button" class="pl" data-pid="9509">Bijan Robinson</button><span class="pp">130.4</span></li><li><span class="pos">RB11</span><button type="button" class="pl" data-pid="7021">Rico Dowdle</button><span class="pp">72.9</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB4</span><button type="button" class="pl" data-pid="12512">Quinshon Judkins</button><span class="pp">26.4</span></li><li><span class="pos">WR9</span><button type="button" class="pl" data-pid="10229">Rashee Rice</button><span class="pp">19.7</span></li><li><span class="pos">RB9</span><button type="button" class="pl" data-pid="9509">Bijan Robinson</button><span class="pp">18.2</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -267,7 +297,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><div><h2>6 7</h2>
         <div class="meta"><b>6-8</b> · 815.24 PF · L2</div></div></div>
       
-      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB2</span>Christian McCaffrey<span class="pp">160.6</span></li><li><span class="pos">QB2</span>Dak Prescott<span class="pp">104.8</span></li><li><span class="pos">TE1</span>Jake Ferguson<span class="pp">77.8</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB1</span>Christian McCaffrey<span class="pp">35.6</span></li><li><span class="pos">QB9</span>Dak Prescott<span class="pp">23.3</span></li><li><span class="pos">TE4</span>Jake Ferguson<span class="pp">18.4</span></li></ul></div>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">RB2</span><button type="button" class="pl" data-pid="4034">Christian McCaffrey</button><span class="pp">160.6</span></li><li><span class="pos">QB2</span><button type="button" class="pl" data-pid="3294">Dak Prescott</button><span class="pp">104.8</span></li><li><span class="pos">TE1</span><button type="button" class="pl" data-pid="8110">Jake Ferguson</button><span class="pp">77.8</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">RB1</span><button type="button" class="pl" data-pid="4034">Christian McCaffrey</button><span class="pp">35.6</span></li><li><span class="pos">QB9</span><button type="button" class="pl" data-pid="3294">Dak Prescott</button><span class="pp">23.3</span></li><li><span class="pos">TE4</span><button type="button" class="pl" data-pid="8110">Jake Ferguson</button><span class="pp">18.4</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -276,7 +306,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><div><h2>yrkpapi</h2>
         <div class="meta"><b>5-9</b> · 822.16 PF · W1</div></div></div>
       
-      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR6</span>Emeka Egbuka<span class="pp">89.6</span></li><li><span class="pos">TE3</span>Tyler Warren<span class="pp">85.0</span></li><li><span class="pos">K1</span>Brandon Aubrey<span class="pp">83.0</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR11</span>Tee Higgins<span class="pp">18.6</span></li><li><span class="pos">K2</span>Brandon Aubrey<span class="pp">18.0</span></li><li><span class="pos">TE6</span>Tyler Warren<span class="pp">14.9</span></li></ul></div>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">WR6</span><button type="button" class="pl" data-pid="12514">Emeka Egbuka</button><span class="pp">89.6</span></li><li><span class="pos">TE3</span><button type="button" class="pl" data-pid="12518">Tyler Warren</button><span class="pp">85.0</span></li><li><span class="pos">K1</span><button type="button" class="pl" data-pid="11533">Brandon Aubrey</button><span class="pp">83.0</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR11</span><button type="button" class="pl" data-pid="6801">Tee Higgins</button><span class="pp">18.6</span></li><li><span class="pos">K2</span><button type="button" class="pl" data-pid="11533">Brandon Aubrey</button><span class="pp">18.0</span></li><li><span class="pos">TE6</span><button type="button" class="pl" data-pid="12518">Tyler Warren</button><span class="pp">14.9</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -285,7 +315,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><div><h2>Braelon Allen</h2>
         <div class="meta"><b>5-9</b> · 762.40 PF · W1</div></div></div>
       
-      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB1</span>Patrick Mahomes<span class="pp">175.0</span></li><li><span class="pos">RB16</span>Saquon Barkley<span class="pp">84.4</span></li><li><span class="pos">WR23</span>A.J. Brown<span class="pp">72.0</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">QB5</span>Patrick Mahomes<span class="pp">26.2</span></li><li><span class="pos">WR3</span>A.J. Brown<span class="pp">26.1</span></li><li><span class="pos">WR10</span>CeeDee Lamb<span class="pp">19.5</span></li></ul></div>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB1</span><button type="button" class="pl" data-pid="4046">Patrick Mahomes</button><span class="pp">175.0</span></li><li><span class="pos">RB16</span><button type="button" class="pl" data-pid="4866">Saquon Barkley</button><span class="pp">84.4</span></li><li><span class="pos">WR23</span><button type="button" class="pl" data-pid="5859">A.J. Brown</button><span class="pp">72.0</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">QB5</span><button type="button" class="pl" data-pid="4046">Patrick Mahomes</button><span class="pp">26.2</span></li><li><span class="pos">WR3</span><button type="button" class="pl" data-pid="5859">A.J. Brown</button><span class="pp">26.1</span></li><li><span class="pos">WR10</span><button type="button" class="pl" data-pid="6786">CeeDee Lamb</button><span class="pp">19.5</span></li></ul></div>
     </div>
   </li>
   <li class="rank">
@@ -294,7 +324,7 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       <div class="team"><img class="av" src="https://sleepercdn.com/uploads/ac1f715e03d9439ae0332082ccb4fddd" alt="" loading="lazy"><div><h2>Cucked By JPow’s 25 Bps</h2>
         <div class="meta"><b>3-11</b> · 739.66 PF · L4</div></div></div>
       
-      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB22</span>Lamar Jackson<span class="pp">94.4</span></li><li><span class="pos">RB12</span>Ashton Jeanty<span class="pp">88.6</span></li><li><span class="pos">RB18</span>David Montgomery<span class="pp">78.7</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR2</span>DeVonta Smith<span class="pp">28.8</span></li><li><span class="pos">QB11</span>Daniel Jones<span class="pp">22.2</span></li><li><span class="pos">WR24</span>Justin Jefferson<span class="pp">10.4</span></li></ul></div>
+      <div class="tops"><div class="lbl">Overall top performers</div><ul class="top"><li><span class="pos">QB22</span><button type="button" class="pl" data-pid="4881">Lamar Jackson</button><span class="pp">94.4</span></li><li><span class="pos">RB12</span><button type="button" class="pl" data-pid="12527">Ashton Jeanty</button><span class="pp">88.6</span></li><li><span class="pos">RB18</span><button type="button" class="pl" data-pid="5892">David Montgomery</button><span class="pp">78.7</span></li></ul><div class="lbl">Weekly top performers</div><ul class="top"><li><span class="pos">WR2</span><button type="button" class="pl" data-pid="7525">DeVonta Smith</button><span class="pp">28.8</span></li><li><span class="pos">QB11</span><button type="button" class="pl" data-pid="5870">Daniel Jones</button><span class="pp">22.2</span></li><li><span class="pos">WR24</span><button type="button" class="pl" data-pid="6794">Justin Jefferson</button><span class="pp">10.4</span></li></ul></div>
     </div>
   </li></ol><section><h2 class="sec">Playoff Odds</h2><div class="tbl"><table class="odds">
   <thead><tr><th class="tn">Team</th><th>Record</th><th>Champion</th><th>Final</th><th>Semifinals</th><th>Bye</th><th>Playoffs</th></tr></thead><tbody><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><span>superdiddy</span></span></td><td>10-4</td><td class="">29%</td><td class="">52%</td><td class="">86%</td><td class="">73%</td><td class="">98%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><span>Amver Alert🚨</span></span></td><td>10-4</td><td class="">18%</td><td class="">37%</td><td class="">73%</td><td class="">52%</td><td class="">95%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/8c1f57470cf91452d838f4c11283f98f.jpg" alt="" loading="lazy"><span>Ain&#x27;t That Herb-tastic</span></span></td><td>10-4</td><td class="">13%</td><td class="">28%</td><td class="">60%</td><td class="">36%</td><td class="">89%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg" alt="" loading="lazy"><span>Ankitty</span></span></td><td>7-7</td><td class="">9%</td><td class="">18%</td><td class="">38%</td><td class="">11%</td><td class="">65%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><span>Karans Fraudbook</span></span></td><td>8-6</td><td class="">7%</td><td class="">16%</td><td class="">38%</td><td class="">13%</td><td class="">68%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/a2b1e540f6130fba129542566222606d.jpg" alt="" loading="lazy"><span>#NoToJunie</span></span></td><td>6-8</td><td class="">7%</td><td class="">14%</td><td class="">30%</td><td class="">6%</td><td class="">52%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><span>6 7</span></span></td><td>6-8</td><td class="">7%</td><td class="">14%</td><td class="">28%</td><td class="">5%</td><td class="">50%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi</span></span></td><td>5-9</td><td class="">6%</td><td class="">12%</td><td class="">24%</td><td class="">3%</td><td class="">42%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><span>Braelon Allen</span></span></td><td>5-9</td><td class="">3%</td><td class="">6%</td><td class="">15%</td><td class="">1%</td><td class="">29%</td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/ac1f715e03d9439ae0332082ccb4fddd" alt="" loading="lazy"><span>Cucked By JPow’s 25 Bps</span></span></td><td>3-11</td><td class="">2%</td><td class="">3%</td><td class="">6%</td><td class=""><1%</td><td class="">12%</td></tr></tbody></table></div>
@@ -328,7 +358,7 @@ document.querySelectorAll('.chart').forEach(function (chart) {
 });
 </script><section><h2 class="sec">Week 7 Awards</h2><div class="awards"><div class="award"><div class="lbl">Top score</div><div class="who">superdiddy</div><div class="val">188.04 pts</div></div><div class="award"><div class="lbl">Basement</div><div class="who">Karans Fraudbook</div><div class="val">93.84 pts</div></div><div class="award"><div class="lbl">Biggest blowout</div><div class="who">superdiddy over Ain&#x27;t That Herb-tastic</div><div class="val">by 85.02</div></div><div class="award"><div class="lbl">Closest game</div><div class="who">yrkpapi over Cucked By JPow’s 25 Bps</div><div class="val">by 12.32</div></div><div class="award"><div class="lbl">Unluckiest loss</div><div class="who">6 7</div><div class="val">112.26 pts and still lost</div></div><div class="award"><div class="lbl">Luckiest win</div><div class="who">yrkpapi</div><div class="val">won with 112.64 pts</div></div></div></section>
 <footer>Records include a game against the league median each week. Top performers are points scored as a starter for that team: overall is the season through that week, weekly is that week alone. QB1, RB3, etc. is the player's rank at his position across the NFL over the same span. Stats from Sleeper. Rankings are the commissioner's own.</footer>
-</main></div><script>
+</main></div><script type="application/json" id="pl-data">{"latest":"2026","scoring":{"2024":{"sack":1.0,"fgm_40_49":4.0,"pass_int":-1.0,"pts_allow_0":10.0,"pass_2pt":2.0,"st_td":6.0,"rec_td":6.0,"fgm_30_39":3.0,"fgm_50_59":5.0,"xpmiss":-1.0,"rush_td":6.0,"rec_2pt":2.0,"st_fum_rec":1.0,"fgmiss":-1.0,"ff":1.0,"rec":0.5,"pts_allow_14_20":1.0,"fgm_0_19":3.0,"int":2.0,"def_st_fum_rec":1.0,"fum_lost":-2.0,"pts_allow_1_6":7.0,"fgm_60p":6.0,"fgm_20_29":3.0,"pts_allow_21_27":0.0,"xpm":1.0,"rush_2pt":2.0,"fum_rec":2.0,"def_st_td":6.0,"fgm_50p":0.0,"def_td":6.0,"safe":2.0,"pass_yd":0.04,"blk_kick":2.0,"pass_td":4.0,"rush_yd":0.1,"fum":0.0,"pts_allow_28_34":-1.0,"pts_allow_35p":-4.0,"fum_rec_td":6.0,"rec_yd":0.1,"def_st_ff":1.0,"pts_allow_7_13":4.0,"st_ff":1.0},"2025":{"sack":1.0,"fgm_40_49":4.0,"pass_int":-1.0,"pts_allow_0":10.0,"pass_2pt":2.0,"st_td":6.0,"rec_td":6.0,"fgm_30_39":3.0,"fgm_50_59":5.0,"xpmiss":-1.0,"rush_td":6.0,"rec_2pt":2.0,"st_fum_rec":1.0,"fgmiss":-1.0,"ff":1.0,"rec":0.5,"pts_allow_14_20":1.0,"fgm_0_19":3.0,"int":2.0,"def_st_fum_rec":1.0,"fum_lost":-2.0,"pts_allow_1_6":7.0,"fgm_60p":6.0,"fgm_20_29":3.0,"pts_allow_21_27":0.0,"xpm":1.0,"rush_2pt":2.0,"fum_rec":2.0,"def_st_td":6.0,"fgm_50p":0.0,"def_td":6.0,"safe":2.0,"pass_yd":0.04,"blk_kick":2.0,"pass_td":4.0,"rush_yd":0.1,"fum":0.0,"pts_allow_28_34":-1.0,"pts_allow_35p":-4.0,"fum_rec_td":6.0,"rec_yd":0.1,"def_st_ff":1.0,"pts_allow_7_13":4.0,"st_ff":1.0},"2026":{"sack":1.0,"fgm_40_49":4.0,"pass_int":-1.0,"pts_allow_0":10.0,"pass_2pt":2.0,"st_td":6.0,"rec_td":6.0,"fgm_30_39":3.0,"fgm_50_59":5.0,"xpmiss":-1.0,"rush_td":6.0,"rec_2pt":2.0,"st_fum_rec":1.0,"fgmiss":-1.0,"ff":1.0,"rec":0.5,"pts_allow_14_20":1.0,"fgm_0_19":3.0,"int":2.0,"def_st_fum_rec":1.0,"fum_lost":-2.0,"pts_allow_1_6":7.0,"fgm_60p":6.0,"fgm_20_29":3.0,"pts_allow_21_27":0.0,"xpm":1.0,"rush_2pt":2.0,"fum_rec":2.0,"def_st_td":6.0,"fgm_50p":0.0,"def_td":6.0,"safe":2.0,"pass_yd":0.04,"blk_kick":2.0,"pass_td":4.0,"rush_yd":0.1,"fum":0.0,"pts_allow_28_34":-1.0,"pts_allow_35p":-4.0,"fum_rec_td":6.0,"rec_yd":0.1,"def_st_ff":1.0,"pts_allow_7_13":4.0,"st_ff":1.0}},"players":{"10229":{"n":"Rashee Rice","p":"WR","t":"KC","no":4,"age":26,"exp":3,"col":"SMU","inj":"Out","rv":[["2026","Braelon Allen",6,31.5,31.5],["2025","#NoToJunie",17,123.6,123.6],["2024","Amver Alert🚨",5,52.9,52.9]]},"11533":{"n":"Brandon Aubrey","p":"K","t":"DAL","no":17,"age":31,"exp":3,"col":"Notre Dame","inj":null,"rv":[["2026","yrkpapi",6,44.0,44.0],["2025","yrkpapi",17,179.6,179.6],["2024","Amver Alert🚨",17,173.0,160.0]]},"11564":{"n":"Drake Maye","p":"QB","t":"NE","no":10,"age":24,"exp":2,"col":"North Carolina","inj":null,"rv":[["2026","Karans Sportsbook",6,118.02,85.1],["2025","Ankitty",17,343.72,273.86]]},"11566":{"n":"Jayden Daniels","p":"QB","t":"WAS","no":5,"age":25,"exp":2,"col":"LSU","inj":null,"rv":[["2026","8-4 god team ",6,85.66,85.66],["2025","Karans Fraudbook",9,113.56,97.34],["2024","WE DID NOT DO IT",17,360.6,304.38]]},"12512":{"n":"Quinshon Judkins","p":"RB","t":"CLE","no":10,"age":22,"exp":1,"col":"Ohio State","inj":"Out","rv":[["2026","Justin Beer Loyalist",6,47.3,47.3],["2025","#NoToJunie",17,156.8,132.2]]},"12514":{"n":"Emeka Egbuka","p":"WR","t":"TB","no":2,"age":24,"exp":1,"col":"Ohio State","inj":null,"rv":[["2026","6 7",6,57.1,42.9],["2025","yrkpapi",17,162.9,141.7]]},"12518":{"n":"Tyler Warren","p":"TE","t":"IND","no":84,"age":24,"exp":1,"col":"Penn State","inj":"Out","rv":[["2026","Amver Alert🚨",6,54.9,54.9],["2025","yrkpapi",17,145.4,134.1]]},"12527":{"n":"Ashton Jeanty","p":"RB","t":"LV","no":2,"age":22,"exp":1,"col":"Boise State","inj":null,"rv":[["2026","Amver Alert🚨",6,87.4,87.4],["2025","Cucked By JPow’s 25 Bps",17,206.7,206.7]]},"1479":{"n":"Keenan Allen","p":"WR","t":"IND","no":10,"age":34,"exp":13,"col":"California","inj":null,"rv":[["2026","NShah19",2,7.0,0],["2026","I’m Whipped by Bezos",1,6.2,0],["2025","Ain't That Herb-tastic",15,126.0,69.3],["2024","Ankitty",17,147.4,120.6]]},"2133":{"n":"Davante Adams","p":"WR","t":"LAR","no":17,"age":33,"exp":12,"col":"Fresno State","inj":"Out","rv":[["2026","Justin Beer Loyalist",6,87.0,87.0],["2025","Ankitty",17,192.9,192.9],["2024","yrkpapi",17,181.0,181.0]]},"3294":{"n":"Dak Prescott","p":"QB","t":"DAL","no":4,"age":33,"exp":10,"col":"Mississippi State","inj":null,"rv":[["2026","I’m Whipped by Bezos",6,109.86,109.86],["2025","6 7",17,323.08,278.08],["2024","Ankitty",13,124.52,72.98]]},"4034":{"n":"Christian McCaffrey","p":"RB","t":"SF","no":23,"age":30,"exp":9,"col":"Stanford","inj":null,"rv":[["2026","6 7",6,108.0,108.0],["2025","6 7",17,356.9,356.9],["2024","Braelon Allen",13,40.3,40.3]]},"4046":{"n":"Patrick Mahomes","p":"QB","t":"KC","no":15,"age":31,"exp":9,"col":"Texas Tech","inj":null,"rv":[["2026","Braelon Allen",6,97.06,97.06],["2025","Braelon Allen",17,296.18,296.18],["2024","Ankitty",11,217.12,217.12],["2024","Braelon Allen",5,76.4,76.4]]},"4866":{"n":"Saquon Barkley","p":"RB","t":"PHI","no":26,"age":29,"exp":8,"col":"Penn State","inj":"Out","rv":[["2026","yrkpapi",6,21.0,21.0],["2025","Braelon Allen",17,213.8,213.8],["2024","superdiddy",17,338.8,338.8]]},"4881":{"n":"Lamar Jackson","p":"QB","t":"BAL","no":8,"age":29,"exp":8,"col":"Louisville","inj":"Out","rv":[["2026","NShah19",6,80.08,80.08],["2025","Cucked By JPow’s 25 Bps",17,200.44,200.44],["2024","Not Last Place == W",17,411.4,411.4]]},"4892":{"n":"Baker Mayfield","p":"QB","t":"TB","no":6,"age":31,"exp":8,"col":"Oklahoma","inj":"Out","rv":[["2026","8-4 god team ",4,37.1,0],["2025","Ain't That Herb-tastic",17,268.7,159.28],["2024","yrkpapi",13,271.3,220.06],["2024","WE DID NOT DO IT",1,9.52,9.52]]},"4984":{"n":"Josh Allen","p":"QB","t":"BUF","no":17,"age":30,"exp":8,"col":"Wyoming","inj":null,"rv":[["2026","Amver Alert🚨",6,164.76,164.76],["2025","#NoToJunie",17,374.62,374.62],["2024","Ducky Irving",17,385.04,385.04]]},"5045":{"n":"Courtland Sutton","p":"WR","t":"DEN","no":14,"age":31,"exp":8,"col":"SMU","inj":null,"rv":[["2026","I’m Whipped by Bezos",3,12.2,6.1],["2026","superdiddy",2,11.7,8.8],["2025","Amver Alert🚨",17,181.7,140.1],["2024","superdiddy",10,118.18,71.1],["2024","yrkpapi",2,8.9,5.8],["2024","Karans Fraud-book",1,4.2,4.2],["2024","Not Last Place == W",1,13.12,13.12]]},"5850":{"n":"Josh Jacobs","p":"RB","t":"GB","no":8,"age":28,"exp":7,"col":"Alabama","inj":"NA","rv":[["2026","I’m Whipped by Bezos",6,0,0],["2025","Ain't That Herb-tastic",17,219.1,219.1],["2024","yrkpapi",17,264.0,242.6]]},"5859":{"n":"A.J. Brown","p":"WR","t":"NE","no":1,"age":29,"exp":7,"col":"Ole Miss","inj":"Questionable","rv":[["2026","Braelon Allen",6,8.3,4.1],["2025","Braelon Allen",17,181.3,181.3],["2024","Karans Fraud-book",17,183.4,183.4]]},"5870":{"n":"Daniel Jones","p":"QB","t":"IND","no":17,"age":29,"exp":7,"col":"Duke","inj":null,"rv":[["2026","6 7",2,22.44,0],["2025","Cucked By JPow’s 25 Bps",3,62.48,45.4],["2025","6 7",2,28.2,28.2],["2025","Amver Alert🚨",1,16.5,0],["2025","yrkpapi",1,1.8,1.8]]},"5892":{"n":"David Montgomery","p":"RB","t":"HOU","no":32,"age":29,"exp":7,"col":"Iowa State","inj":"Out","rv":[["2026","yrkpapi",5,42.0,42.0],["2026","8-4 god team ",1,0,0],["2025","Cucked By JPow’s 25 Bps",17,148.92,127.92],["2024","yrkpapi",12,138.72,138.72],["2024","Braelon Allen",4,65.0,65.0]]},"6786":{"n":"CeeDee Lamb","p":"WR","t":"DAL","no":88,"age":27,"exp":6,"col":"Oklahoma","inj":null,"rv":[["2026","I’m Whipped by Bezos",6,107.1,107.1],["2025","Braelon Allen",13,132.3,132.3],["2025","6 7",4,30.2,30.2],["2024","... Sanak al-Gaib!",17,212.9,212.9]]},"6794":{"n":"Justin Jefferson","p":"WR","t":"MIN","no":18,"age":27,"exp":6,"col":"LSU","inj":null,"rv":[["2026","superdiddy",6,54.2,54.2],["2025","Cucked By JPow’s 25 Bps",17,145.1,128.6],["2024","Not Last Place == W",17,259.08,259.08]]},"6801":{"n":"Tee Higgins","p":"WR","t":"CIN","no":5,"age":27,"exp":6,"col":"Clemson","inj":null,"rv":[["2026","Karans Sportsbook",6,61.8,61.8],["2025","yrkpapi",17,166.4,161.7],["2024","Not Last Place == W",17,178.3,163.9]]},"6813":{"n":"Jonathan Taylor","p":"RB","t":"IND","no":28,"age":27,"exp":6,"col":"Wisconsin","inj":null,"rv":[["2026","Braelon Allen",6,111.0,111.0],["2025","superdiddy",17,334.4,334.4],["2024","WE DID NOT DO IT",17,211.2,211.2]]},"6904":{"n":"Jalen Hurts","p":"QB","t":"PHI","no":1,"age":28,"exp":6,"col":"Oklahoma","inj":"IR","rv":[["2026","Ankitty",6,83.02,83.02],["2025","superdiddy",17,305.06,270.14],["2024","superdiddy",17,320.12,241.4]]},"7021":{"n":"Rico Dowdle","p":"RB","t":"PIT","no":13,"age":28,"exp":6,"col":"South Carolina","inj":null,"rv":[["2026","I’m Whipped by Bezos",6,14.9,8.5],["2025","#NoToJunie",13,176.0,167.1],["2024","Not Last Place == W",14,144.2,105.2],["2024","Braelon Allen",1,3.7,0]]},"7525":{"n":"DeVonta Smith","p":"WR","t":"PHI","no":6,"age":27,"exp":5,"col":"Alabama","inj":null,"rv":[["2026","Baltimore Avians",5,39.0,39.0],["2026","Amver Alert🚨",1,17.0,17.0],["2025","Cucked By JPow’s 25 Bps",17,156.6,140.6],["2024","superdiddy",17,165.4,115.9]]},"7547":{"n":"Amon-Ra St. Brown","p":"WR","t":"DET","no":14,"age":26,"exp":5,"col":"USC","inj":null,"rv":[["2026","Amver Alert🚨",6,85.7,85.7],["2025","Amver Alert🚨",17,246.1,246.1],["2024","Amver Alert🚨",15,227.78,227.78],["2024","yrkpapi",2,20.2,20.2]]},"7564":{"n":"Ja'Marr Chase","p":"WR","t":"CIN","no":1,"age":26,"exp":5,"col":"LSU","inj":null,"rv":[["2026","NShah19",6,66.4,66.4],["2025","superdiddy",17,231.5,231.5],["2024","Amver Alert🚨",17,318.9,318.9]]},"8110":{"n":"Jake Ferguson","p":"TE","t":"DAL","no":87,"age":27,"exp":4,"col":"Wisconsin","inj":null,"rv":[["2026","6 7",1,1.6,0],["2026","Amver Alert🚨",1,2.3,2.3],["2025","6 7",15,129.0,107.6],["2024","Not Last Place == W",8,51.8,51.8],["2024","yrkpapi",2,3.0,3.0]]},"8130":{"n":"Trey McBride","p":"TE","t":"ARI","no":85,"age":26,"exp":4,"col":"Colorado State","inj":null,"rv":[["2026","Justin Beer Loyalist",6,78.6,78.6],["2025","Amver Alert🚨",17,242.9,242.9],["2024","Amver Alert🚨",17,178.3,170.0]]},"8138":{"n":"James Cook","p":"RB","t":"BUF","no":4,"age":27,"exp":4,"col":"Georgia","inj":null,"rv":[["2026","Karans Sportsbook",6,108.6,108.6],["2025","Amver Alert🚨",17,284.2,284.2],["2024","Karans Fraud-book",17,241.9,216.1]]},"8144":{"n":"Chris Olave","p":"WR","t":"NO","no":12,"age":26,"exp":4,"col":"Ohio State","inj":null,"rv":[["2026","8-4 god team ",6,91.5,91.5],["2025","superdiddy",14,191.0,191.0],["2025","yrkpapi",2,17.3,0],["2025","Cucked By JPow’s 25 Bps",1,10.7,10.7],["2024","Amver Alert🚨",17,60.7,33.3]]},"8150":{"n":"Kyren Williams","p":"RB","t":"LAR","no":23,"age":26,"exp":4,"col":"Notre Dame","inj":null,"rv":[["2026","NShah19",6,104.0,104.0],["2025","Karans Fraudbook",17,235.7,235.7],["2024","Ducky Irving",17,255.1,255.1]]},"9221":{"n":"Jahmyr Gibbs","p":"RB","t":"DET","no":0,"age":24,"exp":3,"col":"Alabama","inj":null,"rv":[["2026","Justin Beer Loyalist",6,140.2,140.2],["2025","Ankitty",17,309.6,309.6],["2024","Karans Fraud-book",17,293.4,293.4]]},"9226":{"n":"De'Von Achane","p":"RB","t":"MIA","no":28,"age":25,"exp":3,"col":"Texas A&M","inj":"IR","rv":[["2026","superdiddy",3,21.1,21.1],["2025","Amver Alert🚨",17,289.3,289.3],["2024","WE DID NOT DO IT",13,185.6,185.6],["2024","... Sanak al-Gaib!",4,57.2,57.2]]},"9484":{"n":"Tucker Kraft","p":"TE","t":"GB","no":85,"age":25,"exp":3,"col":"South Dakota State","inj":null,"rv":[["2026","superdiddy",6,43.9,43.9],["2025","Ain't That Herb-tastic",9,101.2,70.9],["2024","Not Last Place == W",7,50.7,25.9],["2024","Amver Alert🚨",2,25.3,22.8],["2024","Braelon Allen",1,5.6,5.6]]},"9488":{"n":"Jaxon Smith-Njigba","p":"WR","t":"SEA","no":11,"age":24,"exp":3,"col":"Ohio State","inj":null,"rv":[["2026","Ankitty",6,140.36,140.36],["2025","Karans Fraudbook",17,289.0,289.0],["2024","Braelon Allen",17,199.7,160.1]]},"9493":{"n":"Puka Nacua","p":"WR","t":"LAR","no":12,"age":25,"exp":3,"col":"BYU","inj":null,"rv":[["2026","8-4 god team ",6,73.3,73.3],["2025","Ain't That Herb-tastic",17,289.5,289.5],["2024","Braelon Allen",17,167.1,152.5]]},"9509":{"n":"Bijan Robinson","p":"RB","t":"ATL","no":7,"age":24,"exp":3,"col":"Texas","inj":null,"rv":[["2026","Baltimore Avians",6,118.5,118.5],["2025","#NoToJunie",17,325.5,325.5],["2024","Amver Alert🚨",17,280.9,280.9]]},"9753":{"n":"Zach Charbonnet","p":"RB","t":"SEA","no":26,"age":25,"exp":3,"col":"UCLA","inj":"PUP","rv":[["2026","Baltimore Avians",6,0,0],["2025","Karans Fraudbook",12,119.8,76.1],["2025","#NoToJunie",5,34.4,1.0],["2024","WE DID NOT DO IT",10,117.5,87.5]]}}}</script><script>
 // Every table sorts by any column. A cell's data-v (if set) is its sort value; otherwise it's read from the text:
 // numbers, $ and %, records like 9-1 (by win %), <1% / >99%, and runs of 🏆 / 🚽 (by count). Blanks sort last.
 (function () {
@@ -422,5 +452,174 @@ document.querySelectorAll('.chart').forEach(function (chart) {
   if (cur && nav.scrollWidth > nav.clientWidth) {
     nav.scrollLeft += cur.getBoundingClientRect().left - nav.getBoundingClientRect().left - (nav.clientWidth - cur.offsetWidth) / 2;
   }
+})();
+</script><script>
+(function () {
+  var data = document.getElementById('pl-data');
+  if (!data) return;
+  var D = JSON.parse(data.textContent), API = 'https://api.sleeper.com/stats/nfl/player/';
+  var REC = [['rec_tgt', 'Tgt'], ['rec', 'Rec'], ['rec_yd', 'Rec Yd'], ['rec_td', 'Rec TD']];
+  var COLS = {
+    QB: [['pass_yd', 'Pass Yd'], ['pass_td', 'Pass TD'], ['pass_int', 'INT'], ['rush_yd', 'Rush Yd'], ['rush_td', 'Rush TD']],
+    RB: [['rush_att', 'Car'], ['rush_yd', 'Rush Yd'], ['rush_td', 'Rush TD'], ['rec', 'Rec'], ['rec_yd', 'Rec Yd'], ['rec_td', 'Rec TD']],
+    WR: REC, TE: REC,
+    K: [['fgm', 'FGM'], ['fga', 'FGA'], ['xpm', 'XPM']],
+    DEF: [['sack', 'Sack'], ['int', 'INT'], ['fum_rec', 'FR'], ['def_td', 'TD'], ['pts_allow', 'PA']]
+  };
+  var cache = {}, dlg;
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+  function num(v) { return v ? String(Math.round(v * 10) / 10) : '0'; }
+  function pts(v) { return v.toFixed(1); }
+  function ordinal(n) { return n + (['th', 'st', 'nd', 'rd'][(n % 100 - 20) % 10] || ['th', 'st', 'nd', 'rd'][n % 100] || 'th'); }
+  // Seasons before the league existed use its earliest scoring; later ones its latest.
+  function scoring(season) {
+    var have = Object.keys(D.scoring).sort();
+    if (!have.length) return {};
+    return D.scoring[season] || D.scoring[season < have[0] ? have[0] : have[have.length - 1]];
+  }
+  function score(stats, sc) {
+    var t = 0;
+    for (var k in sc) if (typeof stats[k] === 'number') t += stats[k] * sc[k];
+    return t;
+  }
+
+  // Every season of a player's career, newest first: [{season, games: [{wk, opp, played, stats, pts}]}].
+  function load(pid, p) {
+    if (cache[pid]) return cache[pid];
+    var last = +D.latest, first = last - (p.exp == null ? 4 : Math.min(p.exp, 25)), years = [];
+    for (var y = last; y >= first; y--) years.push(y);
+    cache[pid] = Promise.all(years.map(function (y) {
+      return fetch(API + encodeURIComponent(pid) + '?season_type=regular&season=' + y + '&grouping=week')
+        .then(function (r) { return r.ok ? r.json() : {}; })
+        .catch(function () { return null; })
+        .then(function (weeks) { return { season: String(y), weeks: weeks }; });
+    })).then(function (list) {
+      if (list.every(function (s) { return s.weeks === null; })) throw new Error('offline');
+      return list.filter(function (s) { return s.weeks; }).map(function (s) {
+        var sc = scoring(s.season), games = [];
+        Object.keys(s.weeks).sort(function (a, b) { return a - b; }).forEach(function (w) {
+          var g = s.weeks[w];
+          if (!g || !g.stats) return;
+          var st = g.stats;
+          games.push({ wk: +w, team: g.team, opp: g.opponent ? (g.is_away_team ? '@' : '') + g.opponent : '',
+                       played: (st.gp || 0) > 0 || (st.pts_ppr || 0) !== 0, stats: st, pts: score(st, sc) });
+        });
+        return { season: s.season, games: games };
+      }).filter(function (s) { return s.games.some(function (g) { return g.played; }); });
+    });
+    cache[pid].catch(function () { delete cache[pid]; });
+    return cache[pid];
+  }
+
+  function table(head, rows, cls) {
+    return '<div class="tbl"><table' + (cls ? ' class="' + cls + '"' : '') + '><thead><tr>' +
+      head.map(function (h, i) { return '<th' + (i < 2 ? ' class="tn"' : '') + '>' + h + '</th>'; }).join('') +
+      '</tr></thead><tbody>' + rows.join('') + '</tbody></table></div>';
+  }
+
+  function career(p, seasons) {
+    var cols = COLS[p.p] || [];
+    var rows = seasons.map(function (s) {
+      var played = s.games.filter(function (g) { return g.played; }), tot = {}, total = 0, teams = {};
+      played.forEach(function (g) {
+        total += g.pts;
+        if (g.team) teams[g.team] = 1;
+        cols.forEach(function (c) { tot[c[0]] = (tot[c[0]] || 0) + (g.stats[c[0]] || 0); });
+      });
+      return '<tr class="pc-season" data-season="' + s.season + '" tabindex="0"><td class="tn">' + s.season + '</td><td class="tn">' +
+        esc(Object.keys(teams).join('/')) + '</td><td>' + played.length + '</td><td><b>' + pts(total) + '</b></td><td>' +
+        pts(played.length ? total / played.length : 0) + '</td>' +
+        cols.map(function (c) { return '<td>' + num(tot[c[0]]) + '</td>'; }).join('') + '</tr>';
+    });
+    return table(['Season', 'Team', 'GP', 'Pts', 'PPG'].concat(cols.map(function (c) { return c[1]; })), rows, 'pc-career');
+  }
+
+  function gameLog(p, s) {
+    var cols = COLS[p.p] || [];
+    var rows = s.games.map(function (g) {
+      if (!g.played) {
+        return '<tr class="dnp"><td class="tn">' + g.wk + '</td><td class="tn">' + esc(g.opp) + '</td><td colspan="' +
+          (cols.length + 1) + '">Did not play</td></tr>';
+      }
+      return '<tr><td class="tn">' + g.wk + '</td><td class="tn">' + esc(g.opp) + '</td><td><b>' + pts(g.pts) + '</b></td>' +
+        cols.map(function (c) { return '<td>' + num(g.stats[c[0]]) + '</td>'; }).join('') + '</tr>';
+    });
+    return '<h3>' + s.season + ' games</h3>' + table(['Wk', 'Opp', 'Pts'].concat(cols.map(function (c) { return c[1]; })), rows);
+  }
+
+  function league(p) {
+    if (!p.rv.length) return '';
+    var rows = p.rv.map(function (r) {
+      return '<tr><td class="tn">' + r[0] + '</td><td class="tn">' + esc(r[1]) + '</td><td>' + r[2] + '</td><td>' +
+        pts(r[3]) + '</td><td><b>' + pts(r[4]) + '</b></td></tr>';
+    });
+    return '<h3>On Red Vines rosters</h3>' + table(['Season', 'Team', 'Weeks', 'Pts', 'As starter'], rows);
+  }
+
+  function header(pid, p) {
+    var photo = p.p === 'DEF' ? 'https://sleepercdn.com/images/team_logos/nfl/' + pid.toLowerCase() + '.png'
+                              : 'https://sleepercdn.com/content/nfl/players/thumb/' + encodeURIComponent(pid) + '.jpg';
+    var line1 = [p.p, p.t || 'Free agent', p.no != null && p.p !== 'DEF' ? '#' + p.no : ''].filter(Boolean).join(' · ');
+    var line2 = p.p === 'DEF' ? '' : [p.age ? 'Age ' + p.age : '', p.exp == null ? '' : p.exp ? ordinal(p.exp + 1) + ' season' : 'Rookie',
+                                      p.col].filter(Boolean).join(' · ');
+    return '<div class="pc-head"><img class="pc-photo" src="' + photo + '" alt="" onerror="this.style.visibility=\'hidden\'">' +
+      '<div class="pc-id"><div class="pc-name">' + esc(p.n) + (p.inj ? ' <span class="pc-inj">' + esc(p.inj) + '</span>' : '') + '</div>' +
+      '<div class="pc-sub">' + esc(line1) + '</div>' + (line2 ? '<div class="pc-sub">' + esc(line2) + '</div>' : '') + '</div>' +
+      '<button type="button" class="pc-x" aria-label="Close">&times;</button></div>';
+  }
+
+  function open(pid) {
+    var p = D.players[pid];
+    if (!p) return;
+    if (!dlg) {
+      dlg = document.createElement('dialog');
+      dlg.className = 'pcard';
+      document.body.appendChild(dlg);
+      dlg.addEventListener('click', function (ev) {
+        if (ev.target === dlg || ev.target.closest('.pc-x')) dlg.close();
+        var row = ev.target.closest('.pc-season');
+        if (row) pick(row);
+      });
+      dlg.addEventListener('keydown', function (ev) {
+        var row = ev.target.closest && ev.target.closest('.pc-season');
+        if (row && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); pick(row); }
+      });
+    }
+    dlg.setAttribute('aria-label', p.n);
+    dlg.innerHTML = header(pid, p) + '<div class="pc-body">' + league(p) +
+      '<h3>Career</h3><div class="pc-career-box"><p class="pc-note">Loading stats from Sleeper…</p></div>' +
+      '<div class="pc-log"></div><p class="pc-note">Stats from Sleeper. Points use Red Vines scoring. Tap a season to see its games.</p></div>';
+    if (!dlg.open) dlg.showModal();
+    dlg.scrollTop = 0;
+    var box = dlg.querySelector('.pc-career-box');
+    load(pid, p).then(function (seasons) {
+      if (dlg.getAttribute('aria-label') !== p.n) return;  // another card was opened meanwhile
+      if (!seasons.length) { box.innerHTML = '<p class="pc-note">No NFL games yet.</p>'; return; }
+      dlg._seasons = seasons;
+      dlg._player = p;
+      box.innerHTML = career(p, seasons);
+      pick(box.querySelector('.pc-season'));
+    }).catch(function () {
+      box.innerHTML = '<p class="pc-note">Couldn’t reach Sleeper. Check your connection and tap the name again.</p>';
+    });
+  }
+
+  function pick(row) {
+    if (!row || !dlg._seasons) return;
+    var season = row.dataset.season;
+    dlg.querySelectorAll('.pc-season').forEach(function (r) { r.classList.toggle('cur', r === row); });
+    var s = dlg._seasons.filter(function (x) { return x.season === season; })[0];
+    dlg.querySelector('.pc-log').innerHTML = gameLog(dlg._player, s);
+  }
+
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest && ev.target.closest('button.pl');
+    if (b) open(b.dataset.pid);
+  });
 })();
 </script></body></html>

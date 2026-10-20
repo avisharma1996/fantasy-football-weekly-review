@@ -82,7 +82,7 @@ def load_players(ids):
     """Map every player id to name and position. Sleeper's player list is large, so keep a slim local copy."""
     names = json.loads(PLAYERS.read_text(encoding="utf-8")) if PLAYERS.exists() else {}
     stale = not PLAYERS.exists() or time.time() - PLAYERS.stat().st_mtime > 7 * 86400
-    old_format = names and "fpos" not in next(iter(names.values()))
+    old_format = names and "exp" not in next(iter(names.values()))
     if stale or old_format or any(i not in names for i in ids):
         print("Downloading Sleeper player list...")
         names = {}
@@ -92,8 +92,11 @@ def load_players(ids):
                 name = f"{p.get('first_name', '')} {p.get('last_name', '')} D/ST".strip()
             else:
                 name = p.get("full_name") or f"{p.get('first_name', '')} {p.get('last_name', '')}".strip()
-            # fpos: every lineup position the player is eligible for.
-            names[pid] = {"name": name, "pos": pos, "fpos": p.get("fantasy_positions") or [pos]}
+            # fpos: every lineup position the player is eligible for. The rest is for the player cards.
+            names[pid] = {"name": name, "pos": pos, "fpos": p.get("fantasy_positions") or [pos],
+                          "team": p.get("team"), "age": p.get("age"), "exp": p.get("years_exp"),
+                          "no": p.get("number"), "college": p.get("college"), "inj": p.get("injury_status"),
+                          "active": p.get("active")}
         PLAYERS.parent.mkdir(exist_ok=True)
         PLAYERS.write_text(json.dumps(names), encoding="utf-8")
     return names
@@ -525,6 +528,18 @@ def fetch_moves(league_id):
                          "teams": list(dict.fromkeys(rids)), "adds": len(rids)} for pid, rids in traveled]}
 
 
+def fetch_rosters(league_id):
+    """For the player cards: the league's scoring, and each player's time on each roster
+    as {player_id: {roster_id: [weeks rostered, points, points as a starter]}}."""
+    league = get(f"/league/{league_id}")
+    rostered, _ = rostered_points(league_id)
+    players = {}
+    for (rid, pid), weeks in rostered.items():
+        players.setdefault(pid, {})[rid] = [len(weeks), round(sum(p for p, _ in weeks.values()), 2),
+                                            round(sum(s for _, s in weeks.values()), 2)]
+    return {"scoring": league.get("scoring_settings") or {}, "players": players}
+
+
 def fetch_draft(league_id):
     """Each draft pick's season finish at his position compared with where he went at that position."""
     league = get(f"/league/{league_id}")
@@ -674,9 +689,15 @@ def new_week(week, season=None):
     faab = WEEKS / season / "faab.json"
     faab.write_text(json.dumps(fetch_faab(seasons[season]), indent=1, ensure_ascii=False), encoding="utf-8")
     HISTORY.write_text(json.dumps(fetch_history(seasons), indent=1, ensure_ascii=False), encoding="utf-8")
-    for name, fetch in (("trades", fetch_trades), ("draft", fetch_draft), ("moves", fetch_moves)):
+    for name, fetch in (("trades", fetch_trades), ("draft", fetch_draft), ("moves", fetch_moves),
+                        ("rosters", fetch_rosters)):
         (WEEKS / season / f"{name}.json").write_text(json.dumps(fetch(seasons[season]), indent=1, ensure_ascii=False),
                                                      encoding="utf-8")
+    # Past seasons don't change, so their roster history only needs pulling once.
+    for s, league_id in seasons.items():
+        path = WEEKS / s / "rosters.json"
+        if s != season and (WEEKS / s).is_dir() and not path.exists():
+            path.write_text(json.dumps(fetch_rosters(league_id), indent=1, ensure_ascii=False), encoding="utf-8")
     if txt.exists():
         print(f"{txt.relative_to(ROOT)} already exists. Kept your rankings and refreshed only the stats.")
         return
@@ -784,6 +805,65 @@ def avatar(t):
     return f'<span class="av ph">{html.escape(t["name"][:1].upper())}</span>'
 
 
+# Player cards. build() fills this in; pl() notes every player a page mentions so page() can embed just their details.
+CARDS = {"players": {}, "ids": {}, "hist": {}, "scoring": {}, "latest": "", "on_page": set()}
+
+
+def setup_cards(seasons):
+    """Load player details and each player's history on this league's rosters, for pl() and PLAYER_JS."""
+    try:
+        players = load_players(set())
+    except OSError:  # offline: use whatever's cached
+        players = read_json(PLAYERS) or {}
+    ids, by_name = {}, {}
+    for pid, p in players.items():
+        key = (p["name"].lower(), p["pos"])
+        # Names aren't unique; prefer the player who's on a team.
+        if key not in ids or (p.get("team") and not players[ids[key]].get("team")):
+            ids[key] = pid
+    for (name, _), pid in list(ids.items()):
+        by_name.setdefault(name, []).append(pid)
+    ids.update({name: pids[0] for name, pids in by_name.items() if len(pids) == 1})
+    hist, scoring = {}, {}
+    for s in seasons:
+        rosters = read_json(WEEKS / s / "rosters.json")
+        if not rosters:
+            continue
+        scoring[s] = rosters["scoring"]
+        teams = read_json(week_paths(s, weeks_written(s)[-1])[1])["teams"]
+        for pid, by_roster in rosters["players"].items():
+            for rid, (weeks, pts, started) in by_roster.items():
+                hist.setdefault(pid, []).append([s, teams.get(rid, {}).get("name", f"Team {rid}"), weeks, pts, started])
+    for rows in hist.values():
+        rows.sort(key=lambda r: (r[0], r[2]), reverse=True)
+    CARDS.update(players=players, ids=ids, hist=hist, scoring=scoring, latest=seasons[-1])
+
+
+def pl(p):
+    """A player's name as a button that opens his card. `p` has name and pos, plus his Sleeper id as "player" if known."""
+    name, ids = p["name"], CARDS["ids"]
+    pid = p.get("player") or ids.get((name.lower(), p.get("pos") or "")) or ids.get(name.lower())
+    if pid not in CARDS["players"]:
+        return html.escape(name)
+    CARDS["on_page"].add(pid)
+    return f'<button type="button" class="pl" data-pid="{html.escape(pid)}">{html.escape(name)}</button>'
+
+
+def card_data():
+    """The details PLAYER_JS needs for every player this page mentions."""
+    if not CARDS["on_page"]:
+        return ""
+    players = {}
+    for pid in sorted(CARDS["on_page"]):
+        p = CARDS["players"][pid]
+        players[pid] = {"n": p["name"], "p": p["pos"], "t": p.get("team"), "no": p.get("no"), "age": p.get("age"),
+                        "exp": p.get("exp"), "col": p.get("college"), "inj": p.get("inj"), "rv": CARDS["hist"].get(pid, [])}
+    CARDS["on_page"].clear()
+    blob = json.dumps({"latest": CARDS["latest"], "scoring": CARDS["scoring"], "players": players},
+                      separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")
+    return f'<script type="application/json" id="pl-data">{blob}</script>'
+
+
 def sidebar(season, base, site, current=None):
     """Power rankings by season, plus league and history links. `current` marks a non-rankings page."""
     lw = site["latest_week"]
@@ -815,7 +895,7 @@ def page(data, base, side, nav, kicker, heading, body, footer, description):
     logo = f'<img class="logo" src="{e(data["league_avatar"])}" alt="">' if data.get("league_avatar") else ""
     return PAGE.format(site_name=e(SITE_NAME), description=e(description), side=side, logo=logo, kicker=kicker,
                        heading=heading, nav=nav, body=body, footer=footer, css=CSS,
-                       theme_head=THEME_HEAD, scripts=SORT_JS + THEME_JS + MOBILE_JS)
+                       theme_head=THEME_HEAD, scripts=card_data() + SORT_JS + THEME_JS + MOBILE_JS + PLAYER_JS)
 
 
 def tiles(title, items):
@@ -859,7 +939,7 @@ def render_week(data, content, prev_rank, all_weeks, site, base, rank_history=()
             d = prev_rank.index(rid) + 1 - i
             move = (f'<span class="mv up">▲{d}</span>' if d > 0 else
                     f'<span class="mv down">▼{-d}</span>' if d < 0 else '<span class="mv same">–</span>')
-        chips = lambda picks: "".join(f'<li><span class="pos">{e(p.get("rank") or p["pos"])}</span>{e(p["name"])}'
+        chips = lambda picks: "".join(f'<li><span class="pos">{e(p.get("rank") or p["pos"])}</span>{pl(p)}'
                                       f'<span class="pp">{p["pts"]:.1f}</span></li>' for p in picks)
         tops = "".join(f'<div class="lbl">{label}</div><ul class="top">{chips(picks)}</ul>'
                        for label, picks in (("Overall top performers", t["top"]),
@@ -960,7 +1040,7 @@ def render_trades(trades, data, site):
         best = max(t["sides"], key=lambda s: s["total"])
         sides = []
         for s in t["sides"]:
-            items = "".join(f'<li><span class="pos">{e(p["pos"])}</span>{e(p["name"])}<span class="pp">{p["pts"]:.1f}</span></li>'
+            items = "".join(f'<li><span class="pos">{e(p["pos"])}</span>{pl(p)}<span class="pp">{p["pts"]:.1f}</span></li>'
                             for p in s["players"])
             items += "".join(f'<li class="note">{p["season"]} round {p["round"]} pick'
                              + (f' (from {e(teams.get(p["from"], {}).get("name", "?"))})' if p["from"] != s["roster"] else "")
@@ -1010,7 +1090,7 @@ def render_draft(draft, data, site, all_drafts, managers):
     def line(p):
         stayed = (" · kept all season" if draft["complete"] else " · still on roster") if p.get("kept", True) else             f' · gone after {p.get("team_weeks", 0)} wk{"s" if p.get("team_weeks", 0) != 1 else ""}'
         return (f'<li><span class="amt {"up" if p["value"] > 0 else "down" if p["value"] < 0 else ""}">'
-                f'{p["value"]:+d}</span><div><b>{e(p["name"])}</b> <span class="pos">{e(p["pos"])}</span> · {tname(p["roster"])}'
+                f'{p["value"]:+d}</span><div><b>{pl(p)}</b> <span class="pos">{e(p["pos"])}</span> · {tname(p["roster"])}'
                 f'<div class="beat">Round {p["round"]}, pick {p["pick"]} · drafted {move(p)} · '
                 f'{p.get("team_pts", p["pts"]):.1f} pts for them{stayed}</div></div></li>')
     steals = sorted((p for p in picks if p.get("kept", True) and p["value"] > 0), key=lambda p: (-p["value"], p["pick"]))[:8]
@@ -1020,7 +1100,7 @@ def render_draft(draft, data, site, all_drafts, managers):
     for r in sorted({p["round"] for p in picks}):
         rp = [p for p in picks if p["round"] == r]
         b, w = max(rp, key=draft_value), min(rp, key=draft_value)
-        cell = lambda p: f'{e(p["name"])} <small>{tname(p["roster"])} · {move(p)}</small>'
+        cell = lambda p: f'{pl(p)} <small>{tname(p["roster"])} · {move(p)}</small>'
         rounds.append(f'<tr><td>{r}</td><td class="tn">{cell(b)}</td><td class="tn">{cell(w)}</td></tr>')
 
     grades = []
@@ -1030,7 +1110,7 @@ def render_draft(draft, data, site, all_drafts, managers):
             continue
         top = max(mine, key=draft_value)
         grades.append(f'<tr><td class="tn">{team_label(teams, rid)}</td><td>{draft_grade(mine):+.1f}</td>'
-                      f'<td>{sum(p.get("team_pts", p["pts"]) for p in mine):,.0f}</td><td class="tn">{e(top["name"])} <small>{move(top)}</small></td></tr>')
+                      f'<td>{sum(p.get("team_pts", p["pts"]) for p in mine):,.0f}</td><td class="tn">{pl(top)} <small>{move(top)}</small></td></tr>')
 
     alltime = ""
     if len(all_drafts) > 1:
@@ -1195,7 +1275,7 @@ def render_moves(moves, data, site, all_moves, hist):
         f'<td><b>{total(tally)}</b></td></tr>'
         for r, tally in sorted(moves["teams"].items(), key=lambda kv: -total(kv[1])) if r in teams)
     traveled = "".join(
-        f'<li><span class="amt">{len(p["teams"])}<small>teams</small></span><div><b>{e(p["name"])}</b> '
+        f'<li><span class="amt">{len(p["teams"])}<small>teams</small></span><div><b>{pl(p)}</b> '
         f'<span class="pos">{e(p["pos"])}</span><div class="beat">'
         f'{" → ".join(e(teams.get(r, {}).get("name", "?")) for r in p["teams"])} · added {p["adds"]} times</div></div></li>'
         for p in moves["players"][:8])
@@ -1285,7 +1365,7 @@ def render_recap(season, data, site, hist, extras):
     faab = extras.get("faab")
     if faab and faab["claims"]:
         c = max(faab["claims"], key=lambda c: c.get("pts", 0))
-        items.append(("Best pickup", f'{e(c["name"])} · {tname(c["roster"])}', f'${c["bid"]} → {c.get("pts", 0):.1f} pts'))
+        items.append(("Best pickup", f'{pl(c)} · {tname(c["roster"])}', f'${c["bid"]} → {c.get("pts", 0):.1f} pts'))
     trades = extras.get("trades")
     if trades:
         def margin(t):
@@ -1295,18 +1375,18 @@ def render_recap(season, data, site, hist, extras):
         win = max(t["sides"], key=lambda s: s["total"])
         if margin(t) > 0:
             items.append(("Best trade", tname(win["roster"]),
-                          f'{", ".join(e(p["name"]) for p in win["players"]) or "picks"} · won by {margin(t):.1f} pts'))
+                          f'{", ".join(pl(p) for p in win["players"]) or "picks"} · won by {margin(t):.1f} pts'))
     draft = extras.get("draft")
     if draft:
         kept = [p for p in draft["picks"] if p.get("kept", True) and not p["keeper"]]
         if kept:
             s_ = max(kept, key=lambda p: p["value"])
-            items.append(("Steal of the draft", f'{e(s_["name"])} · {tname(s_["roster"])}',
+            items.append(("Steal of the draft", f'{pl(s_)} · {tname(s_["roster"])}',
                           f'Rd {s_["round"]} · {s_["pos"]}{s_["drafted"]} → {s_["pos"]}{s_["finish"]}'))
         early = [p for p in draft["picks"] if p["round"] <= 3]
         if early:
             b = min(early, key=lambda p: p["value"])
-            items.append(("Biggest bust", f'{e(b["name"])} · {tname(b["roster"])}',
+            items.append(("Biggest bust", f'{pl(b)} · {tname(b["roster"])}',
                           f'Rd {b["round"]} · {b["pos"]}{b["drafted"]} → {b["pos"]}{b["finish"]}'))
     moves = extras.get("moves")
     if moves and moves["teams"]:
@@ -1420,7 +1500,7 @@ def render_manager(uid, hist, data, site, extras_by_season):
 
     def trade_line(item):
         margin, side, t, season = item
-        got = ", ".join(e(p["name"]) for p in side["players"]) or "picks/FAAB"
+        got = ", ".join(pl(p) for p in side["players"]) or "picks/FAAB"
         return (f'<li><span class="amt {"up" if margin > 0 else "down"}">{margin:+.0f}</span><div><b>{got}</b>'
                 f'<div class="beat">{season} Wk {t["week"]} · {side["total"]:.1f} pts for them</div></div></li>')
     best_trades.sort(key=lambda x: x[0])
@@ -1428,10 +1508,10 @@ def render_manager(uid, hist, data, site, extras_by_season):
     if best_trades:
         trades_html = f"""<div><h3>Best trades</h3><ul class="bids">{"".join(trade_line(x) for x in best_trades[::-1][:3])}</ul></div>
   <div><h3>Worst trades</h3><ul class="bids">{"".join(trade_line(x) for x in best_trades[:3] if x[0] < 0) or "<li><div>None lost yet</div></li>"}</ul></div>"""
-    pick_html = "".join(f'<li><span class="amt">{c.get("pts", 0):.0f}<small>pts</small></span><div><b>{e(c["name"])}</b> '
+    pick_html = "".join(f'<li><span class="amt">{c.get("pts", 0):.0f}<small>pts</small></span><div><b>{pl(c)}</b> '
                         f'<span class="pos">{e(c["pos"])}</span><div class="beat">{season} · ${c["bid"]} in Wk {c["week"]}</div></div></li>'
                         for c, season in sorted(pickups, key=lambda x: -x[0].get("pts", 0))[:3])
-    steal_html = "".join(f'<li><span class="amt up">{p["value"]:+d}</span><div><b>{e(p["name"])}</b> '
+    steal_html = "".join(f'<li><span class="amt up">{p["value"]:+d}</span><div><b>{pl(p)}</b> '
                          f'<span class="pos">{e(p["pos"])}</span><div class="beat">{season} · Rd {p["round"]} · '
                          f'{p["pos"]}{p["drafted"]} → {p["pos"]}{p["finish"]}</div></div></li>'
                          for p, season in sorted(steals, key=lambda x: -x[0]["value"])[:3])
@@ -1564,7 +1644,7 @@ def season_breakdown(hist, extras, latest, uid):
         claims = [c for c in ((x.get("faab") or {}).get("claims") or []) if c["roster"] in rids]
         faab = f"${sum(c['bid'] for c in claims)} · {len(claims)}" if x.get("faab") else "–"
         best = max(claims, key=lambda c: c.get("started", 0), default=None)
-        pickup = (f'{e(best["name"])} <small>${best["bid"]} · {best["started"]:.0f} pts started</small>'
+        pickup = (f'{pl(best)} <small>${best["bid"]} · {best["started"]:.0f} pts started</small>'
                   if best and best.get("started") else "–")
         trades = (str(sum(any(side["roster"] in rids for side in t["sides"]) for t in x["trades"]))
                   if x.get("trades") is not None else "–")
@@ -1851,7 +1931,7 @@ def render_faab(faab, data, site):
         mine = [c for c in claims if c["roster"] == rid]
         left = max(budget + traded[rid] - spent[rid], 0)
         big = max(mine, key=lambda c: (c["bid"], -c["week"]), default=None)
-        big_txt = f'{e(big["name"])}, {money(big["bid"])}, Wk {big["week"]}' if big and big["bid"] else "–"
+        big_txt = f'{pl(big)}, {money(big["bid"])}, Wk {big["week"]}' if big and big["bid"] else "–"
         tr = traded[rid]
         tr_txt = f'<span class="up">+{money(tr)}</span>' if tr > 0 else f'<span class="down">−{money(-tr)}</span>' if tr < 0 else "–"
         gained = sum(c.get("started", 0) for c in mine)
@@ -1875,7 +1955,7 @@ def render_faab(faab, data, site):
                 beat = (f'<div class="beat">outbidding {others} · '
                         + (f'by {money(margin)}' if margin > 0 else 'won the tiebreaker') + '</div>')
             items.append(f"""<li data-player="{e(c['name'].lower())}"{' class="zero"' if not c['bid'] else ''}><span class="amt">{money(c['bid'])}</span>
-        <div><b>{e(name(c['roster']))}</b> won <b>{e(c['name'])}</b> <span class="pos">{e(c['pos'])}</span>
+        <div><b>{e(name(c['roster']))}</b> won <b>{pl(c)}</b> <span class="pos">{e(c['pos'])}</span>
         <span class="gain">{f"→ {c['pts']:.1f} pts ({c['started']:.1f} started)" if c.get('weeks') else "→ hasn't played for them yet"}</span>{beat}</div></li>""")
         log.append(f'<div class="wk"><h3>{f"Week {w}" if w else "Preseason"}</h3><ul class="bids">{"".join(items)}</ul></div>')
 
@@ -1887,7 +1967,7 @@ def render_faab(faab, data, site):
 {"".join(log) or "<p>No waiver claims yet.</p>"}<p class="nomatch" hidden>No players match.</p></section>"""
     def roi_line(c, val, unit):
         weeks = f'{c.get("weeks", 0)} wk{"s" if c.get("weeks", 0) != 1 else ""}' + (" so far" if c.get("active") else "")
-        return (f'<li><span class="amt">{val}<small>{unit}</small></span><div><b>{e(c["name"])}</b> '
+        return (f'<li><span class="amt">{val}<small>{unit}</small></span><div><b>{pl(c)}</b> '
                 f'<span class="pos">{e(c["pos"])}</span> · {e(name(c["roster"]))}<div class="beat">{money(c["bid"])} in '
                 f'Wk {c["week"]} → {c.get("started", 0):.1f} pts started · {weeks}</div></div></li>')
     values = sorted((c for c in claims if c["bid"] >= 1), key=lambda c: -c.get("started", 0))[:5]
@@ -1935,6 +2015,7 @@ def build():
             "recap_seasons": {s for s in seasons if (hist or {}).get("seasons", {}).get(s, {}).get("complete")}}
     if IMAGES.exists():
         shutil.copytree(IMAGES, SITE / "images", dirs_exist_ok=True)
+    setup_cards(seasons)
     latest = {}  # each season's latest week data, for team names and roster owners
     for s in seasons:
         weeks = weeks_written(s)
@@ -2105,6 +2186,179 @@ MOBILE_JS = """<script>
   if (cur && nav.scrollWidth > nav.clientWidth) {
     nav.scrollLeft += cur.getBoundingClientRect().left - nav.getBoundingClientRect().left - (nav.clientWidth - cur.offsetWidth) / 2;
   }
+})();
+</script>"""
+
+# Player cards: tapping a player's name opens his Sleeper stats in a dialog, so nobody leaves the site.
+# Profile and league history come from the page (card_data); game logs load from Sleeper's stats API on open.
+PLAYER_JS = r"""<script>
+(function () {
+  var data = document.getElementById('pl-data');
+  if (!data) return;
+  var D = JSON.parse(data.textContent), API = 'https://api.sleeper.com/stats/nfl/player/';
+  var REC = [['rec_tgt', 'Tgt'], ['rec', 'Rec'], ['rec_yd', 'Rec Yd'], ['rec_td', 'Rec TD']];
+  var COLS = {
+    QB: [['pass_yd', 'Pass Yd'], ['pass_td', 'Pass TD'], ['pass_int', 'INT'], ['rush_yd', 'Rush Yd'], ['rush_td', 'Rush TD']],
+    RB: [['rush_att', 'Car'], ['rush_yd', 'Rush Yd'], ['rush_td', 'Rush TD'], ['rec', 'Rec'], ['rec_yd', 'Rec Yd'], ['rec_td', 'Rec TD']],
+    WR: REC, TE: REC,
+    K: [['fgm', 'FGM'], ['fga', 'FGA'], ['xpm', 'XPM']],
+    DEF: [['sack', 'Sack'], ['int', 'INT'], ['fum_rec', 'FR'], ['def_td', 'TD'], ['pts_allow', 'PA']]
+  };
+  var cache = {}, dlg;
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+  function num(v) { return v ? String(Math.round(v * 10) / 10) : '0'; }
+  function pts(v) { return v.toFixed(1); }
+  function ordinal(n) { return n + (['th', 'st', 'nd', 'rd'][(n % 100 - 20) % 10] || ['th', 'st', 'nd', 'rd'][n % 100] || 'th'); }
+  // Seasons before the league existed use its earliest scoring; later ones its latest.
+  function scoring(season) {
+    var have = Object.keys(D.scoring).sort();
+    if (!have.length) return {};
+    return D.scoring[season] || D.scoring[season < have[0] ? have[0] : have[have.length - 1]];
+  }
+  function score(stats, sc) {
+    var t = 0;
+    for (var k in sc) if (typeof stats[k] === 'number') t += stats[k] * sc[k];
+    return t;
+  }
+
+  // Every season of a player's career, newest first: [{season, games: [{wk, opp, played, stats, pts}]}].
+  function load(pid, p) {
+    if (cache[pid]) return cache[pid];
+    var last = +D.latest, first = last - (p.exp == null ? 4 : Math.min(p.exp, 25)), years = [];
+    for (var y = last; y >= first; y--) years.push(y);
+    cache[pid] = Promise.all(years.map(function (y) {
+      return fetch(API + encodeURIComponent(pid) + '?season_type=regular&season=' + y + '&grouping=week')
+        .then(function (r) { return r.ok ? r.json() : {}; })
+        .catch(function () { return null; })
+        .then(function (weeks) { return { season: String(y), weeks: weeks }; });
+    })).then(function (list) {
+      if (list.every(function (s) { return s.weeks === null; })) throw new Error('offline');
+      return list.filter(function (s) { return s.weeks; }).map(function (s) {
+        var sc = scoring(s.season), games = [];
+        Object.keys(s.weeks).sort(function (a, b) { return a - b; }).forEach(function (w) {
+          var g = s.weeks[w];
+          if (!g || !g.stats) return;
+          var st = g.stats;
+          games.push({ wk: +w, team: g.team, opp: g.opponent ? (g.is_away_team ? '@' : '') + g.opponent : '',
+                       played: (st.gp || 0) > 0 || (st.pts_ppr || 0) !== 0, stats: st, pts: score(st, sc) });
+        });
+        return { season: s.season, games: games };
+      }).filter(function (s) { return s.games.some(function (g) { return g.played; }); });
+    });
+    cache[pid].catch(function () { delete cache[pid]; });
+    return cache[pid];
+  }
+
+  function table(head, rows, cls) {
+    return '<div class="tbl"><table' + (cls ? ' class="' + cls + '"' : '') + '><thead><tr>' +
+      head.map(function (h, i) { return '<th' + (i < 2 ? ' class="tn"' : '') + '>' + h + '</th>'; }).join('') +
+      '</tr></thead><tbody>' + rows.join('') + '</tbody></table></div>';
+  }
+
+  function career(p, seasons) {
+    var cols = COLS[p.p] || [];
+    var rows = seasons.map(function (s) {
+      var played = s.games.filter(function (g) { return g.played; }), tot = {}, total = 0, teams = {};
+      played.forEach(function (g) {
+        total += g.pts;
+        if (g.team) teams[g.team] = 1;
+        cols.forEach(function (c) { tot[c[0]] = (tot[c[0]] || 0) + (g.stats[c[0]] || 0); });
+      });
+      return '<tr class="pc-season" data-season="' + s.season + '" tabindex="0"><td class="tn">' + s.season + '</td><td class="tn">' +
+        esc(Object.keys(teams).join('/')) + '</td><td>' + played.length + '</td><td><b>' + pts(total) + '</b></td><td>' +
+        pts(played.length ? total / played.length : 0) + '</td>' +
+        cols.map(function (c) { return '<td>' + num(tot[c[0]]) + '</td>'; }).join('') + '</tr>';
+    });
+    return table(['Season', 'Team', 'GP', 'Pts', 'PPG'].concat(cols.map(function (c) { return c[1]; })), rows, 'pc-career');
+  }
+
+  function gameLog(p, s) {
+    var cols = COLS[p.p] || [];
+    var rows = s.games.map(function (g) {
+      if (!g.played) {
+        return '<tr class="dnp"><td class="tn">' + g.wk + '</td><td class="tn">' + esc(g.opp) + '</td><td colspan="' +
+          (cols.length + 1) + '">Did not play</td></tr>';
+      }
+      return '<tr><td class="tn">' + g.wk + '</td><td class="tn">' + esc(g.opp) + '</td><td><b>' + pts(g.pts) + '</b></td>' +
+        cols.map(function (c) { return '<td>' + num(g.stats[c[0]]) + '</td>'; }).join('') + '</tr>';
+    });
+    return '<h3>' + s.season + ' games</h3>' + table(['Wk', 'Opp', 'Pts'].concat(cols.map(function (c) { return c[1]; })), rows);
+  }
+
+  function league(p) {
+    if (!p.rv.length) return '';
+    var rows = p.rv.map(function (r) {
+      return '<tr><td class="tn">' + r[0] + '</td><td class="tn">' + esc(r[1]) + '</td><td>' + r[2] + '</td><td>' +
+        pts(r[3]) + '</td><td><b>' + pts(r[4]) + '</b></td></tr>';
+    });
+    return '<h3>On Red Vines rosters</h3>' + table(['Season', 'Team', 'Weeks', 'Pts', 'As starter'], rows);
+  }
+
+  function header(pid, p) {
+    var photo = p.p === 'DEF' ? 'https://sleepercdn.com/images/team_logos/nfl/' + pid.toLowerCase() + '.png'
+                              : 'https://sleepercdn.com/content/nfl/players/thumb/' + encodeURIComponent(pid) + '.jpg';
+    var line1 = [p.p, p.t || 'Free agent', p.no != null && p.p !== 'DEF' ? '#' + p.no : ''].filter(Boolean).join(' · ');
+    var line2 = p.p === 'DEF' ? '' : [p.age ? 'Age ' + p.age : '', p.exp == null ? '' : p.exp ? ordinal(p.exp + 1) + ' season' : 'Rookie',
+                                      p.col].filter(Boolean).join(' · ');
+    return '<div class="pc-head"><img class="pc-photo" src="' + photo + '" alt="" onerror="this.style.visibility=\'hidden\'">' +
+      '<div class="pc-id"><div class="pc-name">' + esc(p.n) + (p.inj ? ' <span class="pc-inj">' + esc(p.inj) + '</span>' : '') + '</div>' +
+      '<div class="pc-sub">' + esc(line1) + '</div>' + (line2 ? '<div class="pc-sub">' + esc(line2) + '</div>' : '') + '</div>' +
+      '<button type="button" class="pc-x" aria-label="Close">&times;</button></div>';
+  }
+
+  function open(pid) {
+    var p = D.players[pid];
+    if (!p) return;
+    if (!dlg) {
+      dlg = document.createElement('dialog');
+      dlg.className = 'pcard';
+      document.body.appendChild(dlg);
+      dlg.addEventListener('click', function (ev) {
+        if (ev.target === dlg || ev.target.closest('.pc-x')) dlg.close();
+        var row = ev.target.closest('.pc-season');
+        if (row) pick(row);
+      });
+      dlg.addEventListener('keydown', function (ev) {
+        var row = ev.target.closest && ev.target.closest('.pc-season');
+        if (row && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); pick(row); }
+      });
+    }
+    dlg.setAttribute('aria-label', p.n);
+    dlg.innerHTML = header(pid, p) + '<div class="pc-body">' + league(p) +
+      '<h3>Career</h3><div class="pc-career-box"><p class="pc-note">Loading stats from Sleeper…</p></div>' +
+      '<div class="pc-log"></div><p class="pc-note">Stats from Sleeper. Points use Red Vines scoring. Tap a season to see its games.</p></div>';
+    if (!dlg.open) dlg.showModal();
+    dlg.scrollTop = 0;
+    var box = dlg.querySelector('.pc-career-box');
+    load(pid, p).then(function (seasons) {
+      if (dlg.getAttribute('aria-label') !== p.n) return;  // another card was opened meanwhile
+      if (!seasons.length) { box.innerHTML = '<p class="pc-note">No NFL games yet.</p>'; return; }
+      dlg._seasons = seasons;
+      dlg._player = p;
+      box.innerHTML = career(p, seasons);
+      pick(box.querySelector('.pc-season'));
+    }).catch(function () {
+      box.innerHTML = '<p class="pc-note">Couldn’t reach Sleeper. Check your connection and tap the name again.</p>';
+    });
+  }
+
+  function pick(row) {
+    if (!row || !dlg._seasons) return;
+    var season = row.dataset.season;
+    dlg.querySelectorAll('.pc-season').forEach(function (r) { r.classList.toggle('cur', r === row); });
+    var s = dlg._seasons.filter(function (x) { return x.season === season; })[0];
+    dlg.querySelector('.pc-log').innerHTML = gameLog(dlg._player, s);
+  }
+
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest && ev.target.closest('button.pl');
+    if (b) open(b.dataset.pid);
+  });
 })();
 </script>"""
 
@@ -2304,6 +2558,36 @@ th[data-sort]::after{content:"↕";margin-left:4px;opacity:.35}
 th[aria-sort=ascending]::after{content:"↑";opacity:1}th[aria-sort=descending]::after{content:"↓";opacity:1}
 th[data-sort]:hover,th[data-sort]:focus-visible{color:var(--ink)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
+button.pl{all:unset;cursor:pointer;text-decoration:underline dotted color-mix(in srgb,currentColor 45%,transparent);text-underline-offset:3px}
+button.pl:hover{text-decoration-style:solid;text-decoration-color:currentColor}
+button.pl:focus-visible{outline:2px solid var(--hl);outline-offset:2px;border-radius:3px}
+html:has(dialog.pcard[open]){overflow:hidden}
+dialog.pcard{width:min(760px,calc(100vw - 32px));max-height:min(88vh,900px);padding:0;border:1px solid var(--line);border-radius:16px;background:var(--bg);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.3)}
+dialog.pcard::backdrop{background:rgba(10,12,16,.55)}
+.pc-head{position:sticky;top:0;z-index:1;display:flex;gap:14px;align-items:center;padding:16px;background:var(--card);border-bottom:1px solid var(--line)}
+.pc-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--chip);flex:none}
+.pc-id{min-width:0}
+.pc-name{font-size:1.35rem;font-weight:800;line-height:1.2}
+.pc-sub{color:var(--muted);font-size:.88rem}
+.pc-inj{display:inline-block;vertical-align:middle;padding:1px 8px;border-radius:99px;background:color-mix(in srgb,var(--down) 16%,transparent);color:var(--down);font-size:.72rem;font-weight:700}
+.pc-x{margin-left:auto;align-self:flex-start;flex:none;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:1.4rem;line-height:1;cursor:pointer}
+.pc-x:hover{background:var(--chip)}
+.pc-x:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+.pc-body{padding:0 16px 18px}
+.pc-body h3{margin:20px 0 8px}
+.pc-body table{font-size:.85rem}
+.pc-body th,.pc-body td{padding:8px 10px}
+.pc-body tr.pc-season{cursor:pointer}
+.pc-body tr.pc-season:hover td{background:var(--chip)}
+.pc-body tr.pc-season.cur td{background:color-mix(in srgb,var(--hl) 14%,var(--card))}
+.pc-body tr.pc-season:focus-visible{outline:2px solid var(--hl);outline-offset:-2px}
+.pc-body tr.dnp td{color:var(--muted);font-style:italic}
+.pc-note{color:var(--muted);font-size:.82rem;margin:10px 2px 0}
+@media (max-width:760px){
+  dialog.pcard{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border:0;border-radius:0}
+  .pc-photo{width:56px;height:56px}
+  .pc-name{font-size:1.15rem}
+}
 """
 
 

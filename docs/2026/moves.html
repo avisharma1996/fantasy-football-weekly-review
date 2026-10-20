@@ -199,6 +199,36 @@ th[data-sort]::after{content:"↕";margin-left:4px;opacity:.35}
 th[aria-sort=ascending]::after{content:"↑";opacity:1}th[aria-sort=descending]::after{content:"↓";opacity:1}
 th[data-sort]:hover,th[data-sort]:focus-visible{color:var(--ink)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
+button.pl{all:unset;cursor:pointer;text-decoration:underline dotted color-mix(in srgb,currentColor 45%,transparent);text-underline-offset:3px}
+button.pl:hover{text-decoration-style:solid;text-decoration-color:currentColor}
+button.pl:focus-visible{outline:2px solid var(--hl);outline-offset:2px;border-radius:3px}
+html:has(dialog.pcard[open]){overflow:hidden}
+dialog.pcard{width:min(760px,calc(100vw - 32px));max-height:min(88vh,900px);padding:0;border:1px solid var(--line);border-radius:16px;background:var(--bg);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.3)}
+dialog.pcard::backdrop{background:rgba(10,12,16,.55)}
+.pc-head{position:sticky;top:0;z-index:1;display:flex;gap:14px;align-items:center;padding:16px;background:var(--card);border-bottom:1px solid var(--line)}
+.pc-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;background:var(--chip);flex:none}
+.pc-id{min-width:0}
+.pc-name{font-size:1.35rem;font-weight:800;line-height:1.2}
+.pc-sub{color:var(--muted);font-size:.88rem}
+.pc-inj{display:inline-block;vertical-align:middle;padding:1px 8px;border-radius:99px;background:color-mix(in srgb,var(--down) 16%,transparent);color:var(--down);font-size:.72rem;font-weight:700}
+.pc-x{margin-left:auto;align-self:flex-start;flex:none;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:1.4rem;line-height:1;cursor:pointer}
+.pc-x:hover{background:var(--chip)}
+.pc-x:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+.pc-body{padding:0 16px 18px}
+.pc-body h3{margin:20px 0 8px}
+.pc-body table{font-size:.85rem}
+.pc-body th,.pc-body td{padding:8px 10px}
+.pc-body tr.pc-season{cursor:pointer}
+.pc-body tr.pc-season:hover td{background:var(--chip)}
+.pc-body tr.pc-season.cur td{background:color-mix(in srgb,var(--hl) 14%,var(--card))}
+.pc-body tr.pc-season:focus-visible{outline:2px solid var(--hl);outline-offset:-2px}
+.pc-body tr.dnp td{color:var(--muted);font-style:italic}
+.pc-note{color:var(--muted);font-size:.82rem;margin:10px 2px 0}
+@media (max-width:760px){
+  dialog.pcard{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border:0;border-radius:0}
+  .pc-photo{width:56px;height:56px}
+  .pc-name{font-size:1.15rem}
+}
 </style><script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script></head>
 <body><div class="layout">
 <div class="mbar"><button class="menu-btn" type="button" aria-expanded="false" aria-controls="side"><span aria-hidden="true">&#9776;</span> Menu</button></div>
@@ -209,12 +239,12 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 <section><h2 class="sec">Most Active Managers</h2><div class="tbl"><table>
   <thead><tr><th class="tn">Team</th><th>Waiver claims</th><th>Free-agent adds</th><th>Drops</th><th>Trades</th><th>Total moves</th></tr></thead>
   <tbody><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg" alt="" loading="lazy"><span>Baltimore Avians</span></span></td><td>22</td><td>5</td><td>26</td><td>1</td><td><b>28</b></td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><span>6 7</span></span></td><td>14</td><td>3</td><td>16</td><td>1</td><td><b>18</b></td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/4fb394f49d806fbad75dd79ecc68f525" alt="" loading="lazy"><span>NShah19</span></span></td><td>14</td><td>2</td><td>16</td><td>0</td><td><b>16</b></td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><span>superdiddy</span></span></td><td>13</td><td>1</td><td>13</td><td>0</td><td><b>14</b></td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"><span>Justin Beer Loyalist</span></span></td><td>11</td><td>2</td><td>13</td><td>1</td><td><b>14</b></td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi</span></span></td><td>8</td><td>2</td><td>9</td><td>3</td><td><b>13</b></td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><span>Amver Alert🚨</span></span></td><td>5</td><td>1</td><td>6</td><td>1</td><td><b>7</b></td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/avatars/thumbs/d55d1f7075eda01948318de4af616075" alt="" loading="lazy"><span>8-4 god team </span></span></td><td>5</td><td>1</td><td>5</td><td>1</td><td><b>7</b></td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/1e1f1094e8d4b98b25130a8d3c0cf063.jpg" alt="" loading="lazy"><span>I’m Whipped by Bezos</span></span></td><td>4</td><td>2</td><td>6</td><td>0</td><td><b>6</b></td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><span>Braelon Allen</span></span></td><td>3</td><td>3</td><td>5</td><td>0</td><td><b>6</b></td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><span>Karans Sportsbook</span></span></td><td>2</td><td>1</td><td>3</td><td>0</td><td><b>3</b></td></tr><tr><td class="tn"><span class="who"><img class="av" src="https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg" alt="" loading="lazy"><span>Ankitty</span></span></td><td>1</td><td>2</td><td>2</td><td>0</td><td><b>3</b></td></tr></tbody></table></div></section>
-<section><h2 class="sec">Most-Traveled Players</h2><div class="records"><div><ul class="bids"><li><span class="amt">3<small>teams</small></span><div><b>Malik Washington</b> <span class="pos">WR</span><div class="beat">superdiddy → Baltimore Avians → Justin Beer Loyalist · added 3 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b>Tyler Loop</b> <span class="pos">K</span><div class="beat">Baltimore Avians → NShah19 · added 4 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b>Kansas City Chiefs D/ST</b> <span class="pos">DEF</span><div class="beat">Baltimore Avians → NShah19 · added 2 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b>Antonio Williams</b> <span class="pos">WR</span><div class="beat">yrkpapi → 6 7 · added 2 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b>Caleb Douglas</b> <span class="pos">WR</span><div class="beat">I’m Whipped by Bezos → Baltimore Avians · added 2 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b>Jake Ferguson</b> <span class="pos">TE</span><div class="beat">6 7 → Amver Alert🚨 · added 2 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b>Chris Bell</b> <span class="pos">WR</span><div class="beat">superdiddy → 6 7 · added 2 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b>Michael Mayer</b> <span class="pos">TE</span><div class="beat">superdiddy → 6 7 · added 2 times</div></div></li></ul></div></div></section>
+<section><h2 class="sec">Most-Traveled Players</h2><div class="records"><div><ul class="bids"><li><span class="amt">3<small>teams</small></span><div><b><button type="button" class="pl" data-pid="11610">Malik Washington</button></b> <span class="pos">WR</span><div class="beat">superdiddy → Baltimore Avians → Justin Beer Loyalist · added 3 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b><button type="button" class="pl" data-pid="12711">Tyler Loop</button></b> <span class="pos">K</span><div class="beat">Baltimore Avians → NShah19 · added 4 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b><button type="button" class="pl" data-pid="KC">Kansas City Chiefs D/ST</button></b> <span class="pos">DEF</span><div class="beat">Baltimore Avians → NShah19 · added 2 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b><button type="button" class="pl" data-pid="13301">Antonio Williams</button></b> <span class="pos">WR</span><div class="beat">yrkpapi → 6 7 · added 2 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b><button type="button" class="pl" data-pid="13296">Caleb Douglas</button></b> <span class="pos">WR</span><div class="beat">I’m Whipped by Bezos → Baltimore Avians · added 2 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b><button type="button" class="pl" data-pid="8110">Jake Ferguson</button></b> <span class="pos">TE</span><div class="beat">6 7 → Amver Alert🚨 · added 2 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b><button type="button" class="pl" data-pid="13311">Chris Bell</button></b> <span class="pos">WR</span><div class="beat">superdiddy → 6 7 · added 2 times</div></div></li><li><span class="amt">2<small>teams</small></span><div><b><button type="button" class="pl" data-pid="9482">Michael Mayer</button></b> <span class="pos">TE</span><div class="beat">superdiddy → 6 7 · added 2 times</div></div></li></ul></div></div></section>
 <section><h2 class="sec">All-Time Leaders</h2><div class="tbl"><table>
   <thead><tr><th class="tn">Manager</th><th>Waiver claims</th><th>Free-agent adds</th><th>Drops</th><th>Trades</th><th>Total moves</th></tr></thead>
   <tbody><tr><td class="tn"><a class="who mlink" href="../history/m-1129665810802278400.html"><img class="av" src="https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg" alt="" loading="lazy"><span>Baltimore Avians<small>avian96</small></span></a></td><td>91</td><td>152</td><td>242</td><td>6</td><td><b>249</b></td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-873130597315481600.html"><img class="av" src="https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e" alt="" loading="lazy"><span>yrkpapi<small>yrkpapi</small></span></a></td><td>51</td><td>56</td><td>103</td><td>10</td><td><b>117</b></td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-471050766644146176.html"><img class="av" src="https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg" alt="" loading="lazy"><span>6 7<small>amach124</small></span></a></td><td>53</td><td>53</td><td>104</td><td>7</td><td><b>113</b></td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1132924651295956992.html"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"><span>Justin Beer Loyalist<small>ZebroGodilla</small></span></a></td><td>50</td><td>42</td><td>95</td><td>8</td><td><b>100</b></td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1084605692373233664.html"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"><span>superdiddy<small>jallerbo</small></span></a></td><td>52</td><td>40</td><td>93</td><td>5</td><td><b>97</b></td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1129574561793630208.html"><img class="av" src="https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg" alt="" loading="lazy"><span>Karans Sportsbook<small>kgids</small></span></a></td><td>37</td><td>37</td><td>77</td><td>6</td><td><b>80</b></td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-470927114183372800.html"><img class="av" src="https://sleepercdn.com/uploads/1e1f1094e8d4b98b25130a8d3c0cf063.jpg" alt="" loading="lazy"><span>I’m Whipped by Bezos<small>roheezy</small></span></a></td><td>41</td><td>33</td><td>75</td><td>4</td><td><b>78</b></td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1002009644597993472.html"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"><span>Amver Alert🚨<small>amver</small></span></a></td><td>32</td><td>38</td><td>69</td><td>2</td><td><b>72</b></td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-535242776309989376.html"><img class="av" src="https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg" alt="" loading="lazy"><span>Braelon Allen<small>nmadan</small></span></a></td><td>14</td><td>28</td><td>42</td><td>2</td><td><b>44</b></td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1085126678843682816.html"><img class="av" src="https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg" alt="" loading="lazy"><span>Ankitty<small>bruhking123</small></span></a></td><td>12</td><td>14</td><td>25</td><td>1</td><td><b>27</b></td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-536026305198518272.html"><img class="av" src="https://sleepercdn.com/avatars/thumbs/4fb394f49d806fbad75dd79ecc68f525" alt="" loading="lazy"><span>NShah19<small>NShah19</small></span></a></td><td>14</td><td>2</td><td>16</td><td>0</td><td><b>16</b></td></tr><tr><td class="tn"><a class="who mlink" href="../history/m-1392294069287256064.html"><img class="av" src="https://sleepercdn.com/avatars/thumbs/d55d1f7075eda01948318de4af616075" alt="" loading="lazy"><span>8-4 god team <small>Shivxn</small></span></a></td><td>5</td><td>1</td><td>5</td><td>1</td><td><b>7</b></td></tr></tbody></table></div></section>
 <footer>Total moves counts waiver claims, free-agent adds and trades. Drops are shown separately.</footer>
-</main></div><script>
+</main></div><script type="application/json" id="pl-data">{"latest":"2026","scoring":{"2024":{"sack":1.0,"fgm_40_49":4.0,"pass_int":-1.0,"pts_allow_0":10.0,"pass_2pt":2.0,"st_td":6.0,"rec_td":6.0,"fgm_30_39":3.0,"fgm_50_59":5.0,"xpmiss":-1.0,"rush_td":6.0,"rec_2pt":2.0,"st_fum_rec":1.0,"fgmiss":-1.0,"ff":1.0,"rec":0.5,"pts_allow_14_20":1.0,"fgm_0_19":3.0,"int":2.0,"def_st_fum_rec":1.0,"fum_lost":-2.0,"pts_allow_1_6":7.0,"fgm_60p":6.0,"fgm_20_29":3.0,"pts_allow_21_27":0.0,"xpm":1.0,"rush_2pt":2.0,"fum_rec":2.0,"def_st_td":6.0,"fgm_50p":0.0,"def_td":6.0,"safe":2.0,"pass_yd":0.04,"blk_kick":2.0,"pass_td":4.0,"rush_yd":0.1,"fum":0.0,"pts_allow_28_34":-1.0,"pts_allow_35p":-4.0,"fum_rec_td":6.0,"rec_yd":0.1,"def_st_ff":1.0,"pts_allow_7_13":4.0,"st_ff":1.0},"2025":{"sack":1.0,"fgm_40_49":4.0,"pass_int":-1.0,"pts_allow_0":10.0,"pass_2pt":2.0,"st_td":6.0,"rec_td":6.0,"fgm_30_39":3.0,"fgm_50_59":5.0,"xpmiss":-1.0,"rush_td":6.0,"rec_2pt":2.0,"st_fum_rec":1.0,"fgmiss":-1.0,"ff":1.0,"rec":0.5,"pts_allow_14_20":1.0,"fgm_0_19":3.0,"int":2.0,"def_st_fum_rec":1.0,"fum_lost":-2.0,"pts_allow_1_6":7.0,"fgm_60p":6.0,"fgm_20_29":3.0,"pts_allow_21_27":0.0,"xpm":1.0,"rush_2pt":2.0,"fum_rec":2.0,"def_st_td":6.0,"fgm_50p":0.0,"def_td":6.0,"safe":2.0,"pass_yd":0.04,"blk_kick":2.0,"pass_td":4.0,"rush_yd":0.1,"fum":0.0,"pts_allow_28_34":-1.0,"pts_allow_35p":-4.0,"fum_rec_td":6.0,"rec_yd":0.1,"def_st_ff":1.0,"pts_allow_7_13":4.0,"st_ff":1.0},"2026":{"sack":1.0,"fgm_40_49":4.0,"pass_int":-1.0,"pts_allow_0":10.0,"pass_2pt":2.0,"st_td":6.0,"rec_td":6.0,"fgm_30_39":3.0,"fgm_50_59":5.0,"xpmiss":-1.0,"rush_td":6.0,"rec_2pt":2.0,"st_fum_rec":1.0,"fgmiss":-1.0,"ff":1.0,"rec":0.5,"pts_allow_14_20":1.0,"fgm_0_19":3.0,"int":2.0,"def_st_fum_rec":1.0,"fum_lost":-2.0,"pts_allow_1_6":7.0,"fgm_60p":6.0,"fgm_20_29":3.0,"pts_allow_21_27":0.0,"xpm":1.0,"rush_2pt":2.0,"fum_rec":2.0,"def_st_td":6.0,"fgm_50p":0.0,"def_td":6.0,"safe":2.0,"pass_yd":0.04,"blk_kick":2.0,"pass_td":4.0,"rush_yd":0.1,"fum":0.0,"pts_allow_28_34":-1.0,"pts_allow_35p":-4.0,"fum_rec_td":6.0,"rec_yd":0.1,"def_st_ff":1.0,"pts_allow_7_13":4.0,"st_ff":1.0}},"players":{"11610":{"n":"Malik Washington","p":"WR","t":"MIA","no":6,"age":25,"exp":2,"col":"Virginia","inj":null,"rv":[["2026","Justin Beer Loyalist",2,9.1,0],["2026","Baltimore Avians",1,8.6,0],["2025","yrkpapi",1,2.0,0]]},"12711":{"n":"Tyler Loop","p":"K","t":"BAL","no":33,"age":25,"exp":1,"col":"Arizona","inj":null,"rv":[["2026","NShah19",2,11.0,11.0],["2025","Braelon Allen",13,102.0,102.0]]},"13296":{"n":"Caleb Douglas","p":"WR","t":"MIA","no":7,"age":23,"exp":0,"col":"Texas Tech","inj":"Out","rv":[["2026","I’m Whipped by Bezos",5,2.9,0]]},"13301":{"n":"Antonio Williams","p":"WR","t":"WAS","no":14,"age":22,"exp":0,"col":"Clemson","inj":null,"rv":[["2026","yrkpapi",3,10.0,0],["2026","6 7",1,4.6,0]]},"13311":{"n":"Chris Bell","p":"WR","t":"MIA","no":18,"age":22,"exp":0,"col":"Louisville","inj":null,"rv":[["2026","superdiddy",1,3.0,0],["2026","6 7",1,0,0]]},"8110":{"n":"Jake Ferguson","p":"TE","t":"DAL","no":87,"age":27,"exp":4,"col":"Wisconsin","inj":null,"rv":[["2026","6 7",1,1.6,0],["2026","Amver Alert🚨",1,2.3,2.3],["2025","6 7",15,129.0,107.6],["2024","Not Last Place == W",8,51.8,51.8],["2024","yrkpapi",2,3.0,3.0]]},"9482":{"n":"Michael Mayer","p":"TE","t":"LV","no":87,"age":25,"exp":3,"col":"Notre Dame","inj":null,"rv":[["2026","superdiddy",1,6.2,0],["2026","6 7",1,3.8,0],["2025","superdiddy",1,13.4,0]]},"KC":{"n":"Kansas City Chiefs D/ST","p":"DEF","t":"KC","no":null,"age":null,"exp":null,"col":null,"inj":null,"rv":[["2026","Baltimore Avians",2,10.0,10.0],["2026","NShah19",2,16.0,16.0],["2025","Amver Alert🚨",4,34.0,31.0],["2025","Cucked By JPow’s 25 Bps",1,2.0,2.0],["2024","superdiddy",10,77.0,77.0],["2024","Karans Fraud-book",2,18.0,13.0],["2024","Not Last Place == W",1,6.0,6.0],["2024","Amver Alert🚨",1,7.0,7.0]]}}}</script><script>
 // Every table sorts by any column. A cell's data-v (if set) is its sort value; otherwise it's read from the text:
 // numbers, $ and %, records like 9-1 (by win %), <1% / >99%, and runs of 🏆 / 🚽 (by count). Blanks sort last.
 (function () {
@@ -308,5 +338,174 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
   if (cur && nav.scrollWidth > nav.clientWidth) {
     nav.scrollLeft += cur.getBoundingClientRect().left - nav.getBoundingClientRect().left - (nav.clientWidth - cur.offsetWidth) / 2;
   }
+})();
+</script><script>
+(function () {
+  var data = document.getElementById('pl-data');
+  if (!data) return;
+  var D = JSON.parse(data.textContent), API = 'https://api.sleeper.com/stats/nfl/player/';
+  var REC = [['rec_tgt', 'Tgt'], ['rec', 'Rec'], ['rec_yd', 'Rec Yd'], ['rec_td', 'Rec TD']];
+  var COLS = {
+    QB: [['pass_yd', 'Pass Yd'], ['pass_td', 'Pass TD'], ['pass_int', 'INT'], ['rush_yd', 'Rush Yd'], ['rush_td', 'Rush TD']],
+    RB: [['rush_att', 'Car'], ['rush_yd', 'Rush Yd'], ['rush_td', 'Rush TD'], ['rec', 'Rec'], ['rec_yd', 'Rec Yd'], ['rec_td', 'Rec TD']],
+    WR: REC, TE: REC,
+    K: [['fgm', 'FGM'], ['fga', 'FGA'], ['xpm', 'XPM']],
+    DEF: [['sack', 'Sack'], ['int', 'INT'], ['fum_rec', 'FR'], ['def_td', 'TD'], ['pts_allow', 'PA']]
+  };
+  var cache = {}, dlg;
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+  function num(v) { return v ? String(Math.round(v * 10) / 10) : '0'; }
+  function pts(v) { return v.toFixed(1); }
+  function ordinal(n) { return n + (['th', 'st', 'nd', 'rd'][(n % 100 - 20) % 10] || ['th', 'st', 'nd', 'rd'][n % 100] || 'th'); }
+  // Seasons before the league existed use its earliest scoring; later ones its latest.
+  function scoring(season) {
+    var have = Object.keys(D.scoring).sort();
+    if (!have.length) return {};
+    return D.scoring[season] || D.scoring[season < have[0] ? have[0] : have[have.length - 1]];
+  }
+  function score(stats, sc) {
+    var t = 0;
+    for (var k in sc) if (typeof stats[k] === 'number') t += stats[k] * sc[k];
+    return t;
+  }
+
+  // Every season of a player's career, newest first: [{season, games: [{wk, opp, played, stats, pts}]}].
+  function load(pid, p) {
+    if (cache[pid]) return cache[pid];
+    var last = +D.latest, first = last - (p.exp == null ? 4 : Math.min(p.exp, 25)), years = [];
+    for (var y = last; y >= first; y--) years.push(y);
+    cache[pid] = Promise.all(years.map(function (y) {
+      return fetch(API + encodeURIComponent(pid) + '?season_type=regular&season=' + y + '&grouping=week')
+        .then(function (r) { return r.ok ? r.json() : {}; })
+        .catch(function () { return null; })
+        .then(function (weeks) { return { season: String(y), weeks: weeks }; });
+    })).then(function (list) {
+      if (list.every(function (s) { return s.weeks === null; })) throw new Error('offline');
+      return list.filter(function (s) { return s.weeks; }).map(function (s) {
+        var sc = scoring(s.season), games = [];
+        Object.keys(s.weeks).sort(function (a, b) { return a - b; }).forEach(function (w) {
+          var g = s.weeks[w];
+          if (!g || !g.stats) return;
+          var st = g.stats;
+          games.push({ wk: +w, team: g.team, opp: g.opponent ? (g.is_away_team ? '@' : '') + g.opponent : '',
+                       played: (st.gp || 0) > 0 || (st.pts_ppr || 0) !== 0, stats: st, pts: score(st, sc) });
+        });
+        return { season: s.season, games: games };
+      }).filter(function (s) { return s.games.some(function (g) { return g.played; }); });
+    });
+    cache[pid].catch(function () { delete cache[pid]; });
+    return cache[pid];
+  }
+
+  function table(head, rows, cls) {
+    return '<div class="tbl"><table' + (cls ? ' class="' + cls + '"' : '') + '><thead><tr>' +
+      head.map(function (h, i) { return '<th' + (i < 2 ? ' class="tn"' : '') + '>' + h + '</th>'; }).join('') +
+      '</tr></thead><tbody>' + rows.join('') + '</tbody></table></div>';
+  }
+
+  function career(p, seasons) {
+    var cols = COLS[p.p] || [];
+    var rows = seasons.map(function (s) {
+      var played = s.games.filter(function (g) { return g.played; }), tot = {}, total = 0, teams = {};
+      played.forEach(function (g) {
+        total += g.pts;
+        if (g.team) teams[g.team] = 1;
+        cols.forEach(function (c) { tot[c[0]] = (tot[c[0]] || 0) + (g.stats[c[0]] || 0); });
+      });
+      return '<tr class="pc-season" data-season="' + s.season + '" tabindex="0"><td class="tn">' + s.season + '</td><td class="tn">' +
+        esc(Object.keys(teams).join('/')) + '</td><td>' + played.length + '</td><td><b>' + pts(total) + '</b></td><td>' +
+        pts(played.length ? total / played.length : 0) + '</td>' +
+        cols.map(function (c) { return '<td>' + num(tot[c[0]]) + '</td>'; }).join('') + '</tr>';
+    });
+    return table(['Season', 'Team', 'GP', 'Pts', 'PPG'].concat(cols.map(function (c) { return c[1]; })), rows, 'pc-career');
+  }
+
+  function gameLog(p, s) {
+    var cols = COLS[p.p] || [];
+    var rows = s.games.map(function (g) {
+      if (!g.played) {
+        return '<tr class="dnp"><td class="tn">' + g.wk + '</td><td class="tn">' + esc(g.opp) + '</td><td colspan="' +
+          (cols.length + 1) + '">Did not play</td></tr>';
+      }
+      return '<tr><td class="tn">' + g.wk + '</td><td class="tn">' + esc(g.opp) + '</td><td><b>' + pts(g.pts) + '</b></td>' +
+        cols.map(function (c) { return '<td>' + num(g.stats[c[0]]) + '</td>'; }).join('') + '</tr>';
+    });
+    return '<h3>' + s.season + ' games</h3>' + table(['Wk', 'Opp', 'Pts'].concat(cols.map(function (c) { return c[1]; })), rows);
+  }
+
+  function league(p) {
+    if (!p.rv.length) return '';
+    var rows = p.rv.map(function (r) {
+      return '<tr><td class="tn">' + r[0] + '</td><td class="tn">' + esc(r[1]) + '</td><td>' + r[2] + '</td><td>' +
+        pts(r[3]) + '</td><td><b>' + pts(r[4]) + '</b></td></tr>';
+    });
+    return '<h3>On Red Vines rosters</h3>' + table(['Season', 'Team', 'Weeks', 'Pts', 'As starter'], rows);
+  }
+
+  function header(pid, p) {
+    var photo = p.p === 'DEF' ? 'https://sleepercdn.com/images/team_logos/nfl/' + pid.toLowerCase() + '.png'
+                              : 'https://sleepercdn.com/content/nfl/players/thumb/' + encodeURIComponent(pid) + '.jpg';
+    var line1 = [p.p, p.t || 'Free agent', p.no != null && p.p !== 'DEF' ? '#' + p.no : ''].filter(Boolean).join(' · ');
+    var line2 = p.p === 'DEF' ? '' : [p.age ? 'Age ' + p.age : '', p.exp == null ? '' : p.exp ? ordinal(p.exp + 1) + ' season' : 'Rookie',
+                                      p.col].filter(Boolean).join(' · ');
+    return '<div class="pc-head"><img class="pc-photo" src="' + photo + '" alt="" onerror="this.style.visibility=\'hidden\'">' +
+      '<div class="pc-id"><div class="pc-name">' + esc(p.n) + (p.inj ? ' <span class="pc-inj">' + esc(p.inj) + '</span>' : '') + '</div>' +
+      '<div class="pc-sub">' + esc(line1) + '</div>' + (line2 ? '<div class="pc-sub">' + esc(line2) + '</div>' : '') + '</div>' +
+      '<button type="button" class="pc-x" aria-label="Close">&times;</button></div>';
+  }
+
+  function open(pid) {
+    var p = D.players[pid];
+    if (!p) return;
+    if (!dlg) {
+      dlg = document.createElement('dialog');
+      dlg.className = 'pcard';
+      document.body.appendChild(dlg);
+      dlg.addEventListener('click', function (ev) {
+        if (ev.target === dlg || ev.target.closest('.pc-x')) dlg.close();
+        var row = ev.target.closest('.pc-season');
+        if (row) pick(row);
+      });
+      dlg.addEventListener('keydown', function (ev) {
+        var row = ev.target.closest && ev.target.closest('.pc-season');
+        if (row && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); pick(row); }
+      });
+    }
+    dlg.setAttribute('aria-label', p.n);
+    dlg.innerHTML = header(pid, p) + '<div class="pc-body">' + league(p) +
+      '<h3>Career</h3><div class="pc-career-box"><p class="pc-note">Loading stats from Sleeper…</p></div>' +
+      '<div class="pc-log"></div><p class="pc-note">Stats from Sleeper. Points use Red Vines scoring. Tap a season to see its games.</p></div>';
+    if (!dlg.open) dlg.showModal();
+    dlg.scrollTop = 0;
+    var box = dlg.querySelector('.pc-career-box');
+    load(pid, p).then(function (seasons) {
+      if (dlg.getAttribute('aria-label') !== p.n) return;  // another card was opened meanwhile
+      if (!seasons.length) { box.innerHTML = '<p class="pc-note">No NFL games yet.</p>'; return; }
+      dlg._seasons = seasons;
+      dlg._player = p;
+      box.innerHTML = career(p, seasons);
+      pick(box.querySelector('.pc-season'));
+    }).catch(function () {
+      box.innerHTML = '<p class="pc-note">Couldn’t reach Sleeper. Check your connection and tap the name again.</p>';
+    });
+  }
+
+  function pick(row) {
+    if (!row || !dlg._seasons) return;
+    var season = row.dataset.season;
+    dlg.querySelectorAll('.pc-season').forEach(function (r) { r.classList.toggle('cur', r === row); });
+    var s = dlg._seasons.filter(function (x) { return x.season === season; })[0];
+    dlg.querySelector('.pc-log').innerHTML = gameLog(dlg._player, s);
+  }
+
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest && ev.target.closest('button.pl');
+    if (b) open(b.dataset.pid);
+  });
 })();
 </script></body></html>
