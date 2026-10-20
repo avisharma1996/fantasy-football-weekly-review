@@ -223,6 +223,8 @@ dialog.pcard::backdrop{background:rgba(10,12,16,.55)}
 .pc-body tr.pc-season.cur td{background:color-mix(in srgb,var(--hl) 14%,var(--card))}
 .pc-body tr.pc-season:focus-visible{outline:2px solid var(--hl);outline-offset:-2px}
 .pc-body tr.dnp td{color:var(--muted);font-style:italic}
+.pc-body td.pc-rank{color:var(--muted);font-weight:600}
+.pc-body td.pc-rank.hi{color:var(--up)}
 .pc-note{color:var(--muted);font-size:.82rem;margin:10px 2px 0}
 @media (max-width:760px){
   dialog.pcard{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border:0;border-radius:0}
@@ -378,6 +380,11 @@ dialog.pcard::backdrop{background:rgba(10,12,16,.55)}
     for (var k in sc) if (typeof stats[k] === 'number') t += stats[k] * sc[k];
     return t;
   }
+  // Position ranks are Sleeper's half-PPR ranks, which is how the league scores.
+  var RANK = 'pos_rank_half_ppr';
+  function getJSON(url) {
+    return fetch(url).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return null; });
+  }
 
   // Every season of a player's career, newest first: [{season, games: [{wk, opp, played, stats, pts}]}].
   function load(pid, p) {
@@ -385,22 +392,24 @@ dialog.pcard::backdrop{background:rgba(10,12,16,.55)}
     var last = +D.latest, first = last - (p.exp == null ? 4 : Math.min(p.exp, 25)), years = [];
     for (var y = last; y >= first; y--) years.push(y);
     cache[pid] = Promise.all(years.map(function (y) {
-      return fetch(API + encodeURIComponent(pid) + '?season_type=regular&season=' + y + '&grouping=week')
-        .then(function (r) { return r.ok ? r.json() : {}; })
-        .catch(function () { return null; })
-        .then(function (weeks) { return { season: String(y), weeks: weeks }; });
+      var url = API + encodeURIComponent(pid) + '?season_type=regular&season=' + y;
+      // By week for the game log; the season totals carry the season-long position rank.
+      return Promise.all([getJSON(url + '&grouping=week'), getJSON(url)]).then(function (r) {
+        return { season: String(y), weeks: r[0], total: r[1] };
+      });
     })).then(function (list) {
       if (list.every(function (s) { return s.weeks === null; })) throw new Error('offline');
       return list.filter(function (s) { return s.weeks; }).map(function (s) {
-        var sc = scoring(s.season), games = [];
+        var sc = scoring(s.season), key = RANK, games = [];
         Object.keys(s.weeks).sort(function (a, b) { return a - b; }).forEach(function (w) {
           var g = s.weeks[w];
           if (!g || !g.stats) return;
           var st = g.stats;
           games.push({ wk: +w, team: g.team, opp: g.opponent ? (g.is_away_team ? '@' : '') + g.opponent : '',
-                       played: (st.gp || 0) > 0 || (st.pts_ppr || 0) !== 0, stats: st, pts: score(st, sc) });
+                       played: (st.gp || 0) > 0 || (st.pts_ppr || 0) !== 0, stats: st, pts: score(st, sc), rank: st[key] });
         });
-        return { season: s.season, games: games };
+        var total = s.total && s.total.stats;
+        return { season: s.season, games: games, rank: total ? total[key] : null };
       }).filter(function (s) { return s.games.some(function (g) { return g.played; }); });
     });
     cache[pid].catch(function () { delete cache[pid]; });
@@ -424,10 +433,16 @@ dialog.pcard::backdrop{background:rgba(10,12,16,.55)}
       });
       return '<tr class="pc-season" data-season="' + s.season + '" tabindex="0"><td class="tn">' + s.season + '</td><td class="tn">' +
         esc(Object.keys(teams).join('/')) + '</td><td>' + played.length + '</td><td><b>' + pts(total) + '</b></td><td>' +
-        pts(played.length ? total / played.length : 0) + '</td>' +
+        pts(played.length ? total / played.length : 0) + '</td>' + rankCell(p, s.rank) +
         cols.map(function (c) { return '<td>' + num(tot[c[0]]) + '</td>'; }).join('') + '</tr>';
     });
-    return table(['Season', 'Team', 'GP', 'Pts', 'PPG'].concat(cols.map(function (c) { return c[1]; })), rows, 'pc-career');
+    return table(['Season', 'Team', 'GP', 'Pts', 'PPG', 'Rank'].concat(cols.map(function (c) { return c[1]; })), rows, 'pc-career');
+  }
+
+  // Position rank like RB4; top 12 at the position is highlighted.
+  function rankCell(p, r) {
+    if (!r) return '<td class="pc-rank">–</td>';
+    return '<td class="pc-rank' + (r <= 12 ? ' hi' : '') + '">' + esc(p.p) + r + '</td>';
   }
 
   function gameLog(p, s) {
@@ -435,12 +450,13 @@ dialog.pcard::backdrop{background:rgba(10,12,16,.55)}
     var rows = s.games.map(function (g) {
       if (!g.played) {
         return '<tr class="dnp"><td class="tn">' + g.wk + '</td><td class="tn">' + esc(g.opp) + '</td><td colspan="' +
-          (cols.length + 1) + '">Did not play</td></tr>';
+          (cols.length + 2) + '">Did not play</td></tr>';
       }
       return '<tr><td class="tn">' + g.wk + '</td><td class="tn">' + esc(g.opp) + '</td><td><b>' + pts(g.pts) + '</b></td>' +
-        cols.map(function (c) { return '<td>' + num(g.stats[c[0]]) + '</td>'; }).join('') + '</tr>';
+        rankCell(p, g.rank) + cols.map(function (c) { return '<td>' + num(g.stats[c[0]]) + '</td>'; }).join('') + '</tr>';
     });
-    return '<h3>' + s.season + ' games</h3>' + table(['Wk', 'Opp', 'Pts'].concat(cols.map(function (c) { return c[1]; })), rows);
+    return '<h3>' + s.season + ' games</h3>' +
+      table(['Wk', 'Opp', 'Pts', 'Rank'].concat(cols.map(function (c) { return c[1]; })), rows);
   }
 
   function league(p) {
