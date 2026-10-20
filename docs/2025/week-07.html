@@ -231,7 +231,8 @@ dialog.pcard::backdrop{background:rgba(10,12,16,.55)}
   .pc-photo{width:56px;height:56px}
   .pc-name{font-size:1.15rem}
 }
-</style><script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script></head>
+</style><script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script data-goatcounter="https://avian96.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head>
 <body><div class="layout">
 <div class="mbar"><button class="menu-btn" type="button" aria-expanded="false" aria-controls="side"><span aria-hidden="true">&#9776;</span> Menu</button></div>
 <aside class="seasons" id="side"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-06.html">2026</a><a href="../2025/week-14.html" class=cur>2025</a><a href="../2024/week-14.html">2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2025/recap.html">Season Recap</a><a href="../2025/stats.html">Team Stats</a><a href="../2025/faab.html">FAAB Tracker</a><a href="../2025/trades.html">Trade Grades</a><a href="../2025/draft.html">Draft Report Card</a><a href="../2025/moves.html">Transactions</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a><a href="../history/managers.html">Managers</a></div></div></aside>
@@ -612,6 +613,10 @@ document.querySelectorAll('.chart').forEach(function (chart) {
       '<div class="pc-log"></div><p class="pc-note">Stats from Sleeper. Points use Red Vines scoring. Tap a season to see its games.</p></div>';
     if (!dlg.open) dlg.showModal();
     dlg.scrollTop = 0;
+    // Count card opens in GoatCounter (site analytics) as events named after the player.
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: 'player-card/' + p.n, title: p.n, event: true });
+    }
     var box = dlg.querySelector('.pc-career-box');
     load(pid, p).then(function (seasons) {
       if (dlg.getAttribute('aria-label') !== p.n) return;  // another card was opened meanwhile

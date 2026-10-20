@@ -2133,7 +2133,8 @@ PAGE = """<!doctype html>
 <meta property="og:title" content="{site_name}">
 <meta property="og:site_name" content="{site_name}">
 <meta property="og:description" content="{description}">
-<style>{css}</style>{theme_head}</head>
+<style>{css}</style>{theme_head}
+<script data-goatcounter="https://avian96.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head>
 <body><div class="layout">
 <div class="mbar"><button class="menu-btn" type="button" aria-expanded="false" aria-controls="side"><span aria-hidden="true">&#9776;</span> Menu</button></div>
 <aside class="seasons" id="side">{side}</aside>
@@ -2348,6 +2349,10 @@ PLAYER_JS = r"""<script>
       '<div class="pc-log"></div><p class="pc-note">Stats from Sleeper. Points use Red Vines scoring. Tap a season to see its games.</p></div>';
     if (!dlg.open) dlg.showModal();
     dlg.scrollTop = 0;
+    // Count card opens in GoatCounter (site analytics) as events named after the player.
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: 'player-card/' + p.n, title: p.n, event: true });
+    }
     var box = dlg.querySelector('.pc-career-box');
     load(pid, p).then(function (seasons) {
       if (dlg.getAttribute('aria-label') !== p.n) return;  // another card was opened meanwhile
