@@ -815,7 +815,7 @@ def page(data, base, side, nav, kicker, heading, body, footer, description):
     logo = f'<img class="logo" src="{e(data["league_avatar"])}" alt="">' if data.get("league_avatar") else ""
     return PAGE.format(site_name=e(SITE_NAME), description=e(description), side=side, logo=logo, kicker=kicker,
                        heading=heading, nav=nav, body=body, footer=footer, css=CSS,
-                       theme_head=THEME_HEAD, scripts=SORT_JS + THEME_JS)
+                       theme_head=THEME_HEAD, scripts=SORT_JS + THEME_JS + MOBILE_JS)
 
 
 def tiles(title, items):
@@ -2054,7 +2054,8 @@ PAGE = """<!doctype html>
 <meta property="og:description" content="{description}">
 <style>{css}</style>{theme_head}</head>
 <body><div class="layout">
-<aside class="seasons">{side}</aside>
+<div class="mbar"><button class="menu-btn" type="button" aria-expanded="false" aria-controls="side"><span aria-hidden="true">&#9776;</span> Menu</button></div>
+<aside class="seasons" id="side">{side}</aside>
 <main class="wrap">
 <header>{logo}<div><div class="kicker">{kicker}</div><h1>{heading}</h1></div><button class="theme" type="button" aria-label="Switch light/dark mode"></button></header>
 <nav>{nav}</nav>
@@ -2090,6 +2091,23 @@ THEME_JS = """<script>
 })();
 </script>"""
 
+# Phones: the Menu button opens the sidebar links as a panel, and the swipeable week row starts on the current week.
+MOBILE_JS = """<script>
+(function () {
+  var btn = document.querySelector('.menu-btn'), side = document.getElementById('side');
+  function setOpen(open) { side.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); }
+  if (btn && side) {
+    btn.addEventListener('click', function (ev) { ev.stopPropagation(); setOpen(!side.classList.contains('open')); });
+    document.addEventListener('click', function (ev) { if (!side.contains(ev.target)) setOpen(false); });
+    document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') setOpen(false); });
+  }
+  var nav = document.querySelector('nav'), cur = nav && nav.querySelector('.cur');
+  if (cur && nav.scrollWidth > nav.clientWidth) {
+    nav.scrollLeft += cur.getBoundingClientRect().left - nav.getBoundingClientRect().left - (nav.clientWidth - cur.offsetWidth) / 2;
+  }
+})();
+</script>"""
+
 DARK = "--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;--pos:#3987e5;--neg:#e66767;--neutral:#383835;color-scheme:dark"
 
 CSS = """
@@ -2107,16 +2125,20 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-ap
 .seasons a:hover{background:var(--chip);color:var(--ink)}
 .seasons a.cur{background:var(--card);color:var(--ink);box-shadow:inset 3px 0 0 var(--ink),0 0 0 1px var(--line)}
 .wrap{flex:1;min-width:0;max-width:1000px;padding:32px 16px 64px}
+.mbar{display:none}
 @media (max-width:760px){
   .layout{display:block}
-  .seasons{position:static;width:auto;padding:16px 16px 0;display:flex;flex-wrap:wrap;gap:10px 24px}
-  .side-group{display:flex;align-items:center;gap:10px}
-  .side-group+.side-group{margin-top:0}
-  .seasons-lbl{margin:0}
-  .seasons-list{flex-direction:row;flex-wrap:wrap;gap:6px}
-  .seasons a{padding:4px 12px}
-  .seasons a.cur{box-shadow:inset 0 -2px 0 var(--ink),0 0 0 1px var(--line)}
-  .wrap{padding-top:16px}
+  .mbar{display:flex;position:sticky;top:0;z-index:20;height:60px;align-items:center;padding:0 16px;background:var(--bg);border-bottom:1px solid var(--line)}
+  .menu-btn{font:inherit;font-size:.95rem;font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;min-height:40px;padding:0 16px;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+  .menu-btn:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+  .seasons{display:none;position:fixed;top:60px;left:0;right:0;z-index:19;width:auto;max-height:calc(100vh - 60px);overflow-y:auto;padding:14px 16px 18px;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.12)}
+  .seasons.open{display:block}
+  .side-group+.side-group{margin-top:16px}
+  .seasons-lbl{margin:0 0 8px 2px}
+  .seasons-list{flex-direction:row;flex-wrap:wrap;gap:8px}
+  .seasons a{padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink)}
+  .seasons a.cur{background:var(--ink);color:var(--bg);border-color:var(--ink);box-shadow:none}
+  .wrap{padding-top:20px}
 }
 header{display:flex;gap:16px;align-items:center}
 .logo{width:64px;height:64px;border-radius:14px}
@@ -2129,6 +2151,11 @@ h2{margin:0;font-size:1.1rem}
 nav{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 28px}
 nav a{padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);text-decoration:none;font-size:.85rem}
 nav a.cur{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+@media (max-width:760px){
+  nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:16px -16px 24px;padding:2px 16px}
+  nav::-webkit-scrollbar{display:none}
+  nav a{flex:none;padding:7px 14px;font-size:.9rem}
+}
 .intro{font-size:1.05rem;margin:-8px 0 24px}.intro p{margin:0 0 .7em}
 .ranks{list-style:none;padding:0;margin:0;display:grid;gap:12px}
 .rank{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}

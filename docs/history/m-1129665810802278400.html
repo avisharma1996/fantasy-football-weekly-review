@@ -20,16 +20,20 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-ap
 .seasons a:hover{background:var(--chip);color:var(--ink)}
 .seasons a.cur{background:var(--card);color:var(--ink);box-shadow:inset 3px 0 0 var(--ink),0 0 0 1px var(--line)}
 .wrap{flex:1;min-width:0;max-width:1000px;padding:32px 16px 64px}
+.mbar{display:none}
 @media (max-width:760px){
   .layout{display:block}
-  .seasons{position:static;width:auto;padding:16px 16px 0;display:flex;flex-wrap:wrap;gap:10px 24px}
-  .side-group{display:flex;align-items:center;gap:10px}
-  .side-group+.side-group{margin-top:0}
-  .seasons-lbl{margin:0}
-  .seasons-list{flex-direction:row;flex-wrap:wrap;gap:6px}
-  .seasons a{padding:4px 12px}
-  .seasons a.cur{box-shadow:inset 0 -2px 0 var(--ink),0 0 0 1px var(--line)}
-  .wrap{padding-top:16px}
+  .mbar{display:flex;position:sticky;top:0;z-index:20;height:60px;align-items:center;padding:0 16px;background:var(--bg);border-bottom:1px solid var(--line)}
+  .menu-btn{font:inherit;font-size:.95rem;font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;min-height:40px;padding:0 16px;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+  .menu-btn:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+  .seasons{display:none;position:fixed;top:60px;left:0;right:0;z-index:19;width:auto;max-height:calc(100vh - 60px);overflow-y:auto;padding:14px 16px 18px;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.12)}
+  .seasons.open{display:block}
+  .side-group+.side-group{margin-top:16px}
+  .seasons-lbl{margin:0 0 8px 2px}
+  .seasons-list{flex-direction:row;flex-wrap:wrap;gap:8px}
+  .seasons a{padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink)}
+  .seasons a.cur{background:var(--ink);color:var(--bg);border-color:var(--ink);box-shadow:none}
+  .wrap{padding-top:20px}
 }
 header{display:flex;gap:16px;align-items:center}
 .logo{width:64px;height:64px;border-radius:14px}
@@ -42,6 +46,11 @@ h2{margin:0;font-size:1.1rem}
 nav{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 28px}
 nav a{padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);text-decoration:none;font-size:.85rem}
 nav a.cur{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+@media (max-width:760px){
+  nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:16px -16px 24px;padding:2px 16px}
+  nav::-webkit-scrollbar{display:none}
+  nav a{flex:none;padding:7px 14px;font-size:.9rem}
+}
 .intro{font-size:1.05rem;margin:-8px 0 24px}.intro p{margin:0 0 .7em}
 .ranks{list-style:none;padding:0;margin:0;display:grid;gap:12px}
 .rank{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
@@ -192,7 +201,8 @@ th[data-sort]:hover,th[data-sort]:focus-visible{color:var(--ink)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
 </style><script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script></head>
 <body><div class="layout">
-<aside class="seasons"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-06.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html">2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2026/stats.html">Team Stats</a><a href="../2026/faab.html">FAAB Tracker</a><a href="../2026/trades.html">Trade Grades</a><a href="../2026/draft.html">Draft Report Card</a><a href="../2026/moves.html">Transactions</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a><a href="../history/managers.html" class=cur>Managers</a></div></div></aside>
+<div class="mbar"><button class="menu-btn" type="button" aria-expanded="false" aria-controls="side"><span aria-hidden="true">&#9776;</span> Menu</button></div>
+<aside class="seasons" id="side"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-06.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html">2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2026/stats.html">Team Stats</a><a href="../2026/faab.html">FAAB Tracker</a><a href="../2026/trades.html">Trade Grades</a><a href="../2026/draft.html">Draft Report Card</a><a href="../2026/moves.html">Transactions</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a><a href="../history/managers.html" class=cur>Managers</a></div></div></aside>
 <main class="wrap">
 <header><img class="logo" src="https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f" alt=""><div><div class="kicker">Red Vines · 2024–2026</div><h1>Baltimore Avians</h1></div><button class="theme" type="button" aria-label="Switch light/dark mode"></button></header>
 <nav><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a><a href="../history/managers.html" class=cur>Managers</a></nav>
@@ -287,5 +297,19 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
   });
   if (mq.addEventListener) mq.addEventListener('change', paint);
   paint();
+})();
+</script><script>
+(function () {
+  var btn = document.querySelector('.menu-btn'), side = document.getElementById('side');
+  function setOpen(open) { side.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); }
+  if (btn && side) {
+    btn.addEventListener('click', function (ev) { ev.stopPropagation(); setOpen(!side.classList.contains('open')); });
+    document.addEventListener('click', function (ev) { if (!side.contains(ev.target)) setOpen(false); });
+    document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') setOpen(false); });
+  }
+  var nav = document.querySelector('nav'), cur = nav && nav.querySelector('.cur');
+  if (cur && nav.scrollWidth > nav.clientWidth) {
+    nav.scrollLeft += cur.getBoundingClientRect().left - nav.getBoundingClientRect().left - (nav.clientWidth - cur.offsetWidth) / 2;
+  }
 })();
 </script></body></html>
