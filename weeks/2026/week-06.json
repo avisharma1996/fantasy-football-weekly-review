@@ -1,0 +1,1163 @@
+{
+  "league": "Red Vines",
+  "league_avatar": "https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f",
+  "season": "2026",
+  "week": 6,
+  "median_game": true,
+  "teams": {
+    "1": {
+      "name": "Baltimore Avians",
+      "manager": "avian96",
+      "owner": "1129665810802278400",
+      "avatar": "https://sleepercdn.com/uploads/fc842cde09b52fdae012a1ce136d4098.jpg",
+      "wins": 8,
+      "losses": 4,
+      "ties": 0,
+      "pf": 769.24,
+      "opps": [
+        "3",
+        "4",
+        "12",
+        "6",
+        "11",
+        "2"
+      ],
+      "left_opps": [
+        "5",
+        "8",
+        "9",
+        "10",
+        "7",
+        "3",
+        "4",
+        "12"
+      ],
+      "pos_pts": {
+        "QB": 121.26,
+        "RB": 318.6,
+        "WR": 182.38,
+        "TE": 47.0,
+        "K": 65.0,
+        "DEF": 35.0
+      },
+      "odds": {
+        "playoffs": 85.08,
+        "bye": 29.77,
+        "semis": 56.77,
+        "final": 29.18,
+        "champ": 15.15,
+        "settled": false
+      },
+      "scores": [
+        119.76,
+        100.78,
+        134.68,
+        150.62,
+        152.88,
+        110.52
+      ],
+      "streak": "L1",
+      "top": [
+        {
+          "name": "Bijan Robinson",
+          "pos": "RB",
+          "rank": "RB3",
+          "pts": 118.5
+        },
+        {
+          "name": "Joe Burrow",
+          "pos": "QB",
+          "rank": "QB13",
+          "pts": 104.24
+        },
+        {
+          "name": "D'Andre Swift",
+          "pos": "RB",
+          "rank": "RB10",
+          "pts": 94.8
+        }
+      ],
+      "top_week": [
+        {
+          "name": "D'Andre Swift",
+          "pos": "RB",
+          "rank": "RB5",
+          "pts": 21.0
+        },
+        {
+          "name": "Aaron Rodgers",
+          "pos": "QB",
+          "rank": "QB13",
+          "pts": 17.02
+        },
+        {
+          "name": "Dameon Pierce",
+          "pos": "RB",
+          "rank": "RB14",
+          "pts": 13.0
+        }
+      ]
+    },
+    "2": {
+      "name": "Karans Sportsbook",
+      "manager": "kgids",
+      "owner": "1129574561793630208",
+      "avatar": "https://sleepercdn.com/uploads/0c9f8e1d162b4a620ef25c0be112ec3b.jpg",
+      "wins": 10,
+      "losses": 2,
+      "ties": 0,
+      "pf": 766.6,
+      "opps": [
+        "8",
+        "9",
+        "10",
+        "7",
+        "3",
+        "1"
+      ],
+      "left_opps": [
+        "12",
+        "6",
+        "11",
+        "4",
+        "5",
+        "8",
+        "9",
+        "10"
+      ],
+      "pos_pts": {
+        "QB": 121.2,
+        "RB": 236.0,
+        "WR": 190.5,
+        "TE": 99.9,
+        "K": 80.0,
+        "DEF": 39.0
+      },
+      "odds": {
+        "playoffs": 91.5,
+        "bye": 46.48,
+        "semis": 68.22,
+        "final": 34.65,
+        "champ": 16.43,
+        "settled": false
+      },
+      "scores": [
+        101.02,
+        117.62,
+        128.74,
+        174.56,
+        113.96,
+        130.7
+      ],
+      "streak": "W6",
+      "top": [
+        {
+          "name": "James Cook",
+          "pos": "RB",
+          "rank": "RB6",
+          "pts": 108.6
+        },
+        {
+          "name": "Chuba Hubbard",
+          "pos": "RB",
+          "rank": "RB11",
+          "pts": 92.6
+        },
+        {
+          "name": "Drake Maye",
+          "pos": "QB",
+          "rank": "QB4",
+          "pts": 85.1
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Drake Maye",
+          "pos": "QB",
+          "rank": "QB4",
+          "pts": 23.8
+        },
+        {
+          "name": "James Cook",
+          "pos": "RB",
+          "rank": "RB3",
+          "pts": 22.8
+        },
+        {
+          "name": "Chuba Hubbard",
+          "pos": "RB",
+          "rank": "RB7",
+          "pts": 18.6
+        }
+      ]
+    },
+    "3": {
+      "name": "Ankitty",
+      "manager": "bruhking123",
+      "owner": "1085126678843682816",
+      "avatar": "https://sleepercdn.com/uploads/8bc7ecc9ee2386a3eae7f7fa569bef5e.jpg",
+      "wins": 3,
+      "losses": 9,
+      "ties": 0,
+      "pf": 632.88,
+      "opps": [
+        "1",
+        "12",
+        "6",
+        "11",
+        "2",
+        "5"
+      ],
+      "left_opps": [
+        "8",
+        "9",
+        "10",
+        "7",
+        "4",
+        "1",
+        "12",
+        "6"
+      ],
+      "pos_pts": {
+        "QB": 95.62,
+        "RB": 103.4,
+        "WR": 228.26,
+        "TE": 90.6,
+        "K": 58.0,
+        "DEF": 57.0
+      },
+      "odds": {
+        "playoffs": 14.7,
+        "bye": 0.38,
+        "semis": 8.03,
+        "final": 3.9,
+        "champ": 2.15,
+        "settled": false
+      },
+      "scores": [
+        97.82,
+        108.26,
+        147.78,
+        81.12,
+        97.1,
+        100.8
+      ],
+      "streak": "W1",
+      "top": [
+        {
+          "name": "Jaxon Smith-Njigba",
+          "pos": "WR",
+          "rank": "WR1",
+          "pts": 140.36
+        },
+        {
+          "name": "Jalen Hurts",
+          "pos": "QB",
+          "rank": "QB19",
+          "pts": 83.02
+        },
+        {
+          "name": "Brock Bowers",
+          "pos": "TE",
+          "rank": "TE4",
+          "pts": 68.2
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Jaxon Smith-Njigba",
+          "pos": "WR",
+          "rank": "WR4",
+          "pts": 19.4
+        },
+        {
+          "name": "Chris Boswell",
+          "pos": "K",
+          "rank": "K5",
+          "pts": 17.0
+        },
+        {
+          "name": "Denver Broncos D/ST",
+          "pos": "DEF",
+          "rank": "DEF3",
+          "pts": 14.0
+        }
+      ]
+    },
+    "4": {
+      "name": "Braelon Allen",
+      "manager": "nmadan",
+      "owner": "535242776309989376",
+      "avatar": "https://sleepercdn.com/uploads/911bf058585a0ae5eb84a0a1290e6db9.jpg",
+      "wins": 4,
+      "losses": 8,
+      "ties": 0,
+      "pf": 608.38,
+      "opps": [
+        "5",
+        "1",
+        "8",
+        "12",
+        "9",
+        "6"
+      ],
+      "left_opps": [
+        "10",
+        "11",
+        "7",
+        "2",
+        "3",
+        "5",
+        "1",
+        "8"
+      ],
+      "pos_pts": {
+        "QB": 124.38,
+        "RB": 168.2,
+        "WR": 185.2,
+        "TE": 34.6,
+        "K": 29.0,
+        "DEF": 67.0
+      },
+      "odds": {
+        "playoffs": 16.23,
+        "bye": 0.42,
+        "semis": 8.5,
+        "final": 3.48,
+        "champ": 1.55,
+        "settled": false
+      },
+      "scores": [
+        132.46,
+        130.98,
+        105.14,
+        77.7,
+        98.62,
+        63.48
+      ],
+      "streak": "L1",
+      "top": [
+        {
+          "name": "Jonathan Taylor",
+          "pos": "RB",
+          "rank": "RB5",
+          "pts": 111.0
+        },
+        {
+          "name": "Christian Watson",
+          "pos": "WR",
+          "rank": "WR3",
+          "pts": 104.3
+        },
+        {
+          "name": "Patrick Mahomes",
+          "pos": "QB",
+          "rank": "QB15",
+          "pts": 97.06
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Jonathan Taylor",
+          "pos": "RB",
+          "rank": "RB6",
+          "pts": 20.1
+        },
+        {
+          "name": "Patrick Mahomes",
+          "pos": "QB",
+          "rank": "QB23",
+          "pts": 11.48
+        },
+        {
+          "name": "Christian Watson",
+          "pos": "WR",
+          "rank": "WR37",
+          "pts": 7.9
+        }
+      ]
+    },
+    "5": {
+      "name": "Amver Alert🚨",
+      "manager": "amver",
+      "owner": "1002009644597993472",
+      "avatar": "https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg",
+      "wins": 6,
+      "losses": 6,
+      "ties": 0,
+      "pf": 752.16,
+      "opps": [
+        "4",
+        "8",
+        "9",
+        "10",
+        "7",
+        "3"
+      ],
+      "left_opps": [
+        "1",
+        "12",
+        "6",
+        "11",
+        "2",
+        "4",
+        "8",
+        "9"
+      ],
+      "pos_pts": {
+        "QB": 164.76,
+        "RB": 195.5,
+        "WR": 231.7,
+        "TE": 57.2,
+        "K": 66.0,
+        "DEF": 37.0
+      },
+      "odds": {
+        "playoffs": 65.4,
+        "bye": 11.03,
+        "semis": 39.58,
+        "final": 20.4,
+        "champ": 9.97,
+        "settled": false
+      },
+      "scores": [
+        172.46,
+        141.52,
+        90.56,
+        134.22,
+        114.1,
+        99.3
+      ],
+      "streak": "L3",
+      "top": [
+        {
+          "name": "Josh Allen",
+          "pos": "QB",
+          "rank": "QB1",
+          "pts": 164.76
+        },
+        {
+          "name": "Ashton Jeanty",
+          "pos": "RB",
+          "rank": "RB13",
+          "pts": 87.4
+        },
+        {
+          "name": "Amon-Ra St. Brown",
+          "pos": "WR",
+          "rank": "WR6",
+          "pts": 85.7
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Josh Allen",
+          "pos": "QB",
+          "rank": "QB10",
+          "pts": 18.3
+        },
+        {
+          "name": "DeVonta Smith",
+          "pos": "WR",
+          "rank": "WR8",
+          "pts": 17.0
+        },
+        {
+          "name": "Ashton Jeanty",
+          "pos": "RB",
+          "rank": "RB10",
+          "pts": 13.8
+        }
+      ]
+    },
+    "6": {
+      "name": "6 7",
+      "manager": "amach124",
+      "owner": "471050766644146176",
+      "avatar": "https://sleepercdn.com/uploads/6ebe8bc60afe12ce369e7b3acd0c692f.jpg",
+      "wins": 7,
+      "losses": 5,
+      "ties": 0,
+      "pf": 694.3,
+      "opps": [
+        "10",
+        "7",
+        "3",
+        "1",
+        "12",
+        "4"
+      ],
+      "left_opps": [
+        "11",
+        "2",
+        "5",
+        "8",
+        "9",
+        "10",
+        "7",
+        "3"
+      ],
+      "pos_pts": {
+        "QB": 136.0,
+        "RB": 303.8,
+        "WR": 138.6,
+        "TE": 24.9,
+        "K": 50.0,
+        "DEF": 41.0
+      },
+      "odds": {
+        "playoffs": 62.85,
+        "bye": 10.22,
+        "semis": 35.27,
+        "final": 15.32,
+        "champ": 7.47,
+        "settled": false
+      },
+      "scores": [
+        135.8,
+        112.38,
+        120.38,
+        97.32,
+        119.36,
+        109.06
+      ],
+      "streak": "W1",
+      "top": [
+        {
+          "name": "Brock Purdy",
+          "pos": "QB",
+          "rank": "QB2",
+          "pts": 136.0
+        },
+        {
+          "name": "Derrick Henry",
+          "pos": "RB",
+          "rank": "RB4",
+          "pts": 112.3
+        },
+        {
+          "name": "Christian McCaffrey",
+          "pos": "RB",
+          "rank": "RB7",
+          "pts": 108.0
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Christian McCaffrey",
+          "pos": "RB",
+          "rank": "RB2",
+          "pts": 26.2
+        },
+        {
+          "name": "Brock Purdy",
+          "pos": "QB",
+          "rank": "QB11",
+          "pts": 17.36
+        },
+        {
+          "name": "Emeka Egbuka",
+          "pos": "WR",
+          "rank": "WR13",
+          "pts": 14.3
+        }
+      ]
+    },
+    "7": {
+      "name": "yrkpapi",
+      "manager": "yrkpapi",
+      "owner": "873130597315481600",
+      "avatar": "https://sleepercdn.com/avatars/thumbs/8eb8f8bf999945d523f2c4033f70473e",
+      "wins": 3,
+      "losses": 9,
+      "ties": 0,
+      "pf": 564.38,
+      "opps": [
+        "12",
+        "6",
+        "11",
+        "2",
+        "5",
+        "8"
+      ],
+      "left_opps": [
+        "9",
+        "10",
+        "4",
+        "3",
+        "1",
+        "12",
+        "6",
+        "11"
+      ],
+      "pos_pts": {
+        "QB": 82.68,
+        "RB": 105.4,
+        "WR": 204.5,
+        "TE": 89.8,
+        "K": 44.0,
+        "DEF": 38.0
+      },
+      "odds": {
+        "playoffs": 6.47,
+        "bye": 0.07,
+        "semis": 3.0,
+        "final": 1.4,
+        "champ": 0.8,
+        "settled": false
+      },
+      "scores": [
+        106.16,
+        79.18,
+        82.44,
+        76.56,
+        128.62,
+        91.42
+      ],
+      "streak": "W2",
+      "top": [
+        {
+          "name": "Isaiah Likely",
+          "pos": "TE",
+          "rank": "TE1",
+          "pts": 89.8
+        },
+        {
+          "name": "Parker Washington",
+          "pos": "WR",
+          "rank": "WR9",
+          "pts": 78.9
+        },
+        {
+          "name": "George Pickens",
+          "pos": "WR",
+          "rank": "WR18",
+          "pts": 65.3
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Isaiah Likely",
+          "pos": "TE",
+          "rank": "TE1",
+          "pts": 20.9
+        },
+        {
+          "name": "Germie Bernard",
+          "pos": "WR",
+          "rank": "WR3",
+          "pts": 20.2
+        },
+        {
+          "name": "Kirk Cousins",
+          "pos": "QB",
+          "rank": "QB9",
+          "pts": 19.52
+        }
+      ]
+    },
+    "8": {
+      "name": "I’m Whipped by Bezos",
+      "manager": "roheezy",
+      "owner": "470927114183372800",
+      "avatar": "https://sleepercdn.com/uploads/1e1f1094e8d4b98b25130a8d3c0cf063.jpg",
+      "wins": 4,
+      "losses": 8,
+      "ties": 0,
+      "pf": 636.86,
+      "opps": [
+        "2",
+        "5",
+        "4",
+        "9",
+        "10",
+        "7"
+      ],
+      "left_opps": [
+        "3",
+        "1",
+        "12",
+        "6",
+        "11",
+        "2",
+        "5",
+        "4"
+      ],
+      "pos_pts": {
+        "QB": 109.86,
+        "RB": 121.4,
+        "WR": 252.5,
+        "TE": 63.1,
+        "K": 41.0,
+        "DEF": 49.0
+      },
+      "odds": {
+        "playoffs": 20.1,
+        "bye": 0.75,
+        "semis": 11.0,
+        "final": 5.4,
+        "champ": 2.67,
+        "settled": false
+      },
+      "scores": [
+        93.9,
+        129.66,
+        106.34,
+        133.2,
+        85.04,
+        88.72
+      ],
+      "streak": "L2",
+      "top": [
+        {
+          "name": "Dak Prescott",
+          "pos": "QB",
+          "rank": "QB12",
+          "pts": 109.86
+        },
+        {
+          "name": "CeeDee Lamb",
+          "pos": "WR",
+          "rank": "WR2",
+          "pts": 107.1
+        },
+        {
+          "name": "Garrett Wilson",
+          "pos": "WR",
+          "rank": "WR11",
+          "pts": 77.3
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Chase McLaughlin",
+          "pos": "K",
+          "rank": "K4",
+          "pts": 17.0
+        },
+        {
+          "name": "Dak Prescott",
+          "pos": "QB",
+          "rank": "QB19",
+          "pts": 13.02
+        },
+        {
+          "name": "CeeDee Lamb",
+          "pos": "WR",
+          "rank": "WR22",
+          "pts": 11.5
+        }
+      ]
+    },
+    "9": {
+      "name": "superdiddy",
+      "manager": "jallerbo",
+      "owner": "1084605692373233664",
+      "avatar": "https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg",
+      "wins": 3,
+      "losses": 9,
+      "ties": 0,
+      "pf": 612.64,
+      "opps": [
+        "11",
+        "2",
+        "5",
+        "8",
+        "4",
+        "10"
+      ],
+      "left_opps": [
+        "7",
+        "3",
+        "1",
+        "12",
+        "6",
+        "11",
+        "2",
+        "5"
+      ],
+      "pos_pts": {
+        "QB": 92.74,
+        "RB": 162.1,
+        "WR": 216.8,
+        "TE": 46.0,
+        "K": 64.0,
+        "DEF": 31.0
+      },
+      "odds": {
+        "playoffs": 10.78,
+        "bye": 0.2,
+        "semis": 5.78,
+        "final": 2.3,
+        "champ": 1.27,
+        "settled": false
+      },
+      "scores": [
+        142.2,
+        70.1,
+        82.78,
+        129.12,
+        93.3,
+        95.14
+      ],
+      "streak": "L5",
+      "top": [
+        {
+          "name": "Javonte Williams",
+          "pos": "RB",
+          "rank": "RB9",
+          "pts": 99.5
+        },
+        {
+          "name": "Zay Flowers",
+          "pos": "WR",
+          "rank": "WR10",
+          "pts": 78.5
+        },
+        {
+          "name": "Ka'imi Fairbairn",
+          "pos": "K",
+          "rank": "K4",
+          "pts": 64.0
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Jordan Love",
+          "pos": "QB",
+          "rank": "QB6",
+          "pts": 21.24
+        },
+        {
+          "name": "Carnell Tate",
+          "pos": "WR",
+          "rank": "WR11",
+          "pts": 16.0
+        },
+        {
+          "name": "Javonte Williams",
+          "pos": "RB",
+          "rank": "RB17",
+          "pts": 12.0
+        }
+      ]
+    },
+    "10": {
+      "name": "Justin Beer Loyalist",
+      "manager": "ZebroGodilla",
+      "owner": "1132924651295956992",
+      "avatar": "https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg",
+      "wins": 11,
+      "losses": 1,
+      "ties": 0,
+      "pf": 780.66,
+      "opps": [
+        "6",
+        "11",
+        "2",
+        "5",
+        "8",
+        "9"
+      ],
+      "left_opps": [
+        "4",
+        "7",
+        "3",
+        "1",
+        "12",
+        "6",
+        "11",
+        "2"
+      ],
+      "pos_pts": {
+        "QB": 105.06,
+        "RB": 285.0,
+        "WR": 205.8,
+        "TE": 80.8,
+        "K": 57.0,
+        "DEF": 47.0
+      },
+      "odds": {
+        "playoffs": 95.83,
+        "bye": 60.75,
+        "semis": 77.17,
+        "final": 39.23,
+        "champ": 18.93,
+        "settled": false
+      },
+      "scores": [
+        138.06,
+        113.92,
+        127.7,
+        147.34,
+        141.64,
+        112.0
+      ],
+      "streak": "W3",
+      "top": [
+        {
+          "name": "Jahmyr Gibbs",
+          "pos": "RB",
+          "rank": "RB1",
+          "pts": 140.2
+        },
+        {
+          "name": "Davante Adams",
+          "pos": "WR",
+          "rank": "WR5",
+          "pts": 87.0
+        },
+        {
+          "name": "Malik Nabers",
+          "pos": "WR",
+          "rank": "WR8",
+          "pts": 81.9
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Tre Tucker",
+          "pos": "WR",
+          "rank": "WR1",
+          "pts": 24.2
+        },
+        {
+          "name": "Malik Nabers",
+          "pos": "WR",
+          "rank": "WR2",
+          "pts": 22.5
+        },
+        {
+          "name": "Caleb Williams",
+          "pos": "QB",
+          "rank": "QB15",
+          "pts": 16.5
+        }
+      ]
+    },
+    "11": {
+      "name": "NShah19",
+      "manager": "NShah19",
+      "owner": "536026305198518272",
+      "avatar": "https://sleepercdn.com/avatars/thumbs/4fb394f49d806fbad75dd79ecc68f525",
+      "wins": 5,
+      "losses": 7,
+      "ties": 0,
+      "pf": 687.44,
+      "opps": [
+        "9",
+        "10",
+        "7",
+        "3",
+        "1",
+        "12"
+      ],
+      "left_opps": [
+        "6",
+        "4",
+        "2",
+        "5",
+        "8",
+        "9",
+        "10",
+        "7"
+      ],
+      "pos_pts": {
+        "QB": 116.94,
+        "RB": 242.8,
+        "WR": 179.9,
+        "TE": 51.8,
+        "K": 44.0,
+        "DEF": 52.0
+      },
+      "odds": {
+        "playoffs": 40.8,
+        "bye": 3.1,
+        "semis": 21.73,
+        "final": 9.45,
+        "champ": 4.53,
+        "settled": false
+      },
+      "scores": [
+        110.66,
+        110.3,
+        121.54,
+        114.78,
+        127.74,
+        102.42
+      ],
+      "streak": "L2",
+      "top": [
+        {
+          "name": "Kyren Williams",
+          "pos": "RB",
+          "rank": "RB8",
+          "pts": 104.0
+        },
+        {
+          "name": "Bhayshul Tuten",
+          "pos": "RB",
+          "rank": "RB14",
+          "pts": 81.9
+        },
+        {
+          "name": "Lamar Jackson",
+          "pos": "QB",
+          "rank": "QB21",
+          "pts": 80.08
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Bhayshul Tuten",
+          "pos": "RB",
+          "rank": "RB4",
+          "pts": 22.7
+        },
+        {
+          "name": "Kansas City Chiefs D/ST",
+          "pos": "DEF",
+          "rank": "DEF2",
+          "pts": 16.0
+        },
+        {
+          "name": "DK Metcalf",
+          "pos": "WR",
+          "rank": "WR12",
+          "pts": 14.8
+        }
+      ]
+    },
+    "12": {
+      "name": "8-4 god team ",
+      "manager": "Shivxn",
+      "owner": "1392294069287256064",
+      "avatar": "https://sleepercdn.com/avatars/thumbs/d55d1f7075eda01948318de4af616075",
+      "wins": 8,
+      "losses": 4,
+      "ties": 0,
+      "pf": 806.42,
+      "opps": [
+        "7",
+        "3",
+        "1",
+        "4",
+        "6",
+        "11"
+      ],
+      "left_opps": [
+        "2",
+        "5",
+        "8",
+        "9",
+        "10",
+        "7",
+        "3",
+        "1"
+      ],
+      "pos_pts": {
+        "QB": 120.42,
+        "RB": 224.3,
+        "WR": 303.7,
+        "TE": 49.0,
+        "K": 58.0,
+        "DEF": 51.0
+      },
+      "odds": {
+        "playoffs": 90.28,
+        "bye": 36.83,
+        "semis": 64.95,
+        "final": 35.3,
+        "champ": 19.07,
+        "settled": false
+      },
+      "scores": [
+        159.46,
+        108.84,
+        107.38,
+        124.98,
+        179.76,
+        126.0
+      ],
+      "streak": "W3",
+      "top": [
+        {
+          "name": "Kenneth Walker",
+          "pos": "RB",
+          "rank": "RB2",
+          "pts": 131.0
+        },
+        {
+          "name": "Chris Olave",
+          "pos": "WR",
+          "rank": "WR4",
+          "pts": 91.5
+        },
+        {
+          "name": "Jayden Daniels",
+          "pos": "QB",
+          "rank": "QB18",
+          "pts": 85.66
+        }
+      ],
+      "top_week": [
+        {
+          "name": "Kenneth Walker",
+          "pos": "RB",
+          "rank": "RB1",
+          "pts": 26.9
+        },
+        {
+          "name": "Jayden Daniels",
+          "pos": "QB",
+          "rank": "QB7",
+          "pts": 21.0
+        },
+        {
+          "name": "Matthew Golden",
+          "pos": "WR",
+          "rank": "WR5",
+          "pts": 19.4
+        }
+      ]
+    }
+  },
+  "matchups": [
+    {
+      "a": "1",
+      "a_pts": 110.52,
+      "b": "2",
+      "b_pts": 130.7
+    },
+    {
+      "a": "3",
+      "a_pts": 100.8,
+      "b": "5",
+      "b_pts": 99.3
+    },
+    {
+      "a": "4",
+      "a_pts": 63.48,
+      "b": "6",
+      "b_pts": 109.06
+    },
+    {
+      "a": "7",
+      "a_pts": 91.42,
+      "b": "8",
+      "b_pts": 88.72
+    },
+    {
+      "a": "9",
+      "a_pts": 95.14,
+      "b": "10",
+      "b_pts": 112.0
+    },
+    {
+      "a": "11",
+      "a_pts": 102.42,
+      "b": "12",
+      "b_pts": 126.0
+    }
+  ]
+}

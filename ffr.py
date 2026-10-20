@@ -688,6 +688,7 @@ def new_week(week, season=None):
         "// Reorder the team lines into your ranking. The numbers don't matter; order does.",
         "// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.",
         "// Pictures: save the file in the images folder, then write ![](file-name.png) on its own line.",
+        "// Videos play silently on a loop; write ![sound](clip.mp4) instead for a video with audio and a play button.",
         "// Starting order is " + ("last week's ranking." if prev else "the standings."),
         "",
         f"TITLE: Week {week} Power Rankings",
@@ -760,6 +761,9 @@ def fmt(text, base):
                 print(f"  warning: images/{src} not found")
             src = f"{base}images/{src}"
         if src.lower().endswith((".mp4", ".webm", ".mov")):
+            if m.group(1).lower() == "sound":
+                # Browsers won't autoplay with audio, so show controls and let the viewer press play.
+                return f'<video class="pic" src="{src}" controls playsinline preload="metadata"></video>'
             # Silent looping video behaves like a gif at a fraction of the size.
             return f'<video class="pic" src="{src}" autoplay loop muted playsinline preload="metadata"></video>'
         return f'<img class="pic" src="{src}" alt="{m.group(1)}" loading="lazy">'

@@ -1,0 +1,72 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Pictures: save the file in the images folder, then write ![](file-name.png) on its own line.
+// Starting order is last week's ranking.
+
+TITLE: Week 6 Power Rankings
+Some close battles but overall jsut one of the weeks of fantasy football
+
+1. Justin Beer Loyalist
+// 11-1, 780.66 PF, streak W3 | Jahmyr Gibbs (RB1) 140.2, Davante Adams (WR5) 87.0, Malik Nabers (WR8) 81.9
+// this week: Tre Tucker (WR1) 24.2, Malik Nabers (WR2) 22.5, Caleb Williams (QB15) 16.5
+Of course Tre Tucker is WR1 on Sonic's bye week
+![](tre-tucker.gif)
+
+2. 8-4 god team 
+// 8-4, 806.42 PF, streak W3 | Kenneth Walker (RB2) 131.0, Chris Olave (WR4) 91.5, Jayden Daniels (QB18) 85.7
+// this week: Kenneth Walker (RB1) 26.9, Jayden Daniels (QB7) 21.0, Matthew Golden (WR5) 19.4
+A self proclaimed god team but has 4 losses, what a truly benevolent supreme being
+
+3. Karans Sportsbook
+// 10-2, 766.60 PF, streak W6 | James Cook (RB6) 108.6, Chuba Hubbard (RB11) 92.6, Drake Maye (QB4) 85.1
+// this week: Drake Maye (QB4) 23.8, James Cook (RB3) 22.8, Chuba Hubbard (RB7) 18.6
+![](karans-sportsbook.png)
+
+4. 6 7
+// 7-5, 694.30 PF, streak W1 | Brock Purdy (QB2) 136.0, Derrick Henry (RB4) 112.3, Christian McCaffrey (RB7) 108.0
+// this week: Christian McCaffrey (RB2) 26.2, Brock Purdy (QB11) 17.4, Emeka Egbuka (WR13) 14.3
+CMC sacrificing Mike Evans to fufill another RB1 & WR1 this year
+![](thanos-snap.jpg)
+
+5. Baltimore Avians
+// 8-4, 769.24 PF, streak L1 | Bijan Robinson (RB3) 118.5, Joe Burrow (QB13) 104.2, D'Andre Swift (RB10) 94.8
+// this week: D'Andre Swift (RB5) 21.0, Aaron Rodgers (QB13) 17.0, Dameon Pierce (RB14) 13.0
+Somehow not the most embarassing performance by a Baltimore team this week
+
+6. Amver Alert🚨
+// 6-6, 752.16 PF, streak L3 | Josh Allen (QB1) 164.8, Ashton Jeanty (RB13) 87.4, Amon-Ra St. Brown (WR6) 85.7
+// this week: Josh Allen (QB10) 18.3, DeVonta Smith (WR8) 17.0, Ashton Jeanty (RB10) 13.8
+![](amver-cheering.gif)
+
+7. NShah19
+// 5-7, 687.44 PF, streak L2 | Kyren Williams (RB8) 104.0, Bhayshul Tuten (RB14) 81.9, Lamar Jackson (QB21) 80.1
+// this week: Bhayshul Tuten (RB4) 22.7, Kansas City Chiefs D/ST (DEF2) 16.0, DK Metcalf (WR12) 14.8
+Lamar letting down his team once again x3
+
+8. I’m Whipped by Bezos
+// 4-8, 636.86 PF, streak L2 | Dak Prescott (QB12) 109.9, CeeDee Lamb (WR2) 107.1, Garrett Wilson (WR11) 77.3
+// this week: Chase McLaughlin (K4) 17.0, Dak Prescott (QB19) 13.0, CeeDee Lamb (WR22) 11.5
+![](dak-prescott.gif)
+
+9. Braelon Allen
+// 4-8, 608.38 PF, streak L1 | Jonathan Taylor (RB5) 111.0, Christian Watson (WR3) 104.3, Patrick Mahomes (QB15) 97.1
+// this week: Jonathan Taylor (RB6) 20.1, Patrick Mahomes (QB23) 11.5, Christian Watson (WR37) 7.9
+![](kermit-mahomes.jpg)
+
+10. yrkpapi
+// 3-9, 564.38 PF, streak W2 | Isaiah Likely (TE1) 89.8, Parker Washington (WR9) 78.9, George Pickens (WR18) 65.3
+// this week: Isaiah Likely (TE1) 20.9, Germie Bernard (WR3) 20.2, Kirk Cousins (QB9) 19.5
+![](yrkpapi-you-like-that.gif)
+
+
+11. Ankitty
+// 3-9, 632.88 PF, streak W1 | Jaxon Smith-Njigba (WR1) 140.4, Jalen Hurts (QB19) 83.0, Brock Bowers (TE4) 68.2
+// this week: Jaxon Smith-Njigba (WR4) 19.4, Chris Boswell (K5) 17.0, Denver Broncos D/ST (DEF3) 14.0
+![](jsn-lambo.jpg)
+
+
+12. superdiddy
+// 3-9, 612.64 PF, streak L5 | Javonte Williams (RB9) 99.5, Zay Flowers (WR10) 78.5, Ka'imi Fairbairn (K4) 64.0
+// this week: Jordan Love (QB6) 21.2, Carnell Tate (WR11) 16.0, Javonte Williams (RB17) 12.0
+![sound](sas-hoodwinked.mp4)
