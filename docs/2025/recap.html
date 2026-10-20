@@ -7,7 +7,8 @@
 <meta property="og:description" content="2025 season recap">
 <style>
 :root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;--hl:#2a78d6;--trend:#c4c1b9;--pos:#2a78d6;--neg:#e34948;--neutral:#f0efec;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;--pos:#3987e5;--neg:#e66767;--neutral:#383835;color-scheme:dark}}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;--pos:#3987e5;--neg:#e66767;--neutral:#383835;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;--pos:#3987e5;--neg:#e66767;--neutral:#383835;color-scheme:dark}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .layout{display:flex;max-width:1180px;margin:0 auto}
@@ -32,6 +33,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-ap
 }
 header{display:flex;gap:16px;align-items:center}
 .logo{width:64px;height:64px;border-radius:14px}
+.theme{margin-left:auto;align-self:flex-start;flex:none;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:1.15rem;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.theme:hover{background:var(--chip)}
+.theme:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
 .kicker{color:var(--muted);font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
 h1{margin:.1em 0 0;font-size:clamp(1.7rem,5vw,2.4rem);line-height:1.15}
 h2{margin:0;font-size:1.1rem}
@@ -186,11 +190,11 @@ th[data-sort]::after{content:"↕";margin-left:4px;opacity:.35}
 th[aria-sort=ascending]::after{content:"↑";opacity:1}th[aria-sort=descending]::after{content:"↓";opacity:1}
 th[data-sort]:hover,th[data-sort]:focus-visible{color:var(--ink)}
 footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
-</style></head>
+</style><script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script></head>
 <body><div class="layout">
 <aside class="seasons"><div class="side-group"><div class="seasons-lbl">Power Rankings</div><div class="seasons-list"><a href="../2026/week-06.html">2026</a><a href="../2025/week-14.html">2025</a><a href="../2024/week-14.html">2024</a></div></div><div class="side-group"><div class="seasons-lbl">League</div><div class="seasons-list"><a href="https://docs.google.com/document/d/104C7vp7KBJrH8BwWMcOG1W-5-xdedp_d_uX9PsyE7go/edit?tab=t.0" target="_blank" rel="noopener">Rule Book ↗</a><a href="../2025/recap.html" class=cur>Season Recap</a><a href="../2025/stats.html">Team Stats</a><a href="../2025/faab.html">FAAB Tracker</a><a href="../2025/trades.html">Trade Grades</a><a href="../2025/draft.html">Draft Report Card</a><a href="../2025/moves.html">Transactions</a></div></div><div class="side-group"><div class="seasons-lbl">League History</div><div class="seasons-list"><a href="../history/records.html">Record Book</a><a href="../history/h2h.html">Head-to-Head</a><a href="../history/managers.html">Managers</a></div></div></aside>
 <main class="wrap">
-<header><img class="logo" src="https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f" alt=""><div><div class="kicker">Red Vines · 2025</div><h1>2025 Season Recap</h1></div></header>
+<header><img class="logo" src="https://sleepercdn.com/avatars/thumbs/b5c098ca50afc79d77f165822135504f" alt=""><div><div class="kicker">Red Vines · 2025</div><h1>2025 Season Recap</h1></div><button class="theme" type="button" aria-label="Switch light/dark mode"></button></header>
 <nav><a href="../2025/recap.html" class=cur>2025</a><a href="../2024/recap.html">2024</a></nav>
 <section><div class="awards"><div class="award podium"><div class="lbl">🏆 Champion</div><div class="who"><img class="av" src="https://sleepercdn.com/uploads/28eaf95bfad304e192a80ab2ec56cd93.jpg" alt="" loading="lazy"> superdiddy</div><div class="val">jallerbo</div></div><div class="award podium"><div class="lbl">Runner-up</div><div class="who"><img class="av" src="https://sleepercdn.com/uploads/e3425e39295d70e2c5d7e1ba90bcfa3d.jpg" alt="" loading="lazy"> Amver Alert🚨</div><div class="val">amver</div></div><div class="award podium"><div class="lbl">3rd place</div><div class="who"><img class="av" src="https://sleepercdn.com/uploads/32e5bca00b344db9258f8bfad8877bb0.jpg" alt="" loading="lazy"> Ain&#x27;t That Herb-tastic</div><div class="val">ZebroGodilla</div></div></div></section>
 <section><h2 class="sec">Playoff Bracket</h2><div class="bracket"><div class="round"><div class="rlbl">Round 1 · Wk 15</div><div class="match"><div class="slot won"><span>Ankitty</span><b>154.00</b></div><div class="slot"><span>Karans Fraudbook</span><b>115.04</b></div></div><div class="match"><div class="slot"><span>#NoToJunie</span><b>118.42</b></div><div class="slot won"><span>Ain&#x27;t That Herb-tastic</span><b>129.12</b></div></div></div><div class="round"><div class="rlbl">Round 2 · Wk 16</div><div class="match"><div class="slot won"><span>Amver Alert🚨</span><b>151.10</b></div><div class="slot"><span>Ankitty</span><b>127.90</b></div></div><div class="match"><div class="slot won"><span>superdiddy</span><b>146.40</b></div><div class="slot"><span>Ain&#x27;t That Herb-tastic</span><b>119.00</b></div></div><div class="match"><div class=mlbl>5th place</div><div class="slot"><span>Karans Fraudbook</span><b>79.80</b></div><div class="slot won"><span>#NoToJunie</span><b>83.50</b></div></div></div><div class="round"><div class="rlbl">Round 3 · Wk 17</div><div class="match"><div class=mlbl>Championship</div><div class="slot"><span>Amver Alert🚨</span><b>115.40</b></div><div class="slot won"><span>superdiddy</span><b>159.30</b></div></div><div class="match"><div class=mlbl>3rd place</div><div class="slot"><span>Ankitty</span><b>98.44</b></div><div class="slot won"><span>Ain&#x27;t That Herb-tastic</span><b>122.56</b></div></div></div></div></section>
@@ -259,5 +263,26 @@ footer{margin-top:40px;color:var(--muted);font-size:.8rem;text-align:center}
       th.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); sort(); } });
     });
   });
+})();
+</script><script>
+(function () {
+  var b = document.querySelector('.theme');
+  if (!b) return;
+  var root = document.documentElement, mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function cur() { return root.dataset.theme || (mq.matches ? 'dark' : 'light'); }
+  function paint() {
+    var dark = cur() === 'dark';
+    b.textContent = dark ? '\u2600\ufe0e' : '\u263e';
+    b.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
+    b.setAttribute('aria-label', b.title);
+  }
+  b.addEventListener('click', function () {
+    var t = cur() === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = t;
+    try { localStorage.setItem('theme', t); } catch (e) {}
+    paint();
+  });
+  if (mq.addEventListener) mq.addEventListener('change', paint);
+  paint();
 })();
 </script></body></html>

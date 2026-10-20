@@ -815,7 +815,7 @@ def page(data, base, side, nav, kicker, heading, body, footer, description):
     logo = f'<img class="logo" src="{e(data["league_avatar"])}" alt="">' if data.get("league_avatar") else ""
     return PAGE.format(site_name=e(SITE_NAME), description=e(description), side=side, logo=logo, kicker=kicker,
                        heading=heading, nav=nav, body=body, footer=footer, css=CSS,
-                       scripts=SORT_JS)
+                       theme_head=THEME_HEAD, scripts=SORT_JS + THEME_JS)
 
 
 def tiles(title, items):
@@ -2052,20 +2052,50 @@ PAGE = """<!doctype html>
 <meta property="og:title" content="{site_name}">
 <meta property="og:site_name" content="{site_name}">
 <meta property="og:description" content="{description}">
-<style>{css}</style></head>
+<style>{css}</style>{theme_head}</head>
 <body><div class="layout">
 <aside class="seasons">{side}</aside>
 <main class="wrap">
-<header>{logo}<div><div class="kicker">{kicker}</div><h1>{heading}</h1></div></header>
+<header>{logo}<div><div class="kicker">{kicker}</div><h1>{heading}</h1></div><button class="theme" type="button" aria-label="Switch light/dark mode"></button></header>
 <nav>{nav}</nav>
 {body}
 <footer>{footer}</footer>
 </main></div>{scripts}</body></html>
 """
 
+# Apply a saved light/dark choice before first paint so the page doesn't flash the other theme.
+THEME_HEAD = """<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>"""
+
+# The header button flips between light and dark; with no saved choice the page follows the device setting.
+THEME_JS = """<script>
+(function () {
+  var b = document.querySelector('.theme');
+  if (!b) return;
+  var root = document.documentElement, mq = window.matchMedia('(prefers-color-scheme: dark)');
+  function cur() { return root.dataset.theme || (mq.matches ? 'dark' : 'light'); }
+  function paint() {
+    var dark = cur() === 'dark';
+    b.textContent = dark ? '\\u2600\\ufe0e' : '\\u263e';
+    b.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
+    b.setAttribute('aria-label', b.title);
+  }
+  b.addEventListener('click', function () {
+    var t = cur() === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = t;
+    try { localStorage.setItem('theme', t); } catch (e) {}
+    paint();
+  });
+  if (mq.addEventListener) mq.addEventListener('change', paint);
+  paint();
+})();
+</script>"""
+
+DARK = "--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;--pos:#3987e5;--neg:#e66767;--neutral:#383835;color-scheme:dark"
+
 CSS = """
 :root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;--hl:#2a78d6;--trend:#c4c1b9;--pos:#2a78d6;--neg:#e34948;--neutral:#f0efec;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--trend:#454a53;--pos:#3987e5;--neg:#e66767;--neutral:#383835;color-scheme:dark}}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){""" + DARK + """}}
+:root[data-theme=dark]{""" + DARK + """}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .layout{display:flex;max-width:1180px;margin:0 auto}
@@ -2090,6 +2120,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-ap
 }
 header{display:flex;gap:16px;align-items:center}
 .logo{width:64px;height:64px;border-radius:14px}
+.theme{margin-left:auto;align-self:flex-start;flex:none;width:38px;height:38px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:1.15rem;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.theme:hover{background:var(--chip)}
+.theme:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
 .kicker{color:var(--muted);font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
 h1{margin:.1em 0 0;font-size:clamp(1.7rem,5vw,2.4rem);line-height:1.15}
 h2{margin:0;font-size:1.1rem}
