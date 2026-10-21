@@ -1,20 +1,20 @@
 {
  "teams": {
   "1": {
-   "waiver": 22,
-   "drops": 26,
+   "waiver": 23,
+   "drops": 27,
    "free_agent": 5,
    "trades": 1
   },
   "7": {
-   "waiver": 8,
-   "drops": 9,
+   "waiver": 10,
+   "drops": 11,
    "trades": 3,
    "free_agent": 2
   },
   "8": {
-   "waiver": 4,
-   "drops": 6,
+   "waiver": 5,
+   "drops": 7,
    "free_agent": 2
   },
   "9": {
@@ -30,13 +30,13 @@
   },
   "6": {
    "free_agent": 3,
-   "drops": 16,
+   "drops": 19,
    "trades": 1,
-   "waiver": 14
+   "waiver": 17
   },
   "10": {
-   "waiver": 11,
-   "drops": 13,
+   "waiver": 13,
+   "drops": 15,
    "free_agent": 2,
    "trades": 1
   },
@@ -56,8 +56,8 @@
    "free_agent": 2
   },
   "12": {
-   "waiver": 5,
-   "drops": 5,
+   "waiver": 7,
+   "drops": 7,
    "free_agent": 1,
    "trades": 1
   },
@@ -88,6 +88,24 @@
    "adds": 4
   },
   {
+   "name": "Antonio Williams",
+   "pos": "WR",
+   "teams": [
+    "7",
+    "6"
+   ],
+   "adds": 3
+  },
+  {
+   "name": "KC Concepcion",
+   "pos": "WR",
+   "teams": [
+    "7",
+    "12"
+   ],
+   "adds": 3
+  },
+  {
    "name": "Kansas City Chiefs D/ST",
    "pos": "DEF",
    "teams": [
@@ -97,20 +115,20 @@
    "adds": 2
   },
   {
-   "name": "Antonio Williams",
-   "pos": "WR",
-   "teams": [
-    "7",
-    "6"
-   ],
-   "adds": 2
-  },
-  {
    "name": "Caleb Douglas",
    "pos": "WR",
    "teams": [
     "8",
     "1"
+   ],
+   "adds": 2
+  },
+  {
+   "name": "DeMario Douglas",
+   "pos": "WR",
+   "teams": [
+    "9",
+    "10"
    ],
    "adds": 2
   },
@@ -138,24 +156,6 @@
    "teams": [
     "9",
     "6"
-   ],
-   "adds": 2
-  },
-  {
-   "name": "Malachi Fields",
-   "pos": "WR",
-   "teams": [
-    "1",
-    "6"
-   ],
-   "adds": 2
-  },
-  {
-   "name": "Bryce Young",
-   "pos": "QB",
-   "teams": [
-    "2",
-    "1"
    ],
    "adds": 2
   }

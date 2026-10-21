@@ -1717,6 +1717,203 @@
    "name": "KC Concepcion",
    "pos": "WR",
    "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "12536",
+   "roster": "10",
+   "bid": 22,
+   "at": 1792566913037,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Jaylin Noel",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 2
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "13276",
+   "roster": "6",
+   "bid": 18,
+   "at": 1792566913037,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Omar Cooper",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 13
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "11655",
+   "roster": "12",
+   "bid": 15,
+   "at": 1792566913037,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tyrone Tracy",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "2",
+     "bid": 9
+    },
+    {
+     "roster": "9",
+     "bid": 5
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "1479",
+   "roster": "8",
+   "bid": 11,
+   "at": 1792566913037,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Keenan Allen",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 7
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "13301",
+   "roster": "6",
+   "bid": 8,
+   "at": 1792566913037,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Antonio Williams",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "7553",
+   "roster": "1",
+   "bid": 8,
+   "at": 1792566913037,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Kyle Pitts",
+   "pos": "TE",
+   "outbid": [
+    {
+     "roster": "12",
+     "bid": 5
+    },
+    {
+     "roster": "9",
+     "bid": 1
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "NYJ",
+   "roster": "12",
+   "bid": 5,
+   "at": 1792566913037,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "New York Jets D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "9501",
+   "roster": "10",
+   "bid": 5,
+   "at": 1792566913037,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "DeMario Douglas",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 5
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "7528",
+   "roster": "7",
+   "bid": 1,
+   "at": 1792566913037,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Najee Harris",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "CLE",
+   "roster": "6",
+   "bid": 0,
+   "at": 1792566913037,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Cleveland Browns D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "13298",
+   "roster": "7",
+   "bid": 0,
+   "at": 1792566913037,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "KC Concepcion",
+   "pos": "WR",
+   "outbid": []
   }
  ],
  "trades": []
