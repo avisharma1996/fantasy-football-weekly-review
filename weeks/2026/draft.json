@@ -99,7 +99,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 108.0,
    "team_weeks": 6,
    "round": 1,
@@ -147,7 +147,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 108.6,
    "team_weeks": 6,
    "round": 1,
@@ -531,7 +531,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 73.1,
    "team_weeks": 6,
    "round": 3,
@@ -2147,7 +2147,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 39.0,
    "team_weeks": 6,
    "round": 12,
@@ -3027,7 +3027,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 37.7,
    "team_weeks": 6,
    "round": 16,

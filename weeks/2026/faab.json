@@ -1800,6 +1800,20 @@
   },
   {
    "week": 7,
+   "player": "3271",
+   "roster": "12",
+   "bid": 11,
+   "at": 1792652718094,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tyler Higbee",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 7,
    "player": "13301",
    "roster": "6",
    "bid": 8,
@@ -1914,7 +1928,84 @@
    "name": "KC Concepcion",
    "pos": "WR",
    "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "12718",
+   "roster": "8",
+   "bid": 0,
+   "at": 1792652718094,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Konata Mumpfield",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "96",
+   "roster": "8",
+   "bid": 0,
+   "at": 1792652718094,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Aaron Rodgers",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "TEN",
+   "roster": "5",
+   "bid": 0,
+   "at": 1792652718094,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tennessee Titans D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "12487",
+   "roster": "6",
+   "bid": 0,
+   "at": 1792652718094,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Terrance Ferguson",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "DAL",
+   "roster": "2",
+   "bid": 0,
+   "at": 1792652718094,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Dallas Cowboys D/ST",
+   "pos": "DEF",
+   "outbid": []
   }
  ],
- "trades": []
+ "trades": [
+  {
+   "week": 7,
+   "from": "2",
+   "to": "6",
+   "amount": 15
+  }
+ ]
 }

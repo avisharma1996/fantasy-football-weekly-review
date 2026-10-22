@@ -134,5 +134,51 @@
     "total": 17.0
    }
   ]
+ },
+ {
+  "week": 7,
+  "at": 1792677514650,
+  "sides": [
+   {
+    "roster": "2",
+    "players": [
+     {
+      "player": "13276",
+      "pts": 0,
+      "name": "Omar Cooper",
+      "pos": "WR"
+     },
+     {
+      "player": "4034",
+      "pts": 0,
+      "name": "Christian McCaffrey",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   },
+   {
+    "roster": "6",
+    "players": [
+     {
+      "player": "12526",
+      "pts": 0,
+      "name": "Tetairoa McMillan",
+      "pos": "WR"
+     },
+     {
+      "player": "8138",
+      "pts": 0,
+      "name": "James Cook",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 15,
+    "total": 0
+   }
+  ]
  }
 ]
