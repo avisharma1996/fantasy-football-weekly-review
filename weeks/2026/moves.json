@@ -7,8 +7,8 @@
    "trades": 1
   },
   "7": {
-   "waiver": 10,
-   "drops": 11,
+   "waiver": 11,
+   "drops": 12,
    "trades": 3,
    "free_agent": 2
   },
@@ -23,8 +23,8 @@
    "free_agent": 1
   },
   "5": {
-   "waiver": 6,
-   "drops": 7,
+   "waiver": 7,
+   "drops": 8,
    "free_agent": 1,
    "trades": 1
   },
@@ -35,7 +35,7 @@
    "waiver": 18
   },
   "10": {
-   "waiver": 13,
+   "waiver": 14,
    "drops": 15,
    "free_agent": 2,
    "trades": 1
@@ -48,8 +48,8 @@
   },
   "11": {
    "free_agent": 2,
-   "drops": 16,
-   "waiver": 14
+   "drops": 17,
+   "waiver": 15
   },
   "3": {
    "waiver": 1,
@@ -69,6 +69,16 @@
   }
  },
  "players": [
+  {
+   "name": "Michael Mayer",
+   "pos": "TE",
+   "teams": [
+    "9",
+    "6",
+    "10"
+   ],
+   "adds": 3
+  },
   {
    "name": "Malik Washington",
    "pos": "WR",
@@ -145,15 +155,6 @@
   {
    "name": "Chris Bell",
    "pos": "WR",
-   "teams": [
-    "9",
-    "6"
-   ],
-   "adds": 2
-  },
-  {
-   "name": "Michael Mayer",
-   "pos": "TE",
    "teams": [
     "9",
     "6"

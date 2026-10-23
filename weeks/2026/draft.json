@@ -2163,7 +2163,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 38.0,
    "team_weeks": 6,
    "round": 12,
@@ -2563,7 +2563,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 46.0,
    "team_weeks": 6,
    "round": 14,

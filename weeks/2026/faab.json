@@ -1884,6 +1884,20 @@
   },
   {
    "week": 7,
+   "player": "5849",
+   "roster": "5",
+   "bid": 3,
+   "at": 1792739080184,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Kyler Murray",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 7,
    "player": "7528",
    "roster": "7",
    "bid": 1,
@@ -1998,6 +2012,53 @@
    "name": "Dallas Cowboys D/ST",
    "pos": "DEF",
    "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "9482",
+   "roster": "10",
+   "bid": 0,
+   "at": 1792739080184,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Michael Mayer",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "CAR",
+   "roster": "7",
+   "bid": 0,
+   "at": 1792739080184,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Carolina Panthers D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "7839",
+   "roster": "11",
+   "bid": 0,
+   "at": 1792739080184,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Evan McPherson",
+   "pos": "K",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
   }
  ],
  "trades": [
