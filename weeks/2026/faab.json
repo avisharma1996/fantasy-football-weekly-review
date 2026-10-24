@@ -1814,6 +1814,20 @@
   },
   {
    "week": 7,
+   "player": "5844",
+   "roster": "2",
+   "bid": 11,
+   "at": 1792825511184,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "T.J. Hockenson",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 7,
    "player": "13301",
    "roster": "6",
    "bid": 8,
@@ -2053,6 +2067,39 @@
    "active": false,
    "name": "Evan McPherson",
    "pos": "K",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "player": "1433",
+   "roster": "6",
+   "bid": 0,
+   "at": 1792825511184,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Brandon McManus",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "4950",
+   "roster": "6",
+   "bid": 0,
+   "at": 1792825511184,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Christian Kirk",
+   "pos": "WR",
    "outbid": [
     {
      "roster": "6",

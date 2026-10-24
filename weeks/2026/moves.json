@@ -30,9 +30,9 @@
   },
   "6": {
    "free_agent": 3,
-   "drops": 20,
+   "drops": 22,
    "trades": 2,
-   "waiver": 18
+   "waiver": 20
   },
   "10": {
    "waiver": 14,
@@ -42,8 +42,8 @@
   },
   "2": {
    "free_agent": 1,
-   "drops": 4,
-   "waiver": 3,
+   "drops": 5,
+   "waiver": 4,
    "trades": 1
   },
   "11": {
