@@ -1898,6 +1898,25 @@
   },
   {
    "week": 7,
+   "player": "8122",
+   "roster": "3",
+   "bid": 5,
+   "at": 1792911867818,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Zonovan Knight",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 7,
    "player": "5849",
    "roster": "5",
    "bid": 3,
@@ -2106,6 +2125,34 @@
      "bid": 0
     }
    ]
+  },
+  {
+   "week": 7,
+   "player": "13424",
+   "roster": "6",
+   "bid": 0,
+   "at": 1792911867818,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Seth McGowan",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 7,
+   "player": "4993",
+   "roster": "5",
+   "bid": 0,
+   "at": 1792911867818,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Mike Gesicki",
+   "pos": "TE",
+   "outbid": []
   }
  ],
  "trades": [

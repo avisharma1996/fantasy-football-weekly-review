@@ -2035,7 +2035,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 33.6,
    "team_weeks": 6,
    "round": 11,

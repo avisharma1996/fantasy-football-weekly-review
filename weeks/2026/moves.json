@@ -23,16 +23,16 @@
    "free_agent": 1
   },
   "5": {
-   "waiver": 7,
-   "drops": 8,
+   "waiver": 8,
+   "drops": 9,
    "free_agent": 1,
    "trades": 1
   },
   "6": {
    "free_agent": 3,
-   "drops": 22,
+   "drops": 23,
    "trades": 2,
-   "waiver": 20
+   "waiver": 21
   },
   "10": {
    "waiver": 14,
@@ -47,13 +47,13 @@
    "trades": 1
   },
   "11": {
-   "free_agent": 2,
-   "drops": 17,
+   "free_agent": 3,
+   "drops": 18,
    "waiver": 15
   },
   "3": {
-   "waiver": 1,
-   "drops": 2,
+   "waiver": 2,
+   "drops": 3,
    "free_agent": 2
   },
   "12": {
