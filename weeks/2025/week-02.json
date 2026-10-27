@@ -595,16 +595,16 @@
           "pts": 34.0
         },
         {
-          "name": "Kyler Murray",
-          "pos": "QB",
-          "rank": "QB16",
-          "pts": 33.32
-        },
-        {
           "name": "Emeka Egbuka",
           "pos": "WR",
           "rank": "WR10",
           "pts": 32.5
+        },
+        {
+          "name": "Derrick Henry",
+          "pos": "RB",
+          "rank": "RB10",
+          "pts": 31.0
         }
       ],
       "top_week": [

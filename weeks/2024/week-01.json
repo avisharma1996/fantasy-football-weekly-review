@@ -60,16 +60,16 @@
           "pts": 31.18
         },
         {
-          "name": "Chicago Bears D/ST",
-          "pos": "DEF",
-          "rank": "DEF1",
-          "pts": 25.0
-        },
-        {
           "name": "Aaron Jones",
           "pos": "RB",
           "rank": "RB9",
           "pts": 17.9
+        },
+        {
+          "name": "Breece Hall",
+          "pos": "RB",
+          "rank": "RB14",
+          "pts": 15.8
         }
       ],
       "top_week": [
@@ -418,10 +418,10 @@
           "pts": 21.0
         },
         {
-          "name": "New Orleans Saints D/ST",
-          "pos": "DEF",
-          "rank": "DEF4",
-          "pts": 15.0
+          "name": "Nico Collins",
+          "pos": "WR",
+          "rank": "WR14",
+          "pts": 14.7
         }
       ],
       "top_week": [

@@ -334,22 +334,22 @@
       "streak": "W1",
       "top": [
         {
-          "name": "Patrick Mahomes",
-          "pos": "QB",
-          "rank": "QB15",
-          "pts": 76.4
-        },
-        {
-          "name": "David Montgomery",
-          "pos": "RB",
-          "rank": "RB13",
-          "pts": 65.0
-        },
-        {
           "name": "DJ Moore",
           "pos": "WR",
           "rank": "WR16",
           "pts": 61.7
+        },
+        {
+          "name": "Ka'imi Fairbairn",
+          "pos": "K",
+          "rank": "K2",
+          "pts": 59.0
+        },
+        {
+          "name": "Amari Cooper",
+          "pos": "WR",
+          "rank": "WR35",
+          "pts": 42.8
         }
       ],
       "top_week": [

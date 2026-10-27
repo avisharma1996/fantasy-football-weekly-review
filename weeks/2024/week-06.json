@@ -338,12 +338,6 @@
       "streak": "L1",
       "top": [
         {
-          "name": "Patrick Mahomes",
-          "pos": "QB",
-          "rank": "QB22",
-          "pts": 76.4
-        },
-        {
           "name": "Ka'imi Fairbairn",
           "pos": "K",
           "rank": "K3",
@@ -354,6 +348,12 @@
           "pos": "WR",
           "rank": "WR22",
           "pts": 65.7
+        },
+        {
+          "name": "Pittsburgh Steelers D/ST",
+          "pos": "DEF",
+          "rank": "DEF5",
+          "pts": 56.0
         }
       ],
       "top_week": [

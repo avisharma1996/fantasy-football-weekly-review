@@ -156,10 +156,10 @@
           "pts": 32.8
         },
         {
-          "name": "Deebo Samuel",
-          "pos": "WR",
-          "rank": "WR10",
-          "pts": 30.2
+          "name": "Jahmyr Gibbs",
+          "pos": "RB",
+          "rank": "RB14",
+          "pts": 29.5
         }
       ],
       "top_week": [
@@ -417,16 +417,16 @@
           "pts": 42.72
         },
         {
-          "name": "Nico Collins",
-          "pos": "WR",
-          "rank": "WR2",
-          "pts": 38.2
-        },
-        {
           "name": "Brandon Aubrey",
           "pos": "K",
           "rank": "K1",
           "pts": 38.0
+        },
+        {
+          "name": "Joe Mixon",
+          "pos": "RB",
+          "rank": "RB10",
+          "pts": 31.8
         }
       ],
       "top_week": [

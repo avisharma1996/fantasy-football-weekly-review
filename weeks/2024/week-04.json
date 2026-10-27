@@ -330,12 +330,6 @@
       "streak": "L2",
       "top": [
         {
-          "name": "David Montgomery",
-          "pos": "RB",
-          "rank": "RB8",
-          "pts": 65.0
-        },
-        {
           "name": "Patrick Mahomes",
           "pos": "QB",
           "rank": "QB16",
@@ -346,6 +340,12 @@
           "pos": "K",
           "rank": "K4",
           "pts": 43.0
+        },
+        {
+          "name": "Rhamondre Stevenson",
+          "pos": "RB",
+          "rank": "RB23",
+          "pts": 42.6
         }
       ],
       "top_week": [
@@ -615,10 +615,10 @@
           "pts": 52.26
         },
         {
-          "name": "Brian Robinson",
+          "name": "Josh Jacobs",
           "pos": "RB",
-          "rank": "RB11",
-          "pts": 43.1
+          "rank": "RB27",
+          "pts": 39.6
         }
       ],
       "top_week": [
@@ -882,16 +882,16 @@
           "pts": 68.26
         },
         {
-          "name": "De'Von Achane",
-          "pos": "RB",
-          "rank": "RB14",
-          "pts": 57.2
-        },
-        {
           "name": "CeeDee Lamb",
           "pos": "WR",
           "rank": "WR12",
           "pts": 54.9
+        },
+        {
+          "name": "Evan McPherson",
+          "pos": "K",
+          "rank": "K5",
+          "pts": 42.0
         }
       ],
       "top_week": [

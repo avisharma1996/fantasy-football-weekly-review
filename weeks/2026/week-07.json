@@ -160,16 +160,16 @@
           "pts": 113.54
         },
         {
-          "name": "James Cook",
-          "pos": "RB",
-          "rank": "RB10",
-          "pts": 108.6
-        },
-        {
           "name": "Chuba Hubbard",
           "pos": "RB",
           "rank": "RB14",
           "pts": 100.6
+        },
+        {
+          "name": "Tee Higgins",
+          "pos": "WR",
+          "rank": "WR12",
+          "pts": 85.6
         }
       ],
       "top_week": [
@@ -542,10 +542,10 @@
           "pts": 117.7
         },
         {
-          "name": "Christian McCaffrey",
-          "pos": "RB",
-          "rank": "RB5",
-          "pts": 108.0
+          "name": "Mike Evans",
+          "pos": "WR",
+          "rank": "WR20",
+          "pts": 65.4
         }
       ],
       "top_week": [

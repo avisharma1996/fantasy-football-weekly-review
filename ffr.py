@@ -220,8 +220,13 @@ def fetch_week(league_id, week):
         for rid, o in odds.items():
             teams[rid]["odds"] = o
 
+    # Overall top performers only count players still on the roster. Next week's matchups list
+    # each roster as it stands now; after the last week of a season, use the final rosters.
+    on_roster = {e["roster_id"]: set(e["players"]) for e in get(f"/league/{league_id}/matchups/{week + 1}") or []
+                 if e.get("players")} or {r["roster_id"]: set(r.get("players") or []) for r in rosters}
     top3 = lambda pts: sorted(pts.items(), key=lambda kv: -kv[1])[:3]
-    top = {rid: top3(totals) for rid, totals in starter_pts.items()}
+    top = {rid: top3({pid: p for pid, p in totals.items() if pid in on_roster.get(rid, totals)})
+           for rid, totals in starter_pts.items()}
     top_week = {rid: top3(pts) for rid, pts in week_pts.items()}
     players = load_players({pid for picks in [*top.values(), *top_week.values()] for pid, _ in picks})
     ranks, week_ranks = position_ranks(league["season"], week, league.get("scoring_settings") or {}, players)
@@ -958,7 +963,7 @@ def render_week(data, content, prev_rank, all_weeks, site, base, rank_history=()
     note = "Records include a game against the league median each week. " if data.get("median_game") else ""
     intro = f'<section class="intro">{fmt(content["intro"], base)}</section>' if content["intro"] else ""
     footer = (f"{note}Top performers are points scored as a starter for that team: "
-              "overall is the season through that week, weekly is that week alone. QB1, RB3, etc. is the player's rank "
+              "overall is the season through that week for players still on the roster, weekly is that week alone. QB1, RB3, etc. is the player's rank "
               "at his position across the NFL over the same span. Stats from Sleeper. Rankings are the commissioner's own.")
     return page(data, base, sidebar(season, base, site), week_nav(season, all_weeks, base, week),
                 f"{e(data['league'])} · {e(season)} · Week {week}", e(content["title"]),

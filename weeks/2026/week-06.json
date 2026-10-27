@@ -152,12 +152,6 @@
       "streak": "W6",
       "top": [
         {
-          "name": "James Cook III",
-          "pos": "RB",
-          "rank": "RB6",
-          "pts": 108.6
-        },
-        {
           "name": "Chuba Hubbard",
           "pos": "RB",
           "rank": "RB11",
@@ -168,6 +162,12 @@
           "pos": "QB",
           "rank": "QB4",
           "pts": 85.1
+        },
+        {
+          "name": "George Kittle",
+          "pos": "TE",
+          "rank": "TE3",
+          "pts": 74.5
         }
       ],
       "top_week": [
@@ -178,7 +178,7 @@
           "pts": 23.8
         },
         {
-          "name": "James Cook III",
+          "name": "James Cook",
           "pos": "RB",
           "rank": "RB3",
           "pts": 22.8
@@ -536,10 +536,10 @@
           "pts": 112.3
         },
         {
-          "name": "Christian McCaffrey",
-          "pos": "RB",
-          "rank": "RB7",
-          "pts": 108.0
+          "name": "Mike Evans",
+          "pos": "WR",
+          "rank": "WR12",
+          "pts": 65.4
         }
       ],
       "top_week": [
@@ -1082,7 +1082,7 @@
       "streak": "W3",
       "top": [
         {
-          "name": "Kenneth Walker III",
+          "name": "Kenneth Walker",
           "pos": "RB",
           "rank": "RB2",
           "pts": 131.0
@@ -1102,7 +1102,7 @@
       ],
       "top_week": [
         {
-          "name": "Kenneth Walker III",
+          "name": "Kenneth Walker",
           "pos": "RB",
           "rank": "RB1",
           "pts": 26.9

@@ -348,16 +348,16 @@
           "pts": 82.0
         },
         {
-          "name": "Patrick Mahomes",
-          "pos": "QB",
-          "rank": "QB22",
-          "pts": 76.4
-        },
-        {
           "name": "DJ Moore",
           "pos": "WR",
           "rank": "WR26",
           "pts": 65.7
+        },
+        {
+          "name": "Pittsburgh Steelers D/ST",
+          "pos": "DEF",
+          "rank": "DEF4",
+          "pts": 65.0
         }
       ],
       "top_week": [

@@ -39,4 +39,4 @@ To work on an older season, add the year: `py ffr.py new 14 2026`.
 - To backfill weeks, run `py ffr.py new 1-4`. Each file gets the records and top performers as they stood after that week.
 - Re-running `new` for a week refreshes the stats but never touches your rankings.
 - Movement arrows compare with the previous week's ranking in the same season.
-- Top performers are season points scored while in that team's starting lineup. QB1, RB3, etc. is the player's rank at his position across the NFL, in league scoring, through that week.
+- Top performers are season points scored while in that team's starting lineup. The overall list only includes players still on the roster. QB1, RB3, etc. is the player's rank at his position across the NFL, in league scoring, through that week.
