@@ -1,0 +1,72 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Pictures: save the file in the images folder, then write ![](file-name.png) on its own line.
+// Videos play silently on a loop; write ![sound](clip.mp4) instead for a video with audio and a play button.
+// Starting order is last week's ranking.
+
+TITLE: Week 7 Power Rankings
+// Optional intro: type it here, above the first team.
+Gambling wins yet again, and some big movers in the middle of the pack
+
+1. Karans Sportsbook
+// 12-2, 915.54 PF, streak W7 | Drake Maye (QB3) 113.5, James Cook (RB10) 108.6, Chuba Hubbard (RB14) 100.6
+// this week: Drake Maye (QB2) 28.4, Tee Higgins (WR2) 23.8, Luther Burden (WR6) 21.7
+Looks like yet another sportsbook is ready to take everyone's money
+
+2. Justin Beer Loyalist
+// 13-1, 897.98 PF, streak W4 | Jahmyr Gibbs (RB1) 155.0, Trey McBride (TE1) 100.7, Malik Nabers (WR7) 96.5
+// this week: Quinshon Judkins (RB3) 22.9, Caleb Williams (QB7) 22.1, Trey McBride (TE2) 22.1
+![](caleb_williams.gif)
+
+3. 8-4 god team 
+// 8-6, 905.64 PF, streak L1 | Kenneth Walker (RB2) 138.7, Bucky Irving (RB13) 100.6, Chris Olave (WR6) 100.1
+// this week: Bucky Irving (RB2) 23.5, Puka Nacua (WR12) 17.8, C.J. Stroud (QB14) 16.5
+Thanks to Kenneth Walker, this team might need a rename
+
+4. Amver Alert🚨
+// 8-6, 872.16 PF, streak W1 | Josh Allen (QB1) 164.8, Amon-Ra St. Brown (WR4) 105.4, Ashton Jeanty (RB12) 105.0
+// this week: Jameson Williams (WR4) 23.6, Amon-Ra St. Brown (WR9) 19.7, Ashton Jeanty (RB11) 17.6
+![](asb_jameson.gif)
+
+5. NShah19
+// 7-7, 811.46 PF, streak W1 | Kyren Williams (RB6) 121.1, Drake London (WR10) 89.0, Bhayshul Tuten (RB16) 81.9
+// this week: Rhamondre Stevenson (RB5) 20.0, Jared Goff (QB12) 18.0, Kyren Williams (RB12) 17.1
+Lamar letting... hold on, this team might not actually need Lamar thanks to...
+![](goff.gif)
+
+6. 6 7
+// 7-7, 773.82 PF, streak L1 | Brock Purdy (QB2) 150.0, Derrick Henry (RB8) 117.7, Christian McCaffrey (RB5) 108.0
+// this week: Cam Skattebo (RB7) 18.6, Braelon Allen (RB16) 16.4, Brock Purdy (QB19) 14.0
+Cam when you tell him to stop doing backflips and instead hit the A gap on an outside stretch to help your fantasy team:
+![sound](cam.mp4)
+
+7. I’m Whipped by Bezos
+// 6-8, 777.94 PF, streak W1 | Dak Prescott (QB5) 133.1, CeeDee Lamb (WR2) 129.0, Garrett Wilson (WR15) 80.9
+// this week: Tony Pollard (RB1) 35.0, Dak Prescott (QB6) 23.3, CeeDee Lamb (WR5) 21.9
+Four things are a given in life: death, taxes, Mr. Bezos ensuring unions never get formed and Tony Pollard being RB1 on a random week in October
+
+8. Baltimore Avians
+// 8-6, 874.62 PF, streak L2 | Bijan Robinson (RB3) 133.2, Joe Burrow (QB6) 133.1, D'Andre Swift (RB9) 111.8
+// this week: Joe Burrow (QB1) 28.9, D'Andre Swift (RB13) 17.0, Colston Loveland (TE3) 16.4
+Somehow not the most embarrassing performance by a Baltimore team this week x2
+
+9. superdiddy
+// 4-10, 726.80 PF, streak W1 | Javonte Williams (RB7) 121.0, Zay Flowers (WR5) 102.2, Ka'imi Fairbairn (K4) 75.0
+// this week: Zay Flowers (WR3) 23.7, Javonte Williams (RB4) 21.5, Jordan Love (QB13) 18.0
+
+10. Ankitty
+// 4-10, 759.26 PF, streak L1 | Jaxon Smith-Njigba (WR1) 167.2, Jalen Hurts (QB24) 83.0, Brock Bowers (TE4) 78.5
+// this week: Jaxon Smith-Njigba (WR1) 26.8, Bo Nix (QB3) 26.3, Emanuel Wilson (RB9) 18.0
+![](jsn-lambo-seahawks.jpg) 
+
+11. Braelon Allen
+// 4-10, 678.78 PF, streak L2 | Jonathan Taylor (RB4) 129.0, Christian Watson (WR3) 112.5, Patrick Mahomes (QB18) 104.1
+// this week: Jonathan Taylor (RB8) 18.0, Nick Folk (K9) 10.0, Minnesota Vikings D/ST (DEF4) 10.0
+Mahomes trying to win without the MVP KW9 x2: 
+![](mahomes-kermit-2.jpg)
+
+12. yrkpapi
+// 3-11, 665.98 PF, streak L1 | Isaiah Likely (TE2) 92.0, George Pickens (WR18) 79.0, Parker Washington (WR19) 78.9
+// this week: Kirk Cousins (QB9) 20.4, KC Concepcion (WR10) 19.2, Ollie Gordon (RB14) 16.8
+![](salute.png)

@@ -110,14 +110,14 @@
     "players": [
      {
       "player": "11646",
-      "pts": 12.7,
+      "pts": 14.1,
       "name": "Jalen Coker",
       "pos": "WR"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 12.7
+    "total": 14.1
    },
    {
     "roster": "5",
@@ -144,40 +144,40 @@
     "players": [
      {
       "player": "13276",
-      "pts": 0,
-      "name": "Omar Cooper Jr.",
+      "pts": 20.0,
+      "name": "Omar Cooper",
       "pos": "WR"
      },
      {
       "player": "4034",
-      "pts": 0,
+      "pts": 19.0,
       "name": "Christian McCaffrey",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 0
+    "total": 39.0
    },
    {
     "roster": "6",
     "players": [
      {
       "player": "12526",
-      "pts": 0,
+      "pts": 6.0,
       "name": "Tetairoa McMillan",
       "pos": "WR"
      },
      {
       "player": "8138",
       "pts": 0,
-      "name": "James Cook III",
+      "name": "James Cook",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 15,
-    "total": 0
+    "total": 6.0
    }
   ]
  }
