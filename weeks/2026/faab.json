@@ -2153,6 +2153,86 @@
    "name": "Mike Gesicki",
    "pos": "TE",
    "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "CIN",
+   "roster": "2",
+   "bid": 6,
+   "at": 1793171690128,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Cincinnati Bengals D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "5",
+     "bid": 2
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "player": "JAX",
+   "roster": "5",
+   "bid": 2,
+   "at": 1793171690128,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Jacksonville Jaguars D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "11",
+     "bid": 1
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "player": "1373",
+   "roster": "6",
+   "bid": 2,
+   "at": 1793171690128,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Geno Smith",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "10955",
+   "roster": "10",
+   "bid": 1,
+   "at": 1793171690128,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Chad Ryland",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "CLE",
+   "roster": "11",
+   "bid": 0,
+   "at": 1793171690128,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Cleveland Browns D/ST",
+   "pos": "DEF",
+   "outbid": []
   }
  ],
  "trades": [

@@ -2228,7 +2228,7 @@
   },
   {
    "kept": true,
-   "team_pts": 98.94,
+   "team_pts": 98.84,
    "team_weeks": 7,
    "round": 12,
    "pick": 140,
@@ -2236,7 +2236,7 @@
    "owner": "1085126678843682816",
    "name": "Bo Nix",
    "pos": "QB",
-   "pts": 98.94,
+   "pts": 98.84,
    "drafted": 15,
    "finish": 19,
    "value": -4,
@@ -2563,9 +2563,9 @@
    "keeper": false
   },
   {
-   "kept": false,
+   "kept": true,
    "team_pts": 46.0,
-   "team_weeks": 6,
+   "team_weeks": 7,
    "round": 14,
    "pick": 161,
    "roster": "5",

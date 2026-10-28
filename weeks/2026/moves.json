@@ -23,33 +23,33 @@
    "free_agent": 1
   },
   "5": {
-   "waiver": 8,
-   "drops": 9,
+   "waiver": 9,
+   "drops": 10,
    "free_agent": 1,
    "trades": 1
   },
   "6": {
    "free_agent": 3,
-   "drops": 23,
+   "drops": 24,
    "trades": 2,
-   "waiver": 21
+   "waiver": 22
   },
   "10": {
-   "waiver": 14,
-   "drops": 15,
+   "waiver": 15,
+   "drops": 16,
    "free_agent": 2,
    "trades": 1
   },
   "2": {
    "free_agent": 1,
-   "drops": 5,
-   "waiver": 4,
+   "drops": 6,
+   "waiver": 5,
    "trades": 1
   },
   "11": {
    "free_agent": 3,
-   "drops": 18,
-   "waiver": 15
+   "drops": 19,
+   "waiver": 16
   },
   "3": {
    "waiver": 2,
@@ -86,6 +86,16 @@
     "9",
     "1",
     "10"
+   ],
+   "adds": 3
+  },
+  {
+   "name": "Cleveland Browns D/ST",
+   "pos": "DEF",
+   "teams": [
+    "5",
+    "6",
+    "11"
    ],
    "adds": 3
   },
@@ -149,15 +159,6 @@
    "teams": [
     "6",
     "5"
-   ],
-   "adds": 2
-  },
-  {
-   "name": "Chris Bell",
-   "pos": "WR",
-   "teams": [
-    "9",
-    "6"
    ],
    "adds": 2
   }
