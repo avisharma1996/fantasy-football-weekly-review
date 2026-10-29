@@ -1219,7 +1219,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 83.02,
    "team_weeks": 7,
    "round": 7,
@@ -2254,8 +2254,8 @@
    "pos": "DEF",
    "pts": 50.0,
    "drafted": 8,
-   "finish": 12,
-   "value": -4,
+   "finish": 13,
+   "value": -5,
    "keeper": false
   },
   {
@@ -2515,7 +2515,7 @@
    "keeper": false
   },
   {
-   "kept": true,
+   "kept": false,
    "team_pts": 31.1,
    "team_weeks": 7,
    "round": 14,

@@ -254,16 +254,16 @@
           "pts": 167.16
         },
         {
-          "name": "Jalen Hurts",
-          "pos": "QB",
-          "rank": "QB24",
-          "pts": 83.02
-        },
-        {
           "name": "Brock Bowers",
           "pos": "TE",
           "rank": "TE4",
           "pts": 78.5
+        },
+        {
+          "name": "Chris Boswell",
+          "pos": "K",
+          "rank": "K7",
+          "pts": 69.0
         }
       ],
       "top_week": [

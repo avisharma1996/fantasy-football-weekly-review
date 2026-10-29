@@ -141,7 +141,7 @@
    "roster": "8",
    "bid": 11,
    "at": 1789542894472,
-   "pts": 39.0,
+   "pts": 40.0,
    "started": 10.0,
    "weeks": 6,
    "active": true,
@@ -2175,6 +2175,20 @@
   },
   {
    "week": 8,
+   "player": "6130",
+   "roster": "8",
+   "bid": 6,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Devin Singletary",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 8,
    "player": "JAX",
    "roster": "5",
    "bid": 2,
@@ -2208,6 +2222,25 @@
   },
   {
    "week": 8,
+   "player": "11783",
+   "roster": "10",
+   "bid": 2,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Ryan Flournoy",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 1
+    }
+   ]
+  },
+  {
+   "week": 8,
    "player": "10955",
    "roster": "10",
    "bid": 1,
@@ -2232,6 +2265,62 @@
    "active": false,
    "name": "Cleveland Browns D/ST",
    "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "6083",
+   "roster": "9",
+   "bid": 0,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Matt Gay",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "2505",
+   "roster": "10",
+   "bid": 0,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Darren Waller",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "3257",
+   "roster": "3",
+   "bid": 0,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Jacoby Brissett",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "8129",
+   "roster": "9",
+   "bid": 0,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Dameon Pierce",
+   "pos": "RB",
    "outbid": []
   }
  ],

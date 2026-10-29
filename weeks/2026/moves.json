@@ -13,13 +13,13 @@
    "free_agent": 2
   },
   "8": {
-   "waiver": 7,
-   "drops": 8,
+   "waiver": 8,
+   "drops": 9,
    "free_agent": 2
   },
   "9": {
-   "waiver": 13,
-   "drops": 13,
+   "waiver": 15,
+   "drops": 15,
    "free_agent": 1
   },
   "5": {
@@ -35,8 +35,8 @@
    "waiver": 22
   },
   "10": {
-   "waiver": 15,
-   "drops": 16,
+   "waiver": 17,
+   "drops": 18,
    "free_agent": 2,
    "trades": 1
   },
@@ -52,8 +52,8 @@
    "waiver": 16
   },
   "3": {
-   "waiver": 2,
-   "drops": 3,
+   "waiver": 3,
+   "drops": 4,
    "free_agent": 2
   },
   "12": {
@@ -96,6 +96,16 @@
     "5",
     "6",
     "11"
+   ],
+   "adds": 3
+  },
+  {
+   "name": "Matt Gay",
+   "pos": "K",
+   "teams": [
+    "11",
+    "2",
+    "9"
    ],
    "adds": 3
   },
@@ -150,15 +160,6 @@
    "teams": [
     "9",
     "10"
-   ],
-   "adds": 2
-  },
-  {
-   "name": "Jake Ferguson",
-   "pos": "TE",
-   "teams": [
-    "6",
-    "5"
    ],
    "adds": 2
   }
