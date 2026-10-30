@@ -2255,6 +2255,20 @@
   },
   {
    "week": 8,
+   "player": "7561",
+   "roster": "9",
+   "bid": 1,
+   "at": 1793343867642,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Elijah Mitchell",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 8,
    "player": "CLE",
    "roster": "11",
    "bid": 0,
@@ -2322,6 +2336,67 @@
    "name": "Dameon Pierce",
    "pos": "RB",
    "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "KC",
+   "roster": "11",
+   "bid": 0,
+   "at": 1793343867642,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Kansas City Chiefs D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "11786",
+   "roster": "1",
+   "bid": 0,
+   "at": 1793343867642,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Cam Little",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "7042",
+   "roster": "6",
+   "bid": 0,
+   "at": 1793343867642,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tyler Bass",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "8110",
+   "roster": "7",
+   "bid": 0,
+   "at": 1793343867642,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Jake Ferguson",
+   "pos": "TE",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
   }
  ],
  "trades": [

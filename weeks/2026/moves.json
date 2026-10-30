@@ -1,14 +1,14 @@
 {
  "teams": {
   "1": {
-   "waiver": 23,
+   "waiver": 24,
    "drops": 28,
    "free_agent": 5,
-   "trades": 1
+   "trades": 2
   },
   "7": {
-   "waiver": 11,
-   "drops": 12,
+   "waiver": 12,
+   "drops": 13,
    "trades": 3,
    "free_agent": 2
   },
@@ -18,8 +18,8 @@
    "free_agent": 2
   },
   "9": {
-   "waiver": 15,
-   "drops": 15,
+   "waiver": 16,
+   "drops": 16,
    "free_agent": 1
   },
   "5": {
@@ -30,9 +30,9 @@
   },
   "6": {
    "free_agent": 3,
-   "drops": 24,
-   "trades": 2,
-   "waiver": 22
+   "drops": 26,
+   "trades": 3,
+   "waiver": 23
   },
   "10": {
    "waiver": 17,
@@ -48,8 +48,8 @@
   },
   "11": {
    "free_agent": 3,
-   "drops": 19,
-   "waiver": 16
+   "drops": 20,
+   "waiver": 17
   },
   "3": {
    "waiver": 3,
@@ -69,6 +69,16 @@
   }
  },
  "players": [
+  {
+   "name": "Jake Ferguson",
+   "pos": "TE",
+   "teams": [
+    "6",
+    "5",
+    "7"
+   ],
+   "adds": 3
+  },
   {
    "name": "Michael Mayer",
    "pos": "TE",
@@ -119,6 +129,15 @@
    "adds": 4
   },
   {
+   "name": "Kansas City Chiefs D/ST",
+   "pos": "DEF",
+   "teams": [
+    "1",
+    "11"
+   ],
+   "adds": 3
+  },
+  {
    "name": "Antonio Williams",
    "pos": "WR",
    "teams": [
@@ -137,29 +156,11 @@
    "adds": 3
   },
   {
-   "name": "Kansas City Chiefs D/ST",
-   "pos": "DEF",
-   "teams": [
-    "1",
-    "11"
-   ],
-   "adds": 2
-  },
-  {
    "name": "Caleb Douglas",
    "pos": "WR",
    "teams": [
     "8",
     "1"
-   ],
-   "adds": 2
-  },
-  {
-   "name": "DeMario Douglas",
-   "pos": "WR",
-   "teams": [
-    "9",
-    "10"
    ],
    "adds": 2
   }
