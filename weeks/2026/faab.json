@@ -2189,6 +2189,20 @@
   },
   {
    "week": 8,
+   "player": "13424",
+   "roster": "10",
+   "bid": 3,
+   "at": 1793430283012,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Seth McGowan",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 8,
    "player": "JAX",
    "roster": "5",
    "bid": 2,
