@@ -22,14 +22,14 @@
     "players": [
      {
       "player": "9487",
-      "pts": 78.9,
+      "pts": 82.0,
       "name": "Parker Washington",
       "pos": "WR"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 78.9
+    "total": 82.0
    }
   ]
  },
@@ -164,7 +164,7 @@
     "players": [
      {
       "player": "12526",
-      "pts": 6.0,
+      "pts": 14.8,
       "name": "Tetairoa McMillan",
       "pos": "WR"
      },
@@ -177,7 +177,7 @@
     ],
     "picks": [],
     "faab": 15,
-    "total": 6.0
+    "total": 14.8
    }
   ]
  },
@@ -190,34 +190,34 @@
     "players": [
      {
       "player": "8138",
-      "pts": 0,
+      "pts": 17.1,
       "name": "James Cook III",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 0
+    "total": 17.1
    },
    {
     "roster": "6",
     "players": [
      {
       "player": "11646",
-      "pts": 0,
+      "pts": 8.6,
       "name": "Jalen Coker",
       "pos": "WR"
      },
      {
       "player": "6790",
-      "pts": 0,
+      "pts": 26.9,
       "name": "D'Andre Swift",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 0
+    "total": 35.5
    }
   ]
  }
