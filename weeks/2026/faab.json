@@ -141,7 +141,7 @@
    "roster": "8",
    "bid": 11,
    "at": 1789542894472,
-   "pts": 39.0,
+   "pts": 40.0,
    "started": 10.0,
    "weeks": 6,
    "active": true,
@@ -392,7 +392,7 @@
    "started": 2.9,
    "weeks": 3,
    "active": false,
-   "name": "KC Concepcion",
+   "name": "KC Concepcion Jr.",
    "pos": "WR",
    "outbid": [
     {
@@ -745,7 +745,7 @@
    "started": 48.6,
    "weeks": 4,
    "active": true,
-   "name": "Ollie Gordon",
+   "name": "Ollie Gordon II",
    "pos": "RB",
    "outbid": [
     {
@@ -1095,7 +1095,7 @@
    "started": 12.0,
    "weeks": 3,
    "active": true,
-   "name": "Marvin Harrison",
+   "name": "Marvin Harrison Jr.",
    "pos": "WR",
    "outbid": [
     {
@@ -1561,7 +1561,7 @@
    "started": 0.0,
    "weeks": 2,
    "active": true,
-   "name": "Brian Thomas",
+   "name": "Brian Thomas Jr.",
    "pos": "WR",
    "outbid": [
     {
@@ -1616,7 +1616,7 @@
    "started": 0.0,
    "weeks": 2,
    "active": true,
-   "name": "Michael Penix",
+   "name": "Michael Penix Jr.",
    "pos": "QB",
    "outbid": []
   },
@@ -1714,7 +1714,7 @@
    "started": 0.0,
    "weeks": 1,
    "active": false,
-   "name": "KC Concepcion",
+   "name": "KC Concepcion Jr.",
    "pos": "WR",
    "outbid": []
   },
@@ -1747,7 +1747,7 @@
    "started": 0.0,
    "weeks": 0,
    "active": false,
-   "name": "Omar Cooper",
+   "name": "Omar Cooper Jr.",
    "pos": "WR",
    "outbid": [
     {
@@ -1766,7 +1766,7 @@
    "started": 0.0,
    "weeks": 1,
    "active": true,
-   "name": "Tyrone Tracy",
+   "name": "Tyrone Tracy Jr.",
    "pos": "RB",
    "outbid": [
     {
@@ -1850,7 +1850,7 @@
    "started": 0.0,
    "weeks": 1,
    "active": true,
-   "name": "Kyle Pitts",
+   "name": "Kyle Pitts Sr.",
    "pos": "TE",
    "outbid": [
     {
@@ -1972,7 +1972,7 @@
    "started": 19.2,
    "weeks": 1,
    "active": true,
-   "name": "KC Concepcion",
+   "name": "KC Concepcion Jr.",
    "pos": "WR",
    "outbid": []
   },
@@ -2153,6 +2153,264 @@
    "name": "Mike Gesicki",
    "pos": "TE",
    "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "CIN",
+   "roster": "2",
+   "bid": 6,
+   "at": 1793171690128,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Cincinnati Bengals D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "5",
+     "bid": 2
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "player": "6130",
+   "roster": "8",
+   "bid": 6,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Devin Singletary",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "13424",
+   "roster": "10",
+   "bid": 3,
+   "at": 1793430283012,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Seth McGowan",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "JAX",
+   "roster": "5",
+   "bid": 2,
+   "at": 1793171690128,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Jacksonville Jaguars D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "11",
+     "bid": 1
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "player": "1373",
+   "roster": "6",
+   "bid": 2,
+   "at": 1793171690128,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Geno Smith",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "11783",
+   "roster": "10",
+   "bid": 2,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Ryan Flournoy",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 1
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "player": "10955",
+   "roster": "10",
+   "bid": 1,
+   "at": 1793171690128,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Chad Ryland",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "7561",
+   "roster": "9",
+   "bid": 1,
+   "at": 1793343867642,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Elijah Mitchell",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "CLE",
+   "roster": "11",
+   "bid": 0,
+   "at": 1793171690128,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Cleveland Browns D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "6083",
+   "roster": "9",
+   "bid": 0,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Matt Gay",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "2505",
+   "roster": "10",
+   "bid": 0,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Darren Waller",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "3257",
+   "roster": "3",
+   "bid": 0,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Jacoby Brissett",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "8129",
+   "roster": "9",
+   "bid": 0,
+   "at": 1793257491503,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Dameon Pierce",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "KC",
+   "roster": "11",
+   "bid": 0,
+   "at": 1793343867642,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Kansas City Chiefs D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "11786",
+   "roster": "1",
+   "bid": 0,
+   "at": 1793343867642,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Cam Little",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "7042",
+   "roster": "6",
+   "bid": 0,
+   "at": 1793343867642,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tyler Bass",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 8,
+   "player": "8110",
+   "roster": "7",
+   "bid": 0,
+   "at": 1793343867642,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Jake Ferguson",
+   "pos": "TE",
+   "outbid": [
+    {
+     "roster": "7",
+     "bid": 0
+    }
+   ]
   }
  ],
  "trades": [

@@ -27,7 +27,7 @@ CONFIG = ROOT / "config.json"
 WEEKS = ROOT / "weeks"
 SITE = ROOT / "docs"
 HISTORY = WEEKS / "history.json"
-IMAGES = ROOT / "images"
+MEDIA = ROOT / "media"
 PLAYERS = ROOT / ".cache" / "players.json"
 API = "https://api.sleeper.app/v1"
 SITE_NAME = "Red Vines Fantasy Football"  # browser tab and link-preview title on every page
@@ -713,7 +713,7 @@ def new_week(week, season=None):
         "// Lines starting with // are notes for you and won't show on the page.",
         "// Reorder the team lines into your ranking. The numbers don't matter; order does.",
         "// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.",
-        "// Pictures: save the file in the images folder, then write ![](file-name.png) on its own line.",
+        "// Pictures: save the file in the media folder (a team subfolder is fine), then write ![](file-name.png) on its own line.",
         "// Videos play silently on a loop; write ![sound](clip.mp4) instead for a video with audio and a play button.",
         "// Starting order is " + ("last week's ranking." if prev else "the standings."),
         "",
@@ -779,13 +779,13 @@ def previous_ranking(season, week):
 # ---------------------------------------------------------------- website
 
 def fmt(text, base):
-    """Escape, then allow **bold**, *italic*, ![](image.png) from images/, and blank-line paragraphs."""
+    """Escape, then allow **bold**, *italic*, ![](image.png) from media/, and blank-line paragraphs."""
     def image(m):
         src = m.group(2)
         if not src.startswith(("http://", "https://")):
-            if not (IMAGES / src).exists():
-                print(f"  warning: images/{src} not found")
-            src = f"{base}images/{src}"
+            if not (MEDIA / src).exists():
+                print(f"  warning: media/{src} not found")
+            src = f"{base}media/{src}"
         if src.lower().endswith((".mp4", ".webm", ".mov")):
             if m.group(1).lower() == "sound":
                 # Browsers won't autoplay with audio, so show controls and let the viewer press play.
@@ -2018,8 +2018,8 @@ def build():
             "moves_seasons": {s for s in seasons if extras[s]["moves"]},
             "stats_seasons": set(seasons),
             "recap_seasons": {s for s in seasons if (hist or {}).get("seasons", {}).get(s, {}).get("complete")}}
-    if IMAGES.exists():
-        shutil.copytree(IMAGES, SITE / "images", dirs_exist_ok=True)
+    if MEDIA.exists():
+        shutil.copytree(MEDIA, SITE / "media", dirs_exist_ok=True)
     setup_cards(seasons)
     latest = {}  # each season's latest week data, for team names and roster owners
     for s in seasons:

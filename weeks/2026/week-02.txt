@@ -52,4 +52,4 @@ JSN can work miracles but given the QB leading this squad I think even this migh
 
 12. yrkpapi
 // 0-4, 185.34 PF, streak L2 | David Montgomery 30.8, Parker Washington 30.1, Isaiah Likely 29.6
-![](salute.png)
+![](general/salute.png)

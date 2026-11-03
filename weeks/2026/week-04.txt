@@ -32,7 +32,7 @@ Looks like Jeff made some calls because this turnaround has come faster than Pri
 
 7. 6 7
 // 4-4, 465.88 PF, streak L2 | Brock Purdy 101.5, Derrick Henry 87.3, Christian McCaffrey 66.0
-![](six-seven.gif)
+![](6-7/six-seven.gif)
 
 8. NShah19
 // 3-5, 457.28 PF, streak W2 | Lamar Jackson 80.1, Kyren Williams 79.2, Ja'Marr Chase 49.7
@@ -48,8 +48,8 @@ Braelon Allen redemption arc 2026 Week 2-Week 2 will be remembered (not by many 
 
 11. Ankitty
 // 2-6, 434.98 PF, streak L1 | Jaxon Smith-Njigba 100.7, Jalen Hurts 70.0, Jeremiyah Love 43.4
-![](jsn.jpg)
+![](ankitty/jsn.jpg)
 
 12. yrkpapi
 // 0-8, 344.34 PF, streak L4 | Justin Herbert 49.4, Parker Washington 43.1, Isaiah Likely 42.0
-![](salute.png) ![](salute.png) ![](salute.png)
+![](general/salute.png) ![](general/salute.png) ![](general/salute.png)

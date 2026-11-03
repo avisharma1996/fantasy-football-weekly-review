@@ -1,0 +1,72 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Pictures: save the file in the images folder, then write ![](file-name.png) on its own line.
+// Videos play silently on a loop; write ![sound](clip.mp4) instead for a video with audio and a play button.
+// Starting order is last week's ranking.
+
+TITLE: Week 8 Power Rankings
+// Optional intro: type it here, above the first team.
+Players lie, coaches lie, but numbers don't
+![](general/jayz.png)
+
+1. Justin Beer Loyalist
+// 14-2, 1001.16 PF, streak W5 | Jahmyr Gibbs (RB1) 178.8, Trey McBride (TE1) 117.4, Caleb Williams (QB24) 98.6
+// this week: Jahmyr Gibbs (RB5) 23.8, Trey McBride (TE3) 16.7, Caleb Williams (QB17) 14.0
+![sound](justin-beer-loyalist/allidoiswin.mp4)
+
+2. Karans Sportsbook
+// 13-3, 1041.80 PF, streak L1 | Drake Maye (QB3) 136.0, Chuba Hubbard (RB12) 122.0, Tee Higgins (WR4) 118.1
+// this week: Tee Higgins (WR1) 32.5, Drake Maye (QB7) 22.5, Chuba Hubbard (RB8) 21.4
+![sound](karans-sportsbook/kennyrodgers.mp4)
+
+3. 8-6 god team 
+// 10-6, 1020.12 PF, streak W1 | Kenneth Walker III (RB2) 149.1, Bucky Irving (RB13) 121.6, Puka Nacua (WR6) 110.6
+// this week: Bucky Irving (RB9) 21.0, Puka Nacua (WR6) 19.5, Matthew Golden (WR7) 17.4
+![sound](god-team/ramit.mp4)
+
+4. Amver Alert🚨
+// 9-7, 986.12 PF, streak L1 | Josh Allen (QB1) 192.3, Amon-Ra St. Brown (WR5) 114.5, Ashton Jeanty (RB14) 113.8
+// this week: Josh Allen (QB3) 27.6, Jacksonville Jaguars D/ST (DEF2) 20.0, Jameson Williams (WR11) 15.0
+![sound](amver-alert/bills.mp4)
+
+5. I’m Whipped by Bezos
+// 8-8, 926.04 PF, streak W2 | Dak Prescott (QB6) 152.9, CeeDee Lamb (WR2) 138.3, Tony Pollard (RB16) 102.5
+// this week: Tony Pollard (RB3) 27.2, Pittsburgh Steelers D/ST (DEF1) 21.0, Josh Jacobs (RB11) 20.2
+![sound](whipped-by-bezos/jeffery.mp4)
+
+6. NShah19
+// 8-8, 912.66 PF, streak W2 | Kyren Williams (RB6) 133.5, Bhayshul Tuten (RB15) 110.8, Ja'Marr Chase (WR8) 106.7
+// this week: Bhayshul Tuten (RB2) 28.9, Ja'Marr Chase (WR2) 25.6, Kyren Williams (RB18) 12.4
+![sound](nshah19/tuten.mp4)
+
+7. 6 7
+// 9-7, 914.72 PF, streak W1 | Brock Purdy (QB7) 150.0, Derrick Henry (RB7) 130.7, Braelon Allen (RB17) 75.9
+// this week: D'Andre Swift (RB4) 26.9, Braelon Allen (RB7) 22.3, Geno Smith (QB13) 19.0
+![sound](6-7/swift.mp4)
+
+8. superdiddy
+// 5-11, 818.92 PF, streak W2 | Javonte Williams (RB9) 127.2, Zay Flowers (WR9) 102.2, Jordan Love (QB5) 81.2
+// this week: Jordan Love (QB6) 22.5, Tucker Kraft (TE6) 14.3, Justin Jefferson (WR20) 11.8
+![sound](superdiddy/packers.mp4)
+
+9. Baltimore Avians
+// 9-7, 1015.70 PF, streak L3 | Joe Burrow (QB2) 175.6, Bijan Robinson (RB3) 140.8, Jaylen Warren (RB8) 128.3
+// this week: Joe Burrow (QB1) 42.5, Michael Wilson (WR4) 22.8, Jaylen Warren (RB10) 20.8
+![sound](baltimore-avians/burrow.mp4)
+
+9. Ankitty
+// 4-12, 849.32 PF, streak L2 | Jaxon Smith-Njigba (WR1) 188.0, Brock Bowers (TE2) 103.2, Chris Boswell (K6) 77.0
+// this week: Brock Bowers (TE1) 24.7, Jaxon Smith-Njigba (WR5) 20.8, Wan'Dale Robinson (WR16) 12.7
+![sound](ankitty/jsnalone.mp4)
+
+11. Braelon Allen
+// 4-12, 745.92 PF, streak L3 | Jonathan Taylor (RB5) 133.7, Patrick Mahomes (QB14) 129.5, Christian Watson (WR3) 125.8
+// this week: Patrick Mahomes (QB5) 25.4, Rashee Rice (WR12) 14.8, Christian Watson (WR15) 13.3
+![sound](braelon-allen/mahomeskermit.mp4)
+
+12. yrkpapi
+// 3-13, 751.56 PF, streak L2 | Isaiah Likely (TE3) 92.0, George Pickens (WR20) 84.8, Parker Washington (WR21) 82.0
+// this week: Kirk Cousins (QB2) 28.2, Brandon Aubrey (K5) 12.0, Saquon Barkley (RB21) 11.9
+![sound](yrkpapi/kirkcousins.mp4)
+

@@ -145,7 +145,7 @@
      {
       "player": "13276",
       "pts": 20.0,
-      "name": "Omar Cooper",
+      "name": "Omar Cooper Jr.",
       "pos": "WR"
      },
      {
@@ -171,13 +171,53 @@
      {
       "player": "8138",
       "pts": 0,
-      "name": "James Cook",
+      "name": "James Cook III",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 15,
     "total": 6.0
+   }
+  ]
+ },
+ {
+  "week": 8,
+  "at": 1793312099333,
+  "sides": [
+   {
+    "roster": "1",
+    "players": [
+     {
+      "player": "8138",
+      "pts": 0,
+      "name": "James Cook III",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
+   },
+   {
+    "roster": "6",
+    "players": [
+     {
+      "player": "11646",
+      "pts": 0,
+      "name": "Jalen Coker",
+      "pos": "WR"
+     },
+     {
+      "player": "6790",
+      "pts": 0,
+      "name": "D'Andre Swift",
+      "pos": "RB"
+     }
+    ],
+    "picks": [],
+    "faab": 0,
+    "total": 0
    }
   ]
  }

@@ -17,7 +17,7 @@ Looks like yet another sportsbook is ready to take everyone's money
 2. Justin Beer Loyalist
 // 13-1, 897.98 PF, streak W4 | Jahmyr Gibbs (RB1) 155.0, Trey McBride (TE1) 100.7, Malik Nabers (WR7) 96.5
 // this week: Quinshon Judkins (RB3) 22.9, Caleb Williams (QB7) 22.1, Trey McBride (TE2) 22.1
-![](caleb_williams.gif)
+![](justin-beer-loyalist/caleb_williams.gif)
 
 3. 8-4 god team 
 // 8-6, 905.64 PF, streak L1 | Kenneth Walker (RB2) 138.7, Bucky Irving (RB13) 100.6, Chris Olave (WR6) 100.1
@@ -27,13 +27,13 @@ Thanks to Kenneth Walker this team might need a rename
 4. Amver Alert🚨
 // 8-6, 872.16 PF, streak W1 | Josh Allen (QB1) 164.8, Amon-Ra St. Brown (WR4) 105.4, Ashton Jeanty (RB12) 105.0
 // this week: Jameson Williams (WR4) 23.6, Amon-Ra St. Brown (WR9) 19.7, Ashton Jeanty (RB11) 17.6
-![](asb_jameson.gif)
+![](amver-alert/asb_jameson.gif)
 
 5. NShah19
 // 7-7, 811.46 PF, streak W1 | Kyren Williams (RB6) 121.1, Drake London (WR10) 89.0, Bhayshul Tuten (RB16) 81.9
 // this week: Rhamondre Stevenson (RB5) 20.0, Jared Goff (QB12) 18.0, Kyren Williams (RB12) 17.1
 Lamar letting... hold on this team might not actually need Lamar thanks to...
-![](goff.mp4)
+![](nshah19/goff.mp4)
 
 6. I’m Whipped by Bezos
 // 6-8, 777.94 PF, streak W1 | Dak Prescott (QB5) 133.1, CeeDee Lamb (WR2) 129.0, Garrett Wilson (WR15) 80.9
@@ -44,7 +44,7 @@ Four things are a given in life: death, taxes, Mr. Bezos ensuring worker's right
 // 7-7, 773.82 PF, streak L1 | Brock Purdy (QB2) 150.0, Derrick Henry (RB8) 117.7, Christian McCaffrey (RB5) 108.0
 // this week: Cam Skattebo (RB7) 18.6, Braelon Allen (RB16) 16.4, Brock Purdy (QB19) 14.0
 Cam when you tell him to stop doing backflips and instead hit the A gap on an outside stretch to help your fantasy team:
-![sound](cam.mp4)
+![sound](6-7/cam.mp4)
 
 8. Baltimore Avians
 // 8-6, 874.62 PF, streak L2 | Bijan Robinson (RB3) 133.2, Joe Burrow (QB6) 133.1, D'Andre Swift (RB9) 111.8
@@ -54,20 +54,20 @@ Somehow not the most embarrassing performance by a Baltimore team this week x2
 9. Ankitty
 // 4-10, 759.26 PF, streak L1 | Jaxon Smith-Njigba (WR1) 167.2, Jalen Hurts (QB24) 83.0, Brock Bowers (TE4) 78.5
 // this week: Jaxon Smith-Njigba (WR1) 26.8, Bo Nix (QB3) 26.3, Emanuel Wilson (RB9) 18.0
-![](jsn-lambo-seahawks.jpg) 
+![](ankitty/jsn-lambo-seahawks.jpg) 
 
 10. superdiddy
 // 4-10, 726.80 PF, streak W1 | Javonte Williams (RB7) 121.0, Zay Flowers (WR5) 102.2, Ka'imi Fairbairn (K4) 75.0
 // this week: Zay Flowers (WR3) 23.7, Javonte Williams (RB4) 21.5, Jordan Love (QB13) 18.0
-![](javonte-changed-my-life.png)
+![](superdiddy/javonte-changed-my-life.png)
 
 11. Braelon Allen
 // 4-10, 678.78 PF, streak L2 | Jonathan Taylor (RB4) 129.0, Christian Watson (WR3) 112.5, Patrick Mahomes (QB18) 104.1
 // this week: Jonathan Taylor (RB8) 18.0, Nick Folk (K9) 10.0, Minnesota Vikings D/ST (DEF4) 10.0
 Mahomes when your fantasy team could use a win: 
-![](mahomes-kermit-2.jpg)
+![](braelon-allen/mahomes-kermit-2.jpg)
 
 12. yrkpapi
 // 3-11, 665.98 PF, streak L1 | Isaiah Likely (TE2) 92.0, George Pickens (WR18) 79.0, Parker Washington (WR19) 78.9
 // this week: Kirk Cousins (QB9) 20.4, KC Concepcion (WR10) 19.2, Ollie Gordon (RB14) 16.8
-![](salute.png)
+![](general/salute.png)

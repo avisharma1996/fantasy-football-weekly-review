@@ -1,59 +1,59 @@
 {
  "teams": {
   "1": {
-   "waiver": 23,
-   "drops": 27,
+   "waiver": 24,
+   "drops": 28,
    "free_agent": 5,
-   "trades": 1
+   "trades": 2
   },
   "7": {
-   "waiver": 11,
-   "drops": 12,
+   "waiver": 12,
+   "drops": 14,
    "trades": 3,
    "free_agent": 2
   },
   "8": {
-   "waiver": 7,
-   "drops": 8,
-   "free_agent": 2
+   "waiver": 8,
+   "drops": 10,
+   "free_agent": 3
   },
   "9": {
-   "waiver": 13,
-   "drops": 13,
+   "waiver": 16,
+   "drops": 16,
    "free_agent": 1
   },
   "5": {
-   "waiver": 8,
-   "drops": 9,
+   "waiver": 9,
+   "drops": 10,
    "free_agent": 1,
    "trades": 1
   },
   "6": {
    "free_agent": 3,
-   "drops": 23,
-   "trades": 2,
-   "waiver": 21
+   "drops": 26,
+   "trades": 3,
+   "waiver": 23
   },
   "10": {
-   "waiver": 14,
-   "drops": 15,
+   "waiver": 18,
+   "drops": 19,
    "free_agent": 2,
    "trades": 1
   },
   "2": {
    "free_agent": 1,
-   "drops": 5,
-   "waiver": 4,
+   "drops": 6,
+   "waiver": 5,
    "trades": 1
   },
   "11": {
    "free_agent": 3,
-   "drops": 18,
-   "waiver": 15
+   "drops": 20,
+   "waiver": 17
   },
   "3": {
-   "waiver": 2,
-   "drops": 3,
+   "waiver": 3,
+   "drops": 4,
    "free_agent": 2
   },
   "12": {
@@ -69,6 +69,16 @@
   }
  },
  "players": [
+  {
+   "name": "Jake Ferguson",
+   "pos": "TE",
+   "teams": [
+    "6",
+    "5",
+    "7"
+   ],
+   "adds": 3
+  },
   {
    "name": "Michael Mayer",
    "pos": "TE",
@@ -90,6 +100,26 @@
    "adds": 3
   },
   {
+   "name": "Cleveland Browns D/ST",
+   "pos": "DEF",
+   "teams": [
+    "5",
+    "6",
+    "11"
+   ],
+   "adds": 3
+  },
+  {
+   "name": "Matt Gay",
+   "pos": "K",
+   "teams": [
+    "11",
+    "2",
+    "9"
+   ],
+   "adds": 3
+  },
+  {
    "name": "Tyler Loop",
    "pos": "K",
    "teams": [
@@ -97,6 +127,15 @@
     "11"
    ],
    "adds": 4
+  },
+  {
+   "name": "Kansas City Chiefs D/ST",
+   "pos": "DEF",
+   "teams": [
+    "1",
+    "11"
+   ],
+   "adds": 3
   },
   {
    "name": "Antonio Williams",
@@ -108,7 +147,7 @@
    "adds": 3
   },
   {
-   "name": "KC Concepcion",
+   "name": "KC Concepcion Jr.",
    "pos": "WR",
    "teams": [
     "7",
@@ -117,47 +156,11 @@
    "adds": 3
   },
   {
-   "name": "Kansas City Chiefs D/ST",
-   "pos": "DEF",
-   "teams": [
-    "1",
-    "11"
-   ],
-   "adds": 2
-  },
-  {
    "name": "Caleb Douglas",
    "pos": "WR",
    "teams": [
     "8",
     "1"
-   ],
-   "adds": 2
-  },
-  {
-   "name": "DeMario Douglas",
-   "pos": "WR",
-   "teams": [
-    "9",
-    "10"
-   ],
-   "adds": 2
-  },
-  {
-   "name": "Jake Ferguson",
-   "pos": "TE",
-   "teams": [
-    "6",
-    "5"
-   ],
-   "adds": 2
-  },
-  {
-   "name": "Chris Bell",
-   "pos": "WR",
-   "teams": [
-    "9",
-    "6"
    ],
    "adds": 2
   }

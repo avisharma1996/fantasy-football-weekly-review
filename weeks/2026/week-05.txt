@@ -13,7 +13,7 @@ Mr. Needlemouse is carrying Justin Beer in a way Mr. Harbaugh wishes he could
 
 2. Shivxn
 // 6-4, 680.42 PF, streak W2 | Kenneth Walker (RB4) 104.1, Chris Olave (WR6) 79.2, Bucky Irving (RB14) 71.2
-![](kenneth-walker.png)
+![](god-team/kenneth-walker.png)
 
 3. Baltimore Avians
 // 7-3, 658.72 PF, streak W3 | Bijan Robinson (RB2) 112.2, Joe Burrow (QB4) 104.2, Jaylen Warren (RB9) 83.5
@@ -45,7 +45,7 @@ And the whipping has returned sadly
 
 10. superdiddy
 // 3-7, 517.50 PF, streak L4 | Javonte Williams (RB7) 87.5, Zay Flowers (WR9) 68.8, Justin Jefferson (WR20) 54.2
-Yeah it might just be a lost cause sadly ![](salute.png)
+Yeah it might just be a lost cause sadly ![](general/salute.png)
 
 11. yrkpapi
 // 2-8, 472.96 PF, streak W1 | Parker Washington (WR8) 70.5, Isaiah Likely (TE2) 68.9, George Pickens (WR19) 55.0
@@ -53,5 +53,5 @@ Hold on now... 👀
 
 12. Ankitty
 // 2-8, 532.08 PF, streak L2 | Jaxon Smith-Njigba (WR1) 121.0, Jalen Hurts (QB17) 83.0, Brock Bowers (TE5) 59.2
-![](jsn-catch.mp4)
+![](ankitty/jsn-catch.mp4)
 

@@ -20,7 +20,7 @@ Polymarket put the call in, this sportsbook might actually be a contender this y
 
 4. 6 7
 // 4-2, 368.56 PF, streak L1 | Brock Purdy 81.9, Derrick Henry 72.4, Christian McCaffrey 51.5
-![](six-seven.gif)
+![](6-7/six-seven.gif)
 
 5. Shivxn
 // 3-3, 375.68 PF, streak L1 | Kenneth Walker 73.7, Chris Olave 57.0, Dalton Kincaid 37.3
@@ -44,12 +44,12 @@ Once again Lamar let down by the rest of his team x3
 
 10. I’m Whipped by Bezos
 // 2-4, 329.90 PF, streak W1 | Dak Prescott 64.1, CeeDee Lamb 60.9, Garrett Wilson 46.8
-![](bezos.jpg)
+![](whipped-by-bezos/bezos.jpg)
 
 11. superdiddy
 // 2-4, 295.08 PF, streak L2 | Javonte Williams 45.5, Justin Jefferson 38.4, Zay Flowers 36.4
-![](rip.gif)
+![](superdiddy/rip.gif)
 
 12. yrkpapi
 // 0-6, 267.78 PF, streak L3 | Parker Washington 41.6, Justin Herbert 37.9, David Montgomery 36.6
-![](salute.png) ![](salute.png)
+![](general/salute.png) ![](general/salute.png)
