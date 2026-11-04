@@ -2411,6 +2411,116 @@
      "bid": 0
     }
    ]
+  },
+  {
+   "week": 9,
+   "player": "8132",
+   "roster": "2",
+   "bid": 40,
+   "at": 1793780133864,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tyler Allgeier",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "8",
+     "bid": 40
+    },
+    {
+     "roster": "11",
+     "bid": 26
+    },
+    {
+     "roster": "1",
+     "bid": 24
+    },
+    {
+     "roster": "5",
+     "bid": 8
+    },
+    {
+     "roster": "9",
+     "bid": 0
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "player": "4035",
+   "roster": "5",
+   "bid": 8,
+   "at": 1793780133864,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Alvin Kamara",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "13305",
+   "roster": "11",
+   "bid": 5,
+   "at": 1793780133864,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Mike Washington Jr.",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "13285",
+   "roster": "1",
+   "bid": 4,
+   "at": 1793780133864,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Malachi Fields",
+   "pos": "WR",
+   "outbid": [
+    {
+     "roster": "1",
+     "bid": 4
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "player": "8135",
+   "roster": "1",
+   "bid": 2,
+   "at": 1793780133864,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Treylon Burks",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "CLE",
+   "roster": "6",
+   "bid": 0,
+   "at": 1793780133864,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Cleveland Browns D/ST",
+   "pos": "DEF",
+   "outbid": []
   }
  ],
  "trades": [

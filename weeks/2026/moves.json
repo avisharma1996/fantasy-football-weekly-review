@@ -1,8 +1,8 @@
 {
  "teams": {
   "1": {
-   "waiver": 24,
-   "drops": 28,
+   "waiver": 26,
+   "drops": 30,
    "free_agent": 5,
    "trades": 2
   },
@@ -19,20 +19,20 @@
   },
   "9": {
    "waiver": 16,
-   "drops": 16,
+   "drops": 17,
    "free_agent": 1
   },
   "5": {
-   "waiver": 9,
+   "waiver": 10,
    "drops": 10,
    "free_agent": 1,
    "trades": 1
   },
   "6": {
    "free_agent": 3,
-   "drops": 26,
+   "drops": 27,
    "trades": 3,
-   "waiver": 23
+   "waiver": 24
   },
   "10": {
    "waiver": 18,
@@ -42,14 +42,14 @@
   },
   "2": {
    "free_agent": 1,
-   "drops": 6,
-   "waiver": 5,
+   "drops": 7,
+   "waiver": 6,
    "trades": 1
   },
   "11": {
    "free_agent": 3,
-   "drops": 20,
-   "waiver": 17
+   "drops": 21,
+   "waiver": 18
   },
   "3": {
    "waiver": 3,
@@ -69,6 +69,16 @@
   }
  },
  "players": [
+  {
+   "name": "Cleveland Browns D/ST",
+   "pos": "DEF",
+   "teams": [
+    "5",
+    "6",
+    "11"
+   ],
+   "adds": 4
+  },
   {
    "name": "Jake Ferguson",
    "pos": "TE",
@@ -100,12 +110,12 @@
    "adds": 3
   },
   {
-   "name": "Cleveland Browns D/ST",
-   "pos": "DEF",
+   "name": "Alvin Kamara",
+   "pos": "RB",
    "teams": [
-    "5",
+    "10",
     "6",
-    "11"
+    "5"
    ],
    "adds": 3
   },
@@ -147,22 +157,13 @@
    "adds": 3
   },
   {
-   "name": "KC Concepcion Jr.",
+   "name": "Malachi Fields",
    "pos": "WR",
    "teams": [
-    "7",
-    "12"
+    "1",
+    "6"
    ],
    "adds": 3
-  },
-  {
-   "name": "Caleb Douglas",
-   "pos": "WR",
-   "teams": [
-    "8",
-    "1"
-   ],
-   "adds": 2
   }
  ]
 }
