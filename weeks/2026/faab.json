@@ -2521,6 +2521,34 @@
    "name": "Cleveland Browns D/ST",
    "pos": "DEF",
    "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "1373",
+   "roster": "3",
+   "bid": 0,
+   "at": 1793865874066,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Geno Smith",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "5947",
+   "roster": "9",
+   "bid": 0,
+   "at": 1793865874066,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Jakobi Meyers",
+   "pos": "WR",
+   "outbid": []
   }
  ],
  "trades": [
