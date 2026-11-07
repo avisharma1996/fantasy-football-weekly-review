@@ -2549,6 +2549,20 @@
    "name": "Jakobi Meyers",
    "pos": "WR",
    "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "BUF",
+   "roster": "12",
+   "bid": 0,
+   "at": 1794038676845,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Buffalo Bills D/ST",
+   "pos": "DEF",
+   "outbid": []
   }
  ],
  "trades": [
