@@ -14,12 +14,12 @@
   },
   "8": {
    "waiver": 8,
-   "drops": 10,
-   "free_agent": 3
+   "drops": 11,
+   "free_agent": 4
   },
   "9": {
-   "waiver": 17,
-   "drops": 17,
+   "waiver": 18,
+   "drops": 18,
    "free_agent": 1
   },
   "5": {
@@ -52,8 +52,8 @@
    "waiver": 18
   },
   "3": {
-   "waiver": 4,
-   "drops": 5,
+   "waiver": 5,
+   "drops": 6,
    "free_agent": 2
   },
   "12": {
@@ -69,6 +69,17 @@
   }
  },
  "players": [
+  {
+   "name": "Matt Gay",
+   "pos": "K",
+   "teams": [
+    "11",
+    "2",
+    "9",
+    "3"
+   ],
+   "adds": 4
+  },
   {
    "name": "Cleveland Browns D/ST",
    "pos": "DEF",
@@ -116,16 +127,6 @@
     "10",
     "6",
     "5"
-   ],
-   "adds": 3
-  },
-  {
-   "name": "Matt Gay",
-   "pos": "K",
-   "teams": [
-    "11",
-    "2",
-    "9"
    ],
    "adds": 3
   },

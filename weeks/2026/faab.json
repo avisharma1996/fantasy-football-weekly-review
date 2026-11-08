@@ -2563,6 +2563,39 @@
    "name": "Buffalo Bills D/ST",
    "pos": "DEF",
    "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "6083",
+   "roster": "3",
+   "bid": 0,
+   "at": 1794125085581,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Matt Gay",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 9,
+   "player": "11579",
+   "roster": "9",
+   "bid": 0,
+   "at": 1794125085581,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Audric Estime",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "3",
+     "bid": 0
+    }
+   ]
   }
  ],
  "trades": [
