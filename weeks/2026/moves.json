@@ -36,8 +36,8 @@
   },
   "10": {
    "waiver": 18,
-   "drops": 19,
-   "free_agent": 2,
+   "drops": 21,
+   "free_agent": 4,
    "trades": 1
   },
   "2": {
@@ -53,8 +53,8 @@
   },
   "3": {
    "waiver": 5,
-   "drops": 6,
-   "free_agent": 2
+   "drops": 7,
+   "free_agent": 3
   },
   "12": {
    "waiver": 9,
@@ -131,6 +131,16 @@
    "adds": 3
   },
   {
+   "name": "Aaron Rodgers",
+   "pos": "QB",
+   "teams": [
+    "1",
+    "8",
+    "10"
+   ],
+   "adds": 3
+  },
+  {
    "name": "Tyler Loop",
    "pos": "K",
    "teams": [
@@ -153,15 +163,6 @@
    "pos": "WR",
    "teams": [
     "7",
-    "6"
-   ],
-   "adds": 3
-  },
-  {
-   "name": "Malachi Fields",
-   "pos": "WR",
-   "teams": [
-    "1",
     "6"
    ],
    "adds": 3
