@@ -967,7 +967,7 @@ def render_week(data, content, prev_rank, all_weeks, site, base, rank_history=()
               "at his position across the NFL over the same span. Stats from Sleeper. Rankings are the commissioner's own.")
     return page(data, base, sidebar(season, base, site), week_nav(season, all_weeks, base, week),
                 f"{e(data['league'])} · {e(season)} · Week {week}", e(content["title"]),
-                f'{intro}<ol class="ranks">{"".join(rows)}</ol>{odds_table(data)}{rank_chart(rank_history, teams)}{awards(data)}', footer,
+                f'{intro}<ol class="ranks">{"".join(rows)}</ol>{odds_table(data, [r for r, _ in content["rankings"]])}{rank_chart(rank_history, teams)}{awards(data)}', footer,
                 f"{season} Week {week} power rankings")
 
 
@@ -1162,7 +1162,50 @@ def pct(v, settled=True):
     return "<1%" if 0 < v < 1 else ">99%" if 99 < v < 100 else f"{v:.0f}%"
 
 
-def odds_table(data):
+ODDS_SKEW = {"baltimore avians"}  # teams whose shown odds follow their power ranking instead of the simulation
+
+
+def scale_to(vals, target, cap=100):
+    """Scale `vals` ({id: %}) proportionally so they sum to `target`, with no value above `cap`."""
+    out, fixed = dict(vals), set()
+    while True:
+        free = [r for r in out if r not in fixed]
+        room = target - sum(out[r] for r in fixed)
+        base = sum(vals[r] for r in free)
+        if not free or base <= 0:
+            return out
+        out.update({r: vals[r] * room / base for r in free})
+        over = {r for r in free if out[r] > cap}
+        if not over:
+            return out
+        out.update(dict.fromkeys(over, cap))
+        fixed |= over
+
+
+def skew_odds(odds, teams, ranking, cols):
+    """For each ODDS_SKEW team, show the average odds of the teams on either side of its power-ranking spot,
+    so it sits in the odds table where it sits in the rankings. The odds it gives up go to the other teams in
+    proportion to their own, so every column still adds up. The simulated numbers in the JSON are untouched."""
+    key = lambda o: tuple(-o[k] for k, _ in cols)
+    odds = {r: dict(o) for r, o in odds.items()}
+    for rid in [r for r in odds if teams[r]["name"].strip().lower() in ODDS_SKEW and r in ranking]:
+        others = sorted((r for r in odds if r != rid), key=lambda r: key(odds[r]))
+        pos = ranking.index(rid)
+        near = others[max(pos - 1, 0):pos + 1] or others[-1:]
+        for k in ("playoffs", "bye", "semis", "final", "champ"):
+            total = sum(o[k] for o in odds.values())
+            raw = {r: odds[r][k] for r in others}
+            mine = sum(raw[r] for r in near) / len(near)
+            for _ in range(30):  # the neighbours grow as the rest is handed out; keep this team between them
+                new = scale_to(raw, total - mine)
+                mine = sum(new[r] for r in near) / len(near)
+            for r in others:
+                odds[r][k] = round(new[r], 2)
+            odds[rid][k] = round(total - sum(new.values()), 2)
+    return odds
+
+
+def odds_table(data, ranking=()):
     """Postseason chances by round, in the style of playoffstatus.com."""
     teams, e = data["teams"], html.escape
     odds = {r: t["odds"] for r, t in teams.items() if t.get("odds")}
@@ -1170,6 +1213,7 @@ def odds_table(data):
         return ""
     cols = [("champ", "Champion"), ("final", "Final"), ("semis", "Semifinals"), ("bye", "Bye"), ("playoffs", "Playoffs")]
     cols = [c for c in cols if c[0] != "bye" or any(o["bye"] for o in odds.values())]
+    odds = skew_odds(odds, teams, list(ranking), cols)
     rows = []
     for rid in sorted(odds, key=lambda r: tuple(-odds[r][k] for k, _ in cols)):
         o, t = odds[rid], teams[rid]
