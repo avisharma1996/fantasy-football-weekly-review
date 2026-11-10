@@ -1,0 +1,71 @@
+// Lines starting with // are notes for you and won't show on the page.
+// Reorder the team lines into your ranking. The numbers don't matter; order does.
+// Anything you type under a team shows as its blurb (optional). **bold** and *italic* work.
+// Pictures: save the file in the media folder (a team subfolder is fine), then write ![](file-name.png) on its own line.
+// Videos play silently on a loop; write ![sound](clip.mp4) instead for a video with audio and a play button.
+// Starting order is last week's ranking.
+
+TITLE: Week 9 Power Rankings
+You get an injury, you get an injury, everyone gets an injury
+
+
+1. Karans Sportsbook
+// 15-3, 1167.46 PF, streak W1 | Drake Maye (QB4) 157.3, Tee Higgins (WR6) 135.8, Chuba Hubbard (RB12) 133.6
+// this week: Christian McCaffrey (RB4) 21.7, Drake Maye (QB7) 21.3, Tee Higgins (WR8) 17.7
+Dominant.
+
+2. Justin Beer Loyalist
+// 14-4, 1081.32 PF, streak L1 | Jahmyr Gibbs (RB1) 192.2, Trey McBride (TE1) 126.3, Caleb Williams (QB20) 115.3
+// this week: Caleb Williams (QB10) 16.8, Jahmyr Gibbs (RB10) 13.4, Seattle Seahawks D/ST (DEF9) 12.0
+Rough.
+
+3. In another life puka 
+// 12-6, 1193.08 PF, streak W2 | Kenneth Walker III (RB2) 183.4, Bucky Irving (RB5) 148.1, Puka Nacua (WR4) 138.6
+// this week: Kenneth Walker III (RB1) 34.3, Puka Nacua (WR2) 28.0, Matthew Golden (WR3) 27.4
+RIP.
+
+4. 6 7
+// 10-8, 1007.48 PF, streak W2 | Brock Purdy (QB6) 176.3, Derrick Henry (RB11) 136.3, Braelon Allen (RB18) 75.9
+// this week: Brock Purdy (QB4) 26.3, Tetairoa McMillan (WR14) 13.6, Tyler Bass (K10) 13.0
+Surging.
+
+5. Amver Alert🚨
+// 9-9, 1066.28 PF, streak L2 | Josh Allen (QB1) 206.2, Amon-Ra St. Brown (WR8) 127.1, Ashton Jeanty (RB15) 118.3
+// this week: Trey Smack (K4) 16.0, Josh Allen (QB16) 13.9, Amon-Ra St. Brown (WR24) 12.6
+Tough.
+
+6. I’m Whipped by Bezos
+// 9-9, 1035.14 PF, streak L1 | Dak Prescott (QB7) 172.4, CeeDee Lamb (WR2) 166.8, Tony Pollard (RB16) 102.5
+// this week: CeeDee Lamb (WR1) 28.5, Dak Prescott (QB9) 19.5, San Francisco 49ers D/ST (DEF1) 19.0
+o7. 
+
+7. NShah19
+// 8-10, 1019.36 PF, streak L1 | Kyren Williams (RB9) 141.1, Ja'Marr Chase (WR7) 133.2, Bhayshul Tuten (RB14) 119.7
+// this week: Ja'Marr Chase (WR6) 26.5, Rhamondre Stevenson (RB11) 13.3, Evan McPherson (K9) 13.0
+Workhorse.
+
+8. superdiddy
+// 6-12, 956.70 PF, streak L1 | Javonte Williams (RB6) 147.6, Jordan Love (QB3) 117.4, Zay Flowers (WR11) 106.0
+// this week: Jordan Love (QB2) 36.2, Javonte Williams (RB5) 20.4, Tank Dell (WR7) 18.5
+Unlucky.
+
+9. Baltimore Avians
+// 11-7, 1163.64 PF, streak W1 | Joe Burrow (QB2) 205.1, Bijan Robinson (RB3) 164.5, Jaylen Warren (RB13) 128.3
+// this week: Joe Burrow (QB3) 29.5, Bijan Robinson (RB3) 23.7, James Cook III (RB7) 16.7
+Lucky.
+
+10. Ankitty
+// 6-12, 960.50 PF, streak W1 | Jaxon Smith-Njigba (WR1) 196.6, Brock Bowers (TE2) 122.0, Chris Boswell (K15) 77.0
+// this week: Brock Bowers (TE2) 18.8, Jonah Coleman (RB6) 16.8, Bo Nix (QB11) 16.7
+Comeback?
+
+11. yrkpapi
+// 4-14, 838.00 PF, streak W1 | Isaiah Likely (TE3) 105.8, Kirk Cousins (QB5) 97.5, Parker Washington (WR16) 95.1
+// this week: KC Concepcion Jr. (WR10) 16.8, Kirk Cousins (QB13) 15.6, Isaiah Likely (TE5) 13.8
+Cinema.
+
+12. Braelon Allen
+// 4-14, 830.20 PF, streak L4 | Christian Watson (WR3) 152.4, Patrick Mahomes (QB14) 146.0, Jonathan Taylor (RB10) 140.6
+// this week: Christian Watson (WR4) 26.6, Patrick Mahomes (QB12) 16.5, Breece Hall (RB17) 10.2
+Basement.
+

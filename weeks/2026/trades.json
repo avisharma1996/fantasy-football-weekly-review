@@ -8,28 +8,28 @@
     "players": [
      {
       "player": "12514",
-      "pts": 42.9,
+      "pts": 48.3,
       "name": "Emeka Egbuka",
       "pos": "WR"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 42.9
+    "total": 48.3
    },
    {
     "roster": "7",
     "players": [
      {
       "player": "9487",
-      "pts": 82.0,
+      "pts": 95.1,
       "name": "Parker Washington",
       "pos": "WR"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 82.0
+    "total": 95.1
    }
   ]
  },
@@ -144,27 +144,27 @@
     "players": [
      {
       "player": "13276",
-      "pts": 20.0,
+      "pts": 29.8,
       "name": "Omar Cooper Jr.",
       "pos": "WR"
      },
      {
       "player": "4034",
-      "pts": 19.0,
+      "pts": 40.7,
       "name": "Christian McCaffrey",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 39.0
+    "total": 70.5
    },
    {
     "roster": "6",
     "players": [
      {
       "player": "12526",
-      "pts": 14.8,
+      "pts": 28.4,
       "name": "Tetairoa McMillan",
       "pos": "WR"
      },
@@ -177,7 +177,7 @@
     ],
     "picks": [],
     "faab": 15,
-    "total": 14.8
+    "total": 28.4
    }
   ]
  },
@@ -190,34 +190,34 @@
     "players": [
      {
       "player": "8138",
-      "pts": 17.1,
+      "pts": 33.8,
       "name": "James Cook III",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 17.1
+    "total": 33.8
    },
    {
     "roster": "6",
     "players": [
      {
       "player": "11646",
-      "pts": 8.6,
+      "pts": 13.2,
       "name": "Jalen Coker",
       "pos": "WR"
      },
      {
       "player": "6790",
-      "pts": 26.9,
+      "pts": 30.0,
       "name": "D'Andre Swift",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 35.5
+    "total": 43.2
    }
   ]
  }
