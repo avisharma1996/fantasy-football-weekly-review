@@ -2596,6 +2596,81 @@
      "bid": 0
     }
    ]
+  },
+  {
+   "week": 10,
+   "player": "12504",
+   "roster": "1",
+   "bid": 6,
+   "at": 1794384904220,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Kaleb Johnson",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "9",
+     "bid": 2
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "player": "9501",
+   "roster": "6",
+   "bid": 4,
+   "at": 1794384904220,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "DeMario Douglas",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 10,
+   "player": "13833",
+   "roster": "8",
+   "bid": 1,
+   "at": 1794384904220,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Dominic Zvada",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 10,
+   "player": "GB",
+   "roster": "1",
+   "bid": 0,
+   "at": 1794384904220,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Green Bay Packers D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 10,
+   "player": "10219",
+   "roster": "5",
+   "bid": 0,
+   "at": 1794384904220,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Chris Rodriguez Jr.",
+   "pos": "RB",
+   "outbid": []
   }
  ],
  "trades": [

@@ -1,8 +1,8 @@
 {
  "teams": {
   "1": {
-   "waiver": 26,
-   "drops": 30,
+   "waiver": 28,
+   "drops": 31,
    "free_agent": 5,
    "trades": 2
   },
@@ -13,8 +13,8 @@
    "free_agent": 2
   },
   "8": {
-   "waiver": 8,
-   "drops": 11,
+   "waiver": 9,
+   "drops": 12,
    "free_agent": 4
   },
   "9": {
@@ -23,16 +23,16 @@
    "free_agent": 1
   },
   "5": {
-   "waiver": 10,
-   "drops": 10,
+   "waiver": 11,
+   "drops": 11,
    "free_agent": 1,
    "trades": 1
   },
   "6": {
    "free_agent": 3,
-   "drops": 27,
+   "drops": 28,
    "trades": 3,
-   "waiver": 24
+   "waiver": 25
   },
   "10": {
    "waiver": 18,
@@ -89,6 +89,16 @@
     "11"
    ],
    "adds": 4
+  },
+  {
+   "name": "DeMario Douglas",
+   "pos": "WR",
+   "teams": [
+    "9",
+    "10",
+    "6"
+   ],
+   "adds": 3
   },
   {
    "name": "Jake Ferguson",
@@ -155,15 +165,6 @@
    "teams": [
     "1",
     "11"
-   ],
-   "adds": 3
-  },
-  {
-   "name": "Antonio Williams",
-   "pos": "WR",
-   "teams": [
-    "7",
-    "6"
    ],
    "adds": 3
   }
