@@ -1,8 +1,8 @@
 {
  "teams": {
   "1": {
-   "waiver": 28,
-   "drops": 31,
+   "waiver": 29,
+   "drops": 32,
    "free_agent": 5,
    "trades": 2
   },
@@ -18,13 +18,13 @@
    "free_agent": 4
   },
   "9": {
-   "waiver": 18,
-   "drops": 18,
+   "waiver": 19,
+   "drops": 19,
    "free_agent": 1
   },
   "5": {
-   "waiver": 11,
-   "drops": 11,
+   "waiver": 12,
+   "drops": 12,
    "free_agent": 1,
    "trades": 1
   },
@@ -57,14 +57,14 @@
    "free_agent": 3
   },
   "12": {
-   "waiver": 9,
-   "drops": 9,
+   "waiver": 12,
+   "drops": 12,
    "free_agent": 1,
    "trades": 1
   },
   "4": {
    "free_agent": 3,
-   "drops": 5,
+   "drops": 6,
    "waiver": 3
   }
  },
