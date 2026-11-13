@@ -7,8 +7,8 @@
    "trades": 2
   },
   "7": {
-   "waiver": 12,
-   "drops": 14,
+   "waiver": 13,
+   "drops": 15,
    "trades": 3,
    "free_agent": 2
   },
@@ -48,8 +48,8 @@
   },
   "11": {
    "free_agent": 3,
-   "drops": 21,
-   "waiver": 18
+   "drops": 22,
+   "waiver": 20
   },
   "3": {
    "waiver": 5,
@@ -64,8 +64,8 @@
   },
   "4": {
    "free_agent": 3,
-   "drops": 6,
-   "waiver": 3
+   "drops": 7,
+   "waiver": 4
   }
  },
  "players": [
@@ -131,6 +131,16 @@
    "adds": 3
   },
   {
+   "name": "Emmett Johnson",
+   "pos": "RB",
+   "teams": [
+    "1",
+    "8",
+    "11"
+   ],
+   "adds": 3
+  },
+  {
    "name": "Alvin Kamara",
    "pos": "RB",
    "teams": [
@@ -158,15 +168,6 @@
     "11"
    ],
    "adds": 4
-  },
-  {
-   "name": "Kansas City Chiefs D/ST",
-   "pos": "DEF",
-   "teams": [
-    "1",
-    "11"
-   ],
-   "adds": 3
   }
  ]
 }
