@@ -2599,6 +2599,20 @@
   },
   {
    "week": 10,
+   "player": "12469",
+   "roster": "12",
+   "bid": 7,
+   "at": 1794729884114,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Dylan Sampson",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 10,
    "player": "12504",
    "roster": "1",
    "bid": 6,
@@ -2810,6 +2824,20 @@
    "active": false,
    "name": "Zonovan Knight",
    "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 10,
+   "player": "GB",
+   "roster": "3",
+   "bid": 0,
+   "at": 1794729884114,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Green Bay Packers D/ST",
+   "pos": "DEF",
    "outbid": []
   }
  ],

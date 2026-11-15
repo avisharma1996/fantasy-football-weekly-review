@@ -52,14 +52,14 @@
    "waiver": 20
   },
   "3": {
-   "waiver": 5,
-   "drops": 7,
-   "free_agent": 3
+   "waiver": 6,
+   "drops": 9,
+   "free_agent": 4
   },
   "12": {
-   "waiver": 12,
-   "drops": 12,
-   "free_agent": 1,
+   "waiver": 13,
+   "drops": 14,
+   "free_agent": 2,
    "trades": 1
   },
   "4": {
@@ -131,6 +131,16 @@
    "adds": 3
   },
   {
+   "name": "Green Bay Packers D/ST",
+   "pos": "DEF",
+   "teams": [
+    "12",
+    "1",
+    "3"
+   ],
+   "adds": 3
+  },
+  {
    "name": "Emmett Johnson",
    "pos": "RB",
    "teams": [
@@ -159,15 +169,6 @@
     "10"
    ],
    "adds": 3
-  },
-  {
-   "name": "Tyler Loop",
-   "pos": "K",
-   "teams": [
-    "1",
-    "11"
-   ],
-   "adds": 4
   }
  ]
 }
