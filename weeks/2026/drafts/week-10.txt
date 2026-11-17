@@ -4,67 +4,79 @@
 // Pictures: save the file in the media folder (a team subfolder is fine), then write ![](file-name.png) on its own line.
 // Videos play silently on a loop; write ![sound](clip.mp4) instead for a video with audio and a play button.
 // Starting order is last week's ranking.
-
 TITLE: Week 10 Power Rankings
 // Optional intro: type it here, above the first team.
+The AI bubble may have popped, flights may not be taking off and you may not be able to get any emails, but football will never stop
 
 
 1. Karans Sportsbook
 // 17-3, 1288.18 PF, streak W2 | Chuba Hubbard (RB5) 165.3, Drake Maye (QB7) 160.3, Tee Higgins (WR7) 144.9
 // this week: Christian McCaffrey (RB1) 44.3, Chuba Hubbard (RB4) 31.7, Will Reichard (K4) 12.0
+The betting market does not concern themselves with the opinion of sheep
 
 
 2. Justin Beer Loyalist
 // 16-4, 1224.60 PF, streak W1 | Jahmyr Gibbs (RB1) 232.9, Trey McBride (TE1) 132.5, Caleb Williams (QB23) 115.3
 // this week: Jahmyr Gibbs (RB2) 40.7, Blake Corum (RB9) 19.4, Aaron Rodgers (QB16) 15.6
+One man can be a crucial ingredient on a team... or in this case the only ingredient
 
 
-3. In another life puka 
+3. In another life puka
 // 13-7, 1302.04 PF, streak W3 | Kenneth Walker III (RB3) 183.4, Bucky Irving (RB10) 148.1, Puka Nacua (WR8) 138.6
 // this week: Deebo Samuel Sr. (WR5) 24.4, Jayden Daniels (QB7) 22.8, DJ Moore (WR8) 17.4
+Whatever it takes... on the wavier wire at this point
 
 
-4. 6 7
-// 10-10, 1121.34 PF, streak L1 | Brock Purdy (QB3) 208.0, Derrick Henry (RB8) 152.8, Cam Skattebo (RB22) 90.6
-// this week: Brock Purdy (QB4) 31.7, Cam Skattebo (RB5) 25.7, Derrick Henry (RB12) 16.5
-
-
-5. Amver Alert🚨
-// 9-11, 1153.02 PF, streak L3 | Josh Allen (QB2) 229.5, Amon-Ra St. Brown (WR5) 150.9, Ashton Jeanty (RB16) 126.7
-// this week: Amon-Ra St. Brown (WR6) 23.8, Josh Allen (QB6) 23.3, Konata Mumpfield (WR33) 9.6
-
-
-6. I’m Whipped by Bezos
+4. I’m Whipped by Bezos
 // 11-9, 1158.96 PF, streak W1 | Dak Prescott (QB4) 207.9, CeeDee Lamb (WR2) 183.5, Tony Pollard (RB15) 122.4
 // this week: Dak Prescott (QB2) 35.4, Chase Brown (RB6) 24.3, Tony Pollard (RB8) 19.9
+Never tell Jeff the odds... because he'll always beat them
 
 
-7. NShah19
+5. NShah19
 // 10-10, 1183.58 PF, streak W1 | Ja'Marr Chase (WR3) 161.8, Kyren Williams (RB11) 145.3, Bhayshul Tuten (RB13) 138.5
 // this week: Emmett Johnson (RB3) 32.1, Ja'Marr Chase (WR2) 28.6, Jared Goff (QB8) 22.4
+NShah19 doesn't get lucky, they make my own luck.
 
 
-8. superdiddy
-// 6-14, 1033.08 PF, streak L2 | Javonte Williams (RB7) 154.8, Jordan Love (QB5) 117.4, Zay Flowers (WR12) 114.4
-// this week: Los Angeles Rams D/ST (DEF2) 17.0, Justin Jefferson (WR21) 11.9, Tyler Shough (QB23) 11.0
+6. 6 7
+// 10-10, 1121.34 PF, streak L1 | Brock Purdy (QB3) 208.0, Derrick Henry (RB8) 152.8, Cam Skattebo (RB22) 90.6
+// this week: Brock Purdy (QB4) 31.7, Cam Skattebo (RB5) 25.7, Derrick Henry (RB12) 16.5
+This team may want people to be afraid of how much they love them but unfortunately I don't think anyone fears them at this point
 
 
-9. Baltimore Avians
+7. Amver Alert🚨
+// 9-11, 1153.02 PF, streak L3 | Josh Allen (QB2) 229.5, Amon-Ra St. Brown (WR5) 150.9, Ashton Jeanty (RB16) 126.7
+// this week: Amon-Ra St. Brown (WR6) 23.8, Josh Allen (QB6) 23.3, Konata Mumpfield (WR33) 9.6
+Violence brings war. War brings chaos. And Amver Alert can't buy a win.
+
+
+8. Baltimore Avians
 // 12-8, 1291.20 PF, streak L1 | Joe Burrow (QB1) 238.3, Bijan Robinson (RB4) 180.2, Jaylen Warren (RB14) 134.9
 // this week: Joe Burrow (QB3) 33.2, James Cook III (RB7) 21.7, Nico Collins (WR7) 19.9
+The hardest choices require the strongest wills and being a ravens fan definitely proves that
+
+
+9. yrkpapi
+// 6-14, 992.28 PF, streak W2 | Isaiah Likely (TE2) 129.0, George Pickens (WR9) 122.8, Parker Washington (WR10) 119.8
+// this week: George Pickens (WR1) 38.0, Parker Washington (WR4) 24.7, Isaiah Likely (TE1) 23.2
+I didn't hear no bell, maybe one of the craziest playoff pushes incoming?
 
 
 10. Ankitty
 // 6-14, 1031.92 PF, streak L1 | Jaxon Smith-Njigba (WR1) 223.7, Brock Bowers (TE3) 124.8, Rome Odunze (WR33) 72.8
 // this week: Jaxon Smith-Njigba (WR3) 27.1, Pat Freiermuth (TE6) 10.5, Matt Gay (K11) 8.0
+JSN, call out my name, and I'll be on my way
 
 
-11. yrkpapi
-// 6-14, 992.28 PF, streak W2 | Isaiah Likely (TE2) 129.0, George Pickens (WR9) 122.8, Parker Washington (WR10) 119.8
-// this week: George Pickens (WR1) 38.0, Parker Washington (WR4) 24.7, Isaiah Likely (TE1) 23.2
+11. superdiddy
+// 6-14, 1033.08 PF, streak L2 | Javonte Williams (RB7) 154.8, Jordan Love (QB5) 117.4, Zay Flowers (WR12) 114.4
+// this week: Los Angeles Rams D/ST (DEF2) 17.0, Justin Jefferson (WR21) 11.9, Tyler Shough (QB23) 11.0
+Zay Flowers is a bonafide scrub! He can't play! No disrespect whatsoever, man. I'm not trying to be mean. He's just a scrub. He can't play the game of football. No disrespect to him, man. His hands are too small, he can't catch the ball, he's got bad feet, he can't really move even though he's mobile, doesn't really know what he's doing, doesn't have a route that he memorized or can execute over and above a couple of people, plays no defense, doesn't have the heart, the passion or anything else that comes with it.
 
 
 12. Braelon Allen
 // 4-16, 938.62 PF, streak L5 | Patrick Mahomes (QB9) 181.4, Christian Watson (WR4) 157.6, Jonathan Taylor (RB9) 151.9
 // this week: Patrick Mahomes (QB1) 35.4, Jordyn Tyson (WR17) 13.5, Indianapolis Colts D/ST (DEF4) 13.0
+Now here's a guy... that has no help at all sadly
 
