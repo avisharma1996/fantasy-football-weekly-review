@@ -13,6 +13,10 @@ Everything except the ranking order, blurbs and pictures is pulled from Sleeper 
 
 ## Every week
 
+**From the admin page.** Go to https://admin.redvinesfantasyfootball.com, tap **Start week**, set the order, write blurbs, add pictures and tap **Publish**. You don't need the repo or Python. Setup and details are in [admin/README.md](admin/README.md).
+
+**From the repo**, as before:
+
 1. `py ffr.py new 5` pulls data through week 5 and creates `weeks/2026/week-05.txt`.
 2. Open that file and cut/paste the team lines into your ranking order. It starts in last week's order, and the numbers don't matter.
    - The `//` lines under each team show its record, PF, streak, and top performers. They're notes for you only.
@@ -20,6 +24,8 @@ Everything except the ranking order, blurbs and pictures is pulled from Sleeper 
    - Change the `TITLE:` line if you want a different headline.
 3. `py ffr.py build` regenerates `docs/`. Open `docs/index.html` to preview.
 4. When you're happy: `git pull`, `git add -A`, `git commit -m "Week 5"`, `git push`, then post the link.
+
+Weeks started on the admin page sit in `weeks/<season>/drafts/` until they're published. The site ignores that folder.
 
 ## Automatic refresh
 

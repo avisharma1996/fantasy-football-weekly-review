@@ -1,0 +1,57 @@
+# Pulls a week from Sleeper and starts its rankings as a draft (weeks/<season>/drafts/week-NN.txt), which the site
+# doesn't show until it's published from the admin page. Run it from the admin page or the Actions tab.
+# For a week that's already live, it only refreshes the stats.
+name: New week
+
+on:
+  workflow_dispatch:
+    inputs:
+      week:
+        description: "Week number"
+        required: true
+      season:
+        description: "Season (blank = newest)"
+        required: false
+        default: ""
+
+run-name: "Start week ${{ inputs.week }}"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: new-week
+  cancel-in-progress: false
+
+jobs:
+  new-week:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch week and create draft
+        env:
+          WEEK: ${{ inputs.week }}
+          SEASON: ${{ inputs.season }}
+        run: |
+          [[ "$WEEK" =~ ^[0-9]{1,2}$ ]] || { echo "Week must be a number"; exit 1; }
+          season="${SEASON:-$(python -c 'import json; print(max(json.load(open("config.json"))["seasons"]))')}"
+          [[ "$season" =~ ^[0-9]{4}$ ]] || { echo "Season must be a year"; exit 1; }
+          nn=$(printf '%02d' "$((10#$WEEK))")
+          txt="weeks/$season/week-$nn.txt"
+          draft="weeks/$season/drafts/week-$nn.txt"
+          was_live=$([ -f "$txt" ] && echo yes || echo no)
+          python ffr.py new "$((10#$WEEK))" "$season"
+          if [ "$was_live" = no ]; then
+            if [ -f "$draft" ]; then
+              rm "$txt"   # keep the draft already in progress
+            else
+              mkdir -p "$(dirname "$draft")"
+              mv "$txt" "$draft"
+            fi
+          fi
+          python ffr.py build
+          echo "SEASON=$season" >> "$GITHUB_ENV"
+      - run: bash .github/scripts/push.sh "Start week ${{ inputs.week }} ($SEASON)"

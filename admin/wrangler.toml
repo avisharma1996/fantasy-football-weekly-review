@@ -1,0 +1,21 @@
+# Cloudflare Worker for the rankings admin page. Setup steps are in admin/README.md.
+name = "redvines-admin"
+main = "src/worker.js"
+compatibility_date = "2025-09-01"
+
+# Only reachable on the custom domain, which Cloudflare Access protects. No *.workers.dev address.
+workers_dev = false
+preview_urls = false
+routes = [{ pattern = "admin.redvinesfantasyfootball.com", custom_domain = true, zone_name = "redvinesfantasyfootball.com" }]
+
+rules = [{ type = "Text", globs = ["**/*.html"], fallthrough = true }]
+
+[vars]
+GITHUB_REPO = "avisharma1996/fantasy-football-weekly-review"
+GITHUB_BRANCH = "main"
+SITE_URL = "https://redvinesfantasyfootball.com"
+# From Zero Trust > Settings > Custom Pages (team domain) and your Access application's Overview tab (AUD tag).
+ACCESS_TEAM_DOMAIN = "https://redvines.cloudflareaccess.com"
+ACCESS_AUD = "bbd198337db72d0c855140cb10783db6b9b265d39d10bd9acc5a372cc47b194d"
+# Optional second check on top of the Access policy: comma-separated emails allowed in.
+ALLOWED_EMAILS = ""

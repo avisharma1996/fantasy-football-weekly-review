@@ -1,2 +1,5 @@
 __pycache__/
 .cache/
+admin/.wrangler/
+admin/node_modules/
+admin/.dev.vars

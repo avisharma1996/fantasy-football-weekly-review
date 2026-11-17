@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rankings Admin</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1b1d21;--muted:#6b6f78;--line:#e4e2dc;--chip:#f0eee9;--up:#1f8a4c;--down:#c8402f;--hl:#2a78d6;--warn:#9a6700;--warn-bg:#fff4d6;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--warn:#e3b341;--warn-bg:#2b2412;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--muted:#9aa0aa;--line:#2b2f36;--chip:#252930;--up:#4cc27e;--down:#ff7a66;--hl:#3987e5;--warn:#e3b341;--warn-bg:#2b2412;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:20px 16px 120px}
+header{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+h1{font-size:1.45rem;margin:0;line-height:1.2}
+.kicker{color:var(--muted);font-size:.8rem;letter-spacing:.04em;text-transform:uppercase}
+.who{margin-left:auto;color:var(--muted);font-size:.85rem}
+h2{font-size:1rem;margin:28px 0 10px}
+button,select,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+.btn{min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:var(--chip)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.primary:hover{opacity:.88}
+.btn:disabled{opacity:.45;cursor:default}
+.btn:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,.icon:focus-visible{outline:2px solid var(--hl);outline-offset:2px}
+select,input[type=text],input[type=number]{min-height:40px;padding:0 12px;border-radius:10px;border:1px solid var(--line);background:var(--card)}
+.weeks{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.wk{min-width:44px;min-height:40px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-weight:600;font-variant-numeric:tabular-nums}
+.wk.draft{border-style:dashed;color:var(--warn)}
+.wk.cur{background:var(--ink);color:var(--bg);border-color:var(--ink);border-style:solid}
+.legend{color:var(--muted);font-size:.82rem;margin-top:8px}
+.start{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.start input{width:84px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.runs{list-style:none;margin:0;padding:0;font-size:.88rem}
+.runs li{display:flex;gap:10px;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--line)}
+.runs li:last-child{border-bottom:0}
+.runs a{color:inherit}
+.runs .when{margin-left:auto;color:var(--muted);white-space:nowrap}
+.dot{width:9px;height:9px;border-radius:50%;flex:none;background:var(--muted);align-self:center}
+.dot.ok{background:var(--up)}.dot.bad{background:var(--down)}.dot.go{background:var(--hl);animation:pulse 1s infinite alternate}
+@keyframes pulse{to{opacity:.3}}
+.banner{border-radius:12px;padding:10px 14px;margin:14px 0;font-size:.92rem;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.banner.warn{background:var(--warn-bg);color:var(--warn)}
+.banner.err{background:color-mix(in srgb,var(--down) 14%,transparent);color:var(--down)}
+.banner.ok{background:color-mix(in srgb,var(--up) 14%,transparent);color:var(--up)}
+.banner .btn{min-height:32px;padding:0 12px;font-size:.85rem}
+.status{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:999px;vertical-align:middle;margin-left:8px}
+.status.draft{background:var(--warn-bg);color:var(--warn)}
+.status.live{background:color-mix(in srgb,var(--up) 16%,transparent);color:var(--up)}
+label.f{display:block;font-size:.85rem;font-weight:600;color:var(--muted);margin:14px 0 6px}
+.f-in{width:100%}
+textarea{width:100%;min-height:44px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);resize:vertical;line-height:1.45}
+ol.teams{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.team{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.team.ghost{opacity:.35}
+.team.chosen{box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.row{display:flex;align-items:center;gap:10px}
+.handle{cursor:grab;touch-action:none;color:var(--muted);font-size:1.2rem;padding:6px 2px;user-select:none;line-height:1}
+.rank{font-weight:800;font-size:1.25rem;width:1.7em;text-align:right;font-variant-numeric:tabular-nums}
+.av{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none;background:var(--chip)}
+.nm{flex:1;min-width:0;font-weight:700;line-height:1.25}
+.mv{font-size:.8rem;font-weight:700;margin-left:6px;white-space:nowrap}
+.mv.up{color:var(--up)}.mv.down{color:var(--down)}.mv.same{color:var(--muted)}
+.icon{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:var(--bg);display:inline-flex;align-items:center;justify-content:center;font-size:.95rem}
+.icon:disabled{opacity:.3}
+.notes{color:var(--muted);font-size:.8rem;margin:8px 0 8px 2px;line-height:1.4}
+.notes summary{cursor:pointer;width:max-content}
+.tools{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
+.tools .btn{min-height:34px;padding:0 12px;font-size:.85rem}
+.thumbs{display:flex;gap:6px;flex-wrap:wrap}
+.thumbs img,.thumbs video{height:56px;border-radius:8px;border:1px solid var(--line)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.bar-in{max-width:760px;margin:0 auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.bar .msg{flex:1;min-width:140px;font-size:.88rem;color:var(--muted)}
+.hint{color:var(--muted);font-size:.85rem;margin:6px 0 0}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="kicker">Red Vines</div>
+      <h1>Rankings Admin</h1>
+    </div>
+    <div class="who" id="who"></div>
+  </header>
+
+  <div id="loadErr" class="banner err" hidden></div>
+
+  <h2>Weeks <select id="season" aria-label="Season"></select></h2>
+  <div class="weeks" id="weeks"></div>
+  <div class="legend">Solid weeks are live on the site. Dashed weeks are in progress and not published yet.</div>
+  <div class="start">
+    <button class="btn primary" id="startBtn" hidden></button>
+    <span class="legend" id="startWhy"></span>
+  </div>
+  <p class="hint" id="startHint" hidden>Pulls the latest Sleeper stats for that week and opens it in last week's order, ready to rank. Nothing goes on the site until you publish. Takes about a minute.</p>
+
+  <section id="editor" hidden>
+    <h2 id="edTitle"></h2>
+    <div id="restore" class="banner warn" hidden>
+      <span>You have unsaved changes to this week from earlier.</span>
+      <button class="btn" id="restoreYes">Restore them</button>
+      <button class="btn" id="restoreNo">Discard</button>
+    </div>
+    <label class="f" for="title">Headline</label>
+    <input class="f-in" id="title" type="text">
+    <label class="f" for="intro">Intro (optional)</label>
+    <textarea id="intro" rows="2" placeholder="Shows above the rankings"></textarea>
+    <div class="tools"><button class="btn" data-upload="intro">Add picture / video</button></div>
+    <div class="thumbs" data-thumbs="intro"></div>
+    <p class="hint">Drag ⠿ or use the arrows to reorder. <b>**bold**</b> and <i>*italic*</i> work in blurbs.</p>
+    <ol class="teams" id="teams"></ol>
+  </section>
+
+  <h2>Recent site updates</h2>
+  <div class="card"><ul class="runs" id="runs"><li>Loading…</li></ul></div>
+</div>
+
+<div class="bar" id="bar" hidden>
+  <div class="bar-in">
+    <div class="msg" id="msg"></div>
+    <button class="btn" id="saveBtn">Save for later</button>
+    <button class="btn primary" id="publishBtn">Publish</button>
+  </div>
+</div>
+
+<input type="file" id="file" accept="image/*,video/*" hidden>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+<script>
+// ---------------------------------------------------------------- week file format (mirrors parse_week in ffr.py)
+// weekfile:start
+var TEAM_LINE = /^\s*\d+[.)]\s+(.+?)\s*$/;
+
+function parseWeek(text) {
+  var out = { pre: [], title: "", post: [], intro: [], teams: [] }, cur = null, seenTitle = false;
+  text.replace(/^﻿/, "").split(/\r?\n/).forEach(function (line) {
+    if (line.trimStart().startsWith("//")) {
+      (cur ? cur.notes : seenTitle ? out.post : out.pre).push(line);
+    } else if (line.startsWith("TITLE:")) {
+      out.title = line.slice(6).trim();
+      seenTitle = true;
+    } else if (TEAM_LINE.test(line)) {
+      cur = { name: line.match(TEAM_LINE)[1], notes: [], blurb: [] };
+      out.teams.push(cur);
+    } else {
+      (cur ? cur.blurb : out.intro).push(line);
+    }
+  });
+  out.intro = out.intro.join("\n").trim();
+  out.teams.forEach(function (t) { t.blurb = t.blurb.join("\n").trim(); });
+  return out;
+}
+
+function serializeWeek(w) {
+  var lines = w.pre.slice();
+  lines.push("TITLE: " + w.title.trim());
+  lines = lines.concat(w.post);
+  if (w.intro.trim()) lines.push(w.intro.trim());
+  lines.push("", "");
+  w.teams.forEach(function (t, i) {
+    lines.push((i + 1) + ". " + t.name);
+    lines = lines.concat(t.notes);
+    if (t.blurb.trim()) lines.push(t.blurb.trim());
+    lines.push("", "");
+  });
+  return lines.join("\n");
+}
+
+/** Lines that ffr.py would read as something other than blurb text. */
+function problems(w) {
+  var out = [];
+  function check(where, text) {
+    text.split("\n").forEach(function (l) {
+      if (TEAM_LINE.test(l)) out.push(where + ': the line "' + l.trim() + '" starts with a number and a dot, so it would be read as a team. Reword it (e.g. "#1 ...").');
+      if (l.startsWith("TITLE:")) out.push(where + ': a line can\'t start with "TITLE:".');
+    });
+  }
+  check("Intro", w.intro);
+  w.teams.forEach(function (t) { check(t.name, t.blurb); });
+  return out;
+}
+// weekfile:end
+
+// ---------------------------------------------------------------- app
+var S = { state: null, wk: null, doc: null, prevOrder: null, sortable: null, polling: null, dirty: false };
+var $ = function (id) { return document.getElementById(id); };
+
+function api(path, opts) {
+  opts = opts || {};
+  var headers = Object.assign({ "x-admin": "1" }, opts.headers || {});
+  if (opts.json !== undefined) { headers["content-type"] = "application/json"; opts.body = JSON.stringify(opts.json); }
+  return fetch(path, { method: opts.method || "GET", headers: headers, body: opts.body, credentials: "same-origin" })
+    .then(function (r) {
+      return r.text().then(function (t) {
+        var data; try { data = JSON.parse(t); } catch (e) { data = { error: t || r.statusText }; }
+        if (!r.ok) { var err = new Error(data.error || r.statusText); err.status = r.status; throw err; }
+        return data;
+      });
+    });
+}
+
+function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+function pad(n) { return String(n).padStart(2, "0"); }
+function store(key, val) { try { if (val === null) localStorage.removeItem(key); else localStorage.setItem(key, val); } catch (e) {} }
+function recall(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
+function msg(text, kind) { var m = $("msg"); m.textContent = text || ""; m.style.color = kind === "err" ? "var(--down)" : kind === "ok" ? "var(--up)" : ""; }
+
+function ago(iso) {
+  var s = (Date.now() - new Date(iso)) / 1000;
+  if (s < 90) return "just now";
+  if (s < 3600) return Math.round(s / 60) + " min ago";
+  if (s < 86400) return Math.round(s / 3600) + " h ago";
+  return Math.round(s / 86400) + " d ago";
+}
+
+function renderRuns(runs) {
+  $("runs").innerHTML = runs.length ? runs.map(function (r) {
+    var cls = r.status !== "completed" ? "go" : r.conclusion === "success" ? "ok" : r.conclusion === "skipped" || r.conclusion === "cancelled" ? "" : "bad";
+    var label = r.status !== "completed" ? "running" : r.conclusion;
+    return '<li><span class="dot ' + cls + '" title="' + esc(label) + '"></span><span><b>' + esc(r.name) + "</b> · " +
+      '<a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.title) + "</a> · " + esc(label) +
+      '</span><span class="when">' + ago(r.created) + "</span></li>";
+  }).join("") : "<li>No runs yet.</li>";
+}
+
+function loadState(season) {
+  return api("/api/state" + (season ? "?season=" + season : "")).then(function (st) {
+    S.state = st;
+    $("who").textContent = st.user;
+    $("season").innerHTML = st.seasons.map(function (s) { return "<option" + (s === st.season ? " selected" : "") + ">" + s + "</option>"; }).join("");
+    var all = st.published.concat(st.drafts).filter(function (v, i, a) { return a.indexOf(v) === i; }).sort(function (a, b) { return a - b; });
+    $("weeks").innerHTML = all.map(function (w) {
+      var draft = st.published.indexOf(w) < 0;
+      var cur = S.wk && S.wk.week === w && S.wk.season === st.season;
+      return '<button class="wk' + (draft ? " draft" : "") + (cur ? " cur" : "") + '" data-week="' + w + '" aria-label="Week ' + w + (draft ? " (not live yet)" : "") + '">' + w + "</button>";
+    }).join("") || '<span class="legend">No weeks yet.</span>';
+    // Only the most recent finished week can be started; the Worker decides which and enforces it too.
+    var go = st.startable || {};
+    var inProgress = go.week && st.drafts.indexOf(go.week) >= 0;
+    $("startBtn").hidden = $("startHint").hidden = !go.week;
+    $("startBtn").textContent = inProgress ? "Re-pull week " + go.week + " stats" : "Start week " + go.week;
+    $("startWhy").textContent = inProgress ? "Week " + go.week + " is in progress below; this refreshes its stats and keeps your edits." : go.reason || "";
+    renderRuns(st.runs);
+    $("loadErr").hidden = true;
+    return st;
+  }).catch(function (e) { $("loadErr").textContent = "Couldn't load: " + e.message; $("loadErr").hidden = false; });
+}
+
+function folderFor(name) {
+  var slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  var folders = (S.state && S.state.mediaFolders) || [];
+  if (folders.indexOf(slug) >= 0) return slug;
+  var hit = folders.filter(function (f) { return f.length >= 3 && (slug.indexOf(f) >= 0 || f.indexOf(slug) >= 0); })[0];
+  return hit || slug || "general";
+}
+
+// ---------------------------------------------------------------- editor
+
+function openWeek(season, week) {
+  if (S.dirty && !confirm("You have unsaved changes. Leave this week anyway? (They stay saved on this device.)")) return;
+  msg("Loading week " + week + "…");
+  return api("/api/week?season=" + season + "&week=" + week).then(function (wk) {
+    S.wk = wk;
+    var src = wk.draft || wk.published;
+    S.doc = parseWeek(src.text);
+    S.baseText = serializeWeek(S.doc);
+    S.dirty = false;
+    // Movement arrows compare with the newest published week before this one.
+    var before = S.state.published.filter(function (w) { return w < week; });
+    S.prevOrder = null;
+    var prev = before.length ? api("/api/week?season=" + season + "&week=" + before[before.length - 1]).then(function (p) {
+      S.prevOrder = parseWeek(p.published.text).teams.map(function (t) { return t.name.trim().toLowerCase(); });
+    }).catch(function () {}) : Promise.resolve();
+    return prev.then(function () {
+      renderEditor();
+      loadState(season);
+      var saved = recall(localKey());
+      $("restore").hidden = !(saved && saved !== S.baseText);
+      msg(wk.draft ? (wk.published ? "Unpublished changes to a live week." : "Not on the site yet. Tap Publish when ready.") : "Live on the site.");
+    });
+  }).catch(function (e) { msg(e.message, "err"); });
+}
+
+function localKey() { return "rankings-admin:" + S.wk.season + ":" + S.wk.week; }
+
+function renderEditor() {
+  var wk = S.wk, d = S.doc;
+  $("editor").hidden = false;
+  $("bar").hidden = false;
+  var live = !!wk.published;
+  $("edTitle").innerHTML = "Week " + wk.week + ", " + wk.season +
+    (wk.draft ? '<span class="status draft">Not live yet</span>' : '<span class="status live">Live</span>') +
+    (live && S.state.siteUrl ? ' <a class="legend" href="' + esc(S.state.siteUrl.replace(/\/$/, "") + "/" + wk.season + "/week-" + pad(wk.week) + ".html") + '" target="_blank" rel="noopener">view on site ↗</a>' : "");
+  $("saveBtn").hidden = live && !wk.draft;
+  $("publishBtn").textContent = live && !wk.draft ? "Publish changes" : "Publish";
+  $("title").value = d.title;
+  $("intro").value = d.intro;
+  $("teams").innerHTML = d.teams.map(function (t, i) {
+    var info = wk.teams[t.name.trim().toLowerCase()] || {};
+    var notes = t.notes.map(function (n) { return esc(n.replace(/^\s*\/\/\s?/, "")); }).join("<br>");
+    return '<li class="team" data-i="' + i + '">' +
+      '<div class="row"><span class="handle" aria-hidden="true">⠿</span><span class="rank"></span>' +
+      (info.avatar ? '<img class="av" src="' + esc(info.avatar) + '" alt="">' : '<span class="av"></span>') +
+      '<div class="nm">' + esc(t.name) + '<span class="mv"></span></div>' +
+      '<button class="icon" data-move="-1" aria-label="Move ' + esc(t.name) + ' up">↑</button>' +
+      '<button class="icon" data-move="1" aria-label="Move ' + esc(t.name) + ' down">↓</button></div>' +
+      (notes ? '<div class="notes">' + notes + "</div>" : "") +
+      '<textarea class="blurb" rows="2" aria-label="Blurb for ' + esc(t.name) + '" placeholder="Blurb (optional)">' + esc(t.blurb) + "</textarea>" +
+      '<div class="tools"><button class="btn" data-upload="team">Add picture / video</button></div>' +
+      '<div class="thumbs"></div></li>';
+  }).join("");
+  document.querySelectorAll("textarea").forEach(grow);
+  if (S.sortable) S.sortable.destroy();
+  S.sortable = Sortable.create($("teams"), {
+    handle: ".handle", animation: 150, ghostClass: "ghost", chosenClass: "chosen",
+    onEnd: function () { syncOrder(); },
+  });
+  numbers();
+}
+
+function grow(t) { t.style.height = "auto"; t.style.height = Math.max(44, t.scrollHeight + 2) + "px"; }
+
+/** Rebuild S.doc.teams from what's on screen. */
+function syncOrder() {
+  var teams = S.doc.teams;
+  var items = Array.prototype.slice.call($("teams").children);
+  var ordered = items.map(function (li) { return teams[+li.dataset.i]; });
+  ordered.forEach(function (t, i) { t.blurb = items[i].querySelector(".blurb").value; });
+  S.doc.teams = ordered;
+  items.forEach(function (li, i) { li.dataset.i = i; });
+  numbers();
+  changed();
+}
+
+function numbers() {
+  Array.prototype.forEach.call($("teams").children, function (li, i) {
+    li.querySelector(".rank").textContent = i + 1;
+    li.querySelector("[data-move='-1']").disabled = i === 0;
+    li.querySelector("[data-move='1']").disabled = i === S.doc.teams.length - 1;
+    var mv = li.querySelector(".mv"), t = S.doc.teams[i];
+    var was = S.prevOrder ? S.prevOrder.indexOf(t.name.trim().toLowerCase()) : -1;
+    if (was < 0) { mv.textContent = ""; return; }
+    var d = was - i;
+    mv.className = "mv " + (d > 0 ? "up" : d < 0 ? "down" : "same");
+    mv.textContent = d > 0 ? "▲" + d : d < 0 ? "▼" + -d : "–";
+    mv.title = "Last week: " + (was + 1);
+  });
+}
+
+function readForm() {
+  S.doc.title = $("title").value;
+  S.doc.intro = $("intro").value;
+  Array.prototype.forEach.call($("teams").children, function (li, i) { S.doc.teams[i].blurb = li.querySelector(".blurb").value; });
+  return S.doc;
+}
+
+function changed() {
+  var text = serializeWeek(readForm());
+  S.dirty = text !== S.baseText;
+  store(localKey(), S.dirty ? text : null);
+  if (S.dirty) msg("Unsaved changes.");
+}
+
+function move(li, dir) {
+  var sib = dir < 0 ? li.previousElementSibling : li.nextElementSibling;
+  if (!sib) return;
+  if (dir < 0) li.parentNode.insertBefore(li, sib); else li.parentNode.insertBefore(sib, li);
+  syncOrder();
+  li.querySelector("[data-move='" + dir + "']").focus();
+}
+
+function save(publish) {
+  var w = readForm();
+  var issues = problems(w);
+  if (issues.length) { msg(issues[0], "err"); return; }
+  if (!w.teams.length) { msg("No teams in this week.", "err"); return; }
+  var text = serializeWeek(w), wk = S.wk, body;
+  if (publish) {
+    body = {
+      message: (wk.published ? "Update week " : "Week ") + wk.week + " rankings",
+      files: [{ path: wk.paths.published, content: text, base: wk.published ? wk.published.sha : null }],
+      deletes: wk.draft ? [wk.paths.draft] : [],
+    };
+  } else {
+    body = {
+      message: "Week " + wk.week + " rankings (in progress)",
+      files: [{ path: wk.paths.draft, content: text, base: wk.draft ? wk.draft.sha : null }],
+    };
+  }
+  $("saveBtn").disabled = $("publishBtn").disabled = true;
+  msg(publish ? "Publishing…" : "Saving…");
+  return api("/api/commit", { method: "POST", json: body }).then(function (r) {
+    store(localKey(), null);
+    S.dirty = false;
+    var season = wk.season, week = wk.week;
+    if (publish) {
+      msg("Published. The site rebuilds in about a minute.", "ok");
+      watchRuns("Build site");
+    } else {
+      msg("Saved. Not on the site yet.", "ok");
+    }
+    return loadState(season).then(function () { return openWeek(season, week); }).then(function () {
+      msg(publish ? "Published. The site updates in about a minute; watch below." : "Saved. Not on the site yet.", "ok");
+    });
+  }).catch(function (e) {
+    msg(e.message, "err");
+  }).then(function () { $("saveBtn").disabled = $("publishBtn").disabled = false; });
+}
+
+// ---------------------------------------------------------------- media upload
+
+var uploadTarget = null;
+
+function upload(file, target) {
+  var ext = (file.name.match(/\.([a-z0-9]+)$/i) || [, ""])[1].toLowerCase();
+  if (!/^(png|jpe?g|gif|webp|mp4|webm|mov)$/.test(ext)) { msg("Pictures (png, jpg, gif, webp) and videos (mp4, webm, mov) only.", "err"); return; }
+  if (file.size > 50 * 1024 * 1024) { msg("That file is " + Math.round(file.size / 1048576) + " MB; 50 MB is the limit. Compress it first.", "err"); return; }
+  var isVideo = /^(mp4|webm|mov)$/.test(ext);
+  var sound = isVideo && confirm("Does this video need sound?\n\nOK: plays with sound when tapped.\nCancel: plays silently on a loop, like a GIF.");
+  var team = target === "intro" ? null : S.doc.teams[+target.dataset.i];
+  var folder = team ? folderFor(team.name) : "general";
+  var stem = file.name.replace(/\.[^.]+$/, "").toLowerCase().replace(/[^a-z0-9._-]+/g, "-").replace(/^[^a-z0-9]+|-+$/g, "") || "pic";
+  msg("Uploading " + file.name + "…");
+  var reader = new FileReader();
+  reader.onerror = function () { msg("Couldn't read that file.", "err"); };
+  reader.onload = function () {
+    var b64 = reader.result.slice(reader.result.indexOf(",") + 1);
+    api("/api/blob", { method: "POST", headers: { "content-type": "application/json" }, body: '{"encoding":"base64","content":"' + b64 + '"}' })
+      .then(function (blob) { return commitMedia(folder, stem, ext, blob.sha, 1); })
+      .then(function (path) {
+        var token = "![" + (sound ? "sound" : "") + "](" + path.slice("media/".length) + ")";
+        var ta = target === "intro" ? $("intro") : target.querySelector(".blurb");
+        var at = ta.selectionStart != null && document.activeElement === ta ? ta.selectionStart : ta.value.length;
+        var before = ta.value.slice(0, at).replace(/\s+$/, ""), after = ta.value.slice(at).replace(/^\s+/, "");
+        ta.value = (before ? before + "\n" : "") + token + (after ? "\n" + after : "");
+        grow(ta);
+        var th = target === "intro" ? document.querySelector('[data-thumbs="intro"]') : target.querySelector(".thumbs");
+        var el = document.createElement(isVideo ? "video" : "img");
+        el.src = URL.createObjectURL(file);
+        if (isVideo) { el.muted = true; el.autoplay = true; el.loop = true; el.playsInline = true; }
+        th.appendChild(el);
+        changed();
+        msg("Uploaded. It shows on the site once you publish.", "ok");
+      })
+      .catch(function (e) { msg("Upload failed: " + e.message, "err"); });
+  };
+  reader.readAsDataURL(file);
+}
+
+function commitMedia(folder, stem, ext, sha, n) {
+  var path = "media/" + folder + "/" + stem + (n > 1 ? "-" + n : "") + "." + ext;
+  return api("/api/commit", { method: "POST", json: { message: "Add " + path, files: [{ path: path, sha: sha, base: null }] } })
+    .then(function () { return path; })
+    .catch(function (e) {
+      if (e.status === 409 && n < 20) return commitMedia(folder, stem, ext, sha, n + 1);  // name taken: try stem-2, stem-3…
+      throw e;
+    });
+}
+
+// ---------------------------------------------------------------- workflow runs
+
+/** Poll recent runs until the newest run of `name` finishes, then call done(run). */
+function watchRuns(name, done) {
+  clearInterval(S.polling);
+  var started = Date.now(), seen = false;
+  S.polling = setInterval(function () {
+    api("/api/runs").then(function (runs) {
+      renderRuns(runs);
+      var r = runs.filter(function (r) { return r.name === name && new Date(r.created) > started - 30000; })[0];
+      if (r) seen = true;
+      if ((r && r.status === "completed") || (!seen && Date.now() - started > 120000) || Date.now() - started > 600000) {
+        clearInterval(S.polling);
+        if (done) done(r);
+      }
+    }).catch(function () {});
+  }, 5000);
+}
+
+function startWeek() {
+  var week = S.state.startable && S.state.startable.week, season = S.state.season;
+  if (!week) return;
+  $("startBtn").disabled = true;
+  $("bar").hidden = false;
+  msg("Pulling week " + week + " from Sleeper… about a minute.");
+  api("/api/new-week", { method: "POST", json: { season: season, week: week } }).then(function () {
+    watchRuns("New week", function (run) {
+      $("startBtn").disabled = false;
+      if (!run || run.conclusion !== "success") { msg("Starting week " + week + " didn't finish. Check the run below.", "err"); return; }
+      loadState(season).then(function () { openWeek(season, week); });
+    });
+  }).catch(function (e) { $("startBtn").disabled = false; msg(e.message, "err"); });
+}
+
+// ---------------------------------------------------------------- wiring
+
+$("season").addEventListener("change", function (e) { loadState(e.target.value); });
+$("weeks").addEventListener("click", function (e) {
+  var b = e.target.closest("[data-week]");
+  if (b) openWeek(S.state.season, +b.dataset.week);
+});
+$("startBtn").addEventListener("click", startWeek);
+$("saveBtn").addEventListener("click", function () { save(false); });
+$("publishBtn").addEventListener("click", function () {
+  if (confirm("Publish week " + S.wk.week + " to the site?")) save(true);
+});
+$("editor").addEventListener("input", function (e) {
+  if (e.target.tagName === "TEXTAREA") grow(e.target);
+  changed();
+});
+$("editor").addEventListener("click", function (e) {
+  var mv = e.target.closest("[data-move]");
+  if (mv) { move(mv.closest(".team"), +mv.dataset.move); return; }
+  var up = e.target.closest("[data-upload]");
+  if (up) { uploadTarget = up.dataset.upload === "intro" ? "intro" : up.closest(".team"); $("file").value = ""; $("file").click(); }
+});
+$("file").addEventListener("change", function () { if (this.files[0]) upload(this.files[0], uploadTarget); });
+$("restoreYes").addEventListener("click", function () {
+  var saved = recall(localKey());
+  if (saved) { S.doc = parseWeek(saved); renderEditor(); changed(); }
+  $("restore").hidden = true;
+});
+$("restoreNo").addEventListener("click", function () { store(localKey(), null); $("restore").hidden = true; });
+window.addEventListener("beforeunload", function (e) { if (S.dirty) { e.preventDefault(); e.returnValue = ""; } });
+
+loadState().then(function (st) {
+  if (!st) return;
+  // Open the newest draft if there is one, otherwise the newest live week.
+  var w = st.drafts.length ? Math.max.apply(null, st.drafts) : st.published.length ? Math.max.apply(null, st.published) : null;
+  if (w) openWeek(st.season, w);
+});
+</script>
+</body>
+</html>

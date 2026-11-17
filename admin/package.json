@@ -1,0 +1,11 @@
+{
+  "name": "redvines-admin",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev --var DEV_NO_AUTH:1"
+  },
+  "devDependencies": {
+    "wrangler": "4.164.0"
+  }
+}
