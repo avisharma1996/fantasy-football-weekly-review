@@ -395,13 +395,20 @@ function save(publish) {
   }
   $("saveBtn").disabled = $("publishBtn").disabled = true;
   msg(publish ? "Publishing…" : "Saving…");
-  return api("/api/commit", { method: "POST", json: body }).then(function (r) {
+  var buildBefore = 0;
+  return (publish ? newestRun("Build site") : Promise.resolve(0)).then(function (id) {
+    buildBefore = id;
+    return api("/api/commit", { method: "POST", json: body });
+  }).then(function (r) {
     store(localKey(), null);
     S.dirty = false;
     var season = wk.season, week = wk.week;
     if (publish) {
       msg("Published. The site rebuilds in about a minute.", "ok");
-      watchRuns("Build site");
+      watchRuns("Build site", buildBefore, function (run) {
+        if (run && run.conclusion === "success") msg("Week " + week + " is live on the site.", "ok");
+        else if (run) msg("The site rebuild failed. Open the red run below for details.", "err");
+      });
     } else {
       msg("Saved. Not on the site yet.", "ok");
     }
@@ -465,16 +472,24 @@ function commitMedia(folder, stem, ext, sha, n) {
 
 // ---------------------------------------------------------------- workflow runs
 
-/** Poll recent runs until the newest run of `name` finishes, then call done(run). */
-function watchRuns(name, done) {
+/** Id of the newest run of workflow `name`, so a run started after this can be told apart without trusting clocks. */
+function newestRun(name) {
+  return api("/api/runs").then(function (runs) {
+    return runs.filter(function (r) { return r.name === name; }).reduce(function (m, r) { return Math.max(m, r.id); }, 0);
+  }).catch(function () { return 0; });
+}
+
+/** Poll until the first run of `name` newer than run `after` finishes, then call done(run). done(null) if none shows up. */
+function watchRuns(name, after, done) {
   clearInterval(S.polling);
   var started = Date.now(), seen = false;
   S.polling = setInterval(function () {
     api("/api/runs").then(function (runs) {
       renderRuns(runs);
-      var r = runs.filter(function (r) { return r.name === name && new Date(r.created) > started - 30000; })[0];
+      var r = runs.filter(function (r) { return r.name === name && r.id > after; }).pop() || null;
       if (r) seen = true;
-      if ((r && r.status === "completed") || (!seen && Date.now() - started > 120000) || Date.now() - started > 600000) {
+      var waited = Date.now() - started;
+      if ((r && r.status === "completed") || (!seen && waited > 180000) || waited > 600000) {
         clearInterval(S.polling);
         if (done) done(r);
       }
@@ -488,11 +503,17 @@ function startWeek() {
   $("startBtn").disabled = true;
   $("bar").hidden = false;
   msg("Pulling week " + week + " from Sleeper… about a minute.");
-  api("/api/new-week", { method: "POST", json: { season: season, week: week } }).then(function () {
-    watchRuns("New week", function (run) {
-      $("startBtn").disabled = false;
-      if (!run || run.conclusion !== "success") { msg("Starting week " + week + " didn't finish. Check the run below.", "err"); return; }
-      loadState(season).then(function () { openWeek(season, week); });
+  newestRun("New week").then(function (before) {
+    return api("/api/new-week", { method: "POST", json: { season: season, week: week } }).then(function () {
+      watchRuns("New week", before, function (run) {
+        $("startBtn").disabled = false;
+        // Whatever the tracking saw, the week file is what counts.
+        loadState(season).then(function (st) {
+          if (st && st.drafts.concat(st.published).indexOf(week) >= 0) { openWeek(season, week); return; }
+          msg(run && run.conclusion !== "success" ? "Starting week " + week + " failed. Open the red run below for details."
+            : "Week " + week + " isn't ready yet. Refresh the page in a minute.", "err");
+        });
+      });
     });
   }).catch(function (e) { $("startBtn").disabled = false; msg(e.message, "err"); });
 }
