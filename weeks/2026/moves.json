@@ -1,14 +1,14 @@
 {
  "teams": {
   "1": {
-   "waiver": 29,
-   "drops": 32,
+   "waiver": 31,
+   "drops": 34,
    "free_agent": 5,
    "trades": 2
   },
   "7": {
-   "waiver": 13,
-   "drops": 15,
+   "waiver": 14,
+   "drops": 16,
    "trades": 3,
    "free_agent": 2
   },
@@ -18,8 +18,8 @@
    "free_agent": 4
   },
   "9": {
-   "waiver": 19,
-   "drops": 19,
+   "waiver": 20,
+   "drops": 20,
    "free_agent": 1
   },
   "5": {
@@ -35,8 +35,8 @@
    "waiver": 25
   },
   "10": {
-   "waiver": 18,
-   "drops": 23,
+   "waiver": 19,
+   "drops": 24,
    "free_agent": 6,
    "trades": 1
   },
@@ -161,12 +161,12 @@
    "adds": 3
   },
   {
-   "name": "Aaron Rodgers",
-   "pos": "QB",
+   "name": "Buffalo Bills D/ST",
+   "pos": "DEF",
    "teams": [
-    "1",
-    "8",
-    "10"
+    "11",
+    "12",
+    "1"
    ],
    "adds": 3
   }

@@ -2275,8 +2275,8 @@
    "at": 1793343867642,
    "pts": 9.8,
    "started": 5.7,
-   "weeks": 3,
-   "active": true,
+   "weeks": 2,
+   "active": false,
    "name": "Elijah Mitchell",
    "pos": "RB",
    "outbid": []
@@ -2838,6 +2838,81 @@
    "active": true,
    "name": "Green Bay Packers D/ST",
    "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "11199",
+   "roster": "1",
+   "bid": 8,
+   "at": 1794989733373,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Emari Demercado",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "BUF",
+   "roster": "1",
+   "bid": 5,
+   "at": 1794989733373,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Buffalo Bills D/ST",
+   "pos": "DEF",
+   "outbid": [
+    {
+     "roster": "10",
+     "bid": 2
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "player": "DET",
+   "roster": "10",
+   "bid": 3,
+   "at": 1794989733373,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Detroit Lions D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "4663",
+   "roster": "9",
+   "bid": 0,
+   "at": 1794989733373,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Austin Ekeler",
+   "pos": "RB",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "11565",
+   "roster": "7",
+   "bid": 0,
+   "at": 1794989733373,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "J.J. McCarthy",
+   "pos": "QB",
    "outbid": []
   }
  ],
