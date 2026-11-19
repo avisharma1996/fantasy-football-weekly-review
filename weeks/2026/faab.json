@@ -2842,6 +2842,34 @@
   },
   {
    "week": 11,
+   "player": "13269",
+   "roster": "3",
+   "bid": 10,
+   "at": 1795075476349,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Fernando Mendoza",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "10218",
+   "roster": "3",
+   "bid": 10,
+   "at": 1795075476349,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Xavier Hutchinson",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 11,
    "player": "11199",
    "roster": "1",
    "bid": 8,
@@ -2872,6 +2900,20 @@
      "bid": 2
     }
    ]
+  },
+  {
+   "week": 11,
+   "player": "2020",
+   "roster": "5",
+   "bid": 4,
+   "at": 1795075476349,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Cairo Santos",
+   "pos": "K",
+   "outbid": []
   },
   {
    "week": 11,
@@ -2913,6 +2955,20 @@
    "active": false,
    "name": "J.J. McCarthy",
    "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "CHI",
+   "roster": "6",
+   "bid": 0,
+   "at": 1795075476349,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Chicago Bears D/ST",
+   "pos": "DEF",
    "outbid": []
   }
  ],
