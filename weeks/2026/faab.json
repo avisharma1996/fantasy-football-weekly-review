@@ -2884,6 +2884,20 @@
   },
   {
    "week": 11,
+   "player": "12499",
+   "roster": "8",
+   "bid": 7,
+   "at": 1795161884101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Elic Ayomanor",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 11,
    "player": "BUF",
    "roster": "1",
    "bid": 5,
@@ -2969,6 +2983,34 @@
    "active": false,
    "name": "Chicago Bears D/ST",
    "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "5012",
+   "roster": "9",
+   "bid": 0,
+   "at": 1795161884101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Mark Andrews",
+   "pos": "TE",
+   "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "9482",
+   "roster": "6",
+   "bid": 0,
+   "at": 1795161884101,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Michael Mayer",
+   "pos": "TE",
    "outbid": []
   }
  ],

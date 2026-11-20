@@ -13,13 +13,13 @@
    "free_agent": 2
   },
   "8": {
-   "waiver": 9,
-   "drops": 12,
+   "waiver": 10,
+   "drops": 13,
    "free_agent": 4
   },
   "9": {
-   "waiver": 20,
-   "drops": 20,
+   "waiver": 21,
+   "drops": 21,
    "free_agent": 1
   },
   "5": {
@@ -30,9 +30,9 @@
   },
   "6": {
    "free_agent": 3,
-   "drops": 29,
+   "drops": 30,
    "trades": 3,
-   "waiver": 26
+   "waiver": 27
   },
   "10": {
    "waiver": 19,
@@ -81,6 +81,16 @@
    "adds": 4
   },
   {
+   "name": "Michael Mayer",
+   "pos": "TE",
+   "teams": [
+    "9",
+    "6",
+    "10"
+   ],
+   "adds": 4
+  },
+  {
    "name": "Cleveland Browns D/ST",
    "pos": "DEF",
    "teams": [
@@ -107,16 +117,6 @@
     "6",
     "5",
     "7"
-   ],
-   "adds": 3
-  },
-  {
-   "name": "Michael Mayer",
-   "pos": "TE",
-   "teams": [
-    "9",
-    "6",
-    "10"
    ],
    "adds": 3
   },
