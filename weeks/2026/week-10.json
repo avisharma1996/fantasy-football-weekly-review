@@ -166,16 +166,16 @@
           "pts": 165.3
         },
         {
-          "name": "Drake Maye",
-          "pos": "QB",
-          "rank": "QB7",
-          "pts": 160.28
-        },
-        {
           "name": "Tee Higgins",
           "pos": "WR",
           "rank": "WR7",
           "pts": 144.9
+        },
+        {
+          "name": "George Kittle",
+          "pos": "TE",
+          "rank": "TE4",
+          "pts": 103.5
         }
       ],
       "top_week": [

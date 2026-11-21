@@ -3012,6 +3012,20 @@
    "name": "Michael Mayer",
    "pos": "TE",
    "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "NYJ",
+   "roster": "12",
+   "bid": 0,
+   "at": 1795248327089,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "New York Jets D/ST",
+   "pos": "DEF",
+   "outbid": []
   }
  ],
  "trades": [
