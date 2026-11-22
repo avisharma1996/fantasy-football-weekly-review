@@ -3026,6 +3026,20 @@
    "name": "New York Jets D/ST",
    "pos": "DEF",
    "outbid": []
+  },
+  {
+   "week": 11,
+   "player": "8210",
+   "roster": "12",
+   "bid": 0,
+   "at": 1795334680499,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Chig Okonkwo",
+   "pos": "TE",
+   "outbid": []
   }
  ],
  "trades": [
