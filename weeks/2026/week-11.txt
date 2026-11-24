@@ -4,67 +4,79 @@
 // Pictures: save the file in the media folder (a team subfolder is fine), then write ![](file-name.png) on its own line.
 // Videos play silently on a loop; write ![sound](clip.mp4) instead for a video with audio and a play button.
 // Starting order is last week's ranking.
-
 TITLE: Week 11 Power Rankings
 // Optional intro: type it here, above the first team.
+Much like Jensen some teams started making a comeback this week
 
 
 1. Karans Sportsbook
 // 19-3, 1398.54 PF, streak W3 | Chuba Hubbard (RB3) 191.3, Tee Higgins (WR6) 156.2, George Kittle (TE4) 120.4
 // this week: Chuba Hubbard (RB2) 26.0, Bryce Young (QB13) 17.0, George Kittle (TE2) 16.9
+The Tom Brady of fantasy teams
 
 
-2. Justin Beer Loyalist
-// 16-6, 1325.24 PF, streak L1 | Jahmyr Gibbs (RB1) 258.7, Trey McBride (TE1) 142.8, Caleb Williams (QB22) 130.7
-// this week: Jahmyr Gibbs (RB3) 25.8, Caleb Williams (QB15) 15.3, Malik Nabers (WR14) 15.0
-
-
-3. In another life puka 
+2. In another life puka
 // 15-7, 1423.70 PF, streak W4 | Kenneth Walker III (RB4) 183.4, Bucky Irving (RB9) 165.6, Puka Nacua (WR9) 138.6
 // this week: C.J. Stroud (QB7) 21.5, DJ Moore (WR5) 19.1, Bucky Irving (RB8) 17.5
+The San Fransisco 49er's of fantasy teams
+
+
+3. Justin Beer Loyalist
+// 16-6, 1325.24 PF, streak L1 | Jahmyr Gibbs (RB1) 258.7, Trey McBride (TE1) 142.8, Caleb Williams (QB22) 130.7
+// this week: Jahmyr Gibbs (RB3) 25.8, Caleb Williams (QB15) 15.3, Malik Nabers (WR14) 15.0
+The Minnesota Vikings of fantasy football
 
 
 4. I’m Whipped by Bezos
 // 13-9, 1267.96 PF, streak W2 | Dak Prescott (QB2) 243.8, CeeDee Lamb (WR2) 208.2, Tony Pollard (RB15) 133.4
 // this week: Dak Prescott (QB1) 35.9, CeeDee Lamb (WR1) 24.7, Tony Pollard (RB17) 11.0
+The Drake Maye of fantasy football
 
 
-5. NShah19
-// 10-12, 1279.74 PF, streak L1 | Ja'Marr Chase (WR3) 167.4, Bhayshul Tuten (RB13) 145.3, Kyren Williams (RB14) 145.3
-// this week: Emmett Johnson (RB6) 22.3, Jared Goff (QB8) 20.4, Khalil Shakir (WR19) 12.8
-
-
-6. 6 7
+5. 6 7
 // 12-10, 1253.44 PF, streak W1 | Brock Purdy (QB4) 230.2, Derrick Henry (RB8) 169.9, Cam Skattebo (RB25) 94.9
 // this week: Brock Purdy (QB6) 22.2, Mike Evans (WR4) 19.9, Derrick Henry (RB9) 17.1
+The Green Bay Packers of fantasy football
+
+
+6. NShah19
+// 10-12, 1279.74 PF, streak L1 | Ja'Marr Chase (WR3) 167.4, Bhayshul Tuten (RB13) 145.3, Kyren Williams (RB14) 145.3
+// this week: Emmett Johnson (RB6) 22.3, Jared Goff (QB8) 20.4, Khalil Shakir (WR19) 12.8
+The Houston Texans of fantasy football
 
 
 7. Amver Alert🚨
 // 9-13, 1251.78 PF, streak L4 | Josh Allen (QB3) 243.7, Amon-Ra St. Brown (WR4) 163.1, Ashton Jeanty (RB12) 152.1
 // this week: Ashton Jeanty (RB4) 25.4, Jameson Williams (WR8) 17.3, Josh Allen (QB20) 14.2
+The Las Vegas Raiders of fantasy football
 
 
-8. Baltimore Avians
-// 13-9, 1393.70 PF, streak W1 | Joe Burrow (QB1) 258.2, Bijan Robinson (RB6) 180.2, Jaylen Warren (RB16) 138.8
-// this week: Travis Kelce (TE1) 22.4, Joe Burrow (QB9) 19.9, James Cook III (RB10) 16.2
-
-
-9. yrkpapi
-// 6-16, 1089.48 PF, streak L1 | George Pickens (WR8) 143.1, Parker Washington (WR10) 134.1, Isaiah Likely (TE2) 133.0
-// this week: George Pickens (WR2) 20.3, Parker Washington (WR16) 14.3, Saquon Barkley (RB14) 13.5
-
-
-10. Ankitty
+8. Ankitty
 // 8-14, 1139.02 PF, streak W1 | Jaxon Smith-Njigba (WR1) 223.7, Brock Bowers (TE3) 124.8, Denver Broncos D/ST (DEF6) 86.0
 // this week: Jonah Coleman (RB1) 32.9, Denver Broncos D/ST (DEF4) 14.0, Bo Nix (QB21) 12.5
+The Arizona Cardinals of fantasy football
+
+
+9. Baltimore Avians
+// 13-9, 1393.70 PF, streak W1 | Joe Burrow (QB1) 258.2, Bijan Robinson (RB6) 180.2, Jaylen Warren (RB16) 138.8
+// this week: Travis Kelce (TE1) 22.4, Joe Burrow (QB9) 19.9, James Cook III (RB10) 16.2
+The Guangzhou Clubs of fantasy football
+
+
+10. yrkpapi
+// 6-16, 1089.48 PF, streak L1 | George Pickens (WR8) 143.1, Parker Washington (WR10) 134.1, Isaiah Likely (TE2) 133.0
+// this week: George Pickens (WR2) 20.3, Parker Washington (WR16) 14.3, Saquon Barkley (RB14) 13.5
+The Arizona Cardinals of fantasy football
 
 
 11. superdiddy
 // 7-15, 1140.96 PF, streak L3 | Javonte Williams (RB7) 177.4, Zay Flowers (WR12) 126.8, Jordan Love (QB8) 117.4
 // this week: Javonte Williams (RB5) 22.6, Tyler Shough (QB16) 15.3, Jacory Croskey-Merritt (RB12) 14.7
+The Tampa Bay Buccaneers of fantasy football
 
 
 12. Braelon Allen
 // 4-18, 1005.88 PF, streak L6 | Patrick Mahomes (QB6) 206.4, Christian Watson (WR5) 157.6, Jonathan Taylor (RB10) 156.6
 // this week: Patrick Mahomes (QB2) 25.0, Breece Hall (RB7) 17.5, Rashee Rice (WR34) 8.3
+The Tennessee Titans of fantasy football
 
