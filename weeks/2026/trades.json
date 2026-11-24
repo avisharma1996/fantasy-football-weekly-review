@@ -22,14 +22,14 @@
     "players": [
      {
       "player": "9487",
-      "pts": 119.8,
+      "pts": 134.1,
       "name": "Parker Washington",
       "pos": "WR"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 119.8
+    "total": 134.1
    }
   ]
  },
@@ -90,14 +90,14 @@
     "players": [
      {
       "player": "5892",
-      "pts": 0,
+      "pts": 13.9,
       "name": "David Montgomery",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 0
+    "total": 13.9
    }
   ]
  },
@@ -124,14 +124,14 @@
     "players": [
      {
       "player": "7525",
-      "pts": 17.0,
+      "pts": 23.6,
       "name": "DeVonta Smith",
       "pos": "WR"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 17.0
+    "total": 23.6
    }
   ]
  },
@@ -150,21 +150,21 @@
      },
      {
       "player": "4034",
-      "pts": 85.0,
+      "pts": 98.2,
       "name": "Christian McCaffrey",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 114.8
+    "total": 128.0
    },
    {
     "roster": "6",
     "players": [
      {
       "player": "12526",
-      "pts": 33.4,
+      "pts": 49.5,
       "name": "Tetairoa McMillan",
       "pos": "WR"
      },
@@ -177,7 +177,7 @@
     ],
     "picks": [],
     "faab": 15,
-    "total": 33.4
+    "total": 49.5
    }
   ]
  },
@@ -190,34 +190,34 @@
     "players": [
      {
       "player": "8138",
-      "pts": 55.5,
+      "pts": 71.7,
       "name": "James Cook III",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 55.5
+    "total": 71.7
    },
    {
     "roster": "6",
     "players": [
      {
       "player": "11646",
-      "pts": 13.5,
+      "pts": 20.2,
       "name": "Jalen Coker",
       "pos": "WR"
      },
      {
       "player": "6790",
-      "pts": 30.0,
+      "pts": 40.9,
       "name": "D'Andre Swift",
       "pos": "RB"
      }
     ],
     "picks": [],
     "faab": 0,
-    "total": 43.5
+    "total": 61.1
    }
   ]
  }
