@@ -3040,6 +3040,81 @@
    "name": "Chig Okonkwo",
    "pos": "TE",
    "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "TB",
+   "roster": "6",
+   "bid": 10,
+   "at": 1795594489165,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Tampa Bay Buccaneers D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "6819",
+   "roster": "1",
+   "bid": 6,
+   "at": 1795594489165,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Michael Pittman Jr.",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "13269",
+   "roster": "2",
+   "bid": 6,
+   "at": 1795594489165,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Fernando Mendoza",
+   "pos": "QB",
+   "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "11786",
+   "roster": "1",
+   "bid": 3,
+   "at": 1795594489165,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Cam Little",
+   "pos": "K",
+   "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "12469",
+   "roster": "9",
+   "bid": 0,
+   "at": 1795594489165,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Dylan Sampson",
+   "pos": "RB",
+   "outbid": [
+    {
+     "roster": "6",
+     "bid": 0
+    }
+   ]
   }
  ],
  "trades": [
