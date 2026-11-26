@@ -3115,6 +3115,48 @@
      "bid": 0
     }
    ]
+  },
+  {
+   "week": 12,
+   "player": "NYG",
+   "roster": "10",
+   "bid": 0,
+   "at": 1795680290314,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "New York Giants D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "WAS",
+   "roster": "6",
+   "bid": 0,
+   "at": 1795680290314,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Washington Commanders D/ST",
+   "pos": "DEF",
+   "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "6803",
+   "roster": "7",
+   "bid": 0,
+   "at": 1795680290314,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Brandon Aiyuk",
+   "pos": "WR",
+   "outbid": []
   }
  ],
  "trades": [

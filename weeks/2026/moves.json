@@ -7,8 +7,8 @@
    "trades": 2
   },
   "7": {
-   "waiver": 14,
-   "drops": 16,
+   "waiver": 15,
+   "drops": 17,
    "trades": 3,
    "free_agent": 2
   },
@@ -30,13 +30,13 @@
   },
   "6": {
    "free_agent": 3,
-   "drops": 31,
+   "drops": 32,
    "trades": 3,
-   "waiver": 28
+   "waiver": 29
   },
   "10": {
-   "waiver": 19,
-   "drops": 24,
+   "waiver": 20,
+   "drops": 25,
    "free_agent": 6,
    "trades": 1
   },
