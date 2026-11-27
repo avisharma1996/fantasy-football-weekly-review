@@ -3157,6 +3157,34 @@
    "name": "Brandon Aiyuk",
    "pos": "WR",
    "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "11834",
+   "roster": "10",
+   "bid": 0,
+   "at": 1795766696003,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Devaughn Vele",
+   "pos": "WR",
+   "outbid": []
+  },
+  {
+   "week": 12,
+   "player": "1373",
+   "roster": "10",
+   "bid": 0,
+   "at": 1795766696003,
+   "pts": 0.0,
+   "started": 0.0,
+   "weeks": 0,
+   "active": false,
+   "name": "Geno Smith",
+   "pos": "QB",
+   "outbid": []
   }
  ],
  "trades": [
